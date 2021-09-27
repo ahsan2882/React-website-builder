@@ -1,0 +1,78 @@
+.container1 {
+    max-width: 73.5rem;
+    margin: 0 auto;
+}
+
+
+.teamSection {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.teamH1{
+    color: #00c1cf;
+}
+.guardsList {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.guards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.guardName{
+    color:#00c1cf;
+}
+.guardImage {
+    border-radius: 50%;
+    width: 80%;
+}
+
+.guardSocial {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+@media (max-width: 1200px){
+    .container1 {
+        max-width: 63rem;
+        padding: 1rem 2rem;
+    }
+    .teamSection {
+        padding: 2rem;
+    }
+    .guardsList {
+        flex-wrap: wrap;
+    }
+    .guards {
+        width: 50%;
+    }
+    .guardSocial {
+        width: 40%;
+    }
+}
+
+@media (max-width: 850px) {
+    .guards {
+        width: 100%;
+    }
+    .guardImage {
+        width: 70%;
+    }
+    .guardSocial {
+        width: 30%;
+    }
+}

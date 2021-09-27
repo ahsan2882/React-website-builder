@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Fira Sans";
+}
+
+/* ---------------------------------------------------- colors --------------------------------------------- */
+.clr-primary {
+    color: #00c1cf;
+}
+
+.clr-secondary {
+    color: #534c5c;
+}
+
+.clr-primary-overlay {
+    color: rgba(0, 193, 207, 0.75);
+}
+
+.clr-black-overlay {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+/* ------------------------------------------------------ background ------------------------------------------ */
+.bg-primary {
+    background-color: #00c1cf;
+}
+
+.bg-primary-overlay {
+    background-color: rgba(0, 193, 207, 0.75);
+}
+
+
+/* ------------------------------------------------------- border --------------------------------------------------- */
+.border-rad1-5r {
+    border-radius: 1.5rem;
+}
+
+.border-rad-2r {
+    border-radius: 2rem;
+}
+
+.border-rad10 {
+    border-radius: 10px;
+}
+
+.border-rad20 {
+    border-radius: 20px;
+}
+
+.border-rad30 {
+    border-radius: 30px;
+}
+
+.border-rad-050 {
+    border-radius: 50%;
+}
+
+.border-primary {
+    border-color: #00c1cf;
+}
+
+/* ---------------------------------------------------------- z - index --------------------------------------------------- */
+.z-500 {
+    z-index: 500;
+}
+
+/* ------------------------------------------------- heights --------------------------------------------- */
+.min-h-40r {
+    min-height: 40rem;
+}
+
+.min-h-46r {
+    min-height: 46em;
+}
+
+/* ------------------------------------------------ widths ---------------------------------------- */
+.max-w-25r {
+    max-width: 25rem;
+}
+
+.max-w-74r {
+    max-width: 74rem;
+}
+
+.max-w-63r {
+    max-width: 63rem;
+}
+
+.max-w-100v {
+    max-width: 100vw;
+}
+
+.w-30c {
+    width: 30ch;
+}
+
+.w-40c {
+    width: 40ch;
+}
+
+.w-080 {
+    width: 80%;
+}
+
+.w-090 {
+    width: 90%;
+}
+
+.w-35r {
+    width: 35rem;
+}
+
+.w-40r {
+    width: 40rem;
+}
+
+
+
+/* ------------------------------------------custom css ------------------------------------------ */
+
+.container1 {
+    max-width: 73.5rem;
+    margin: 0 auto;
+}
+.serviceWrapper{
+    max-width: 100vw;
+    min-height: 40rem;
+}
+.serviceMainHead{
+    color: #00c1cf;
+}
+.serviceDesc{
+    max-width: 25rem;
+}
+.serviceCard{
+    border-radius: 10px;
+}
+.servicesMoreLink{
+    background-color: #00c1cf;
+}
+.servicesMoreLink:hover {
+    background-color: #00c1cf;
+}
+
+.serviceImages {
+    filter: contrast(0.5) brightness(0.9);
+}
+
+.serviceLayerH2 {
+    transition: 0.2s;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.layer::after {
+    content: "";
+    height: 38.75em;
+    width: 0%;
+    background: rgba(0, 193, 207, 0.2);
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    transition: 0.1 all ease;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+.layer:hover::after {
+    width: 100%;
+}
+
+.layer:hover #head {
+    transform: translate(-50% -50%);
+    max-width: 100%;
+
+    font-size: 1.4em;
+}
+
+.layer:hover #btn {
+    display: block;
+    width: 9rem;
+}
+
+
+@media (max-width: 1200px) {
+    .container1 {
+        max-width: 63rem;
+        padding: 1rem 2rem;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .serviceLayerH2 {
+        font-size: 1.2rem;
+    }
+}

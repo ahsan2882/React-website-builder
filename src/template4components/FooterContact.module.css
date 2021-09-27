@@ -1,0 +1,45 @@
+
+.container1 {
+    max-width: 73.5rem;
+    margin: 0 auto;
+}
+.contactParaFooter{
+    width: 70%;
+}
+.contactFooterWrapper{
+    background-color:rgba(0, 193, 207, 0.75);
+}
+.contactBottomLink{
+    width: 20%;
+}
+
+@media (max-width: 1200px) {
+    .container1 {
+        max-width: 63rem;
+        padding: 1rem 2rem;
+    }
+    .contactParaFooter {
+        width: 80%;
+        margin: 10px 0px;
+    }
+    .contactBottomLink {
+        width: 40%;
+    }
+}
+@media (max-width: 850px) {
+    .contactParaFooter {
+        width: 90%;
+    }
+    .contactBottomLink {
+        width: 55%;
+    }
+}
+
+@media (max-width: 500px) {
+    .contactParaFooter {
+        width: 100%;
+    }
+    .contactBottomLink {
+        width: 80%;
+    }
+}

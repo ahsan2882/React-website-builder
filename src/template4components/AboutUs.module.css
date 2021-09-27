@@ -1,0 +1,26 @@
+
+
+.artH1{
+    color: #00c1cf;
+}
+.btnReadMore{
+    background-color: #00c1cf;
+    border-radius: 20px;
+    border-color: #00c1cf;
+}
+.aboutImg {
+    border-radius: 2rem;
+}
+
+@media (max-width: 850px) {
+    .container02 {
+        flex-direction: column;
+    }
+    .box1 {
+        width: 80%;
+        text-align: center;
+    }
+    .aboutImg {
+        width: 100%;
+    }
+}

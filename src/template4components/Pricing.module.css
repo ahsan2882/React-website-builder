@@ -1,0 +1,35 @@
+.container1 {
+    max-width: 73.5rem;
+    margin: 0 auto;
+}
+
+.pricingPlanHead{
+    color: #534c5c;
+}
+.pricingPlanSubhead{
+    color: #00c1cf;
+}
+.pricingCards{
+    width: 30ch;
+    border-radius: 20px;
+}
+.cardH1{
+    color: #00c1cf;
+}
+.cardBtn{
+    background-color: #00c1cf;
+    border-radius: 30px;
+    border-color: #00c1cf;
+}
+@media (max-width: 1200px) {
+    .container1 {
+        max-width: 63rem;
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .containerMainPrice {
+        padding: 1px;
+    }
+}
