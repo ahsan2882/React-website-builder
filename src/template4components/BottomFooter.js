@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import BottomFooter4Css from './BottomFooter.module.css'
 import { TextPara } from '../myComponents/CraftText';
 import { Editor, Frame } from '@craftjs/core';
