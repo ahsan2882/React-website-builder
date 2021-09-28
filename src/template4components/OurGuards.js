@@ -23,45 +23,51 @@ export default function OurGuards() {
                             <div className={Guards4Css.guards}>
                                 <img src={guard1} className={Guards4Css.guardImage} alt="guard 1" />
                                 <TextH2 classStyle={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards"/>
-                                <h4 className="m-0 mt-8 text-black">Lorem ipsum</h4>
+                                <TextH4 className="m-0 mt-8 text-black" text="Lorem ipsum"/>
                                 <div className={Guards4Css.guardSocial}>
-                                    <i className="fab fa-twitter"></i
-                                    ><i className="fab fa-facebook-square"></i
-                                    ><i className="fab fa-google-plus-g"></i
-                                    ><i className="fab fa-instagram"></i>
+                                    <i className="fab fa-twitter"></i>
+                                    <i className="fab fa-facebook-square"></i>
+                                    <i className="fab fa-google-plus-g"></i>
+                                    <i className="fab fa-instagram"></i>
                                 </div>
                             </div>
                             <div className={Guards4Css.guards}>
                                 <img src={guard2} className={Guards4Css.guardImage} alt="guard 2" />
-                                <h2 className={`m-0 mt-8 ${Guards4Css.guardName}`}>Kelley Miles</h2>
-                                <h4 className="m-0 mt-8 text-black">Lorem ipsum</h4>
+                                {/* <h2 className={`m-0 mt-8 ${Guards4Css.guardName}`}>Kelley Miles</h2>
+                                <h4 className="m-0 mt-8 text-black">Lorem ipsum</h4> */}
+                                <TextH2 classStyle={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" />
+                                <TextH4 className="m-0 mt-8 text-black" text="Lorem ipsum" />
                                 <div className={Guards4Css.guardSocial}>
-                                    <i className="fab fa-twitter"></i
-                                    ><i className="fab fa-facebook-square"></i
-                                    ><i className="fab fa-google-plus-g"></i
-                                    ><i className="fab fa-instagram"></i>
+                                    <i className="fab fa-twitter"></i>
+                                    <i className="fab fa-facebook-square"></i>
+                                    <i className="fab fa-google-plus-g"></i>
+                                    <i className="fab fa-instagram"></i>
                                 </div>
                             </div>
                             <div className={Guards4Css.guards}>
                                 <img src={guard3} className={Guards4Css.guardImage} alt="guard 3" />
-                                <h2 className={`m-0 mt-8 ${Guards4Css.guardName}`}>Sherman Warner</h2>
-                                <h4 className="m-0 mt-8 text-black">Lorem ipsum</h4>
+                                {/* <h2 className={`m-0 mt-8 ${Guards4Css.guardName}`}>Sherman Warner</h2>
+                                <h4 className="m-0 mt-8 text-black">Lorem ipsum</h4> */}
+                                <TextH2 classStyle={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" />
+                                <TextH4 className="m-0 mt-8 text-black" text="Lorem ipsum" />
                                 <div className={Guards4Css.guardSocial}>
-                                    <i className="fab fa-twitter"></i
-                                    ><i className="fab fa-facebook-square"></i
-                                    ><i className="fab fa-google-plus-g"></i
-                                    ><i className="fab fa-instagram"></i>
+                                    <i className="fab fa-twitter"></i>
+                                    <i className="fab fa-facebook-square"></i>
+                                    <i className="fab fa-google-plus-g"></i>
+                                    <i className="fab fa-instagram"></i>
                                 </div>
                             </div>
                             <div className={Guards4Css.guards}>
                                 <img src={guard4} className={Guards4Css.guardImage} alt="guard 4" />
-                                <h2 className={`m-0 mt-8 ${Guards4Css.guardName}`}>Denis Green</h2>
-                                <h4 className="m-0 mt-8 text-black">Lorem ipsum</h4>
+                                {/* <h2 className={`m-0 mt-8 ${Guards4Css.guardName}`}>Denis Green</h2>
+                                <h4 className="m-0 mt-8 text-black">Lorem ipsum</h4> */}
+                                <TextH2 classStyle={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" />
+                                <TextH4 className="m-0 mt-8 text-black" text="Lorem ipsum" />
                                 <div className={Guards4Css.guardSocial}>
-                                    <i className="fab fa-twitter"></i
-                                    ><i className="fab fa-facebook-square"></i
-                                    ><i className="fab fa-google-plus-g"></i
-                                    ><i className="fab fa-instagram"></i>
+                                    <i className="fab fa-twitter"></i>
+                                    <i className="fab fa-facebook-square"></i>
+                                    <i className="fab fa-google-plus-g"></i>
+                                    <i className="fab fa-instagram"></i>
                                 </div>
                             </div>
                         </div>
