@@ -6,7 +6,7 @@ import Pricing from './Pricing';
 import Services from './Services';
 import OurGuards from './OurGuards';
 import Blog from './Blog';
-import Accrediation from './Accrediation';
+import Accreditation from './Accreditation';
 import Footer from './Footer';
 
 export default function template4Page() {
@@ -19,7 +19,7 @@ export default function template4Page() {
             <Services/>
             <OurGuards/>
             <Blog/>
-            <Accrediation/>
+            <Accreditation/>
             <Footer/>
         </>
     );
