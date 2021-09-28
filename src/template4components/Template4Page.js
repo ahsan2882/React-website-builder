@@ -8,7 +8,6 @@ import OurGuards from './OurGuards';
 import Blog from './Blog';
 import Accrediation from './Accrediation';
 import Footer from './Footer';
-import {Editor, Frame, Element} from "@craftjs/core";
 
 export default function template4Page() {
     return (

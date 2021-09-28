@@ -1,3 +1,4 @@
+import { Link } from '@material-ui/core';
 import React from 'react';
 import cl1 from '../assets/template4images/client1.png';
 import cl2 from '../assets/template4images/client2.png';
@@ -15,39 +16,39 @@ export default function Accrediation() {
                 </div>
                 <div className="flex flex-wrap justify-center my-0 mx-auto mb-8">
                     <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
-                        <a href="#" className="no-underline text-black">
+                        <Link to="#" className="no-underline text-black">
                             <div className="p-5 flex flex-col items-center">
                                 <img src={cl1} alt="client 1" className="w-full"/>
                                 <h3 className={Accre4Css.accreH3}>Lorem ipsum.</h3>
                             </div>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
-                        <a href="#" className="no-underline text-black">
+                        <Link to="#" className="no-underline text-black">
                             <div className="p-5 flex flex-col items-center">
                                 <img src={cl2} alt="client 2" className="w-full"/>
                                 <h3 className={Accre4Css.accreH3}>Lorem ipsum.</h3>
                             </div>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
-                        <a href="#" className="no-underline text-black">
+                        <Link to="#" className="no-underline text-black">
                             <div className="p-5 flex flex-col items-center">
                                 <img src={cl3} alt="client 3" className="w-full"/>
                                 <h3 className={Accre4Css.accreH3}>Lorem ipsum.</h3>
                             </div>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
-                        <a href="#" className="no-underline text-black">
+                        <Link to="#" className="no-underline text-black">
                             <div className="p-5 flex flex-col items-center">
                                 <img src={cl4} alt="client 4" className="w-full"/>
                                 <h3 className={Accre4Css.accreH3}>Lorem ipsum.</h3>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

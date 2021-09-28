@@ -4,6 +4,7 @@ import background from '../assets/template4images/blog_15-770x545.jpg'
 import Hero4Css from './HeroSection.module.css'
 import {TextPara} from './CraftText';
 import { Editor, Frame } from '@craftjs/core';
+import { Link } from 'react-router-dom';
 
 export default function HeroSection() {
     return (
@@ -14,9 +15,9 @@ export default function HeroSection() {
                     <nav>
                         <ul className={Hero4Css.navBar}>
                             <li className={`${Hero4Css.navBarLink} hover:text-black`}>
-                                <a href="index.html" className="no-underline text-white">HOME</a>
+                                <Link to="index.html" className="no-underline text-white">HOME</Link>
                             </li>
-                            <li className={`${Hero4Css.navBarLink} hover:text-black`}><a href="about.html" className="no-underline text-white">ABOUT US</a></li>
+                            <li className={`${Hero4Css.navBarLink} hover:text-black`}><Link to="about.html" className="no-underline text-white">ABOUT US</Link></li>
                             <li className={`${Hero4Css.navBarLink} hover:text-black ${Hero4Css.dropdownServiceListItem}`}>
                                 <section className="cursor-pointer my-4">SERVICES</section>
                                 <ul className={`${Hero4Css.dropdownServicesContent} list-none p-0 absolute`}>
@@ -81,7 +82,7 @@ export default function HeroSection() {
                                 </ul>
                             </li>
                             <li className={`${Hero4Css.navBarLink} hover:text-black`}>
-                                <a href="contact-us.html" className="no-underline text-white">CONTACT US</a>
+                                <Link to="contact-us.html" className="no-underline text-white">CONTACT US</Link>
                             </li>
                         </ul>
                         <section className={Hero4Css.hamburger}>

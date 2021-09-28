@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import rsswifi from '../assets/template4images/rsswifi.png'
 import Subscribe4Css from './Subscribe.module.css'
 
@@ -19,7 +20,7 @@ export default function Subscribe() {
                             placeholder="Your email-address"
                             className={Subscribe4Css.emailField}
                         />
-                        <a href="#" className={Subscribe4Css.subscribeBtn}>SUBSCRIBE</a>
+                        <Link to="#" className={Subscribe4Css.subscribeBtn}>SUBSCRIBE</Link>
                     </div>
                 </div>
             </div>

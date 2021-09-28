@@ -6,6 +6,7 @@ import serv4 from '../assets/template4images/service_04-778x610.jpg'
 import serv5 from '../assets/template4images/service_05-778x610.jpg'
 import serv6 from '../assets/template4images/service_06-778x610.jpg'
 import Service4Css from './Services.module.css'
+import { Link } from 'react-router-dom'
 
 
 export default function Services() {
@@ -23,7 +24,7 @@ export default function Services() {
                     <div className={Service4Css.layer}>
                         <h2 className={`opacity-100 text-left leading-none font-extrabold mt-8 ml-3 text-3xl text-white ${Service4Css.serviceLayerH2}`} id="head">Home CCTV camera</h2>
                         <div className="mb-24 ml-3 text-left">
-                            <a id="btn" href="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</a>
+                            <Link id="btn" to="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</Link>
                         </div>
                     </div>
                 </div>
@@ -32,7 +33,7 @@ export default function Services() {
                     <div className={Service4Css.layer}>
                         <h2 className={`opacity-100 text-left leading-none font-extrabold mt-8 ml-3 text-3xl text-white ${Service4Css.serviceLayerH2}`} id="head">Office security system</h2>
                         <div className="mb-24 ml-3 text-left">
-                            <a id="btn" href="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</a>
+                            <Link id="btn" to="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</Link>
                         </div>
                     </div>
                 </div>
@@ -41,7 +42,7 @@ export default function Services() {
                     <div className={Service4Css.layer}>
                         <h2 className={`opacity-100 text-left leading-none font-extrabold mt-8 ml-3 text-3xl text-white ${Service4Css.serviceLayerH2}`} id="head">Car parking surveillance</h2>
                         <div className="mb-24 ml-3 text-left">
-                            <a id="btn" href="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</a>
+                            <Link id="btn" to="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</Link>
                         </div>
                     </div>
                 </div>
@@ -50,7 +51,7 @@ export default function Services() {
                     <div className={Service4Css.layer}>
                         <h2 className={`opacity-100 text-left leading-none font-extrabold mt-8 ml-3 text-3xl text-white ${Service4Css.serviceLayerH2}`} id="head">Resturants surveillance</h2>
                         <div className="mb-24 ml-3 text-left">
-                            <a id="btn" href="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</a>
+                            <Link id="btn" to="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</Link>
                         </div>
                     </div>
                 </div>
@@ -59,7 +60,7 @@ export default function Services() {
                     <div className={Service4Css.layer}>
                         <h2 className={`opacity-100 text-left leading-none font-extrabold mt-8 ml-3 text-3xl text-white ${Service4Css.serviceLayerH2}`} id="head">Indus security</h2>
                         <div className="mb-24 ml-3 text-left">
-                            <a id="btn" href="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</a>
+                            <Link id="btn" to="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</Link>
                         </div>
                     </div>
                 </div>
@@ -68,7 +69,7 @@ export default function Services() {
                     <div className={Service4Css.layer}>
                         <h2 className={`opacity-100 text-left leading-none font-extrabold mt-8 ml-3 text-3xl text-white ${Service4Css.serviceLayerH2}`} id="head">Cargo transportation protection</h2>
                         <div className="mb-24 ml-3 text-left">
-                            <a id="btn" href="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</a>
+                            <Link id="btn" to="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</Link>
                         </div>
                     </div>
                 </div>

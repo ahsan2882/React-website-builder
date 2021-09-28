@@ -1,6 +1,5 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 import ContentEditable from 'react-contenteditable';
-import { Typography } from "@material-ui/core";
 import { useNode } from "@craftjs/core";
 
 export const TextPara = ({text, classStyle}) => {

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import guard1 from '../assets/template4images/guard1.jpg'
 import guard2 from '../assets/template4images/guard2.jpg'
 import guard3 from '../assets/template4images/guard3.jpg'
@@ -61,10 +62,10 @@ export default function OurGuards() {
                         </div>
                     </div>
                 </div>
-                <a href="#" className="flex no-underline py-3 px-6 text-black border-rad1-5r justify-center items-center">
+                <Link to="#" className="flex no-underline py-3 px-6 text-black border-rad1-5r justify-center items-center">
                     <div>View all&emsp;</div>
                     <i className="fas fa-arrow-right"></i>
-                </a>
+                </Link>
             </div>
         </section>
     );
