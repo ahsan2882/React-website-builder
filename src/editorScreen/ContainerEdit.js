@@ -6,7 +6,7 @@ import Template4Page from '../template4components/Template4Page'
 export default function ContainerEdit() {
     return (
         <section className="text-gray-600 body-font relative mt-32">
-            <div className={`container flex justify-center items-center bg-gray-200 ${ContainerEditCss['editing']}	rounded-md mx-auto mt-10`}>
+            <div className={`container flex justify-center items-center bg-gray-200 ${ContainerEditCss['editing']}rounded-md mx-auto mt-10`}>
                 <div className="flex flex-col justify-center items-center text-center w-full mb-12">
                     {/* <h1 className="text-2xl font-medium title-font mb-4 text-gray-800">This is the new empty page</h1>
                     <h1 className="text-2xl font-medium title-font mb-4 text-gray-800">Click the "plus"</h1>
