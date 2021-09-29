@@ -6,7 +6,7 @@ import { Editor, Frame } from '@craftjs/core';
 export default function Header() {
     return (
         <Editor resolver={{DivText}}>
-            <header className={Header4Css.header}>
+            <header className={`${Header4Css.header} w-full`}>
                 <Frame>
                     <section className={`flex justify-between items-center py-2 ${Header4Css.container1}`}>
                         <ul className={`list-none flex p-0 justify-between items-center ${Header4Css.contactHeader}`}>

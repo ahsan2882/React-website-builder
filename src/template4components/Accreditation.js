@@ -12,7 +12,7 @@ export default function Accreditation() {
     return (
         <Editor resolver={{TextH2, TextH1, TextH3}}>
             <Frame>
-                <section className="py-28 px-0">
+                <section className="py-28 px-0 w-full">
                     <div className={Accre4Css.containerMain}>
                         <div className="flex flex-col items-center py-10 px-0">
                             <TextH2 classStyle={`${Accre4Css.accreMainH2} text-2xl`} text="we are verified"/>

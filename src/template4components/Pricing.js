@@ -7,7 +7,7 @@ export default function Pricing() {
     return (
         <Editor resolver={{TextH1, TextH2, IconText, ButtonText}}>
             <Frame>
-                <div className="py-20 px-0">
+                <div className="py-20 px-0 w-full">
                     <div className={Pricing4Css.containerMainPrice}>
                         <div className="flex flex-col items-center py-10 px-0">
                             <TextH2 classStyle={`text-2xl ${Pricing4Css.pricingPlanHead}`} text="Reasonable Pricing Plans"/>

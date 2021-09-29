@@ -8,7 +8,7 @@ export default function AboutUs() {
     return (
         <Editor resolver={{TextH1, TextPara, TextH3}}>
             <Frame>
-                <div className={`${About4Css.container02} py-28 px-12 flex items-center justify-center bg-black`}>
+                <div className={`${About4Css.container02} py-28 px-12 flex items-center justify-center bg-black w-full`}>
                     <div className={`${About4Css.box1} flex flex-col max-w-lg`}>
                         <img className={`${About4Css.aboutImg} w-11/12`} src={aboutimg} alt="about"/>
                     </div>

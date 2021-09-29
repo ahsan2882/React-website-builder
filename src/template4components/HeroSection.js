@@ -11,7 +11,7 @@ export default function HeroSection() {
         <Editor resolver={{TextPara}}>
             <Frame>
                 <>
-                    <div className={Hero4Css.navWrapper}>
+                    <div className={`${Hero4Css.navWrapper} w-full`}>
                         <div className={`flex justify-between items-center py-6 ${Hero4Css.container1}`}>
                             <img src={navlogo} alt="nav-logo" className="w-52"/>
                             <nav>
@@ -95,7 +95,7 @@ export default function HeroSection() {
                             </nav>
                         </div>
                     </div>
-                    <section className={Hero4Css.sectionHero} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    <section className={`w-full ${Hero4Css.sectionHero}`} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url(${background})`}}>
                         <div>
                             <TextH1 classStyle={Hero4Css.secHeroH1} text="Security Services"></TextH1>

@@ -14,7 +14,7 @@ export default function Services() {
     return (
         <Editor resolver={{TextH4, TextH2, TextPara}}>
             <Frame>
-                <div className={`text-center py-28 px-0 bg-black ${Service4Css.serviceWrapper}`}>
+                <div className={`text-center py-28 px-0 bg-black ${Service4Css.serviceWrapper} w-full`}>
                     <TextH4 classStyle={`text-center font-black ${Service4Css.serviceMainHead}`} text="WHAT WE DO"/>
                     <TextH2 classStyle="text-center text-5xl opacity-80 text-white font-black" text="Our Services"/>
                     <TextPara classStyle={`${Service4Css.servicsDesc} text-center text-white my-12 mx-auto leading-6 font-light`}

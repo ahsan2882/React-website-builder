@@ -12,7 +12,7 @@ export default function OurGuards() {
     return (
         <Editor resolver={{TextH1,TextH2, TextH4, TextPara}}>
             <Frame>
-                <section className="bg-white">
+                <section className="bg-white w-full">
                     <div className={`${Guards4Css.container1} ${Guards4Css.teamSection}`}>
                         <TextH1 classStyle={`text-5xl m-0 ${Guards4Css.teamH1}`} text="Our Guards"/>
                         <TextPara classStyle="text-xl text-center mb-12 text-black"

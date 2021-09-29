@@ -9,7 +9,7 @@ export default function Subscribe() {
     return (
         <Editor resolver={{TextH3, TextH1}}>
             <Frame>
-                <div className={`${Subscribe4Css.container1} ${Subscribe4Css.subscribeSection}`}>
+                <div className={`${Subscribe4Css.container1} ${Subscribe4Css.subscribeSection} w-full`}>
                     <div className={Subscribe4Css.subscribeWrapper}>
                         <img src={rsswifi} alt="subscribe logo" />
                         <div className={Subscribe4Css.rightContainer}>

@@ -35,7 +35,7 @@ export default function PageSelectionScreen() {
             <div className="max-w-3xl my-8 mx-auto">
                 <div className="flex justify-between items-center w-full">
                     <div className="border-2 border-red-700 w-80">
-                        <Link to='/edit/template-4'>
+                        <Link to='/edit'>
                             <img src={temp4} alt="template 4" />
                         </Link>
                     </div>

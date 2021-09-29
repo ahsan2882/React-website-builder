@@ -10,7 +10,7 @@ export default function Blog() {
     return (
         <Editor resolver={{TextH1, TextH3, TextPara, ButtonText}}>
             <Frame>
-                <section className="bg-black py-28 px-0">
+                <section className="bg-black py-28 px-0 w-full">
                     <div className="text-center">
                         <TextH3 classStyle={Blog4Css.blogMainHead} text="WHATS NEW"/>
                         <TextH1 classStyle="text-white font-black mb-12 text-5xl"text="Latest News"/>

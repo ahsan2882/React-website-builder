@@ -7,7 +7,7 @@ export default function BottomFooter() {
     return (
         <Editor resolver={{TextPara}}>
             <Frame>
-                <footer className="bg-black">
+                <footer className="bg-black w-full">
                     <div className={`${BottomFooter4Css.container1} ${BottomFooter4Css.footerWrapper}`}>
                         <TextPara classStyle="text-white" text="Copyright © 2021 CITRIX CONSULTANCY. All Rights Reserved."/>
                     </div>
