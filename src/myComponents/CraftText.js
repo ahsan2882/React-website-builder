@@ -73,7 +73,7 @@ export const IconText = ({ text, classStyle }) => {
   const { actions: { setProp } } = useNode();
   return (
     <ContentEditable
-      html={text} onChange={e => setProp(props => props.text = e.target.value.replace(/<\/?[^>]+(>|$)/g, ""))} tagName="in" className={classStyle}
+      html={text} onChange={e => setProp(props => props.text = e.target.value.replace(/<\/?[^>]+(>|$)/g, ""))} tagName="i" className={classStyle}
     />
   )
 }
