@@ -1,6 +1,6 @@
 .mainNav{
     position: fixed;
     top: 9vh;
-    right: 0;
     width: 9.5vw;
+    left: 0;
 }
