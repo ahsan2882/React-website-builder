@@ -49,10 +49,10 @@
 
 .mainNav {
     position: fixed;
-    top: 10vh;
+    top: 8vh;
     left: 0;
-    width: 12vw;
-    height: 80vh;
+    width: 9.5vw;
+    height: 100vh;
     background-color: #fff;
     padding: 58px 15px;
     z-index: 3;

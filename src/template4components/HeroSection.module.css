@@ -2,6 +2,9 @@
     max-width: 73.5rem;
     margin: 0 auto;
 }
+h1[contenteditable]{
+    border-color: purple;
+}
 .navWrapper{
     background-color: rgba(0, 193, 207, 0.75);
 }
