@@ -157,15 +157,13 @@
     justify-content: space-between;
     max-width: 30rem;
 }
-
-.offerH3 {
+.offer > div:first-child > h3{
     font-size: 1.5rem;
     color: black;
     margin: 0;
     margin-bottom: 1rem;
 }
-
-.offerH1 {
+.offer > div:last-child > h1 {
     font-size: 2rem;
     margin: 0;
     color: white;
@@ -189,19 +187,21 @@
     font-size: 1.3rem;
     width: 50%;
 }
-
-.subscribeBtn {
+.inputEmail > div{
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
     background-color: black;
     border-radius: 40px;
     z-index: 3;
-    padding: 1.2rem 0;
     text-align: center;
     width: 50%;
 }
-
+.inputEmail>div>p>button{
+    width: 100%;
+    height: 100%;
+    padding: 1.2rem 0;
+}
 
 @media (max-width: 1200px) {
     .container1 {
@@ -256,10 +256,10 @@
     .subscribeWrapper {
         padding: 2rem 0;
     }
-    .offerH3 {
+    .offer>div:first-child>h3 {
         font-size: 1rem;
     }
-    .offerH1 {
+    .offer>div:last-child>h1 {
         font-size: 1.2rem;
     }
     .emailField {

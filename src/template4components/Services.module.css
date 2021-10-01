@@ -7,12 +7,6 @@
     max-width: 100vw;
     min-height: 40rem;
 }
-.serviceMainHead{
-    color: #00c1cf;
-}
-.serviceDesc{
-    max-width: 25rem;
-}
 .serviceCard{
     border-radius: 10px;
 }
@@ -30,7 +24,28 @@
 .serviceLayerH2 {
     transition: 0.2s;
 }
+.serviceWrapper > div:first-child > h4{
+    text-align: center;
+    font-weight: 900;
+    color: #00c1cf;
+}
+.serviceWrapper > div:nth-child(2) > h2{
+    font-size: 3rem;
+    line-height: 1;
+    color: white;
+    opacity: 80%;
+    font-weight: 900;
+    text-align: center;
+}
 
+.serviceWrapper > div:nth-child(3) > p{
+    max-width: 25rem;
+    color: white;
+    text-align: center;
+    margin: 3rem auto;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
 .layer {
     background: transparent;
     height: 100%;
