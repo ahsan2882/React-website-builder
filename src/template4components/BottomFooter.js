@@ -12,7 +12,7 @@ export default function BottomFooter() {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                    initialValue="<p>Copyright © 2021 CITRIX CONSULTANCY. All Rights Reserved.</p"
+                    initialValue="<p>Copyright © 2021 CITRIX CONSULTANCY. All Rights Reserved.</p>"
                     init={{
                         menubar: false,
                         toolbar: 'bold italic backcolor | alignleft aligncenter ' +

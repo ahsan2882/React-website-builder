@@ -131,7 +131,7 @@
     box-sizing: border-box;
     border-radius: 5rem;
     background-color: #00c1cf;
-    z-index: 99;
+    z-index: 1;
     margin-bottom: -4rem;
     position: relative;
 }

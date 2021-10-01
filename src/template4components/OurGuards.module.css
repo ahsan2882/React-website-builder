@@ -12,8 +12,17 @@
     justify-content: space-around;
     align-items: center;
 }
-.teamH1{
+.teamSection > div:nth-child(1) > h1{
     color: #00c1cf;
+    font-size: 3rem;
+    line-height: 1;
+}
+.teamSection>div:nth-child(2)>p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: black;
 }
 .guardsList {
     display: flex;
@@ -22,16 +31,22 @@
     box-sizing: border-box;
     align-items: center;
 }
-
+.guardsList h2{
+    margin: 0;
+    margin-top: 2rem;
+    color:#00c1cf;
+}
+.guardsList h4 {
+    margin: 0;
+    margin-top: 2rem;
+    color: #000;
+}
 .guards {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 5rem;
-}
-.guardName{
-    color:#00c1cf;
 }
 .guardImage {
     border-radius: 50%;

@@ -9,8 +9,12 @@
 .contactBottomLink{
     width: 20%;
 }
+.container1 > div:nth-child(1), .container1 > div:nth-child(2){
+    width: 100%;
+}
 .contactFooterWrapper p{
     width: 70%;
+    margin: 0 auto;
     text-align: center;
     color: #fff;
 }
