@@ -1,6 +1,14 @@
 
-.blogMainHead{
+
+.headingWrapper h3{
     color: #00c1cf;
+}
+.headingWrapper h1 {
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    line-height: 1;
 }
 .blogArticWrap{
     width:40ch;

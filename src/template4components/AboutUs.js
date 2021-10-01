@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import aboutimg from '../assets/template4images/news3.jpg'
-// import aboutimg from '../../node_modules/tinymce/tinymce.min.js'
 import About4Css from './AboutUs.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
@@ -21,8 +20,8 @@ export default function AboutUs() {
                                 initialValue="<h1>About Us</h1>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
                                 }}
                             />
