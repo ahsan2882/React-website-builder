@@ -40,7 +40,7 @@ export default function Blog() {
                 <div className="flex flex-wrap justify-around w-4/5">
                     <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-center`}>
                         <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news1} alt="news 1" />
-                        {/* <TextH1 classStyle={`${Blog4Css.blogArticH1} text-2xl p-3 mb-8 hover:text-white`} text="Personal Security Services" /> */}
+                        {/* <TextH1 className={`${Blog4Css.blogArticH1} text-2xl p-3 mb-8 hover:text-white`} text="Personal Security Services" /> */}
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -52,7 +52,7 @@ export default function Blog() {
                                     'alignright alignjustify |',
                             }}
                         />
-                        {/* <TextPara classStyle="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
+                        {/* <TextPara className="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ..."/> */}
                         <Editor
@@ -69,7 +69,7 @@ export default function Blog() {
                             }}
                         />
                         <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
-                            {/* <ButtonText classStyle={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
+                            {/* <ButtonText className={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}

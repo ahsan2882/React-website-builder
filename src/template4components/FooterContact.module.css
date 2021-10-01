@@ -3,14 +3,16 @@
     max-width: 73.5rem;
     margin: 0 auto;
 }
-.contactParaFooter{
-    width: 70%;
-}
 .contactFooterWrapper{
     background-color:rgba(0, 193, 207, 0.75);
 }
 .contactBottomLink{
     width: 20%;
+}
+.contactFooterWrapper p{
+    width: 70%;
+    text-align: center;
+    color: #fff;
 }
 
 @media (max-width: 1200px) {

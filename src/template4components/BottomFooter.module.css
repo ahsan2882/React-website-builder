@@ -11,7 +11,9 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-
+.footerWrapper p{
+    color: white;
+}
 @media (max-width: 1200px) {
     .container1 {
         max-width: 63rem;
