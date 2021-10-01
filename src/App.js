@@ -2,7 +2,7 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './App.css';
 import EditScreen from './editorScreen/EditScreen';
-import MainSection from './landingPage/MainSection';
+import { LandingPage } from './landingPage/LandingPage';
 import PageSelectionScreen from './myComponents/PageSelectionScreen';
 
 
@@ -11,7 +11,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          <MainSection/>
+          <LandingPage/>
         </Route>
         <Route exact path="/select-template">
           <PageSelectionScreen/>
