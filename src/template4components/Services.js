@@ -17,37 +17,40 @@ export default function Services() {
             <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
+                key='service4ed1'
                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                 initialValue="<h4>WHAT WE DO</h4>"
                 init={{
                     menubar: false,
-                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                        'alignright alignjustify |',
+                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                        'alignright alignjustify | formatselect',
                 }}
             />
             {/* <TextH2 className="text-center text-5xl opacity-80 text-white font-black" text="Our Services" /> */}
             <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
+                key='service4ed2'
                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                 initialValue="<h2>Our Services</h2>"
                 init={{
                     menubar: false,
-                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                        'alignright alignjustify |',
+                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                        'alignright alignjustify | formatselect',
                 }}
             />
             {/* <TextPara className={`${Service4Css.servicsDesc} text-center text-white my-12 mx-auto leading-6 font-light`} */}
             <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
+                key='service4ed3'
                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                 initialValue="<p>Vestibulum commodo at dolor eu aliquam. In congue ornare augue eu
                         scelerisque. Duis vestibulum, dolor sed facilisis laoreet.</p>"
                 init={{
                     menubar: false,
-                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                        'alignright alignjustify |',
+                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                        'alignright alignjustify | formatselect',
                 }}
             />
             <div className="flex flex-wrap my-0 mx-auto justify-center w-4/5">

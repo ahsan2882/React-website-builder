@@ -16,12 +16,13 @@ export default function OurGuards() {
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
+                    key='guard4ed1'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                     initialValue="<h1>Our Guards</h1>"
                     init={{
                         menubar: false,
-                        toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                            'alignright alignjustify |',
+                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                            'alignright alignjustify | formatselect',
                     }}
                 />
                 {/* <TextPara className="text-xl text-center mb-12 text-black"
@@ -31,14 +32,15 @@ export default function OurGuards() {
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
+                    key='guard4ed2'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                     initialValue="<p>Pellentesque mattis mauris ac tortor volutpat, eu fermentum sapien
                             euismod. In id tempus metus. Donec eu volutpat nibh, in maximus
                             ligula.</p>"
                     init={{
                         menubar: false,
-                        toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                            'alignright alignjustify |',
+                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                            'alignright alignjustify | formatselect',
                     }}
                 />
                 <div className={`${Guards4Css.container1} ${Guards4Css.guardsList}`}>
@@ -48,23 +50,25 @@ export default function OurGuards() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='guard4ed3'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>John Richards</h2>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='guard4ed4'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h4>Lorem ipsum</h4>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div className={Guards4Css.guardSocial}>
@@ -81,23 +85,25 @@ export default function OurGuards() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='guard4ed5'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>John Richards</h2>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='guard4ed6'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h4>Lorem ipsum</h4>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div className={Guards4Css.guardSocial}>
@@ -114,23 +120,25 @@ export default function OurGuards() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='guard4ed7'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>John Richards</h2>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='guard4ed8'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h4>Lorem ipsum</h4>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div className={Guards4Css.guardSocial}>
@@ -147,23 +155,25 @@ export default function OurGuards() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='guard4ed9'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>John Richards</h2>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='guard4ed10'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h4>Lorem ipsum</h4>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div className={Guards4Css.guardSocial}>

@@ -17,10 +17,11 @@ export default function AboutUs() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='abouted1'
                                 initialValue="<h1>About Us</h1>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor forecolor | alignleft aligncenter ' +
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
                                     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
                                 }}
@@ -29,12 +30,13 @@ export default function AboutUs() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='abouted2'
                                 tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
                                 initialValue="<h3>CCTV For your Safety</h3>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
                                 }}
                             />
@@ -46,12 +48,13 @@ export default function AboutUs() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='abouted3'
                                 tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
                                 initialValue="<p>Nunc pretium nibh non aliquam scelerisque. Integer porttitor dolor sit amet leo malesuada scelerisque. Sed sed tortor lobortis, dictum lacus sed, mollis enim. Aenean ullamcorper accumsan sem sit amet aliquam. Cras euismod mauris felis, eget bibendum nibh facilisis ac.</p>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
                                 }}
                             />
@@ -61,12 +64,13 @@ export default function AboutUs() {
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
+                                    key='abouted4'
                                     tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
                                     initialValue="<p>Read More</p>"
                                     init={{
                                         menubar: false,
-                                        toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                            'alignright alignjustify |',
+                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | formatselect',
                                         content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
                                     }}
                                 />

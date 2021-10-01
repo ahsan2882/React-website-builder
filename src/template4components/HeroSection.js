@@ -102,24 +102,26 @@ export default function HeroSection() {
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
+                        key='heroed1'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue="<h1>Security Services</h1>"
                         init={{
                             menubar: false,
-                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                'alignright alignjustify |',
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | formatselect',
                         }}
                     />
                     {/* <TextPara text="For your personal safety" classStyle={Hero4Css.paragraphHero} /> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
+                        key='heroed2'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue="<p>For your personal safety</p>"
                         init={{
                             menubar: false,
-                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                'alignright alignjustify |',
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | formatselect',
                         }}
                     />
                     <div className={Hero4Css.secHeroBtn}>
@@ -127,12 +129,13 @@ export default function HeroSection() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='heroed3'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<button>Contact Us</button>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                     </div>

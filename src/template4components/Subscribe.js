@@ -15,24 +15,26 @@ export default function Subscribe() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='subsc4ed1'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h3>Want to know about our offers first?</h3>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         {/* <TextH1 classStyle={Subscribe4Css.offerH1} text="Subscribe our newsletter" /> */}
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='subsc4ed2'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Subscribe our newsletter</h1>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                     </div>
@@ -47,12 +49,13 @@ export default function Subscribe() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='subsc4ed3'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<button>SUBSCRIBE</button>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                     </div>

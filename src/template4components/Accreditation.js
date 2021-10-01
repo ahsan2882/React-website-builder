@@ -17,24 +17,26 @@ export default function Accreditation() {
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
+                        key='accre4ed1'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue="<h2>we are verified</h2>"
                         init={{
                             menubar: false,
-                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                'alignright alignjustify |',
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | formatselect',
                         }}
                     />
                     {/* <TextH1 classStyle={`${Accre4Css.accreMainH1} text-5xl text-center`} text="Our Accreditation" /> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
+                        key='accre4ed2'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue="<h1>Our Accreditation</h1>"
                         init={{
                             menubar: false,
-                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                'alignright alignjustify |',
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | formatselect',
                         }}
                     />
                 </div>
@@ -46,12 +48,13 @@ export default function Accreditation() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='accre4ed3'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<h3>Lorem ipsum</h3>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>
@@ -63,12 +66,13 @@ export default function Accreditation() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='accre4ed4'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<h3>Lorem ipsum</h3>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>
@@ -80,12 +84,13 @@ export default function Accreditation() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='accre4ed5'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<h3>Lorem ipsum</h3>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>
@@ -97,12 +102,13 @@ export default function Accreditation() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='accre4ed6'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<h3>Lorem ipsum</h3>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>

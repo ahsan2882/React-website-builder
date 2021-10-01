@@ -29,7 +29,7 @@ const Slider = () => {
 
     <section className={SliderCss.section}>
       <div className={SliderCss.title}>
-        <h1 className="uppercase sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">what our investor says</h1>
+        <h1 className="uppercase sm:text-3xl text-2xl font-medium title-font text-gray-900 tracking-widest leading-tight mb-3">what our investor says</h1>
         <div className="w-36 h-1 m-auto rounded-full bg-indigo-400 "></div>
 
       </div>
@@ -50,11 +50,13 @@ const Slider = () => {
             position = "lastSlide";
           }
           return (
-            <article className={position} key={id}>
-              <h4 className="text-center">{name}</h4>
-              <p className={SliderCss.title}>{title}</p>
-              <p className={SliderCss.text}>{quote}</p>
-            </article>
+            <div className={SliderCss.article}>
+              <article className={position} key={id}>
+                <h4 className="text-center tracking-widest uppercase leading-tight mb-3">{name}</h4>
+                <p className={SliderCss.title}>{title}</p>
+                <p className={SliderCss.text}>{quote}</p>
+              </article>
+            </div>
           );
         })}
         <button className="prev" onClick={() => setIndex(index - 1)}>

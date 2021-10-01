@@ -1,12 +1,4 @@
-h1,
-h2,
-h3,
-h4 {
-  letter-spacing: 0.1rem;
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-}
+
 .section {
   width: 90vw;
   margin: 12rem auto;
@@ -39,7 +31,7 @@ margin: 6rem auto 3rem;
 background: gray;
 }
 
-article {
+.article > article{
   position: absolute;
   top: 0;
   left: 0;
@@ -50,14 +42,14 @@ article {
 
 }
 
-article.activeSlide {
+.article > article.activeSlide {
   opacity: 1;
   transform: translateX(0);
 }
-article.lastSlide {
+.article > article.lastSlide {
   transform: translateX(-100%);
 }
-article.nextSlide {
+.article > article.nextSlide {
   transform: translateX(100%);
 }
 
@@ -71,7 +63,7 @@ article.nextSlide {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-article h4 {
+.article > article > h4 {
   text-transform: uppercase;
   color: hsl(21, 62%, 45%);
   margin-bottom: 0.25rem;

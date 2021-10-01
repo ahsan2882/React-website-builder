@@ -11,12 +11,13 @@ export default function BottomFooter() {
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
+                    key='footer4ed3'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                     initialValue="<p>Copyright © 2021 CITRIX CONSULTANCY. All Rights Reserved.</p>"
                     init={{
                         menubar: false,
-                        toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                            'alignright alignjustify |',
+                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                            'alignright alignjustify | formatselect',
                     }}
                 />
             </div>

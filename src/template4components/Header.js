@@ -16,12 +16,13 @@ export default function Header() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='headed1'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<div>+10800-33-000</div>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                     </li>
@@ -34,12 +35,13 @@ export default function Header() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='headed2'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<div>security</div>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                     </li>
@@ -52,12 +54,13 @@ export default function Header() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='headed3'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<div>21 Newstreet, New York, 269-24</div>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                     </li>

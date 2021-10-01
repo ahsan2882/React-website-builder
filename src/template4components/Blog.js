@@ -15,24 +15,26 @@ export default function Blog() {
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
+                    key='blog4ed1'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                     initialValue="<h3>WHATS NEW</h3>"
                     init={{
                         menubar: false,
-                        toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                            'alignright alignjustify |',
+                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                            'alignright alignjustify | formatselect',
                     }}
                 />
                 {/* <TextH1 className="text-white font-black mb-12 text-5xl" text="Latest News" /> */}
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
+                    key='blog4ed2'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                     initialValue="<h1>Latest News</h1>"
                     init={{
                         menubar: false,
-                        toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                            'alignright alignjustify |',
+                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                            'alignright alignjustify | formatselect',
                     }}
                 />
             </div>
@@ -44,12 +46,13 @@ export default function Blog() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='blog4ed3'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Personal Security Services</h1>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         {/* <TextPara className="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
@@ -58,14 +61,15 @@ export default function Blog() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='blog4ed4'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<p>vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ...</p>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
@@ -73,12 +77,13 @@ export default function Blog() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='blog4ed5'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<button>Read More</button>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>
@@ -89,12 +94,13 @@ export default function Blog() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='blog4ed6'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Personal Security Services</h1>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         {/* <TextPara classStyle="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
@@ -103,14 +109,15 @@ export default function Blog() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='blog4ed7'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<p>vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ...</p>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
@@ -118,12 +125,13 @@ export default function Blog() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='blog4ed8'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<button>Read More</button>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>
@@ -134,12 +142,13 @@ export default function Blog() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='blog4ed9'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Personal Security Services</h1>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         {/* <TextPara classStyle="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
@@ -148,14 +157,15 @@ export default function Blog() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='blog4ed10'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<p>vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ...</p>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
@@ -163,12 +173,13 @@ export default function Blog() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='blog4ed11'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<button>Read More</button>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>

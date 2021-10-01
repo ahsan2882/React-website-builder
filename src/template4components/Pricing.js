@@ -12,24 +12,26 @@ export default function Pricing() {
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
+                        key='price4ed1'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue="<h2>Reasonable Pricing Plans</h2>"
                         init={{
                             menubar: false,
-                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                'alignright alignjustify |',
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | formatselect',
                         }}
                     />
                     {/* <TextH1 className={`text-5xl text-center ${Pricing4Css.pricingPlanSubhead}`} text="Our Pricing" /> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
+                        key='price4ed2'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue="<h1>Our Pricing</h1>"
                         init={{
                             menubar: false,
-                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                'alignright alignjustify |',
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | formatselect',
                         }}
                     />
                 </div>
@@ -40,24 +42,26 @@ export default function Pricing() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='price4ed3'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Personal Security</h1>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         {/* <TextH2 className="flex justify-center items-center text-5xl text-black text-center" text="Start" /> */}
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='price4ed4'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>Start</h2>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div>
@@ -67,12 +71,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed5'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>CCTV Service</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -82,12 +87,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed6'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Alarm Signaling</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -97,12 +103,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed7'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Access Control</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -112,12 +119,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed8'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Alarm Signaling</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -128,12 +136,13 @@ export default function Pricing() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='price4ed9'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<button>Get Quote</button>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>
@@ -148,23 +157,25 @@ export default function Pricing() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='price4ed10'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Personal Security</h1>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='price4ed11'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>Start</h2>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div>
@@ -172,14 +183,15 @@ export default function Pricing() {
                                 {/* <li className="p-1"><IconText classStyle="fas fa-check" text=" CCTV Service" /></li> */}
                                 <li className="p-1">
                                     <Editor
+                                        key='price4ed12'
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>CCTV Service</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -188,12 +200,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed13'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Alarm Signaling</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -202,12 +215,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed14'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Access Control</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -216,12 +230,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed15'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Alarm Signaling</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -232,12 +247,13 @@ export default function Pricing() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='price4ed16'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<button>Get Quote</button>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>
@@ -252,23 +268,25 @@ export default function Pricing() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='price4ed17'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Personal Security</h1>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='price4ed18'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>Start</h2>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div>
@@ -278,12 +296,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed19'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>CCTV Service</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -292,12 +311,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed20'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Alarm Signaling</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -306,12 +326,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed21'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Access Control</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -320,12 +341,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed22'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Alarm Signaling</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -336,12 +358,13 @@ export default function Pricing() {
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
+                                key='price4ed23'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<button>Get Quote</button>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>
@@ -356,23 +379,25 @@ export default function Pricing() {
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='price4ed24'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Personal Security</h1>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
+                            key='price4ed25'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>Start</h2>"
                             init={{
                                 menubar: false,
-                                toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                    'alignright alignjustify |',
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | formatselect',
                             }}
                         />
                         <div>
@@ -382,12 +407,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed26'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>CCTV Service</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -396,12 +422,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed27'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Alarm Signaling</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -410,12 +437,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed28'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Access Control</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -424,12 +452,13 @@ export default function Pricing() {
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
+                                        key='price4ed29'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="<p>Alarm Signaling</p>"
                                         init={{
                                             menubar: false,
-                                            toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                                'alignright alignjustify |',
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | formatselect',
                                         }}
                                     />
                                 </li>
@@ -439,13 +468,14 @@ export default function Pricing() {
                             {/* <ButtonText className={`text-base border-2 border-solid py-2 px-9 hover:bg-black hover:text-white ${Pricing4Css.cardBtn}`} text="Get Quote" /> */}
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
+                                key='price4ed30'
                                 inline={true}
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<button>Get Quote</button>"
                                 init={{
                                     menubar: false,
-                                    toolbar: 'bold italic backcolor | alignleft aligncenter ' +
-                                        'alignright alignjustify |',
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | formatselect',
                                 }}
                             />
                         </div>
