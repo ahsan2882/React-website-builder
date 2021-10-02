@@ -2,7 +2,7 @@ import React from 'react'
 import HeaderEditCss from './HeaderEdit.module.css'
 import { Link } from 'react-router-dom';
 
-export default function Header({ setWidth, previewTempV}) {
+export default function Header({ setWidth}) {
     return (
         <div className={`flex justify-between items-center border-b-2 border-gray-100 py-6 ${HeaderEditCss['max-w-7xl']} mx-auto px-4 bg-white fixed z-50 w-full top-0`}>
             <div className="flex justify-start">
@@ -26,7 +26,7 @@ export default function Header({ setWidth, previewTempV}) {
                     {/* <i class="far fa-save icon-mob "></i> */}
                     <i className={`far fa-save ${HeaderEditCss['icon-mob']}`}></i>
                 </button>
-                <Link className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900 space-x-10" onClick={() =>  previewTempV() } target='_blank' rel='noopener noreferrer' to='/preview'>
+                <Link className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900 space-x-10" target='_blank' rel='noopener noreferrer' to='/preview'>
                     {/* <i className="far fa-eye icon-mob "></i> */}
                     <i className={`far fa-eye ${HeaderEditCss['icon-mob']}`}></i>
                 </Link>

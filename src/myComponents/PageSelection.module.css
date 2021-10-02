@@ -1,0 +1,30 @@
+.page {
+    background-color: #edf4f6;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.topBarWrap {
+    width: 75rem;
+}
+
+.bottomBarWrap {
+    width: 45rem;
+}
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #edf4f6;
+
+}
+
+.tempWrap {
+    transition: all .25s ease;
+}
+
+.tempWrap:hover {
+    box-shadow: 0px 10px 20px 10px #DFEBEE;
+    transform: translateY(-2rem);
+}
