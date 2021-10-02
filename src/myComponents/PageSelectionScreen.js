@@ -5,7 +5,7 @@ import temp3 from '../assets/templateSelectionImages/template03.png';
 import temp4 from '../assets/templateSelectionImages/template04.png';
 import { Link } from 'react-router-dom';
 
-export default function PageSelectionScreen() {
+export default function PageSelectionScreen({setTemp}) {
     return (
         <>
             <header className="max-w-7xl mx-auto mt-12">
@@ -16,17 +16,17 @@ export default function PageSelectionScreen() {
             <div className="max-w-6xl my-8 mx-auto">
                 <div className="flex justify-between items-stretch w-full">
                     <div className="border-2 border-red-700 w-80">
-                        <Link to="/edit/template-1">
+                        <Link to="/edit" onClick={() => setTemp(1)}>
                             <img src={temp1} alt="template 1" />
                         </Link>
                     </div>
                     <div className="w-80 border-2 border-red-700">
-                        <Link to='/edit/template-2'>
+                        <Link to='/edit' onClick={() => setTemp(2)}>
                             <img src={temp2} alt="template 2" />
                         </Link>
                     </div>
                     <div className="w-80 border-2 border-red-700">
-                        <Link to='/edit/template-3'>
+                        <Link to='/edit' onClick={() => setTemp(3)}>
                             <img src={temp3} alt="template 3" />
                         </Link>
                     </div>    
@@ -35,12 +35,12 @@ export default function PageSelectionScreen() {
             <div className="max-w-3xl my-8 mx-auto">
                 <div className="flex justify-between items-center w-full">
                     <div className="border-2 border-red-700 w-80">
-                        <Link to='/edit'>
+                        <Link to='/edit' onClick={() => setTemp(4)}>
                             <img src={temp4} alt="template 4" />
                         </Link>
                     </div>
                     <div className="border-2 border-gray-700 flex flex-col justify-center items-center w-2/5">
-                        <Link to='/edit/new-template' className="w-full">
+                        <Link to='/edit' className="w-full" onClick={() => setTemp(0)}>
                             <div className="flex flex-col justify-center items-center py-8">
                                 <i className="fas fa-plus text-8xl"></i>
                                 <h2>Create your own</h2>

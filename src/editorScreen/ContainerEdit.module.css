@@ -1,3 +1,6 @@
 .editing {
     max-width: 80vw;
 }
+.empty{
+    height: 80vh;
+}
