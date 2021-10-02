@@ -17,7 +17,7 @@ export default function PageSelectionScreen({ setTemp }) {
                 </div> */}
                 <div>
                     <div className="overflow-y-hidden flex flex-col my-auto">
-                        <div className={`my-8 mx-auto ${PageSelCss.topBarWrap}`}>
+                        <div className={`my-12 mx-auto ${PageSelCss.topBarWrap}`}>
                             <div className="flex justify-between items-stretch w-full">
                                 <div className={`bg-white rounded-2xl ${PageSelCss.tempWrap}`}>
                                     <Link to="/edit" onClick={() => setTemp(1)}>
@@ -79,7 +79,7 @@ export default function PageSelectionScreen({ setTemp }) {
                             </div>
                         </div>
                         <div className={`my-8 mx-auto ${PageSelCss.bottomBarWrap}`}>
-                            <div className="flex justify-between items-center w-full">
+                            <div className="flex justify-between items-stretch w-full">
                                 {/* <div className="w-80">
                                     <Link to='/edit' onClick={() => setTemp(4)}>
                                         <img src={temp4} alt="template 4" />
@@ -100,11 +100,26 @@ export default function PageSelectionScreen({ setTemp }) {
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="border-2 border-gray-700 flex flex-col justify-center items-center w-2/5">
-                                    <Link to='/edit' className="w-full" onClick={() => setTemp(0)}>
+
+                                {/* <Link to='/edit' className="w-full" onClick={() => setTemp(0)}>
                                         <div className="flex flex-col justify-center items-center py-8">
                                             <i className="fas fa-plus text-8xl"></i>
                                             <h2>Create your own</h2>
+                                        </div>
+                                        
+                                    </Link> */}
+                                <div className={`bg-white rounded-2xl ${PageSelCss.tempWrap} w-2/5`}>
+                                    <Link to="/edit" onClick={() => setTemp(0)}>
+                                        <div className="flex py-2 ml-1">
+                                            <div className={`${PageSelCss.dot} mx-1`}></div>
+                                            <div className={`${PageSelCss.dot} mx-1`}></div>
+                                            <div className={`${PageSelCss.dot} mx-1`}></div>
+                                        </div>
+                                        <div className="flex flex-col justify-center items-center w-full h-full my-auto">
+                                            <div className="flex flex-col justify-center items-center py-12">
+                                                <i className="fas fa-plus text-8xl"></i>
+                                                <h2>Create your own</h2>
+                                            </div>
                                         </div>
                                     </Link>
                                 </div>
