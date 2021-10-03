@@ -1,11 +1,7 @@
 .page {
     background-color: #edf4f6;
     box-sizing: border-box;
-}
-
-
-.bottomBarWrap {
-    width: 45rem;
+    height: 100vh;
 }
 
 .dot {

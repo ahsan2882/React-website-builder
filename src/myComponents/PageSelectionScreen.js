@@ -17,7 +17,7 @@ export default function PageSelectionScreen({ setTemp }) {
                 </div> */}
                 <div>
                     <div className="overflow-y-hidden flex flex-col">
-                        <div className={`my-8 mx-auto w-3/4`}>
+                        <div className={`my-8 mx-auto w-4/5`}>
                             <div className="flex justify-between items-stretch w-full">
                                 <div className={`bg-white rounded-2xl mx-8 ${PageSelCss.tempWrap}`}>
                                     <Link to="/edit" onClick={() => setTemp(1)}>
@@ -78,7 +78,7 @@ export default function PageSelectionScreen({ setTemp }) {
                                 </div>
                             </div>
                         </div>
-                        <div className={`my-8 mx-auto w-3/4`}>
+                        <div className={`my-8 mx-auto w-4/5`}>
                             <div className="flex justify-around items-stretch w-full">
                                 {/* <div className="w-80">
                                     <Link to='/edit' onClick={() => setTemp(4)}>
