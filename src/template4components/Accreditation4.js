@@ -5,9 +5,9 @@ import cl1 from '../assets/template4images/client1.png';
 import cl2 from '../assets/template4images/client2.png';
 import cl3 from '../assets/template4images/client3.png';
 import cl4 from '../assets/template4images/client4.png';
-import Accre4Css from './Accreditation.module.css';
+import Accre4Css from './Accreditation4.module.css';
 
-export default function Accreditation() {
+export default function Accreditation4() {
     const editorRef = useRef(null);
     return (
         <section className="py-28 px-0 w-full">

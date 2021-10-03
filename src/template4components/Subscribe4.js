@@ -1,9 +1,9 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
 import rsswifi from '../assets/template4images/rsswifi.png'
-import Subscribe4Css from './Subscribe.module.css'
+import Subscribe4Css from './Subscribe4.module.css'
 
-export default function Subscribe() {
+export default function Subscribe4() {
     const editorRef = useRef(null);
     return (
         <div className={`${Subscribe4Css.container1} ${Subscribe4Css.subscribeSection} w-full`}>

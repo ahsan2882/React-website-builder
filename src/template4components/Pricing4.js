@@ -1,8 +1,8 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
-import Pricing4Css from './Pricing.module.css'
+import Pricing4Css from './Pricing4.module.css'
 
-export default function Pricing() {
+export default function Pricing4() {
     const editorRef = useRef(null);
     return (
         <div className="py-20 px-0 w-full">

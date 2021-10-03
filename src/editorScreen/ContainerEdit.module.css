@@ -1,6 +1,23 @@
 .editing {
-    max-width: 80vw;
+    min-height: 80vh;
+    height: 100%;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
-.empty{
-    height: 80vh;
+.editing.empty{
+    min-height: 80vh;
+    height: 20vh;
+}
+.editWrap {
+    max-width: 80vw;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #84878c;
 }

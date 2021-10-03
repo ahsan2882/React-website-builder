@@ -2,10 +2,10 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
 import navlogo from '../assets/template4images/thefnflogo.png'
 import background from '../assets/template4images/blog_15-770x545.jpg'
-import Hero4Css from './HeroSection.module.css'
+import Hero4Css from './HeroSection4.module.css'
 import { Link } from 'react-router-dom';
 
-export default function HeroSection() {
+export default function HeroSection4() {
     const editorRef = useRef(null);
     return (
         <>

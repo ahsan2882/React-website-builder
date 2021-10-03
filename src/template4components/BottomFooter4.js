@@ -1,8 +1,8 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React,{useRef} from 'react'
-import BottomFooter4Css from './BottomFooter.module.css'
+import BottomFooter4Css from './BottomFooter4.module.css'
 
-export default function BottomFooter() {
+export default function BottomFooter4() {
     const editorRef = useRef(null);
     return (
         <footer className="bg-black w-full">

@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import aboutimg from '../assets/template4images/news3.jpg'
-import About4Css from './AboutUs.module.css'
+import About4Css from './AboutUs4.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
-export default function AboutUs() {
+export default function AboutUs4() {
     const editorRef = useRef(null);
     return (
         <div className={`${About4Css.container02} py-28 px-12 flex items-center justify-center bg-black w-full`}>

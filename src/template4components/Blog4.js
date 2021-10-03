@@ -4,9 +4,9 @@ import news1 from '../assets/template4images/news1.jpg';
 import news2 from '../assets/template4images/news2.jpg';
 import news3 from '../assets/template4images/news3.jpg';
 import { Editor } from '@tinymce/tinymce-react';
-import Blog4Css from './Blog.module.css';
+import Blog4Css from './Blog4.module.css';
 
-export default function Blog() {
+export default function Blog4() {
     const editorRef = useRef(null);
     return (
         <section className="bg-black py-28 px-0 w-full">

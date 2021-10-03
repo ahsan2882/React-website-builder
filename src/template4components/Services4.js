@@ -6,10 +6,10 @@ import serv3 from '../assets/template4images/service_03-778x610.jpg';
 import serv4 from '../assets/template4images/service_04-778x610.jpg';
 import serv5 from '../assets/template4images/service_05-778x610.jpg';
 import serv6 from '../assets/template4images/service_06-778x610.jpg';
-import Service4Css from './Services.module.css';
+import Service4Css from './Services4.module.css';
 import { Link } from 'react-router-dom';
 
-export default function Services() {
+export default function Services4() {
     const editorRef = useRef(null);
     return (
         <div className={`text-center py-28 px-0 bg-black ${Service4Css.serviceWrapper} w-full`}>

@@ -5,9 +5,9 @@ import guard1 from '../assets/template4images/guard1.jpg';
 import guard2 from '../assets/template4images/guard2.jpg';
 import guard3 from '../assets/template4images/guard3.jpg';
 import guard4 from '../assets/template4images/guard4.jpg';
-import Guards4Css from './OurGuards.module.css';
+import Guards4Css from './OurGuards4.module.css';
 
-export default function OurGuards() {
+export default function OurGuards4() {
     const editorRef = useRef(null);
     return (
         <section className="bg-white w-full">

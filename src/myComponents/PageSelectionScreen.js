@@ -16,17 +16,17 @@ export default function PageSelectionScreen({ setTemp }) {
                     </Link>
                 </div> */}
                 <div>
-                    <div className="overflow-y-hidden flex flex-col my-auto">
-                        <div className={`my-12 mx-auto ${PageSelCss.topBarWrap}`}>
+                    <div className="overflow-y-hidden flex flex-col">
+                        <div className={`my-8 mx-auto w-3/4`}>
                             <div className="flex justify-between items-stretch w-full">
-                                <div className={`bg-white rounded-2xl ${PageSelCss.tempWrap}`}>
+                                <div className={`bg-white rounded-2xl mx-8 ${PageSelCss.tempWrap}`}>
                                     <Link to="/edit" onClick={() => setTemp(1)}>
                                         <div className="flex py-2 ml-1">
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                         </div>
-                                        <div className="w-80">
+                                        <div className="w-full">
 
                                             <img src={temp1} alt="template 1" />
 
@@ -41,14 +41,14 @@ export default function PageSelectionScreen({ setTemp }) {
                                         <img src={temp2} alt="template 2" />
                                     </Link>
                                 </div> */}
-                                <div className={`bg-white rounded-2xl ${PageSelCss.tempWrap}`}>
+                                <div className={`bg-white rounded-2xl mx-8 ${PageSelCss.tempWrap}`}>
                                     <Link to="/edit" onClick={() => setTemp(2)}>
                                         <div className="flex py-2 ml-1">
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                         </div>
-                                        <div className="w-80">
+                                        <div className="w-full">
                                             <img src={temp2} alt="template 2" />
                                         </div>
                                         <div className="py-6 text-center">
@@ -61,14 +61,14 @@ export default function PageSelectionScreen({ setTemp }) {
                                         <img src={temp3} alt="template 3" />
                                     </Link>
                                 </div> */}
-                                <div className={`bg-white rounded-2xl ${PageSelCss.tempWrap}`}>
+                                <div className={`bg-white rounded-2xl mx-8 ${PageSelCss.tempWrap}`}>
                                     <Link to="/edit" onClick={() => setTemp(3)}>
                                         <div className="flex py-2 ml-1">
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                         </div>
-                                        <div className="w-80">
+                                        <div className="w-full">
                                             <img src={temp3} alt="template 3" />
                                         </div>
                                         <div className="py-6 text-center">
@@ -78,21 +78,21 @@ export default function PageSelectionScreen({ setTemp }) {
                                 </div>
                             </div>
                         </div>
-                        <div className={`my-8 mx-auto ${PageSelCss.bottomBarWrap}`}>
-                            <div className="flex justify-between items-stretch w-full">
+                        <div className={`my-8 mx-auto w-3/4`}>
+                            <div className="flex justify-around items-stretch w-full">
                                 {/* <div className="w-80">
                                     <Link to='/edit' onClick={() => setTemp(4)}>
                                         <img src={temp4} alt="template 4" />
                                     </Link>
                                 </div> */}
-                                <div className={`bg-white rounded-2xl ${PageSelCss.tempWrap}`}>
+                                <div className={`bg-white rounded-2xl mx-8 ${PageSelCss.tempWrap}`}>
                                     <Link to="/edit" onClick={() => setTemp(4)}>
                                         <div className="flex py-2 ml-1">
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                         </div>
-                                        <div className="w-80">
+                                        <div className="w-full">
                                             <img src={temp4} alt="template 4" />
                                         </div>
                                         <div className="py-6 text-center">
@@ -108,7 +108,7 @@ export default function PageSelectionScreen({ setTemp }) {
                                         </div>
                                         
                                     </Link> */}
-                                <div className={`bg-white rounded-2xl ${PageSelCss.tempWrap} w-2/5`}>
+                                <div className={`bg-white rounded-2xl mx-8 ${PageSelCss.tempWrap} w-2/5`}>
                                     <Link to="/edit" onClick={() => setTemp(0)}>
                                         <div className="flex py-2 ml-1">
                                             <div className={`${PageSelCss.dot} mx-1`}></div>

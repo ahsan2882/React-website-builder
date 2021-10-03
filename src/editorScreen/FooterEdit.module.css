@@ -5,61 +5,31 @@
 }
 .i-circle {
     font-size: 30px;
+    color: blue;
+    transition: transform 0.25s ease;
 }
 .navToggle {
-    top: 90vh;
-    display: block;
-    border: none;
     height: 38px;
     width: 38px;
-    padding: 10px 8px;
-    margin: 10px 0px 10px 0px;
-    outline: none;
-    cursor: pointer;
     z-index: 5;
+    transition: transform 0.25s ease;
 }
-
-.navToggle.open .spanBtn:first-child {
-    transform: rotate(45deg) translate(4.4px, 4.4px);
-}
-
-.navToggle.open .spanBtn:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-}
-
-.navToggle.open .spanBtn:last-child {
-    transform: rotate(-45deg) translate(4.4px, -4.4px);
-}
-
-.navToggle .spanBtn {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 2px;
-    margin-bottom: 4px;
-    background-color: #292a2a;
-    border-radius: 5px;
-    transition: all 0.3s cubic-bezier(1, 0.13, 0.35, 1.09);
-}
-
-.navToggle .spanBtn:last-child {
-    margin-bottom: 0;
+.navToggle .open{
+    transform: rotate(45deg);
+    color: red;
 }
 
 .mainNav {
     position: fixed;
-    top: 8vh;
+    top: 4.5rem;
     left: 0;
     width: 9.5vw;
     height: 100vh;
     background-color: #fff;
-    padding: 58px 15px;
     z-index: 3;
-    border: 2px solid rgb(201, 201, 201);
     transform: translateX(-100%);
     transition: transform 0.25s ease;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .mainNav.open {
@@ -67,7 +37,6 @@
 }
 
 .mainNav .mainNavLink {
-    display: block;
-    padding: 0.71875rem 0;
+    padding-left: 0.75rem;
     text-transform: capitalize;
 }

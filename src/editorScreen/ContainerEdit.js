@@ -34,12 +34,31 @@ export default function ContainerEdit({ defWidth, templateNum}) {
     }
     
     return (
-        <section className="text-gray-600 body-font relative mt-32">
-            <div className={`container flex justify-center items-center bg-gray-200 ${ContainerEditCss['editing']} rounded-md mx-auto mt-10`}>
-                <div className="flex flex-col justify-center items-center text-center w-full mb-12">
-                   {component}
-                </div>
+        // <section className="text-gray-600 body-font relative mt-32">
+        //     <div className={`container flex justify-center items-center bg-gray-200 ${ContainerEditCss['editing']} rounded-md mx-auto mt-10`}>
+        //         <div className="flex py-2 ml-1">
+        //             <div className={`${ContainerEditCss.dot} mx-1`}></div>
+        //             <div className={`${ContainerEditCss.dot} mx-1`}></div>
+        //             <div className={`${ContainerEditCss.dot} mx-1`}></div>
+        //         </div>
+        //         <div className="flex flex-col justify-center items-center text-center w-full mb-12">
+        //            {component}
+        //         </div>
+        //     </div>
+        // </section>
+        <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`}>
+            <div className={`flex py-2 pl-2`}>
+                <div className={`${ContainerEditCss.dot} mx-1`}></div>
+                <div className={`${ContainerEditCss.dot} mx-1`}></div>
+                <div className={`${ContainerEditCss.dot} mx-1`}></div>
             </div>
+            {temp === 0 ? 
+                <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto bg-gray-200 overflow-hidden`}>
+                    {component}
+                </div>
+                : <div className={`${ContainerEditCss.editing} mx-auto bg-gray-200 overflow-hidden`}>
+                    {component}
+                </div>}
         </section>
     );
 }

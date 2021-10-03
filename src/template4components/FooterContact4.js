@@ -1,8 +1,8 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
-import FooterContact4Css from './FooterContact.module.css'
+import FooterContact4Css from './FooterContact4.module.css'
 
-export default function FooterContact() {
+export default function FooterContact4() {
     const editorRef = useRef(null);
     return (
         <div className={`${FooterContact4Css.contactFooterWrapper} w-full`}>

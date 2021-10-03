@@ -1,8 +1,8 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
-import Header4Css from './Header.module.css'
+import Header4Css from './Header4.module.css'
 
-export default function Header() {
+export default function Header4() {
     const editorRef = useRef(null);
     return (
         <header className={`${Header4Css.header} w-full`}>

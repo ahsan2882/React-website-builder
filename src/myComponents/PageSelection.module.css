@@ -1,12 +1,8 @@
 .page {
     background-color: #edf4f6;
     box-sizing: border-box;
-    height: 100vh;
 }
 
-.topBarWrap {
-    width: 75rem;
-}
 
 .bottomBarWrap {
     width: 45rem;
@@ -21,6 +17,7 @@
 }
 
 .tempWrap {
+    max-width: 30%;
     transition: all .25s ease;
 }
 
