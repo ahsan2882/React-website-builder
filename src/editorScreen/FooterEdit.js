@@ -13,7 +13,7 @@ import footerAss4 from '../assets/editingScreenAssets/footerEditAssets/footer4.J
 import pricingAss1 from '../assets/editingScreenAssets/pricingEditAssets/pricing1.JPG'
 import pricingAss2 from '../assets/editingScreenAssets/pricingEditAssets/pricing2.JPG'
 import pricingAss3 from '../assets/editingScreenAssets/pricingEditAssets/pricing3.JPG'
-import serviceAss1 from '../assets/editingScreenAssets/serviceEditAssets/blog.png'
+import serviceAss1 from '../assets/editingScreenAssets/serviceEditAssets/service1.png'
 import serviceAss2 from '../assets/editingScreenAssets/serviceEditAssets/service2.JPG'
 import serviceAss3 from '../assets/editingScreenAssets/serviceEditAssets/service3.JPG'
 import serviceAss4 from '../assets/editingScreenAssets/serviceEditAssets/service4.JPG'
@@ -31,88 +31,88 @@ export default function FooterEdit({setOverlay}) {
     const onClicked = () => setIsClicked((state) => !state);
     const [footerState, setFooterState] = useState(false);
     const footerClicked = () => setFooterState((state) => !state);
-    useEffect(() => {
-        if(footerState){
-            setTestimonialState(false);
-            setFaqState(false);
-            setContactState(false);
-            setSocialState(false);
-            setPricingState(false);
-            setServicesState(false);
-        }
-    }, [footerState]);
+    // useEffect(() => {
+    //     if(footerState){
+    //         setTestimonialState(false);
+    //         setFaqState(false);
+    //         setContactState(false);
+    //         setSocialState(false);
+    //         setPricingState(false);
+    //         setServicesState(false);
+    //     }
+    // }, [footerState]);
     const [testimonialState, setTestimonialState] = useState(false);
     const testimonialClicked = () => setTestimonialState((state) => !state);
-    useEffect(() => {
-        if (testimonialState) {
-            setFooterState(false);
-            setFaqState(false);
-            setContactState(false);
-            setSocialState(false);
-            setPricingState(false);
-            setServicesState(false);
-        }
-    }, [testimonialState]);
+    // useEffect(() => {
+    //     if (testimonialState) {
+    //         setFooterState(false);
+    //         setFaqState(false);
+    //         setContactState(false);
+    //         setSocialState(false);
+    //         setPricingState(false);
+    //         setServicesState(false);
+    //     }
+    // }, [testimonialState]);
     const [faqState, setFaqState] = useState(false);
     const faqClicked = () => setFaqState((state) => !state);
-    useEffect(() => {
-        if (faqState) {
-            setTestimonialState(false);
-            setFooterState(false);
-            setContactState(false);
-            setSocialState(false);
-            setPricingState(false);
-            setServicesState(false);
-        }
-    }, [faqState]);
+    // useEffect(() => {
+    //     if (faqState) {
+    //         setTestimonialState(false);
+    //         setFooterState(false);
+    //         setContactState(false);
+    //         setSocialState(false);
+    //         setPricingState(false);
+    //         setServicesState(false);
+    //     }
+    // }, [faqState]);
     const [contactState, setContactState] = useState(false);
     const contactClicked = () => setContactState((state) => !state);
-    useEffect(() => {
-        if (contactState) {
-            setTestimonialState(false);
-            setFaqState(false);
-            setFooterState(false);
-            setSocialState(false);
-            setPricingState(false);
-            setServicesState(false);
-        }
-    }, [contactState]);
+    // useEffect(() => {
+    //     if (contactState) {
+    //         setTestimonialState(false);
+    //         setFaqState(false);
+    //         setFooterState(false);
+    //         setSocialState(false);
+    //         setPricingState(false);
+    //         setServicesState(false);
+    //     }
+    // }, [contactState]);
     const [socialState, setSocialState] = useState(false);
     const socialClicked = () => setSocialState((state) => !state);
-    useEffect(() => {
-        if (socialState) {
-            setTestimonialState(false);
-            setFaqState(false);
-            setContactState(false);
-            setFooterState(false);
-            setPricingState(false);
-            setServicesState(false);
-        }
-    }, [socialState]);
+    // useEffect(() => {
+    //     if (socialState) {
+    //         setTestimonialState(false);
+    //         setFaqState(false);
+    //         setContactState(false);
+    //         setFooterState(false);
+    //         setPricingState(false);
+    //         setServicesState(false);
+    //     }
+    // }, [socialState]);
     const [pricingState, setPricingState] = useState(false);
     const pricingClicked = () => setPricingState((state) => !state);
-    useEffect(() => {
-        if (pricingState) {
-            setTestimonialState(false);
-            setFaqState(false);
-            setContactState(false);
-            setSocialState(false);
-            setFooterState(false);
-            setServicesState(false);
-        }
-    }, [pricingState]);
+    // useEffect(() => {
+    //     if (pricingState) {
+    //         setTestimonialState(false);
+    //         setFaqState(false);
+    //         setContactState(false);
+    //         setSocialState(false);
+    //         setFooterState(false);
+    //         setServicesState(false);
+    //     }
+    // }, [pricingState]);
     const [servicesState, setServicesState] = useState(false);
     const servicesClicked = () => setServicesState((state) => !state);
-    useEffect(() => {
-        if (servicesState) {
-            setTestimonialState(false);
-            setFaqState(false);
-            setContactState(false);
-            setSocialState(false);
-            setPricingState(false);
-            setFooterState(false);
-        }
-    }, [servicesState]);
+    // useEffect(() => {
+    //     if (servicesState) {
+    //         setTestimonialState(false);
+    //         setFaqState(false);
+    //         setContactState(false);
+    //         setSocialState(false);
+    //         setPricingState(false);
+    //         setFooterState(false);
+    //     }
+    // }, [servicesState]);
     useEffect(() => {
         if (servicesState || pricingState || socialState || faqState || footerState || contactState || testimonialState) {
             setOverlay(true);
@@ -177,7 +177,9 @@ export default function FooterEdit({setOverlay}) {
                 style={footerState
                     ? { transform: "translateX(0%)" }
                     : null
-                }>
+                }
+                onMouseLeave={() => setFooterState(false)}
+                >
                 <ul className={`${FooterEditCss.footerMenu}`}>
                     <li><img src={footerAss1} alt="Footer Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={footerAss2} alt="Footer Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
@@ -189,7 +191,9 @@ export default function FooterEdit({setOverlay}) {
                 style={testimonialState
                     ? { transform: "translateX(0%)" }
                     : null
-                }>
+                }
+                onMouseLeave={() => setTestimonialState(false)}
+                >
                 <ul className={`${FooterEditCss.testimonialMenu}`}>
                     <li><img src={testimonialAss1} alt="Testimonial Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={testimonialAss2} alt="Testimonial Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
@@ -201,7 +205,8 @@ export default function FooterEdit({setOverlay}) {
                 style={faqState
                     ? { transform: "translateX(0%)" }
                     : null
-                }>
+                }
+                onMouseLeave={() => setFaqState(false)}>
                 <ul className={`${FooterEditCss.faqsMenu}`}>
                     <li><img src={faqsAss1} alt="FAQ Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>
@@ -210,7 +215,9 @@ export default function FooterEdit({setOverlay}) {
                 style={contactState
                     ? { transform: "translateX(0%)" }
                     : null
-                }>
+                }
+                onMouseLeave={() => setContactState(false)}
+                >
                 <ul className={`${FooterEditCss.contactusMenu}`}>
                     <li><img src={contactusAss1} alt="Contact Us Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={contactusAss2} alt="Contact Us Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
@@ -222,7 +229,9 @@ export default function FooterEdit({setOverlay}) {
                 style={socialState
                     ? { transform: "translateX(0%)" }
                     : null
-                }>
+                }
+                onMouseLeave={() => setSocialState(false)}
+                >
                 <ul className={`${FooterEditCss.socialMenu}`}>
                     <li><img src={socialAss1} alt="Social Icon Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={socialAss2} alt="Social Icon Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
@@ -233,7 +242,9 @@ export default function FooterEdit({setOverlay}) {
                 style={pricingState
                     ? { transform: "translateX(0%)" }
                     : null
-                }>
+                }
+                onMouseLeave={() => setPricingState(false)}
+                >
                 <ul className={`${FooterEditCss.pricingMenu}`}>
                     <li><img src={pricingAss1} alt="Pricing Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={pricingAss2} alt="Pricing Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
@@ -244,7 +255,9 @@ export default function FooterEdit({setOverlay}) {
                 style={servicesState
                     ? { transform: "translateX(0%)" }
                     : null
-                }>
+                }
+                onMouseLeave={() => setServicesState(false)}
+                >
                 <ul className={`${FooterEditCss.serviceMenu}`}>
                     <li><img src={serviceAss1} alt="Services Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={serviceAss2} alt="Services Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
