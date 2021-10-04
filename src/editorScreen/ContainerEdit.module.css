@@ -1,17 +1,16 @@
 .editing {
     min-height: 80vh;
     height: 100%;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
 }
 .editing.empty{
     min-height: 80vh;
     height: 20vh;
 }
 .editWrap {
-    max-width: 80vw;
+    max-width: 70vw;
     border-radius: 1rem;
-    border: 1px solid black;
+    box-shadow: 0px 10px 20px 10px #DFEBEE;
+    overflow: hidden;
 }
 
 

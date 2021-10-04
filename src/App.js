@@ -14,28 +14,9 @@ import Template4Page from './template4components/Template4Page'
 export default function App() {
 
   const [temp, setTemp] = useState(0);
-  const [val, setVal] = useState(0);
-  var template;
-  switch (val) {
-    case 1:
-      template = <Template1Page />
-      break;
-    case 2:
-      template = <Template2Page />
-      break;
-    case 3:
-      template = <Template3Page />
-      break;
-    case 4:
-      template = <Template4Page />
-      break;
-    default:
-      template = <h2>Please Create a Template</h2>
-  }
-  
   useEffect(() => {
-    console.log("CurrentTemp: ", val);
-  }, [val]);
+    console.log("CurrentTemp: ", temp);
+  }, [temp]);
   
   return (
     <Router>
@@ -47,10 +28,10 @@ export default function App() {
           <PageSelectionScreen setTemp={setTemp}/>
         </Route>
         <Route exact path='/edit'>
-          <EditScreen temp={temp} previewTemp={setVal}/>
+          <EditScreen temp={temp}/>
         </Route>
         <Route exact path='/preview'>
-          {template}
+          <Template1Page/>
         </Route>
       </Switch>
     </Router>

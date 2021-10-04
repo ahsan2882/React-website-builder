@@ -3,10 +3,8 @@ import HeaderEdit from './HeaderEdit'
 import ContainerEdit from './ContainerEdit'
 import FooterEdit from './FooterEdit'
 
-export default function EditScreen({temp, previewTemp}) {
+export default function EditScreen({temp}) {
     const [defWidth, setWidth] = useState(window.innerWidth);
-    const tempN = temp;
-    previewTemp(tempN);
     return (
         <>
             <HeaderEdit setWidth={setWidth}/>

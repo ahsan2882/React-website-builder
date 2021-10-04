@@ -3,40 +3,46 @@
         margin-left: -8vw;
     }
 }
-.i-circle {
-    font-size: 30px;
-    color: blue;
-    transition: transform 0.25s ease;
-}
-.navToggle {
-    height: 38px;
-    width: 38px;
-    z-index: 5;
-    transition: transform 0.25s ease;
-}
-.navToggle .open{
-    transform: rotate(45deg);
-    color: red;
-}
 
 .mainNav {
     position: fixed;
-    top: 4.5rem;
+    top: 4rem;
     left: 0;
     width: 9.5vw;
     height: 100vh;
     background-color: #fff;
     z-index: 3;
-    transform: translateX(-100%);
-    transition: transform 0.25s ease;
     overflow-y: hidden;
 }
 
-.mainNav.open {
-    transform: translateX(0%);
+.mainNav .mainNavLink {
+    padding-left: 1rem;
+    text-transform: capitalize;
+    transition: all 0.35s ease;
+}
+.mainNav .mainNavLink:hover{
+    background-color: #9fe1ff;
+    transform: translateX(10%);
 }
 
-.mainNav .mainNavLink {
-    padding-left: 0.75rem;
-    text-transform: capitalize;
+.footerList, .testimonialList, .faqsList, .contactList, .socialList, .pricingList, .servicesList{
+    position: fixed;
+    top: 4rem;
+    left: 9.5vw;
+    height: 100vh;
+    width:25vw;
+    background-color:#fff;
+    z-index: 10;
+    transform: translateX(-300%);
+    transition: all 0.7s ease;
+}
+.assetImages{
+    max-width: 20vw;
+    padding-left: 1rem;
+}
+.footerState:hover .footerList{
+    transform: translateX(0);
+}
+#testimonialState:hover .testimonialList {
+    transform: translateX(0);
 }

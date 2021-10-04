@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+
+   background: url(../images/backgrouned.svg) no-repeat center/cover;
+
+}
+form {
+
+padding: 40px;
+    height: 27em;
+    width: 35vw;
+    border-radius: 10px;
+   box-shadow: rgba(0, 0, 0,0.5) 2px 2px 2px 2px;
+    background-color:rgba(0,0,0,0.3);
+}
+
+.form {
+ padding: 10px;
+    width: 100%;
+    position: relative;
+    height: 90px;
+   
+overflow: hidden;
+}
+.form input {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+   background: none;
+}
+.form label {
+    position:absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+pointer-events:none;
+border-bottom: 1px solid white;
+}
+.form label::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom:none;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+}
+.contentName {
+    position: absolute;
+    bottom:5px;
+    left: 0;
+    transition: .3s all ease;
+}
+.form input:focus + .labelName  .contentName{
+    transform: translateY(-230%);
+    font-size: 14px;
+}
+.form span {
+    color: #fff;
+} 
+.form input :focus + .labelName::after,
+.form input:valid + .labelName::after {
+    transform: translateX(0%);
+}
+form button {
+    padding: 10px 40px 10px;
+    background: white;
+    display: flex;
+    margin:4em auto;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    transition: .3s all;
+}
+form button:hover {
+    background:#002233;
+    color: #0066FF;
+}
