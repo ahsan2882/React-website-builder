@@ -7,9 +7,10 @@ import Template3Page from '../template3components/Template3Page'
 import EmptyTemplate from '../editorScreen/EmptyTemplate'
 
 
-export default function ContainerEdit({ defWidth, templateNum}) {
+export default function ContainerEdit({ defWidth, templateNum, overlayPresent}) {
     window.resizeTo(defWidth, window.innerHeight);
     const temp = templateNum;
+    const overlay = overlayPresent;
 
     useEffect(() => {
         console.log("use effect ran:   ", defWidth);
@@ -33,19 +34,22 @@ export default function ContainerEdit({ defWidth, templateNum}) {
     }
     
     return (
-        <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`}>
-            <div className={`flex py-2 pl-2 border-b border-gray-200`}>
-                <div className={`${ContainerEditCss.dot} mx-1`}></div>
-                <div className={`${ContainerEditCss.dot} mx-1`}></div>
-                <div className={`${ContainerEditCss.dot} mx-1`}></div>
-            </div>
-            {temp === 0 ? 
-                <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto overflow-hidden`}>
-                    <EmptyTemplate/>
+        <>
+            {overlay ? <div style={{"background":`rgba(0,0,0,0.5)`}} className={ContainerEditCss.overlay}></div>:null}
+            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`}>
+                <div className={`flex py-2 pl-2 border-b border-gray-200`}>
+                    <div className={`${ContainerEditCss.dot} mx-1`}></div>
+                    <div className={`${ContainerEditCss.dot} mx-1`}></div>
+                    <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
-                : <div className={`${ContainerEditCss.editing} mx-auto bg-gray-200 overflow-hidden`}>
-                    {component}
-                </div>}
-        </section>
+                {temp === 0 ?
+                    <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto overflow-hidden`}>
+                        <EmptyTemplate />
+                    </div>
+                    : <div className={`${ContainerEditCss.editing} mx-auto bg-gray-200 overflow-hidden`}>
+                        {component}
+                    </div>}
+            </section>
+        </>
     );
 }

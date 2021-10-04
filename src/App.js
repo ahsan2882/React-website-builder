@@ -9,6 +9,7 @@ import Template1Page from './template1components/Template1Page'
 import Template2Page from './template2components/Template2Page'
 import Template3Page from './template3components/Template3Page'
 import Template4Page from './template4components/Template4Page'
+import {LoginPage} from './loginPage/LoginPage'
 
 
 export default function App() {
@@ -29,6 +30,9 @@ export default function App() {
         </Route>
         <Route exact path='/edit'>
           <EditScreen temp={temp}/>
+        </Route>
+        <Route exact path='/login'>
+          <LoginPage />
         </Route>
         <Route exact path='/preview'>
           <Template1Page/>

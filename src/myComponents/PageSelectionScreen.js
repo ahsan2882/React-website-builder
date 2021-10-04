@@ -9,12 +9,13 @@ import PageSelCss from './PageSelection.module.css'
 export default function PageSelectionScreen({ setTemp }) {
     return (
         <>
-            <div className={`${PageSelCss.page}`}>
+            <div className={`${PageSelCss.page} flex flex-col justify-center items-center`}>
                 {/* <div className="max-w-7xl mx-auto my-0 pt-12">
                     <Link to="/">
                         <button className="flex justify-center items-center py-1.5 px-10 bg-red-600 text-white rounded-3xl">BACK</button>
                     </Link>
                 </div> */}
+                <div className="flex justify-center"><h1 className="text-7xl mt-4">Heading</h1></div>
                 <div>
                     <div className="overflow-y-hidden flex flex-col">
                         <div className={`my-8 mx-auto w-4/5`}>
