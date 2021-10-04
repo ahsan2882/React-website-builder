@@ -1,7 +1,7 @@
-import React, { Component, useState } from 'react'
+import React, {useState } from 'react'
 import LoginPageCss from './LoginPage.module.css';
 import loginBackground from '../assets/loginPageAssets/backgrouned.svg'
-import { Redirect, withRouter } from 'react-router-dom';
+import {withRouter } from 'react-router-dom';
 
 
 export const LoginPage = () => {
