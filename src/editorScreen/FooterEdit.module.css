@@ -64,7 +64,7 @@
     z-index: 10;
     transform: translateX(-200%);
     transition: all 0.35s ease;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .assetList > ul{
     display: flex;
