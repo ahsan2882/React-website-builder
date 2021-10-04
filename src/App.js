@@ -6,9 +6,6 @@ import EditScreen from './editorScreen/EditScreen';
 import { LandingPage } from './landingPage/LandingPage';
 import PageSelectionScreen from './myComponents/PageSelectionScreen';
 import Template1Page from './template1components/Template1Page'
-import Template2Page from './template2components/Template2Page'
-import Template3Page from './template3components/Template3Page'
-import Template4Page from './template4components/Template4Page'
 import {LoginPage} from './loginPage/LoginPage'
 
 
