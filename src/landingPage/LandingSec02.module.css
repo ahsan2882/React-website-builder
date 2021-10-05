@@ -1,0 +1,21 @@
+.design {
+    width: 100%;
+    height: auto;
+    background: url('../assets/landingPageAssets/background.svg') no-repeat center/cover;}
+.row-3 {
+    display: flex;
+    flex-direction: column;
+  text-align: center;
+}
+.col-3 h1 {
+font-size: 4em;
+margin: 3em 0 3em;
+font-family: "Fira Sans";
+font-weight: 900;
+letter-spacing: 1px;
+color: #fff;
+}
+.col-4 {
+    display: flex;
+    margin: 0 auto 8em;
+}

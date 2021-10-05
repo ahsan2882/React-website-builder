@@ -23,7 +23,8 @@ export default function Accreditation4() {
                         init={{
                             menubar: false,
                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                'alignright alignjustify | formatselect',
+                                'alignright alignjustify | formatselect', 
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                         }}
                     />
                     {/* <TextH1 classStyle={`${Accre4Css.accreMainH1} text-5xl text-center`} text="Our Accreditation" /> */}
@@ -37,6 +38,7 @@ export default function Accreditation4() {
                             menubar: false,
                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                 'alignright alignjustify | formatselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                         }}
                     />
                 </div>
@@ -55,6 +57,7 @@ export default function Accreditation4() {
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                 }}
                             />
                         </div>
@@ -73,6 +76,7 @@ export default function Accreditation4() {
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                 }}
                             />
                         </div>
@@ -91,6 +95,7 @@ export default function Accreditation4() {
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                 }}
                             />
                         </div>
@@ -109,6 +114,7 @@ export default function Accreditation4() {
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                 }}
                             />
                         </div>

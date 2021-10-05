@@ -15,7 +15,7 @@ export const HeroSec = () => {
             </h1>
             <h2 className="text-gray-100 text-4xl "> No Coding Required </h2>
             <div className="mb-12 leading-relaxed text-white mt-12">Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter.</div>
-            <Link to="/login">
+            <Link to="/select-template">
               <button className="m-1 inline-flex text-white bg-UL-400 border-0 py-2 px-12 focus:outline-none hover:bg-gray-200 rounded-3xl text-lg"> Launch builder</button>
             </Link>
           </div>

@@ -1,0 +1,52 @@
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: inherit; font-weight: inherit; }
+
+html { font-size: 62.5%; overflow-x: hidden; }
+
+body { font-family: Montserrat, sans-serif; box-sizing: border-box; font-weight: 500 !important;  background-color: $body-color;}
+
+a{ text-decoration: none !important; }
+
+.h1-heading{ font-weight: 700 !important; font-size: 6rem; 
+  &.dark{ color: $heading-dark; }
+}
+.h2-heading{ font-size: 4rem; font-weight: 700 !important; 
+  &.dark{ color: $heading-dark; }
+}
+.paragraph{ font-size: 2rem; line-height: 3.4rem; font-weight: 400 !important;
+  &.light{ color: $paragraph-light; }
+  &.small{ font-size: 1.4rem; line-height: 2.4rem; }
+  &.large{ font-size: 2.4rem; line-height: 4rem;  }
+}
+.heading-margin{ margin-left: 8.5rem; }
+.h3-heading{ font-size: 2rem; line-height: 3rem; font-weight: 600 !important;
+  &.dark{ color: $heading-dark; }
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+
+    padding-right: 0;
+    padding-left: 0;
+
+    @media (min-width: 991.98px) {
+      &:not(:first-child):not(:last-child) {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      &:first-child {
+        padding-right: 1.5rem;
+      }
+
+      &:last-child {
+        padding-left: 1.5rem;
+      }
+    }
+
+  }
+}

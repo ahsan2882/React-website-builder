@@ -1,0 +1,70 @@
+.cta {
+    margin-bottom: 15rem;
+    position: relative;
+}
+.cta__bg {
+    z-index: 0;
+}
+.h1-heading.dark {
+    color: #29282c;
+}
+.cta__bg > div {
+    border-radius: 50%;
+    position: absolute;
+}
+.cta__bg > img {
+    position: absolute;
+}
+.cta__bg .circle-1 {
+    width: 49.5rem;
+    height: 49.5rem;
+    background-color: #f993d5;
+    bottom: -170%;
+    right: -22.5rem;
+    z-index: 100;
+}
+@media (max-width: 1200px) {
+    .cta__bg .circle-1 {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+}
+@media (max-width: 991.98px) {
+    .cta__bg .circle-1 {
+        -webkit-transform: scale(0.4);
+        transform: scale(0.4);
+        bottom: -130%;
+    }
+}
+.cta__info {
+    width: 100%;
+    text-align: center;
+}
+.cta__info .button {
+    min-width: 25.1rem;
+    text-align: center;
+    height: 6.4rem;
+    background-color: transparent;
+    color: #fa98d7;
+    border: 2px solid #fa98d7;
+    border-radius: 6rem;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600 !important;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    display: inline-block;
+    margin-top: 8.1rem;
+}
+.cta__info .button span {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.cta__info .button:hover {
+    background-color: #fa98d7;
+    color: #fff;
+}

@@ -18,12 +18,12 @@ export default function AboutUs4() {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='abouted1'
-                                initialValue="<h1>About Us</h1>"
+                                initialValue="<h6>About Us</h6>"
                                 init={{
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
-                                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                 }}
                             />
                             {/* <h3 className="text-white text-3xl w-full mb-6">CCTV For your Safety</h3> */}
@@ -37,7 +37,7 @@ export default function AboutUs4() {
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
-                                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                                    fontsize_formats:"8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                 }}
                             />
                             {/* <p className="text-white text-xl py-3 px-0">Nunc pretium nibh non aliquam scelerisque. Integer porttitor
@@ -55,7 +55,7 @@ export default function AboutUs4() {
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
-                                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                 }}
                             />
                         </div>
@@ -71,7 +71,7 @@ export default function AboutUs4() {
                                         menubar: false,
                                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | formatselect',
-                                        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                     }}
                                 />
                             </button>

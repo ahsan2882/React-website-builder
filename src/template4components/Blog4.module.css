@@ -1,34 +1,54 @@
 
-
-.headingWrapper h3{
-    color: #00c1cf;
-}
-.headingWrapper h1 {
+.sectionBlog h1 {
     color: #fff;
-    font-weight: 900;
-    margin-bottom: 3rem;
-    font-size: 3rem;
-    line-height: 1;
+    width: 100%;
+    font-size: 32px;
+}
+
+.sectionBlog h2 {
+    color: #fff;
+    width: 100%;
+    font-size: 24px;
+}
+
+.sectionBlog h3 {
+    color: #fff;
+    font-size: 18.72px;
+    line-height: 2.25rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.sectionBlog h4 {
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+}
+
+.sectionBlog h5 {
+    color: #fff;
+    width: 100%;
+    font-size: 13.28px;
+}
+
+.sectionBlog h6 {
+    color: #fff;
+    width: 100%;
+    font-size: 10.72px;
+}
+
+.sectionBlog p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.75rem;
+    padding: 0.75rem 0;
 }
 
 .blogArticWrap{
     width:40ch;
     border-radius: 20px;
 }
-.blogArticWrap h1{
-    color: #00c1cf;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin-bottom: 2rem;
-    padding: 0.75rem;
-}
-.blogArticWrap h1:hover {
-    color: #fff;
-}
-.blogArticWrap p {
-    color: #fff;
-    text-align: center;
-}
+
 .btnPost button{
     background-color: #00c1cf;
     color: rgba(0, 0, 0, 0.65);

@@ -20,31 +20,54 @@
 .serviceImages {
     filter: contrast(0.5) brightness(0.9);
 }
+.serviceWrapper h1 {
+    color: rgb(26, 195, 224);
+    width: 100%;
+    font-size: 32px;
+}
 
+.serviceWrapper h2 {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    font-size: 24px;
+}
+
+.serviceWrapper h3 {
+    color: #fff;
+    font-size: 18.72px;
+    line-height: 2.25rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.serviceWrapper h4 {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    font-size: 16px;
+}
+
+.serviceWrapper h5 {
+    color: #fff;
+    width: 100%;
+    font-size: 13.28px;
+}
+
+.serviceWrapper h6 {
+    color: #fff;
+    width: 100%;
+    font-size: 10.72px;
+}
+
+.serviceWrapper p {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 1.75rem;
+    padding: 0.75rem 0;
+}
 .serviceLayerH2 {
     transition: 0.2s;
 }
-.serviceWrapper > div:first-child > h4{
-    text-align: center;
-    font-weight: 900;
-    color: #00c1cf;
-}
-.serviceWrapper > div:nth-child(2) > h2{
-    font-size: 3rem;
-    line-height: 1;
-    color: white;
-    font-weight: 900;
-    text-align: center;
-}
 
-.serviceWrapper > div:nth-child(3) > p{
-    max-width: 25rem;
-    color: white;
-    text-align: center;
-    margin: 3rem auto;
-    line-height: 1.5rem;
-    font-weight: 300;
-}
 .layer {
     background: transparent;
     height: 100%;

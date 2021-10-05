@@ -9,7 +9,7 @@ import Blog4Css from './Blog4.module.css';
 export default function Blog4() {
     const editorRef = useRef(null);
     return (
-        <section className="bg-black py-28 px-0 w-full">
+        <section className={`bg-black py-28 px-0 w-full ${Blog4Css.sectionBlog}`}>
             <div className={`text-center ${Blog4Css.headingWrapper}`}>
                 {/* <TextH3 classStyle={Blog4Css.blogMainHead} text="WHATS NEW" /> */}
                 <Editor
@@ -22,6 +22,7 @@ export default function Blog4() {
                         menubar: false,
                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                             'alignright alignjustify | formatselect',
+                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                     }}
                 />
                 {/* <TextH1 className="text-white font-black mb-12 text-5xl" text="Latest News" /> */}
@@ -35,11 +36,12 @@ export default function Blog4() {
                         menubar: false,
                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                             'alignright alignjustify | formatselect',
+                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                     }}
                 />
             </div>
             <div className="flex justify-center items-center">
-                <div className="flex flex-wrap justify-around w-4/5">
+                <div className="flex flex-wrap justify-around items-center">
                     <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-center`}>
                         <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news1} alt="news 1" />
                         {/* <TextH1 className={`${Blog4Css.blogArticH1} text-2xl p-3 mb-8 hover:text-white`} text="Personal Security Services" /> */}
@@ -53,6 +55,7 @@ export default function Blog4() {
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | formatselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                             }}
                         />
                         {/* <TextPara className="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
@@ -70,6 +73,7 @@ export default function Blog4() {
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | formatselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                             }}
                         />
                         <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
@@ -84,6 +88,7 @@ export default function Blog4() {
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                 }}
                             />
                         </div>
@@ -101,6 +106,7 @@ export default function Blog4() {
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | formatselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                             }}
                         />
                         {/* <TextPara classStyle="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
@@ -118,6 +124,7 @@ export default function Blog4() {
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | formatselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                             }}
                         />
                         <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
@@ -132,6 +139,7 @@ export default function Blog4() {
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                 }}
                             />
                         </div>
@@ -149,6 +157,7 @@ export default function Blog4() {
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | formatselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                             }}
                         />
                         {/* <TextPara classStyle="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
@@ -166,6 +175,7 @@ export default function Blog4() {
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | formatselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                             }}
                         />
                         <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
@@ -180,6 +190,7 @@ export default function Blog4() {
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | formatselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                                 }}
                             />
                         </div>

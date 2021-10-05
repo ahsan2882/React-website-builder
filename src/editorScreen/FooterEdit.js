@@ -6,6 +6,9 @@ import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/con
 import contactusAss3 from '../assets/editingScreenAssets/contactusEditAssets/contactus3.png'
 import contactusAss4 from '../assets/editingScreenAssets/contactusEditAssets/contactus4.png'
 import faqsAss1 from '../assets/editingScreenAssets/faqsEditAssets/faqs1.png'
+import faqsAss2 from '../assets/editingScreenAssets/faqsEditAssets/faqs2.JPG'
+import faqsAss3 from '../assets/editingScreenAssets/faqsEditAssets/faqs3.JPG'
+import faqsAss4 from '../assets/editingScreenAssets/faqsEditAssets/faqs4.JPG'
 import footerAss1 from '../assets/editingScreenAssets/footerEditAssets/footer1.JPG'
 import footerAss2 from '../assets/editingScreenAssets/footerEditAssets/footer2.JPG'
 import footerAss3 from '../assets/editingScreenAssets/footerEditAssets/footer3.JPG'
@@ -13,10 +16,14 @@ import footerAss4 from '../assets/editingScreenAssets/footerEditAssets/footer4.J
 import pricingAss1 from '../assets/editingScreenAssets/pricingEditAssets/pricing1.JPG'
 import pricingAss2 from '../assets/editingScreenAssets/pricingEditAssets/pricing2.JPG'
 import pricingAss3 from '../assets/editingScreenAssets/pricingEditAssets/pricing3.JPG'
-import serviceAss1 from '../assets/editingScreenAssets/serviceEditAssets/service1.png'
+import pricingAss4 from '../assets/editingScreenAssets/pricingEditAssets/pricing4.JPG'
+import pricingAss5 from '../assets/editingScreenAssets/pricingEditAssets/pricing5.JPG'
+import serviceAss1 from '../assets/editingScreenAssets/serviceEditAssets/service1.JPG'
 import serviceAss2 from '../assets/editingScreenAssets/serviceEditAssets/service2.JPG'
 import serviceAss3 from '../assets/editingScreenAssets/serviceEditAssets/service3.JPG'
 import serviceAss4 from '../assets/editingScreenAssets/serviceEditAssets/service4.JPG'
+import serviceAss5 from '../assets/editingScreenAssets/serviceEditAssets/service5.JPG'
+import serviceAss6 from '../assets/editingScreenAssets/serviceEditAssets/service6.png'
 import socialAss1 from '../assets/editingScreenAssets/socialEditAssets/social1.png'
 import socialAss2 from '../assets/editingScreenAssets/socialEditAssets/social2.png'
 import socialAss3 from '../assets/editingScreenAssets/socialEditAssets/social3.png'
@@ -209,6 +216,9 @@ export default function FooterEdit({setOverlay}) {
                 onMouseLeave={() => setFaqState(false)}>
                 <ul className={`${FooterEditCss.faqsMenu}`}>
                     <li><img src={faqsAss1} alt="FAQ Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={faqsAss2} alt="FAQ Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={faqsAss3} alt="FAQ Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={faqsAss4} alt="FAQ Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>
             </div>
             <div className={`${FooterEditCss.assetList}`}
@@ -249,6 +259,8 @@ export default function FooterEdit({setOverlay}) {
                     <li><img src={pricingAss1} alt="Pricing Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={pricingAss2} alt="Pricing Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={pricingAss3} alt="Pricing Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={pricingAss4} alt="Pricing Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={pricingAss5} alt="Pricing Asset 5" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>
             </div>
             <div className={`${FooterEditCss.assetList}`}
@@ -263,6 +275,8 @@ export default function FooterEdit({setOverlay}) {
                     <li><img src={serviceAss2} alt="Services Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={serviceAss3} alt="Services Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={serviceAss4} alt="Services Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={serviceAss5} alt="Services Asset 5" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={serviceAss6} alt="Services Asset 6" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>
             </div>
         </>

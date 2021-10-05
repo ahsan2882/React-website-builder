@@ -15,10 +15,10 @@ export default function PageSelectionScreen({ setTemp }) {
                         <button className="flex justify-center items-center py-1.5 px-10 bg-red-600 text-white rounded-3xl">BACK</button>
                     </Link>
                 </div> */}
-                <div className="flex justify-center"><h1 className="text-7xl mt-4">Heading</h1></div>
+                <div className="flex justify-center"><h1 className="text-5xl mt-4">Select or Create a new template</h1></div>
                 <div>
                     <div className="overflow-y-hidden flex flex-col">
-                        <div className={`my-8 mx-auto w-4/5`}>
+                        <div className={`my-8 mx-auto w-5/6`}>
                             <div className="flex justify-between items-stretch w-full">
                                 <div className={`bg-white rounded-2xl mx-8 ${PageSelCss.tempWrap}`}>
                                     <Link to="/edit" onClick={() => setTemp(1)}>
@@ -27,10 +27,8 @@ export default function PageSelectionScreen({ setTemp }) {
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                         </div>
-                                        <div className="w-full">
-
+                                        <div>
                                             <img src={temp1} alt="template 1" />
-
                                         </div>
                                         <div className="py-6 text-center">
                                             <h3>Template 1</h3>
@@ -49,7 +47,7 @@ export default function PageSelectionScreen({ setTemp }) {
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                         </div>
-                                        <div className="w-full">
+                                        <div>
                                             <img src={temp2} alt="template 2" />
                                         </div>
                                         <div className="py-6 text-center">
@@ -69,7 +67,7 @@ export default function PageSelectionScreen({ setTemp }) {
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                         </div>
-                                        <div className="w-full">
+                                        <div>
                                             <img src={temp3} alt="template 3" />
                                         </div>
                                         <div className="py-6 text-center">
@@ -79,7 +77,7 @@ export default function PageSelectionScreen({ setTemp }) {
                                 </div>
                             </div>
                         </div>
-                        <div className={`my-8 mx-auto w-4/5`}>
+                        <div className={`my-8 mx-auto w-5/6`}>
                             <div className="flex justify-around items-stretch w-full">
                                 {/* <div className="w-80">
                                     <Link to='/edit' onClick={() => setTemp(4)}>
@@ -93,7 +91,7 @@ export default function PageSelectionScreen({ setTemp }) {
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                             <div className={`${PageSelCss.dot} mx-1`}></div>
                                         </div>
-                                        <div className="w-full">
+                                        <div>
                                             <img src={temp4} alt="template 4" />
                                         </div>
                                         <div className="py-6 text-center">

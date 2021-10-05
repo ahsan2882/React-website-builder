@@ -1,77 +1,78 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
 import SliderCss from "./LandingSlider.module.css";
 import data from "./LandingSliderData";
 
 const Slider = () => {
-  const [people] = useState(data);
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const lastIndex = people.length - 1;
-    if (index < 0) {
-      setIndex(lastIndex);
-    }
-    if (index > lastIndex) {
-      setIndex(0);
-    }
-  }, [index, people]);
-
-  useEffect(() => {
-    let slider = setInterval(() => {
-      setIndex(index + 1);
-    }, 5000);
-    return () => {
-      clearInterval(slider);
-    };
-  }, [index]);
 
   return (
 
-    <section className={SliderCss.section}>
-      <div className={SliderCss.title}>
-        <h1 className="uppercase sm:text-3xl text-2xl font-medium title-font text-gray-900 tracking-widest leading-tight mb-3">what our investor says</h1>
-        <div className="w-36 h-1 m-auto rounded-full bg-indigo-400 "></div>
-
+    <section className="client">
+    <div className="client__bg">
+      <div className="circle-1"></div>
+      <div className="circle-4"></div>
+    </div>
+    <div className="container">
+      <div className="client__bg--inside">
+        <div className="circle-2"></div>
+        <div className="circle-3"></div>
       </div>
-      <div className={SliderCss.sectionCenter}>
-
-
-
-        {people.map((item, indexPeople) => {
-          const { id, name, title, quote } = item;
-          let position = "nextSlide";
-          if (indexPeople === index) {
-            position = "activeSlide";
-          }
-          if (
-            indexPeople === index - 1 ||
-            (index === 0 && indexPeople === people.length - 1)
-          ) {
-            position = "lastSlide";
-          }
-          return (
-            <div className={SliderCss.article}>
-              <article className={position} key={id}>
-                <h4 className="text-center tracking-widest uppercase leading-tight mb-3">{name}</h4>
-                <p className={SliderCss.title}>{title}</p>
-                <p className={SliderCss.text}>{quote}</p>
-              </article>
+      <div className="projects__info heading-margin">
+        <h2 className="h2-heading">Happy Clients</h2>
+        <div>
+          <i className="testimonial-nav-left fas fa-angle-left"></i>
+          <i className="testimonial-nav-right fas fa-angle-right"></i>
+        </div>
+      </div>
+      <div className="row">
+        <div className="swiper-container testimonial-slider">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide single-testimonial">
+              <p className="paragraph large light">"Sed est quam facilisis vel quam id suscipite tempus justo. Nam nonllus
+                ac neque etra
+                commodo in ac sem enterdum et alesuada fames acnte ipsum primis in faucibus"</p>
+              <div className="testimonial-client">
+                <img src="assets/images/testimonial-img-1.png" alt="image"/>
+                <div>
+                  <h4 className="h4-heading">Michael Williamson</h4>
+                  <p className="paragraph light small">CEO - GFXPARTNER</p>
+                </div>
+              </div>
             </div>
-          );
-        })}
-        <button className="prev" onClick={() => setIndex(index - 1)}>
-          <i className="fas fa-arrow-left" style={{color:`gray`}}  />
-        </button>
-        <button className="next" onClick={() => setIndex(index + 1)}>
-          <i className="fas fa-arrow-right" style={{color:`gray`}} />
-        </button>
-
-  </div>
-<div> 
-
-  {/* <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: "2%", width: "100%"}}><path d="M-1.41,70.55 C189.90,151.47 439.90,27.13 499.72,63.64 L500.00,150.00 L0.00,150.00 Z" style={{stroke: "none", fill: "#2563EB"}}></path></svg> */}
-  </div>
-    </section>
+            <div className="swiper-slide single-testimonial">
+              <p className="paragraph large light">"Sed est quam facilisis vel quam id suscipite tempus justo. Nam nonllus
+                ac neque etra
+                commodo in ac sem enterdum et alesuada fames acnte ipsum primis in faucibus"</p>
+              <div className="testimonial-client">
+                <img src="assets/images/testimonial-img-2.png" alt="image"/>
+                <div>
+                  <h4 className="h4-heading">Dave Edwards</h4>
+                  <p className="paragraph light small">CEO - GFXPARTNER</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="swiper-container client-slider">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide">
+              <div className="single-client">
+                {/* <a href="#"><img src="assets/images/client-img.png" alt="image"/></a> */}
+              </div>
+            </div>
+            <div className="swiper-slide">
+              <div className="single-client">
+                {/* <a href="#"><img src="assets/images/client-img.png" alt="image"/></a> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
        
 
   );

@@ -1,0 +1,82 @@
+@mixin animateIt{
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+@mixin line-anim-mixin($path-number, $offset){
+  @keyframes line-anim-#{$path-number} {
+    0% { stroke-dashoffset: $offset; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: $offset; }
+  }
+}
+
+@mixin absoluteCenter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+@mixin absoluteHorizontal{
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+
+@mixin absoluteVertical{
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+}
+
+@mixin Button($color){
+  min-width: 25.1rem;
+  text-align: center;
+  height: 6.4rem;
+  background-color: transparent;
+  color: $color;
+  border: 2px solid $color;
+  border-radius: 6rem;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600 !important;
+  @include animateIt;
+  span{ width: 100%; @include absoluteCenter(); }
+  &:hover{
+    background-color: $color;
+    color: $text-color-light;
+  }
+}
+
+@mixin floatfix{
+  &::after{
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin textHoverLine($bgcolor, $padding){
+  position: relative;
+  &::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: .15rem;
+    background-color: $bgcolor;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%, 0);
+    transform: translate(-50%, 0);
+    @include animateIt;
+  }
+  &:hover::before{
+    width: calc(100% - #{$padding*2});
+  }
+}

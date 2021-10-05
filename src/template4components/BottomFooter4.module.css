@@ -11,8 +11,50 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-.footerWrapper p{
-    color: white;
+.footerWrapper h1 {
+    color: #fff;
+    width: 100%;
+    font-size: 32px;
+}
+
+.footerWrapper h2 {
+    color: #fff;
+    width: 100%;
+    font-size: 24px;
+}
+
+.footerWrapper h3 {
+    color: #fff;
+    font-size: 18.72px;
+    line-height: 2.25rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.footerWrapper h4 {
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+}
+
+.footerWrapper h5 {
+    color: #fff;
+    width: 100%;
+    font-size: 13.28px;
+}
+
+.footerWrapper h6 {
+    color: #fff;
+    width: 100%;
+    font-size: 10.72px;
+}
+
+.footerWrapper p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.75rem;
+    padding: 0.75rem 0;
+    text-align: left;
 }
 @media (max-width: 1200px) {
     .container1 {

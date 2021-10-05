@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^12.8.3",
     "@tinymce/tinymce-react": "^3.12.6",
     "grapesjs": "^0.17.26",
+    "node-sass": "^6.0.1",
     "material-ui-color-picker": "^3.5.1",
     "react": "^17.0.2",
     "react-color-palette": "^6.1.0",

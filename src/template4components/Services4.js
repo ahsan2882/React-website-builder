@@ -24,6 +24,7 @@ export default function Services4() {
                     menubar: false,
                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                         'alignright alignjustify | formatselect',
+                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                 }}
             />
             {/* <TextH2 className="text-center text-5xl opacity-80 text-white font-black" text="Our Services" /> */}
@@ -37,6 +38,7 @@ export default function Services4() {
                     menubar: false,
                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                         'alignright alignjustify | formatselect',
+                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                 }}
             />
             {/* <TextPara className={`${Service4Css.servicsDesc} text-center text-white my-12 mx-auto leading-6 font-light`} */}
@@ -51,6 +53,7 @@ export default function Services4() {
                     menubar: false,
                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                         'alignright alignjustify | formatselect',
+                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                 }}
             />
             <div className="flex flex-wrap my-0 mx-auto justify-center w-4/5">

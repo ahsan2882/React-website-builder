@@ -135,6 +135,50 @@
     margin-bottom: -4rem;
     position: relative;
 }
+.subscribeSection h1 {
+    color: rgb(26, 195, 224);
+    width: 100%;
+    font-size: 32px;
+}
+
+.subscribeSection h2 {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    font-size: 24px;
+}
+
+.subscribeSection h3 {
+    color: #fff;
+    font-size: 18.72px;
+    line-height: 2.25rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.subscribeSection h4 {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    font-size: 16px;
+}
+
+.subscribeSection h5 {
+    color: #fff;
+    width: 100%;
+    font-size: 13.28px;
+}
+
+.subscribeSection h6 {
+    color: #fff;
+    width: 100%;
+    font-size: 10.72px;
+}
+
+.subscribeSection p {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 1.75rem;
+    padding: 0.75rem 0;
+}
 
 .subscribeWrapper {
     display: flex;
@@ -157,17 +201,7 @@
     justify-content: space-between;
     max-width: 30rem;
 }
-.offer > div:first-child > h3{
-    font-size: 1.5rem;
-    color: black;
-    margin: 0;
-    margin-bottom: 1rem;
-}
-.offer > div:last-child > h1 {
-    font-size: 2rem;
-    margin: 0;
-    color: white;
-}
+
 
 .inputEmail {
     border-radius: 40px;

@@ -97,7 +97,7 @@ export default function HeroSection4() {
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url(${background})`
             }}>
-                <div>
+                <div className="w-full">
                     {/* <TextH1 classStyle={Hero4Css.secHeroH1} text="Security Services"></TextH1> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
@@ -109,6 +109,7 @@ export default function HeroSection4() {
                             menubar: false,
                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                 'alignright alignjustify | formatselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                         }}
                     />
                     {/* <TextPara text="For your personal safety" classStyle={Hero4Css.paragraphHero} /> */}
@@ -122,6 +123,7 @@ export default function HeroSection4() {
                             menubar: false,
                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                 'alignright alignjustify | formatselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                         }}
                     />
                     <div className={Hero4Css.secHeroBtn}>
@@ -136,6 +138,7 @@ export default function HeroSection4() {
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | formatselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                             }}
                         />
                     </div>
