@@ -18,7 +18,7 @@ import pricingAss2 from '../assets/editingScreenAssets/pricingEditAssets/pricing
 import pricingAss3 from '../assets/editingScreenAssets/pricingEditAssets/pricing3.JPG'
 import pricingAss4 from '../assets/editingScreenAssets/pricingEditAssets/pricing4.JPG'
 import pricingAss5 from '../assets/editingScreenAssets/pricingEditAssets/pricing5.JPG'
-import serviceAss1 from '../assets/editingScreenAssets/serviceEditAssets/service1.JPG'
+import serviceAss1 from '../assets/editingScreenAssets/serviceEditAssets/slider.PNG'
 import serviceAss2 from '../assets/editingScreenAssets/serviceEditAssets/service2.JPG'
 import serviceAss3 from '../assets/editingScreenAssets/serviceEditAssets/service3.JPG'
 import serviceAss4 from '../assets/editingScreenAssets/serviceEditAssets/service4.JPG'
@@ -176,7 +176,7 @@ export default function FooterEdit({setOverlay}) {
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={servicesClicked}>Services</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
-                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`}>Accreditation</button>
+                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`}>Accreditations</button>
                     </li>
                 </ul>
             </nav>
