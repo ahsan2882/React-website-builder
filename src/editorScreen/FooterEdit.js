@@ -27,11 +27,11 @@ import serviceAss6 from '../assets/editingScreenAssets/serviceEditAssets/service
 import socialAss1 from '../assets/editingScreenAssets/socialEditAssets/social1.png'
 import socialAss2 from '../assets/editingScreenAssets/socialEditAssets/social2.png'
 import socialAss3 from '../assets/editingScreenAssets/socialEditAssets/social3.png'
-import heroAss1 from '../assets/editingScreenAssets/heroEditAssets/hero1.PNG'
-import heroAss2 from '../assets/editingScreenAssets/heroEditAssets/hero2.PNG'
-import heroAss3 from '../assets/editingScreenAssets/heroEditAssets/hero3.PNG'
-import heroAss4 from '../assets/editingScreenAssets/heroEditAssets/hero4.PNG'
-import heroAss5 from '../assets/editingScreenAssets/heroEditAssets/hero5.PNG'
+import heroAss1 from '../assets/editingScreenAssets/headerEditAssets/hero1.PNG'
+import heroAss2 from '../assets/editingScreenAssets/headerEditAssets/hero2.PNG'
+import heroAss3 from '../assets/editingScreenAssets/headerEditAssets/hero3.PNG'
+import heroAss4 from '../assets/editingScreenAssets/headerEditAssets/hero4.PNG'
+import heroAss5 from '../assets/editingScreenAssets/headerEditAssets/hero5.PNG'
 import navAss1 from '../assets/editingScreenAssets/navEditAssets/nav1.PNG'
 import navAss2 from '../assets/editingScreenAssets/navEditAssets/nav2.PNG'
 import navAss3 from '../assets/editingScreenAssets/navEditAssets/nav3.PNG'
@@ -268,6 +268,36 @@ export default function FooterEdit({setOverlay}) {
                     <li><img src={testimonialAss2} alt="Testimonial Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={testimonialAss3} alt="Testimonial Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={testimonialAss4} alt="Testimonial Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
+                </ul>
+            </div>
+            <div className={`${FooterEditCss.assetList}`}
+                style={navState
+                    ? { transform: "translateX(0%)" }
+                    : null
+                }
+                onMouseLeave={() => setNavState(false)}
+            >
+                <ul className={`${FooterEditCss.testimonialMenu}`}>
+                    <li><img src={navAss1} alt="Nav Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={navAss2} alt="Nav Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={navAss3} alt="Nav Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={navAss4} alt="Nav Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={navAss5} alt="Nav Asset 5" className={`${FooterEditCss.assetImages}`} /></li>
+                </ul>
+            </div>
+            <div className={`${FooterEditCss.assetList}`}
+                style={heroState
+                    ? { transform: "translateX(0%)" }
+                    : null
+                }
+                onMouseLeave={() => setHeroState(false)}
+            >
+                <ul className={`${FooterEditCss.testimonialMenu}`}>
+                    <li><img src={heroAss1} alt="Hero Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={heroAss2} alt="Hero Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={heroAss3} alt="Hero Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={heroAss4} alt="Hero Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={heroAss5} alt="Hero Asset 5" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>
             </div>
             <div className={`${FooterEditCss.assetList}`}

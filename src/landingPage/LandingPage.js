@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import { Header } from "./LandingHeader"
 //  import { HeroSec } from "./LandingHeroSec"
 import { Sec02 } from "./LandingSec02"
@@ -9,16 +9,9 @@ import Slider from "./LandingSlider"
 import { Footer } from "./LandingFooter"
 
 export const LandingPage = ({setLoaded}) => {
-    useEffect(() => {
-        console.log('loading state : false');
-        setLoaded(false);
-        setTimeout(() => {
-            setLoaded(true)
-        }, 1000);
-    },[setLoaded])
     return (
         <>
-            <Header title={"The Landing page"} onLoad={() => {setLoaded(true)}}/>
+            <Header title={"The Landing page"} />
             {/* <HeroSec /> */}
               <Sec02 />
             {/* <Sec03 />

@@ -7,24 +7,21 @@ import { LandingPage } from './landingPage/LandingPage';
 import PageSelectionScreen from './myComponents/PageSelectionScreen';
 import Template1Page from './template1components/Template1Page'
 import {LoginPage} from './loginPage/LoginPage'
-import Preloader from './myComponents/Preloader';
 
 
 export default function App() {
 
   const [temp, setTemp] = useState(0);
-  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     console.log("CurrentTemp: ", temp);
   }, [temp]);
   
   return (
     <>
-    {loaded ? null : <Preloader/>}
       <Router>
         <Switch>
           <Route exact path="/">
-            <LandingPage setLoaded={setLoaded}/>
+            <LandingPage/>
           </Route>
           <Route exact path="/select-template">
             <PageSelectionScreen setTemp={setTemp} />
