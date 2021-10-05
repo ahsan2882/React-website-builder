@@ -55,6 +55,7 @@
     transition: all 0.25s ease;
     display: inline-block;
     margin-top: 8.1rem;
+    font-family:'Montserrat';
 }
 .cta__info .button span {
     width: 100%;
@@ -63,8 +64,10 @@
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    font-family:'Montserrat';
 }
 .cta__info .button:hover {
-    background-color: #fa98d7;
+    background-color: #000000;
     color: #fff;
+    border-color: #000000;
 }

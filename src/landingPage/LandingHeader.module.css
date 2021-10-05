@@ -351,6 +351,7 @@ body {
 }
 .hero__info .paragraph {
     margin: 4rem 0 2.4rem 0;
+    font-family: 'Montserrat';
 }
 .hero__info .button {
     min-width: 25.1rem;
@@ -374,6 +375,7 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    font-family:'Montserrat';
 }
 .hero__info .button:hover {
     background-color: #000000;
@@ -423,9 +425,11 @@ body {
     font-size: 3.5rem;
     width: 30%;
     font-weight: 800;
+    font-family:'Montserrat';
 }
 .hero .work__head .paragraph {
     width: 70%;
+    font-family:'Montserrat';
 }
 .hero .work__items {
     display: -webkit-box;
@@ -464,9 +468,10 @@ body {
     margin: 0 auto 4.2rem auto;
 }
 .hero .work__items_single .h3-heading {
-    width: 46.3%;
+    width: 65.3%;
     font-size: 2rem;
     margin: 0 auto;
+    font-family:'Montserrat';
 }
 .hero .work__items_single-1-img {
     background-color: #85d9ff;

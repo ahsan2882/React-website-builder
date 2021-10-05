@@ -7,7 +7,10 @@ body { font-family: Montserrat, sans-serif; box-sizing: border-box; font-weight:
 
 a{ text-decoration: none !important; }
 
-.h1-heading{ font-weight: 700 !important; font-size: 6rem; 
+.h1-heading {
+  font-weight: 700 !important;
+  font-size: 6rem;
+  font-family: 'Montserrat';
   &.dark{ color: $heading-dark; }
 }
 .h2-heading{ font-size: 4rem; font-weight: 700 !important; 

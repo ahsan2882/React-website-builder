@@ -60,6 +60,8 @@
 .footer__wrapper-single li span {
     position: absolute;
     left: 2.5rem;
+    font-family:'Montserrat';
+    font-weight: 400;
 }
 .footer__wrapper-single li a {
     font-size: 1.6rem;
@@ -67,6 +69,8 @@
     font-weight: 400 !important;
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
+    font-family:'Montserrat';
+    font-weight: 400;
 }
 .footer__wrapper-single li a:hover {
     color: #fa98d7;
@@ -78,6 +82,7 @@
     font-weight: bold !important;
     text-transform: uppercase;
     margin-bottom: 6.3rem;
+    
 }
 .footer__wrapper-single h5 {
     font-size: 2rem;
@@ -86,6 +91,7 @@
     font-weight: bold !important;
     text-transform: uppercase;
     margin: 0 0 6.3rem 0 !important;
+    font-family:'Montserrat';
 }
 .footer__wrapper-single--1 p,
 .footer__wrapper-single--1 a {
@@ -95,6 +101,8 @@
     margin-bottom: 2rem;
     font-weight:lighter !important;
     width: 80%;
+    font-family:'Montserrat';
+    font-weight: 400 !important;
 }
 .footer__wrapper-single--1 p:last-of-type {
     margin: 4rem 0;
@@ -115,6 +123,7 @@
     font-size: 1.8rem;
     color: #fff;
     font-weight: 400 !important;
+    font-family:'Montserrat';
 }
 .footer__wrapper-single--4 .input input::-webkit-input-placeholder {
     font-size: 1.8rem;
@@ -156,7 +165,7 @@
     font-size: 1.4rem;
     color: #c2b5ed;
     font-weight: 400 !important;
-  
+    font-family:'Montserrat';
 }
 @media (max-width: 991.98px) {
     .footer {

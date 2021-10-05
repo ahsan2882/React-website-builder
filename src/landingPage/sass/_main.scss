@@ -345,8 +345,14 @@ header
   &::before{ @include absoluteCenter; margin: 0; width: initial; height: initial; }
 }
 
-.client { margin: 24.6rem 0 16.4rem 0; position: relative;
-  .h2-heading{ font-size: 3rem; }
+.client {
+  margin: 24.6rem 0 16.4rem 0;
+  position: relative;
+  font-family: 'Montserrat';
+  .h2-heading {
+    font-size: 3rem;
+    font-family: 'Montserrat';
+  }
   &__bg{ z-index: 0; > div{ border-radius: 50%; position: absolute; } > img{ position: absolute; }
     .circle-1{ width: 33.4rem; height: 33.4rem; background-color: #6c43f8; top: 37.7rem; left: -13rem; }
     .circle-4{ width: 12rem; height: 12rem; background-color: #fa98d7; top: 15.8rem; right: -3.3rem; }
@@ -367,10 +373,22 @@ header
   .testimonial-slider{ width: 100%; margin-top: 4.3rem;
     .single-testimonial{ background-color: $bg-white; display: flex; flex-direction: column; 
       justify-content: center; align-items: center; padding: 4rem 0;
-      > .paragraph{ text-align: center; width: 80%; margin: 0 auto; font-style: italic; font-weight: 300 !important; }
+      >.paragraph {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        font-style: italic;
+        font-weight: 300 !important;
+        font-family: 'Montserrat';
+      }
       .testimonial-client{ display: flex; align-items: center; margin-top: 4rem;margin-bottom: 6rem;
         div{ margin-left: 2rem;
-          .h4-heading{ font-weight: 600 !important; font-size: 1.8rem; color: #29282c; }
+          .h4-heading {
+            font-weight: 600 !important;
+            font-size: 1.8rem;
+            color: #29282c;
+            font-family: 'Montserrat';
+          }
           .paragraph{ width: 100%; }
         }
       }

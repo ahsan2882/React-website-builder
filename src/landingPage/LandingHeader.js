@@ -74,7 +74,7 @@ export const Header = () => {
           <div className={`${LandingHeaderCss['hero__info']}`}>
             <h1 className={`${LandingHeaderCss['h1-heading']}`}>We make it simple
                to build a website !</h1>
-            <p className={`${LandingHeaderCss.paragraph}`}>Create a website in three clicks. Unique,simple and friendly. It's that easy</p>
+            <p className={`${LandingHeaderCss.paragraph}`}>Create a website in three clicks. Unique, simple and friendly. It's that easy</p>
             <Link to="/login" className={`${LandingHeaderCss.button}`}>
               <span>LAUNCH BUILDER</span></Link>
           </div>
@@ -95,34 +95,34 @@ export const Header = () => {
              <div className={`${LandingHeaderCss['work__items']}`}>
               <div className={`${LandingHeaderCss['work__items_single']} ${LandingHeaderCss['work__items_single-1']}`}>
                  <div className={`${LandingHeaderCss['work__items_single-img']} ${LandingHeaderCss['work__items_single-1-img']}`}>
-                  <img src={workicon1} alt="image" />
+                  {/* <img src={workicon1} alt="image" /> */}
                 </div> 
                 <div className={`${LandingHeaderCss['work__items_single-info']}`}>
-                  <h3 className={`${LandingHeaderCss['h3-heading']} ${LandingHeaderCss['dark']}`}>Web Design & Support</h3>
+                  <h3 className={`${LandingHeaderCss['h3-heading']} ${LandingHeaderCss['dark']}`}>Simple Interface</h3>
                 </div> 
               </div>
               <div className={`${LandingHeaderCss['work__items_single']} ${LandingHeaderCss['work__items_single-2']}`}>
                  <div className={`${LandingHeaderCss['work__items_single-img']} ${LandingHeaderCss['work__items_single-2-img']}`}>
-                  <img src={workicon2} alt="image" />
+                  {/* <img src={workicon2} alt="image" /> */}
                 </div> 
                  <div className={`${LandingHeaderCss['work__items_single-info']}`}>
-                  <h3 className={`${LandingHeaderCss['h3-heading']} ${LandingHeaderCss['dark']}`}>Mobile App Design</h3>
+                  <h3 className={`${LandingHeaderCss['h3-heading']} ${LandingHeaderCss['dark']}`}>No Coding needed</h3>
                 </div> 
               </div>
               <div className={`${LandingHeaderCss['work__items_single']} ${LandingHeaderCss['work__items_single-3']}`}>
                  <div className={`${LandingHeaderCss['work__items_single-img']} ${LandingHeaderCss['work__items_single-3-img']}`}>
-                  <img src={workicon3} alt="image" />
+                  {/* <img src={workicon3} alt="image" /> */}
                 </div> 
                  <div className={`${LandingHeaderCss['work__items_single-info']}`}>
-                  <h3 className={`${LandingHeaderCss['h3-heading']} ${LandingHeaderCss['dark']}`}>Illustration & Icons</h3>
+                  <h3 className={`${LandingHeaderCss['h3-heading']} ${LandingHeaderCss['dark']}`}>Default Hosting</h3>
                 </div> 
               </div>
               <div className={`${LandingHeaderCss['work__items_single']} ${LandingHeaderCss['work__items_single-4']}`}>
                  <div className={`${LandingHeaderCss['work__items_single-img']} ${LandingHeaderCss['work__items_single-4-img']}`}>
-                  <img src={workicon4} alt="image" />
+                  {/* <img src={workicon4} alt="image" /> */}
                 </div> 
                  <div className={`${LandingHeaderCss['work__items_single-info']}`}>
-                  <h3 className={`${LandingHeaderCss['h3-heading']} ${LandingHeaderCss['dark']}`}>Marketing & SEO</h3>
+                  <h3 className={`${LandingHeaderCss['h3-heading']} ${LandingHeaderCss['dark']}`}>Drag & Drop</h3>
                 </div> 
               </div>
             </div>

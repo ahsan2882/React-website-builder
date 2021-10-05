@@ -21,9 +21,9 @@ export const Footer = () => {
           <div className={`${LandingFooterCss['footer__wrapper-single']}  ${LandingFooterCss['footer__wrapper-single--1']}`}>
             <h5>contact us</h5>
             <p>Building #111, Kings Street
-              New York, United States</p>
+              New York, United Kingdom</p>
             <p>+ 123 456 7890</p>
-            <a href="#">hello@gfxpartner.com</a>
+            <a href="#">hello@guardmark.com</a>
           </div>
           <div className={`${LandingFooterCss['footer__wrapper-single']}  ${LandingFooterCss['footer__wrapper-single--2']}`}>
             <ul>
@@ -31,15 +31,13 @@ export const Footer = () => {
               <li><a href="#">Our Team</a></li>
               <li><a href="#">Careers</a></li>
               <li><a href="#">Our Story</a></li>
-              <li><a href="#">Projects</a></li>
             </ul>
           </div>
           <div className={`${LandingFooterCss['footer__wrapper-single']} ${LandingFooterCss['footer__wrapper-single--3']}`}>
             <ul>
               <li>Social</li>
-              <li><a href="#"><i className={`${['fab fa-behance']}`}></i><span>Behance</span></a></li>
+              <li><a href="#"><i className={`${['fab fa-twitter']}`}></i><span>Twitter</span></a></li>
               <li><a href="#"><i className={`${['fab fa-facebook-f']}`}></i><span>Facebook</span></a></li>
-              <li><a href="#"><i className={`${['fab fa-dribbble']}`}></i><span>Dribbble</span></a></li>
               <li><a href="#"><i className={`${['fab fa-instagram']}`}></i><span>Instagram</span></a></li>
             </ul>
           </div>
@@ -52,7 +50,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className={`${LandingFooterCss['footer__copy']}`}>
-          <h6>&copy; 2020 GFXPARTNER</h6>
+          <h6>&copy; 2021 GuardMark</h6>
         </div>
       </div>
     </footer>
