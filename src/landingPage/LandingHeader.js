@@ -5,10 +5,10 @@ import ring1 from '../assets/landingPageAssets/ring-1.png'
 import ring2 from '../assets/landingPageAssets/ring-2.png'
 
 
-import workicon1 from '../assets/landingPageAssets/work_icon_01.png'
-import workicon2 from '../assets/landingPageAssets/work_icon_02.png'
-import workicon3 from '../assets/landingPageAssets/work_icon_03.png'
-import workicon4 from '../assets/landingPageAssets/work_icon_04.png'
+// import workicon1 from '../assets/landingPageAssets/work_icon_01.png'
+// import workicon2 from '../assets/landingPageAssets/work_icon_02.png'
+// import workicon3 from '../assets/landingPageAssets/work_icon_03.png'
+// import workicon4 from '../assets/landingPageAssets/work_icon_04.png'
 import { Link } from 'react-router-dom'
 
 import logo from '../assets/landingPageAssets/logo.png'
