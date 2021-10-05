@@ -1,25 +1,29 @@
 import React, {useState } from 'react'
 import LoginPageCss from './LoginPage.module.css';
 import loginBackground from '../assets/loginPageAssets/backgrouned.svg'
-import {withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [auth, setAuth] = useState(false);
   const userEmail = 'demo@gmail.com';
   const userPassword = 'demo123';
   const submitForm = (e) => {
     e.preventDefault()
     if(email===userEmail && password===userPassword){
-      this.props.history.push('/login');
+      setAuth(true);
+    } else{
+      setAuth(false);
+      alert('Wrong username and password');
     }
   }
 
   return (
     <div className={LoginPageCss.bodyWrapper}>
       <div className={LoginPageCss.body} style={{ "background": `url(${loginBackground}) no-repeat center/cover` }}>
-        <form onSubmit={submitForm.bind(this)}>
+        <form onSubmit={submitForm}>
           <h1 className="text-white text-3xl"> Login </h1>
           <div className={LoginPageCss.form}>
             <input type="Email" name="Email" autoComplete="off" required value={email}
@@ -36,13 +40,13 @@ export const LoginPage = () => {
             </label>
           </div>
           {/* <Link to='/select-template' className={LoginPageCss.button}> Login   </Link> */}
-          <button type="submit" className={LoginPageCss.button}>Login</button>
+          {auth ? <Link to='/select-template'><button type="submit" className={LoginPageCss.button}>Login</button></Link> : <button type="submit" className={LoginPageCss.button}>Login</button>}
         </form>
       </div>
     </div>
   )
 }
-export default withRouter(LoginPage);
+
 
 // export default class LoginPage extends Component {
 //   onSubmit = () => {
