@@ -2,7 +2,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-
+import testimonal1 from '../assets/landingPageAssets/testimonial-img-1.png'
+import testimonal2 from '../assets/landingPageAssets/testimonial-img-2.png'
 const Slider = () => {
 
   return (
@@ -32,7 +33,7 @@ const Slider = () => {
                 ac neque etra
                 commodo in ac sem enterdum et alesuada fames acnte ipsum primis in faucibus"</p>
               <div className="testimonial-client">
-                <img src="assets/images/testimonial-img-1.png" alt="image"/>
+                  <img src={testimonal1} alt="image"/>
                 <div>
                   <h4 className="h4-heading">Michael Williamson</h4>
                   <p className="paragraph light small">CEO - GFXPARTNER</p>
@@ -44,7 +45,7 @@ const Slider = () => {
                 ac neque etra
                 commodo in ac sem enterdum et alesuada fames acnte ipsum primis in faucibus"</p>
               <div className="testimonial-client">
-                <img src="assets/images/testimonial-img-2.png" alt="image"/>
+                <img src={testimonal2} alt="image"/>
                 <div>
                   <h4 className="h4-heading">Dave Edwards</h4>
                   <p className="paragraph light small">CEO - GFXPARTNER</p>

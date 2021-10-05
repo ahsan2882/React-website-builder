@@ -1,6 +1,6 @@
 import React, {useState } from 'react'
 import LoginPageCss from './LoginPage.module.css';
-import loginBackground from '../assets/loginPageAssets/backgrouned.svg'
+import loginBackground from '../assets/loginPageAssets/background-2.svg'
 import { Link } from 'react-router-dom';
 
 

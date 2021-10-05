@@ -1,5 +1,9 @@
 
 
+body {
+  font-family: 'Montserrat' !important;
+}
+
 .header {
     position: absolute;
     top: 0;
@@ -212,7 +216,7 @@
     position: absolute;
 }
 .container .row {
-    padding: 35em 26em 0;
+    padding: 27em 26em 0;
 }
 .hero__bg .circle-1 {
     width: 68.5rem;
@@ -248,8 +252,9 @@
     z-index: -1;
 }
 .hero__info .h1-heading {
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: 900;
+    font-family: 'Montserrat';
 }
 .paragraph {
     font-size: 2em;
@@ -371,8 +376,9 @@
     transform: translate(-50%, -50%);
 }
 .hero__info .button:hover {
-    background-color: #fa98d7;
+    background-color: #000000;
     color: #fff;
+    border-color:#000000;
 }
 .hero .work {
     position: relative;

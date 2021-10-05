@@ -32,17 +32,17 @@ export const Header = () => {
         </div>
         <div className={`${LandingHeaderCss['header__nav']}`}>
           <ul className={`${LandingHeaderCss['header__nav-primary']}`}>
-            <li><a href="#">services</a></li>
-            <li><a href="#">projects</a></li>
-            <li><a href="#">team</a></li>
-            <li><a href="#">news</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Templates</a></li>
+            <li><a href="#">Pricing</a></li>
             <li><a href="#">about</a></li>
           </ul>
-          <ul className={`${LandingHeaderCss['header__nav-secondary']}`}>
+          {/* <ul className={`${LandingHeaderCss['header__nav-secondary']}`}>
             <li><a href="#">fr</a></li>
             <li><a href="#">en</a></li>
-          </ul>
-          <span className="direct"><i className={`${['fas fa-times']}`}></i></span>
+          </ul> */}
+          {/* <span className="direct"><i className={`${['fas fa-times']}`}></i></span> */}
         </div>
         <div className={`${LandingHeaderCss['header__bars']}`}>
           <div className={`${LandingHeaderCss['header__bars-bar']} ${LandingHeaderCss['header__bars-bar-1']}`}>
@@ -72,10 +72,9 @@ export const Header = () => {
       <div className={`${LandingHeaderCss['row']}`}>
         <div className={`${LandingHeaderCss['col-lg-6']}`}>
           <div className={`${LandingHeaderCss['hero__info']}`}>
-            <h1 className={`${LandingHeaderCss['h1-heading']}`}>Designing is
-              passion at work!</h1>
-            <p className={`${LandingHeaderCss.paragraph}`}>We come up with things that not only look
-              great but work effectively as well.</p>
+            <h1 className={`${LandingHeaderCss['h1-heading']}`}>We make it simple
+               to build a website !</h1>
+            <p className={`${LandingHeaderCss.paragraph}`}>Create a website in three clicks. Unique,simple and friendly. It's that easy</p>
             <Link to="/login" className={`${LandingHeaderCss.button}`}>
               <span>LAUNCH BUILDER</span></Link>
           </div>
