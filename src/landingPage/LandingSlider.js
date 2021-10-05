@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from "react";
-import SliderCss from "./LandingSlider.module.css";
-import data from "./LandingSliderData";
+// eslint-disable-next-line no-unused-vars
+import React from "react";
 
 const Slider = () => {
 
