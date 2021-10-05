@@ -41,6 +41,15 @@ import testimonialAss1 from '../assets/editingScreenAssets/testimonialEditAssets
 import testimonialAss2 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial2.png'
 import testimonialAss3 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial3.png'
 import testimonialAss4 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial4.JPG'
+import accreAss1 from '../assets/editingScreenAssets/accreEditAssets/accreditation1.JPG'
+import accreAss2 from '../assets/editingScreenAssets/accreEditAssets/accreditation2.JPG'
+import accreAss3 from '../assets/editingScreenAssets/accreEditAssets/accreditation3.JPG'
+import accreAss4 from '../assets/editingScreenAssets/accreEditAssets/accreditation4.JPG'
+import sliderAss1 from '../assets/editingScreenAssets/sliderEditAssets/slider1.JPG'
+import sliderAss2 from '../assets/editingScreenAssets/sliderEditAssets/slider2.JPG'
+import sliderAss3 from '../assets/editingScreenAssets/sliderEditAssets/slider3.JPG'
+import sliderAss4 from '../assets/editingScreenAssets/sliderEditAssets/slider4.JPG'
+import sliderAss5 from '../assets/editingScreenAssets/sliderEditAssets/slider5.JPG'
 
 
 export default function FooterEdit({setOverlay}) {
@@ -57,8 +66,26 @@ export default function FooterEdit({setOverlay}) {
             setFooterState(false);
             setHeroState(false);
             setNavState(false);
+            setSliderState(false);
+            setAccreState(false);
         }
     }, [isClicked]);
+    const [sliderState, setSliderState] = useState(false);
+    const sliderClicked = () => setSliderState((state) => !state);
+    useEffect(() => {
+        if (sliderState) {
+            setTestimonialState(false);
+            setFooterState(false);
+            setFaqState(false);
+            setContactState(false);
+            setSocialState(false);
+            setPricingState(false);
+            setServicesState(false);
+            setHeroState(false);
+            setNavState(false);
+            setAccreState(false);
+        }
+    }, [sliderState]);
     const [footerState, setFooterState] = useState(false);
     const footerClicked = () => setFooterState((state) => !state);
     useEffect(() => {
@@ -71,6 +98,8 @@ export default function FooterEdit({setOverlay}) {
             setServicesState(false);
             setHeroState(false);
             setNavState(false);
+            setSliderState(false);
+            setAccreState(false);
         }
     }, [footerState]);
     const [testimonialState, setTestimonialState] = useState(false);
@@ -85,8 +114,26 @@ export default function FooterEdit({setOverlay}) {
             setServicesState(false);
             setHeroState(false);
             setNavState(false);
+            setSliderState(false);
+            setAccreState(false);
         }
     }, [testimonialState]);
+    const [accreState, setAccreState] = useState(false);
+    const accreClicked = () => setAccreState((state) => !state);
+    useEffect(() => {
+        if (accreState) {
+            setTestimonialState(false);
+            setFooterState(false);
+            setFaqState(false);
+            setContactState(false);
+            setSocialState(false);
+            setPricingState(false);
+            setSliderState(false);
+            setServicesState(false);
+            setHeroState(false);
+            setNavState(false);
+        }
+    }, [accreState]);
     const [faqState, setFaqState] = useState(false);
     const faqClicked = () => setFaqState((state) => !state);
     useEffect(() => {
@@ -99,6 +146,8 @@ export default function FooterEdit({setOverlay}) {
             setServicesState(false);
             setHeroState(false);
             setNavState(false);
+            setSliderState(false);
+            setAccreState(false);
         }
     }, [faqState]);
     const [contactState, setContactState] = useState(false);
@@ -113,6 +162,8 @@ export default function FooterEdit({setOverlay}) {
             setServicesState(false);
             setHeroState(false);
             setNavState(false);
+            setSliderState(false);
+            setAccreState(false);
         }
     }, [contactState]);
     const [socialState, setSocialState] = useState(false);
@@ -127,6 +178,8 @@ export default function FooterEdit({setOverlay}) {
             setServicesState(false);
             setHeroState(false);
             setNavState(false);
+            setSliderState(false);
+            setAccreState(false);
         }
     }, [socialState]);
     const [pricingState, setPricingState] = useState(false);
@@ -141,6 +194,8 @@ export default function FooterEdit({setOverlay}) {
             setServicesState(false);
             setHeroState(false);
             setNavState(false);
+            setSliderState(false);
+            setAccreState(false);
         }
     }, [pricingState]);
     const [servicesState, setServicesState] = useState(false);
@@ -155,6 +210,8 @@ export default function FooterEdit({setOverlay}) {
             setFooterState(false);
             setHeroState(false);
             setNavState(false);
+            setAccreState(false);
+            setSliderState(false);
         }
     }, [servicesState]);
     const [navState, setNavState] = useState(false);
@@ -169,6 +226,8 @@ export default function FooterEdit({setOverlay}) {
             setFooterState(false);
             setServicesState(false);
             setHeroState(false);
+            setAccreState(false);
+            setSliderState(false);
         }
     }, [navState]);
     const [heroState, setHeroState] = useState(false);
@@ -183,6 +242,8 @@ export default function FooterEdit({setOverlay}) {
             setFooterState(false);
             setServicesState(false);
             setNavState(false);
+            setSliderState(false);
+            setAccreState(false);
         }
     }, [heroState]);
     useEffect(() => {
@@ -217,9 +278,6 @@ export default function FooterEdit({setOverlay}) {
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={testimonialClicked}>Testimonials</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
-                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`}>Forms</button>
-                    </li>
-                    <li className={`${FooterEditCss.mainNavLink}`}>
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={faqClicked}>FAQs</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
@@ -229,7 +287,7 @@ export default function FooterEdit({setOverlay}) {
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={socialClicked}>Social icons</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
-                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`}>Sliders</button>
+                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={sliderClicked}>Sliders</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={pricingClicked}>Pricing</button>
@@ -238,7 +296,7 @@ export default function FooterEdit({setOverlay}) {
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={servicesClicked}>Services</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
-                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`}>Accreditations</button>
+                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={accreClicked}>Accreditations</button>
                     </li>
                 </ul>
             </nav>
@@ -283,6 +341,35 @@ export default function FooterEdit({setOverlay}) {
                     <li><img src={navAss3} alt="Nav Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={navAss4} alt="Nav Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={navAss5} alt="Nav Asset 5" className={`${FooterEditCss.assetImages}`} /></li>
+                </ul>
+            </div>
+            <div className={`${FooterEditCss.assetList}`}
+                style={sliderState
+                    ? { transform: "translateX(0%)" }
+                    : null
+                }
+                onMouseLeave={() => setSliderState(false)}
+            >
+                <ul className={`${FooterEditCss.testimonialMenu}`}>
+                    <li><img src={sliderAss1} alt="Slider Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={sliderAss2} alt="Slider Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={sliderAss3} alt="Slider Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={sliderAss4} alt="Slider Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={sliderAss5} alt="Slider Asset 5" className={`${FooterEditCss.assetImages}`} /></li>
+                </ul>
+            </div>
+            <div className={`${FooterEditCss.assetList}`}
+                style={accreState
+                    ? { transform: "translateX(0%)" }
+                    : null
+                }
+                onMouseLeave={() => setAccreState(false)}
+            >
+                <ul className={`${FooterEditCss.testimonialMenu}`}>
+                    <li><img src={accreAss1} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={accreAss2} alt="Accre Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={accreAss3} alt="Accre Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={accreAss4} alt="Accre Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>
             </div>
             <div className={`${FooterEditCss.assetList}`}
