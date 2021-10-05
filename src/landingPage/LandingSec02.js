@@ -1,5 +1,5 @@
 import React from 'react'
-import Sec02img from '../assets/landingPageAssets/complete_720.png'
+import Sec02img from '../assets/landingPageAssets/complete.png'
 import LandingSec02Css from './LandingSec02.module.css'
 
 export const Sec02 = () => {

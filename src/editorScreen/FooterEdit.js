@@ -36,6 +36,17 @@ import testimonialAss4 from '../assets/editingScreenAssets/testimonialEditAssets
 export default function FooterEdit({setOverlay}) {
     const [isClicked, setIsClicked] = useState(false);
     const onClicked = () => setIsClicked((state) => !state);
+    useEffect(() => {
+        if (!isClicked) {
+            setTestimonialState(false);
+            setFaqState(false);
+            setContactState(false);
+            setSocialState(false);
+            setPricingState(false);
+            setServicesState(false);
+            setFooterState(false);
+        }
+    }, [isClicked]);
     const [footerState, setFooterState] = useState(false);
     const footerClicked = () => setFooterState((state) => !state);
     useEffect(() => {
