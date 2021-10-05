@@ -82,7 +82,7 @@ export const Header = () => {
                   to build a website !</h1>
                 <p className={`${LandingHeaderCss.paragraph}`}>Create a website in three clicks. Unique, simple and friendly. It's that easy</p>
                 <Link to="/login" className={`${LandingHeaderCss.button}`}>
-                  <span>LAUNC BUILDER</span></Link>
+                  <span>LAUNCH BUILDER</span></Link>
               </div>
             </div>
           </div>
