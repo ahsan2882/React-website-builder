@@ -8,7 +8,7 @@ export const Sec02 = () => {
     <section className={`${LandingSec02Css.design}`}>
      <div className={`${LandingSec02Css['row-3']}`}>
 <div className={`${LandingSec02Css['col-3']}`}>
-  <h1> Amazing Websites </h1>
+  <h1>Premade Templates Selection</h1>
   </div>
 
 
