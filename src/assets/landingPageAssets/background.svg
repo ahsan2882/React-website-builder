@@ -1,1 +1,9 @@
-<svg id="visual" viewBox="0 0 1800 1500" width="1800" height="1500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="1800" height="1500" fill="#6C43F8"></rect><g fill="#F993D5"><circle r="310" cx="493" cy="633"></circle><circle r="310" cx="22" cy="1381"></circle><circle r="309" cx="1671" cy="100"></circle><circle r="309" cx="1631" cy="1415"></circle></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="visual" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="594 -354 1800 1500" enable-background="new 594 -354 1800 1500" xml:space="preserve">
+<rect x="594" y="-354" fill="#6C43F8" width="1800" height="1500"/>
+<circle fill="#F993D5" cx="670" cy="1082" r="310"/>
+<circle fill="#F993D5" cx="2319" cy="-199" r="309"/>
+<circle fill="#F993D5" cx="2279" cy="1116" r="309"/>
+</svg>

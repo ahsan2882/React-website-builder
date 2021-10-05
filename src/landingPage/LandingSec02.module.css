@@ -1,11 +1,18 @@
 .design {
     width: 100%;
     height: auto;
-    background: url('../assets/landingPageAssets/background.svg') no-repeat center/cover;}
+    background: url('../assets/landingPageAssets/background.svg') no-repeat center/cover;
+}
 .row-3 {
     display: flex;
     flex-direction: column;
   text-align: center;
+}
+.tempImages{
+    max-width: 70rem;
+    height: auto;
+    margin: 0 auto;
+    margin-top: -5rem;
 }
 .col-3 h1 {
 font-size: 4em;

@@ -27,6 +27,16 @@ import serviceAss6 from '../assets/editingScreenAssets/serviceEditAssets/service
 import socialAss1 from '../assets/editingScreenAssets/socialEditAssets/social1.png'
 import socialAss2 from '../assets/editingScreenAssets/socialEditAssets/social2.png'
 import socialAss3 from '../assets/editingScreenAssets/socialEditAssets/social3.png'
+import heroAss1 from '../assets/editingScreenAssets/heroEditAssets/hero1.PNG'
+import heroAss2 from '../assets/editingScreenAssets/heroEditAssets/hero2.PNG'
+import heroAss3 from '../assets/editingScreenAssets/heroEditAssets/hero3.PNG'
+import heroAss4 from '../assets/editingScreenAssets/heroEditAssets/hero4.PNG'
+import heroAss5 from '../assets/editingScreenAssets/heroEditAssets/hero5.PNG'
+import navAss1 from '../assets/editingScreenAssets/navEditAssets/nav1.PNG'
+import navAss2 from '../assets/editingScreenAssets/navEditAssets/nav2.PNG'
+import navAss3 from '../assets/editingScreenAssets/navEditAssets/nav3.PNG'
+import navAss4 from '../assets/editingScreenAssets/navEditAssets/nav4.PNG'
+import navAss5 from '../assets/editingScreenAssets/navEditAssets/nav5.PNG'
 import testimonialAss1 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial1.png'
 import testimonialAss2 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial2.png'
 import testimonialAss3 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial3.png'
@@ -45,6 +55,8 @@ export default function FooterEdit({setOverlay}) {
             setPricingState(false);
             setServicesState(false);
             setFooterState(false);
+            setHeroState(false);
+            setNavState(false);
         }
     }, [isClicked]);
     const [footerState, setFooterState] = useState(false);
@@ -57,6 +69,8 @@ export default function FooterEdit({setOverlay}) {
             setSocialState(false);
             setPricingState(false);
             setServicesState(false);
+            setHeroState(false);
+            setNavState(false);
         }
     }, [footerState]);
     const [testimonialState, setTestimonialState] = useState(false);
@@ -69,6 +83,8 @@ export default function FooterEdit({setOverlay}) {
             setSocialState(false);
             setPricingState(false);
             setServicesState(false);
+            setHeroState(false);
+            setNavState(false);
         }
     }, [testimonialState]);
     const [faqState, setFaqState] = useState(false);
@@ -81,6 +97,8 @@ export default function FooterEdit({setOverlay}) {
             setSocialState(false);
             setPricingState(false);
             setServicesState(false);
+            setHeroState(false);
+            setNavState(false);
         }
     }, [faqState]);
     const [contactState, setContactState] = useState(false);
@@ -93,6 +111,8 @@ export default function FooterEdit({setOverlay}) {
             setSocialState(false);
             setPricingState(false);
             setServicesState(false);
+            setHeroState(false);
+            setNavState(false);
         }
     }, [contactState]);
     const [socialState, setSocialState] = useState(false);
@@ -105,6 +125,8 @@ export default function FooterEdit({setOverlay}) {
             setFooterState(false);
             setPricingState(false);
             setServicesState(false);
+            setHeroState(false);
+            setNavState(false);
         }
     }, [socialState]);
     const [pricingState, setPricingState] = useState(false);
@@ -117,6 +139,8 @@ export default function FooterEdit({setOverlay}) {
             setSocialState(false);
             setFooterState(false);
             setServicesState(false);
+            setHeroState(false);
+            setNavState(false);
         }
     }, [pricingState]);
     const [servicesState, setServicesState] = useState(false);
@@ -129,8 +153,38 @@ export default function FooterEdit({setOverlay}) {
             setSocialState(false);
             setPricingState(false);
             setFooterState(false);
+            setHeroState(false);
+            setNavState(false);
         }
     }, [servicesState]);
+    const [navState, setNavState] = useState(false);
+    const navClicked = () => setNavState((state) => !state);
+    useEffect(() => {
+        if (navState) {
+            setTestimonialState(false);
+            setFaqState(false);
+            setContactState(false);
+            setSocialState(false);
+            setPricingState(false);
+            setFooterState(false);
+            setServicesState(false);
+            setHeroState(false);
+        }
+    }, [navState]);
+    const [heroState, setHeroState] = useState(false);
+    const heroClicked = () => setHeroState((state) => !state);
+    useEffect(() => {
+        if (heroState) {
+            setTestimonialState(false);
+            setFaqState(false);
+            setContactState(false);
+            setSocialState(false);
+            setPricingState(false);
+            setFooterState(false);
+            setServicesState(false);
+            setNavState(false);
+        }
+    }, [heroState]);
     useEffect(() => {
         if (servicesState || pricingState || socialState || faqState || footerState || contactState || testimonialState) {
             setOverlay(true);
@@ -150,11 +204,11 @@ export default function FooterEdit({setOverlay}) {
                         ? { transform: "translateX(0)" }
                         : null
                     }>
-                    <li className={`${FooterEditCss.mainNavLink} `}>
-                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`}>Header</button>
-                    </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
-                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`}>Navigation</button>
+                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={navClicked}>Navigation</button>
+                    </li>
+                    <li className={`${FooterEditCss.mainNavLink} `}>
+                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={heroClicked}>Header</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={footerClicked}>Footer</button>
@@ -176,9 +230,6 @@ export default function FooterEdit({setOverlay}) {
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`}>Sliders</button>
-                    </li>
-                    <li className={`${FooterEditCss.mainNavLink}`}>
-                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`}>Main Section</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={pricingClicked}>Pricing</button>

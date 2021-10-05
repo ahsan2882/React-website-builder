@@ -15,7 +15,7 @@ export const Sec02 = () => {
 
 
           <div className={`${LandingSec02Css['col-4']}`}>
-            <img src={Sec02img} alt="image02" />
+            <img src={Sec02img} alt="image02" className={LandingSec02Css.tempImages}/>
 
           </div>
 
