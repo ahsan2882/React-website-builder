@@ -38,88 +38,88 @@ export default function FooterEdit({setOverlay}) {
     const onClicked = () => setIsClicked((state) => !state);
     const [footerState, setFooterState] = useState(false);
     const footerClicked = () => setFooterState((state) => !state);
-    // useEffect(() => {
-    //     if(footerState){
-    //         setTestimonialState(false);
-    //         setFaqState(false);
-    //         setContactState(false);
-    //         setSocialState(false);
-    //         setPricingState(false);
-    //         setServicesState(false);
-    //     }
-    // }, [footerState]);
+    useEffect(() => {
+        if(footerState){
+            setTestimonialState(false);
+            setFaqState(false);
+            setContactState(false);
+            setSocialState(false);
+            setPricingState(false);
+            setServicesState(false);
+        }
+    }, [footerState]);
     const [testimonialState, setTestimonialState] = useState(false);
     const testimonialClicked = () => setTestimonialState((state) => !state);
-    // useEffect(() => {
-    //     if (testimonialState) {
-    //         setFooterState(false);
-    //         setFaqState(false);
-    //         setContactState(false);
-    //         setSocialState(false);
-    //         setPricingState(false);
-    //         setServicesState(false);
-    //     }
-    // }, [testimonialState]);
+    useEffect(() => {
+        if (testimonialState) {
+            setFooterState(false);
+            setFaqState(false);
+            setContactState(false);
+            setSocialState(false);
+            setPricingState(false);
+            setServicesState(false);
+        }
+    }, [testimonialState]);
     const [faqState, setFaqState] = useState(false);
     const faqClicked = () => setFaqState((state) => !state);
-    // useEffect(() => {
-    //     if (faqState) {
-    //         setTestimonialState(false);
-    //         setFooterState(false);
-    //         setContactState(false);
-    //         setSocialState(false);
-    //         setPricingState(false);
-    //         setServicesState(false);
-    //     }
-    // }, [faqState]);
+    useEffect(() => {
+        if (faqState) {
+            setTestimonialState(false);
+            setFooterState(false);
+            setContactState(false);
+            setSocialState(false);
+            setPricingState(false);
+            setServicesState(false);
+        }
+    }, [faqState]);
     const [contactState, setContactState] = useState(false);
     const contactClicked = () => setContactState((state) => !state);
-    // useEffect(() => {
-    //     if (contactState) {
-    //         setTestimonialState(false);
-    //         setFaqState(false);
-    //         setFooterState(false);
-    //         setSocialState(false);
-    //         setPricingState(false);
-    //         setServicesState(false);
-    //     }
-    // }, [contactState]);
+    useEffect(() => {
+        if (contactState) {
+            setTestimonialState(false);
+            setFaqState(false);
+            setFooterState(false);
+            setSocialState(false);
+            setPricingState(false);
+            setServicesState(false);
+        }
+    }, [contactState]);
     const [socialState, setSocialState] = useState(false);
     const socialClicked = () => setSocialState((state) => !state);
-    // useEffect(() => {
-    //     if (socialState) {
-    //         setTestimonialState(false);
-    //         setFaqState(false);
-    //         setContactState(false);
-    //         setFooterState(false);
-    //         setPricingState(false);
-    //         setServicesState(false);
-    //     }
-    // }, [socialState]);
+    useEffect(() => {
+        if (socialState) {
+            setTestimonialState(false);
+            setFaqState(false);
+            setContactState(false);
+            setFooterState(false);
+            setPricingState(false);
+            setServicesState(false);
+        }
+    }, [socialState]);
     const [pricingState, setPricingState] = useState(false);
     const pricingClicked = () => setPricingState((state) => !state);
-    // useEffect(() => {
-    //     if (pricingState) {
-    //         setTestimonialState(false);
-    //         setFaqState(false);
-    //         setContactState(false);
-    //         setSocialState(false);
-    //         setFooterState(false);
-    //         setServicesState(false);
-    //     }
-    // }, [pricingState]);
+    useEffect(() => {
+        if (pricingState) {
+            setTestimonialState(false);
+            setFaqState(false);
+            setContactState(false);
+            setSocialState(false);
+            setFooterState(false);
+            setServicesState(false);
+        }
+    }, [pricingState]);
     const [servicesState, setServicesState] = useState(false);
     const servicesClicked = () => setServicesState((state) => !state);
-    // useEffect(() => {
-    //     if (servicesState) {
-    //         setTestimonialState(false);
-    //         setFaqState(false);
-    //         setContactState(false);
-    //         setSocialState(false);
-    //         setPricingState(false);
-    //         setFooterState(false);
-    //     }
-    // }, [servicesState]);
+    useEffect(() => {
+        if (servicesState) {
+            setTestimonialState(false);
+            setFaqState(false);
+            setContactState(false);
+            setSocialState(false);
+            setPricingState(false);
+            setFooterState(false);
+        }
+    }, [servicesState]);
     useEffect(() => {
         if (servicesState || pricingState || socialState || faqState || footerState || contactState || testimonialState) {
             setOverlay(true);
