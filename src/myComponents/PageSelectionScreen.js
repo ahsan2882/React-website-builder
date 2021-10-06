@@ -1,8 +1,12 @@
 import React from 'react';
-import temp1 from '../assets/templateSelectionImages/template01.png';
-import temp2 from '../assets/templateSelectionImages/template02.png';
-import temp3 from '../assets/templateSelectionImages/template03.png';
-import temp4 from '../assets/templateSelectionImages/template04.png';
+// import temp1 from '../assets/templateSelectionImages/template01.png';
+// import temp2 from '../assets/templateSelectionImages/template02.png';
+// import temp3 from '../assets/templateSelectionImages/template03.png';
+// import temp4 from '../assets/templateSelectionImages/template04.png';
+import temp1 from '../assets/templateSelectionImages/template-1-full.png';
+import temp2 from '../assets/templateSelectionImages/template-2-full.png';
+import temp3 from '../assets/templateSelectionImages/template-3-full.png';
+import temp4 from '../assets/templateSelectionImages/template-4-full.png';
 import { Link } from 'react-router-dom';
 import PageSelCss from './PageSelection.module.css'
 
@@ -15,7 +19,7 @@ export default function PageSelectionScreen({ setTemp }) {
                         <button className="flex justify-center items-center py-1.5 px-10 bg-red-600 text-white rounded-3xl">BACK</button>
                     </Link>
                 </div> */}
-                <div className="flex justify-center"><h1 className="text-5xl mt-4">Select or Create a new template</h1></div>
+                <div className="flex justify-center mb-4"><h1 className="text-5xl mt-4">Select or Create a new template</h1></div>
                 <div>
                     <div className="overflow-y-hidden flex flex-col">
                         <div className={`my-8 mx-auto w-5/6`}>
