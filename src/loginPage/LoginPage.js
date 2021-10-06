@@ -24,21 +24,11 @@ export const LoginPage = () => {
     <div className={LoginPageCss.bodyWrapper}>
       <div className={LoginPageCss.body} style={{ "background": `url(${loginBackground}) no-repeat center/cover` }}>
         <form onSubmit={submitForm}>
-          <h1 className="text-white text-3xl"> Login </h1>
-          <div className={LoginPageCss.form}>
-            <input type="Email" name="Email" autoComplete="off" required value={email}
-              onChange={(e) => setEmail(e.target.value)} />
-            <label htmlFor="name" className={LoginPageCss.labelName}>
-              <span className={LoginPageCss.contentName}>  Email </span>
-            </label>
-          </div>
-          <div className={LoginPageCss.form}>
-            <input type="password" name="Email" autoComplete="off" required value={password}
-              onChange={(e) => setPassword(e.target.value)} />
-            <label htmlFor="name" className={LoginPageCss.labelName}>
-              <span className={LoginPageCss.contentName}>  Password </span>
-            </label>
-          </div>
+   
+        <input type="email" name="Email" autoComplete="off" required value={email}
+              onChange={(e) => setEmail(e.target.value)} placeholder="Email"/> 
+        <input type="password" placeholder="Password" name="Email" autoComplete="off" required value={password}
+              onChange={(e) => setPassword(e.target.value)}/>
           {/* <Link to='/select-template' className={LoginPageCss.button}> Login   </Link> */}
           {auth ? <Link to='/select-template'><button type="submit" className={LoginPageCss.button}>Login</button></Link> : <button type="submit" className={LoginPageCss.button}>Login</button>}
         </form>
