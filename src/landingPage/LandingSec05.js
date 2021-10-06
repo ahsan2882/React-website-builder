@@ -9,7 +9,7 @@ export const Sec05 = () => {
     <div className="cta__bg">
       <div className="circle-1"></div>
     </div>
-    <div className="container">
+    <div className="container my-0 mx-auto">
       <div className="row">
         <div className="cta__info">
           <h1 className="h1-heading dark">Interested in Collaboration?</h1>

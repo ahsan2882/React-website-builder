@@ -1,10 +1,11 @@
 /* eslint-disable no-lone-blocks */
 import React, { useState, useEffect } from 'react'
 import FooterEditCss from './FooterEdit.module.css'
-import contactusAss1 from '../assets/editingScreenAssets/contactusEditAssets/contactus1.png'
-import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/contactus2.png'
-import contactusAss3 from '../assets/editingScreenAssets/contactusEditAssets/contactus3.png'
+import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/contactus5.PNG'
+import contactusAss1 from '../assets/editingScreenAssets/contactusEditAssets/contactus2.png'
+import contactusAss3 from '../assets/editingScreenAssets/contactusEditAssets/contactus6.png'
 import contactusAss4 from '../assets/editingScreenAssets/contactusEditAssets/contactus4.png'
+import contactusAss5 from '../assets/editingScreenAssets/contactusEditAssets/contactus7.png'
 import faqsAss1 from '../assets/editingScreenAssets/faqsEditAssets/faqs1.png'
 import faqsAss2 from '../assets/editingScreenAssets/faqsEditAssets/faqs2.JPG'
 import faqsAss3 from '../assets/editingScreenAssets/faqsEditAssets/faqs3.JPG'
@@ -14,16 +15,17 @@ import footerAss2 from '../assets/editingScreenAssets/footerEditAssets/footer2.J
 import footerAss3 from '../assets/editingScreenAssets/footerEditAssets/footer3.JPG'
 import footerAss4 from '../assets/editingScreenAssets/footerEditAssets/footer4.JPG'
 import pricingAss1 from '../assets/editingScreenAssets/pricingEditAssets/pricing1.JPG'
-import pricingAss2 from '../assets/editingScreenAssets/pricingEditAssets/pricing2.JPG'
-import pricingAss3 from '../assets/editingScreenAssets/pricingEditAssets/pricing3.JPG'
+// import pricingAss2 from '../assets/editingScreenAssets/pricingEditAssets/pricing2.JPG'
+import pricingAss6 from '../assets/editingScreenAssets/pricingEditAssets/pricing3.JPG'
 import pricingAss4 from '../assets/editingScreenAssets/pricingEditAssets/pricing4.JPG'
 import pricingAss5 from '../assets/editingScreenAssets/pricingEditAssets/pricing5.JPG'
-import serviceAss1 from '../assets/editingScreenAssets/serviceEditAssets/slider.PNG'
+import pricingAss3 from '../assets/editingScreenAssets/pricingEditAssets/pricing6.png'
+// import serviceAss1 from '../assets/editingScreenAssets/serviceEditAssets/slider.PNG'
 import serviceAss2 from '../assets/editingScreenAssets/serviceEditAssets/service2.JPG'
-import serviceAss3 from '../assets/editingScreenAssets/serviceEditAssets/service3.JPG'
+import serviceAss6 from '../assets/editingScreenAssets/serviceEditAssets/service3.JPG'
 import serviceAss4 from '../assets/editingScreenAssets/serviceEditAssets/service4.JPG'
 import serviceAss5 from '../assets/editingScreenAssets/serviceEditAssets/service5.JPG'
-import serviceAss6 from '../assets/editingScreenAssets/serviceEditAssets/service6.png'
+import serviceAss3 from '../assets/editingScreenAssets/serviceEditAssets/service6.png'
 import socialAss1 from '../assets/editingScreenAssets/socialEditAssets/social1.png'
 import socialAss2 from '../assets/editingScreenAssets/socialEditAssets/social2.png'
 import socialAss3 from '../assets/editingScreenAssets/socialEditAssets/social3.png'
@@ -367,9 +369,9 @@ export default function FooterEdit({setOverlay}) {
             >
                 <ul className={`${FooterEditCss.testimonialMenu}`}>
                     <li><img src={accreAss1} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
-                    <li><img src={accreAss2} alt="Accre Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={accreAss3} alt="Accre Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={accreAss4} alt="Accre Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={accreAss2} alt="Accre Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>
             </div>
             <div className={`${FooterEditCss.assetList}`}
@@ -380,10 +382,10 @@ export default function FooterEdit({setOverlay}) {
                 onMouseLeave={() => setHeroState(false)}
             >
                 <ul className={`${FooterEditCss.testimonialMenu}`}>
-                    <li><img src={heroAss1} alt="Hero Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
-                    <li><img src={heroAss2} alt="Hero Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={heroAss3} alt="Hero Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={heroAss1} alt="Hero Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={heroAss4} alt="Hero Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={heroAss2} alt="Hero Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={heroAss5} alt="Hero Asset 5" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>
             </div>
@@ -412,6 +414,7 @@ export default function FooterEdit({setOverlay}) {
                     <li><img src={contactusAss2} alt="Contact Us Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={contactusAss3} alt="Contact Us Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={contactusAss4} alt="Contact Us Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={contactusAss5} alt="Contact Us Asset 5" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>
             </div>
             <div className={`${FooterEditCss.assetList}`}
@@ -436,10 +439,11 @@ export default function FooterEdit({setOverlay}) {
                 >
                 <ul className={`${FooterEditCss.pricingMenu}`}>
                     <li><img src={pricingAss1} alt="Pricing Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
-                    <li><img src={pricingAss2} alt="Pricing Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
+                    {/* <li><img src={pricingAss2} alt="Pricing Asset 2" className={`${FooterEditCss.assetImages}`} /></li> */}
                     <li><img src={pricingAss3} alt="Pricing Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={pricingAss4} alt="Pricing Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={pricingAss5} alt="Pricing Asset 5" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><img src={pricingAss6} alt="Pricing Asset 6" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>
             </div>
             <div className={`${FooterEditCss.assetList}`}
@@ -450,7 +454,7 @@ export default function FooterEdit({setOverlay}) {
                 onMouseLeave={() => setServicesState(false)}
                 >
                 <ul className={`${FooterEditCss.serviceMenu}`}>
-                    <li><img src={serviceAss1} alt="Services Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
+                    {/* <li><img src={serviceAss1} alt="Services Asset 1" className={`${FooterEditCss.assetImages}`} /></li> */}
                     <li><img src={serviceAss2} alt="Services Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={serviceAss3} alt="Services Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={serviceAss4} alt="Services Asset 4" className={`${FooterEditCss.assetImages}`} /></li>

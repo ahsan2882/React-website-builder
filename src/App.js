@@ -7,6 +7,7 @@ import { LandingPage } from './landingPage/LandingPage';
 import PageSelectionScreen from './myComponents/PageSelectionScreen';
 import Template1Page from './template1components/Template1Page'
 import {LoginPage} from './loginPage/LoginPage'
+import { Sugar } from 'react-preloaders2';
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
   
   return (
     <>
+
       <Router>
         <Switch>
           <Route exact path="/">
@@ -37,6 +39,7 @@ export default function App() {
           </Route>
         </Switch>
       </Router>
+      <Sugar background={'rgb(60, 172, 254)'} color={`rgb(255,255,255)`}/>
     </>
   );
 }

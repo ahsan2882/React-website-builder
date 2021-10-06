@@ -346,7 +346,7 @@ header
 }
 
 .client {
-  margin: 24.6rem 0 16.4rem 0;
+  margin: 11.6rem 0 8.4rem 0;
   position: relative;
   font-family: 'Montserrat';
   .h2-heading {
@@ -362,7 +362,7 @@ header
       .circle-3{ width: 20.6rem; height: 20.6rem; background-color: #987cfd; top: 45.1rem; right: -9.3rem; }
     }
   }
-  .container{ position: relative; }
+  .container{ position: relative; margin: 0 auto;}
   .projects__info{ display: flex; justify-content: space-between; align-items: center;
     i{ font-weight: 600 !important; font-size: 4rem; color: #7e7a8c; @include animateIt; cursor: pointer; outline: none;
       &:hover{ color: #6c43f8; }

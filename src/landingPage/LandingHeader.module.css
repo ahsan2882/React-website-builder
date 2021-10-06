@@ -222,7 +222,7 @@ body {
     width: 68.5rem;
     height: 68.5rem;
     background-color: #9fe1ff;
-    bottom: -11rem;
+    bottom: -25rem;
     left: -14.3rem;
 }
 .hero__bg .circle-2 {
@@ -400,7 +400,7 @@ body {
     margin: 0 auto 40em;
     overflow-y: hidden;
     background-color: #fff;
-    padding: 16rem  5em 10em;
+    padding: 7rem  5rem 6rem;
     height: auto;
     box-shadow: rgba(0, 0,0,0.3) 2px 2px 2px 2px;
 }
