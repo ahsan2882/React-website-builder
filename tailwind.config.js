@@ -10,6 +10,10 @@ module.exports = {
         UL: {
           400: "#0066FF"
         },
+        BL:{
+          400: "#9fe1ff",
+          600: "#3cacfe"
+        }
       },
     },
   },

@@ -257,7 +257,7 @@ export default function FooterEdit({setOverlay}) {
     return (
         <>
             <button className={`fixed left-8 bottom-4 flex justify-center items-center h-12 w-12 rounded-full ${FooterEditCss['navToggle']}`} onClick={onClicked}>
-                {isClicked ? <i className={`fas fa-times  py-3 px-4 text-white bg-red-500 rounded-full flex justify-center items-center ${FooterEditCss['i-circle']}`}></i> : <i className={`fas fa-times py-3 px-4 text-white bg-blue-400 rounded-full flex justify-center items-center ${FooterEditCss['i-circle']} ${FooterEditCss.open}`}></i>}
+                {isClicked ? <i className={`fas fa-times  py-3 px-4 text-white bg-red-500 rounded-full flex justify-center items-center ${FooterEditCss['i-circle']}`}></i> : <i className={`fas fa-times py-3 px-4 text-white bg-BL-600 rounded-full flex justify-center items-center ${FooterEditCss['i-circle']} ${FooterEditCss.open}`}></i>}
             </button>
             <nav>
                 <ul className={FooterEditCss.mainNav}

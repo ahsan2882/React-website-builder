@@ -60,7 +60,7 @@
     top: 4rem;
     left: 9.5vw;
     bottom: 0;
-    width: 25vw;
+    width: 45vw;
     background-color: #fff;
     z-index: 10;
     transform: translateX(-200%);
@@ -78,7 +78,7 @@
     overflow:hidden;
     border: 1px solid transparent;
     margin: 0.8rem;
-    max-width: 20vw;
+    max-width: 42vw;
     width: 100%;
     /* margin: 1rem 0; */
     height: auto;
