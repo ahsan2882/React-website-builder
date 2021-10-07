@@ -10,25 +10,11 @@ export const Sec02 = () => {
           <div className={`${LandingSec02Css['col-3']}`}>
             <h1>Premade Templates Selection</h1>
           </div>
-
-
-
-
           <div className={`${LandingSec02Css['col-4']}`}>
             <img src={Sec02img} alt="image02" className={LandingSec02Css.tempImages}/>
-
           </div>
-
-
-
-
-
-
-
         </div>
-
       </section>
-
     </>
   );
 }
