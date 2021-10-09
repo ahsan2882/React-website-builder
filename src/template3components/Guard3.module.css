@@ -9,23 +9,7 @@
     background-image: url(../assets/template3images/01\ -\ Copy.jpg);
     min-height: 40ch;
   }
-  .guard-card {
-    color: var(--clr-light);
-    background-size: cover;
-    object-fit: cover;
-    padding: 25rem 0 0;
-    max-width: 60ch;
-  
-    overflow: hidden;
-    transition: transform 500ms ease;
-    margin: 20px;
-    border-top: 2px solid var(--clr-red-new);
-    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
-      rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
-      rgb(0 0 0 / 9%) 0px -3px 5px;
-  
-    backdrop-filter: blur(5px);
-  }
+ 
   
   .guard-card:hover {
     transform: scale(1.05);
