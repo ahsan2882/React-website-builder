@@ -55,13 +55,7 @@
     padding: 30px 90px;
     background-color: var(--clr-primary);
 }
-.programs-cards-wrapper {
-    line-height: 1.6;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-}
+
 .program-card {
     background-color: var(--clr-red-new);
     color: var(--clr-light);
