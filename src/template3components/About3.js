@@ -23,7 +23,7 @@ export default function About3() {
       <h1>Commited to your business</h1>
       <p>Given the complexity of forming a team including consciously or unconsciously developing team interaction norms and
       guidelines, ending up with an effective, functioning team is downright amazing.</p>
-      <a href="#" className={About3Css['button-sq-red']}>Read More</a>
+      <button className={About3Css['button-sq-red']}>Read More</button>
     </div> 
                     
 

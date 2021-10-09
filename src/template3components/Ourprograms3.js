@@ -37,7 +37,7 @@ export default function Ourprograms3() {
                                     Cultural Awareness is critical for any workforce that seeks to yield positive outcomes. Watch this video to learn about
                                     cultural awareness in the workplace
                                 </p>
-                                <a href="#" className={Ourprograms3Css['button-sq']}>Read More</a>
+                                <button className={Ourprograms3Css['button-sq']}>Read More</button>
 
                             </div>
                         </div>
@@ -57,7 +57,7 @@ export default function Ourprograms3() {
         Watch this video to see one of the Department of Defense's approaches to building cultural awareness and reducing risk
         in culturally diverse environments.
       </p>
-      <a href="#" class={Ourprograms3Css['button-sq']}>Read More</a>
+      <button class={Ourprograms3Css['button-sq']}>Read More</button>
   
     </div>
   </div>
@@ -77,7 +77,7 @@ export default function Ourprograms3() {
                                     Resilience allows individuals to bounce back from setbacks and stressful situations. Without this quality, some people
                                     may develop increased risks
                                 </p>
-                                <a href="#" className={Ourprograms3Css['button-sq']}>Read More</a>
+                                <button className={Ourprograms3Css['button-sq']}>Read More</button>
 
                             </div>
                         </div>

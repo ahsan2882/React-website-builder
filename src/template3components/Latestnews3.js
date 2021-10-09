@@ -25,7 +25,7 @@ export default function Latestnews3() {
                             <div className={Latestnews3Css['news-card-content']}>
                                 <h2>CCTV Installation Tricks.</h2>
                                 <p>If you are able to install a camera, there is still a few tricks to pay extra attention.</p>
-                                <a href="#" className={Latestnews3Css['button-sq-red']}>Read More</a>
+                                <button className={Latestnews3Css['button-sq-red']}>Read More</button>
 
                             </div>
 
@@ -35,7 +35,7 @@ export default function Latestnews3() {
                             <div className={Latestnews3Css['news-card-content']}>
                                 <h2>How To Monitor Your Facility.</h2>
                                 <p>Hire a special man who knows how to deal with this. Or read this post.</p>
-                                <a href="#" className={Latestnews3Css['button-sq-red']}>Read More</a>
+                                <button className={Latestnews3Css['button-sq-red']}>Read More</button>
 
                             </div>
                         </div>
@@ -45,7 +45,7 @@ export default function Latestnews3() {
                             <div className={Latestnews3Css['news-card-content']}>
                                 <h2>Outdoor Security Process.</h2>
                                 <p>Working with different clients, we collected rich experience and want to share it with you..</p>
-                                <a href="#" className={Latestnews3Css['button-sq-red']}>Read More</a>
+                                <button className={Latestnews3Css['button-sq-red']}>Read More</button>
 
                             </div>
                         </div>
