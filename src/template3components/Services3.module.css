@@ -102,6 +102,14 @@ html {
   text-decoration: none;
   text-transform: uppercase;
 
+  background: linear-gradient(
+      to right,
+      rgb(0, 0, 0) 50%,
+      rgb(255, 255, 255) 50%
+    )
+    left;
+  background-size: 200%;
+  transition: 0.5s ease-out;
 }
 .button-sq:hover {
   background-position: right;
@@ -119,10 +127,7 @@ html {
   text-decoration: none;
   text-transform: uppercase;
 
-  background: linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(204, 48, 48) 50%)
-    left;
-  background-size: 200%;
-  transition: 0.5s ease-out;
+
 }
 .button-sq-red:hover {
   background-position: right;
