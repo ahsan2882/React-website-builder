@@ -73,7 +73,7 @@ html {
   background-color: var(--clr-red-new);
   box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px;
   backdrop-filter: blur(5px);
-  padding: 50px 50px;
+  padding: 50px;
 }
 
 .card-text h1 {
