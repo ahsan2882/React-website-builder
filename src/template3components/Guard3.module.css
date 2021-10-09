@@ -1,12 +1,4 @@
-.guard-cards-wrapper {
-    line-height: 1.6;
-  
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
+
   .bg {
     background-image: url(../assets/template3images/01\ -\ Copy.jpg);
   }
@@ -156,7 +148,6 @@
     text-align: center;
     letter-spacing: 4px;
     color: white;
-    background: red;
     border-right: 3px solid white;
     text-decoration: none;
     text-transform: uppercase;
@@ -181,7 +172,6 @@
     text-align: center;
     letter-spacing: 4px;
     color: white;
-    background: red;
     border-right: 3px solid var(--clr-red-new);
     text-decoration: none;
     text-transform: uppercase;
@@ -213,7 +203,7 @@
     max-width: 60ch;
     overflow: hidden;
     transition: transform 500ms ease;
-    margin: 20px 20px;
+    margin: 20px;
     border-top: 2px solid var(--clr-red-new);
     box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
     backdrop-filter: blur(5px);
