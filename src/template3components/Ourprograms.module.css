@@ -107,7 +107,7 @@ p {
     max-width: 70ch;
     margin: 20px;
     border-top: 2px solid var(--clr-black-new);
-    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px;
+    box-shadow: rgb(0 0 0 / 25%) 0 54px 55px;
     transition: transform 500ms ease;
     backdrop-filter: blur(5px);
 }
