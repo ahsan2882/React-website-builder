@@ -88,15 +88,7 @@
     left: 45%;
     border-radius: 50%;
 }
-.program-card-content {
-    --padding: 2.5rem;
-    padding: var(--padding);
- 
-    transition: transform 500ms ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .program-card_title {
     position: relative;
     width: max-content;
