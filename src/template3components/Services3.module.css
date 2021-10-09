@@ -135,13 +135,7 @@ html {
 .button-sq-red:hover {
   background-position: right;
 }
-.content-serv-img-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: center;
-  padding: 300px 40px;
-}
+
 .serv-img-content {
   background: url(../assets/template3images/dsvy-image-2-1.png);
   background-size: cover;
