@@ -78,14 +78,14 @@ html {
 
 .card-text h1 {
   font-size: 3rem;
-  padding: 15px 0px;
+  padding: 15px 0;
   text-align: center;
   color: whitesmoke;
   border-bottom: 1px solid white;
 }
 .card-text p {
   font-size: 1.5rem;
-  padding: 20px 0px;
+  padding: 20px 0;
   color: whitesmoke;
   text-align: center;
   font-family: "Poppins", sans-serif;
