@@ -14,10 +14,7 @@ html {
     --clr-red-new: #c01120;
     --clr-black-new: #000;
   }
-
-
-
-  .heading-main-title {
+ .heading-main-title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,7 +71,7 @@ html {
   align-items: center;
   margin: 20px 30px;
   background-color: var(--clr-red-new);
-  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px;
   backdrop-filter: blur(5px);
   padding: 50px 50px;
 }
