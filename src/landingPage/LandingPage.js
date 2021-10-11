@@ -7,19 +7,22 @@ import { Sec02 } from "./LandingSec02"
 import { Sec05 } from "./LandingSec05"
 import Slider from "./LandingSlider"
 import { Footer } from "./LandingFooter"
+import LandingPageCss from './LandingPage.module.css'
 
-export const LandingPage = ({setLoaded}) => {
+export const LandingPage = ({ setLoaded }) => {
     return (
         <>
-            <Header title={"The Landing page"} />
-            {/* <HeroSec /> */}
-              <Sec02 />
-            {/* <Sec03 />
-            <Sec04 /> */}
-            <Slider /> 
-            <Sec05 />
-            
-             <Footer />
+            <section className={LandingPageCss.wholeBody}>
+                <Header />
+                {/* <HeroSec /> */}
+                <Sec02 />
+                {/* <Sec03 />
+                    <Sec04 /> */}
+                <Slider />
+                <Sec05 />
+
+                <Footer />
+            </section>
         </>
     );
 }

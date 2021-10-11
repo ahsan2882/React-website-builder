@@ -7,6 +7,8 @@
 }
 .h1-heading.dark {
     color: #29282c;
+    font-size: 4rem;
+    font-weight: 700;
 }
 .cta__bg > div {
     border-radius: 50%;
@@ -41,20 +43,20 @@
     text-align: center;
 }
 .cta__info .button {
-    min-width: 25.1rem;
+    min-width: 18.1rem;
     text-align: center;
-    height: 6.4rem;
+    height: 4.4rem;
     background-color: transparent;
     color: #fa98d7;
     border: 2px solid #fa98d7;
     border-radius: 6rem;
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 600 !important;
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
     display: inline-block;
-    margin-top: 8.1rem;
+    margin-top: 4.1rem;
     font-family:'Montserrat';
 }
 .cta__info .button span {
