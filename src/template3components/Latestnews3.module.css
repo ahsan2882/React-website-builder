@@ -23,15 +23,7 @@
     background-color: rgb(255, 255, 255);
     color: #000;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Barlow Condensed", sans-serif;
-    color: var(--clr-white-smoke);
-  }
+
   
   
 

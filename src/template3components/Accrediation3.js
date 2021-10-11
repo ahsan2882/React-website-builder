@@ -11,44 +11,44 @@ import accre7 from '../assets/template3images/accre7.png'
 export default function Accrediation3() {
     return (
         <>
-        <section class={Accrediation3Css['heading-sec']}>
+        <section className={Accrediation3Css['heading-sec']}>
 
-<div class={Accrediation3Css['heading-main-title']}>
-  <div class={Accrediation3Css['sub-title']}>
+<div className={Accrediation3Css['heading-main-title']}>
+  <div className={Accrediation3Css['sub-title']}>
     <h3>We are Verified by Govt</h3>
   </div>
   <h1>Accreditation</h1>
 </div>
 </section>
-<section class={Accrediation3Css['accrediations-sec']}>
-<div class={Accrediation3Css['container-accre']}>
-  <div class={Accrediation3Css['accre-wrapper']}>
-    <div class={Accrediation3Css.arow}>
-      <div class={Accrediation3Css['a-card']}>
+<section className={Accrediation3Css['accrediations-sec']}>
+<div className={Accrediation3Css['container-accre']}>
+  <div className={Accrediation3Css['accre-wrapper']}>
+    <div className={Accrediation3Css.arow}>
+      <div className={Accrediation3Css['a-card']}>
         <img src={accre1} alt="aacre1"/>
        
       </div>
-      <div class={Accrediation3Css['a-card']}>
+      <div className={Accrediation3Css['a-card']}>
         <img src={accre2} alt="accre2"/>
        
       </div>
-      <div class={Accrediation3Css['a-card']}>
+      <div className={Accrediation3Css['a-card']}>
         <img src={accre3} alt="accre3"/>
        
       </div>
-      <div class={Accrediation3Css['a-card']}>
+      <div className={Accrediation3Css['a-card']}>
         <img src={accre4} alt="accre4"/>
        
       </div>
-      <div class={Accrediation3Css['a-card']}>
+      <div className={Accrediation3Css['a-card']}>
         <img src={accre5} alt="accre5"/>
        
       </div>
-      <div class={Accrediation3Css['a-card']}>
+      <div className={Accrediation3Css['a-card']}>
         <img src={accre6} alt="accre6"/>
        
       </div>
-      <div class={Accrediation3Css['a-card']}>
+      <div className={Accrediation3Css['a-card']}>
         <img src={accre7} alt="accre7"/>
        
       </div>
