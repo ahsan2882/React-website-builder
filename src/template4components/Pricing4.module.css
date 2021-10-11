@@ -1,7 +1,14 @@
+
+
+/* global  */
+
 .container1 {
     max-width: 73.5rem;
     margin: 0 auto;
 }
+
+/* global end  */
+
 .pricingCards{
     width: 30ch;
     border-radius: 20px;

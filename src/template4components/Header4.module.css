@@ -1,11 +1,13 @@
 
+/* global  */
+
 .container1 {
     max-width: 73.5rem;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
-
+/* global end  */
 .header h1 {
     color: #fff;
     width: 100%;
