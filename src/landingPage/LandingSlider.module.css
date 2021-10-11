@@ -1,167 +1,204 @@
 .client {
-  margin: 24.6rem 0 16.4rem 0;
-  position: relative;
+    margin: 11.6rem 0 8.4rem 0;
+    position: relative;
 }
+
 .client .h2-heading {
-  font-size: 3rem;
+    font-size: 2.1rem;
+    margin-left: 5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
 }
+
 .client__bg {
-  z-index: 0;
+    z-index: 0;
 }
-.client__bg > div {
-  border-radius: 50%;
-  position: absolute;
+
+.client__bg>div {
+    border-radius: 50%;
+    position: absolute;
 }
-.client__bg > img {
-  position: absolute;
+
+.client__bg>img {
+    position: absolute;
 }
+
 .client__bg .circle-1 {
-  width: 33.4rem;
-  height: 33.4rem;
-  background-color: #6c43f8;
-  top: 37.7rem;
-  left: -13rem;
+    width: 33.4rem;
+    height: 33.4rem;
+    background-color: #6c43f8;
+    top: 30.7rem;
+    left: -13rem;
 }
+
 .client__bg .circle-4 {
-  width: 12rem;
-  height: 12rem;
-  background-color: #fa98d7;
-  top: 15.8rem;
-  right: -3.3rem;
+    width: 30rem;
+    height: 30rem;
+    background-color: #fa98d7;
+    top: 15.8rem;
+    right: -15.3rem;
+    z-index: 100;
 }
+
 .client__bg--inside {
-  z-index: 0;
+    z-index: 0;
 }
-.client__bg--inside > div {
-  border-radius: 50%;
-  position: absolute;
+
+.client__bg--inside>div {
+    border-radius: 50%;
+    position: absolute;
 }
+
 .client__bg--inside .circle-2 {
-  width: 13.6rem;
-  height: 13.6rem;
-  background-color: #9fe1ff;
-  top: 3rem;
-  left: -5rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: #9fe1ff;
+    top: 1rem;
+    left: -5rem;
 }
+
 .client__bg--inside .circle-3 {
-  width: 20.6rem;
-  height: 20.6rem;
-  background-color: #987cfd;
-  top: 45.1rem;
-  right: -9.3rem;
+    width: 20.6rem;
+    height: 20.6rem;
+    background-color: #987cfd;
+    top: 45.1rem;
+    right: -9.3rem;
 }
+
 .client .container {
-  position: relative;
+    position: relative;
+    margin: 0 auto;
 }
+
 .client .projects__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
+
 .client .projects__info i {
-  font-weight: 600 !important;
-  font-size: 4rem;
-  color: #7e7a8c;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  cursor: pointer;
-  outline: none;
+    font-weight: 600 !important;
+    font-size: 4rem;
+    color: #7e7a8c;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    outline: none;
 }
+
 .client .projects__info i:hover {
-  color: #6c43f8;
+    color: #6c43f8;
 }
+
 .client .projects__info i:last-child {
-  margin-left: 2.5rem;
+    margin-left: 2.5rem;
 }
+
 .client .projects__info div {
-  margin-right: 8.5rem;
+    margin-right: 8.5rem;
 }
+
 .client .testimonial-slider {
-  width: 100%;
-  margin-top: 4.3rem;
+    width: 100%;
+    margin-top: 1.3rem;
 }
 .client .testimonial-slider .single-testimonial {
-  background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 4rem 0;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0rem 0;
+    width: 36rem;
+    margin: 0 4rem;
 }
-.client .testimonial-slider .single-testimonial > .paragraph {
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-  font-style: italic;
-  font-weight: 300 !important;
+
+.client .testimonial-slider .single-testimonial>.paragraph {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: 300 !important;
 }
+
 .client .testimonial-slider .single-testimonial .testimonial-client {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 4rem;
-  margin-bottom: 6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
 }
+
 .client .testimonial-slider .single-testimonial .testimonial-client div {
-  margin-left: 2rem;
+    margin-left: 2rem;
 }
+
 .client .testimonial-slider .single-testimonial .testimonial-client div .h4-heading {
-  font-weight: 600 !important;
-  font-size: 1.8rem;
-  color: #29282c;
+    font-weight: 600 !important;
+    font-size: 1.3rem;
+    color: #29282c;
 }
+
 .client .testimonial-slider .single-testimonial .testimonial-client div .paragraph {
-  width: 100%;
+    width: 100%;
 }
+
 .client .client-slider {
-  width: 100%;
-  margin-top: 11.1rem;
+    width: 100%;
+    margin-top: 11.1rem;
 }
+
 .client .client-slider .single-client {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
 }
+
 .client .client-slider .single-client a {
-  opacity: 0.4;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+    opacity: 0.4;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
 }
+
 .client .client-slider .single-client a:hover {
-  opacity: 1;
+    opacity: 1;
 }
+
 @media (max-width: 991.98px) {
-  .client {
-      margin: 10rem 0 16.4rem 0;
-  }
+    .client {
+        margin: 10rem 0 16.4rem 0;
+    }
 }
+
 @media (max-width: 767.98px) {
-  .client .projects__info div {
-      margin-right: 0;
-  }
-  .client .projects__info {
-      margin: 0;
-      z-index: 100;
-      position: relative;
-  }
-  .client .testimonial-slider .single-testimonial > .paragraph {
-      font-size: 2rem;
-  }
+    .client .projects__info div {
+        margin-right: 0;
+    }
+
+    .client .projects__info {
+        margin: 0;
+        z-index: 100;
+        position: relative;
+    }
+
+    .client .testimonial-slider .single-testimonial>.paragraph {
+        font-size: 2rem;
+    }
 }
