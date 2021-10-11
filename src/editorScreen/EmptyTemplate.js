@@ -1,8 +1,25 @@
 import React from 'react'
+import Accre3Asset from '../assets/editingScreenAssets/accreEditAssets/Accre3Asset';
 
-export default function Container() {
+export default function Container({ newAssetState }) {
+    let arrayOfSections = [];
+    arrayOfSections = [<Empty/>]
+    if(!newAssetState){
+
+    }
+
     return (
-        <div className="flex flex-col justify-center items-center h-full">
+        <>
+            <div className="flex flex-col justify-center items-center h-full">
+                {arrayOfSections}
+            </div>
+        </>
+    );
+}
+
+const Empty = () => {
+    return (
+        <>
             <h1 className="text-2xl font-medium title-font my-2 text-gray-800">This is the new empty Template</h1>
             <h1 className="text-2xl font-medium title-font my-2 text-gray-800">Select Sections from the</h1>
             {/* <div className="text-2xl font-medium title-font my-2 text-gray-800"><button className="whitespace-nowrap text-base font-medium text-black-500 hover:text-black-900 px-6		">
@@ -10,6 +27,7 @@ export default function Container() {
             </button></div> */}
             <h1 className="text-2xl font-medium title-font my-2 text-gray-800">menu to start</h1>
             <h1 className="text-2xl font-medium title-font my-2 text-gray-800">building your website</h1>
-        </div>
-    );
+        </>
+
+    )
 }

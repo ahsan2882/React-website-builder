@@ -54,7 +54,7 @@ import sliderAss4 from '../assets/editingScreenAssets/sliderEditAssets/slider4.J
 import sliderAss5 from '../assets/editingScreenAssets/sliderEditAssets/slider5.JPG'
 
 
-export default function FooterEdit({setOverlay}) {
+export default function FooterEdit({ setOverlay, setAcc}) {
     const [isClicked, setIsClicked] = useState(false);
     const onClicked = () => setIsClicked((state) => !state);
     useEffect(() => {
@@ -369,7 +369,7 @@ export default function FooterEdit({setOverlay}) {
             >
                 <ul className={`${FooterEditCss.testimonialMenu}`}>
                     <li><img src={accreAss1} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
-                    <li><img src={accreAss3} alt="Accre Asset 3" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><button onClick={() => setAcc(true)}><img src={accreAss3} alt="Accre Asset 3" className={`${FooterEditCss.assetImages}`} /></button></li>
                     <li><img src={accreAss4} alt="Accre Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
                     <li><img src={accreAss2} alt="Accre Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
                 </ul>

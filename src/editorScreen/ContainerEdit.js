@@ -7,10 +7,11 @@ import Template3Page from '../template3components/Template3Page'
 import EmptyTemplate from '../editorScreen/EmptyTemplate'
 
 
-export default function ContainerEdit({ defWidth, templateNum, overlayPresent}) {
+export default function ContainerEdit({ defWidth, templateNum, overlayPresent, accre3AssetState}) {
     window.resizeTo(defWidth, window.innerHeight);
     const temp = templateNum;
     const overlay = overlayPresent;
+    const accreState = accre3AssetState;
 
     useEffect(() => {
         console.log("use effect ran:   ", defWidth);
@@ -30,7 +31,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent}) 
             component = <Template4Page/>
             break;
         default:
-            component = <EmptyTemplate/>
+            component = <EmptyTemplate accre3AssetState={accreState}/>
     }
     
     return (
@@ -44,7 +45,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent}) 
                 </div>
                 {temp === 0 ?
                     <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto overflow-hidden`}>
-                        <EmptyTemplate />
+                        <EmptyTemplate accre3AssetState={accreState}/>
                     </div>
                     : <div className={`${ContainerEditCss.editing} mx-auto bg-gray-200 overflow-hidden`}>
                         {component}
