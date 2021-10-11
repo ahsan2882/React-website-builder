@@ -63,6 +63,8 @@
     width: 45vw;
     background-color: #fff;
     z-index: 10;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
     transform: translateX(-200%);
     transition: all 0.5s ease;
     overflow-y: scroll;
@@ -78,8 +80,7 @@
     overflow:hidden;
     border: 1px solid transparent;
     margin: 0.8rem;
-    max-width: 42vw;
-    width: 100%;
+    width: 42vw;
     /* margin: 1rem 0; */
     height: auto;
 }
