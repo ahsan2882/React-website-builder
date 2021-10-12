@@ -22,7 +22,7 @@ export default function Container() {
     const { newAssetState} = useContext(NewAssetContext);
 
     if (newAssetState !== null) {
-        arrayOfSections.push(newAssetState)
+        arrayOfSections=[newAssetState]
     }
     useEffect(() => {
         console.log("Container Screen: ", arrayOfSections);
