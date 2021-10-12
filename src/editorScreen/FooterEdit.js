@@ -1,5 +1,5 @@
 /* eslint-disable no-lone-blocks */
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useReducer, useContext } from 'react'
 import FooterEditCss from './FooterEdit.module.css'
 import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/contactus5.PNG'
 import contactusAss1 from '../assets/editingScreenAssets/contactusEditAssets/contactus2.png'
@@ -52,11 +52,14 @@ import sliderAss2 from '../assets/editingScreenAssets/sliderEditAssets/slider2.J
 import sliderAss3 from '../assets/editingScreenAssets/sliderEditAssets/slider3.JPG'
 import sliderAss4 from '../assets/editingScreenAssets/sliderEditAssets/slider4.JPG'
 import sliderAss5 from '../assets/editingScreenAssets/sliderEditAssets/slider5.JPG'
+import Accre3Asset from '../assets/editingScreenAssets/accreEditAssets/Accre3Asset';
+import Accre2Asset from '../assets/editingScreenAssets/accreEditAssets/Accre2Asset';
+import { NewAssetContext } from './EditScreen'
 
 
-export default function FooterEdit({ setOverlay, setAcc}) {
+export default function FooterEdit({ setOverlay }) {
     const [isClicked, setIsClicked] = useState(false);
-    const onClicked = () => setIsClicked((state) => !state);
+    const onClicked = () => setIsClicked((astate) => !astate);
     useEffect(() => {
         if (!isClicked) {
             setTestimonialState(false);
@@ -73,7 +76,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [isClicked]);
     const [sliderState, setSliderState] = useState(false);
-    const sliderClicked = () => setSliderState((state) => !state);
+    const sliderClicked = () => setSliderState((astate) => !astate);
     useEffect(() => {
         if (sliderState) {
             setTestimonialState(false);
@@ -89,7 +92,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [sliderState]);
     const [footerState, setFooterState] = useState(false);
-    const footerClicked = () => setFooterState((state) => !state);
+    const footerClicked = () => setFooterState((astate) => !astate);
     useEffect(() => {
         if(footerState){
             setTestimonialState(false);
@@ -105,7 +108,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [footerState]);
     const [testimonialState, setTestimonialState] = useState(false);
-    const testimonialClicked = () => setTestimonialState((state) => !state);
+    const testimonialClicked = () => setTestimonialState((astate) => !astate);
     useEffect(() => {
         if (testimonialState) {
             setFooterState(false);
@@ -121,7 +124,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [testimonialState]);
     const [accreState, setAccreState] = useState(false);
-    const accreClicked = () => setAccreState((state) => !state);
+    const accreClicked = () => setAccreState((astate) => !astate);
     useEffect(() => {
         if (accreState) {
             setTestimonialState(false);
@@ -137,7 +140,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [accreState]);
     const [faqState, setFaqState] = useState(false);
-    const faqClicked = () => setFaqState((state) => !state);
+    const faqClicked = () => setFaqState((astate) => !astate);
     useEffect(() => {
         if (faqState) {
             setTestimonialState(false);
@@ -153,7 +156,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [faqState]);
     const [contactState, setContactState] = useState(false);
-    const contactClicked = () => setContactState((state) => !state);
+    const contactClicked = () => setContactState((astate) => !astate);
     useEffect(() => {
         if (contactState) {
             setTestimonialState(false);
@@ -169,7 +172,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [contactState]);
     const [socialState, setSocialState] = useState(false);
-    const socialClicked = () => setSocialState((state) => !state);
+    const socialClicked = () => setSocialState((astate) => !astate);
     useEffect(() => {
         if (socialState) {
             setTestimonialState(false);
@@ -185,7 +188,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [socialState]);
     const [pricingState, setPricingState] = useState(false);
-    const pricingClicked = () => setPricingState((state) => !state);
+    const pricingClicked = () => setPricingState((astate) => !astate);
     useEffect(() => {
         if (pricingState) {
             setTestimonialState(false);
@@ -201,7 +204,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [pricingState]);
     const [servicesState, setServicesState] = useState(false);
-    const servicesClicked = () => setServicesState((state) => !state);
+    const servicesClicked = () => setServicesState((astate) => !astate);
     useEffect(() => {
         if (servicesState) {
             setTestimonialState(false);
@@ -217,7 +220,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [servicesState]);
     const [navState, setNavState] = useState(false);
-    const navClicked = () => setNavState((state) => !state);
+    const navClicked = () => setNavState((astate) => !astate);
     useEffect(() => {
         if (navState) {
             setTestimonialState(false);
@@ -233,7 +236,7 @@ export default function FooterEdit({ setOverlay, setAcc}) {
         }
     }, [navState]);
     const [heroState, setHeroState] = useState(false);
-    const heroClicked = () => setHeroState((state) => !state);
+    const heroClicked = () => setHeroState((astate) => !astate);
     useEffect(() => {
         if (heroState) {
             setTestimonialState(false);
@@ -255,6 +258,38 @@ export default function FooterEdit({ setOverlay, setAcc}) {
             setOverlay(false);
         }
     }, [servicesState, pricingState, socialState, faqState, footerState, contactState, testimonialState, setOverlay]);
+    const initialState = null;
+    const reducer = (assetState, action) => {
+        // switch(action.type){
+        //     case 'Accreditation-Asset-1':
+        //         state = <Accre1Asset/>
+        //         return state;
+        //     case 'Accreditation-Asset-2':
+        //         state = <Accre2Asset />
+        //         return state;
+        //     case 'Accreditation-Asset-3':
+        //         state = <Accre3Asset />
+        //         return state;
+        //     default:
+        //         return state;
+        // }
+        if (action.type === 'Accreditation3'){
+            assetState = <Accre3Asset/>
+            return assetState;
+        }
+        if (action.type === 'Accreditation2') {
+            assetState = <Accre2Asset />
+            return assetState;
+        }
+        return assetState;
+    }
+    
+    const [newAssetState, dispatch] = useReducer(reducer, initialState);
+    const { setNewAssetState, setNewAssetCount } = useContext(NewAssetContext);
+    useEffect(() => {
+        setNewAssetState(newAssetState);
+        setNewAssetCount((count) => (count + 1))
+    }, [setNewAssetState, newAssetState, setNewAssetCount]);
 
     return (
         <>
@@ -368,10 +403,10 @@ export default function FooterEdit({ setOverlay, setAcc}) {
                 onMouseLeave={() => setAccreState(false)}
             >
                 <ul className={`${FooterEditCss.testimonialMenu}`}>
-                    <li><img src={accreAss1} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} /></li>
-                    <li><button onClick={() => setAcc(true)}><img src={accreAss3} alt="Accre Asset 3" className={`${FooterEditCss.assetImages}`} /></button></li>
-                    <li><img src={accreAss4} alt="Accre Asset 4" className={`${FooterEditCss.assetImages}`} /></li>
-                    <li><img src={accreAss2} alt="Accre Asset 2" className={`${FooterEditCss.assetImages}`} /></li>
+                    <li><button onClick={() => { dispatch({ type: 'Accreditation2'})}}><img src={accreAss1} alt="Accre Asset 2" className={`${FooterEditCss.assetImages}`} /></button></li>
+                    <li><button onClick={() => { dispatch({ type: 'Accreditation3' }) }}><img src={accreAss3} alt="Accre Asset 3" className={`${FooterEditCss.assetImages}`} /></button></li>
+                    <li><button><img src={accreAss4} alt="Accre Asset 4" className={`${FooterEditCss.assetImages}`} /></button></li>
+                    <li><button onClick={() => { dispatch({ type: 'Accreditation1' }) }}><img src={accreAss2} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} /></button></li>
                 </ul>
             </div>
             <div className={`${FooterEditCss.assetList}`}
