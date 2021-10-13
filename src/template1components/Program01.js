@@ -25,7 +25,7 @@ export const Program01 = () => {
       </div>
       <h1 className={`${Program01Css['pro-head']}`}>Cultural Awareness in the Workplace</h1>
       <p className={`${Program01Css['pro-para']}`}>Cultural Awareness is critical for any workforce that seeks to yield positive outcomes. Watch this video to learn about cultural awareness in the workplace</p>
-      <a style={{marginBottom:`20px`}} className={`${Program01Css.btnb}`} href="#">Read More <i className="fas fa-long-arrow-alt-right"></i></a>
+      <a style={{marginBottom:`20px`}} className={`${Program01Css.btnb}`} href={2}>Read More <i className="fas fa-long-arrow-alt-right"></i></a>
    </div>
    <div className={`${Program01Css['service-item']}  ${Program01Css['fade-in']}`} style={{height:`auto`}}>
       <div className={`${Program01Css.bar}`}></div>
@@ -34,7 +34,7 @@ export const Program01 = () => {
       </div>
       <h1 className={`${Program01Css['pro-head']}`}>Military Virtual Awareness Training</h1>
       <p className={`${Program01Css['pro-para']}`}> Watch this video to see one of the Department of Defense's approaches to building cultural awareness and reducing risk in culturally diverse environments.</p>
-      <a style={{marginBottom:`20px`}} className={`${Program01Css.btnb}`} href="#">Read More <i className="fas fa-long-arrow-alt-right"></i></a>
+      <a style={{marginBottom:`20px`}} className={`${Program01Css.btnb}`} href={2}>Read More <i className="fas fa-long-arrow-alt-right"></i></a>
    </div>
    <div className={`${Program01Css['service-item']}  ${Program01Css['fade-in']}`} style={{height:`auto`}}>
       <div className={`${Program01Css.bar}`}></div>
@@ -43,7 +43,7 @@ export const Program01 = () => {
       </div>
       <h1 className={`${Program01Css['pro-head']}`}>Insider Threat: Resilience</h1>
       <p className={`${Program01Css['pro-para']}`}>Resilience allows individuals to bounce back from setbacks and stressful situations. Without this quality, some people may develop increased risks associated with an insider threat.</p>
-      <a style={{marginBottom:`20px`}} className={`${Program01Css.btnb}`} href="#">Read More <i className="fas fa-long-arrow-alt-right"></i></a>
+      <a style={{marginBottom:`20px`}} className={`${Program01Css.btnb}`} href={2}>Read More <i className="fas fa-long-arrow-alt-right"></i></a>
    </div>
 </div>
 </section>
