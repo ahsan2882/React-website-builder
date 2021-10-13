@@ -5,7 +5,7 @@ import './App.css';
 import EditScreen from './editorScreen/EditScreen';
 import { LandingPage } from './landingPage/LandingPage';
 import PageSelectionScreen from './myComponents/PageSelectionScreen';
-import Template1Page from './template1components/Template1Page'
+import PreviewPage from './myComponents/PreviewPage'
 import {LoginPage} from './loginPage/LoginPage'
 import { Sugar } from 'react-preloaders2';
 
@@ -41,8 +41,20 @@ export default function App() {
           <Route exact path='/login'>
             <LoginPage />
           </Route>
-          <Route exact path='/preview'>
-            <Template1Page />
+          <Route exact path='/preview/template-1'>
+            <PreviewPage temp={1} />
+          </Route>
+          <Route exact path='/preview/template-2'>
+            <PreviewPage temp={2} />
+          </Route>
+          <Route exact path='/preview/template-3'>
+            <PreviewPage temp={3} />
+          </Route>
+          <Route exact path='/preview/template-4'>
+            <PreviewPage temp={4} />
+          </Route>
+          <Route exact path='/preview/new-template'>
+            <PreviewPage temp={0} />
           </Route>
         </Switch>
       </Router>

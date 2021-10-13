@@ -14,7 +14,7 @@ export default function EditScreen({ temp }) {
     return (
         <>
             <NewAssetContext.Provider value={{newAssetState, newAssetCount, setNewAssetState, setNewAssetCount}}>
-                <HeaderEdit setWidth={setWidth} />
+                <HeaderEdit setWidth={setWidth} templateNum={temp}/>
                 <ContainerEdit defWidth={defWidth} templateNum={temp} overlayPresent={assetSelected} />
                 <FooterEdit setOverlay={setAssetSelected} />
             </NewAssetContext.Provider>
