@@ -37,7 +37,6 @@
   
   .box1 {
     background-color: white;
-    border: 3px;
     margin: 1px;
     height: 450px;
     width: 260px;
@@ -96,13 +95,12 @@
     background-color: #5249d8;
     color: white;
     font-size: 14px;
-    border: 1px solid #5249d8;
+    border: 10px solid #5249d8;
     border-radius: 20px;
     width: 60%;
     margin: 10px;
     justify-content: center;
     margin-left: 40px;
-    border-width: 10px;
   }
   .box2 {
     /* background: url(img/bgtestimonials2.jpg); */
@@ -185,12 +183,11 @@
     background-color: white;
     color: #00d4ff;
     font-size: 14px;
-    border: 1px solid white;
+    border: 10px solid white;
     border-radius: 20px;
     width: 60%;
     font-family: "Poppins", serif;
     margin: 10px;
-    border-width: 10px;
   }
   
   .center {
