@@ -29,7 +29,7 @@ export const Header01 = () => {
               </ul>
   
             </li>
-            <li><a className={`${Header01Css.line}`} href="#">services</a>
+            <li><a className={`${Header01Css.line}`} href={2}>services</a>
               <ul className={`${Header01Css['sub-menu']}`}>
                 <li><a className={`${Header01Css.pnt}`} href="static.html">Static Security</a></li>
                 <li><a className={`${Header01Css.pnt}`} href="mobile-patrolling.html">Mobile Patrolling</a></li>
@@ -46,7 +46,7 @@ export const Header01 = () => {
             <li><a className={`${Header01Css.line}`} href="contact.html">contact us</a></li>
       
          
-            <li><a className={`${Header01Css['contact-btn']}`} href="#"><span><i className="fas fa-phone-alt"></i></span> 020 7946 0020</a></li>
+            <li><a className={`${Header01Css['contact-btn']}`} href={2}><span><i className="fas fa-phone-alt"></i></span> 020 7946 0020</a></li>
           </ul>
         </div>
       </div>
