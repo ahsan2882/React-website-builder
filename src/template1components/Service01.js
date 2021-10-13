@@ -50,7 +50,7 @@ export const Service01 = () => {
         <div className={`${Service01Css['container-services']} ${Service01Css['fade-in']}`}>
           <div className={`${Service01Css['banner-img']}`}></div>
          
-            <img src={serv3} alt="profile image" className={`${Service01Css['profile-img']}`}
+            <img src={serv3} alt="profileImage" className={`${Service01Css['profile-img']}`}
           />
           <h1 className={`${Service01Css.name}`}>24/7 Surveillance</h1>
           <p className={`${Service01Css.description}`}>
