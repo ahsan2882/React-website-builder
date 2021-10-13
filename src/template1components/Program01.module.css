@@ -76,7 +76,7 @@ text-align: center;
 	top: 0%;
 	transform: translateX(-50%);
 	background-color: #00d4ff; 
-	border-radius: 0px 0px 10px 10px;
+	border-radius: 0 0 10px 10px;
 	display: none;
 	animation: bar 0.5s;
 }
