@@ -193,11 +193,6 @@ html {
     color: #000;
   }
   
-  .template1Header  nav .navbar .nav-links .menus li > .contact-btn {
-    background-color: #00d4ff;
-    color: white;
-  }
-  
   .template1Header  nav .navbar .nav-links .menus li > .contact-btn:hover {
     box-shadow: 0 0 0 4em #00d4ff inset, 0 5px 15px rgb(0 0 0 / 10%);
     transform: translateY(-1px);
