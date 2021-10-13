@@ -69,7 +69,7 @@ export const Header01 = () => {
             </p>
           </div>
 
-          <a className={`${Header01Css.btna}`} href="#">DISCOVER MORE</a>
+          <a className={`${Header01Css.btna}`} href={2}>DISCOVER MORE</a>
         </div>
         <span className={`${Header01Css.right}`}>
           <img src={bgcover} alt="bg-cover" />
