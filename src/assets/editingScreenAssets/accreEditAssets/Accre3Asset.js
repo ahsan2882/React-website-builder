@@ -49,7 +49,7 @@ export default function Accre3Asset() {
         //         </div>
         //     </div>
         // </section>
-        <section className="py-28 px-0 w-full">
+        <section className="w-full">
             <div className={Accre4Css.containerMain}>
                 <div className="flex flex-col items-center py-10 px-0">
                     {/* <TextH2 classStyle={`${Accre4Css.accreMainH2} text-2xl`} text="we are verified" /> */}
