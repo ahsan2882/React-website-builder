@@ -83,13 +83,13 @@
       padding: 36px;
     }
     /* Clear floats after the columns */
-    .row-foot:after {
+    /* .row-foot:after {
        display: flex;
     
      content: "";
      display: table;
      clear: both;
-    }
+    } */
     #hh1
 {
    
@@ -115,7 +115,7 @@
      display: flex;
   
    content: "";
-   display: table;
+   /* display: table; */
    clear: both;
   }
 .footer-bottom span {
