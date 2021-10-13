@@ -121,11 +121,6 @@ html {
     color: white;
     padding: 13px 12px;
   }
-  
-  .template1Header  nav .navbar .nav-links .menus li > .contact-btn:hover {
-    box-shadow: 0 0 0 4em #00d4ff inset, 0 5px 15px rgb(0 0 0 / 10%);
-    transform: translateY(-1px);
-  }
   .template1Header  .navbar .nav-links .menus .sub-menu {
     position: absolute;
     top: 66px;
