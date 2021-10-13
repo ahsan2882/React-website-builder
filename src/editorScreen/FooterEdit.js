@@ -404,6 +404,7 @@ export default function FooterEdit({ setOverlay }) {
             >
                 <ul className={`${FooterEditCss.testimonialMenu}`}>
                     <li><button onClick={() => { dispatch({ type: 'Accreditation2'})}}><img src={accreAss1} alt="Accre Asset 2" className={`${FooterEditCss.assetImages}`} /></button></li>
+                    {/* <li><div style={{ "border":`1px solid black`}}><Accre2Asset /></div></li> */}
                     <li><button onClick={() => { dispatch({ type: 'Accreditation3' }) }}><img src={accreAss3} alt="Accre Asset 3" className={`${FooterEditCss.assetImages}`} /></button></li>
                     <li><button><img src={accreAss4} alt="Accre Asset 4" className={`${FooterEditCss.assetImages}`} /></button></li>
                     <li><button onClick={() => { dispatch({ type: 'Accreditation1' }) }}><img src={accreAss2} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} /></button></li>
