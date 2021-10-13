@@ -203,7 +203,7 @@ html {
     .template1Header    nav .navbar {
       max-width: 100%;
       padding: 0 25px;
-      margin: 10px 10px;
+      margin: 10px;
     }
     .template1Header   nav .navbar .nav-links {
       display: block;
