@@ -1,5 +1,7 @@
 import React from 'react'
-import Accreditation3Css from '../../../template3components/Accreditation3.module.css'
+import { useDrag } from 'react-dnd'
+import Accreditation3Css from './Accre2Asset.module.css'
+import { ItemTypes } from '../../../utils/items'
 import accre1 from '../../template3images/accre1.png'
 import accre2 from '../../template3images/accre2.png'
 import accre3 from '../../template3images/accre3.png'
@@ -9,9 +11,15 @@ import accre6 from '../../template3images/accre6.png'
 import accre7 from '../../template3images/accre7.png'
 
 export default function Accre2Asset() {
+    const [{ isDragging }, drag] = useDrag({
+            type: ItemTypes.SECTION,
+        collect: monitor => ({
+            isDragging: !!monitor.isDragging()
+        })
+    })
     return (
         <>
-            <div>
+            <div ref={ drag } style={ isDragging ? {"opacity": '0.5'} : {"opacity":'1'}}>
                 <section className={Accreditation3Css['heading-sec']}>
 
                     <div className={Accreditation3Css['heading-main-title']}>
@@ -21,7 +29,7 @@ export default function Accre2Asset() {
                         <h1>Accreditation</h1>
                     </div>
                 </section>
-                <section className={Accreditation3Css['Accreditations-sec']}>
+                <section className={Accreditation3Css['accreditations-sec']}>
                     <div className={Accreditation3Css['container-accre']}>
                         <div className={Accreditation3Css['accre-wrapper']}>
                             <div className={Accreditation3Css.arow}>
