@@ -155,7 +155,7 @@
     font-family: "Poppins", serif;
   
     display: flex;
-    justify-content: end;
+    justify-content:flex-end;
     margin-left: 77px;
     color: white;
   }

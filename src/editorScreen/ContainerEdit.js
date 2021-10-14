@@ -5,6 +5,7 @@ import Template1Page from '../template1components/Template1Page'
 import Template2Page from '../template2components/Template2Page'
 import Template3Page from '../template3components/Template3Page'
 import EmptyTemplate from '../editorScreen/EmptyTemplate'
+import MediaQuery from 'react-responsive'
 
 
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent}) {
@@ -32,9 +33,10 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent}) 
         default:
             component = <EmptyTemplate/>
     }
-    
+ 
     return (
         <>
+           <MediaQuery minWidth={600}>
             {overlay ? <div style={{"background":`rgba(0,0,0,0.5)`}} className={ContainerEditCss.overlay}></div>:null}
             <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
@@ -50,6 +52,8 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent}) 
                         {component}
                     </div>}
             </section>
+            </MediaQuery>
         </>
+        
     );
 }
