@@ -43,7 +43,7 @@ import testimonialAss1 from '../assets/editingScreenAssets/testimonialEditAssets
 import testimonialAss2 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial2.png'
 import testimonialAss3 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial3.png'
 import testimonialAss4 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial4.JPG'
-// import accreAss1 from '../assets/editingScreenAssets/accreEditAssets/accreditation1.JPG'
+import accreAss1 from '../assets/editingScreenAssets/accreEditAssets/accreditation1.JPG'
 import accreAss2 from '../assets/editingScreenAssets/accreEditAssets/accreditation2.JPG'
 import accreAss3 from '../assets/editingScreenAssets/accreEditAssets/accreditation3.JPG'
 import accreAss4 from '../assets/editingScreenAssets/accreEditAssets/accreditation4.JPG'
@@ -403,8 +403,8 @@ export default function FooterEdit({ setOverlay }) {
                 onMouseLeave={() => setAccreState(false)}
             >
                 <ul className={`${FooterEditCss.testimonialMenu}`}>
-                    {/* <li><button onClick={() => { dispatch({ type: 'Accreditation2'})}}><img src={accreAss1} alt="Accre Asset 2" className={`${FooterEditCss.assetImages}`} /></button></li> */}
-                    <li><div style={{ "border":`1px solid black`}}><Accre2Asset /></div></li>
+                    <li><button onClick={() => { dispatch({ type: 'Accreditation2'})}}><img src={accreAss1} alt="Accre Asset 2" className={`${FooterEditCss.assetImages}`} /></button></li>
+                    {/* <li><div style={{ "border":`1px solid black`}}><Accre2Asset /></div></li> */}
                     <li><button onClick={() => { dispatch({ type: 'Accreditation3' }) }}><img src={accreAss3} alt="Accre Asset 3" className={`${FooterEditCss.assetImages}`} /></button></li>
                     <li><button><img src={accreAss4} alt="Accre Asset 4" className={`${FooterEditCss.assetImages}`} /></button></li>
                     <li><button onClick={() => { dispatch({ type: 'Accreditation1' }) }}><img src={accreAss2} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} /></button></li>
