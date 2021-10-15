@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, { useState } from 'react'
 import LoginPageCss from './LoginPage.module.css';
 import loginBackground from '../assets/loginPageAssets/background-2.svg'
 import { Link } from 'react-router-dom';
@@ -12,9 +12,9 @@ export const LoginPage = () => {
   const userPassword = 'demo123';
   const submitForm = (e) => {
     e.preventDefault()
-    if(email===userEmail && password===userPassword){
+    if (email === userEmail && password === userPassword) {
       setAuth(true);
-    } else{
+    } else {
       setAuth(false);
       alert('Wrong username and password');
     }
@@ -24,16 +24,21 @@ export const LoginPage = () => {
     <div className={LoginPageCss.bodyWrapper}>
       <div className={LoginPageCss.body} style={{ "background": `url(${loginBackground}) no-repeat center/cover` }}>
         <form onSubmit={submitForm}>
-   
-        <input type="email" name="Email" autoComplete="off" required value={email}
-              onChange={(e) => setEmail(e.target.value)} placeholder="Email"/> 
-        <input type="password" placeholder="Password" name="Email" autoComplete="off" required value={password}
-              onChange={(e) => setPassword(e.target.value)}/>
+
+          <input type="email" name="Email" autoComplete="off" required value={email}
+            onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+          <input type="password" placeholder="Password" name="Email" autoComplete="off" required value={password}
+            onChange={(e) => setPassword(e.target.value)} />
           {/* <Link to='/select-template' className={LoginPageCss.button}> Login   </Link> */}
           {auth ? <Link to='/select-template'><button type="submit" className={LoginPageCss.button}>Login</button></Link> : <button type="submit" className={LoginPageCss.button}>Login</button>}
+          <div className="flex justify-center text-white  hover:text-gray-900  ">
+           <Link to ='/signup'> <button type="submit">Create Account?</button></Link>
+          </div>
         </form>
       </div>
     </div>
+
+    
   )
 }
 
@@ -49,7 +54,7 @@ export const LoginPage = () => {
 //     const [password, setPassword] = useState("");
 //     return (
 //       <div>
-        
+
 //       </div>
 //     )
 //   }

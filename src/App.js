@@ -8,6 +8,7 @@ import PageSelectionScreen from './myComponents/PageSelectionScreen';
 import PreviewPage from './myComponents/PreviewPage'
 import {LoginPage} from './loginPage/LoginPage'
 import { Sugar } from 'react-preloaders2';
+import Signup from './loginPage/Signup';
 
 
 export default function App() {
@@ -55,6 +56,9 @@ export default function App() {
           </Route>
           <Route exact path='/preview/new-template'>
             <PreviewPage temp={0} />
+          </Route>
+          <Route exact path='/signup'>
+            <Signup/>
           </Route>
         </Switch>
       </Router>
