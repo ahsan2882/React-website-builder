@@ -412,7 +412,7 @@ export default function FooterEdit({ setOverlay }) {
                 onMouseLeave={() => setAccreState(false)}
             >
                 <ul className={`${FooterEditCss.testimonialMenu}`}>
-                    <li><img src={accreAss1} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} ref={drag} style={isDragging ? { "cursor": "copy" } : { "cursor": "pointer" }} onMouseDown={() => {setAccreState(false)} }/></li>
+                    <li><img src={accreAss1} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} ref={drag} style={isDragging ? { "cursor": "copy" } : { "cursor": "pointer" }} onMouseDown={ () => {setAccreState(false)}}/></li>
                     {/* <li><div style={{ "border":`1px solid black`}}><Accre2Asset /></div></li> */}
                     <li><button onClick={() => { dispatch({ type: 'Accreditation3' }) }}><img src={accreAss3} alt="Accre Asset 3" className={`${FooterEditCss.assetImages}`} /></button></li>
                     <li><button><img src={accreAss4} alt="Accre Asset 4" className={`${FooterEditCss.assetImages}`} /></button></li>
