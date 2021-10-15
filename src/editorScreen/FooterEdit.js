@@ -53,11 +53,20 @@ import sliderAss3 from '../assets/editingScreenAssets/sliderEditAssets/slider3.J
 import sliderAss4 from '../assets/editingScreenAssets/sliderEditAssets/slider4.JPG'
 import sliderAss5 from '../assets/editingScreenAssets/sliderEditAssets/slider5.JPG'
 import Accre3Asset from '../assets/editingScreenAssets/accreEditAssets/Accre3Asset';
+import { useDrag } from 'react-dnd'
 import Accre2Asset from '../assets/editingScreenAssets/accreEditAssets/Accre2Asset';
+import { ItemTypes } from '../utils/items'
 import { NewAssetContext } from './EditScreen'
 
 
 export default function FooterEdit({ setOverlay }) {
+
+    const [{ isDragging }, drag] = useDrag({
+            type: ItemTypes.SECTION,
+        collect: monitor => ({
+            isDragging: !!monitor.isDragging()
+        })
+    })
     const [isClicked, setIsClicked] = useState(false);
     const onClicked = () => setIsClicked((astate) => !astate);
     useEffect(() => {
@@ -403,11 +412,11 @@ export default function FooterEdit({ setOverlay }) {
                 onMouseLeave={() => setAccreState(false)}
             >
                 <ul className={`${FooterEditCss.testimonialMenu}`}>
-                    <li><button onClick={() => { dispatch({ type: 'Accreditation2'})}}><img src={accreAss1} alt="Accre Asset 2" className={`${FooterEditCss.assetImages}`} /></button></li>
+                    <li><img src={accreAss1} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} ref={drag} style={isDragging ? { "cursor": "copy" } : { "cursor": "pointer" }} onMouseDown={() => {setAccreState(false)} }/></li>
                     {/* <li><div style={{ "border":`1px solid black`}}><Accre2Asset /></div></li> */}
                     <li><button onClick={() => { dispatch({ type: 'Accreditation3' }) }}><img src={accreAss3} alt="Accre Asset 3" className={`${FooterEditCss.assetImages}`} /></button></li>
                     <li><button><img src={accreAss4} alt="Accre Asset 4" className={`${FooterEditCss.assetImages}`} /></button></li>
-                    <li><button onClick={() => { dispatch({ type: 'Accreditation1' }) }}><img src={accreAss2} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} /></button></li>
+                    <li><button onClick={() => { dispatch({ type: 'Accreditation2' }) }}><img src={accreAss2} alt="Accre Asset 1" className={`${FooterEditCss.assetImages}`} /></button></li>
                 </ul>
             </div>
             <div className={`${FooterEditCss.assetList}`}
