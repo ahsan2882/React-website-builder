@@ -5,9 +5,20 @@ import Template1Page from '../template1components/Template1Page'
 import Template2Page from '../template2components/Template2Page'
 import Template3Page from '../template3components/Template3Page'
 import EmptyTemplate from '../editorScreen/EmptyTemplate'
+import { useDrop } from 'react-dnd'
+import { ItemTypes } from '../utils/items'
 
 
-export default function ContainerEdit({ defWidth, templateNum, overlayPresent}) {
+export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
+    const [{ isOver }, drop] = useDrop({
+        accept: ItemTypes.SECTION,
+        drop: (item, monitor) => {
+            
+        },
+        collect: monitor =>  ({
+            isOver: !!monitor.isOver()
+        })
+    })
     window.resizeTo(defWidth, window.innerHeight);
     const temp = templateNum;
     const overlay = overlayPresent;
@@ -35,8 +46,8 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent}) 
     
     return (
         <>
-            {overlay ? <div style={{"background":`rgba(0,0,0,0.5)`}} className={ContainerEditCss.overlay}></div>:null}
-            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`}>
+            {/* {(isOver ? <div style={{ "background": `rgba(0,0,0,0.5)` }} className={ContainerEditCss.overlay}></div> : null)} */}
+            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} ref={drop} style={isOver ? { "background": `rgba(0,0,0,0.5)`} : null}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
