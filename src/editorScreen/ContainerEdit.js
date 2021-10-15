@@ -7,16 +7,20 @@ import Template3Page from '../template3components/Template3Page'
 import EmptyTemplate from '../editorScreen/EmptyTemplate'
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
+import Accre2Asset from '../assets/editingScreenAssets/accreEditAssets/Accre2Asset'
 
 
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
-    const [{ isOver }, drop] = useDrop({
+    let children = [];
+    // children.push(<img src="https://imaging.nikon.com/lineup/dslr/df/img/sample/img_01.jpg" alt="Scenery"/>)
+    const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
-        drop: (item, monitor) => {
-            
+        drop: () => {
+            children.push(<Accre2Asset/>)
+            console.log(children)
         },
         collect: monitor =>  ({
-            isOver: !!monitor.isOver()
+            canDrop: !!monitor.canDrop()
         })
     })
     window.resizeTo(defWidth, window.innerHeight);
@@ -46,8 +50,8 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     
     return (
         <>
-            {/* {(isOver ? <div style={{ "background": `rgba(0,0,0,0.5)` }} className={ContainerEditCss.overlay}></div> : null)} */}
-            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} ref={drop} style={isOver ? { "background": `rgba(0,0,0,0.5)`} : null}>
+            {/* {(canDrop ? <div style={{ "background": `rgba(0,0,0,0.5)` }} className={ContainerEditCss.overlay}></div> : null)} */}
+            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)`} : null}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
@@ -55,7 +59,8 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                 </div>
                 {temp === 0 ?
                     <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto overflow-hidden`}>
-                        <EmptyTemplate/>
+                        {/* <EmptyTemplate/> */}
+                        {children}
                     </div>
                     : <div className={`${ContainerEditCss.editing} mx-auto bg-gray-200 overflow-hidden`}>
                         {component}
