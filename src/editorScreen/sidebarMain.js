@@ -53,46 +53,57 @@ import sliderAss5 from '../assets/editingScreenAssets/sliderEditAssets/slider5.J
 export const sidebarAssets = [
     {
         assetName: 'navigation',
-        assets: [ navAss1, navAss2, navAss3, navAss4, navAss5]
+        assets: [
+            { imageName: navAss1, id: "nav1" },
+            { imageName: navAss2, id: "nav2" },
+            { imageName: navAss3, id: "nav3" },
+            { imageName: navAss4, id: "nav4" },
+            { imageName: navAss5, id: "nav5" }
+        ]
     },
-    {
-        assetName:'header',
-        assets: [ heroAss1, heroAss2, heroAss3, heroAss4, heroAss5]
-    },
-    {
-        assetName:'footer',
-        assets: [ footerAss1, footerAss2, footerAss3, footerAss4 ]
-    },
-    {
-        assetName:'testimonials',
-        assets: [ testimonialAss1, testimonialAss2, testimonialAss3, testimonialAss4 ]
-    },
-    {
-        assetName:'FAQs',
-        assets: [ faqsAss1, faqsAss2, faqsAss3, faqsAss4 ]
-    },
-    {
-        assetName:'contact',
-        assets: [ contactusAss1, contactusAss2, contactusAss3, contactusAss4, contactusAss5 ]
-    },
-    {
-        assetName: 'social icons',
-        assets: [ socialAss1, socialAss2, socialAss3 ]
-    },
-    {
-        assetName: 'sliders',
-        assets: [ sliderAss1, sliderAss2, sliderAss3, sliderAss4, sliderAss5 ]
-    },
-    {
-        assetName: 'pricing',
-        assets: [ pricingAss1, pricingAss3, pricingAss4, pricingAss5, pricingAss6 ]
-    },
-    {
-        assetName: 'services',
-        assets: [ serviceAss2, serviceAss3, serviceAss4, serviceAss5, serviceAss6 ]
-    },
+    // {
+    //     assetName:'header',
+    //     assets: [ heroAss1, heroAss2, heroAss3, heroAss4, heroAss5]
+    // },
+    // {
+    //     assetName:'footer',
+    //     assets: [ footerAss1, footerAss2, footerAss3, footerAss4 ]
+    // },
+    // {
+    //     assetName:'testimonials',
+    //     assets: [ testimonialAss1, testimonialAss2, testimonialAss3, testimonialAss4 ]
+    // },
+    // {
+    //     assetName:'FAQs',
+    //     assets: [ faqsAss1, faqsAss2, faqsAss3, faqsAss4 ]
+    // },
+    // {
+    //     assetName:'contact',
+    //     assets: [ contactusAss1, contactusAss2, contactusAss3, contactusAss4, contactusAss5 ]
+    // },
+    // {
+    //     assetName: 'social icons',
+    //     assets: [ socialAss1, socialAss2, socialAss3 ]
+    // },
+    // {
+    //     assetName: 'sliders',
+    //     assets: [ sliderAss1, sliderAss2, sliderAss3, sliderAss4, sliderAss5 ]
+    // },
+    // {
+    //     assetName: 'pricing',
+    //     assets: [ pricingAss1, pricingAss3, pricingAss4, pricingAss5, pricingAss6 ]
+    // },
+    // {
+    //     assetName: 'services',
+    //     assets: [ serviceAss2, serviceAss3, serviceAss4, serviceAss5, serviceAss6 ]
+    // },
     {
         assetName: 'accreditation',
-        assets: [ accreAss1, accreAss2, accreAss3, accreAss4 ]
+        assets: [
+            { imageName: accreAss1, id: "accre1" },
+            { imageName: accreAss2, id: "accre2" },
+            { imageName: accreAss3, id: "accre3" },
+            { imageName: accreAss4, id: "accre4" },
+         ]
     },
 ]
