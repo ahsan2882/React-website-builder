@@ -7,7 +7,7 @@ import Template3Page from '../template3components/Template3Page'
 import EmptyTemplate from '../editorScreen/EmptyTemplate'
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
-import Accre2Asset from '../assets/editingScreenAssets/accreEditAssets/Accre2Asset'
+import { assetObject } from './assetCode'
 
 
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
@@ -17,9 +17,9 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
-            let items = monitor.getItem()
-            console.log(items)
-            setUpdateChildren([...updateChildren, <Accre2Asset/>])
+            console.log(item)
+            let [keys, values] = Object.entries(item).map(([key, value]) => { key.toString(); value.toString()} )
+            setUpdateChildren([...updateChildren,])
         },
         collect: monitor =>  ({
             canDrop: !!monitor.canDrop()
@@ -35,7 +35,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     let component;
     switch(temp){
         case 1:
-            component = <Template1Page id={ "1"}/>
+            component = <Template1Page/>
             break;
         case 2: 
             component = <Template2Page/>
