@@ -10,11 +10,12 @@
 }
 
 .navToggle {
+  
     position: fixed;
     bottom: 2rem;
     left: 2rem;
     z-index: 25;
-    transition: all 0.25s ease;
+    transition: all 0.10s ease;
 }
 
 .navToggle .open {
@@ -22,39 +23,52 @@
 }
 .mainNav {
     position: fixed;
-    top: 4rem;
+    top: 6.2rem;
     left: 0;
-    width: 9.5vw;
+    width: 13.5vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: rgb(46, 46, 46); 
     z-index: 23;
     transform: translateX(-100%);
-    transition: all 0.25s ease;
+    transition: all 0.15s ease;
     overflow-y: hidden;
     padding-top: 2rem;
-    box-shadow: 0px 10px 20px 10px #DFEBEE;
+    border-top-right-radius: 20px;
+  
 }
+
 .mainNavText{
-    transition: all 0.6s ease;
+    transition: all 0.0s ease-in-out;
+    color:white;
+  
 }
 .mainNav.open {
     transform: translateX(0%);
 }
 
 .mainNav .mainNavLink > button {
-    padding-left: 1rem;
+    padding-left: 5rem;
     text-transform: capitalize;
     font-family: 'Montserrat';
+   
 }
 
 .mainNav .mainNavLink:hover {
-    background-color: #9fe1ff;
+    background-color: #474747;
+    margin: 0 15px;
+    border-radius: 10px;
+   
 }
 
 .mainNavLink:hover .mainNavText {
-    transform: translateX(1rem);
+    transform: translateX(0.0rem);
+ 
 }
-
+.mainNav .mainNavLink {
+    display: block;
+    padding: 0.21875rem 0;
+    text-transform: capitalize;
+  }
 .assetList {
     position: fixed;
     top: 4rem;
@@ -65,8 +79,8 @@
     z-index: 10;
     padding-top: 3rem;
     padding-bottom: 2rem;
-    transform: translateX(-200%);
-    transition: all 0.5s ease;
+    transform: translateX(-300%);
+    transition: all 1.5s ease;
     overflow-y: scroll;
 }
 .assetList > ul{
@@ -81,7 +95,6 @@
     border: 1px solid transparent;
     margin: 0.8rem;
     width: 42vw;
-    /* margin: 1rem 0; */
     height: auto;
 }
 .assetImages:hover{

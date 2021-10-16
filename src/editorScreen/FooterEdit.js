@@ -293,7 +293,8 @@ export default function FooterEdit({ setOverlay }) {
 
     return (
         <>
-            <button className={`fixed left-8 bottom-4 flex justify-center items-center h-12 w-12 rounded-full ${FooterEditCss['navToggle']}`} onClick={onClicked}>
+       
+            <button className={`fixed left-8 bottom-4 flex justify-center items-center h-12 w-12 rounded-full  ${FooterEditCss['navToggle']}`} onClick={onClicked}>
                 {isClicked ? <i className={`fas fa-times  py-3 px-4 text-white bg-red-500 rounded-full flex justify-center items-center ${FooterEditCss['i-circle']}`}></i> : <i className={`fas fa-times py-3 px-4 text-white bg-BL-600 rounded-full flex justify-center items-center ${FooterEditCss['i-circle']} ${FooterEditCss.open}`}></i>}
             </button>
             <nav>
@@ -302,7 +303,7 @@ export default function FooterEdit({ setOverlay }) {
                         ? { transform: "translateX(0)" }
                         : null
                     }>
-                    <li className={`${FooterEditCss.mainNavLink}`}>
+                    <li className= {`${FooterEditCss.mainNavLink}`}>
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={navClicked}>Navigation</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink} `}>
@@ -318,7 +319,7 @@ export default function FooterEdit({ setOverlay }) {
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={faqClicked}>FAQs</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
-                        <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={contactClicked}>Contact</button>
+                       <button  className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={contactClicked}>Contact</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={socialClicked}>Social icons</button>
