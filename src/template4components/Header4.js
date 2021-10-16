@@ -1,7 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
 import Header4Css from './Header4.module.css'
-import MediaQuery from 'react-responsive'
 
 
 export default function Header4() {
