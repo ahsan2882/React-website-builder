@@ -17,8 +17,9 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
-            // console.log(item)
-            setUpdateChildren([...updateChildren, <Accre2Asset key={ (Math.random() * 100).toFixed(0)}/>])
+            let items = monitor.getItem()
+            console.log(items)
+            setUpdateChildren([...updateChildren, <Accre2Asset/>])
         },
         collect: monitor =>  ({
             canDrop: !!monitor.canDrop()
@@ -29,12 +30,12 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
 
     useEffect(() => {
         console.log("use effect ran:   ", defWidth);
-        console.log(updateChildren)
+        // console.log(updateChildren)
     }, [defWidth, updateChildren]);
     let component;
     switch(temp){
         case 1:
-            component = <Template1Page/>
+            component = <Template1Page id={ "1"}/>
             break;
         case 2: 
             component = <Template2Page/>
@@ -59,11 +60,11 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
                 {temp === 0 ?
-                    <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto`}>
+                    <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto overflow-y-auto`}>
                         {/* <EmptyTemplate/> */}
                         {updateChildren}
                     </div>
-                    : <div className={`${ContainerEditCss.editing} mx-auto bg-gray-200`}>
+                    : <div className={`${ContainerEditCss.editing} mx-auto bg-gray-200 overflow-y-auto`}>
                         {component}
                     </div>}
             </section>
