@@ -61,42 +61,95 @@ export const sidebarAssets = [
             { imageName: navAss5, id: "nav5" }
         ]
     },
-    // {
-    //     assetName:'header',
-    //     assets: [ heroAss1, heroAss2, heroAss3, heroAss4, heroAss5]
-    // },
-    // {
-    //     assetName:'footer',
-    //     assets: [ footerAss1, footerAss2, footerAss3, footerAss4 ]
-    // },
-    // {
-    //     assetName:'testimonials',
-    //     assets: [ testimonialAss1, testimonialAss2, testimonialAss3, testimonialAss4 ]
-    // },
-    // {
-    //     assetName:'FAQs',
-    //     assets: [ faqsAss1, faqsAss2, faqsAss3, faqsAss4 ]
-    // },
-    // {
-    //     assetName:'contact',
-    //     assets: [ contactusAss1, contactusAss2, contactusAss3, contactusAss4, contactusAss5 ]
-    // },
-    // {
-    //     assetName: 'social icons',
-    //     assets: [ socialAss1, socialAss2, socialAss3 ]
-    // },
-    // {
-    //     assetName: 'sliders',
-    //     assets: [ sliderAss1, sliderAss2, sliderAss3, sliderAss4, sliderAss5 ]
-    // },
-    // {
-    //     assetName: 'pricing',
-    //     assets: [ pricingAss1, pricingAss3, pricingAss4, pricingAss5, pricingAss6 ]
-    // },
-    // {
-    //     assetName: 'services',
-    //     assets: [ serviceAss2, serviceAss3, serviceAss4, serviceAss5, serviceAss6 ]
-    // },
+    {
+        assetName:'header',
+        assets: [   
+           { heroAss1: heroAss1, id: "hero1" },
+           { heroAss2: heroAss2, id: "hero2" },
+           { heroAss3: heroAss3, id: "hero3" },
+           { heroAss4: heroAss4, id: "hero4" },
+           { heroAss5: heroAss5, id: "hero5" },
+        ]
+    },
+    {
+        assetName:'footer',
+        assets: [    
+            {footerAss1: footerAss1, id:"footer1"},
+            {footerAss2: footerAss2, id:"footer2"},
+            {footerAss3: footerAss3, id:"footer3"},
+            {footerAss4: footerAss4, id:"footer4"},   
+            ]
+    },
+    {
+        assetName:'testimonials',
+        assets: [      
+            {testimonialAss1: testimonialAss1, id:"testimonials1"},
+            {testimonialAss2: testimonialAss2, id:"testimonials1"},
+            {testimonialAss3: testimonialAss3, id:"testimonials1"},
+            {testimonialAss4: testimonialAss4, id:"testimonials1"}, 
+        ]
+    },
+    {
+        assetName:'FAQs',
+        assets: [ 
+            
+            {faqsAss1:  faqsAss1, id:"faqs1"},
+            {faqsAss2:  faqsAss2, id:"faqs2"},
+            {faqsAss3:  faqsAss3, id:"faqs3"},
+            {faqsAss4:  faqsAss4, id:"faqs4"},
+            ]
+    },
+    {
+        assetName:'contact',
+        assets: [ 
+            
+            {contactusAss1: contactusAss1, id:"contact1"},
+            {contactusAss2: contactusAss2, id:"contact2"}, 
+            {contactusAss3: contactusAss3, id:"contact3"}, 
+            {contactusAss4: contactusAss4, id:"contact4"},
+            {contactusAss5: contactusAss5, id:"contact5"},   
+        ]
+    },
+    {
+        assetName: 'social icons',
+        assets: [ 
+            {socialAss1: socialAss1, id:"social1"},
+            {socialAss2: socialAss2, id:"social2"},
+            {socialAss3: socialAss3, id:"social3"}, 
+         ]
+    },
+    {
+        assetName: 'sliders',
+        assets: [ 
+            {sliderAss1: sliderAss1, id:"slider1"},
+            {sliderAss2: sliderAss2, id:"slider2"},
+            {sliderAss3: sliderAss3, id:"slider3"},
+            {sliderAss4: sliderAss4, id:"slider4"},
+            {sliderAss5: sliderAss5, id:"slider5"},
+         ]
+    },
+    {
+        assetName: 'pricing',
+        assets: [
+            
+            {pricingAss1: pricingAss1, id:"pricing1"},
+            {pricingAss3: pricingAss3, id:"pricing3"},
+            {pricingAss4: pricingAss4, id:"pricing4"},
+            {pricingAss4: pricingAss5, id:"pricing5"},
+            {pricingAss6: pricingAss6, id:"pricing6"},
+        ]
+    },
+    {
+        assetName: 'services',
+        assets: [ 
+            
+            {serviceAss2: serviceAss2, id:"service2"},
+            {serviceAss3: serviceAss3, id:"service2"},
+            {serviceAss4: serviceAss4, id:"service2"},
+            {serviceAss5: serviceAss5, id:"service2"},
+            {serviceAss6: serviceAss6, id:"service2"},
+        ]
+    },
     {
         assetName: 'accreditation',
         assets: [
