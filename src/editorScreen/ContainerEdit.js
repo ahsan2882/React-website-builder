@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import ContainerEditCss from './ContainerEdit.module.css'
 import Template4Page from '../template4components/Template4Page'
 import Template1Page from '../template1components/Template1Page'
@@ -11,13 +11,14 @@ import Accre2Asset from '../assets/editingScreenAssets/accreEditAssets/Accre2Ass
 
 
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
-    let children = [];
+    // let children = [];
+    const [updateChildren, setUpdateChildren] = useState([])
     // children.push(<img src="https://imaging.nikon.com/lineup/dslr/df/img/sample/img_01.jpg" alt="Scenery"/>)
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
-        drop: () => {
-            children.push(<Accre2Asset/>)
-            console.log(children)
+        drop: (item, monitor) => {
+            // console.log(item)
+            setUpdateChildren([...updateChildren, <Accre2Asset key={ (Math.random() * 100).toFixed(0)}/>])
         },
         collect: monitor =>  ({
             canDrop: !!monitor.canDrop()
@@ -25,11 +26,11 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     })
     window.resizeTo(defWidth, window.innerHeight);
     const temp = templateNum;
-    const overlay = overlayPresent;
 
     useEffect(() => {
         console.log("use effect ran:   ", defWidth);
-    }, [defWidth]);
+        console.log(updateChildren)
+    }, [defWidth, updateChildren]);
     let component;
     switch(temp){
         case 1:
@@ -58,11 +59,11 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
                 {temp === 0 ?
-                    <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto overflow-hidden`}>
+                    <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto`}>
                         {/* <EmptyTemplate/> */}
-                        {children}
+                        {updateChildren}
                     </div>
-                    : <div className={`${ContainerEditCss.editing} mx-auto bg-gray-200 overflow-hidden`}>
+                    : <div className={`${ContainerEditCss.editing} mx-auto bg-gray-200`}>
                         {component}
                     </div>}
             </section>
