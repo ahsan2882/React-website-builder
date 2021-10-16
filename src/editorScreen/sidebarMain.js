@@ -50,94 +50,49 @@ import sliderAss3 from '../assets/editingScreenAssets/sliderEditAssets/slider3.J
 import sliderAss4 from '../assets/editingScreenAssets/sliderEditAssets/slider4.JPG'
 import sliderAss5 from '../assets/editingScreenAssets/sliderEditAssets/slider5.JPG'
 
-export const sidebarMain = [
-    'navigation',
-    'header',
-    'footer',
-    'testimonials',
-    'FAQs',
-    'contact',
-    'social icons',
-    'sliders',
-    'pricing',
-    'services',
-    'accrediation'
-]
-
 export const sidebarAssets = [
     {
-        'navigation': [
-            {
-                'image': { navAss1 }
-            },
-            {
-                'image': { navAss2 }
-            },
-            {
-                'image': { navAss3 }
-            },
-            {
-                'image': { navAss4 }
-            },
-            {
-                'image': { navAss5 }
-            }
-        ]
+        assetName: 'navigation',
+        assets: [ navAss1, navAss2, navAss3, navAss4, navAss5]
     },
     {
-        'header': [
-            {
-                'image': { heroAss1 }
-            },
-            {
-                'image': { heroAss2 }
-            },
-            {
-                'image': { heroAss3 }
-            },
-            {
-                'image': { heroAss4 }
-            },
-            {
-                'image': { heroAss5 }
-            }
-        ]
+        assetName:'header',
+        assets: [ heroAss1, heroAss2, heroAss3, heroAss4, heroAss5]
     },
     {
-        'accreditation': [
-            {
-                'image': { accreAss1 }
-            },
-            {
-                'image': { accreAss2 }
-            },
-            {
-                'image': { accreAss3 }
-            },
-            {
-                'image': { accreAss4 }
-            }
-        ]
+        assetName:'footer',
+        assets: [ footerAss1, footerAss2, footerAss3, footerAss4 ]
     },
     {
-        'footer': [
-            {
-                'image': {footerAss1}
-            },
-            {
-                'image': { footerAss2 }
-            },
-            {
-                'image': { footerAss3 }
-            },
-            {
-                'image': { footerAss4 }
-            }
-        ]
+        assetName:'testimonials',
+        assets: [ testimonialAss1, testimonialAss2, testimonialAss3, testimonialAss4 ]
     },
     {
-        'testimonials': [
-            
-        ]
-    }
+        assetName:'FAQs',
+        assets: [ faqsAss1, faqsAss2, faqsAss3, faqsAss4 ]
+    },
+    {
+        assetName:'contact',
+        assets: [ contactusAss1, contactusAss2, contactusAss3, contactusAss4, contactusAss5 ]
+    },
+    {
+        assetName: 'social icons',
+        assets: [ socialAss1, socialAss2, socialAss3 ]
+    },
+    {
+        assetName: 'sliders',
+        assets: [ sliderAss1, sliderAss2, sliderAss3, sliderAss4, sliderAss5 ]
+    },
+    {
+        assetName: 'pricing',
+        assets: [ pricingAss1, pricingAss3, pricingAss4, pricingAss5, pricingAss6 ]
+    },
+    {
+        assetName: 'services',
+        assets: [ serviceAss2, serviceAss3, serviceAss4, serviceAss5, serviceAss6 ]
+    },
+    {
+        assetName: 'accreditation',
+        assets: [ accreAss1, accreAss2, accreAss3, accreAss4 ]
+    },
 ]
