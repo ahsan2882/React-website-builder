@@ -1,5 +1,6 @@
 /* eslint-disable no-lone-blocks */
 import React, { useState, useEffect, useReducer, useContext } from 'react'
+// import { sidebarAssets } from './sidebarMain'
 import FooterEditCss from './FooterEdit.module.css'
 import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/contactus5.PNG'
 import contactusAss1 from '../assets/editingScreenAssets/contactusEditAssets/contactus2.png'
@@ -299,6 +300,8 @@ export default function FooterEdit({ setOverlay }) {
         setNewAssetState(newAssetState);
         setNewAssetCount((count) => (count + 1))
     }, [setNewAssetState, newAssetState, setNewAssetCount]);
+    // const [assetList, setAssetList] = useState(false);
+    // const assetListClicked = () => setAssetList((astate) => !astate);
 
     return (
         <>
@@ -306,6 +309,10 @@ export default function FooterEdit({ setOverlay }) {
                 {isClicked ? <i className={`fas fa-times  py-3 px-4 text-white bg-red-500 rounded-full flex justify-center items-center ${FooterEditCss['i-circle']}`}></i> : <i className={`fas fa-times py-3 px-4 text-white bg-BL-600 rounded-full flex justify-center items-center ${FooterEditCss['i-circle']} ${FooterEditCss.open}`}></i>}
             </button>
             <nav>
+                {/* <ul className={FooterEditCss.mainNav} style={isClicked ? { transform: "translateX(0)" } : null }>
+                    {sidebarAssets.map((object) => <li className={`${FooterEditCss.mainNavLink}`}><button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={assetListClicked}>{ object.assetName }</button></li>)}
+                </ul> */}
+
                 <ul className={FooterEditCss.mainNav}
                     style={isClicked
                         ? { transform: "translateX(0)" }
@@ -320,7 +327,7 @@ export default function FooterEdit({ setOverlay }) {
                     <li className={`${FooterEditCss.mainNavLink}`}>
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={footerClicked}>Footer</button>
                     </li>
-                    <li className={`${FooterEditCss.mainNavLink}`} id="testimonialState">
+                    <li className={`${FooterEditCss.mainNavLink}`}>
                         <button className={`py-2 flex w-full ${FooterEditCss.mainNavText}`} onClick={testimonialClicked}>Testimonials</button>
                     </li>
                     <li className={`${FooterEditCss.mainNavLink}`}>
@@ -346,6 +353,11 @@ export default function FooterEdit({ setOverlay }) {
                     </li>
                 </ul>
             </nav>
+            {/* <div className={`${FooterEditCss.assetList}`} style={assetList ? { transform: "translateX(0%)" } : null} onMouseLeave={() => setAssetList(false)}>
+                <ul>
+                    {sidebarAssets.map((object) => object.assets.map((item) => <li><img src={ item } alt={`${object.assetName} Asset`} /></li>))}
+                </ul>
+            </div> */}
             <div className={`${FooterEditCss.assetList}`}
                 style={footerState
                     ? { transform: "translateX(0%)" }
@@ -510,3 +522,5 @@ export default function FooterEdit({ setOverlay }) {
         </>
     )
 }
+
+
