@@ -18,8 +18,9 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
             console.log(item)
-            let [keys, values] = Object.entries(item).map(([key, value]) => { key.toString(); value.toString()} )
-            setUpdateChildren([...updateChildren,])
+            let valueString = Object.values(item)[0];
+            console.log(valueString)
+            setUpdateChildren([...updateChildren, assetObject[valueString]])
         },
         collect: monitor =>  ({
             canDrop: !!monitor.canDrop()
