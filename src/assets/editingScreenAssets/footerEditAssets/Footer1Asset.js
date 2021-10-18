@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { Editor } from '@tinymce/tinymce-react';
 import logo from '../footerEditAssets/logo.png'
 
 export default function Footer1Asset() {
+    const editorRef = useRef(null);
     return (
         <>
             <footer className="text-gray-400 bg-blue-500 body-font">
@@ -13,61 +15,229 @@ export default function Footer1Asset() {
 
 
                         </button>
-                        <p className="mt-2 text-sm text-gray-900">For your personal safety</p>
+                        <p className="mt-2 text-sm text-gray-900">
+                            <Editor
+                                onInit={(evt, editor) => (editorRef.current = editor)}
+                                inline={true}
+                                key="footer1asset1"
+                                tinymceScriptSrc={
+                                    process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                }
+                                initialValue="For your personal safety"
+                                init={{
+                                    menubar: false,
+                                    toolbar:
+                                        "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                        "alignright alignjustify | fontselect",
+                                    fontsize_formats:
+                                        "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats:
+                                        "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                }}
+                            />
+                        </p>
                     </div>
                     <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">SERVICES</h2>
+                            <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">
+                                <Editor
+                                    onInit={(evt, editor) => (editorRef.current = editor)}
+                                    inline={true}
+                                    key="footer1asset2"
+                                    tinymceScriptSrc={
+                                        process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                    }
+                                    initialValue="SERVICES"
+                                    init={{
+                                        menubar: false,
+                                        toolbar:
+                                            "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                            "alignright alignjustify | fontselect",
+                                        fontsize_formats:
+                                            "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats:
+                                            "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                    }}
+                                />
+                            </h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <button className="text-white hover:text-gray-200">Mobile Petrolling</button>
+                                    <button className="text-white hover:text-gray-200">
+                                        <Editor
+                                            onInit={(evt, editor) => (editorRef.current = editor)}
+                                            inline={true}
+                                            key="footer1asset3"
+                                            tinymceScriptSrc={
+                                                process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                            }
+                                            initialValue="Mobile Petrolling"
+                                            init={{
+                                                menubar: false,
+                                                toolbar:
+                                                    "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                                    "alignright alignjustify | fontselect",
+                                                fontsize_formats:
+                                                    "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats:
+                                                    "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            }}
+                                        />
+                                    </button>
                                 </li>
                                 <li>
-                                    <button className="text-white hover:text-gray-200">Static Security</button>
+                                    <button className="text-white hover:text-gray-200">
+                                        <Editor
+                                            onInit={(evt, editor) => (editorRef.current = editor)}
+                                            inline={true}
+                                            key="footer1asset4"
+                                            tinymceScriptSrc={
+                                                process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                            }
+                                            initialValue="Static Security"
+                                            init={{
+                                                menubar: false,
+                                                toolbar:
+                                                    "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                                    "alignright alignjustify | fontselect",
+                                                fontsize_formats:
+                                                    "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats:
+                                                    "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            }}
+                                        />
+                                    </button>
                                 </li>
                                 <li>
-                                    <button className="text-white hover:text-gray-200">CCTV Monitoring</button>
+                                    <button className="text-white hover:text-gray-200">
+                                        <Editor
+                                            onInit={(evt, editor) => (editorRef.current = editor)}
+                                            inline={true}
+                                            key="footer1asset5"
+                                            tinymceScriptSrc={
+                                                process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                            }
+                                            initialValue="CCTV Monitoring"
+                                            init={{
+                                                menubar: false,
+                                                toolbar:
+                                                    "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                                    "alignright alignjustify | fontselect",
+                                                fontsize_formats:
+                                                    "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats:
+                                                    "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            }}
+                                        />
+                                    </button>
                                 </li>
 
                             </nav>
                         </div>
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">INFORMATION</h2>
+                            <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">
+                                <Editor
+                                    onInit={(evt, editor) => (editorRef.current = editor)}
+                                    inline={true}
+                                    key="footer1asset6"
+                                    tinymceScriptSrc={
+                                        process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                    }
+                                    initialValue="INFORMATION"
+                                    init={{
+                                        menubar: false,
+                                        toolbar:
+                                            "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                            "alignright alignjustify | fontselect",
+                                        fontsize_formats:
+                                            "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats:
+                                            "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                    }}
+                                />
+                            </h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <button className="text-white hover:text-gray-200">About</button>
+                                    <button className="text-white hover:text-gray-200">
+                                        <Editor
+                                            onInit={(evt, editor) => (editorRef.current = editor)}
+                                            inline={true}
+                                            key="footer1asset7"
+                                            tinymceScriptSrc={
+                                                process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                            }
+                                            initialValue="About"
+                                            init={{
+                                                menubar: false,
+                                                toolbar:
+                                                    "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                                    "alignright alignjustify | fontselect",
+                                                fontsize_formats:
+                                                    "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats:
+                                                    "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            }}
+                                        />
+                                    </button>
                                 </li>
                                 <li>
-                                    <button className="text-white hover:text-gray-200">Services</button>
+                                    <button className="text-white hover:text-gray-200">
+                                        <Editor
+                                            onInit={(evt, editor) => (editorRef.current = editor)}
+                                            inline={true}
+                                            key="footer1asset8"
+                                            tinymceScriptSrc={
+                                                process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                            }
+                                            initialValue="Services"
+                                            init={{
+                                                menubar: false,
+                                                toolbar:
+                                                    "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                                    "alignright alignjustify | fontselect",
+                                                fontsize_formats:
+                                                    "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats:
+                                                    "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            }}
+                                        />
+                                    </button>
                                 </li>
                                 <li>
-                                    <button className="text-white hover:text-gray-200">Sectors</button>
+                                    {/* <button className="text-white hover:text-gray-200">Sectors</button> */}
+                                    <button className="text-white hover:text-gray-200"></button>
                                 </li>
 
                             </nav>
                         </div>
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">LATEST NEWS</h2>
+                            {/* <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">LATEST NEWS</h2> */}
+                            <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3"></h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <button className="text-white hover:text-gray-200">CCTV Installation Tricks.</button>
+                                    {/* <button className="text-white hover:text-gray-200">CCTV Installation Tricks.</button> */}
+                                    <button className="text-white hover:text-gray-200"></button>
                                 </li>
                                 <li>
-                                    <button className="text-white hover:text-gray-200">How To Monitor Your Facility.</button>
+                                    {/* How To Monitor Your Facility. */}
+                                    <button className="text-white hover:text-gray-200"></button>
                                 </li>
                                 <li>
-                                    <button className="text-white hover:text-gray-200">Outdoor Security Process.</button>
+                                    {/* Outdoor Security Process. */}
+                                    <button className="text-white hover:text-gray-200"></button>
                                 </li>
                             </nav>
                         </div>
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">OUR PROGRAMS</h2>
+                            {/* OUR PROGRAMS */}
+                            <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3"></h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <button className="text-white hover:text-gray-200">Cultural Awareness Show</button>
+                                    {/* Cultural Awareness Show */}
+                                    <button className="text-white hover:text-gray-200"></button>
                                 </li>
                                 <li>
-                                    <button className="text-white hover:text-gray-200">Military Virtual Training</button>
+                                    
+                                    <button className="text-white hover:text-gray-200"></button>
                                 </li>
                                 <li>
                                     <button className="text-white hover:text-gray-200">Insider Threat Resilience</button>
