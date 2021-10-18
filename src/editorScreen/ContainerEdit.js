@@ -50,7 +50,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
         default:
             component = <EmptyTemplate/>
     }
-    
+ 
     return (
         <>
             {/* {(canDrop ? <div style={{ "background": `rgba(0,0,0,0.5)` }} className={ContainerEditCss.overlay}></div> : null)} */}
@@ -70,5 +70,6 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                     </div>}
             </section>
         </>
+        
     );
 }
