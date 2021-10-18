@@ -61,7 +61,7 @@
 }
 
 .mainNavLink:hover .mainNavText {
-    transform: translateX(0.0rem);
+    transform: translateX(0);
  
 }
 .mainNav .mainNavLink {
