@@ -1,5 +1,5 @@
 import React from 'react'
-import Accreditation3Css from '../../../template3components/Accreditation3.module.css'
+import Accreditation2Css from './Accre2Asset.module.css'
 import accre1 from '../../template3images/accre1.png'
 import accre2 from '../../template3images/accre2.png'
 import accre3 from '../../template3images/accre3.png'
@@ -12,44 +12,44 @@ export default function Accre2Asset() {
     return (
         <>
             <div>
-                <section className={Accreditation3Css['heading-sec']}>
+                <section className={Accreditation2Css['heading-sec']}>
 
-                    <div className={Accreditation3Css['heading-main-title']}>
-                        <div className={Accreditation3Css['sub-title']}>
+                    <div className={Accreditation2Css['heading-main-title']}>
+                        <div className={Accreditation2Css['sub-title']}>
                             <h3>We are Verified by Govt</h3>
                         </div>
                         <h1>Accreditation</h1>
                     </div>
                 </section>
-                <section className={Accreditation3Css['Accreditations-sec']}>
-                    <div className={Accreditation3Css['container-accre']}>
-                        <div className={Accreditation3Css['accre-wrapper']}>
-                            <div className={Accreditation3Css.arow}>
-                                <div className={Accreditation3Css['a-card']}>
+                <section className={Accreditation2Css['accreditations-sec']}>
+                    <div className={Accreditation2Css['container-accre']}>
+                        <div className={Accreditation2Css['accre-wrapper']}>
+                            <div className={Accreditation2Css.arow}>
+                                <div className={Accreditation2Css['a-card']}>
                                     <img src={accre1} alt="aacre1" />
 
                                 </div>
-                                <div className={Accreditation3Css['a-card']}>
+                                <div className={Accreditation2Css['a-card']}>
                                     <img src={accre2} alt="accre2" />
 
                                 </div>
-                                <div className={Accreditation3Css['a-card']}>
+                                <div className={Accreditation2Css['a-card']}>
                                     <img src={accre3} alt="accre3" />
 
                                 </div>
-                                <div className={Accreditation3Css['a-card']}>
+                                <div className={Accreditation2Css['a-card']}>
                                     <img src={accre4} alt="accre4" />
 
                                 </div>
-                                <div className={Accreditation3Css['a-card']}>
+                                <div className={Accreditation2Css['a-card']}>
                                     <img src={accre5} alt="accre5" />
 
                                 </div>
-                                <div className={Accreditation3Css['a-card']}>
+                                <div className={Accreditation2Css['a-card']}>
                                     <img src={accre6} alt="accre6" />
 
                                 </div>
-                                <div className={Accreditation3Css['a-card']}>
+                                <div className={Accreditation2Css['a-card']}>
                                     <img src={accre7} alt="accre7" />
 
                                 </div>

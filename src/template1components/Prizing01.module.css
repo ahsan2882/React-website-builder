@@ -67,7 +67,7 @@
   .small1 {
     font-size: 15px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-left: 77px;
     text-align: center;
     font-family: "Poppins", serif;
@@ -155,7 +155,7 @@
     font-family: "Poppins", serif;
   
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-left: 77px;
     color: white;
   }
@@ -214,7 +214,7 @@
     font-size: 15px;
     text-align: justify;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-left: 77px;
     font-family: "Poppins", serif;
   }
