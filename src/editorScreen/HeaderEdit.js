@@ -5,7 +5,26 @@ const IncNum = () => {
    alert("helloow worlds");
 }
 
-export default function Header() {
+export default function Header({ setWidth, templateNum }) {
+    let path = '';
+     if(templateNum === 1){
+        path = '/preview/template-1'
+     }
+     else if(templateNum === 2){
+         path = '/prevew/template-2'
+     }
+     else if (templateNum === 3)
+     {
+         path = '/preview/template-3'
+     }
+     else if (templateNum === 4)
+     {
+         path = '/preview/template-4'
+     }
+     else if (templateNum === 0)
+     {
+         path = '/preview/new-template'
+     }
     return (
 
         
@@ -37,8 +56,9 @@ export default function Header() {
                     <i className="far fa-save text-2xl"></i>
                     <h2> SAVE</h2>
                 </button>
-                <Link className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl" target='_blank' rel='noopener noreferrer' to='/preview'>
-                 
+                <Link className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl" target='_blank' rel='noopener noreferrer' to={path}>
+                    {/* <img src={previewIm} alt="Preview" className={`w-9 h-auto`} /> */}
+
                     <i className="far fa-eye text-2xl"></i>
                     <h2>PREVIEW</h2>
                 </Link>
