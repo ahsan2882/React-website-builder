@@ -18,7 +18,7 @@ export default function AboutUs4() {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='abouted1'
-                                initialValue="<h6>About Us</h6>"
+                                initialValue="<h6>About Us !</h6>"
                                 init={{
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
