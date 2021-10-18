@@ -9,18 +9,11 @@ import Blog4 from './Blog4';
 import Accreditation4 from './Accreditation4';
 import Footer4 from './Footer4';
 
-export default function template4Page() {
+export default function Template4Page() {
+    var template4Components = [<Header4 />, <HeroSection4 />, <AboutUs4 />, <Pricing4 />, <Services4 />, <OurGuards4 />, <Blog4 />, <Accreditation4 />, <Footer4 />]
     return (
         <>
-            <Header4/>
-            <HeroSection4/>
-            <AboutUs4/>
-            <Pricing4/>
-            <Services4/>
-            <OurGuards4/>
-            <Blog4/>
-            <Accreditation4/>
-            <Footer4/>
+            {template4Components}
         </>
     );
 }
