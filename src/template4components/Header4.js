@@ -2,9 +2,13 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
 import Header4Css from './Header4.module.css'
 
+
 export default function Header4() {
+
     const editorRef = useRef(null);
+
     return (
+     
         <header className={`${Header4Css.header} w-full`}>
             <section className={`flex justify-between items-center py-2 ${Header4Css.container1}`}>
                 <ul className={`list-none flex p-0 justify-between items-center ${Header4Css.contactHeader}`}>
@@ -93,5 +97,6 @@ export default function Header4() {
                 </ul>
             </section>
         </header>
+     
     );
 }

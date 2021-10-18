@@ -2,9 +2,13 @@ import React from 'react'
 import Header01Css from './Header01.module.css'
 import bgcover from '../assets/template1images/bghero.png'
 
+
+
 export const Header01 = () => {
+
   return (
       <>
+       
     <header className={`${Header01Css.template1Header}`}>
     <nav>
       <div className={`${Header01Css.navbar}`}>
@@ -18,14 +22,14 @@ export const Header01 = () => {
             <li><a className={`${Header01Css.line}`} href="index.html">home</a></li>
             <li><a className={`${Header01Css.line}`} href="about.html">about</a>
               <ul className={`${Header01Css['sub-menu']}`}>
-                <li><a className={`${Header01Css.pnt}`} href="about.html#OurVision">Our Vision</a></li>
-                <li><a className={`${Header01Css.pnt}`} href="about.html#OurExperience">Our Experience</a></li>
+          <li><a className={`${Header01Css.pnt}`} href="about.html#OurVision">Our Vision</a></li>
+               <li><a className={`${Header01Css.pnt}`} href="about.html#OurExperience">Our Experience</a></li>
                 <li><a className={`${Header01Css.pnt}`} href="about.html#OurAdvantages">Our Policies</a></li>
                 <li><a className={`${Header01Css.pnt}`} href="about.html#OurPricing">Our Prices</a></li>
                 <li><a className={`${Header01Css.pnt}`} href="about.html#OurPricing">Our Accreditations</a></li>
-                <li><a className={`${Header01Css.pnt}`} href="about.html#OurTeam">Our Team</a></li>
+                 <li><a className={`${Header01Css.pnt}`} href="about.html#OurTeam">Our Team</a></li>
                 <li><a className={`${Header01Css.pnt}`} href="about.html#OurPartners">Our Partners</a></li>
-  
+
               </ul>
   
             </li>
@@ -76,7 +80,7 @@ export const Header01 = () => {
         </span>
       </div>
     </section>
-
+    
   
 </>
   );
