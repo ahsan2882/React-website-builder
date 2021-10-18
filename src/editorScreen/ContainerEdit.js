@@ -61,7 +61,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
                 {temp === 0 ?
-                    <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto overflow-y-auto`}>
+                    <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`}>
                         {/* <EmptyTemplate/> */}
                         {updateChildren}
                     </div>
