@@ -1,9 +1,5 @@
 .editing {
     min-height: 80vh;
-    height: 100%;
-}
-.editing.empty{
-    min-height: 80vh;
     height: 20vh;
 }
 .editWrap {

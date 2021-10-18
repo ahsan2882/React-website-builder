@@ -7,7 +7,7 @@ import Template3Page from '../template3components/Template3Page'
 import EmptyTemplate from '../editorScreen/EmptyTemplate'
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
-import Accre2Asset from '../assets/editingScreenAssets/accreEditAssets/Accre2Asset'
+import { assetObject } from './assetCode'
 
 
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
@@ -17,9 +17,10 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
-            let items = monitor.getItem()
-            console.log(items)
-            setUpdateChildren([...updateChildren, <Accre2Asset/>])
+            console.log(item)
+            let valueString = Object.values(item)[0];
+            console.log(valueString)
+            setUpdateChildren([...updateChildren, assetObject[valueString]])
         },
         collect: monitor =>  ({
             canDrop: !!monitor.canDrop()
@@ -35,7 +36,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     let component;
     switch(temp){
         case 1:
-            component = <Template1Page id={ "1"}/>
+            component = <Template1Page/>
             break;
         case 2: 
             component = <Template2Page/>
@@ -60,7 +61,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
                 {temp === 0 ?
-                    <div className={`${ContainerEditCss.editing} ${ContainerEditCss.empty} mx-auto overflow-y-auto`}>
+                    <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`}>
                         {/* <EmptyTemplate/> */}
                         {updateChildren}
                     </div>
