@@ -1,8 +1,8 @@
 import contactusAss1 from '../assets/editingScreenAssets/contactusEditAssets/contactus1.png'
-import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/contactus2.png'
+import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/contactus2.PNG'
 import contactusAss3 from '../assets/editingScreenAssets/contactusEditAssets/contactus3.png'
 import contactusAss4 from '../assets/editingScreenAssets/contactusEditAssets/contactus4.png'
-import contactusAss5 from '../assets/editingScreenAssets/contactusEditAssets/contactus5.PNG'
+import contactusAss5 from '../assets/editingScreenAssets/contactusEditAssets/contactus5.png'
 
 import faqsAss1 from '../assets/editingScreenAssets/faqsEditAssets/faqs1.png'
 import faqsAss2 from '../assets/editingScreenAssets/faqsEditAssets/faqs2.JPG'
