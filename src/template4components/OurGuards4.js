@@ -50,7 +50,20 @@ export default function OurGuards4() {
                 />
                 <div className={`${Guards4Css.container1} ${Guards4Css.guardsList}`}>
                     <div className={Guards4Css.guards}>
-                        <img src={guard1} className={Guards4Css.guardImage} alt="guard 1" />
+                        {/* <img src={guard1} className={Guards4Css.guardImage} alt="guard 1" /> */}
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='guardIm1'
+                            initialValue={`<img src=${guard1} alt="guard 1" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            init={{
+                                menubar: false,
+                                plugins: [
+                                    "image"
+                                ],
+                                toolbar: 'image'
+                            }}
+                        />
                         {/* <TextH2 className={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
@@ -90,7 +103,20 @@ export default function OurGuards4() {
                         </div>
                     </div>
                     <div className={Guards4Css.guards}>
-                        <img src={guard2} className={Guards4Css.guardImage} alt="guard 2" />
+                        {/* <img src={guard2} className={Guards4Css.guardImage} alt="guard 2" /> */}
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='guardIm2'
+                            initialValue={`<img src=${guard2} alt="guard 2" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            init={{
+                                menubar: false,
+                                plugins: [
+                                    "image"
+                                ],
+                                toolbar: 'image'
+                            }}
+                        />
                         {/* <TextH2 classStyle={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
                         {/* <TextH4 className="m-0 mt-8 text-black" text="Lorem ipsum" /> */}
                         <Editor
@@ -131,7 +157,20 @@ export default function OurGuards4() {
                         </div>
                     </div>
                     <div className={Guards4Css.guards}>
-                        <img src={guard3} className={Guards4Css.guardImage} alt="guard 3" />
+                        {/* <img src={guard3} className={Guards4Css.guardImage} alt="guard 3" /> */}
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='guardIm3'
+                            initialValue={`<img src=${guard3} alt="guard 3" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            init={{
+                                menubar: false,
+                                plugins: [
+                                    "image"
+                                ],
+                                toolbar: 'image'
+                            }}
+                        />
                         {/* <TextH2 classStyle={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
                         {/* <TextH4 className="m-0 mt-8 text-black" text="Lorem ipsum" /> */}
                         <Editor
@@ -172,7 +211,20 @@ export default function OurGuards4() {
                         </div>
                     </div>
                     <div className={Guards4Css.guards}>
-                        <img src={guard4} className={Guards4Css.guardImage} alt="guard 4" />
+                        {/* <img src={guard4} className={Guards4Css.guardImage} alt="guard 4" /> */}
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='guardIm4'
+                            initialValue={`<img src=${guard4} alt="guard 4" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            init={{
+                                menubar: false,
+                                plugins: [
+                                    "image"
+                                ],
+                                toolbar: 'image'
+                            }}
+                        />
                         {/* <TextH2 classStyle={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
                         {/* <TextH4 className="m-0 mt-8 text-black" text="Lorem ipsum" /> */}
                         <Editor
