@@ -47,7 +47,21 @@ export default function Blog4() {
             <div className="flex justify-center items-center">
                 <div className="flex flex-wrap justify-around items-center">
                     <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-center`}>
-                        <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news1} alt="news 1" />
+                        {/* <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news1} alt="news 1" /> */}
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='blogIm1'
+                            initialValue={`<img src=${news1} alt="news 1" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
+                            init={{
+                                forced_root_block:"",
+                                menubar: false,
+                                plugins: [
+                                    "image"
+                                ],
+                                toolbar: 'image'
+                            }}
+                        />
                         {/* <TextH1 className={`${Blog4Css.blogArticH1} text-2xl p-3 mb-8 hover:text-white`} text="Personal Security Services" /> */}
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
@@ -104,7 +118,21 @@ export default function Blog4() {
                         </div>
                     </div>
                     <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-center`}>
-                        <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news2} alt="news 2" />
+                        {/* <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news2} alt="news 2" /> */}
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='blogIm2'
+                            initialValue={`<img src=${news2} alt="news 2" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                plugins: [
+                                    "image"
+                                ],
+                                toolbar: 'image'
+                            }}
+                        />
                         {/* <TextH1 classStyle={`${Blog4Css.blogArticH1} text-2xl p-3 mb-8 hover:text-white`} text="Personal Security Services" /> */}
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
@@ -161,7 +189,21 @@ export default function Blog4() {
                         </div>
                     </div>
                     <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-center`}>
-                        <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news3} alt="news 3" />
+                        {/* <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news3} alt="news 3" /> */}
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='blogIm3'
+                            initialValue={`<img src=${news3} alt="news 3" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                plugins: [
+                                    "image"
+                                ],
+                                toolbar: 'image'
+                            }}
+                        />
                         {/* <TextH1 classStyle={`${Blog4Css.blogArticH1} text-2xl p-3 mb-8 hover:text-white`} text="Personal Security Services" /> */}
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
