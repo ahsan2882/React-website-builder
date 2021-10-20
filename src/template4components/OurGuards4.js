@@ -40,6 +40,7 @@ export default function OurGuards4() {
                             euismod. In id tempus metus. Donec eu volutpat nibh, in maximus
                             ligula.</p>"
                     init={{
+                        forced_root_block:"",
                         menubar: false,
                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                             'alignright alignjustify | fontselect',
@@ -72,6 +73,7 @@ export default function OurGuards4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>John Richards</h2>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -87,6 +89,7 @@ export default function OurGuards4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h4>Lorem ipsum</h4>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -126,6 +129,7 @@ export default function OurGuards4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>John Richards</h2>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -141,6 +145,7 @@ export default function OurGuards4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h4>Lorem ipsum</h4>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -164,6 +169,7 @@ export default function OurGuards4() {
                             key='guardIm3'
                             initialValue={`<img src=${guard3} alt="guard 3" class="${Guards4Css.guardImage} mx-auto"/>`}
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 plugins: [
                                     "image"
@@ -180,6 +186,7 @@ export default function OurGuards4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h2>John Richards</h2>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -195,6 +202,7 @@ export default function OurGuards4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h4>Lorem ipsum</h4>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -218,6 +226,7 @@ export default function OurGuards4() {
                             key='guardIm4'
                             initialValue={`<img src=${guard4} alt="guard 4" class="${Guards4Css.guardImage} mx-auto"/>`}
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 plugins: [
                                     "image"
@@ -249,6 +258,7 @@ export default function OurGuards4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h4>Lorem ipsum</h4>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',

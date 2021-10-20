@@ -19,6 +19,7 @@ export default function Subscribe4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h3>Want to know about our offers first?</h3>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -35,6 +36,7 @@ export default function Subscribe4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Subscribe our newsletter</h1>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -59,6 +61,7 @@ export default function Subscribe4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<button>SUBSCRIBE</button>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',

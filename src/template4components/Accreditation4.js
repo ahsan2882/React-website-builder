@@ -21,6 +21,7 @@ export default function Accreditation4() {
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue="<h2>we are verified</h2>"
                         init={{
+                            forced_root_block:"",
                             menubar: false,
                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                 'alignright alignjustify | fontselect', 
@@ -38,6 +39,7 @@ export default function Accreditation4() {
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue="<h1>Our Accreditation</h1>"
                         init={{
+                            forced_root_block:"",
                             menubar: false,
                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                 'alignright alignjustify | fontselect',
@@ -73,6 +75,7 @@ export default function Accreditation4() {
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<h3>Lorem ipsum</h3>"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | fontselect',
@@ -108,6 +111,7 @@ export default function Accreditation4() {
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<h3>Lorem ipsum</h3>"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | fontselect',

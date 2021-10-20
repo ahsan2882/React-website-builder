@@ -24,6 +24,7 @@ export default function Header4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<div>+10800-33-000</div>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -46,6 +47,7 @@ export default function Header4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<div>security</div>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -68,6 +70,7 @@ export default function Header4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<div>21 Newstreet, New York, 269-24</div>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
