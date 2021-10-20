@@ -17,6 +17,7 @@ export default function Faq2Asset() {
                         }
                         initialValue="FAQs"
                         init={{
+                            forced_root_block:"",
                             menubar: false,
                             toolbar:
                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -40,6 +41,7 @@ export default function Faq2Asset() {
                                 }
                                 initialValue="What is a home energy rating?"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -62,6 +64,7 @@ export default function Faq2Asset() {
                                     }
                                     initialValue="A home energy rating is an estimated calculation into a homes potential energy usage, which will determine the amount of heating and cooling required to make its occupants comfortable. It produces a star rating dependant on the amount of heating and cooling loads which will be required, from 0 to 10 stars."
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -86,6 +89,7 @@ export default function Faq2Asset() {
                                 }
                                 initialValue="Why do I need a 6 Star energy rating?"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -108,6 +112,7 @@ export default function Faq2Asset() {
                                     }
                                     initialValue="In most Australian states the government requires that all new homes and apartments (along with certain types of building extensions) built since 2010 be energy rated and achieve a minimum of 6 Stars."
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -132,6 +137,7 @@ export default function Faq2Asset() {
                                 }
                                 initialValue="What is the general cost of an energy rating?"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -154,6 +160,7 @@ export default function Faq2Asset() {
                                     }
                                     initialValue="Simple energy rating prices vary greatly on the size and type of building, generally an energy rating will cost somewhere between $130 to $700+."
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -178,6 +185,7 @@ export default function Faq2Asset() {
                                 }
                                 initialValue="What information do I need to supply for an energy rating to be completed??"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -200,6 +208,7 @@ export default function Faq2Asset() {
                                     }
                                     initialValue="The information required to complete a full and comprehensive energy report are the following final working drawings: Site Plan, Floor Plan, Elevations, Sections, Lighting layout and window schedule (including sizes of the existing windows)."
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -224,6 +233,7 @@ export default function Faq2Asset() {
                                 }
                                 initialValue="Does building an extension need an energy rating?"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -246,6 +256,7 @@ export default function Faq2Asset() {
                                     }
                                     initialValue="Depended on the size of the extension you are building there is a chance that it too will need to be energy rated. It&#x27;s always best to check first before going ahead with construction."
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -270,6 +281,7 @@ export default function Faq2Asset() {
                                 }
                                 initialValue="What is the general cost of an energy rating?"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -292,6 +304,7 @@ export default function Faq2Asset() {
                                     }
                                     initialValue="Depended on the size of the extension you are building there is a chance that it too will need to be energy rated. It&#x27;s always best to check first before going ahead with construction."
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +

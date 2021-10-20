@@ -19,6 +19,7 @@ export default function Contact1Asset() {
                                 }
                                 initialValue="Contact us"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -41,6 +42,7 @@ export default function Contact1Asset() {
                                 }
                                 initialValue="Security is not a product, it is a process.."
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -88,6 +90,7 @@ export default function Contact1Asset() {
                                         }
                                         initialValue="critrixconsultancy@gmail.com"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -110,6 +113,7 @@ export default function Contact1Asset() {
                                     }
                                         initialValue="4010 Feeney Way Saint Cloud, MN 56301"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +

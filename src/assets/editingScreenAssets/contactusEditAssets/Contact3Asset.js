@@ -24,6 +24,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="<h1> Address </h1>"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -46,6 +47,7 @@ export default function Contact3Asset() {
                                     }
                                     initialValue="London Office"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -67,6 +69,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue=" 418-426 Lewisham High Street, SE13 6LJ"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -89,6 +92,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="Birmingham Office"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -109,6 +113,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="3 Brindley Place, B1 2JB"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -130,6 +135,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue=" 3 Brindley Place, B1 2JBManchester Office"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -151,6 +157,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="Chancery Place, 50 Brown Street, M2 2JG"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -180,6 +187,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="<h1> Phone </h1>"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -204,6 +212,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="London: 020 8690 1903"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -227,6 +236,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="Birmingham: 0121 824 1075"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -249,6 +259,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="Birmingham: 0121 824 1076"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -271,6 +282,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="Manchester: 0161 511 3397"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -292,6 +304,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="Manchester: 0161 511 3398"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -320,6 +333,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="<h1> Email </h1>"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -343,6 +357,7 @@ export default function Contact3Asset() {
                                         }
                                         initialValue="info@critrixconsultancy.com"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
