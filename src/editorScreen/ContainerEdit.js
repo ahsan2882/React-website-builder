@@ -29,6 +29,7 @@ import Blog4 from '../template4components/Blog4';
 import Accreditation4 from '../template4components/Accreditation4';
 import Footer4 from '../template4components/Footer4';
 // import EmptyTemplate from '../editorScreen/EmptyTemplate'
+// import Contact4AssetCss from '../assets/editingScreenAssets/contactusEditAssets/Contact4Asset.module.css'
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
@@ -45,8 +46,15 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             console.log(valueString)
             setUpdateChildren([...updateChildren, assetObject[valueString]])
             // document.getElementsByClassName("getInnerHTML");
+            const elem = document.getElementsByClassName('Contact4Asset_firstHead__22xbT')[0]
+            // const element = document.querySelector(elem);
+            // const styleS = window.getComputedStyle(elem);
+            // console.log(styleS)
+            
             // document.title = "Editing Contact"
-            console.log(htmlRef.current)
+            let inHTML = htmlRef.current;
+
+            console.log(inHTML)
         },
         collect: monitor => ({
             canDrop: !!monitor.canDrop()
