@@ -39,6 +39,7 @@ export default function Pricing4Asset() {
                                 }
                                 initialValue="Our prices can let you secure your business or life with no large expenses."
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -66,6 +67,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="Plan"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -88,6 +90,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="Speed"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -109,6 +112,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="Storage"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -130,6 +134,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="Price"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -151,6 +156,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="Price"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -179,6 +185,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="STARTER"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -200,6 +207,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="5 Mb/s"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -221,6 +229,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="15GB"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -242,6 +251,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="$56/yr"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -269,6 +279,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="PROFESSIONAL"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -290,6 +301,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="25 Mb/s"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -311,6 +323,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="25 GB"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -332,6 +345,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="$59/yr"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -358,6 +372,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="ADVANCED"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -379,6 +394,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue=" 36 Mb/s"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -400,6 +416,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="40 GB"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -421,6 +438,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="$60/yr"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -447,6 +465,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="SPECIAL"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -468,6 +487,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="48 Mb/s"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -489,6 +509,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="120 GB"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -510,6 +531,7 @@ export default function Pricing4Asset() {
                                             }
                                             initialValue="$72/yr"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -541,6 +563,7 @@ export default function Pricing4Asset() {
                                 }
                                 initialValue="Buy Now"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +

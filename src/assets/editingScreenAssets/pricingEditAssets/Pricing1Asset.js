@@ -501,6 +501,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="Yes Physical Protections"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -536,6 +537,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="04 Security With Dogs"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -559,6 +561,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="Sign up"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -592,6 +595,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="For Small Bussiness"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -618,6 +622,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="ADVANCED"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -641,6 +646,7 @@ export default function Pricing1Asset() {
                                             }
                                             initialValue="$60"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -663,6 +669,7 @@ export default function Pricing1Asset() {
                                             }
                                             initialValue="/yr"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -699,6 +706,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="30 CCTV Cameras"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -734,6 +742,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="15 Security Guards"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -769,6 +778,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="Yes Physical Protections"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -804,6 +814,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="20 Security With Dogs"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -839,6 +850,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="Yes Change on complain"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -861,6 +873,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="Sign up"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -894,6 +907,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="For small business"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -920,6 +934,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="Special"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -943,6 +958,7 @@ export default function Pricing1Asset() {
                                             }
                                             initialValue="$72"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -965,6 +981,7 @@ export default function Pricing1Asset() {
                                             }
                                             initialValue="/mo"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -1001,6 +1018,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="35 CCTV Cameras"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -1036,6 +1054,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="25 Security Guard"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -1071,6 +1090,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="Yes Physical Protections"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -1106,6 +1126,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="30 Security With Dogs"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -1141,6 +1162,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="Yes Change on Complain"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -1163,6 +1185,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="Sign up"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -1196,6 +1219,7 @@ export default function Pricing1Asset() {
                                         }
                                         initialValue="For Small Bussiness"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +

@@ -27,6 +27,7 @@ export default function Accre2Asset() {
                                 }
                                 initialValue="<h3>We are Verified by Govt</h3>"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -48,6 +49,7 @@ export default function Accre2Asset() {
                             }
                             initialValue="<h1>Accreditation</h1>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar:
                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -75,6 +77,7 @@ export default function Accre2Asset() {
                                         }
                                         initialValue={`<img src=${accre1} alt="accre1" />`}
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             plugins: [
                                                 'image'

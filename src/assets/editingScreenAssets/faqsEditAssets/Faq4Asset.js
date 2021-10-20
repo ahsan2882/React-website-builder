@@ -18,6 +18,7 @@ export default function Faq4Asset() {
                                 }
                                 initialValue="start with the basics"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -39,6 +40,7 @@ export default function Faq4Asset() {
                                 }
                                 initialValue="Frequently Asked Questions"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -65,6 +67,7 @@ export default function Faq4Asset() {
                                             }
                                             initialValue="What does lorem ipsum actually mean?"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -104,6 +107,7 @@ export default function Faq4Asset() {
                                         }
                                         initialValue="Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -128,6 +132,7 @@ export default function Faq4Asset() {
                                             }
                                             initialValue="How do we know what kind of sounds dinosaurs made?"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -167,6 +172,7 @@ export default function Faq4Asset() {
                                         }
                                         initialValue="Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -191,6 +197,7 @@ export default function Faq4Asset() {
                                             }
                                             initialValue="Why work from home is not as fun as we thought it would be?"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -230,6 +237,7 @@ export default function Faq4Asset() {
                                         }
                                         initialValue="Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -254,6 +262,7 @@ export default function Faq4Asset() {
                                             }
                                             initialValue="In what way did human beings started using words?"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -293,6 +302,7 @@ export default function Faq4Asset() {
                                         }
                                         initialValue="Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -317,6 +327,7 @@ export default function Faq4Asset() {
                                             }
                                             initialValue="Which is the least developed area in the world"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -356,6 +367,7 @@ export default function Faq4Asset() {
                                         }
                                         initialValue="Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +

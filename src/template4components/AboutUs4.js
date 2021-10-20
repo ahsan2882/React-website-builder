@@ -16,6 +16,7 @@ export default function AboutUs4() {
                         key='abouted1'
                         initialValue={`<img src=${aboutimg} alt="about" class="${About4Css.aboutImg} w-11/12"/>`}
                         init={{
+                            forced_root_block:"",
                             menubar: false,
                             plugins: [
                                 "image"
@@ -34,6 +35,7 @@ export default function AboutUs4() {
                                     key='abouted1'
                                     initialValue="<h6>About Us !</h6>"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
@@ -49,6 +51,7 @@ export default function AboutUs4() {
                                     tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
                                     initialValue="<h3>CCTV For your Safety</h3>"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
@@ -69,6 +72,7 @@ export default function AboutUs4() {
                                     tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
                                     initialValue="<p>Nunc pretium nibh non aliquam scelerisque. Integer porttitor dolor sit amet leo malesuada scelerisque. Sed sed tortor lobortis, dictum lacus sed, mollis enim. Aenean ullamcorper accumsan sem sit amet aliquam. Cras euismod mauris felis, eget bibendum nibh facilisis ac.</p>"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
@@ -87,6 +91,7 @@ export default function AboutUs4() {
                                         tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
                                         initialValue="<p>Read More</p>"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                                 'alignright alignjustify | fontselect',
