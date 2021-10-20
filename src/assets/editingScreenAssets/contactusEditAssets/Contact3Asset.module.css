@@ -88,10 +88,7 @@
     border-bottom: 2px solid var(--clr-red-new);
     color: white;
   }
-  textarea {
-    height: 50rem;
-    overflow: hidden;
-  }
+ 
   .input-f:focus {
     outline: none;
   }
