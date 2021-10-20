@@ -23,7 +23,7 @@ export default function Testimonial4Asset() {
                                         </div>
                                         <div class="pl-6 pr-6 pt-10 relative h-64">
                                             <div class="h-16 w-16 rounded-full bg-cover border-4 border-white absolute top-0 right-0 -mt-8 mr-6">
-                                                <img src={Img1}  role="img" class="h-full w-full object-cover rounded-full overflow-hidden" />
+                                                <img src={Img1}   class="h-full w-full object-cover rounded-full overflow-hidden" />
                                             </div>
 
                                             <p class="text-base text-gray-600 leading-8">It really saves me time and effort. Chamer is exactly what our business has been lacking. Chamer was worth a fortune to my company.</p>
@@ -48,7 +48,7 @@ export default function Testimonial4Asset() {
                                         </div>
                                         <div class="pl-6 pr-6 pt-10 relative h-64">
                                             <div class="h-16 w-16 rounded-full bg-cover border-4 border-white absolute top-0 right-0 -mt-8 mr-6">
-                                                <img src={Img2}  role="img" class="h-full w-full object-cover rounded-full overflow-hidden" />
+                                                <img src={Img2}   class="h-full w-full object-cover rounded-full overflow-hidden" />
                                             </div>
 
                                             <p class="text-base text-gray-600 leading-8">It really saves me time and effort. Chamer is exactly what our business has been lacking. Chamer was worth a fortune to my company.</p>
@@ -73,7 +73,7 @@ export default function Testimonial4Asset() {
                                         </div>
                                         <div class="pl-6 pr-6 pt-10 relative h-64">
                                             <div class="h-16 w-16 rounded-full bg-cover border-4 border-white absolute top-0 right-0 -mt-8 mr-6">
-                                                <img src={Img3}  role="img" class="h-full w-full object-cover rounded-full overflow-hidden" />
+                                                <img src={Img3}   class="h-full w-full object-cover rounded-full overflow-hidden" />
                                             </div>
 
                                             <p class="text-base text-gray-600 leading-8">It really saves me time and effort. Chamer is exactly what our business has been lacking. Chamer was worth a fortune to my company.</p>
