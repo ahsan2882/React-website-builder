@@ -76,15 +76,11 @@ export default function Accre2Asset() {
                                         initialValue={`<img src=${accre1} alt="accre1" />`}
                                         init={{
                                             menubar: false,
-                                            toolbar:
-                                                "image",
                                             plugins: [
                                                 'image'
                                             ],
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'image',
+                                            images_upload_url: 'postAcceptor.php'
                                         }}
                                     />
                                 </div>
