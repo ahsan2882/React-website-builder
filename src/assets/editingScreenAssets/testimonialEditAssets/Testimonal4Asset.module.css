@@ -1,0 +1,7 @@
+section#carousel > figure > div {
+    display: none;
+}
+section#carousel > figure.visible > div {
+    display: flex;
+    position: relative;
+}
