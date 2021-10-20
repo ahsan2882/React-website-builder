@@ -10,7 +10,7 @@ import Accreditation4 from './Accreditation4';
 import Footer4 from './Footer4';
 
 export default function Template4Page() {
-    var template4Components = [<Header4 />, <HeroSection4 />, <AboutUs4 />, <Pricing4 />, <Services4 />, <OurGuards4 />, <Blog4 />, <Accreditation4 />, <Footer4 />]
+    var template4Components = [<HeroSection4 />, <AboutUs4 />, <Pricing4 />, <Services4 />, <OurGuards4 />, <Blog4 />, <Accreditation4 />, <Footer4 />]
     return (
         <>
             {template4Components}
