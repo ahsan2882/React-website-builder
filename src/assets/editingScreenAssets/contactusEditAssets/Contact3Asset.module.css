@@ -131,12 +131,12 @@
   }
   .feed-content p {
     font-size: 1.5rem;
-    padding: 20px 0px;
+    padding: 20px 0;
   }
   .separator-one {
     width: 660px;
     height: 2px;
-    margin: 0px 0px 0px 10px;
+    margin: 0 0 0 10px;
     width: 55%;
     background-color: white;
   }
