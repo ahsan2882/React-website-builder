@@ -67,8 +67,8 @@
     padding: 50px;
     margin-right: 50px;
     background-color: var(--clr-red-new);
-    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0 -12px 30px,
-      rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+    box-shadow: rgb(0 0 0 / 25%) 0 54px 55px, rgb(0 0 0 / 12%) 0 -12px 30px,
+      rgb(0 0 0 / 12%) 0 4px 6px, rgb(0 0 0 / 17%) 0 12px 13px,
       rgb(0 0 0 / 9%) 0px -3px 5px;
     backdrop-filter: blur(5px);
     width:40em;
@@ -104,35 +104,7 @@
     padding: 40px 0;
   }
 
-  .feed-img img {
-    width: 432px;
-    min-height: 33em;
-  }
-  .feed-img {
-    padding-right: 20px;
-    padding-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0 -12px 30px,
-      rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
-      rgb(0 0 0 / 9%) 0px -3px 5px;
-    backdrop-filter: blur(5px);
-  }
-  .feedback-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .feed-content {
-    padding: 40px 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .feed-content p {
-    font-size: 1.5rem;
-    padding: 20px 0;
-  }
+  
   .separator-one {
     width: 660px;
     height: 2px;
