@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ContainerEditCss from './ContainerEdit.module.css'
 
 import { Header01 } from '../template1components/Header01'
@@ -28,20 +28,15 @@ import OurGuards4 from '../template4components/OurGuards4';
 import Blog4 from '../template4components/Blog4';
 import Accreditation4 from '../template4components/Accreditation4';
 import Footer4 from '../template4components/Footer4';
-// import Template4Page from '../template4components/Template4Page'
-// import Template1Page from '../template1components/Template1Page'
-// import Template2Page from '../template2components/Template2Page'
-// import Template3Page from '../template3components/Template3Page'
-import EmptyTemplate from '../editorScreen/EmptyTemplate'
+// import EmptyTemplate from '../editorScreen/EmptyTemplate'
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 
 
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
-    // let children = [];
+    const htmlRef = useRef(null);
     const [updateChildren, setUpdateChildren] = useState([])
-    // children.push(<img src="https://imaging.nikon.com/lineup/dslr/df/img/sample/img_01.jpg" alt="Scenery"/>)
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -49,8 +44,11 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             let valueString = Object.values(item)[0];
             console.log(valueString)
             setUpdateChildren([...updateChildren, assetObject[valueString]])
+            // document.getElementsByClassName("getInnerHTML");
+            // document.title = "Editing Contact"
+            console.log(htmlRef.current)
         },
-        collect: monitor =>  ({
+        collect: monitor => ({
             canDrop: !!monitor.canDrop()
         })
     })
@@ -59,33 +57,16 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
 
     useEffect(() => {
         console.log("use effect ran:   ", defWidth)
-        // console.log(updateChildren)
     }, [defWidth]);
-    // switch(temp){
-    //     case 1:
-    //         setUpdateChildren(<Template1Page />)
-    //         break;
-    //     case 2: 
-    //         setUpdateChildren(<Template2Page />)
-    //         break;
-    //     case 3:
-    //         setUpdateChildren(<Template3Page />)
-    //         break;
-    //     case 4:
-    //         setUpdateChildren([])
-    //         break;
-    //     default:
-    //         component = <EmptyTemplate/>
-    // }
     useEffect(() => {
         if (temp === 1) {
-            setUpdateChildren([<Header01/>, <Service01/>, <Testimonials/>, <Prizing01/>, <Guard01/>, <News01/>, <Program01/>, <About01/>, <Footer01/>])
+            setUpdateChildren([<Header01 />, <Service01 />, <Testimonials />, <Prizing01 />, <Guard01 />, <News01 />, <Program01 />, <About01 />, <Footer01 />])
         }
         else if (temp === 2) {
             setUpdateChildren([<h2>Template 2 Components here!!</h2>])
         }
         else if (temp === 3) {
-            setUpdateChildren([<Services3/>, <Latestnews3/>, <Guard3/>, <Ourprograms3/>, <About3/>, <Accrediation3/>, <Footer3/>])
+            setUpdateChildren([<Services3 />, <Latestnews3 />, <Guard3 />, <Ourprograms3 />, <About3 />, <Accrediation3 />, <Footer3 />])
         }
         else if (temp === 4) {
             setUpdateChildren([<Header4 />, <HeroSection4 />, <AboutUs4 />, <Pricing4 />, <Services4 />, <OurGuards4 />, <Blog4 />, <Accreditation4 />, <Footer4 />])
@@ -94,22 +75,27 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             setUpdateChildren([])
         }
     }, [temp])
- 
     return (
         <>
             {/* {(canDrop ? <div style={{ "background": `rgba(0,0,0,0.5)` }} className={ContainerEditCss.overlay}></div> : null)} */}
-            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)`} : null}>
+            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
-                    <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`}>
-                        {/* <EmptyTemplate/> */}
+                <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
+                    {/* <EmptyTemplate/> */}
+                    <div className="getInnerHTML" ref={htmlRef}>
                         {updateChildren}
                     </div>
+                </div>
             </section>
         </>
-        
+
     );
+}
+
+export const InnerHTML = () => {
+
 }
