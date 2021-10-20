@@ -50,7 +50,21 @@ export default function Accreditation4() {
                 <div className="flex flex-wrap justify-center my-0 mx-auto mb-8">
                     <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
                         <div className="p-5 flex flex-col items-center">
-                            <img src={cl1} alt="client 1" className="w-full" />
+                            {/* <img src={cl1} alt="client 1" className="w-full" /> */}
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='AccreIm1'
+                                initialValue={`<img src=${cl1} alt="client 1" class="w-full"/>`}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
                             {/* <TextH3 classStyle={Accre4Css.accreH3} text="Lorem ipsum." /> */}
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
@@ -72,7 +86,21 @@ export default function Accreditation4() {
 
                     <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
                         <div className="p-5 flex flex-col items-center">
-                            <img src={cl2} alt="client 2" className="w-full" />
+                            {/* <img src={cl2} alt="client 2" className="w-full" /> */}
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='AccreIm2'
+                                initialValue={`<img src=${cl2} alt="client 2" class="w-full"/>`}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -93,7 +121,21 @@ export default function Accreditation4() {
 
                     <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
                         <div className="p-5 flex flex-col items-center">
-                            <img src={cl3} alt="client 3" className="w-full" />
+                            {/* <img src={cl3} alt="client 3" className="w-full" /> */}
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='AccreIm3'
+                                initialValue={`<img src=${cl3} alt="client 3" class="w-full"/>`}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
