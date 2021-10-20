@@ -9,7 +9,7 @@
     list-style: none;
   }
   .menu-bars ul li {
-    width: 120px;
+  
     margin: 15px;
     padding: 15px;
     color: #fff;
@@ -19,7 +19,7 @@
     text-decoration: none;
     color: #fff;
     transition: 2s;
-    margin:0 .1em 0;
+    margin:0 0.1em 0;
   }
   
   
@@ -50,7 +50,7 @@
     background: transparent;
     border-radius: 0;
     text-align: left;
-    width: 150px;
+   
   }
   .menu-bars ul li:hover .sub-menu ul li:last-child {
     border-bottom: none;
