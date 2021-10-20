@@ -38,6 +38,7 @@ import { assetObject } from './assetCode'
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
     const htmlRef = useRef(null);
     const [updateChildren, setUpdateChildren] = useState([])
+    const [overSection, setOverSection] = useState(false);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -77,7 +78,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             setUpdateChildren([<Services3 />, <Latestnews3 />, <Guard3 />, <Ourprograms3 />, <About3 />, <Accrediation3 />, <Footer3 />])
         }
         else if (temp === 4) {
-            setUpdateChildren([<Header4 />, <HeroSection4 />, <AboutUs4 />, <Pricing4 />, <Services4 />, <OurGuards4 />, <Blog4 />, <Accreditation4 />, <Footer4 />])
+            setUpdateChildren([<HeroSection4 />, <AboutUs4 />, <Pricing4 />, <Services4 />, <OurGuards4 />, <Blog4 />, <Accreditation4 />, <Footer4 />])
         }
         else if (temp === 0) {
             setUpdateChildren([])
@@ -95,7 +96,11 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
                     {/* <EmptyTemplate/> */}
                     <div className="getInnerHTML" ref={htmlRef}>
-                        {updateChildren}
+                        {updateChildren.map((items) => {
+                            return (
+                                <section onMouseEnter={() => setOverSection(true)} onMouseLeave={() => setOverSection(false)} style={overSection ? {border: '2px dashed blue'} : null}>{items}</section>
+                            )
+                        })}
                     </div>
                 </div>
             </section>
