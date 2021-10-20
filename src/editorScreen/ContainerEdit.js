@@ -96,9 +96,10 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
                     {/* <EmptyTemplate/> */}
                     <div className="getInnerHTML" ref={htmlRef}>
-                        {updateChildren.map((items) => {
+                        {updateChildren.map((items, index) => {
                             return (
-                                <section onMouseEnter={() => setOverSection(true)} onMouseLeave={() => setOverSection(false)} style={overSection ? {border: '2px dashed blue'} : null}>{items}</section>
+                                // 
+                                <section key={index} onMouseEnter={() => setOverSection(true)} onMouseLeave={() => setOverSection(false)} style={overSection ? { border: '2px dashed blue' } : null}>{items}</section>
                             )
                         })}
                     </div>
