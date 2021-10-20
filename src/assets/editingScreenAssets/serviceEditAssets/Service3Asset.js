@@ -63,7 +63,24 @@ export default function Service3Asset() {
                     <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
                         <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
                             <div className="rounded-lg h-64 overflow-hidden">
-                                <img alt="content" className="object-cover object-center h-full w-full" src={Service3} />
+                                {/* <img alt="content" className="object-cover object-center h-full w-full" src={Service3} /> */}
+                                <Editor
+                                    onInit={(evt, editor) => (editorRef.current = editor)}
+                                    inline={true}
+                                    key="service3image1"
+                                    tinymceScriptSrc={
+                                        process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                    }
+                                    initialValue={`<img alt="content" class="object-cover object-center h-full w-full" src=${Service3} />`}
+                                    init={{
+                                        menubar: false,
+                                        plugins: [
+                                            "image"
+                                        ],
+                                        toolbar:
+                                            "image",
+                                    }}
+                                />
                             </div>
                             <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
                                 <Editor
@@ -134,7 +151,24 @@ export default function Service3Asset() {
                         </div>
                         <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
                             <div className="rounded-lg h-64 overflow-hidden">
-                                <img alt="content" className="object-cover object-center h-full w-full" src={Service4} />
+                                {/* <img alt="content" className="object-cover object-center h-full w-full" src={Service4} /> */}
+                                <Editor
+                                    onInit={(evt, editor) => (editorRef.current = editor)}
+                                    inline={true}
+                                    key="service3image2"
+                                    tinymceScriptSrc={
+                                        process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                    }
+                                    initialValue={`<img alt="content" class="object-cover object-center h-full w-full" src=${Service4} />`}
+                                    init={{
+                                        menubar: false,
+                                        plugins: [
+                                            "image"
+                                        ],
+                                        toolbar:
+                                            "image",
+                                    }}
+                                />
                             </div>
                             <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
                                 <Editor
@@ -205,7 +239,24 @@ export default function Service3Asset() {
                         </div>
                         <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
                             <div className="rounded-lg h-64 overflow-hidden">
-                                <img alt="content" className="object-cover object-center h-full w-full" src={Service5} />
+                                {/* <img alt="content" className="object-cover object-center h-full w-full" src={Service5} /> */}
+                                <Editor
+                                    onInit={(evt, editor) => (editorRef.current = editor)}
+                                    inline={true}
+                                    key="service3image3"
+                                    tinymceScriptSrc={
+                                        process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                    }
+                                    initialValue={`<img alt="content" class="object-cover object-center h-full w-full" src=${Service5} />`}
+                                    init={{
+                                        menubar: false,
+                                        plugins: [
+                                            "image"
+                                        ],
+                                        toolbar:
+                                            "image",
+                                    }}
+                                />
                             </div>
                             <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
                                 <Editor
