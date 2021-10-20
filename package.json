@@ -10,6 +10,9 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "@tinymce/tinymce-react": "^3.12.6",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^6.3.0",
     "grapesjs": "^0.17.26",
     "material-ui-color-picker": "^3.5.1",
@@ -51,6 +54,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.4.0",
+    "mini-css-extract-plugin": "^2.4.2",
     "postcss": "^7.0.36",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14"
   }
