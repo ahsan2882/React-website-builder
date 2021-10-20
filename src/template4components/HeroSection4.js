@@ -4,11 +4,13 @@ import navlogo from '../assets/template4images/thefnflogo.png'
 import background from '../assets/template4images/blog_15-770x545.jpg'
 import Hero4Css from './HeroSection4.module.css'
 import { Link } from 'react-router-dom';
+import Header4 from './Header4';
 
 export default function HeroSection4() {
     const editorRef = useRef(null);
     return (
         <>
+            <Header4/>
             <div className={`${Hero4Css.navWrapper} w-full`}>
                 <div className={`flex justify-between items-center py-6 ${Hero4Css.container1}`}>
                     <img src={navlogo} alt="nav-logo" className="w-52" />
@@ -104,7 +106,7 @@ export default function HeroSection4() {
                         inline={true}
                         key='heroed1'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue="<h1>Security Services</h1>"
+                        initialValue={`<h1 class=" text-7xl">Security Services</h1>`}
                         init={{
                             menubar: false,
                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
