@@ -85,6 +85,26 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             setUpdateChildren([])
         }
     }, [temp])
+    const moveUp = (indexC) => {
+        let newArray = [...updateChildren];
+        let currentCom = newArray[indexC];
+        newArray[indexC] = newArray[indexC - 1];
+        newArray[indexC - 1] = currentCom;
+        setUpdateChildren([...newArray])
+        // console.log(updatedMoved);
+    }
+    const moveDown = (indexC) => {
+        let newArray = [...updateChildren];
+        let currentCom = newArray[indexC];
+        newArray[indexC] = newArray[indexC + 1];
+        newArray[indexC + 1] = currentCom;
+        setUpdateChildren([...newArray])
+    }
+    const removeComponent = (indexC) => {
+        let newArray = [...updateChildren];
+        newArray.splice(indexC, 1);
+        setUpdateChildren([...newArray])
+    }
     return (
         <>
             {/* {(canDrop ? <div style={{ "background": `rgba(0,0,0,0.5)` }} className={ContainerEditCss.overlay}></div> : null)} */}
@@ -96,27 +116,30 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                 </div>
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
                     {/* <EmptyTemplate/> */}
-                    <div className="getInnerHTML" ref={htmlRef}>
-                        {updateChildren.map((items, index) => {
-                            return (
-                                // 
-                                <>
-                                    <section key={index}
-                                        onMouseEnter={() => {
-                                            setOverSection(true);
-                                            setSectionKey(index)
-                                        }}
-                                        onMouseLeave={() => setOverSection(false)} style={(overSection && sectionKey === index) ? { border: '2px dashed blue' } : null}>{items}
-                                    </section>
-                                    <div className="flex w-20 justify-evenly items-center" style={(overSection && sectionKey === index) ? {}}>
-                                        <button><i className="fas fa-arrow-up"></i></button>
-                                        <button><i className="fas fa-arrow-down"></i></button>
-                                        <button><i className="fas fa-trash-alt"></i></button>
+                    {/* <div className="getInnerHTML" ref={htmlRef}> */}
+                    {updateChildren.map((items, index) => {
+                        return (
+                            // 
+                            <>
+                                <section key={index}
+                                    onMouseEnter={() => {
+                                        setOverSection(true);
+                                        setSectionKey(index)
+                                    }}
+                                    onMouseLeave={() => setOverSection(false)}
+                                    className={(overSection && sectionKey === index) ? "border-2 border-solid border-red-500 relative" : "border-2 border-solid border-transparent"}>
+                                    {items}
+                                    <div className="flex w-32 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "2rem" } : { display: "none" }}>
+                                        <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
+                                        <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
+                                        <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
                                     </div>
-                                </>
-                            )
-                        })}
-                    </div>
+                                </section>
+
+                            </>
+                        )
+                    })}
+                    {/* </div> */}
                 </div>
             </section>
         </>
