@@ -39,6 +39,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     const htmlRef = useRef(null);
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
+    const [sectionKey, setSectionKey] = useState(null);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -51,7 +52,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             // const element = document.querySelector(elem);
             // const styleS = window.getComputedStyle(elem);
             // console.log(styleS)
-            
+
             // document.title = "Editing Contact"
             let inHTML = htmlRef.current;
 
@@ -99,7 +100,20 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                         {updateChildren.map((items, index) => {
                             return (
                                 // 
-                                <section key={index} onMouseEnter={() => setOverSection(true)} onMouseLeave={() => setOverSection(false)} style={overSection ? { border: '2px dashed blue' } : null}>{items}</section>
+                                <>
+                                    <section key={index}
+                                        onMouseEnter={() => {
+                                            setOverSection(true);
+                                            setSectionKey(index)
+                                        }}
+                                        onMouseLeave={() => setOverSection(false)} style={(overSection && sectionKey === index) ? { border: '2px dashed blue' } : null}>{items}
+                                    </section>
+                                    <div className="flex w-20 justify-evenly items-center" style={(overSection && sectionKey === index) ? {}}>
+                                        <button><i className="fas fa-arrow-up"></i></button>
+                                        <button><i className="fas fa-arrow-down"></i></button>
+                                        <button><i className="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </>
                             )
                         })}
                     </div>
