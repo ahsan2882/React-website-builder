@@ -21,6 +21,7 @@ export default function Services4() {
                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                 initialValue="<h4>WHAT WE DO</h4>"
                 init={{
+                    forced_root_block:"",
                     menubar: false,
                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                         'alignright alignjustify | fontselect',
@@ -37,6 +38,7 @@ export default function Services4() {
                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                 initialValue="<h2>Our Services</h2>"
                 init={{
+                    forced_root_block:"",
                     menubar: false,
                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                         'alignright alignjustify | fontselect',
@@ -54,6 +56,7 @@ export default function Services4() {
                 initialValue="<p>Vestibulum commodo at dolor eu aliquam. In congue ornare augue eu
                         scelerisque. Duis vestibulum, dolor sed facilisis laoreet.</p>"
                 init={{
+                    forced_root_block:"",
                     menubar: false,
                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                         'alignright alignjustify | fontselect',

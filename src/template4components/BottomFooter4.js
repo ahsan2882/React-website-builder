@@ -15,6 +15,7 @@ export default function BottomFooter4() {
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                     initialValue="<p>Copyright © 2021 CITRIX CONSULTANCY. All Rights Reserved.</p>"
                     init={{
+                        forced_root_block:"",
                         menubar: false,
                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                             'alignright alignjustify | fontselect',

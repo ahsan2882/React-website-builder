@@ -108,6 +108,7 @@ export default function HeroSection4() {
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue={`<h1 class=" text-7xl">Security Services</h1>`}
                         init={{
+                            forced_root_block:"",
                             menubar: false,
                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                 'alignright alignjustify | fontselect',
@@ -122,6 +123,7 @@ export default function HeroSection4() {
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue="<p>For your personal safety</p>"
                         init={{
+                            forced_root_block:"",
                             menubar: false,
                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                 'alignright alignjustify | fontselect',
@@ -139,6 +141,7 @@ export default function HeroSection4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<button>Contact Us</button>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',

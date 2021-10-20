@@ -20,6 +20,7 @@ export default function FooterContact4() {
                             eleifend rhoncus. Mauris vel nisl a massa viverra sollicitudin
                             semper a diam.</p>"
                     init={{
+                        forced_root_block:"",
                         menubar: false,
                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                             'alignright alignjustify | fontselect',
@@ -37,6 +38,7 @@ export default function FooterContact4() {
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                     initialValue="<p>021-34556899</p>"
                     init={{
+                        forced_root_block:"",
                         menubar: false,
                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                             'alignright alignjustify | fontselect',

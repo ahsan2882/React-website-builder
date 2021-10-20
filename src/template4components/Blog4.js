@@ -19,6 +19,7 @@ export default function Blog4() {
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                     initialValue="<h3>WHATS NEW</h3>"
                     init={{
+                        forced_root_block:"",
                         menubar: false,
                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                             'alignright alignjustify | fontselect',
@@ -35,6 +36,7 @@ export default function Blog4() {
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                     initialValue="<h1>Latest News</h1>"
                     init={{
+                        forced_root_block:"",
                         menubar: false,
                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                             'alignright alignjustify | fontselect',
@@ -70,6 +72,7 @@ export default function Blog4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Personal Security Services</h1>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -90,6 +93,7 @@ export default function Blog4() {
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ...</p>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -107,6 +111,7 @@ export default function Blog4() {
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<button>Read More</button>"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | fontselect',
@@ -141,6 +146,7 @@ export default function Blog4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Personal Security Services</h1>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -161,6 +167,7 @@ export default function Blog4() {
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ...</p>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -178,6 +185,7 @@ export default function Blog4() {
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<button>Read More</button>"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | fontselect',
@@ -212,6 +220,7 @@ export default function Blog4() {
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="<h1>Personal Security Services</h1>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -232,6 +241,7 @@ export default function Blog4() {
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ...</p>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                     'alignright alignjustify | fontselect',
@@ -249,6 +259,7 @@ export default function Blog4() {
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="<button>Read More</button>"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | fontselect',
