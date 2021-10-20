@@ -18,6 +18,7 @@ export default function Footer4Asset() {
                                 }
                                 initialValue=" HOME"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -42,6 +43,7 @@ export default function Footer4Asset() {
                                 }
                                 initialValue="ABOUT"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -66,6 +68,7 @@ export default function Footer4Asset() {
                                 }
                                 initialValue="CONTACT"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -90,6 +93,7 @@ export default function Footer4Asset() {
                                 }
                                 initialValue="SERVICES"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -151,6 +155,7 @@ export default function Footer4Asset() {
                                 }
                                 initialValue="Subscribe"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -174,6 +179,7 @@ export default function Footer4Asset() {
                                 }
                                 initialValue=" © 2021 Security Guard"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +

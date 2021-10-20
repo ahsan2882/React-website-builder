@@ -27,6 +27,7 @@ export default function Footer2Asset() {
                                     }
                                     initialValue="For your personal safety"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -51,6 +52,7 @@ export default function Footer2Asset() {
                                     }
                                     initialValue="SERVICES"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -75,6 +77,7 @@ export default function Footer2Asset() {
                                             }
                                             initialValue="Mobile Petrolling"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -99,6 +102,7 @@ export default function Footer2Asset() {
                                             }
                                             initialValue="Static Security"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -123,6 +127,7 @@ export default function Footer2Asset() {
                                             }
                                             initialValue="CCTV Monitoring"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -150,6 +155,7 @@ export default function Footer2Asset() {
                                     }
                                     initialValue="INFORMATION"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -174,6 +180,7 @@ export default function Footer2Asset() {
                                             }
                                             initialValue="About"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -198,6 +205,7 @@ export default function Footer2Asset() {
                                             }
                                             initialValue="Services"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -222,6 +230,7 @@ export default function Footer2Asset() {
                                             }
                                             initialValue="Sectors"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -249,6 +258,7 @@ export default function Footer2Asset() {
                                     }
                                     initialValue="SUBSCRIBE"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -273,6 +283,7 @@ export default function Footer2Asset() {
                                             }
                                             initialValue="Placeholder"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -299,6 +310,7 @@ export default function Footer2Asset() {
                                     }
                                     initialValue="Bitters chicharrones fanny pack"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -320,6 +332,7 @@ export default function Footer2Asset() {
                                     }
                                     initialValue="waistcoat green juice"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -351,6 +364,7 @@ export default function Footer2Asset() {
                                 }
                                 initialValue="© 2021 Security Guard"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +

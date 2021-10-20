@@ -18,6 +18,7 @@ export default function Testimonial3Asset() {
             }
             initialValue="<h1>Testimonials</h1>"
             init={{
+              forced_root_block:"",
               menubar: false,
               toolbar:
                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -44,6 +45,7 @@ export default function Testimonial3Asset() {
                   }
                   initialValue="<p>When I saw how these guys prepare themselves to any operation, I realized that it was it! I must hire them! I was scared. Now I am feeling safe because there is always the strongmen team with me and my folks.</p>"
                   init={{
+                    forced_root_block:"",
                     menubar: false,
                     toolbar:
                       "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -67,6 +69,7 @@ export default function Testimonial3Asset() {
                       }
                       initialValue="<h4>Holden Caulfield</h4>"
                       init={{
+                        forced_root_block:"",
                         menubar: false,
                         toolbar:
                           "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -96,6 +99,7 @@ export default function Testimonial3Asset() {
                   }
                   initialValue="<p>When I saw how these guys prepare themselves to any operation, I realized that it was it! I must hire them! I was scared. Now I am feeling safe because there is always the strongmen team with me and my folks.</p>"
                   init={{
+                    forced_root_block:"",
                     menubar: false,
                     toolbar:
                       "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -119,6 +123,7 @@ export default function Testimonial3Asset() {
                       }
                       initialValue="<h4>Holden Caulfield</h4>"
                       init={{
+                        forced_root_block:"",
                         menubar: false,
                         toolbar:
                           "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +

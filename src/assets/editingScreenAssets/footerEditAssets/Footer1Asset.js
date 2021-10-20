@@ -25,6 +25,7 @@ export default function Footer1Asset() {
                                 }
                                 initialValue="For your personal safety"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -49,6 +50,7 @@ export default function Footer1Asset() {
                                     }
                                     initialValue="SERVICES"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -72,6 +74,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="Mobile Petrolling"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -95,6 +98,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="Static Security"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -118,6 +122,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="CCTV Monitoring"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -144,6 +149,7 @@ export default function Footer1Asset() {
                                     }
                                     initialValue="INFORMATION"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -167,6 +173,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="About"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -190,6 +197,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="Services"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -214,6 +222,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="Sectors"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -241,6 +250,7 @@ export default function Footer1Asset() {
                                     }
                                     initialValue="LATEST NEWS"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -265,6 +275,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="CCTV Installation Tricks."
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -289,6 +300,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="How To Monitor Your Facility."
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -313,6 +325,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="Outdoor Security Process."
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -339,6 +352,7 @@ export default function Footer1Asset() {
                                     }
                                     initialValue="OUR PROGRAMS"
                                     init={{
+                                        forced_root_block:"",
                                         menubar: false,
                                         toolbar:
                                             "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -363,6 +377,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="Cultural Awareness Show"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -387,6 +402,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="Military Virtual Training"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -411,6 +427,7 @@ export default function Footer1Asset() {
                                             }
                                             initialValue="Insider Threat Resilience"
                                             init={{
+                                                forced_root_block:"",
                                                 menubar: false,
                                                 toolbar:
                                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -440,6 +457,7 @@ export default function Footer1Asset() {
                                 }
                                 initialValue="© 2021 Security Guard —"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
