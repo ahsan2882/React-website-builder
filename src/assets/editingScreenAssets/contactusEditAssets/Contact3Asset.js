@@ -423,7 +423,7 @@ export default function Contact3Asset() {
                                         <textarea className={Contact3AssetCss['input-f']} type="text" placeholder="Message" ></textarea>
                                     </div>
                                     <div className={`${Contact3AssetCss['buttons']} ${Contact3AssetCss['pad']}`}>
-                                        <a href="#" className={Contact3AssetCss['button-sqr']}>Send</a>
+                                        <button href="#" className={Contact3AssetCss['button-sqr']}>Send</button>
                                     </div>
 
 
