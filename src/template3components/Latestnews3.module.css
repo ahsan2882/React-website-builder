@@ -19,11 +19,6 @@
     --clr-red-new: #c01120;
     --clr-black-new: #000;
   }
-  ::selection {
-    background-color: rgb(255, 255, 255);
-    color: #000;
-  }
-
   
   
 
