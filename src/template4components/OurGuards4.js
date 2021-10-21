@@ -58,6 +58,7 @@ export default function OurGuards4() {
                             key='guardIm1'
                             initialValue={`<img src=${guard1} alt="guard 1" class="${Guards4Css.guardImage} mx-auto"/>`}
                             init={{
+                                forced_root_block: "",
                                 menubar: false,
                                 plugins: [
                                     "image"
@@ -65,6 +66,22 @@ export default function OurGuards4() {
                                 toolbar: 'image'
                             }}
                         />
+                        {/* <img src={
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='guardIm1'
+                                initialValue={``}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
+                        } alt="guard 1" className={Guards4Css.guardImage}/> */}
                         {/* <TextH2 className={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
@@ -113,6 +130,7 @@ export default function OurGuards4() {
                             key='guardIm2'
                             initialValue={`<img src=${guard2} alt="guard 2" class="${Guards4Css.guardImage} mx-auto"/>`}
                             init={{
+                                forced_root_block: "",
                                 menubar: false,
                                 plugins: [
                                     "image"
