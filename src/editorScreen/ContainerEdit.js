@@ -135,7 +135,9 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                         <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
-                                        <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
+                                        <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><span className="material-icons-outlined">
+                                            wallpaper
+                                        </span></button>
                                     </div>
                                 </section>
 
