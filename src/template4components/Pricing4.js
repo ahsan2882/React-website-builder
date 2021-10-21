@@ -2,10 +2,10 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
 import Pricing4Css from './Pricing4.module.css'
 
-export default function Pricing4() {
+export default function Pricing4({background}) {
     const editorRef = useRef(null);
     return (
-        <div className="py-20 px-0 w-full">
+        <div className="py-20 px-0 w-full" style={{background: background}}>
             <div className={Pricing4Css.containerMainPrice}>
                 <div className="flex flex-col items-center py-10 px-0">
                     {/* <TextH2 className={`text-2xl ${Pricing4Css.pricingPlanHead}`} text="Reasonable Pricing Plans" /> */}
