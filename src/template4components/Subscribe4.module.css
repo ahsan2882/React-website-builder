@@ -1,3 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Fira Sans";
+}
+
+/* ---------------------------------------------------- colors --------------------------------------------- */
+.clr-primary {
+    color: #00c1cf;
+}
+
+.clr-secondary {
+    color: #534c5c;
+}
+
+.clr-primary-overlay {
+    color: rgba(0, 193, 207, 0.75);
+}
+
+.clr-black-overlay {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+/* ------------------------------------------------------ background ------------------------------------------ */
+.bg-primary {
+    background-color: #00c1cf;
+}
+
+.bg-primary-overlay {
+    background-color: rgba(0, 193, 207, 0.75);
+}
+
+
+/* ------------------------------------------------------- border --------------------------------------------------- */
+.border-rad1-5r {
+    border-radius: 1.5rem;
+}
+
+.border-rad-2r {
+    border-radius: 2rem;
+}
+
+.border-rad10 {
+    border-radius: 10px;
+}
+
+.border-rad20 {
+    border-radius: 20px;
+}
+
+.border-rad30 {
+    border-radius: 30px;
+}
+
+.border-rad-050 {
+    border-radius: 50%;
+}
+
+.border-primary {
+    border-color: #00c1cf;
+}
+
+/* ---------------------------------------------------------- z - index --------------------------------------------------- */
+.z-500 {
+    z-index: 500;
+}
+
+/* ------------------------------------------------- heights --------------------------------------------- */
+.min-h-40r {
+    min-height: 40rem;
+}
+
+.min-h-46r {
+    min-height: 46em;
+}
+
+/* ------------------------------------------------ widths ---------------------------------------- */
+.max-w-25r {
+    max-width: 25rem;
+}
+
+.max-w-74r {
+    max-width: 74rem;
+}
+
+.max-w-63r {
+    max-width: 63rem;
+}
+
+.max-w-100v {
+    max-width: 100vw;
+}
+
+.w-30c {
+    width: 30ch;
+}
+
+.w-40c {
+    width: 40ch;
+}
+
+.w-080 {
+    width: 80%;
+}
+
+.w-090 {
+    width: 90%;
+}
+
+.w-35r {
+    width: 35rem;
+}
+
+.w-40r {
+    width: 40rem;
+}
+
+
+
+/* ------------------------------------------custom css ------------------------------------------ */
 
 .container1 {
     max-width: 73.5rem;
@@ -14,6 +135,7 @@
     margin-bottom: -4rem;
     position: relative;
 }
+
 .subscribeSection h1 {
     color: rgb(26, 195, 224);
     width: 100%;
@@ -100,7 +222,8 @@
     font-size: 1.3rem;
     width: 50%;
 }
-.inputEmail > div{
+
+.inputEmail>div {
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
@@ -110,7 +233,8 @@
     text-align: center;
     width: 50%;
 }
-.inputEmail>div>p>button{
+
+.inputEmail>div>p>button {
     width: 100%;
     height: 100%;
     padding: 1.2rem 0;
@@ -126,61 +250,75 @@
         max-width: 100%;
         margin-bottom: -5.7rem;
     }
+
     .subscribeWrapper {
         padding: 1rem 2rem;
         justify-content: center;
     }
+
     .rightContainer {
         flex-direction: column;
     }
+
     .offer {
         margin-bottom: 1rem;
         text-align: center;
     }
+
     .inputEmail {
         width: 100%;
     }
 }
+
 @media (max-width: 850px) {
     .subscribeSection {
         margin: 0;
         margin-bottom: -5rem;
         max-width: 100%;
     }
+
     .inputEmail {
         width: 80%;
         flex-direction: column;
         background-color: transparent;
     }
+
     .emailField {
         margin-bottom: 2rem;
         padding-top: 0.7rem;
         width: 80%;
         padding-bottom: 0.7rem;
     }
+
     .subscribeBtn {
         width: 70%;
     }
 }
-@media(max-width:500px){
+
+@media(max-width:500px) {
     .subscribeSection {
         padding: 0;
     }
+
     .subscribeWrapper {
         padding: 2rem 0;
     }
+
     .offer>div:first-child>h3 {
         font-size: 1rem;
     }
+
     .offer>div:last-child>h1 {
         font-size: 1.2rem;
     }
+
     .emailField {
         margin-bottom: 1.25rem;
         width: 100%;
         padding: 0.7rem;
         font-size: 1rem;
     }
+
     .subscribeBtn {
         width: 100%;
         font-size: 1.1rem;
