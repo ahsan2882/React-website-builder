@@ -34,6 +34,8 @@ import Footer4 from '../template4components/Footer4';
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
+import Header4 from '../template4components/Header4';
+import Navigation4 from '../template4components/Navigation4';
 
 
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
@@ -81,20 +83,19 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
         else if (temp === 3) {
             setUpdateChildren([<Services3 />, <Latestnews3 />, <Guard3 />, <Ourprograms3 />, <About3 />, <Accrediation3 />, <Footer3 />])
         }
-        else if (temp === 4) {
-            setUpdateChildren([<HeroSection4 />, <AboutUs4 />, <Pricing4 />, <Services4 />, <OurGuards4 />, <Blog4 />, <Accreditation4 />, <Footer4 />])
+        else if (temp === 4) {            
+            setUpdateChildren([<Header4 />, <Navigation4 />, <HeroSection4 />, <AboutUs4 />, <Pricing4 background={null}/>, <Services4/>, <OurGuards4/>, <Blog4/>, <Accreditation4/>, <Footer4/>])
         }
         else if (temp === 0) {
             setUpdateChildren([])
         }
-    }, [temp])
+    }, [temp, currentBackground])
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
         newArray[indexC] = newArray[indexC - 1];
         newArray[indexC - 1] = currentCom;
         setUpdateChildren([...newArray])
-        // console.log(updatedMoved);
     }
     const moveDown = (indexC) => {
         let newArray = [...updateChildren];
@@ -108,7 +109,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
         newArray.splice(indexC, 1);
         setUpdateChildren([...newArray])
     }
-    const changeBackground = () => {
+    const changeBackground = (indexC) => {
         setShowPopUp((popup) => !popup);
     }
     return (
@@ -123,7 +124,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
                     {/* <EmptyTemplate/> */}
                     {/* <div className="getInnerHTML" ref={htmlRef}> */}
-                    {updateChildren.map((items, index) => {
+                    {updateChildren.map((item, index) => {
                         return (
                             // 
                             <>
@@ -137,13 +138,15 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                         setShowPopUp(false);
                                     }}
                                     className={(overSection && sectionKey === index) ? "border-2 border-solid border-red-500 relative" : "border-2 border-solid border-transparent"}
-                                    style={{background: currentBackground}}>
-                                    {items}
-                                    <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "2rem", zIndex:"9999999" } : { display: "none" }}>
+                                // style={(sectionKey === index) ? {background: currentBackground} : null}
+                                >
+                                    {/* <ItemX /> */}
+                                    {item}
+                                    <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "2rem", zIndex: "9999999" } : { display: "none" }}>
                                         <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
-                                        <button className="bg-red-500 p-3" onClick={() => changeBackground()}><i className="far fa-images text-white"></i></button>
+                                        <button className="bg-red-500 p-3" onClick={() => changeBackground(index)}><i className="far fa-images text-white"></i></button>
                                     </div>
                                     <div style={(showPopUp && sectionKey === index) ? { position: "absolute", top: "5rem", right: "3rem", zIndex: "9999999" } : { display: "none" }}>
                                         <GithubPicker
@@ -165,7 +168,3 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
 
     );
 }
-
-// export const InnerHTML = () => {
-
-// }
