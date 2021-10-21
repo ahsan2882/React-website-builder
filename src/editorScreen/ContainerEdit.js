@@ -19,7 +19,7 @@ import Accrediation3 from '../template3components/Accrediation3'
 import Footer3 from '../template3components/Footer3'
 import Guard3 from '../template3components/Guard3'
 
-import Header4 from '../template4components/Header4';
+// import Header4 from '../template4components/Header4';
 import HeroSection4 from '../template4components/HeroSection4';
 import AboutUs4 from '../template4components/AboutUs4';
 import Pricing4 from '../template4components/Pricing4';
@@ -48,7 +48,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             console.log(valueString)
             setUpdateChildren([...updateChildren, assetObject[valueString]])
             // document.getElementsByClassName("getInnerHTML");
-            const elem = document.getElementsByClassName('Contact4Asset_firstHead__22xbT')[0]
+            // const elem = document.getElementsByClassName('Contact4Asset_firstHead__22xbT')[0]
             // const element = document.querySelector(elem);
             // const styleS = window.getComputedStyle(elem);
             // console.log(styleS)
@@ -129,9 +129,10 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                     onMouseLeave={() => setOverSection(false)}
                                     className={(overSection && sectionKey === index) ? "border-2 border-solid border-red-500 relative" : "border-2 border-solid border-transparent"}>
                                     {items}
-                                    <div className="flex w-32 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "2rem" } : { display: "none" }}>
+                                    <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "2rem" } : { display: "none" }}>
                                         <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
+                                        <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
                                     </div>
                                 </section>
