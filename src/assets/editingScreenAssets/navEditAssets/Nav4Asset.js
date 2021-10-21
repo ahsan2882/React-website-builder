@@ -4,11 +4,11 @@ export default function Nav4Asset() {
   return (
     <>
       <header class="text-gray-600 body-font bg-black">
-        <div class="container mx-auto flex flex-wrap p-1 flex-col md:flex-row items-center">
-          <a href={2} class="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0">
+        <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
+          {/* <a href={2} class="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0"> */}
 
           <img class="h-20 w-30" src={logo} alt="logo"/>
-          </a>
+          {/* </a> */}
           <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
             <a href={2} class="mr-5 cursor-pointer hover:text-2xl text-white">Home</a>
             <a href={2} class="mr-5 cursor-pointer hover:text-2xl text-white">Manufacturing</a>
