@@ -1,11 +1,11 @@
 import React from 'react'
-
+import logo from './logo 4.png'
 export default function Nav3Asset() {
   return (
     <>
       <header class="text-gray-600 body-font bg-red-50 mt-10 mb-10">
         <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center justify-center">
-
+        <img class="h-16 w-18" src={logo} alt="logos" /> 
           <a href={2} class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
 
 
