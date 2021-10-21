@@ -33,8 +33,8 @@ import Footer4 from '../template4components/Footer4';
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
-import Hero1Asset from '../assets/editingScreenAssets/headerEditAssets/Hero1Asset';
-import Hero2Asset from '../assets/editingScreenAssets/headerEditAssets/Hero2Asset';
+// import Hero1Asset from '../assets/editingScreenAssets/headerEditAssets/Hero1Asset';
+// import Hero2Asset from '../assets/editingScreenAssets/headerEditAssets/Hero2Asset';
 
 
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
