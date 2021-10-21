@@ -34,8 +34,6 @@ import Footer4 from '../template4components/Footer4';
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
-// import Hero1Asset from '../assets/editingScreenAssets/headerEditAssets/Hero1Asset';
-// import Hero2Asset from '../assets/editingScreenAssets/headerEditAssets/Hero2Asset';
 
 
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
@@ -110,7 +108,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
         newArray.splice(indexC, 1);
         setUpdateChildren([...newArray])
     }
-    const changeBackground = (index) => {
+    const changeBackground = () => {
         setShowPopUp((popup) => !popup);
     }
     return (
@@ -145,7 +143,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                         <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
-                                        <button className="bg-red-500 p-3" onClick={() => changeBackground(index)}><i className="far fa-images text-white"></i></button>
+                                        <button className="bg-red-500 p-3" onClick={() => changeBackground()}><i className="far fa-images text-white"></i></button>
                                     </div>
                                     <div style={(showPopUp && sectionKey === index) ? { position: "absolute", top: "5rem", right: "3rem", zIndex: "9999999" } : { display: "none" }}>
                                         <GithubPicker
