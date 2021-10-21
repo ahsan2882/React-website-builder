@@ -1,5 +1,5 @@
 import React from 'react';
-import Header4 from './Header4';
+// import Header4 from './Header4';
 import HeroSection4 from './HeroSection4';
 import AboutUs4 from './AboutUs4';
 import Pricing4 from './Pricing4';
