@@ -12,6 +12,7 @@
     "@tinymce/tinymce-react": "^3.12.6",
     "css-loader": "^6.3.0",
     "grapesjs": "^0.17.26",
+    "material-design-icons": "^3.0.1",
     "react": "^17.0.2",
     "react-contenteditable": "^3.3.6",
     "react-dnd": "^14.0.4",
