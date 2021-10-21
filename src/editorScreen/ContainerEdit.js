@@ -41,8 +41,10 @@ import Navigation4 from '../template4components/Navigation4';
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
     const htmlRef = useRef(null);
     const [updateChildren, setUpdateChildren] = useState([])
+    const [updateChildrenJSX, setUpdateChildrenJSX] = useState([])
     const [overSection, setOverSection] = useState(false);
-    const [currentBackground, setCurrentBackground] = useState("#fff");
+    const [currentBackground, setCurrentBackground] = useState("");
+    // const [lastBackground, setLastBackground] = useState("");
     const [sectionKey, setSectionKey] = useState(null);
     const [showPopUp, setShowPopUp] = useState(false);
     const [{ canDrop }, drop] = useDrop({
@@ -51,7 +53,9 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             console.log(item)
             let valueString = Object.values(item)[0];
             console.log(valueString)
-            setUpdateChildren([...updateChildren, assetObject[valueString]])
+            let Comp = assetObject[valueString]
+            setUpdateChildrenJSX([...updateChildrenJSX, <Comp />])
+            setUpdateChildren([...updateChildren, Comp])
             // document.getElementsByClassName("getInnerHTML");
             // const elem = document.getElementsByClassName('Contact4Asset_firstHead__22xbT')[0]
             // const element = document.querySelector(elem);
@@ -71,50 +75,53 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     const temp = templateNum;
 
     useEffect(() => {
-        console.log("use effect ran:   ", defWidth)
-    }, [defWidth]);
+        console.log("background", currentBackground)
+    }, [currentBackground]);
     useEffect(() => {
         if (temp === 1) {
-            setUpdateChildren([<Header01 />, <Service01 />, <Testimonials />, <Prizing01 />, <Guard01 />, <News01 />, <Program01 />, <About01 />, <Footer01 />])
+            setUpdateChildrenJSX([<Header01 />, <Service01 />, <Testimonials />, <Prizing01 />, <Guard01 />, <News01 />, <Program01 />, <About01 />, <Footer01 />])
         }
         else if (temp === 2) {
-            setUpdateChildren([<h2>Template 2 Components here!!</h2>])
+            setUpdateChildrenJSX([<h2>Template 2 Components here!!</h2>])
         }
         else if (temp === 3) {
-            setUpdateChildren([<Services3 />, <Latestnews3 />, <Guard3 />, <Ourprograms3 />, <About3 />, <Accrediation3 />, <Footer3 />])
+            setUpdateChildrenJSX([<Services3 />, <Latestnews3 />, <Guard3 />, <Ourprograms3 />, <About3 />, <Accrediation3 />, <Footer3 />])
         }
-        else if (temp === 4) {            
-            setUpdateChildren([<Header4 />, <Navigation4 />, <HeroSection4 />, <AboutUs4 />, <Pricing4 background={null}/>, <Services4/>, <OurGuards4/>, <Blog4/>, <Accreditation4/>, <Footer4/>])
+        else if (temp === 4) {
+            setUpdateChildrenJSX([<Header4 />, <Navigation4 />, <HeroSection4 />, <AboutUs4 />, <Pricing4 />, <Services4 />, <OurGuards4 />, <Blog4 />, <Accreditation4 />, <Footer4 />])
+            setUpdateChildren([Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Footer4])
         }
         else if (temp === 0) {
-            setUpdateChildren([])
+            setUpdateChildrenJSX([])
         }
     }, [temp, currentBackground])
     const moveUp = (indexC) => {
-        let newArray = [...updateChildren];
+        let newArray = [...updateChildrenJSX];
         let currentCom = newArray[indexC];
         newArray[indexC] = newArray[indexC - 1];
         newArray[indexC - 1] = currentCom;
-        setUpdateChildren([...newArray])
+        setUpdateChildrenJSX([...newArray])
     }
     const moveDown = (indexC) => {
-        let newArray = [...updateChildren];
+        let newArray = [...updateChildrenJSX];
         let currentCom = newArray[indexC];
         newArray[indexC] = newArray[indexC + 1];
         newArray[indexC + 1] = currentCom;
-        setUpdateChildren([...newArray])
+        setUpdateChildrenJSX([...newArray])
     }
     const removeComponent = (indexC) => {
-        let newArray = [...updateChildren];
+        let newArray = [...updateChildrenJSX];
         newArray.splice(indexC, 1);
-        setUpdateChildren([...newArray])
+        setUpdateChildrenJSX([...newArray])
     }
-    const changeBackground = (indexC) => {
-        setShowPopUp((popup) => !popup);
-    }
+    // const changeBackground = (indexC) => {
+    //     let newArrayJSX = [...updateChildrenJSX]
+    //     let Comp = [...updateChildren].at(indexC)
+    //     newArrayJSX.splice(indexC, 1, <Comp background={currentBackground} />)
+    //     setUpdateChildrenJSX([...newArrayJSX])
+    // }
     return (
         <>
-            {/* {(canDrop ? <div style={{ "background": `rgba(0,0,0,0.5)` }} className={ContainerEditCss.overlay}></div> : null)} */}
             <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
@@ -124,7 +131,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
                     {/* <EmptyTemplate/> */}
                     {/* <div className="getInnerHTML" ref={htmlRef}> */}
-                    {updateChildren.map((item, index) => {
+                    {updateChildren.map((ItemX, index) => {
                         return (
                             // 
                             <>
@@ -140,19 +147,23 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                     className={(overSection && sectionKey === index) ? "border-2 border-solid border-red-500 relative" : "border-2 border-solid border-transparent"}
                                 // style={(sectionKey === index) ? {background: currentBackground} : null}
                                 >
-                                    {/* <ItemX /> */}
-                                    {item}
+                                    <ItemX background={(sectionKey === index) ? currentBackground : "none"}/>
+                                    {/* {item} */}
                                     <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "2rem", zIndex: "9999999" } : { display: "none" }}>
                                         <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
-                                        <button className="bg-red-500 p-3" onClick={() => changeBackground(index)}><i className="far fa-images text-white"></i></button>
+                                        <button className="bg-red-500 p-3" onClick={() => {
+                                            setShowPopUp((popup) => !popup);
+                                            // setLastBackground(currentBackground)
+                                        }}><i className="far fa-images text-white"></i></button>
                                     </div>
                                     <div style={(showPopUp && sectionKey === index) ? { position: "absolute", top: "5rem", right: "3rem", zIndex: "9999999" } : { display: "none" }}>
                                         <GithubPicker
                                             triangle="top-right"
                                             onChangeComplete={(color) => {
-                                                setCurrentBackground(color.hex)
+                                                setCurrentBackground(color.hex);
+                                                // changeBackground(index);
                                             }}
                                         />
                                     </div>
