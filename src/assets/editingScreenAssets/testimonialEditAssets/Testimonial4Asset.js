@@ -1,7 +1,7 @@
 import React from 'react'
-import Img1 from '../testimonialEditAssets/1.jpg'
-import Img2 from '../testimonialEditAssets/2.jpg'
-import Img3 from '../testimonialEditAssets/3.jpg'
+import Img1 from '../testimonialEditAssets/1.png'
+import Img2 from '../testimonialEditAssets/2.png'
+import Img3 from '../testimonialEditAssets/3.png'
 export default function Testimonial4Asset() {
 
 
