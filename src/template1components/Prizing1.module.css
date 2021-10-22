@@ -75,7 +75,7 @@
   
   .nb1 {
     font-size: 60px;
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
     font-family: "Poppins", serif;
     font-weight: 700;
   }
@@ -300,7 +300,7 @@
     height: 100%;
     left: -100%;
     top: 0;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     content: "";
     transition: 0.3s;
     z-index: -1;
