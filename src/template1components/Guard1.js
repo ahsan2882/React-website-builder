@@ -1,8 +1,8 @@
 import React from 'react'
 import Guard1Css from './Guard1.module.css'
-import ourteam from '../assets/template1images/ourteam.jpg'
-import ourteam2 from '../assets/template1images/ourteam2.jpg'
-import ourteam3 from '../assets/template1images/ourteam3.jpg'
+import ourteam from '../assets/template1images/ourteam.png'
+import ourteam2 from '../assets/template1images/ourteam2.png'
+import ourteam3 from '../assets/template1images/ourteam3.png'
 
 
 
