@@ -2,15 +2,15 @@ import React, { useEffect, useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import ContainerEditCss from './ContainerEdit.module.css'
 
-import { Header01 } from '../template1components/Header01'
-import { Service01 } from '../template1components/Service01'
-import { Testimonials } from '../template1components/Testimonials';
-import { Prizing01 } from '../template1components/Prizing01'
-import { Guard01 } from '../template1components/Guard01'
-import { News01 } from '../template1components/News01'
-import { Program01 } from '../template1components/Program01'
-import { About01 } from '../template1components/About01'
-import { Footer01 } from '../template1components/Footer01'
+import { Header1 } from '../template1components/Header1'
+import { Service1 } from '../template1components/Service1'
+import { Testimonials1 } from '../template1components/Testimonials1';
+import { Prizing1 } from '../template1components/Prizing1'
+import { Guard1 } from '../template1components/Guard1'
+import { News1 } from '../template1components/News1'
+import { Program1 } from '../template1components/Program1'
+import { About1 } from '../template1components/About1'
+import { Footer1 } from '../template1components/Footer1'
 
 import Services3 from '../template3components/Services3'
 import Latestnews3 from '../template3components/Latestnews3'
@@ -28,7 +28,6 @@ import Services4 from '../template4components/Services4';
 import OurGuards4 from '../template4components/OurGuards4';
 import Blog4 from '../template4components/Blog4';
 import Accreditation4 from '../template4components/Accreditation4';
-import Footer4 from '../template4components/Footer4';
 // import EmptyTemplate from '../editorScreen/EmptyTemplate'
 // import Contact4AssetCss from '../assets/editingScreenAssets/contactusEditAssets/Contact4Asset.module.css'
 import { useDrop } from 'react-dnd'
@@ -36,15 +35,16 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import Header4 from '../template4components/Header4';
 import Navigation4 from '../template4components/Navigation4';
+import Subscribe4 from '../template4components/Subscribe4';
+import FooterContact4 from '../template4components/FooterContact4';
+import BottomFooter4 from '../template4components/BottomFooter4';
 
 
 export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
     const htmlRef = useRef(null);
     const [updateChildren, setUpdateChildren] = useState([])
-    const [updateChildrenJSX, setUpdateChildrenJSX] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [currentBackground, setCurrentBackground] = useState("");
-    // const [lastBackground, setLastBackground] = useState("");
     const [sectionKey, setSectionKey] = useState(null);
     const [showPopUp, setShowPopUp] = useState(false);
     const [{ canDrop }, drop] = useDrop({
@@ -54,7 +54,6 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             let valueString = Object.values(item)[0];
             console.log(valueString)
             let Comp = assetObject[valueString]
-            setUpdateChildrenJSX([...updateChildrenJSX, <Comp />])
             setUpdateChildren([...updateChildren, Comp])
             // document.getElementsByClassName("getInnerHTML");
             // const elem = document.getElementsByClassName('Contact4Asset_firstHead__22xbT')[0]
@@ -79,40 +78,39 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     }, [currentBackground]);
     useEffect(() => {
         if (temp === 1) {
-            setUpdateChildrenJSX([<Header01 />, <Service01 />, <Testimonials />, <Prizing01 />, <Guard01 />, <News01 />, <Program01 />, <About01 />, <Footer01 />])
+            setUpdateChildren([Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1])
         }
         else if (temp === 2) {
-            setUpdateChildrenJSX([<h2>Template 2 Components here!!</h2>])
+            // setUpdateChildrenJSX([<h2>Template 2 Components here!!</h2>])
         }
         else if (temp === 3) {
-            setUpdateChildrenJSX([<Services3 />, <Latestnews3 />, <Guard3 />, <Ourprograms3 />, <About3 />, <Accrediation3 />, <Footer3 />])
+            setUpdateChildren([Services3, Latestnews3, Guard3, Ourprograms3, About3, Accrediation3, Footer3])
         }
         else if (temp === 4) {
-            setUpdateChildrenJSX([<Header4 />, <Navigation4 />, <HeroSection4 />, <AboutUs4 />, <Pricing4 />, <Services4 />, <OurGuards4 />, <Blog4 />, <Accreditation4 />, <Footer4 />])
-            setUpdateChildren([Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Footer4])
+            setUpdateChildren([Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Subscribe4, FooterContact4, BottomFooter4])
         }
         else if (temp === 0) {
-            setUpdateChildrenJSX([])
+            // setUpdateChildrenJSX([])
         }
     }, [temp, currentBackground])
     const moveUp = (indexC) => {
-        let newArray = [...updateChildrenJSX];
+        let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
         newArray[indexC] = newArray[indexC - 1];
         newArray[indexC - 1] = currentCom;
-        setUpdateChildrenJSX([...newArray])
+        setUpdateChildren([...newArray])
     }
     const moveDown = (indexC) => {
-        let newArray = [...updateChildrenJSX];
+        let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
         newArray[indexC] = newArray[indexC + 1];
         newArray[indexC + 1] = currentCom;
-        setUpdateChildrenJSX([...newArray])
+        setUpdateChildren([...newArray])
     }
     const removeComponent = (indexC) => {
-        let newArray = [...updateChildrenJSX];
+        let newArray = [...updateChildren];
         newArray.splice(indexC, 1);
-        setUpdateChildrenJSX([...newArray])
+        setUpdateChildren([...newArray])
     }
     // const changeBackground = (indexC) => {
     //     let newArrayJSX = [...updateChildrenJSX]
