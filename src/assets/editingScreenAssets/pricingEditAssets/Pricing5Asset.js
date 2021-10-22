@@ -1,6 +1,5 @@
 import React from 'react'
 import Pricing5AssetCss from './Pricing5Asset.module.css'
-import Img from '../pricingEditAssets/dot.png'
 export default function Pricing5Asset() {
     return (
         <>

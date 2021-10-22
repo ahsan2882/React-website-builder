@@ -5,10 +5,10 @@ export default function Pricing3Asset() {
     const editorRef = useRef(null);
     return (
         <>
-            <section class={Pricing3AssetCss['pricing-sec']}>
-                <div class={Pricing3AssetCss['container-pricing']}>
-                    <div class={Pricing3AssetCss['price-card-wrapper']}>
-                        <div class={Pricing3AssetCss['price-card-c']}>
+            <section className={Pricing3AssetCss['pricing-sec']}>
+                <div className={Pricing3AssetCss['container-pricing']}>
+                    <div className={Pricing3AssetCss['price-card-wrapper']}>
+                        <div className={Pricing3AssetCss['price-card-c']}>
                             <h1>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
@@ -32,7 +32,7 @@ export default function Pricing3Asset() {
                             />
                               
                             </h1>
-                            <div class={Pricing3AssetCss['price-content-c']}>
+                            <div className={Pricing3AssetCss['price-content-c']}>
                                 <h2>     
                                 <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
@@ -56,17 +56,17 @@ export default function Pricing3Asset() {
                             />
                             </h2>
                                 <ul>
-                                    <li><i class="fas fa-check"> </i> cctc cameras</li>
-                                    <li><i class="fas fa-check"> </i>01 security guard</li>
-                                    <li><i class="fas fa-check"> </i>No Physsical Protection</li>
-                                    <li><i class="fas fa-check"> </i>No Security With Dogs</li>
-                                    <li><i class="fas fa-check"> </i>No Changes on Complain</li>
+                                    <li><i className="fas fa-check"> </i> cctc cameras</li>
+                                    <li><i className="fas fa-check"> </i>01 security guard</li>
+                                    <li><i className="fas fa-check"> </i>No Physsical Protection</li>
+                                    <li><i className="fas fa-check"> </i>No Security With Dogs</li>
+                                    <li><i className="fas fa-check"> </i>No Changes on Complain</li>
                                 </ul>
 
 
 
                             </div>
-                            <button href="#" class={Pricing3AssetCss['button-sqr']}>
+                            <button  className={Pricing3AssetCss['button-sqr']}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -89,7 +89,7 @@ export default function Pricing3Asset() {
                             />
                          </button>
                         </div>
-                        <div class={Pricing3AssetCss['price-card']}>
+                        <div className={Pricing3AssetCss['price-card']}>
                             <h1>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
@@ -113,7 +113,7 @@ export default function Pricing3Asset() {
                             />
                              
                             </h1>
-                            <div class={Pricing3AssetCss['price-content']}>
+                            <div className={Pricing3AssetCss['price-content']}>
                                 <h2>
                                 <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
@@ -137,17 +137,17 @@ export default function Pricing3Asset() {
                             />
                             </h2>
                                 <ul>
-                                    <li><i class="fas fa-check"> </i>02 cctc cameras</li>
-                                    <li><i class="fas fa-check"> </i>01 security guard</li>
-                                    <li><i class="fas fa-check"> </i>Physsical Protection</li>
-                                    <li><i class="fas fa-check"> </i>No Security With Dogs</li>
-                                    <li><i class="fas fa-check"> </i>No Changes on Complain</li>
+                                    <li><i className="fas fa-check"> </i>02 cctc cameras</li>
+                                    <li><i className="fas fa-check"> </i>01 security guard</li>
+                                    <li><i className="fas fa-check"> </i>Physsical Protection</li>
+                                    <li><i className="fas fa-check"> </i>No Security With Dogs</li>
+                                    <li><i className="fas fa-check"> </i>No Changes on Complain</li>
                                 </ul>
                             </div>
-                            <button href="#" class={Pricing3AssetCss['button-sqr']}>Get Quote </button >
+                            <button className={Pricing3AssetCss['button-sqr']}>Get Quote </button >
 
                         </div>
-                        <div class={Pricing3AssetCss['price-card-c']}>
+                        <div className={Pricing3AssetCss['price-card-c']}>
                             <h1>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
@@ -170,7 +170,7 @@ export default function Pricing3Asset() {
                                 }}
                             />
                             </h1>
-                            <div class={Pricing3AssetCss['price-content-c']}>
+                            <div className={Pricing3AssetCss['price-content-c']}>
                                 <h2>
                                 <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
@@ -194,14 +194,14 @@ export default function Pricing3Asset() {
                             />
                             </h2>
                                 <ul>
-                                    <li><i class="fas fa-check"> </i>02 cctc cameras</li>
-                                    <li><i class="fas fa-check"> </i>01 security guard</li>
-                                    <li><i class="fas fa-check"> </i>Physsical Protection</li>
-                                    <li><i class="fas fa-check"> </i>Security With Dogs</li>
-                                    <li><i class="fas fa-check"> </i>Changes on Complain</li>
+                                    <li><i className="fas fa-check"> </i>02 cctc cameras</li>
+                                    <li><i className="fas fa-check"> </i>01 security guard</li>
+                                    <li><i className="fas fa-check"> </i>Physsical Protection</li>
+                                    <li><i className="fas fa-check"> </i>Security With Dogs</li>
+                                    <li><i className="fas fa-check"> </i>Changes on Complain</li>
                                 </ul>
                             </div>
-                            <button href="#" class={Pricing3AssetCss['button-sqr']}>
+                            <button  className={Pricing3AssetCss['button-sqr']}>
                                 
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
