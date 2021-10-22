@@ -1,10 +1,10 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom';
-import guard1 from '../assets/template4images/guard1.jpg';
-import guard2 from '../assets/template4images/guard2.jpg';
-import guard3 from '../assets/template4images/guard3.jpg';
-import guard4 from '../assets/template4images/guard4.jpg';
+import guard1 from '../assets/template4images/guard1.png';
+import guard2 from '../assets/template4images/guard2.png';
+import guard3 from '../assets/template4images/guard3.png';
+import guard4 from '../assets/template4images/guard4.png';
 import Guards4Css from './OurGuards4.module.css';
 
 export default function OurGuards4() {
