@@ -1,11 +1,11 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
-import serv1 from '../assets/template4images/service_01-778x610.jpg';
-import serv2 from '../assets/template4images/service_02-778x610.jpg';
-import serv3 from '../assets/template4images/service_03-778x610.jpg';
-import serv4 from '../assets/template4images/service_04-778x610.jpg';
-import serv5 from '../assets/template4images/service_05-778x610.jpg';
-import serv6 from '../assets/template4images/service_06-778x610.jpg';
+import serv1 from '../assets/template4images/service_01-778x610.png';
+import serv2 from '../assets/template4images/service_02-778x610.png';
+import serv3 from '../assets/template4images/service_03-778x610.png';
+import serv4 from '../assets/template4images/service_04-778x610.png';
+import serv5 from '../assets/template4images/service_05-778x610.png';
+import serv6 from '../assets/template4images/service_06-778x610.png';
 import Service4Css from './Services4.module.css';
 import { Link } from 'react-router-dom';
 
