@@ -1,28 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-
-
-:root {
-    --primary-color: #00d4ff;
-  }
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", serif;
-  }
-
-
-
-html {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    --clr-primary: #651fff;
-    --clr-gray: #37474f;
-    --clr-gray-light: #b0bec5;
-  }
-  /* =========================================== */
+/* =========================================== */
 /* =                                         = */
 /* =           Header Section Start          = */
 /* =                                         = */
@@ -450,7 +426,7 @@ html {
     height: 100%;
     left: -100%;
     top: 0;
-    background-color: var(--primary-color);
+    background-color: #00d4ff;
     content: "";
     transition: 0.3s;
     z-index: -1;
