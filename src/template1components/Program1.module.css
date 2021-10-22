@@ -126,7 +126,7 @@ text-align: center;
     font-size: 16px;
   }
   .btnb {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
