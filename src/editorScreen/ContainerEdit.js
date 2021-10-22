@@ -44,6 +44,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     const htmlRef = useRef(null);
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
+    const [sectionColorChanged, setSectionColorChanged] = useState(false);
     const [currentBackground, setCurrentBackground] = useState("");
     const [sectionKey, setSectionKey] = useState(null);
     const [showPopUp, setShowPopUp] = useState(false);
@@ -153,7 +154,6 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                         <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => {
                                             setShowPopUp((popup) => !popup);
-                                            // setLastBackground(currentBackground)
                                         }}><i className="far fa-images text-white"></i></button>
                                     </div>
                                     <div style={(showPopUp && sectionKey === index) ? { position: "absolute", top: "5rem", right: "3rem", zIndex: "9999999" } : { display: "none" }}>
@@ -162,6 +162,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                             onChangeComplete={(color) => {
                                                 setCurrentBackground(color.hex);
                                                 // changeBackground(index);
+                                                setSectionColorChanged(true);
                                             }}
                                         />
                                     </div>
