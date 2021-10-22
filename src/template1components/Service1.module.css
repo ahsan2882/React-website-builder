@@ -61,7 +61,7 @@
     } */
   .banner-img {
     position: absolute;
-    background-image: url(../assets/template1images/blobthebuilder.jpg);
+    background-image: url(../assets/template1images/blobthebuilder.png);
     height: 24rem;
     width: 100%;
     background-position: center;
@@ -114,14 +114,14 @@
     font-weight: bold;
     color: white;
     padding: 1rem;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
   }
   .b-tn-2 {
     background-color: white;
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
   }
   .btnb {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
