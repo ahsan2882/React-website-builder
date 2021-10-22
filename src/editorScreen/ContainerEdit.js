@@ -44,7 +44,6 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     const htmlRef = useRef(null);
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
-    const [sectionColorChanged, setSectionColorChanged] = useState(false);
     const [currentBackground, setCurrentBackground] = useState("");
     const [sectionKey, setSectionKey] = useState(null);
     const [showPopUp, setShowPopUp] = useState(false);
@@ -162,7 +161,6 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                             onChangeComplete={(color) => {
                                                 setCurrentBackground(color.hex);
                                                 // changeBackground(index);
-                                                setSectionColorChanged(true);
                                             }}
                                         />
                                     </div>
