@@ -1,5 +1,5 @@
 import React from 'react'
-import Test from '../assets/template1images/testiEdit.webp'
+import Test from '../assets/template1images/testiEdit.png'
 import Testimonial1Css from './Testimonials1.module.css'
 export const Testimonials1 = () => {
     return (
