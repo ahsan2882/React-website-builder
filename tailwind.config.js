@@ -1,4 +1,4 @@
-const { pink } = require("@material-ui/core/colors");
+
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],

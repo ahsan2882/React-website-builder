@@ -1,5 +1,6 @@
 import React from 'react'
 import Pricing5AssetCss from './Pricing5Asset.module.css'
+import Img from '../pricingEditAssets/dot.png'
 export default function Pricing5Asset() {
     return (
         <>
@@ -8,10 +9,7 @@ export default function Pricing5Asset() {
     <div className={Pricing5AssetCss['spanDesc']}>
       <p>Our Services are best in town and premium Lorem ipsum dolor sit amet.</p>
     </div>
-    <div className={Pricing5AssetCss['spanDesc']}>
-      <div className={Pricing5AssetCss['divMainHeadingSubDiv']} data-aos="fade-left"></div> <img className="dot" src="dot.png" data-aos="fade"/>
-      <div className={Pricing5AssetCss['divMainHeadingSubDiv']} data-aos="fade-right"> </div>
-    </div>
+  
   </section>
   <section className={Pricing5AssetCss['price-cards']} data-aos="fade">
     
