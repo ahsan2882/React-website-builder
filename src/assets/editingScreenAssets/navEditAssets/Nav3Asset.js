@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './logo 4.png'
+import logo from './logo4.png'
 export default function Nav3Asset() {
   return (
     <>
