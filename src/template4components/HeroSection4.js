@@ -1,6 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
-import background from '../assets/template4images/blog_15-770x545.jpg'
+import background from '../assets/template4images/blog_15-770x545.png'
 import Hero4Css from './HeroSection4.module.css'
 
 export default function HeroSection4() {
