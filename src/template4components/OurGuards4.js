@@ -56,7 +56,7 @@ export default function OurGuards4() {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='guardIm1'
-                            initialValue={`<img src=${guard1} alt="guard 1" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            initialValue={`<img src=${guard1} alt="guard 1" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -128,7 +128,7 @@ export default function OurGuards4() {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='guardIm2'
-                            initialValue={`<img src=${guard2} alt="guard 2" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            initialValue={`<img src=${guard2} alt="guard 2" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -185,7 +185,7 @@ export default function OurGuards4() {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='guardIm3'
-                            initialValue={`<img src=${guard3} alt="guard 3" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            initialValue={`<img src=${guard3} alt="guard 3" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                             init={{
                                 forced_root_block:"",
                                 menubar: false,
@@ -242,7 +242,7 @@ export default function OurGuards4() {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='guardIm4'
-                            initialValue={`<img src=${guard4} alt="guard 4" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            initialValue={`<img src=${guard4} alt="guard 4" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                             init={{
                                 forced_root_block:"",
                                 menubar: false,
