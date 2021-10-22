@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import aboutimg from '../assets/template4images/news3.jpg'
+import aboutimg from '../assets/template4images/news3.png'
 import About4Css from './AboutUs4.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
