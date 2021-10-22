@@ -1,8 +1,8 @@
 import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
-import Service3 from './logo1.jpg'
-import Service4 from './logo2.jpg'
-import Service5 from './logo3.jpg'
+import Service3 from './logo1.png'
+import Service4 from './logo2.png'
+import Service5 from './logo3.png'
 
 
 export default function Service3Asset() {
