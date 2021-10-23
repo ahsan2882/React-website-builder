@@ -1,5 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useRef } from 'react'
+import React, { useRef ,useState } from 'react'
+import { GithubPicker } from 'react-color';
 import serv1 from '../assets/template4images/service_01-778x610.png';
 import serv2 from '../assets/template4images/service_02-778x610.png';
 import serv3 from '../assets/template4images/service_03-778x610.png';
@@ -9,10 +10,12 @@ import serv6 from '../assets/template4images/service_06-778x610.png';
 import Service4Css from './Services4.module.css';
 import { Link } from 'react-router-dom';
 
-export default function Services4() {
+export default function Services4({ showPopup, overSection }) {
+    const [currentBackground, setCurrentBackground] = useState("black");
     const editorRef = useRef(null);
     return (
-        <div className={`text-center py-28 px-0 bg-black ${Service4Css.serviceWrapper} w-full`}>
+        <>
+        <div className={`text-center py-28 px-0  ${Service4Css.serviceWrapper} w-full`} style={{ background: currentBackground }}>
             {/* <TextH4 className={`text-center font-black ${Service4Css.serviceMainHead}`} text="WHAT WE DO" /> */}
             <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
@@ -122,5 +125,14 @@ export default function Services4() {
                 </div>
             </div>
         </div>
+        <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
+        </>
     );
 }
