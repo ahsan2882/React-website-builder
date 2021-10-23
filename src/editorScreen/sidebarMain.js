@@ -2,7 +2,7 @@ import contactusAss1 from '../assets/editingScreenAssets/contactusEditAssets/con
 import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/contactus2.png'
 import contactusAss3 from '../assets/editingScreenAssets/contactusEditAssets/contactus3.png'
 import contactusAss4 from '../assets/editingScreenAssets/contactusEditAssets/contactus4.png'
-import contactusAss5 from '../assets/editingScreenAssets/contactusEditAssets/contactus5.png'
+import contactusAss5 from '../assets/editingScreenAssets/contactusEditAssets/contactus5.jpg'
 
 import faqsAss1 from '../assets/editingScreenAssets/faqsEditAssets/faqs1.png'
 import faqsAss2 from '../assets/editingScreenAssets/faqsEditAssets/faqs2.png'
@@ -71,7 +71,7 @@ export const sidebarAssets = [
         ]
     },
     {
-        assetName:'header',
+        assetName: 'header',
         assets: [
             { imageName: heroAss1, id: "hero1" },
             { imageName: heroAss2, id: "hero2" },
@@ -81,7 +81,7 @@ export const sidebarAssets = [
         ]
     },
     {
-        assetName:'footer',
+        assetName: 'footer',
         assets: [
             { imageName: footerAss1, id: "footer1" },
             { imageName: footerAss2, id: "footer2" },
@@ -90,7 +90,7 @@ export const sidebarAssets = [
         ]
     },
     {
-        assetName:'testimonials',
+        assetName: 'testimonials',
         assets: [
             { imageName: testimonialAss1, id: "testimonial1" },
             { imageName: testimonialAss2, id: "testimonial2" },
@@ -99,7 +99,7 @@ export const sidebarAssets = [
         ]
     },
     {
-        assetName:'FAQs',
+        assetName: 'FAQs',
         assets: [
             { imageName: faqsAss1, id: "faqs1" },
             { imageName: faqsAss2, id: "faqs2" },
@@ -108,7 +108,7 @@ export const sidebarAssets = [
         ]
     },
     {
-        assetName:'contact',
+        assetName: 'contact',
         assets: [
             { imageName: contactusAss1, id: "contactus1" },
             { imageName: contactusAss2, id: "contactus2" },
@@ -162,6 +162,6 @@ export const sidebarAssets = [
             { imageName: accreAss2, id: "accre2" },
             { imageName: accreAss3, id: "accre3" },
             { imageName: accreAss4, id: "accre4" },
-         ]
+        ]
     },
 ]
