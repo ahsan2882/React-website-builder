@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import ContainerEditCss from './ContainerEdit.module.css'
 
 import { Header01 } from '../template1components/Header01'
@@ -41,7 +42,9 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     const htmlRef = useRef(null);
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
+    const [currentBackground, setCurrentBackground] = useState("#fff");
     const [sectionKey, setSectionKey] = useState(null);
+    const [showPopUp, setShowPopUp] = useState(false);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -107,6 +110,9 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
         newArray.splice(indexC, 1);
         setUpdateChildren([...newArray])
     }
+    const changeBackground = (index) => {
+        setShowPopUp((popup) => !popup);
+    }
     return (
         <>
             {/* {(canDrop ? <div style={{ "background": `rgba(0,0,0,0.5)` }} className={ContainerEditCss.overlay}></div> : null)} */}
@@ -128,16 +134,26 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                         setOverSection(true);
                                         setSectionKey(index)
                                     }}
-                                    onMouseLeave={() => setOverSection(false)}
-                                    className={(overSection && sectionKey === index) ? "border-2 border-solid border-red-500 relative" : "border-2 border-solid border-transparent"}>
+                                    onMouseLeave={() => {
+                                        setOverSection(false);
+                                        setShowPopUp(false);
+                                    }}
+                                    className={(overSection && sectionKey === index) ? "border-2 border-solid border-red-500 relative" : "border-2 border-solid border-transparent"}
+                                    style={{background: currentBackground}}>
                                     {items}
                                     <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "2rem", zIndex:"9999999" } : { display: "none" }}>
                                         <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
-                                        <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><span className="material-icons-outlined">
-                                            wallpaper
-                                        </span></button>
+                                        <button className="bg-red-500 p-3" onClick={() => changeBackground(index)}><i className="far fa-images text-white"></i></button>
+                                    </div>
+                                    <div style={(showPopUp && sectionKey === index) ? { position: "absolute", top: "5rem", right: "3rem", zIndex: "9999999" } : { display: "none" }}>
+                                        <GithubPicker
+                                            triangle="top-right"
+                                            onChangeComplete={(color) => {
+                                                setCurrentBackground(color.hex)
+                                            }}
+                                        />
                                     </div>
                                 </section>
 
