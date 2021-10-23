@@ -88,7 +88,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                 </div>
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
                     <div className="getInnerHTML">
-                        <main>
+                        <section className="filterHTML">
                             {updateChildren.map((ItemX, index) => {
                                 return (
                                     <>
@@ -115,7 +115,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                     </>
                                 )
                             })}
-                        </main>
+                        </section>
                     </div>
                 </div>
             </section>
