@@ -1,22 +1,193 @@
-import React from 'react'
-
-export default function Accre4Asset() {
+import { Editor } from '@tinymce/tinymce-react';
+import React, { useRef,useState } from 'react';
+import { GithubPicker } from 'react-color';
+import cl1 from '../accreEditAssets/client1.png';
+import cl2 from '../accreEditAssets/client2.png';
+import cl3 from '../accreEditAssets/client3.png';
+import cl4 from '../accreEditAssets/client4.png';
+import Accre4Css from './Accre4.module.css'
+export default function Accre4Asset({ showPopup, overSection }) {
+    const [currentBackground, setCurrentBackground] = useState("white");
+    const editorRef = useRef(null);
     return (
         <>
-            <section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <h1 class="text-3xl font-medium title-font text-gray-900 mb-12 text-center">Testimonials</h1>
-    <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-        <div class="h-full text-center">
-          <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300"></img>
-          <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-          <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-          <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">ALPER KAMU</h2>
-          <p class="text-gray-500">UI Develeoper</p>
- </div>
-</div>
-</div>
-</section>
+          <section className="py-28 px-0 w-full" style={{ background: currentBackground }}>
+            <div className={Accre4Css.containerMain}>
+                <div className="flex flex-col items-center py-10 px-0">
+                    {/* <TextH2 classStyle={`${Accre4Css.accreMainH2} text-2xl`} text="we are verified" /> */}
+                    <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='accre4ed1'
+                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                        initialValue="<h2>we are verified</h2>"
+                        init={{
+                            forced_root_block:"",
+                            menubar: false,
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect', 
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+
+                            
+                        }}
+                    />
+                    {/* <TextH1 classStyle={`${Accre4Css.accreMainH1} text-5xl text-center`} text="Our Accreditation" /> */}
+                    <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='accre4ed2'
+                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                        initialValue="<h1>Our Accreditation</h1>"
+                        init={{
+                            forced_root_block:"",
+                            menubar: false,
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+
+                        }}
+                    />
+                </div>
+                <div className="flex flex-wrap justify-center my-0 mx-auto mb-8">
+                    <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
+                        <div className="p-5 flex flex-col items-center">
+                            {/* <img src={cl1} alt="client 1" className="w-full" /> */}
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='AccreIm1'
+                                initialValue={`<img src=${cl1} alt="client 1" class="object-cover w-70 h-70"/>`}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
+                            {/* <TextH3 classStyle={Accre4Css.accreH3} text="Lorem ipsum." /> */}
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='accre4ed3'
+                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                initialValue="<h3>Lorem ipsum</h3>"
+                                init={{
+                                    forced_root_block:"",
+                                    menubar: false,
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | fontselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
+                        <div className="p-5 flex flex-col items-center">
+                            {/* <img src={cl2} alt="client 2" className="w-full" /> */}
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='AccreIm2'
+                                initialValue={`<img src=${cl2} alt="client 2" class="object-cover w-70 h-70"/>`}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='accre4ed4'
+                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                initialValue="<h3>Lorem ipsum</h3>"
+                                init={{
+                                    forced_root_block:"",
+                                    menubar: false,
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | fontselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
+                        <div className="p-5 flex flex-col items-center">
+                            {/* <img src={cl3} alt="client 3" className="w-full" /> */}
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='AccreIm3'
+                                initialValue={`<img src=${cl3} alt="client 3" class="object-cover w-70 h-70"/>`}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='accre4ed5'
+                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                initialValue="<h3>Lorem ipsum</h3>"
+                                init={{
+                                    menubar: false,
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
+                        <div className="p-5 flex flex-col items-center">
+                
+                            <img src={cl4} alt="client 4" className="object-cover w-72 h-36" />
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='accre4ed6'
+                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                initialValue="<h3>Lorem ipsum</h3>"
+                                init={{
+                                    menubar: false,
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                                }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>   
+ 
   
   
 

@@ -1,0 +1,60 @@
+
+.accreCardWrapper{
+    border-radius: 30px;
+}
+
+.containerMain h1 {
+    color: #000;
+    width: 100%;
+    font-size: 32px;
+}
+
+.containerMain h2 {
+    color: #000;
+    width: 100%;
+    font-size: 24px;
+}
+
+.containerMain h3 {
+    color: #fff;
+    font-size: 18.72px;
+    line-height: 2.25rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.containerMain h4 {
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+}
+
+.containerMain h5 {
+    color: #fff;
+    width: 100%;
+    font-size: 13.28px;
+}
+
+.containerMain h6 {
+    color: #fff;
+    width: 100%;
+    font-size: 10.72px;
+}
+
+.containerMain p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.75rem;
+    padding: 0.75rem 0;
+    text-align: left;
+}
+
+
+@media(max-width:500px){
+    .containerMain {
+        padding: 1px;
+    }
+    .accreH3 {
+        font-size: 0.8rem;
+    }
+}
