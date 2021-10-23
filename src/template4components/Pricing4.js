@@ -1,10 +1,10 @@
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import Pricing4Css from './Pricing4.module.css'
 
 export default function Pricing4({ showPopup, overSection }) {
-    const [currentBackground, setCurrentBackground] = useState("");
+    const [currentBackground, setCurrentBackground] = useState("white");
     const editorRef = useRef(null);
     return (
         <>

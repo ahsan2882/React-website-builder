@@ -1,16 +1,19 @@
 
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
+import { GithubPicker } from 'react-color';
 import cl1 from '../assets/template4images/client1.png';
 import cl2 from '../assets/template4images/client2.png';
 import cl3 from '../assets/template4images/client3.png';
 import cl4 from '../assets/template4images/client4.png';
 import Accre4Css from './Accreditation4.module.css';
 
-export default function Accreditation4() {
+export default function Accreditation4({ showPopup, overSection }) {
+    const [currentBackground, setCurrentBackground] = useState("white");
     const editorRef = useRef(null);
     return (
-        <section className="py-28 px-0 w-full">
+        <>
+        <section className="py-28 px-0 w-full" style={{ background: currentBackground }}>
             <div className={Accre4Css.containerMain}>
                 <div className="flex flex-col items-center py-10 px-0">
                     {/* <TextH2 classStyle={`${Accre4Css.accreMainH2} text-2xl`} text="we are verified" /> */}
@@ -177,5 +180,14 @@ export default function Accreditation4() {
                 </div>
             </div>
         </section>
+        <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
+        </>
     );
 }

@@ -1,15 +1,19 @@
 
-import React, { useRef } from 'react';
+import React, { useRef ,useState } from 'react';
+import { GithubPicker } from 'react-color';
 import news1 from '../assets/template4images/news1.png';
 import news2 from '../assets/template4images/news2.png';
 import news3 from '../assets/template4images/news3.png';
 import { Editor } from '@tinymce/tinymce-react';
 import Blog4Css from './Blog4.module.css';
 
-export default function Blog4() {
+export default function Blog4({ showPopup, overSection }) {
+    const [currentBackground, setCurrentBackground] = useState("black");
+
     const editorRef = useRef(null);
     return (
-        <section className={`bg-black py-28 px-0 w-full ${Blog4Css.sectionBlog}`}>
+        <>
+        <section className={` py-28 px-0 w-full ${Blog4Css.sectionBlog}`} style={{ background: currentBackground }}>
             <div className={`text-center ${Blog4Css.headingWrapper}`}>
                 {/* <TextH3 classStyle={Blog4Css.blogMainHead} text="WHATS NEW" /> */}
                 <Editor
@@ -273,5 +277,14 @@ export default function Blog4() {
                 </div>
             </div>
         </section>
+        <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
+        </>
     );
 }
