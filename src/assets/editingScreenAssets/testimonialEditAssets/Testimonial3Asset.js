@@ -1,6 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
-import Img1 from '../testimonialEditAssets/person.jpg'
+import Img1 from '../testimonialEditAssets/person.png'
 import Testimonial3AssetCss from './Testimonial3Asset.module.css'
 export default function Testimonial3Asset() {
   const editorRef = useRef(null);

@@ -1,0 +1,441 @@
+/* =========================================== */
+/* =                                         = */
+/* =           Header Section Start          = */
+/* =                                         = */
+/* =========================================== */
+.template1Header nav {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 85px;
+    background: #fff;
+    z-index: 200;
+  }
+  
+  .template1Header  nav .navbar {
+    display: flex;
+    height: 100%;
+    max-width: 1700px;
+    justify-content: space-between;
+    margin: 0 75px;
+    align-items: baseline;
+    padding: 0 30px;
+ 
+  }
+  
+  .template1Header nav .navbar .logo a {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 3rem;
+    /* text-shadow: 0 0 0 #fff, 0 0 0 #fff, 0 0 0 #0073e6, 0 0 0 #0073e6, 0 0 11px #0073e6, 0 0 0 #0073e6, 0 0 28px #0073e6; */
+  }
+  
+  .template1Header nav .navbar .nav-links {
+    height: 100%;
+    line-height: 20px;
+  }
+  
+  .template1Header  nav .navbar .nav-links .menus li {
+    display: flex;
+    position: relative;
+    align-items: center;
+    list-style: none;
+    padding: 0 10px;
+  }
+  .template1Header  nav .navbar .nav-links .menus {
+    display: flex;
+  }
+  
+  .template1Header  nav .navbar .nav-links .menus li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black !important;
+    white-space: nowrap;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    margin-top: 15px;
+  }
+  .template1Header   nav .navbar .nav-links .menus li:hover > .line {
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  }
+  
+  .line {
+    position: relative;
+    width: auto;
+    text-align: center;
+    order: 3;
+  }
+  .line:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: calc(50px * 0.4);
+    right: calc(50px * 0.4);
+    bottom: 12%;
+    pointer-events: none;
+    height: 2px;
+    width: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0;
+    opacity: 0;
+    z-index: 5;
+    background: gray;
+    transition: all 0.3s;
+  }
+  .line:hover:after {
+    opacity: 1;
+    width: 50%;
+    background: #00d4ff;
+  }
+  .template1Header  nav .navbar .nav-links .menus li > .contact-btn {
+    background-color: #00d4ff;
+    color: white;
+    padding: 13px 12px;
+  }
+  .template1Header  .navbar .nav-links .menus .sub-menu {
+    position: absolute;
+    top: 66px;
+    line-height: 20px;
+    left: 10px;
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+    border-radius: 0 0 5px 5px;
+    display: none;
+    z-index: -0.5;
+  }
+  
+  .template1Header  .navbar .nav-links .menus .sub-menu li {
+    padding: 0 20px;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  
+  .template1Header  .navbar .nav-links .menus .sub-menu li a {
+    font-size: 1.5rem;
+  }
+  .template1Header  .navbar .nav-links .menus li:hover .sub-menu {
+    display: block;
+  }
+  .template1Header  .navbar .nav-links .menus .sub-menu li a:hover {
+    background: white;
+    box-shadow: none;
+  }
+  
+  .pnt {
+    position: relative;
+    text-align: start;
+    order: 3;
+  }
+  .pnt:after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 0;
+    background: gray;
+    opacity: 0;
+    transition: all 0.3s;
+    display: block;
+    bottom: 12%;
+    pointer-events: none;
+    height: 2px;
+    width: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0;
+  }
+  .pnt:hover:after {
+    opacity: 1;
+    width: 10px;
+    background: #00d4ff;
+  }
+  
+  .navbar .fa-bars,
+  .template1Header   nav .navbar .nav-links .sidebar-logo .logo-name,
+  .template1Header  nav .navbar .nav-links .sidebar-logo .fa-times {
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    color: #000;
+  }
+  
+  .template1Header  nav .navbar .nav-links .menus li > .contact-btn:hover {
+    box-shadow: 0 0 0 4em #00d4ff inset, 0 5px 15px rgb(0 0 0 / 10%);
+    transform: translateY(-1px);
+  }
+  
+  /* navbar media query */
+  @media (max-width: 1500px) {
+    .template1Header    nav .navbar {
+      max-width: 100%;
+      padding: 0 25px;
+      margin: 10px;
+    }
+    .template1Header   nav .navbar .nav-links {
+      display: block;
+      position: fixed;
+      background: white;
+      box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+      top: 0;
+      left: -100%;
+      max-width: 270px;
+      width: 100%;
+      transition: left 0.3s ease-in;
+    }
+  
+    .template1Header    nav .navbar .nav-links .sidebar-logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      line-height: 40px;
+    }
+  
+    .navbar .fa-bars,
+    .template1Header   nav .navbar .nav-links .sidebar-logo .logo-name,
+    .template1Header   nav .navbar .nav-links .sidebar-logo .fa-times {
+      display: block;
+      transition: transform 0.25s, opacity 0.25s;
+      cursor: pointer;
+    }
+  
+    .fa-times:hover {
+      opacity: 1;
+      transform: rotate(90deg);
+    }
+  
+    .template1Header    nav .navbar .nav-links .menus {
+      display: block;
+      margin-top: 20px;
+    }
+  
+    .template1Header    nav .navbar .nav-links .menus li {
+      display: block;
+      line-height: 40px;
+    }
+  
+    .template1Header    nav .navbar .nav-links .menus .sub-menu {
+      display: none;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  
+    .navbar .nav-links .menus .sub-menu li {
+      line-height: 30px;
+    }
+  }
+  /* =========================================== */
+/* =                                         = */
+/* =           Header Section Closed          = */
+/* =                                         = */
+/* =========================================== */
+  /* -- hero cover --- */
+  /* =========================================== */
+/* =                                         = */
+/* =            Section 01 Start          = */
+/* =                                         = */
+/* =========================================== */
+  .section {
+    right: 0;
+    width: 100%;
+    height: 800px;
+    padding-top: 2em;
+    padding-bottom: 5em;
+    margin-top: 8em;
+  }
+  
+  
+  .section .section-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .section .section-details .left {
+    flex: 1;
+    /* height: 800px; */
+    padding-left: 100px;
+    padding-top: 80px;
+  }
+  
+  .section .section-details .right {
+    flex: 1;
+    /* height: 800px; */
+  }
+  .section .section-details .right::after {
+    content: "";
+    background-position: left bottom;
+    transform: scale(1);
+    animation: pulse-black 2s infinite;
+    top: 58%;
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background-image: url(../assets/template1images/floating_image_12.png);
+    left: 50%;
+    background-repeat: no-repeat;
+  }
+  .section .section-details .right > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+  }
+  
+  .section .section-details .right::before {
+    content: "";
+    background: url(../assets/template1images/floating_image_09.png);
+    background-repeat: no-repeat;
+    background-position: 95% 8.2714px;
+    width: 685px;
+    height: 100%;
+    position: absolute;
+    transform: scale(1);
+    animation: pulse-black 2s infinite;
+    z-index: -1;
+    top: 54%;
+    right: 30%;
+  }
+  
+  .headline_content b {
+    color: #00d4ff;
+    font-size: 6rem;
+    font-weight: 200;
+  }
+  
+  .headline_content {
+    font-size: 6rem;
+    font-weight: 200;
+    display: block;
+    color: #222e41;
+    margin-bottom: 50px;
+    line-height: 7rem;
+  }
+  
+  .button-group {
+    margin: 16px 8px;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    background-color: #00d4ff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .button-group .button {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+  }
+  
+  .button-group:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    transform: translateY(-1px);
+  }
+  
+  .headline-para > p {
+    font-size: 2rem;
+    width: 52rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
+  
+  @keyframes pulse-black {
+    0% {
+      transform: scale(0.95);
+    }
+  
+    70% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(0.95);
+    }
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: #00d4ff;
+    color: white;
+    border: none;
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 955px) {
+    .section {
+      margin-top: 10em;
+    }
+  
+    .section .section-details {
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+  
+    .section .section-details .left {
+      padding-left: 0;
+      width: 89%;
+    }
+  
+    .headline_content b {
+      font-size: 4rem;
+    }
+  
+    .headline_content {
+      font-size: 4rem;
+    }
+    .headline-para > p {
+      font-size: 2rem;
+      width: 34rem;
+    }
+  
+    .section .section-details .right {
+      display: none;
+    }
+  }
+  .btna {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    z-index: 1;
+  }
+  .btna:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background-color: #00d4ff;
+    content: "";
+    transition: 0.3s;
+    z-index: -1;
+  }
+  .btna:hover:before {
+    left: 0;
+  }
+  /* =========================================== */
+/* =                                         = */
+/* =            Section 01 Closed          = */
+/* =                                         = */
+/* =========================================== */

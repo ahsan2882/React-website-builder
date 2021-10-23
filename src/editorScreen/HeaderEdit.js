@@ -1,9 +1,6 @@
 import React from 'react'
 import HeaderEditCss from './HeaderEdit.module.css'
 import { Link } from 'react-router-dom';
-const IncNum = () => {
-   alert("helloow worlds");
-}
 
 export default function Header({ setWidth, templateNum }) {
     let path = '';
@@ -36,7 +33,7 @@ export default function Header({ setWidth, templateNum }) {
                         <i  className={`fas fa-desktop text-2xl`}>
                         </i>
                     </button>
-                        <button onClick={IncNum}  className="hover:bg-BL-400 rounded-full w-20 h-16">
+                        <button className="hover:bg-BL-400 rounded-full w-20 h-16">
                         <i className="fas fa-mobile-alt text-2xl"></i>
                     </button>
                 </div>
@@ -46,7 +43,7 @@ export default function Header({ setWidth, templateNum }) {
                     <i className="far fa-save text-2xl"></i>
                     <h2> SAVE</h2>
                 </button>
-                <Link className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl" target='_blank' rel='noopener noreferrer' to={path}>
+                <Link to={path} target='_blank' rel='noopener noreferrer' className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl">
                     {/* <img src={previewIm} alt="Preview" className={`w-9 h-auto`} /> */}
                     <i className="far fa-eye text-2xl"></i>
                     <h2>PREVIEW</h2>

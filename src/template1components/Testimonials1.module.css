@@ -1,0 +1,97 @@
+.text-main-text {
+    width: 100%;
+    /* margin-top: 100px; */
+  }
+  .headings {
+    font-size: 5rem;
+    /* padding-top: 100px; */
+    text-align: center;
+    max-width: 100%;
+    color: #333434;
+  }
+  
+  .subhead {
+    text-align: center;
+    font-size: 20px;
+  }
+  .container8 {
+    display: flex;
+  
+    width: 100%;
+    max-width: 100%;
+  
+    margin: auto;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    background-image: url(../assets/template1images/blobthebuilder.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+  }
+  
+  .container8-content {
+    flex: 2;
+    height: 800px;
+  }
+  
+  /* .container8-content  */
+  .testimonial-text {
+    background-image: url(../assets/template1images/qoute.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding: 30px 5%;
+    font-size: 2rem;
+    /* line-height: 1.5rem; */
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .author .testimonial-author {
+    color: #00d4ff;
+    padding-top: 35px;
+    font-size: 2rem;
+  }
+  
+  .testimonial-heading {
+    background: #e6f5fc;
+    color: #00d4ff;
+    padding: 6px 30px;
+    border-radius: 30px;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 40rem;
+  }
+  
+  @media (max-width:1522px) {
+    .container8 {
+      flex-direction: column;
+      text-align: center;
+    }
+    .container10-image img {
+        width: 400px;
+       display: flex;
+       margin: 0 auto;
+        }
+  }
+  @media (max-width: 570px) {
+
+    .container8 {
+      height: 1000px;
+    }
+    .testimonial-heading {
+      font-size: 2rem;
+      width: 27rem;
+    }
+  
+  }
+  .container10-image {
+  /* max-width: 225px; */
+  flex: 1;
+  height: 800px;
+  margin-bottom: 4em;
+  /* margin-right: 14rem; */
+}
+.container10-image img {
+width: 700px;
+}

@@ -21,7 +21,7 @@ export default function EditScreen({ temp }) {
                 <FooterEdit setOverlay={setAssetSelected} />
             </NewAssetContext.Provider> */}
             <DndProvider backend={HTML5Backend}>
-                <HeaderEdit setWidth={setWidth} />
+                <HeaderEdit setWidth={setWidth} templateNum={temp}/>
                 <ContainerEdit  defWidth={defWidth} templateNum={temp} overlayPresent={assetSelected} />
                 <FooterEdit setOverlay={setAssetSelected} />
             </DndProvider>

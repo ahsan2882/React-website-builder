@@ -1,6 +1,6 @@
 import React from 'react'
 import About3Css from './About3.module.css'
-import news3 from '../assets/template3images/news3.jpg'
+import news3 from '../assets/template3images/news3.png'
 export default function About3() {
     return (
         <>

@@ -1,10 +1,10 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
 import { Link } from 'react-router-dom';
-import guard1 from '../assets/template4images/guard1.jpg';
-import guard2 from '../assets/template4images/guard2.jpg';
-import guard3 from '../assets/template4images/guard3.jpg';
-import guard4 from '../assets/template4images/guard4.jpg';
+import guard1 from '../assets/template4images/guard1.png';
+import guard2 from '../assets/template4images/guard2.png';
+import guard3 from '../assets/template4images/guard3.png';
+import guard4 from '../assets/template4images/guard4.png';
 import Guards4Css from './OurGuards4.module.css';
 
 export default function OurGuards4() {
@@ -56,8 +56,9 @@ export default function OurGuards4() {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='guardIm1'
-                            initialValue={`<img src=${guard1} alt="guard 1" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            initialValue={`<img src=${guard1} alt="guard 1" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                             init={{
+                                forced_root_block: "",
                                 menubar: false,
                                 plugins: [
                                     "image"
@@ -65,6 +66,22 @@ export default function OurGuards4() {
                                 toolbar: 'image'
                             }}
                         />
+                        {/* <img src={
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='guardIm1'
+                                initialValue={``}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
+                        } alt="guard 1" className={Guards4Css.guardImage}/> */}
                         {/* <TextH2 className={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
@@ -111,8 +128,9 @@ export default function OurGuards4() {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='guardIm2'
-                            initialValue={`<img src=${guard2} alt="guard 2" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            initialValue={`<img src=${guard2} alt="guard 2" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                             init={{
+                                forced_root_block: "",
                                 menubar: false,
                                 plugins: [
                                     "image"
@@ -167,7 +185,7 @@ export default function OurGuards4() {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='guardIm3'
-                            initialValue={`<img src=${guard3} alt="guard 3" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            initialValue={`<img src=${guard3} alt="guard 3" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                             init={{
                                 forced_root_block:"",
                                 menubar: false,
@@ -224,7 +242,7 @@ export default function OurGuards4() {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='guardIm4'
-                            initialValue={`<img src=${guard4} alt="guard 4" class="${Guards4Css.guardImage} mx-auto"/>`}
+                            initialValue={`<img src=${guard4} alt="guard 4" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                             init={{
                                 forced_root_block:"",
                                 menubar: false,

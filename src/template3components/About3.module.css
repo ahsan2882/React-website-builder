@@ -1,26 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Barlow", sans-serif;
-  }
-  
-  html {
-    --clr-secondary-light: #292929;
-    --clr-secondary: #000000;
-  
-    --clr-gray: #dddddd;
-    --clr-light: #ffff;
-    --clr-font: #fff;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    --clr-primary: #ffff;
-    --clr-white-smoke: #000;
-    --clr-red-new: #c01120;
-    --clr-black-new: #000;
-  }
 
-  .heading-main-title {
+  
+ .heading-main-title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +9,7 @@
   }
   .heading-main-title h3 {
     font-size: 2.5em;
-    border-bottom: 1px solid var(--clr-red-new);
+    border-bottom: 1px solid #c01120;
     color: #575757;
     padding: 17px 0;
   }
@@ -41,7 +21,7 @@
     position: absolute;
     height: 4px;
     width: 30%;
-    background: var(--clr-red-new);
+    background: #c01120;
     left: 0;
     bottom: -2px;
   }
@@ -59,7 +39,7 @@
   }
   
   .about-sec {
-    background-color: var(--clr-primary);
+    background-color: white;
   }
   .about-container {
     padding: 90px 150px;
@@ -71,7 +51,7 @@
     padding-right: 10px;
     padding-bottom: 10px;
    
-    background-color: var(--clr-red-new);
+    background-color: #c01120;
     box-shadow: rgb(0 0 0 / 25%) 0 54px 55px;
 
     backdrop-filter: blur(5px);
@@ -82,7 +62,7 @@
     padding-right: 30px;
     padding-bottom: 30px;
    
-    background-color: var(--clr-red-new);
+    background-color: #c01120;
     box-shadow: rgb(0 0 0 / 25%) 0 54px 55px;
     
     backdrop-filter: blur(5px);
@@ -140,7 +120,7 @@
     text-align: center;
     letter-spacing: 4px;
     color: white;
-    border-right: 3px solid var(--clr-red-new);
+    border-right: 3px solid #c01120;
     text-decoration: none;
     text-transform: uppercase;
   

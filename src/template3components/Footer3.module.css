@@ -7,7 +7,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: var(--clr-secondary);
+    background-color: black;
     color: white;
     font-family: poppins;
     font-size: 14px;
@@ -46,7 +46,7 @@
     font-size: 18px;
     margin-left: 58px;
     margin-top: 2px;
-    color: var(--clr-red-new);
+    color: -clr-red-new;
   }
   .hh2 {
     font-size: 25px;
@@ -56,7 +56,7 @@
   }
   
   .i1 {
-    color: var(--clr-red-new);
+    color: #c01120;
 
     padding: 5px;
     font-size: 20px;
@@ -92,7 +92,7 @@
   .span {
     width: 50px;
     height: 3px;
-    background-color: var(--clr-red-new);
+    background-color: #c01120;
     position: relative;
     left: 2px;
     top: 20px;
@@ -112,7 +112,7 @@
   .bottom-foot {
     width: 100%;
     padding: 15px 200px;
-    background-color: var(--clr-secondary);
+    background-color: black;
     display: flex;
     justify-content: center;
     height: auto;
@@ -173,7 +173,7 @@
   }
   .heading2-main-title h3 {
     font-size: 2.5em;
-    border-bottom: 1px solid var(--clr-red-new);
+    border-bottom: 1px solid #c01120;
     color: #575757;
     padding: 17px 0;
   }
@@ -185,7 +185,7 @@
     position: absolute;
     height: 4px;
     width: 30%;
-    background: var(--clr-red-new);
+    background: var(#c01120);
     left: 0;
     bottom: -2px;
   }
