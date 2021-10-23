@@ -133,7 +133,11 @@ export default function Accreditation4({ showPopup, overSection }) {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='AccreIm3'
+
                                 initialValue={`<img src=${cl3} alt="client 3" class="object-cover w-70 h-70"/>`}
+
+                                initialValue={`<img src=${cl3} alt="client 3" class="w-72 h-36 object-cover"/>`}
+
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
