@@ -5,8 +5,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-
-export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
+export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked }) {
     const htmlRef = useRef(null);
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
@@ -20,22 +19,13 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             console.log(valueString)
             let Comp = assetObject[valueString]
             setUpdateChildren([...updateChildren, Comp])
-            // document.getElementsByClassName("getInnerHTML");
-            // const elem = document.getElementsByClassName('Contact4Asset_firstHead__22xbT')[0]
-            // const element = document.querySelector(elem);
-            // const styleS = window.getComputedStyle(elem);
-            // console.log(styleS)
-
-            // document.title = "Editing Contact"
             let inHTML = htmlRef.current;
-
             console.log(inHTML)
         },
         collect: monitor => ({
             canDrop: !!monitor.canDrop()
         })
     })
-    window.resizeTo(defWidth, window.innerHeight);
     const temp = templateNum;
     useEffect(() => {
         if (temp === 1) {
@@ -106,7 +96,6 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                             }}><i className="far fa-images text-white"></i></button>
                                         </div>
                                     </section>
-
                                 </>
                             )
                         })}
