@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { GithubPicker } from 'react-color';
 import ContainerEditCss from './ContainerEdit.module.css'
 
 import { Header1 } from '../template1components/Header1'
@@ -44,9 +43,9 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     const htmlRef = useRef(null);
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
-    const [currentBackground, setCurrentBackground] = useState("");
+    const [showPopUp, setShowPopUp] = useState(false)
+    // const [currentBackground, setCurrentBackground] = useState("");
     const [sectionKey, setSectionKey] = useState(null);
-    const [showPopUp, setShowPopUp] = useState(false);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -73,9 +72,9 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
     window.resizeTo(defWidth, window.innerHeight);
     const temp = templateNum;
 
-    useEffect(() => {
-        console.log("background", currentBackground)
-    }, [currentBackground]);
+    // useEffect(() => {
+    //     console.log("background", currentBackground)
+    // }, [currentBackground]);
     useEffect(() => {
         if (temp === 1) {
             setUpdateChildren([Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1])
@@ -92,7 +91,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
         else if (temp === 0) {
             // setUpdateChildrenJSX([])
         }
-    }, [temp, currentBackground])
+    }, [temp])
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
@@ -112,12 +111,6 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
         newArray.splice(indexC, 1);
         setUpdateChildren([...newArray])
     }
-    // const changeBackground = (indexC) => {
-    //     let newArrayJSX = [...updateChildrenJSX]
-    //     let Comp = [...updateChildren].at(indexC)
-    //     newArrayJSX.splice(indexC, 1, <Comp background={currentBackground} />)
-    //     setUpdateChildrenJSX([...newArrayJSX])
-    // }
     return (
         <>
             <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`}>
@@ -133,6 +126,7 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                         return (
                             // 
                             <>
+                                {/* {<ItemX key={index}/>} */}
                                 <section key={index}
                                     onMouseEnter={() => {
                                         setOverSection(true);
@@ -142,12 +136,9 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                         setOverSection(false);
                                         setShowPopUp(false);
                                     }}
-                                    className={(overSection && sectionKey === index) ? "border-2 border-solid border-red-500 relative" : "border-2 border-solid border-transparent"}
-                                // style={(sectionKey === index) ? {background: currentBackground} : null}
-                                >
-                                    <ItemX background={(sectionKey === index) ? currentBackground : "none"}/>
-                                    {/* {item} */}
-                                    <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "2rem", zIndex: "9999999" } : { display: "none" }}>
+                                    className={(overSection && sectionKey === index) ? "border-2 border-solid border-red-500 relative" : "border-2 border-solid border-transparent"}>
+                                    <ItemX overSection={(overSection && sectionKey === index) ? true : false} showPopup={ showPopUp }/>
+                                    <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
                                         <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
                                         <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
@@ -155,15 +146,14 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                                             setShowPopUp((popup) => !popup);
                                         }}><i className="far fa-images text-white"></i></button>
                                     </div>
-                                    <div style={(showPopUp && sectionKey === index) ? { position: "absolute", top: "5rem", right: "3rem", zIndex: "9999999" } : { display: "none" }}>
+                                    {/* <div style={(showPopUp && sectionKey === index) ? { position: "absolute", top: "5rem", right: "3rem", zIndex: "9999999" } : { display: "none" }}>
                                         <GithubPicker
                                             triangle="top-right"
                                             onChangeComplete={(color) => {
                                                 setCurrentBackground(color.hex);
-                                                // changeBackground(index);
                                             }}
                                         />
-                                    </div>
+                                    </div> */}
                                 </section>
 
                             </>
