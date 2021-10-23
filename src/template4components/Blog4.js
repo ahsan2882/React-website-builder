@@ -58,7 +58,7 @@ export default function Blog4({ showPopup, overSection }) {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='blogIm1'
-                            initialValue={`<img src=${news1} alt="news 1" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
+                            initialValue={`<img src=${news1} alt="news 1" class="${Blog4Css.contImg} border-b-4 border-solid object-cover w-72 h-48"/>`}
                             init={{
                                 forced_root_block:"",
                                 menubar: false,
@@ -107,7 +107,7 @@ export default function Blog4({ showPopup, overSection }) {
                             }}
                         />
                         <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
-                            {/* <ButtonText className={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
+                   
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -127,12 +127,12 @@ export default function Blog4({ showPopup, overSection }) {
                         </div>
                     </div>
                     <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-center`}>
-                        {/* <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news2} alt="news 2" /> */}
+                     
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='blogIm2'
-                            initialValue={`<img src=${news2} alt="news 2" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
+                            initialValue={`<img src=${news2} alt="news 2" class="${Blog4Css.contImg} border-b-4 border-solid object-cover w-72 h-48"/>`}
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -142,7 +142,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 toolbar: 'image'
                             }}
                         />
-                        {/* <TextH1 classStyle={`${Blog4Css.blogArticH1} text-2xl p-3 mb-8 hover:text-white`} text="Personal Security Services" /> */}
+           
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -159,9 +159,7 @@ export default function Blog4({ showPopup, overSection }) {
 
                             }}
                         />
-                        {/* <TextPara classStyle="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
-                                    magna purus, pharetra eu eleifend non, euismod vitae leo.
-                                    Interdum et malesuada fames ac ante ipsum ..."/> */}
+                        
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -181,7 +179,7 @@ export default function Blog4({ showPopup, overSection }) {
                             }}
                         />
                         <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
-                            {/* <ButtonText classStyle={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
+                       
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -206,7 +204,7 @@ export default function Blog4({ showPopup, overSection }) {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='blogIm3'
-                            initialValue={`<img src=${news3} alt="news 3" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
+                            initialValue={`<img src=${news3} alt="news 3" class="${Blog4Css.contImg} border-b-4 border-solid object-cover w-72 h-48"/>`}
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -233,9 +231,7 @@ export default function Blog4({ showPopup, overSection }) {
 
                             }}
                         />
-                        {/* <TextPara classStyle="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
-                                    magna purus, pharetra eu eleifend non, euismod vitae leo.
-                                    Interdum et malesuada fames ac ante ipsum ..."/> */}
+                        
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -255,7 +251,7 @@ export default function Blog4({ showPopup, overSection }) {
                             }}
                         />
                         <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
-                            {/* <ButtonText classStyle={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
+                          
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}

@@ -62,17 +62,11 @@
     color: rgba(0, 0, 0, 0.65);
 }
 .contImg {
-    width: 20rem;
     border-radius: 20px;
     border-color: #00c1cf;
 }
 .btnPost{
     width:100%;
-}
-@media (max-width: 850px) {
-    .contImg {
-        width: 90%;
-    }
 }
 @media(max-width:500px){
     .btnPost {
