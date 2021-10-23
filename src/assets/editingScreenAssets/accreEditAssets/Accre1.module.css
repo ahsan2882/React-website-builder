@@ -1,6 +1,4 @@
-  .MainHeading {
-    font-size: 30px;
-  }
+  
     
     .MainHeading {
         font-size: 60px;
@@ -28,7 +26,7 @@
       }
       
       .dot {
-        margin: 0px 12px;
+        margin: 0 12px;
           width: 22px;
       }
       .divMainHeading {

@@ -7,6 +7,7 @@ import Img4 from './accrediation4.jpg'
 import Img5 from './accrediation5.jpg'
 import Img6 from './accrediation6.jpg'
 import Img7 from './accrediation7.jpg'
+import Img8 from './dot.png'
 export default function Accre1Asset() {
   
     return (
@@ -17,7 +18,7 @@ export default function Accre1Asset() {
       <p>Our Services are best in town and premium Lorem ipsum dolor sit amet.</p>
     </div>
     <div className={Accre1Css.divMainHeading}>
-      <div className={Accre1Css.divMainHeadingSubDiv} data-aos="fade-left"></div> <img className="dot" src="dot.png" data-aos="fade"/>
+      <div className={Accre1Css.divMainHeadingSubDiv} data-aos="fade-left"></div> <img className={Accre1Css['dot']} src={Img8} data-aos="fade"/>
       <div className={Accre1Css.divMainHeadingSubDiv} data-aos="fade-right"> </div>
     </div>
   </section>
