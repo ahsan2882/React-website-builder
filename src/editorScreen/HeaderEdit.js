@@ -2,7 +2,7 @@ import React from 'react'
 import HeaderEditCss from './HeaderEdit.module.css'
 import { Link } from 'react-router-dom';
 
-export default function Header({ setWidth, templateNum }) {
+export default function Header({ templateNum, setSaveClicked, toSave }) {
     let path = '';
      if(templateNum === 1){
         path = '/preview/template-1'
@@ -21,10 +21,11 @@ export default function Header({ setWidth, templateNum }) {
      else if (templateNum === 0)
      {
          path = '/preview/new-template'
-     }
+    }
+    const saveTemplate = () => {
+        setSaveClicked(true);
+    }
     return (
-
-        
         <div className={`flex justify-between items-center border-b-2 border-gray-100 py-6 ${HeaderEditCss['max-w-7xl']} ${HeaderEditCss.maxHeadH} mx-auto px-4 bg-white fixed z-50 w-full top-0`}>
             <div className="w-80"></div>
             <nav>
@@ -39,7 +40,11 @@ export default function Header({ setWidth, templateNum }) {
                 </div>
             </nav>
             <div className="flex items-center justify-between w-80">
-                <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-20 justify-between rounded-2xl">
+                <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-20 justify-between rounded-2xl"
+                    onClick={() => {
+                        saveTemplate();
+                    }}
+                >
                     <i className="far fa-save text-2xl"></i>
                     <h2> SAVE</h2>
                 </button>
