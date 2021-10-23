@@ -54,8 +54,8 @@ export default function Header({ templateNum, setSaveClicked, toSave }) {
                 </button>
                 {/* <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-20 justify-between rounded-2xl"
                     onClick={() => {
-                        let htmlDoc = lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-4'))['templateData']))
-                        console.log(htmlDoc)
+                        // let htmlDoc = lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-4'))['templateData']))
+                        // console.log(htmlDoc)
                     }}
                 >
                     <i className="far fa-save text-2xl"></i>
