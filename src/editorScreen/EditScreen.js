@@ -8,8 +8,12 @@ import { HTML5Backend } from 'react-dnd-html5-backend'
 export const NewAssetContext = createContext({ newAssetState: null, setNewAssetState: (() => void 0), newAssetCount: 0, setNewAssetCount: (() => void 0) });
 
 export default function EditScreen({ temp }) {
-    const [defWidth, setWidth] = useState(window.innerWidth);
     const [assetSelected, setAssetSelected] = useState(false);
+    const [toSave, setToSave] = useState({
+        templateID: null,
+        templateData: null
+    });
+    const [saveClicked, setSaveClicked] = useState(false);
     // const [newAssetState, setNewAssetState] = useState(null);
     // const [newAssetCount, setNewAssetCount] = useState(0);
 
@@ -21,9 +25,21 @@ export default function EditScreen({ temp }) {
                 <FooterEdit setOverlay={setAssetSelected} />
             </NewAssetContext.Provider> */}
             <DndProvider backend={HTML5Backend}>
-                <HeaderEdit setWidth={setWidth} templateNum={temp}/>
-                <ContainerEdit  defWidth={defWidth} templateNum={temp} overlayPresent={assetSelected} />
-                <FooterEdit setOverlay={setAssetSelected} />
+                <HeaderEdit
+                    templateNum={temp}
+                    setSaveClicked={setSaveClicked}
+                    toSave={toSave}
+                />
+                <ContainerEdit
+                    templateNum={temp}
+                    overlayPresent={assetSelected}
+                    saveClicked={saveClicked}
+                    setToSave={setToSave}
+                    setSaveClicked={setSaveClicked}
+                />
+                <FooterEdit
+                    setOverlay={setAssetSelected}
+                />
             </DndProvider>
         </>
     )
