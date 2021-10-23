@@ -35,7 +35,7 @@ export default function AboutUs4({ showPopup, overSection }) {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='abouted1'
-                                    initialValue="<h6>About Us !</h6>"
+                                    initialValue={`<h6>About Us !</h6>`}
                                     init={{
                                         forced_root_block:"",
                                         menubar: false,
@@ -51,7 +51,7 @@ export default function AboutUs4({ showPopup, overSection }) {
                                     inline={true}
                                     key='abouted2'
                                     tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                                    initialValue="<h3>CCTV For your Safety</h3>"
+                                    initialValue={`<h3>CCTV For your Safety</h3>`}
                                     init={{
                                         forced_root_block:"",
                                         menubar: false,
