@@ -19,6 +19,7 @@ export default function EditScreen({ temp }) {
                 <HeaderEdit
                     templateNum={temp}
                     setSaveClicked={setSaveClicked}
+                    saveClicked={saveClicked}
                     toSave={toSave}
                 />
                 <ContainerEdit
