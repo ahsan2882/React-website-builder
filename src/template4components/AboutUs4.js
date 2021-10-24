@@ -31,11 +31,12 @@ export default function AboutUs4({ showPopup, overSection }) {
                     <section>
                         <article>
                             <div className={About4Css.editableAbout}>
+                                <h6>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='abouted1'
-                                    initialValue={`<h6>About Us !</h6>`}
+                                    initialValue="About Us"
                                     init={{
                                         forced_root_block:"",
                                         menubar: false,
@@ -45,13 +46,15 @@ export default function AboutUs4({ showPopup, overSection }) {
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                     }}
                                 />
+                                </h6>
                                 {/* <h3 className="text-white text-3xl w-full mb-6">CCTV For your Safety</h3> */}
+                                <h3>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='abouted2'
                                     tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                                    initialValue={`<h3>CCTV For your Safety</h3>`}
+                                    initialValue="CCTV For your Safety"
                                     init={{
                                         forced_root_block:"",
                                         menubar: false,
@@ -62,17 +65,19 @@ export default function AboutUs4({ showPopup, overSection }) {
 
                                     }}
                                 />
+                                </h3>
                                 {/* <p className="text-white text-xl py-3 px-0">Nunc pretium nibh non aliquam scelerisque. Integer porttitor
                                 dolor sit amet leo malesuada scelerisque. Sed sed tortor
                                 lobortis, dictum lacus sed, mollis enim. Aenean ullamcorper
                                 accumsan sem sit amet aliquam. Cras euismod mauris felis, eget
                                 bibendum nibh facilisis ac.</p> */}
+                                <p>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='abouted3'
                                     tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                                    initialValue="<p>Nunc pretium nibh non aliquam scelerisque. Integer porttitor dolor sit amet leo malesuada scelerisque. Sed sed tortor lobortis, dictum lacus sed, mollis enim. Aenean ullamcorper accumsan sem sit amet aliquam. Cras euismod mauris felis, eget bibendum nibh facilisis ac.</p>"
+                                    initialValue="Nunc pretium nibh non aliquam scelerisque. Integer porttitor dolor sit amet leo malesuada scelerisque. Sed sed tortor lobortis, dictum lacus sed, mollis enim. Aenean ullamcorper accumsan sem sit amet aliquam. Cras euismod mauris felis, eget bibendum nibh facilisis ac."
                                     init={{
                                         forced_root_block:"",
                                         menubar: false,
@@ -83,6 +88,7 @@ export default function AboutUs4({ showPopup, overSection }) {
 
                                     }}
                                 />
+                                </p>
                             </div>
                             <div className="py-5">
                                 <button className={`${About4Css.btnReadMore} text-white border flex justify-center w-40 items-center border-solid py-2 px-8 hover:text-black hover:bg-white`}>
@@ -91,7 +97,7 @@ export default function AboutUs4({ showPopup, overSection }) {
                                         inline={true}
                                         key='abouted4'
                                         tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                                        initialValue="<p>Read More</p>"
+                                        initialValue="Read More"
                                         init={{
                                             forced_root_block:"",
                                             menubar: false,
