@@ -16,12 +16,13 @@ export default function OurGuards4({ showPopup, overSection }) {
             <section className="w-full" style={{ background: currentBackground }}>
                 <div className={`${Guards4Css.container1} ${Guards4Css.teamSection}`}>
                     {/* <TextH1 className={`text-5xl m-0 ${Guards4Css.teamH1}`} text="Our Guards" /> */}
+                    <h1>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='guard4ed1'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue="<h1>Our Guards</h1>"
+                        initialValue="Our Guards"
                         init={{
                             menubar: false,
                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
@@ -30,18 +31,20 @@ export default function OurGuards4({ showPopup, overSection }) {
 
                         }}
                     />
+                    </h1>
                     {/* <TextPara className="text-xl text-center mb-12 text-black"
                     text="Pellentesque mattis mauris ac tortor volutpat, eu fermentum sapien
                             euismod. In id tempus metus. Donec eu volutpat nibh, in maximus
                             ligula."/> */}
+                    <p>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='guard4ed2'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue="<p>Pellentesque mattis mauris ac tortor volutpat, eu fermentum sapien
+                        initialValue="Pellentesque mattis mauris ac tortor volutpat, eu fermentum sapien
                             euismod. In id tempus metus. Donec eu volutpat nibh, in maximus
-                            ligula.</p>"
+                            ligula."
                         init={{
                             forced_root_block: "",
                             menubar: false,
@@ -52,6 +55,7 @@ export default function OurGuards4({ showPopup, overSection }) {
 
                         }}
                     />
+                    </p>
                     <div className={`${Guards4Css.container1} ${Guards4Css.guardsList}`}>
                         <div className={Guards4Css.guards}>
                             {/* <img src={guard1} className={Guards4Css.guardImage} alt="guard 1" /> */}
@@ -86,12 +90,13 @@ export default function OurGuards4({ showPopup, overSection }) {
                             />
                         } alt="guard 1" className={Guards4Css.guardImage}/> */}
                             {/* <TextH2 className={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
+                            <h2>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='guard4ed3'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<h2>John Richards</h2>"
+                                initialValue="John Richards"
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -102,12 +107,14 @@ export default function OurGuards4({ showPopup, overSection }) {
 
                                 }}
                             />
+                            </h2>
+                            <h4>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='guard4ed4'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<h4>Lorem ipsum</h4>"
+                                initialValue="Lorem ipsum"
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -118,6 +125,7 @@ export default function OurGuards4({ showPopup, overSection }) {
 
                                 }}
                             />
+                            </h4>
                             <div className={Guards4Css.guardSocial}>
                                 <i className="fab fa-twitter"></i>
                                 <i className="fab fa-facebook-square"></i>
@@ -143,12 +151,13 @@ export default function OurGuards4({ showPopup, overSection }) {
                             />
                             {/* <TextH2 classStyle={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
                             {/* <TextH4 className="m-0 mt-8 text-black" text="Lorem ipsum" /> */}
+                            <h2>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='guard4ed5'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<h2>John Richards</h2>"
+                                initialValue="John Richards"
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -159,12 +168,14 @@ export default function OurGuards4({ showPopup, overSection }) {
 
                                 }}
                             />
+                            </h2>
+                            <h4>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='guard4ed6'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<h4>Lorem ipsum</h4>"
+                                initialValue="Lorem ipsum"
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -175,6 +186,7 @@ export default function OurGuards4({ showPopup, overSection }) {
 
                                 }}
                             />
+                            </h4>
                             <div className={Guards4Css.guardSocial}>
                                 <i className="fab fa-twitter"></i>
                                 <i className="fab fa-facebook-square"></i>
@@ -200,38 +212,42 @@ export default function OurGuards4({ showPopup, overSection }) {
                             />
                             {/* <TextH2 classStyle={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
                             {/* <TextH4 className="m-0 mt-8 text-black" text="Lorem ipsum" /> */}
-                            <Editor
-                                onInit={(evt, editor) => editorRef.current = editor}
-                                inline={true}
-                                key='guard4ed7'
-                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<h2>John Richards</h2>"
-                                init={{
-                                    forced_root_block: "",
-                                    menubar: false,
-                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                        'alignright alignjustify | fontselect',
-                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                            <h2>
+                                <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='guard4ed7'
+                                    tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                    initialValue="John Richards"
+                                    init={{
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | fontselect',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
 
-                                }}
-                            />
-                            <Editor
-                                onInit={(evt, editor) => editorRef.current = editor}
-                                inline={true}
-                                key='guard4ed8'
-                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<h4>Lorem ipsum</h4>"
-                                init={{
-                                    forced_root_block: "",
-                                    menubar: false,
-                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                        'alignright alignjustify | fontselect',
-                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                    }}
+                                />
+                            </h2>
+                            <h4>
+                                <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='guard4ed8'
+                                    tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                    initialValue="Lorem ipsum"
+                                    init={{
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | fontselect',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
 
-                                }}
-                            />
+                                    }}
+                                />
+                            </h4>
                             <div className={Guards4Css.guardSocial}>
                                 <i className="fab fa-twitter"></i>
                                 <i className="fab fa-facebook-square"></i>
@@ -257,37 +273,42 @@ export default function OurGuards4({ showPopup, overSection }) {
                             />
                             {/* <TextH2 classStyle={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
                             {/* <TextH4 className="m-0 mt-8 text-black" text="Lorem ipsum" /> */}
-                            <Editor
-                                onInit={(evt, editor) => editorRef.current = editor}
-                                inline={true}
-                                key='guard4ed9'
-                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<h2>John Richards</h2>"
-                                init={{
-                                    menubar: false,
-                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                        'alignright alignjustify | fontselect',
-                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                            <h2>
+                                <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='guard4ed9'
+                                    tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                    initialValue="John Richards"
+                                    init={{
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | fontselect',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
 
-                                }}
-                            />
-                            <Editor
-                                onInit={(evt, editor) => editorRef.current = editor}
-                                inline={true}
-                                key='guard4ed10'
-                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<h4>Lorem ipsum</h4>"
-                                init={{
-                                    forced_root_block: "",
-                                    menubar: false,
-                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                        'alignright alignjustify | fontselect',
-                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                    }}
+                                />
+                            </h2>
+                            <h4>
+                                <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='guard4ed10'
+                                    tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                    initialValue="Lorem ipsum"
+                                    init={{
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | fontselect',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
 
-                                }}
-                            />
+                                    }}
+                                />
+                            </h4>
                             <div className={Guards4Css.guardSocial}>
                                 <i className="fab fa-twitter"></i>
                                 <i className="fab fa-facebook-square"></i>
