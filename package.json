@@ -14,6 +14,7 @@
     "grapesjs": "^0.17.26",
     "himalaya": "^1.1.0",
     "html-react-parser": "^1.4.0",
+    "html-to-react": "^1.4.7",
     "lzutf8": "^0.6.0",
     "material-design-icons": "^3.0.1",
     "react": "^17.0.2",
