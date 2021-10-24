@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { Parser } from 'html-to-react'
 import lz from 'lzutf8'
 
+
 export default function PreviewPage({ temp }) {
-  const [localStorageData, setLocalStorageData] = useState(null)
-  const [htmlDocs, setHtmlDocs] = useState(null)
+  const [localStorageData, setLocalStorageData] = useState(null);
+  const [previewTemp, setPreviewTemp] = useState(null);
   useEffect(() => {
     if (temp === 1) {
       setLocalStorageData(lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-1'))['templateData'])))
@@ -17,28 +19,15 @@ export default function PreviewPage({ temp }) {
     else if (temp === 4) {
       setLocalStorageData(lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-4'))['templateData'])))
     }
-    
   }, [temp])
   useEffect(() => {
-    let htmlDoc = new DOMParser().parseFromString(localStorageData, 'text/html')
-    let arr = JSON.parse(htmlDoc.getElementsByClassName("filterHTML")[0])
-    // setHtmlDocs(arr)
-    console.log("array", (arr))
-    // console.log(htmlDoc)
+    let main = Parser().parse(localStorageData)
+    
+    setPreviewTemp(main)
   }, [localStorageData])
-  const preview = () => {
-  console.log(typeof(htmlDocs))
-}
-  
   return (
     <>
-      <button onClick={() => {
-        preview()
-      }}>Preview</button>
-      {/* {
-        // new DOMParser().parseFromString(localStorageData, 'text/html')
-        htmlDocs
-      } */}
+      {previewTemp}
     </>
   )
 }
