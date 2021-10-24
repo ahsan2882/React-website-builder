@@ -13,12 +13,13 @@ export default function HeroSection4() {
             }}>
                 <div className="w-full">
                     {/* <TextH1 classStyle={Hero4Css.secHeroH1} text="Security Services"></TextH1> */}
+                    <h1 className="text-7xl">
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='heroed1'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue={`<h1 class=" text-7xl">Security Services</h1>`}
+                        initialValue="Security Services"
                         init={{
                             forced_root_block:"",
                             menubar: false,
@@ -27,13 +28,15 @@ export default function HeroSection4() {
                             fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                         }}
                     />
+                    </h1>
                     {/* <TextPara text="For your personal safety" classStyle={Hero4Css.paragraphHero} /> */}
+                    <p>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='heroed2'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue="<p>For your personal safety</p>"
+                        initialValue="For your personal safety"
                         init={{
                             forced_root_block:"",
                             menubar: false,
@@ -44,14 +47,16 @@ export default function HeroSection4() {
 
                         }}
                     />
+                    </p>
                     <div className={Hero4Css.secHeroBtn}>
                         {/* <ButtonText classStyle={Hero4Css.secBtn} text="Contact Us"></ButtonText> */}
+                        <button>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='heroed3'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                            initialValue="<button>Contact Us</button>"
+                            initialValue="Contact Us"
                             init={{
                                 forced_root_block:"",
                                 menubar: false,
@@ -62,6 +67,7 @@ export default function HeroSection4() {
 
                             }}
                         />
+                        </button>
                     </div>
                 </div>
             </section>
