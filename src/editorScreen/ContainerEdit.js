@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import ContainerEditCss from './ContainerEdit.module.css'
-import lz from "lzutf8";
+// import lz from "lzutf8";
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
-// import {stringify} from 'himalaya/lib/stringify'
 
 export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
     const [sectionKey, setSectionKey] = useState(null);
-    const [currentTemplate, setCurrentTemplate] = useState(null);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -30,35 +28,43 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     useEffect(() => {
         if (temp === 1) {
             setUpdateChildren(templateComponents.template1Components)
-            setCurrentTemplate("Template-1")
         }
         else if (temp === 2) {
             setUpdateChildren(templateComponents.template2Components)
-            setCurrentTemplate("Template-2")
         }
         else if (temp === 3) {
             setUpdateChildren(templateComponents.template3Components)
-            setCurrentTemplate("Template-3")
         }
         else if (temp === 4) {
             setUpdateChildren(templateComponents.template4Components)
-            setCurrentTemplate("Template-4")
         }
         else if (temp === 0) {
             setUpdateChildren([])
         }
     }, [temp])
     useEffect(() => {
-        let htmlString = document.getElementsByClassName("getInnerHTML")[0].innerHTML
-        let compressed = lz.encodeBase64(lz.compress(htmlString))
+        let htmlString;
+        let editableComponents;
         if (saveClicked) {
-            setToSave({
-                templateID: currentTemplate,
-                templateData: compressed
-            })
+            htmlString = document.getElementsByClassName("getInnerHTML")[0]
+            editableComponents = htmlString.getElementsByClassName("mce-content-body")[0]
+            editableComponents.setAttribute("contenteditable", "false")
         }
-        setSaveClicked(false)
-    }, [saveClicked, setToSave, currentTemplate, setSaveClicked])
+        // for (let elem in editableComponents) {
+        //     // editableComponents[elem].setAttribute("contenteditable", "false")
+        //     console.log(typeof(editableComponents[elem]))
+        // }
+        // let compressed = lz.encodeBase64(lz.compress(htmlString))
+        // if (saveClicked) {
+        //     setToSave({
+        //         templateID: currentTemplate,
+        //         templateData: compressed
+        //     })
+        // }
+        setTimeout(function () { setSaveClicked(false); }, 1000);
+
+       
+    }, [setSaveClicked, saveClicked])
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
@@ -119,7 +125,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                     </div>
                 </div>
             </section>
-            
+
         </>
 
     );
