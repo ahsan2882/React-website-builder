@@ -23,6 +23,21 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
         setSaveClicked(true);
         localStorage.setItem('Template-4', JSON.stringify(toSave))
     }
+    const exportCode = () => {
+        fetch('http://localhost:9000/generate-file', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow',
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify({first_name: 'Ahsan', last_name: 'Shahid'})
+        })
+    }
     return (
         <div className={`flex justify-between items-center border-b-2 border-gray-100 py-6 ${HeaderEditCss['max-w-7xl']} ${HeaderEditCss.maxHeadH} mx-auto px-4 bg-white fixed z-50 w-full top-0`}>
             <div className="w-80"></div>
@@ -47,21 +62,12 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
                     <h2> SAVE</h2>
                     <i className={saveClicked ? "fas fa-check" : null}></i>
                 </button>
-                {/* <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-20 justify-between rounded-2xl"
-                    onClick={() => {
-                        // let htmlDoc = lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-4'))['templateData']))
-                        // console.log(htmlDoc)
-                    }}
-                >
-                    <i className="far fa-save text-2xl"></i>
-                    <h2> LOAD</h2>
-                </button> */}
                 <Link to={path} target='_blank' rel='noopener noreferrer' className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl">
                     {/* <img src={previewIm} alt="Preview" className={`w-9 h-auto`} /> */}
                     <i className="far fa-eye text-2xl"></i>
                     <h2>PREVIEW</h2>
                 </Link>
-                <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl">
+                <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl" onClick={() => exportCode()}>
                     <i className="fas fa-file-export text-2xl"></i>
                     <h2>EXPORT</h2>
                 </button>
