@@ -1,0 +1,19 @@
+.mainHead > div:nth-child(1) > h1{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.clientRemark p{
+    line-height: 1.625;
+}
+.clientRemark h2{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}

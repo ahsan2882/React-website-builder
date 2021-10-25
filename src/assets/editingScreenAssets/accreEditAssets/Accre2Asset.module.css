@@ -1,17 +1,4 @@
-html {
-    --clr-secondary-light: #292929;
-    --clr-secondary: #000000;
 
-    --clr-gray: #dddddd;
-    --clr-light: #ffff;
-    --clr-font: #fff;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    --clr-primary: #ffff;
-    --clr-white-smoke: #000;
-    --clr-red-new: #c01120;
-    --clr-black-new: #000;
-}
 .accreditations-sec {
     background-color: #c01120;
     box-shadow: rgb(0 0 0 / 25%) 0 54px 55px;
@@ -45,14 +32,6 @@ html {
     padding: 20px 30px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Barlow", sans-serif;
-}
-
-
 
 .heading-main-title {
     display: flex;
@@ -64,7 +43,7 @@ html {
 
 .heading-main-title h3 {
     font-size: 2.5em;
-    border-bottom: 1px solid var(--clr-red-new);
+    border-bottom: 1px solid #c01120;
     color: #575757;
     padding: 17px 0;
 }
@@ -78,7 +57,7 @@ html {
     position: absolute;
     height: 4px;
     width: 30%;
-    background: var(--clr-red-new);
+    background: #c01120;
     left: 0;
     bottom: -2px;
 }

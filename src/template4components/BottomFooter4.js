@@ -8,13 +8,15 @@ export default function BottomFooter4() {
         <footer className="bg-black w-full">
             <div className={`${BottomFooter4Css.container1} ${BottomFooter4Css.footerWrapper} text-center w-full`}>
                 {/* <TextPara classStyle="text-white" text="Copyright © 2021 CITRIX CONSULTANCY. All Rights Reserved." /> */}
+<p>
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='footer4ed3'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                    initialValue="<p>Copyright © 2021 CITRIX CONSULTANCY. All Rights Reserved.</p>"
+                    initialValue="Copyright © 2021 CITRIX CONSULTANCY. All Rights Reserved."
                     init={{
+                        forced_root_block:"",
                         menubar: false,
                         toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                             'alignright alignjustify | fontselect',
@@ -23,6 +25,7 @@ export default function BottomFooter4() {
 
                     }}
                 />
+                </p>
             </div>
         </footer>
     );

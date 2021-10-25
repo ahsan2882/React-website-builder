@@ -2,30 +2,30 @@ import contactusAss1 from '../assets/editingScreenAssets/contactusEditAssets/con
 import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/contactus2.png'
 import contactusAss3 from '../assets/editingScreenAssets/contactusEditAssets/contactus3.png'
 import contactusAss4 from '../assets/editingScreenAssets/contactusEditAssets/contactus4.png'
-import contactusAss5 from '../assets/editingScreenAssets/contactusEditAssets/contactus5.PNG'
+import contactusAss5 from '../assets/editingScreenAssets/contactusEditAssets/contactus5.jpg'
 
 import faqsAss1 from '../assets/editingScreenAssets/faqsEditAssets/faqs1.png'
-import faqsAss2 from '../assets/editingScreenAssets/faqsEditAssets/faqs2.JPG'
-import faqsAss3 from '../assets/editingScreenAssets/faqsEditAssets/faqs3.JPG'
-import faqsAss4 from '../assets/editingScreenAssets/faqsEditAssets/faqs4.JPG'
+import faqsAss2 from '../assets/editingScreenAssets/faqsEditAssets/faqs2.png'
+import faqsAss3 from '../assets/editingScreenAssets/faqsEditAssets/faqs3.png'
+import faqsAss4 from '../assets/editingScreenAssets/faqsEditAssets/faqs4.png'
 
-import footerAss1 from '../assets/editingScreenAssets/footerEditAssets/footer1.JPG'
-import footerAss2 from '../assets/editingScreenAssets/footerEditAssets/footer2.JPG'
-import footerAss3 from '../assets/editingScreenAssets/footerEditAssets/footer3.JPG'
-import footerAss4 from '../assets/editingScreenAssets/footerEditAssets/footer4.JPG'
+import footerAss1 from '../assets/editingScreenAssets/footerEditAssets/footer1.png'
+import footerAss2 from '../assets/editingScreenAssets/footerEditAssets/footer2.png'
+import footerAss3 from '../assets/editingScreenAssets/footerEditAssets/footer3.png'
+import footerAss4 from '../assets/editingScreenAssets/footerEditAssets/footer4.png'
 
-import pricingAss1 from '../assets/editingScreenAssets/pricingEditAssets/pricing1.JPG'
-import pricingAss2 from '../assets/editingScreenAssets/pricingEditAssets/pricing2.JPG'
+import pricingAss1 from '../assets/editingScreenAssets/pricingEditAssets/pricing1.png'
+import pricingAss2 from '../assets/editingScreenAssets/pricingEditAssets/pricing2.png'
 import pricingAss3 from '../assets/editingScreenAssets/pricingEditAssets/pricing3.png'
-import pricingAss4 from '../assets/editingScreenAssets/pricingEditAssets/pricing4.JPG'
-import pricingAss5 from '../assets/editingScreenAssets/pricingEditAssets/pricing5.JPG'
+import pricingAss4 from '../assets/editingScreenAssets/pricingEditAssets/pricing4.png'
+import pricingAss5 from '../assets/editingScreenAssets/pricingEditAssets/pricing5.png'
 
 
-import serviceAss1 from '../assets/editingScreenAssets/serviceEditAssets/service1.JPG'
+import serviceAss1 from '../assets/editingScreenAssets/serviceEditAssets/service1.png'
 import serviceAss2 from '../assets/editingScreenAssets/serviceEditAssets/service2.png'
-import serviceAss3 from '../assets/editingScreenAssets/serviceEditAssets/service3.JPG'
-import serviceAss4 from '../assets/editingScreenAssets/serviceEditAssets/service4.JPG'
-import serviceAss5 from '../assets/editingScreenAssets/serviceEditAssets/service5.JPG'
+import serviceAss3 from '../assets/editingScreenAssets/serviceEditAssets/service3.png'
+import serviceAss4 from '../assets/editingScreenAssets/serviceEditAssets/service4.png'
+import serviceAss5 from '../assets/editingScreenAssets/serviceEditAssets/service5.png'
 
 import socialAss1 from '../assets/editingScreenAssets/socialEditAssets/social1.png'
 import socialAss2 from '../assets/editingScreenAssets/socialEditAssets/social2.png'
@@ -46,18 +46,18 @@ import navAss5 from '../assets/editingScreenAssets/navEditAssets/nav5.PNG'
 import testimonialAss1 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial1.png'
 import testimonialAss2 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial2.png'
 import testimonialAss3 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial3.png'
-import testimonialAss4 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial4.JPG'
+import testimonialAss4 from '../assets/editingScreenAssets/testimonialEditAssets/testimonial4.png'
 
-import accreAss1 from '../assets/editingScreenAssets/accreEditAssets/accreditation1.JPG'
-import accreAss2 from '../assets/editingScreenAssets/accreEditAssets/accreditation2.JPG'
-import accreAss3 from '../assets/editingScreenAssets/accreEditAssets/accreditation3.JPG'
-import accreAss4 from '../assets/editingScreenAssets/accreEditAssets/accreditation4.JPG'
+import accreAss1 from '../assets/editingScreenAssets/accreEditAssets/accreditation1.png'
+import accreAss2 from '../assets/editingScreenAssets/accreEditAssets/accreditation2.png'
+import accreAss3 from '../assets/editingScreenAssets/accreEditAssets/accreditation3.png'
+import accreAss4 from '../assets/editingScreenAssets/accreEditAssets/accreditation4.png'
 
-import sliderAss1 from '../assets/editingScreenAssets/sliderEditAssets/slider1.JPG'
-import sliderAss2 from '../assets/editingScreenAssets/sliderEditAssets/slider2.JPG'
-import sliderAss3 from '../assets/editingScreenAssets/sliderEditAssets/slider3.JPG'
-import sliderAss4 from '../assets/editingScreenAssets/sliderEditAssets/slider4.JPG'
-import sliderAss5 from '../assets/editingScreenAssets/sliderEditAssets/slider5.JPG'
+import sliderAss1 from '../assets/editingScreenAssets/sliderEditAssets/slider1.png'
+import sliderAss2 from '../assets/editingScreenAssets/sliderEditAssets/slider2.png'
+import sliderAss3 from '../assets/editingScreenAssets/sliderEditAssets/slider3.png'
+import sliderAss4 from '../assets/editingScreenAssets/sliderEditAssets/slider4.png'
+import sliderAss5 from '../assets/editingScreenAssets/sliderEditAssets/slider5.png'
 
 export const sidebarAssets = [
     {
@@ -71,7 +71,7 @@ export const sidebarAssets = [
         ]
     },
     {
-        assetName:'header',
+        assetName: 'header',
         assets: [
             { imageName: heroAss1, id: "hero1" },
             { imageName: heroAss2, id: "hero2" },
@@ -81,7 +81,7 @@ export const sidebarAssets = [
         ]
     },
     {
-        assetName:'footer',
+        assetName: 'footer',
         assets: [
             { imageName: footerAss1, id: "footer1" },
             { imageName: footerAss2, id: "footer2" },
@@ -90,7 +90,7 @@ export const sidebarAssets = [
         ]
     },
     {
-        assetName:'testimonials',
+        assetName: 'testimonials',
         assets: [
             { imageName: testimonialAss1, id: "testimonial1" },
             { imageName: testimonialAss2, id: "testimonial2" },
@@ -99,7 +99,7 @@ export const sidebarAssets = [
         ]
     },
     {
-        assetName:'FAQs',
+        assetName: 'FAQs',
         assets: [
             { imageName: faqsAss1, id: "faqs1" },
             { imageName: faqsAss2, id: "faqs2" },
@@ -108,7 +108,7 @@ export const sidebarAssets = [
         ]
     },
     {
-        assetName:'contact',
+        assetName: 'contact',
         assets: [
             { imageName: contactusAss1, id: "contactus1" },
             { imageName: contactusAss2, id: "contactus2" },
@@ -162,6 +162,6 @@ export const sidebarAssets = [
             { imageName: accreAss2, id: "accre2" },
             { imageName: accreAss3, id: "accre3" },
             { imageName: accreAss4, id: "accre4" },
-         ]
+        ]
     },
 ]

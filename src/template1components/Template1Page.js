@@ -1,26 +1,28 @@
 import React from 'react'
-import {Header01} from './Header01'
-import {Service01} from './Service01'
-import {Testimonials} from './Testimonials';
-import {Prizing01}  from './Prizing01'
-import {Guard01} from './Guard01'
-import {News01} from './News01'
-import {Program01} from './Program01'
-import {About01} from './About01'
-import {Footer01} from './Footer01'
+import {Header1} from './Header1'
+import {Service1} from './Service1'
+import {Testimonials1} from './Testimonials1';
+import {Prizing1}  from './Prizing1'
+import {Guard1} from './Guard1'
+import {News1} from './News1'
+import {Program1} from './Program1'
+import {About1} from './About1'
+import {Footer1} from './Footer1'
 export default function Template1Page() {
+    
     return (
      
      <>
-     <Header01/>
-     <Service01/>
-     <Testimonials/>
-     <Prizing01/>
-     <Guard01/>
-     <News01/>
-     <Program01/>
-     <About01/>
-     <Footer01/>
+ 
+     <Header1/>
+     <Service1/>
+     <Testimonials1/>
+     <Prizing1/>
+     <Guard1/>
+     <News1/>
+     <Program1/>
+     <About1/>
+     <Footer1/>
 
 
      </>

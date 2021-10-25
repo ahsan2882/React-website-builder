@@ -1,0 +1,16 @@
+.mainHead h1{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.clientRemark p{
+     line-height: 1.625;
+     margin-bottom: 1.5rem;
+}
+.clientRemark h4{
+    font-weight: 500;
+    color: #fff;
+}

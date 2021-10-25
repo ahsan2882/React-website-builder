@@ -1,6 +1,7 @@
-import React from 'react'
-
+import React, { useRef } from "react";
+import { Editor } from "@tinymce/tinymce-react";
 export default function Footer4Asset() {
+    const editorRef = useRef(null);
     return (
         <>
             <footer className="bg-blue-700 dark:bg-gray-800 w-full py-8">
@@ -8,22 +9,102 @@ export default function Footer4Asset() {
                     <ul className="max-w-screen-md mx-auto text-lg font-light flex flex-wrap justify-between">
                         <li className="my-2">
                             <button className="text-gray-100 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" href="#">
-                                HOME
+                            <Editor
+                                onInit={(evt, editor) => (editorRef.current = editor)}
+                                inline={true}
+                                key="Footer4asset1"
+                                tinymceScriptSrc={
+                                    process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                }
+                                initialValue=" HOME"
+                                init={{
+                                    forced_root_block:"",
+                                    menubar: false,
+                                    toolbar:
+                                        "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                        "alignright alignjustify | fontselect",
+                                    fontsize_formats:
+                                        "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats:
+                                        "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                }}
+                            />
+                               
                             </button>
                         </li>
                         <li className="my-2">
                             <button className="text-gray-100 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" href="#">
-                                ABOUT
+                            <Editor
+                                onInit={(evt, editor) => (editorRef.current = editor)}
+                                inline={true}
+                                key="Footer4asset2"
+                                tinymceScriptSrc={
+                                    process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                }
+                                initialValue="ABOUT"
+                                init={{
+                                    forced_root_block:"",
+                                    menubar: false,
+                                    toolbar:
+                                        "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                        "alignright alignjustify | fontselect",
+                                    fontsize_formats:
+                                        "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats:
+                                        "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                }}
+                            />
+                              
                             </button>
                         </li>
                         <li className="my-2">
                             <button className="text-gray-100 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" href="#">
-                                CONTACT
+                            <Editor
+                                onInit={(evt, editor) => (editorRef.current = editor)}
+                                inline={true}
+                                key="Footer4asset3"
+                                tinymceScriptSrc={
+                                    process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                }
+                                initialValue="CONTACT"
+                                init={{
+                                    forced_root_block:"",
+                                    menubar: false,
+                                    toolbar:
+                                        "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                        "alignright alignjustify | fontselect",
+                                    fontsize_formats:
+                                        "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats:
+                                        "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                }}
+                            />
+                           
                             </button>
                         </li>
                         <li className="my-2">
                             <button className="text-gray-100 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white transition-colors duration-200" href="#">
-                                SERVICES
+                            <Editor
+                                onInit={(evt, editor) => (editorRef.current = editor)}
+                                inline={true}
+                                key="Footer4asset4"
+                                tinymceScriptSrc={
+                                    process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                }
+                                initialValue="SERVICES"
+                                init={{
+                                    forced_root_block:"",
+                                    menubar: false,
+                                    toolbar:
+                                        "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                        "alignright alignjustify | fontselect",
+                                    fontsize_formats:
+                                        "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats:
+                                        "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                }}
+                            />
+                               
                             </button>
                         </li>
                     </ul>
@@ -65,13 +146,51 @@ export default function Footer4Asset() {
                                 <input type="text" id="&quot;form-subscribe-Subscribe" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email" />
                             </div>
                             <button className="flex-shrink-0 px-4 py-2 text-base font-semibold text-white bg-ind-600 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="submit">
-                                Subscribe
-                            </button>
+                            <Editor
+                                onInit={(evt, editor) => (editorRef.current = editor)}
+                                inline={true}
+                                key="Footer4asset5"
+                                tinymceScriptSrc={
+                                    process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                }
+                                initialValue="Subscribe"
+                                init={{
+                                    forced_root_block:"",
+                                    menubar: false,
+                                    toolbar:
+                                        "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                        "alignright alignjustify | fontselect",
+                                    fontsize_formats:
+                                        "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats:
+                                        "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                }}
+                            />
+                            </button>        
                         </form>
                     </div>
                     <div className="text-center text-gray-100 dark:text-gray-200 pt-10 sm:pt-12 font-light flex items-center justify-center">
-                        © 2021 Security Guard
-                    </div>
+                    <Editor
+                                onInit={(evt, editor) => (editorRef.current = editor)}
+                                inline={true}
+                                key="Footer4asset6"
+                                tinymceScriptSrc={
+                                    process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                }
+                                initialValue=" © 2021 Security Guard"
+                                init={{
+                                    forced_root_block:"",
+                                    menubar: false,
+                                    toolbar:
+                                        "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
+                                        "alignright alignjustify | fontselect",
+                                    fontsize_formats:
+                                        "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats:
+                                        "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                }}
+                            />
+                    </div>   
                 </div>
             </footer>
         </>

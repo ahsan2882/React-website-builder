@@ -27,6 +27,7 @@ export default function Accre2Asset() {
                                 }
                                 initialValue="<h3>We are Verified by Govt</h3>"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -48,6 +49,7 @@ export default function Accre2Asset() {
                             }
                             initialValue="<h1>Accreditation</h1>"
                             init={{
+                                forced_root_block:"",
                                 menubar: false,
                                 toolbar:
                                     "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -65,7 +67,25 @@ export default function Accre2Asset() {
                         <div className={Accreditation2Css["accre-wrapper"]}>
                             <div className={Accreditation2Css.arow}>
                                 <div className={Accreditation2Css["a-card"]}>
-                                    <img src={accre1} alt="aacre1" />
+                                    {/* <img src={accre1} alt="accre1" /> */}
+                                    <Editor
+                                        onInit={(evt, editor) => (editorRef.current = editor)}
+                                        inline={true}
+                                        key="accre2image1"
+                                        tinymceScriptSrc={
+                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                        }
+                                        initialValue={`<img src=${accre1} alt="accre1" />`}
+                                        init={{
+                                            forced_root_block:"",
+                                            menubar: false,
+                                            plugins: [
+                                                'image'
+                                            ],
+                                            toolbar: 'image',
+                                            images_upload_url: 'postAcceptor.php'
+                                        }}
+                                    />
                                 </div>
                                 <div className={Accreditation2Css["a-card"]}>
                                     <img src={accre2} alt="accre2" />

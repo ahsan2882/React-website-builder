@@ -18,6 +18,7 @@ export default function Faq1Asset() {
                                 }
                                 initialValue="Frequently Asked Question"
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -40,6 +41,7 @@ export default function Faq1Asset() {
                                 initialValue="The most common questions about how our business works and what
                             can do for you."
                                 init={{
+                                    forced_root_block:"",
                                     menubar: false,
                                     toolbar:
                                         "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -65,6 +67,7 @@ export default function Faq1Asset() {
                                         }
                                         initialValue="How Long is this site live?"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -89,6 +92,7 @@ export default function Faq1Asset() {
                                     Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
                                     minim velit nostrud pariatur culpa magna in aute."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -112,6 +116,7 @@ export default function Faq1Asset() {
                                         }
                                         initialValue=" Can I install/upload anything I want on there?"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -136,6 +141,7 @@ export default function Faq1Asset() {
                                     Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
                                     minim velit nostrud pariatur culpa magna in aute."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -159,6 +165,7 @@ export default function Faq1Asset() {
                                         }
                                         initialValue="How can I migrate to another site?"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -183,6 +190,7 @@ export default function Faq1Asset() {
                                     Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
                                     minim velit nostrud pariatur culpa magna in aute."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -208,6 +216,7 @@ export default function Faq1Asset() {
                                         }
                                         initialValue="Can I change the domain you give me?"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -232,6 +241,7 @@ export default function Faq1Asset() {
                                     Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
                                     minim velit nostrud pariatur culpa magna in aute."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -255,6 +265,7 @@ export default function Faq1Asset() {
                                         }
                                         initialValue="How many sites I can create at once?"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -279,6 +290,7 @@ export default function Faq1Asset() {
                                     Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
                                     minim velit nostrud pariatur culpa magna in aute."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -302,6 +314,7 @@ export default function Faq1Asset() {
                                         }
                                         initialValue="How can I communicate with you?"
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
@@ -326,6 +339,7 @@ export default function Faq1Asset() {
                                     Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
                                     minim velit nostrud pariatur culpa magna in aute."
                                         init={{
+                                            forced_root_block:"",
                                             menubar: false,
                                             toolbar:
                                                 "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +

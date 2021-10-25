@@ -39,9 +39,6 @@ export default function App() {
           <Route exact path='/edit/new-template'>
             <EditScreen temp={0} />
           </Route>
-          <Route exact path='/login'>
-            <LoginPage />
-          </Route>
           <Route exact path='/preview/template-1'>
             <PreviewPage temp={1} />
           </Route>
@@ -58,7 +55,10 @@ export default function App() {
             <PreviewPage temp={0} />
           </Route>
           <Route exact path='/signup'>
-            <Signup/>
+            <Signup />
+          </Route>
+          <Route exact path='/login'>
+            <LoginPage />
           </Route>
         </Switch>
       </Router>

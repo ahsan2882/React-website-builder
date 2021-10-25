@@ -10,12 +10,11 @@
 }
 
 .navToggle {
-  
     position: fixed;
     bottom: 2rem;
     left: 2rem;
     z-index: 25;
-    transition: all 0.10s ease;
+    transition: all 0.25s ease;
 }
 
 .navToggle .open {
@@ -23,45 +22,45 @@
 }
 .mainNav {
     position: fixed;
-    top: 6.2rem;
+    top: 4rem;
     left: 0;
-    width: 13.5vw;
+    width: 9.5vw;
     height: 100vh;
-    background-color: rgb(46, 46, 46); 
+    background-color: rgb(255, 255, 255); 
     z-index: 23;
     transform: translateX(-100%);
-    transition: all 0.15s ease;
+    transition: all 0.25s ease;
     overflow-y: hidden;
     padding-top: 2rem;
-    border-top-right-radius: 20px;
+    box-shadow: 0px 10px 20px 10px #DFEBEE;
+    /* border-top-right-radius: 20px; */
   
 }
 
 .mainNavText{
-    transition: all 0.0s ease-in-out;
-    color:white;
-  
+    transition: all 0.6s ease-in-out;
+    /* color:white; */
 }
 .mainNav.open {
     transform: translateX(0%);
 }
 
 .mainNav .mainNavLink > button {
-    padding-left: 5rem;
+    padding-left: 1rem;
     text-transform: capitalize;
     font-family: 'Montserrat';
    
 }
 
 .mainNav .mainNavLink:hover {
-    background-color: #474747;
-    margin: 0 15px;
-    border-radius: 10px;
+    background-color: #9fe1ff;
+    /* margin: 0 15px;
+    border-radius: 10px; */
    
 }
 
 .mainNavLink:hover .mainNavText {
-    transform: translateX(0.0rem);
+    transform: translateX(1rem);
  
 }
 .mainNav .mainNavLink {
@@ -79,8 +78,8 @@
     z-index: 10;
     padding-top: 3rem;
     padding-bottom: 2rem;
-    transform: translateX(-300%);
-    transition: all 1.5s ease;
+    transform: translateX(-200%);
+    transition: all 0.5s ease;
     overflow-y: scroll;
 }
 .assetList > ul{

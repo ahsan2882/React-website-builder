@@ -12,16 +12,22 @@
     "@tinymce/tinymce-react": "^3.12.6",
     "css-loader": "^6.3.0",
     "grapesjs": "^0.17.26",
-    "material-ui-color-picker": "^3.5.1",
+    "himalaya": "^1.1.0",
+    "html-react-parser": "^1.4.0",
+    "html-to-react": "^1.4.7",
+    "lzutf8": "^0.6.0",
+    "material-design-icons": "^3.0.1",
     "react": "^17.0.2",
-    "react-color-palette": "^6.1.0",
+    "react-color": "^2.19.3",
     "react-contenteditable": "^3.3.6",
     "react-dnd": "^14.0.4",
     "react-dnd-html5-backend": "^14.0.2",
     "react-dom": "^17.0.2",
     "react-preloaders2": "^3.0.5",
+    "react-responsive": "^9.0.0-beta.4",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-serialize": "^0.2.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -50,6 +56,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.4.0",
+    "mini-css-extract-plugin": "^2.4.2",
     "postcss": "^7.0.36",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14"
   }

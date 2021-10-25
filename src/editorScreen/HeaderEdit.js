@@ -2,62 +2,71 @@ import React from 'react'
 import HeaderEditCss from './HeaderEdit.module.css'
 import { Link } from 'react-router-dom';
 
-export default function Header({ setWidth, templateNum }) {
+export default function Header({ templateNum, setSaveClicked, toSave, saveClicked }) {
     let path = '';
-     if(templateNum === 1){
+    if (templateNum === 1) {
         path = '/preview/template-1'
-     }
-     else if(templateNum === 2){
-         path = '/prevew/template-2'
-     }
-     else if (templateNum === 3)
-     {
-         path = '/preview/template-3'
-     }
-     else if (templateNum === 4)
-     {
-         path = '/preview/template-4'
-     }
-     else if (templateNum === 0)
-     {
-         path = '/preview/new-template'
-     } 
-
-
-
+    }
+    else if (templateNum === 2) {
+        path = '/prevew/template-2'
+    }
+    else if (templateNum === 3) {
+        path = '/preview/template-3'
+    }
+    else if (templateNum === 4) {
+        path = '/preview/template-4'
+    }
+    else if (templateNum === 0) {
+        path = '/preview/new-template'
+    }
+    const saveTemplate = () => {
+        setSaveClicked(true);
+        localStorage.setItem('Template-4', JSON.stringify(toSave))
+    }
     return (
         <div className={`flex justify-between items-center border-b-2 border-gray-100 py-6 ${HeaderEditCss['max-w-7xl']} ${HeaderEditCss.maxHeadH} mx-auto px-4 bg-white fixed z-50 w-full top-0`}>
-            <div className="w-80">
-            </div>
+            <div className="w-80"></div>
             <nav>
                 <div className="relative w-32 flex justify-between">
-                    <button className="hover:bg-BL-400 rounded-full w-20 h-16" onClick={() => setWidth(window.innerWidth - 300)}>
-                        <i className={`fas fa-desktop text-2xl`}></i>
-                        {/* <img src={computerDisp} alt="Desktop Preview" className={`w-9 h-auto`}/> */}
+                    <button className="hover:bg-BL-400 rounded-full w-20 h-16" >
+                        <i className={`fas fa-desktop text-2xl`}>
+                        </i>
                     </button>
-                    <button className="hover:bg-BL-400 rounded-full w-20 h-16" onClick={() => setWidth(480)}>
+                    <button className="hover:bg-BL-400 rounded-full w-20 h-16">
                         <i className="fas fa-mobile-alt text-2xl"></i>
-                        {/* <img src={mobileDisp} alt="Mobile Preview" className={`w-9 h-auto`} /> */}
                     </button>
                 </div>
             </nav>
             <div className="flex items-center justify-between w-80">
-                <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-20 justify-between rounded-2xl">
-                    {/* <img src={saveIm} alt="Save" className={`w-9 h-auto`} /> */}
+                <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-20 justify-between rounded-2xl"
+                    onClick={() => {
+                        saveTemplate();
+                    }}
+                >
                     <i className="far fa-save text-2xl"></i>
-                    <h2>SAVE</h2>
+                    <h2> SAVE</h2>
+                    <i className={saveClicked ? "fas fa-check" : null}></i>
                 </button>
-                <Link className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl" target='_blank' rel='noopener noreferrer' to={path}>
+                {/* <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-20 justify-between rounded-2xl"
+                    onClick={() => {
+                        // let htmlDoc = lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-4'))['templateData']))
+                        // console.log(htmlDoc)
+                    }}
+                >
+                    <i className="far fa-save text-2xl"></i>
+                    <h2> LOAD</h2>
+                </button> */}
+                <Link to={path} target='_blank' rel='noopener noreferrer' className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl">
                     {/* <img src={previewIm} alt="Preview" className={`w-9 h-auto`} /> */}
                     <i className="far fa-eye text-2xl"></i>
                     <h2>PREVIEW</h2>
                 </Link>
                 <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl">
-                    {/* <img src={exportIm} alt="Export Code" className={`w-9 h-auto`} /> */}
                     <i className="fas fa-file-export text-2xl"></i>
                     <h2>EXPORT</h2>
                 </button>
             </div>
         </div>
+
     );
 }
