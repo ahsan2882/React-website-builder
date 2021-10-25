@@ -42,14 +42,13 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
             setUpdateChildren([])
         }
     }, [temp])
-    useEffect(() => {
-        let htmlString;
-        let editableComponents;
-        if (saveClicked) {
-            htmlString = document.getElementsByClassName("getInnerHTML")[0]
-            editableComponents = htmlString.getElementsByClassName("mce-content-body")[0]
-            editableComponents.setAttribute("contenteditable", "false")
-        }
+    // useEffect(() => {
+        // let htmlString;
+        // let editableComponents;
+        // if (saveClicked) {
+        //     htmlString = document.getElementsByClassName("getInnerHTML")[0]
+        //     editableComponents = htmlString.getElementsByClassName("mce-content-body")
+        // }
         // for (let elem in editableComponents) {
         //     // editableComponents[elem].setAttribute("contenteditable", "false")
         //     console.log(typeof(editableComponents[elem]))
@@ -61,10 +60,9 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
         //         templateData: compressed
         //     })
         // }
-        setTimeout(function () { setSaveClicked(false); }, 1000);
-
+        // setTimeout(function () { setSaveClicked(false); }, 1000);
        
-    }, [setSaveClicked, saveClicked])
+    // }, [setSaveClicked, saveClicked])
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
