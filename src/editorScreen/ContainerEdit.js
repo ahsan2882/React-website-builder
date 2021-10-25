@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ContainerEditCss from './ContainerEdit.module.css'
-// import lz from "lzutf8";
+import lz from "lzutf8";
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
@@ -11,6 +11,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
     const [sectionKey, setSectionKey] = useState(null);
+    const [curTemplate, setCurTemplate] = useState(null);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -28,41 +29,39 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     useEffect(() => {
         if (temp === 1) {
             setUpdateChildren(templateComponents.template1Components)
+            setCurTemplate("Template 1");
         }
         else if (temp === 2) {
             setUpdateChildren(templateComponents.template2Components)
+            setCurTemplate("Template 2");
         }
         else if (temp === 3) {
             setUpdateChildren(templateComponents.template3Components)
+            setCurTemplate("Template 3");
         }
         else if (temp === 4) {
             setUpdateChildren(templateComponents.template4Components)
+            setCurTemplate("Template 4");
         }
         else if (temp === 0) {
             setUpdateChildren([])
         }
     }, [temp])
-    // useEffect(() => {
-        // let htmlString;
-        // let editableComponents;
-        // if (saveClicked) {
-        //     htmlString = document.getElementsByClassName("getInnerHTML")[0]
-        //     editableComponents = htmlString.getElementsByClassName("mce-content-body")
-        // }
-        // for (let elem in editableComponents) {
-        //     // editableComponents[elem].setAttribute("contenteditable", "false")
-        //     console.log(typeof(editableComponents[elem]))
-        // }
-        // let compressed = lz.encodeBase64(lz.compress(htmlString))
-        // if (saveClicked) {
-        //     setToSave({
-        //         templateID: currentTemplate,
-        //         templateData: compressed
-        //     })
-        // }
-        // setTimeout(function () { setSaveClicked(false); }, 1000);
+    useEffect(() => {
+        if (saveClicked) {
+            let htmlString = document.getElementsByClassName("getInnerHTML")[0].innerHTML
+            // htmlString = htmlString.replace("contenteditable=\"true\"", "contenteditable=\"false\"")
+            htmlString = htmlString.replace(/contenteditable="true"/g, "contenteditable=\"false\"")
+            // console.log(htmlString)
+            let compressed = lz.encodeBase64(lz.compress(htmlString))
+            setToSave({
+                templateID: curTemplate,
+                templateData: compressed
+            })
+        }
+        setTimeout(function () { setSaveClicked(false); }, 1000);
        
-    // }, [setSaveClicked, saveClicked])
+    }, [curTemplate, setToSave, saveClicked, setSaveClicked])
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
@@ -105,7 +104,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                                 setOverSection(false);
                                                 setShowPopUp(false);
                                             }}
-                                            className={(overSection && sectionKey === index) ? 'border-2 border-solid border-red-500 relative' : 'border-2 border-solid border-transparent'}>
+                                            className="relative">
                                             <ItemX overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
                                             <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
                                                 <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
@@ -115,6 +114,12 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                                     setShowPopUp((popup) => !popup);
                                                 }}><i className="far fa-images text-white"></i></button>
                                             </div>
+                                            {/* <div
+                                                className={(overSection && sectionKey === index) ? "absolute border-2 border-red-500 w-full h-full top-0" : "hidden"}
+                                                // className="absolute border-2 border-red-500 w-full h-full"
+                                            >
+
+                                            </div> */}
                                         </section>
                                     </>
                                 )
