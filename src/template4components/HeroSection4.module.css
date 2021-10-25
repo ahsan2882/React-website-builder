@@ -8,7 +8,6 @@
     background-size: cover;
 }
 .sectionHero h1 {
-    color: #fff;
     width: 100%;
     font-size: 80px;
 color: rgb(0,193,207);
@@ -75,7 +74,7 @@ color: rgb(0,193,207);
     justify-content: center;
     align-items: center;
     padding: 15px 50px;
-    display: inline-block;
+  
     border-radius: 40px;
     background-color: rgb(0,193,207);
     margin-bottom: 10rem;
