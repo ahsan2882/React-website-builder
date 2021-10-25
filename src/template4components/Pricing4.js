@@ -9,16 +9,18 @@ export default function Pricing4({ showPopup, overSection }) {
     return (
         <>
             <div className="py-20 px-0 w-full relative" style={{ background: currentBackground }}>
-                <div className={Pricing4Css.containerMainPrice}>
-                    <div className="flex flex-col items-center py-10 px-0">
+                <div>
+                    <div className=
+                     "flex flex-col items-center py-10 px-0"
+                     >
                         {/* <TextH2 className={`text-2xl ${Pricing4Css.pricingPlanHead}`} text="Reasonable Pricing Plans" /> */}
-                        <h2>
+                        <h2 style={{ color: `black` ,fontSize:`24px`, margin:`0 auto`, fontWeight:`400`, fontFamily:`sans-serif`}}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='price4ed1'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="Pricing Plans"
+                                initialValue="Reasonable Pricing Plans"
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -32,7 +34,7 @@ export default function Pricing4({ showPopup, overSection }) {
                             />
                         </h2>
                         {/* <TextH1 className={`text-5xl text-center ${Pricing4Css.pricingPlanSubhead}`} text="Our Pricing" /> */}
-                        <h1>
+                        <h1 style={{ color: `rgb(26, 195, 224)` ,fontSize:`48px`, margin:`0 auto`, fontWeight:`600`}}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -55,7 +57,7 @@ export default function Pricing4({ showPopup, overSection }) {
                     <div className={`flex flex-wrap justify-center px-0 w-full ${Pricing4Css.container1}`}>
                         <div className={`${Pricing4Css.pricingCards} bg-white border-2 border-solid border-black flex flex-col items-center p-5 m-2`}>
                             {/* <TextH1 className={`text-2xl text-center ${Pricing4Css.cardH1}`} text="Personal security" /> */}
-                            <h1>
+                            <h1 className="Pricing4Css">
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -74,7 +76,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                 />
                             </h1>
                             {/* <TextH2 className="flex justify-center items-center text-5xl text-black text-center" text="Start" /> */}
-                            <h2>
+                            <h2 className="Pricing4Css">
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -96,7 +98,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                 <ul className={`p-5 list-none ${Pricing4Css.pricingList}`}>
                                     <li className="p-1">
                                         {/* <IconText classStyle="fas fa-check" text=" CCTV Service" /> */}
-                                        <p>
+                                        <p className="Pricing4Css">
                                             <Editor
                                                 onInit={(evt, editor) => editorRef.current = editor}
                                                 inline={true}
@@ -116,6 +118,8 @@ export default function Pricing4({ showPopup, overSection }) {
                                         </p>
                                     </li>
                                     <li className="p-1">
+                                    <i style={{display:`inline-block`}} class="fas fa-times icon-price"></i>
+
                                         {/* <i className="fas fa-times"></i> Alarm signaling */}
                                         {/* <IconText classStyle="fas fa-times" text=" Alarm signaling" /> */}
                                         <p>
@@ -138,9 +142,12 @@ export default function Pricing4({ showPopup, overSection }) {
                                         </p>
                                     </li>
                                     <li className="p-1">
+                                 
                                         {/* <i className="fas fa-check"></i> Access control */}
                                         {/* <IconText classStyle="fas fa-check" text=" Access Control" /> */}
-                                        <p>
+                                        <p className="Pricing4Css">
+                                           
+
                                             <Editor
                                                 onInit={(evt, editor) => editorRef.current = editor}
                                                 inline={true}
@@ -156,6 +163,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                     font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
 
                                                 }}
+                                                
                                             />
                                         </p>
                                     </li>
@@ -184,7 +192,7 @@ export default function Pricing4({ showPopup, overSection }) {
                             </div>
                             <div className="p-5">
                                 {/* <ButtonText classStyle={`text-base border-2 border-solid py-2 px-9 hover:bg-black hover:text-white ${Pricing4Css.cardBtn}`} text="Get Quote" /> */}
-                                <button>
+                                <button className={`${Pricing4Css['price-btn']}`}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
@@ -334,7 +342,7 @@ export default function Pricing4({ showPopup, overSection }) {
                             </div>
                             <div className="p-5">
                                 {/* <ButtonText classStyle={`text-base border-2 border-solid py-2 px-9 hover:bg-black hover:text-white ${Pricing4Css.cardBtn}`} text="Get Quote" /> */}
-                                <button>
+                                <button className={`${Pricing4Css['price-btn']}`}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -487,7 +495,7 @@ export default function Pricing4({ showPopup, overSection }) {
                             </div>
                             <div className="p-5">
                                 {/* <ButtonText classStyle={`text-base border-2 border-solid py-2 px-9 hover:bg-black hover:text-white ${Pricing4Css.cardBtn}`} text="Get Quote" /> */}
-                                <button>
+                                <button className={`${Pricing4Css['price-btn']}`}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -532,7 +540,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                 }}
                             />
                             </h1>
-                            <h2>
+                            <h2 className="Pricing4Css">
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -554,7 +562,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                 <ul className={`p-5 list-none ${Pricing4Css.pricingList}`}>
                                     {/* <li className="p-1"><IconText classStyle="fas fa-check" text=" CCTV Service" /></li> */}
                                     <li className="p-1">
-                                        <p>
+                                        <p className="Pricing4Css">
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
                                             inline={true}
@@ -640,7 +648,7 @@ export default function Pricing4({ showPopup, overSection }) {
                             </div>
                             <div className="p-5">
                                 {/* <ButtonText className={`text-base border-2 border-solid py-2 px-9 hover:bg-black hover:text-white ${Pricing4Css.cardBtn}`} text="Get Quote" /> */}
-                                <button>
+                                <button className={`${Pricing4Css['price-btn']}`}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     key='price4ed30'

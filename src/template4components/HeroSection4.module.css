@@ -10,7 +10,8 @@
 .sectionHero h1 {
     color: #fff;
     width: 100%;
-    font-size: 32px;
+    font-size: 80px;
+color: rgb(0,193,207);
 }
 
 .sectionHero h2 {
@@ -47,9 +48,11 @@
 
 .sectionHero p {
     color: #fff;
-    font-size: 16px;
+    font-size: 32px;
+    font-weight: 400;
     line-height: 1.75rem;
     padding: 0.75rem 0;
+    
 }
 
 
@@ -63,12 +66,18 @@
     padding: 10px 40px;
 }
 
-.secHeroBtn {
+/* .secHeroBtn {
+   
+    
+} */
+.allbtn {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 0px;
-    width: 100%;
+    padding: 15px 50px;
+    display: inline-block;
+    border-radius: 40px;
+    background-color: rgb(0,193,207);
     margin-bottom: 10rem;
 }
 

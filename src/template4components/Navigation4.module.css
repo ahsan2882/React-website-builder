@@ -21,7 +21,9 @@
     list-style-type: none;
     font-weight: bolder;
 }
-
+button {
+    font-weight: bold;
+}
 .navBarLink:hover a {
     color: black;
 }
