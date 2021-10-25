@@ -11,7 +11,7 @@ export default function EditScreen({ temp }) {
         templateID: null,
         templateData: null
     });
-    const [saveClicked, setSaveClicked] = useState(false);
+    const [saveClicked, setSaveClicked] = useState(null);
 
     return (
         <>
