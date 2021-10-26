@@ -56,14 +56,14 @@ export default function Services4({ showPopup, overSection }) {
                 </h2>
                 {/* <TextPara className={`${Service4Css.servicsDesc} text-center text-white my-12 mx-auto leading-6 font-light`} */}
 
-                <p style={{}}>
+                {/* <p style={{}}> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='service4ed3'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue="Vestibulum commodo at dolor eu aliquam. In congue ornare augue eu
-                        scelerisque. Duis vestibulum, dolor sed facilisis laoreet."
+                        initialValue="<p>Vestibulum commodo at dolor eu aliquam. In congue ornare augue eu
+                        scelerisque. Duis vestibulum, dolor sed facilisis laoreet.</p>"
                         init={{
                             forced_root_block: "",
                             menubar: false,
@@ -74,7 +74,7 @@ export default function Services4({ showPopup, overSection }) {
 
                         }}
                     />
-                </p>
+                {/* </p> */}
                 <div className="flex flex-wrap my-0 mx-auto justify-center w-4/5">
                     <div className={`mx-2 mb-8 mt-0 relative overflow-hidden ${Service4Css.serviceCard}`}>
                         <img src={serv1} alt="london" className={`w-96 h-64 block ${Service4Css.serviceImages}`} />
