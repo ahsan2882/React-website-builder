@@ -1,51 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ContainerEditCss from './ContainerEdit.module.css'
-
-import { Header1 } from '../template1components/Header1'
-import { Service1 } from '../template1components/Service1'
-import { Testimonials1 } from '../template1components/Testimonials1';
-import { Prizing1 } from '../template1components/Prizing1'
-import { Guard1 } from '../template1components/Guard1'
-import { News1 } from '../template1components/News1'
-import { Program1 } from '../template1components/Program1'
-import { About1 } from '../template1components/About1'
-import { Footer1 } from '../template1components/Footer1'
-
-import Services3 from '../template3components/Services3'
-import Latestnews3 from '../template3components/Latestnews3'
-import Ourprograms3 from '../template3components/Ourprograms3'
-import About3 from '../template3components/About3'
-import Accrediation3 from '../template3components/Accrediation3'
-import Footer3 from '../template3components/Footer3'
-import Guard3 from '../template3components/Guard3'
-
-// import Header4 from '../template4components/Header4';
-import HeroSection4 from '../template4components/HeroSection4';
-import AboutUs4 from '../template4components/AboutUs4';
-import Pricing4 from '../template4components/Pricing4';
-import Services4 from '../template4components/Services4';
-import OurGuards4 from '../template4components/OurGuards4';
-import Blog4 from '../template4components/Blog4';
-import Accreditation4 from '../template4components/Accreditation4';
-// import EmptyTemplate from '../editorScreen/EmptyTemplate'
-// import Contact4AssetCss from '../assets/editingScreenAssets/contactusEditAssets/Contact4Asset.module.css'
+import lz from "lzutf8";
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
-import Header4 from '../template4components/Header4';
-import Navigation4 from '../template4components/Navigation4';
-import Subscribe4 from '../template4components/Subscribe4';
-import FooterContact4 from '../template4components/FooterContact4';
-import BottomFooter4 from '../template4components/BottomFooter4';
+import { templateComponents } from '../myComponents/AllTemplates';
 
-
-export default function ContainerEdit({ defWidth, templateNum, overlayPresent }) {
-    const htmlRef = useRef(null);
+export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
-    // const [currentBackground, setCurrentBackground] = useState("");
     const [sectionKey, setSectionKey] = useState(null);
+    const [curTemplate, setCurTemplate] = useState(null);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -54,44 +20,48 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
             console.log(valueString)
             let Comp = assetObject[valueString]
             setUpdateChildren([...updateChildren, Comp])
-            // document.getElementsByClassName("getInnerHTML");
-            // const elem = document.getElementsByClassName('Contact4Asset_firstHead__22xbT')[0]
-            // const element = document.querySelector(elem);
-            // const styleS = window.getComputedStyle(elem);
-            // console.log(styleS)
-
-            // document.title = "Editing Contact"
-            let inHTML = htmlRef.current;
-
-            console.log(inHTML)
         },
         collect: monitor => ({
             canDrop: !!monitor.canDrop()
         })
     })
-    window.resizeTo(defWidth, window.innerHeight);
     const temp = templateNum;
-
-    // useEffect(() => {
-    //     console.log("background", currentBackground)
-    // }, [currentBackground]);
     useEffect(() => {
         if (temp === 1) {
-            setUpdateChildren([Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1])
+            setUpdateChildren(templateComponents.template1Components)
+            setCurTemplate("Template 1");
         }
         else if (temp === 2) {
-            // setUpdateChildrenJSX([<h2>Template 2 Components here!!</h2>])
+            setUpdateChildren(templateComponents.template2Components)
+            setCurTemplate("Template 2");
         }
         else if (temp === 3) {
-            setUpdateChildren([Services3, Latestnews3, Guard3, Ourprograms3, About3, Accrediation3, Footer3])
+            setUpdateChildren(templateComponents.template3Components)
+            setCurTemplate("Template 3");
         }
         else if (temp === 4) {
-            setUpdateChildren([Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Subscribe4, FooterContact4, BottomFooter4])
+            setUpdateChildren(templateComponents.template4Components)
+            setCurTemplate("Template 4");
         }
         else if (temp === 0) {
-            // setUpdateChildrenJSX([])
+            setUpdateChildren([])
         }
     }, [temp])
+    useEffect(() => {
+        if (saveClicked) {
+            let htmlString = document.getElementsByClassName("getInnerHTML")[0].innerHTML
+            // htmlString = htmlString.replace("contenteditable=\"true\"", "contenteditable=\"false\"")
+            htmlString = htmlString.replace(/contenteditable="true"/g, "contenteditable=\"false\"")
+            // console.log(htmlString)
+            let compressed = lz.encodeBase64(lz.compress(htmlString))
+            setToSave({
+                templateID: curTemplate,
+                templateData: compressed
+            })
+        }
+        setTimeout(function () { setSaveClicked(false); }, 1000);
+       
+    }, [curTemplate, setToSave, saveClicked, setSaveClicked])
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
@@ -120,48 +90,45 @@ export default function ContainerEdit({ defWidth, templateNum, overlayPresent })
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
-                    {/* <EmptyTemplate/> */}
-                    {/* <div className="getInnerHTML" ref={htmlRef}> */}
-                    {updateChildren.map((ItemX, index) => {
-                        return (
-                            // 
-                            <>
-                                {/* {<ItemX key={index}/>} */}
-                                <section key={index}
-                                    onMouseEnter={() => {
-                                        setOverSection(true);
-                                        setSectionKey(index)
-                                    }}
-                                    onMouseLeave={() => {
-                                        setOverSection(false);
-                                        setShowPopUp(false);
-                                    }}
-                                    className={(overSection && sectionKey === index) ? "border-2 border-solid border-red-500 relative" : "border-2 border-solid border-transparent"}>
-                                    <ItemX overSection={(overSection && sectionKey === index) ? true : false} showPopup={ showPopUp }/>
-                                    <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
-                                        <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
-                                        <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
-                                        <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
-                                        <button className="bg-red-500 p-3" onClick={() => {
-                                            setShowPopUp((popup) => !popup);
-                                        }}><i className="far fa-images text-white"></i></button>
-                                    </div>
-                                    {/* <div style={(showPopUp && sectionKey === index) ? { position: "absolute", top: "5rem", right: "3rem", zIndex: "9999999" } : { display: "none" }}>
-                                        <GithubPicker
-                                            triangle="top-right"
-                                            onChangeComplete={(color) => {
-                                                setCurrentBackground(color.hex);
+                    <div className="getInnerHTML">
+                        <section className="filterHTML">
+                            {updateChildren.map((ItemX, index) => {
+                                return (
+                                    <>
+                                        <section key={index}
+                                            onMouseEnter={() => {
+                                                setOverSection(true);
+                                                setSectionKey(index)
                                             }}
-                                        />
-                                    </div> */}
-                                </section>
+                                            onMouseLeave={() => {
+                                                setOverSection(false);
+                                                setShowPopUp(false);
+                                            }}
+                                            className="relative">
+                                            <ItemX overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
+                                            <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
+                                                <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
+                                                <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
+                                                <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
+                                                <button className="bg-red-500 p-3" onClick={() => {
+                                                    setShowPopUp((popup) => !popup);
+                                                }}><i className="far fa-images text-white"></i></button>
+                                            </div>
+                                            {/* <div
+                                                className={(overSection && sectionKey === index) ? "absolute border-2 border-red-500 w-full h-full top-0" : "hidden"}
+                                                // className="absolute border-2 border-red-500 w-full h-full"
+                                            >
 
-                            </>
-                        )
-                    })}
-                    {/* </div> */}
+                                            </div> */}
+                                        </section>
+                                    </>
+                                )
+                            })}
+                        </section>
+                    </div>
                 </div>
             </section>
+
         </>
 
     );

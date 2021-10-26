@@ -1,28 +1,33 @@
-import React from 'react'
-import Template1Page from '../template1components/Template1Page';
-import Template2Page from '../template2components/Template2Page';
-import Template3Page from '../template3components/Template3Page';
-import Template4Page from '../template4components/Template4Page';
-export default function PreviewPage({temp}) {
-   let assetPreview = null;
-   if (temp === 1){
-     assetPreview = <Template1Page/>
+import React, { useEffect, useState } from 'react'
+import { Parser } from 'html-to-react'
+import lz from 'lzutf8'
 
-   }
-   else if (temp === 2){
-   assetPreview =<Template2Page/>
-   }
-   else if (temp === 3)
-   {
-    assetPreview=<Template3Page />
-   }
-   else if (temp === 4)
-   {
-    assetPreview=<Template4Page />
-   }
-    return (
-        <>
-        {assetPreview}
-        </>
-    )
+
+export default function PreviewPage({ temp }) {
+  const [localStorageData, setLocalStorageData] = useState(null);
+  const [previewTemp, setPreviewTemp] = useState(null);
+  useEffect(() => {
+    if (temp === 1) {
+      setLocalStorageData(lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-1'))['templateData'])))
+    }
+    else if (temp === 2) {
+      setLocalStorageData(lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-2'))['templateData'])))
+    }
+    else if (temp === 3) {
+      setLocalStorageData(lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-3'))['templateData'])))
+    }
+    else if (temp === 4) {
+      setLocalStorageData(lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-4'))['templateData'])))
+    }
+  }, [temp])
+  useEffect(() => {
+    let main = Parser().parse(localStorageData)
+    
+    setPreviewTemp(main)
+  }, [localStorageData])
+  return (
+    <>
+      {previewTemp}
+    </>
+  )
 }
