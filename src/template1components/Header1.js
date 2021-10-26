@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import Header1Css from './Header1.module.css'
 import bgcover from '../assets/template1images/bghero.png'
 import { Editor } from '@tinymce/tinymce-react';
@@ -12,7 +12,7 @@ export const Header1 = () => {
         <nav>
           <div className={`${Header1Css.navbar}`}>
 
-            <div className={`${Header1Css['logo']}`}><a href="">Security</a></div>
+            <div className={`${Header1Css['logo']}`}><button >Security</button></div>
             <div className={`${Header1Css['nav-links']}`}>
               <div className={`${Header1Css['sidebar-logo']}`}>
                 <i className={`${Header1Css['fas fa-times']}`}></i>
