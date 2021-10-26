@@ -98,7 +98,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                 <ul className={`p-5 list-none ${Pricing4Css.pricingList}`}>
                                     <li className="p-1 flex">
                                     <i style={{margin:`3px`}} class="fas fa-times icon-price"></i>
-                                        {/* <IconText classStyle="fas fa-check" text=" CCTV Service" /> */}
+                                        
                                         <p className="Pricing4Css">
                                             <Editor
                                                 onInit={(evt, editor) => editorRef.current = editor}
@@ -122,7 +122,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                     <i style={{margin:`3px`}} class="fas fa-times icon-price"></i>
 
                                         {/* <i className="fas fa-times"></i> Alarm signaling */}
-                                        {/* <IconText classStyle="fas fa-times" text=" Alarm signaling" /> */}
+                                        {/* <IconText classNameStyle="fas fa-times" text=" Alarm signaling" /> */}
                                         <p>
                                             <Editor
                                                 onInit={(evt, editor) => editorRef.current = editor}
@@ -171,7 +171,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                     <li className="p-1 flex">
                                     <i style={{margin:`3px`}} class="fas fa-times icon-price"></i>
                                         {/* <i className="fas fa-times"></i> Alarm signaling */}
-                                        {/* <IconText classStyle="fas fa-times" text=" Alarm signaling" /> */}
+                                        {/* <IconText classNameStyle="fas fa-times" text=" Alarm signaling" /> */}
                                         <p>
                                             <Editor
                                                 onInit={(evt, editor) => editorRef.current = editor}
@@ -193,7 +193,6 @@ export default function Pricing4({ showPopup, overSection }) {
                                 </ul>
                             </div>
                             <div className="p-5">
-                                {/* <ButtonText classStyle={`text-base border-2 border-solid py-2 px-9 hover:bg-black hover:text-white ${Pricing4Css.cardBtn}`} text="Get Quote" /> */}
                                 <button className={`${Pricing4Css['price-btn']}`}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -259,6 +258,8 @@ export default function Pricing4({ showPopup, overSection }) {
                                    
                                     <li className="p-1 flex">
                                     <i style={{margin:`3px`}} class="fas fa-times icon-price"></i>
+                                    {/* <li className="p-1"><IconText classNameStyle="fas fa-check" text=" CCTV Service" /></li> */}
+                                    <li className="p-1">
                                         <p>
                                             <Editor
                                                 key='price4ed12'
@@ -431,7 +432,6 @@ export default function Pricing4({ showPopup, overSection }) {
                                         />
                                         </p>
                                     </li>
-                                    
                                     <li className="text-white p-1 flex">
                                     <i style={{margin:`3px`}} class="fas fa-times icon-price"></i>
                                         <p>
@@ -605,7 +605,6 @@ export default function Pricing4({ showPopup, overSection }) {
                                         />
                                         </p>
                                     </li>
-                                    
                                     <li className="p-1 flex">
                                     <i style={{margin:`3px`}} class="fas fa-times icon-price"></i>
                                         <p>
@@ -679,7 +678,7 @@ export default function Pricing4({ showPopup, overSection }) {
                     setShowPopup((popup) => !popup);
                 }}><i className="far fa-images text-white"></i></button>
             </div> */}
-            <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+            <div className="toBeRemoved" style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {

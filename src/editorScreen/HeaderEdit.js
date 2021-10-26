@@ -2,7 +2,7 @@ import React from 'react'
 import HeaderEditCss from './HeaderEdit.module.css'
 import { Link } from 'react-router-dom';
 
-export default function Header({ templateNum, setSaveClicked, toSave, saveClicked }) {
+export default function Header({ templateNum, setSaveClicked, toSave, saveClicked, fileData }) {
     let path = '';
     if (templateNum === 1) {
         path = '/preview/template-1'
@@ -29,8 +29,8 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                file_name: "hello.txt",
-                file_content: "Hello World!"
+                file_name: "index.html",
+                file_content: fileData
             })
         };
         fetch('http://localhost:9000/generate-file', requestOptions)

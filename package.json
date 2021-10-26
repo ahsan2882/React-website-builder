@@ -31,11 +31,14 @@
     "react-dnd": "^14.0.4",
     "react-dnd-html5-backend": "^14.0.2",
     "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
     "react-preloaders2": "^3.0.5",
     "react-responsive": "^9.0.0-beta.4",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-serialize": "^0.2.0",
+    "react-style-tag": "^2.0.4",
+    "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

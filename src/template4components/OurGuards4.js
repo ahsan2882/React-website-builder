@@ -325,7 +325,7 @@ export default function OurGuards4({ showPopup, overSection }) {
                     </Link>
                 </div>
             </section>
-            <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+            <div className="toBeRemoved" style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {

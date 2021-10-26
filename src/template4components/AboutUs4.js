@@ -16,7 +16,7 @@ export default function AboutUs4({ showPopup, overSection }) {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='abouted1'
-                        initialValue={`<img  src=${aboutimg} alt="about" class="${About4Css.aboutImg}  w-96 h-64 object-cover"/>`}
+                        initialValue={`<img  src=${aboutimg} alt="about" className="${About4Css.aboutImg}  w-96 h-64 object-cover"/>`}
                         init={{
                             forced_root_block:"",
                             menubar: false,
@@ -109,14 +109,14 @@ export default function AboutUs4({ showPopup, overSection }) {
 
                                         }}
                                     />
-                                          <i style={{marginLeft:`4px`}} class="fas fa-arrow-right" aria-hidden="true"></i>
+                                          <i style={{marginLeft:`4px`}} className="fas fa-arrow-right" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </article>
                     </section>
                 </div>
             </div>
-            <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+            <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
