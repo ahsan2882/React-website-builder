@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef} from 'react'
 import Guard1Css from './Guard1.module.css'
 import ourteam from '../assets/template1images/ourteam.png'
 import ourteam2 from '../assets/template1images/ourteam2.png'
