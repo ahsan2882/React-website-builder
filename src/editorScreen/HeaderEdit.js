@@ -39,7 +39,11 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
     }
     return (
         <div className={`flex justify-between items-center border-b-2 border-gray-100 py-6 ${HeaderEditCss['max-w-7xl']} ${HeaderEditCss.maxHeadH} mx-auto px-4 bg-white fixed z-50 w-full top-0`}>
-            <div className="w-80"></div>
+            <div className="w-80">
+           <button>
+      Pages
+            </button>
+                 </div>
             <nav>
                 <div className="relative w-32 flex justify-between">
                     <button className="hover:bg-BL-400 rounded-full w-20 h-16" >

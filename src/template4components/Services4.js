@@ -17,7 +17,7 @@ export default function Services4({ showPopup, overSection }) {
         <>
             <div className={`text-center py-28 px-0  ${Service4Css.serviceWrapper} w-full`} style={{ background: currentBackground }}>
                 {/* <TextH4 className={`text-center font-black ${Service4Css.serviceMainHead}`} text="WHAT WE DO" /> */}
-                <h4>
+                <h4 className="Service4Css">
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
@@ -36,7 +36,7 @@ export default function Services4({ showPopup, overSection }) {
                     />
                 </h4>
                 {/* <TextH2 className="text-center text-5xl opacity-80 text-white font-black" text="Our Services" /> */}
-                <h2>
+                <h2 style={{fontSize:`48px`, fontWeight:`600`}}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
@@ -56,7 +56,7 @@ export default function Services4({ showPopup, overSection }) {
                 </h2>
                 {/* <TextPara className={`${Service4Css.servicsDesc} text-center text-white my-12 mx-auto leading-6 font-light`} */}
 
-                <p>
+                <p style={{}}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}

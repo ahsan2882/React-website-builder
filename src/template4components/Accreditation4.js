@@ -17,7 +17,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                 <div className={Accre4Css.containerMain}>
                     <div className="flex flex-col items-center py-10 px-0">
                         {/* <TextH2 classStyle={`${Accre4Css.accreMainH2} text-2xl`} text="we are verified" /> */}
-                        <h2>
+                        <h2 className="Accre4Css" style={{fontWeight:`400`}}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -37,7 +37,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                             />
                         </h2>
                         {/* <TextH1 classStyle={`${Accre4Css.accreMainH1} text-5xl text-center`} text="Our Accreditation" /> */}
-                        <h1>
+                        <h1 className="Accre4Css">
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -81,7 +81,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                                         inline={true}
                                         key='accre4ed3'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                        initialValue="Lorem ipsum"
+                                        initialValue="Typing..."
                                         init={{
                                             forced_root_block: "",
                                             menubar: false,
@@ -119,7 +119,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                                         inline={true}
                                         key='accre4ed4'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                        initialValue="Lorem ipsum"
+                                        initialValue="Typing..."
                                         init={{
                                             forced_root_block: "",
                                             menubar: false,
@@ -157,7 +157,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                                         inline={true}
                                         key='accre4ed5'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                        initialValue="Lorem ipsum"
+                                        initialValue="Typing..."
                                         init={{
                                             menubar: false,
                                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
@@ -178,7 +178,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                                         inline={true}
                                         key='accre4ed6'
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                        initialValue="Lorem ipsum"
+                                        initialValue="Typing..."
                                         init={{
                                             menubar: false,
                                             toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +

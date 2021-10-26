@@ -70,11 +70,9 @@ color: rgb(0,193,207);
     
 } */
 .allbtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 15px 50px;
-  
+
+
     border-radius: 40px;
     background-color: rgb(0,193,207);
     margin-bottom: 10rem;
