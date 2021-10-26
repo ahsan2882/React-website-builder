@@ -6,7 +6,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked }) {
+export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setFileData }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
@@ -49,10 +49,35 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     }, [temp])
     useEffect(() => {
         if (saveClicked) {
-            let htmlString = document.getElementsByClassName("getInnerHTML")[0].innerHTML
-            // htmlString = htmlString.replace("contenteditable=\"true\"", "contenteditable=\"false\"")
-            htmlString = htmlString.replace(/contenteditable="true"/g, "contenteditable=\"false\"")
-            // console.log(htmlString)
+            // let styleComponent = document.getElementsByTagName("style");
+            // for (let style in styleComponent) {
+            //     console.log(styleComponent[style])
+            // }
+
+            let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
+            let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
+            let removed = newDoc.getElementsByClassName("toBeRemoved")
+            while (removed.length > 0) {
+                removed[0].parentNode.removeChild(removed[0]);
+            }
+            let editableFalse = newDoc.getElementsByClassName("mce-content-body")
+            let i = 0
+            while (i < editableFalse.length) {
+                editableFalse[i].setAttribute("contenteditable", "false")
+                console.log(editableFalse[i].innerHTML)
+                console.log(editableFalse[i].parentNode.nodeName)
+                i++;
+            }
+            // while(editableFalse.length > 0){
+                
+            // }
+            let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
+            
+            // for (let elem in editableFalse) {
+            //     console.log(elem, editableFalse[elem])
+            // }
+            // let childToParent = new DOMParser().parseFromString(htmlString)
+            setFileData(htmlString)
             let compressed = lz.encodeBase64(lz.compress(htmlString))
             setToSave({
                 templateID: curTemplate,
@@ -61,7 +86,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
         }
         setTimeout(function () { setSaveClicked(false); }, 1000);
        
-    }, [curTemplate, setToSave, saveClicked, setSaveClicked])
+    }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData])
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
@@ -106,7 +131,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                             }}
                                             className="relative">
                                             <ItemX overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
-                                            <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
+                                            <div className="flex w-52 justify-evenly items-center toBeRemoved" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
                                                 <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                                 <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
                                                 <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>

@@ -21,7 +21,7 @@
     list-style-type: none;
     font-weight: bolder;
 }
-button {
+.navBar button {
     font-weight: bold;
 }
 .navBarLink:hover a {

@@ -56,7 +56,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                             />
                         </h1>
                     </div>
-                    <div className="flex flex-wrap justify-center my-0 mx-auto mb-8">
+                    <div className="flex justify-center my-0 mx-auto mb-8">
                         <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
                             <div className="p-5 flex flex-col items-center">
                                 {/* <img src={cl1} alt="client 1" className="w-full" /> */}
@@ -64,7 +64,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='AccreIm1'
-                                    initialValue={`<img src=${cl1} alt="client 1" class="w-full"/>`}
+                                    initialValue={`<img src=${cl1} alt="client 1" class="w-72 h-36 object-cover"/>`}
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -103,7 +103,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='AccreIm2'
-                                    initialValue={`<img src=${cl2} alt="client 2" class="w-full"/>`}
+                                    initialValue={`<img src=${cl2} alt="client 2" class="w-72 h-36 object-cover"/>`}
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -192,7 +192,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                     </div>
                 </div>
             </section>
-            <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+            <div className="toBeRemoved" style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {

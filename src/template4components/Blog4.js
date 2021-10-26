@@ -95,15 +95,14 @@ export default function Blog4({ showPopup, overSection }) {
                             {/* <TextPara className="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ..."/> */}
-                            <p className="Blog4Css">
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='blog4ed4'
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                    initialValue="vamus tristique ligula quis orci malesuada tincidunt. Praesent
+                                    initialValue="<p>vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
-                                    Interdum et malesuada fames ac ante ipsum ..."
+                                    Interdum et malesuada fames ac ante ipsum ...</p>"
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -114,7 +113,6 @@ export default function Blog4({ showPopup, overSection }) {
 
                                     }}
                                 />
-                            </p>
                             <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
                                 {/* <ButtonText className={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
 
@@ -175,15 +173,14 @@ export default function Blog4({ showPopup, overSection }) {
                             {/* <TextPara classStyle="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ..."/> */}
-                            <p>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='blog4ed7'
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                    initialValue="vamus tristique ligula quis orci malesuada tincidunt. Praesent
+                                    initialValue="<p>vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
-                                    Interdum et malesuada fames ac ante ipsum ..."
+                                    Interdum et malesuada fames ac ante ipsum ...</p>"
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -194,7 +191,6 @@ export default function Blog4({ showPopup, overSection }) {
 
                                     }}
                                 />
-                            </p>
                             <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
                                 {/* <ButtonText classStyle={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
                                 <button>
@@ -255,15 +251,14 @@ export default function Blog4({ showPopup, overSection }) {
                             {/* <TextPara classStyle="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ..."/> */}
-                            <p>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='blog4ed10'
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                    initialValue="vamus tristique ligula quis orci malesuada tincidunt. Praesent
+                                    initialValue="<p>vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
-                                    Interdum et malesuada fames ac ante ipsum ..."
+                                    Interdum et malesuada fames ac ante ipsum ...</p>"
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -274,7 +269,6 @@ export default function Blog4({ showPopup, overSection }) {
 
                                     }}
                                 />
-                            </p>
                             <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
                                 {/* <ButtonText classStyle={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
                                 <button>
@@ -300,7 +294,7 @@ export default function Blog4({ showPopup, overSection }) {
                     </div>
                 </div>
             </section>
-            <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+            <div className="toBeRemoved" style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {

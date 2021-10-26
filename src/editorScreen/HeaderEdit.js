@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import HeaderEditCss from './HeaderEdit.module.css'
 import { Link } from 'react-router-dom';
 
-export default function Header({ templateNum, setSaveClicked, toSave, saveClicked }) {
+export default function Header({ templateNum, setSaveClicked, toSave, saveClicked, fileData }) {
 const [isClicked , setIsClicked] = useState(false);
 const onClicked = () => setIsClicked ((condition) => !condition);
 
@@ -34,8 +34,8 @@ const onClicked = () => setIsClicked ((condition) => !condition);
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                file_name: "hello.txt",
-                file_content: "Hello World!"
+                file_name: "index.html",
+                file_content: fileData
             })
         };
         fetch('http://localhost:9000/generate-file', requestOptions)
