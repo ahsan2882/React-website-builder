@@ -71,13 +71,12 @@ export default function AboutUs4({ showPopup, overSection }) {
                                 lobortis, dictum lacus sed, mollis enim. Aenean ullamcorper
                                 accumsan sem sit amet aliquam. Cras euismod mauris felis, eget
                                 bibendum nibh facilisis ac.</p> */}
-                                <p className="About4Css">
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='abouted3'
                                     tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                                    initialValue="Nunc pretium nibh non aliquam scelerisque. Integer porttitor dolor sit amet leo malesuada scelerisque. Sed sed tortor lobortis, dictum lacus sed, mollis enim. Aenean ullamcorper accumsan sem sit amet aliquam. Cras euismod mauris felis, eget bibendum nibh facilisis ac."
+                                    initialValue="<p>Nunc pretium nibh non aliquam scelerisque. Integer porttitor dolor sit amet leo malesuada scelerisque. Sed sed tortor lobortis, dictum lacus sed, mollis enim. Aenean ullamcorper accumsan sem sit amet aliquam. Cras euismod mauris felis, eget bibendum nibh facilisis ac.</p>"
                                     init={{
                                         forced_root_block:"",
                                         menubar: false,
@@ -88,7 +87,6 @@ export default function AboutUs4({ showPopup, overSection }) {
 
                                     }}
                                 />
-                                </p>
                             </div>
                             <div className="py-5">
                                 <button className={`${About4Css.btnReadMore} text-white font-normal border flex justify-center w-40 items-center border-solid py-2 px-8 hover:text-black hover:bg-white`}>
