@@ -9,8 +9,7 @@ export const About1 = () => {
 
       <div className={`${About1Css['text-main-text']}`}>
         <h1 style={{ color: `black` }} className={`${About1Css.headings}`}>
-
-          <Editor
+            <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='abouT1'
