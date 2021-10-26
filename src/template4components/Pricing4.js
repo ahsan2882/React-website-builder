@@ -105,7 +105,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed5'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>CCTV Service</p>"
+                                                initialValue="CCTV Service"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -129,7 +129,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed6'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Alarm Signaling</p>"
+                                                initialValue="Alarm Signaling"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -154,7 +154,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed7'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Access Control</p>"
+                                                initialValue="Access Control"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -178,7 +178,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed8'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Alarm Signaling</p>"
+                                                initialValue="Alarm Signaling"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -265,7 +265,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 onInit={(evt, editor) => editorRef.current = editor}
                                                 inline={true}
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>CCTV Service</p>"
+                                                initialValue="CCTV Service"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -286,7 +286,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed13'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Alarm Signaling</p>"
+                                                initialValue="Alarm Signaling"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -308,7 +308,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed14'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Access Control</p>"
+                                                initialValue="Access Control"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -329,7 +329,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed15'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Alarm Signaling</p>"
+                                                initialValue="Alarm Signaling"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -418,7 +418,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed19'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>CCTV Service</p>"
+                                                initialValue="CCTV Service"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -439,7 +439,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed20'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Alarm Signaling</p>"
+                                                initialValue="Alarm Signaling"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -460,7 +460,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed21'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Access Control</p>"
+                                                initialValue="Access Control"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -482,7 +482,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed22'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Alarm Signaling</p>"
+                                                initialValue="Alarm Signaling"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -571,7 +571,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed26'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>CCTV Service</p>"
+                                                initialValue="CCTV Service"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -592,7 +592,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed27'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Alarm Signaling</p>"
+                                                initialValue="Alarm Signaling"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -612,7 +612,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed28'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Access Control</p>"
+                                                initialValue="Access Control"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
@@ -633,7 +633,7 @@ export default function Pricing4({ showPopup, overSection }) {
                                                 inline={true}
                                                 key='price4ed29'
                                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="<p>Alarm Signaling</p>"
+                                                initialValue="Alarm Signaling"
                                                 init={{
                                                     forced_root_block: "",
                                                     menubar: false,
