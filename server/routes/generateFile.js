@@ -8,7 +8,13 @@ router.post("/",  (req, res, next) => {
         file_content: req.body.file_content
     };
     console.log(response.file_content);
-    fs.writeFile(response.)
+    fs.writeFile(`output/${response.file_name}`, response.file_content, err => {
+        if (err) {
+            console.error(err)
+            return null;
+        }
+        //file written successfully
+    })
     res.end(JSON.stringify(response));
 })
 
