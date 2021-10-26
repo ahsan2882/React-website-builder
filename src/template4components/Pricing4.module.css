@@ -5,6 +5,7 @@
 .container1 {
     max-width: 73.5rem;
     margin: 0 auto;
+  
 }
 
 /* global end  */
@@ -12,18 +13,18 @@
 .pricingCards{
     width: 30ch;
     border-radius: 20px;
-}
-.containerMainPrice h1 {
-    color: rgb(26, 195, 224);
-    width: 100%;
-    font-size: 32px;
+    border-radius: 20px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
 }
 
-.containerMainPrice h2 {
-    color: rgb(26, 207, 192);
-    width: 100%;
-    font-size: 24px;
-}
+
+
 
 .containerMainPrice h3 {
     color: #fff;
@@ -56,10 +57,13 @@
     font-size: 16px;
     line-height: 1.75rem;
     padding: 0.75rem 0;
+    width: 100%;
+
 }
 .containerMainPrice > div:nth-child(2) > div:nth-child(3)  p {
     line-height: 2rem;
     color: #fff;
+ 
 }
 
 .pricingList li{
@@ -68,8 +72,8 @@
 .pricingCards > div:last-child > div > p > button{
     background-color: #00c1cf;
     border-radius: 30px;
-    font-size: 1rem;
-    line-height: 1.5rem;
+ 
+   
     border: 2px solid #00c1cf;
     padding: 0.5rem 2.25rem;
     color: black;
@@ -90,3 +94,11 @@
         padding: 1px;
     }
 }
+.price-btn {
+    background-color:rgb(26, 195, 224);
+    font-size: 16px;
+    border-radius: 30px;
+    font-weight: 100px;
+    padding: 10px 35px;
+    border: 2px solid var(--clr-primary);
+  }
