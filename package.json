@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "@tinymce/tinymce-react": "^3.12.6",
+    "axios": "^0.24.0",
     "body-parser": "^1.19.0",
     "css-loader": "^6.3.0",
     "express": "^4.17.1",
@@ -22,7 +23,6 @@
     "material-design-icons": "^3.0.1",
     "node-env-run": "^4.0.2",
     "nodemon": "^2.0.14",
-    "npm-run-all": "^4.1.5",
     "pino-colada": "^2.2.0",
     "react": "^17.0.2",
     "react-color": "^2.19.3",
@@ -38,12 +38,13 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "node ./server/bin/www & craco start",
+    "server": "node ./server/bin/www",
+    "client": "craco start",
+    "start": "npm-run-all -p server client",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:9000",
   "eslintConfig": {
     "extends": [
       "react-app",
