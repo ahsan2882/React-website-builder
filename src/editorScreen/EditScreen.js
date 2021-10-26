@@ -12,6 +12,7 @@ export default function EditScreen({ temp }) {
         templateData: null
     });
     const [saveClicked, setSaveClicked] = useState(null);
+    const [fileData, setFileData] = useState(null);
 
     return (
         <>
@@ -21,6 +22,7 @@ export default function EditScreen({ temp }) {
                     setSaveClicked={setSaveClicked}
                     saveClicked={saveClicked}
                     toSave={toSave}
+                    fileData={fileData}
                 />
                 <ContainerEdit
                     templateNum={temp}
@@ -28,6 +30,7 @@ export default function EditScreen({ temp }) {
                     saveClicked={saveClicked}
                     setToSave={setToSave}
                     setSaveClicked={setSaveClicked}
+                    setFileData={setFileData}
                 />
                 <FooterEdit
                     setOverlay={setAssetSelected}
