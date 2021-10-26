@@ -36,15 +36,15 @@ export default function OurGuards4({ showPopup, overSection }) {
                     text="Pellentesque mattis mauris ac tortor volutpat, eu fermentum sapien
                             euismod. In id tempus metus. Donec eu volutpat nibh, in maximus
                             ligula."/> */}
-                    <p style={{textAlign:`center`,padding:`2rem 0 2rem`}}>
+                    {/* <p style={{textAlign:`center`,padding:`2rem 0 2rem`}}> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='guard4ed2'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue="Pellentesque mattis mauris ac tortor volutpat, eu fermentum sapien
+                        initialValue="<p class='text-center my-8'>Pellentesque mattis mauris ac tortor volutpat, eu fermentum sapien
                             euismod. In id tempus metus. Donec eu volutpat nibh, in maximus
-                            ligula."
+                            ligula.</p>"
                         init={{
                             forced_root_block: "",
                             menubar: false,
@@ -55,7 +55,7 @@ export default function OurGuards4({ showPopup, overSection }) {
 
                         }}
                     />
-                    </p>
+                    {/* </p> */}
                     <div className={`${Guards4Css.container1} ${Guards4Css.guardsList}`}>
                         <div className={Guards4Css.guards}>
                             {/* <img src={guard1} className={Guards4Css.guardImage} alt="guard 1" /> */}
