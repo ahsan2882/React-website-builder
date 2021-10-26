@@ -24,19 +24,18 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
         localStorage.setItem('Template-4', JSON.stringify(toSave))
     }
     const exportCode = () => {
-        fetch('http://localhost:9000/generate-file', {
+        console.log("Sending Request")
+        const requestOptions = {
             method: 'POST',
-            mode: 'cors',
-            cache: 'no-cache',
-            credentials: 'same-origin',
-            headers: {
-                'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            redirect: 'follow',
-            referrerPolicy: 'no-referrer',
-            body: JSON.stringify({first_name: 'Ahsan', last_name: 'Shahid'})
-        })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                file_name: "hello.txt",
+                file_content: "Hello World!"
+            })
+        };
+        fetch('http://localhost:9000/generate-file', requestOptions)
+            .then(response => response.json())
+            .catch(error => console.log(error))
     }
     return (
         <div className={`flex justify-between items-center border-b-2 border-gray-100 py-6 ${HeaderEditCss['max-w-7xl']} ${HeaderEditCss.maxHeadH} mx-auto px-4 bg-white fixed z-50 w-full top-0`}>
