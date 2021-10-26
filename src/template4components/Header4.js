@@ -21,7 +21,7 @@ export default function Header4() {
         <>
             <Header4Component>
                 <section className={`flex justify-between items-center py-2 px-6`} style={{ maxWidth: '73.5rem', margin: '0 auto' }}>
-                    <ul className={`list-none flex p-0 justify-between items-center`}>
+                    <ul className={`list-none flex p-0 justify-between items-center ${Header4Css.contactHeader}`}>
                         <li className={`${Header4Css.HeaderLinks} flex justify-around items-center`}>
                             <div className="mr-1">
                                 <i className="fas fa-phone-alt"></i>
