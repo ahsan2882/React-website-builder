@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef} from 'react'
 import Footer1Css from './Footer1.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 export const Footer1 = () => {

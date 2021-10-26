@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef} from 'react'
 import {Editor} from '@tinymce/tinymce-react'
 import News1Css from './News1.module.css'
 import news1 from '../assets/template1images/news1.png'

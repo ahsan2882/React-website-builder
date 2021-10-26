@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef} from 'react'
 import About1Css from './About1.module.css'
 import buss from '../assets/template1images/img-commited-to-business.png'
 import { Editor } from '@tinymce/tinymce-react';
