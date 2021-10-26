@@ -16,7 +16,7 @@ export default function OurGuards4({ showPopup, overSection }) {
             <section className="w-full" style={{ background: currentBackground }}>
                 <div className={`${Guards4Css.container1} ${Guards4Css.teamSection}`}>
                     {/* <TextH1 className={`text-5xl m-0 ${Guards4Css.teamH1}`} text="Our Guards" /> */}
-                    <h1>
+                    <h1 style={{color: `rgb(26, 195, 224)`, fontSize: `48px`,fontWeight:`600`}}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
@@ -36,7 +36,7 @@ export default function OurGuards4({ showPopup, overSection }) {
                     text="Pellentesque mattis mauris ac tortor volutpat, eu fermentum sapien
                             euismod. In id tempus metus. Donec eu volutpat nibh, in maximus
                             ligula."/> */}
-                    <p>
+                    <p style={{textAlign:`center`,padding:`2rem 0 2rem`}}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
@@ -90,7 +90,9 @@ export default function OurGuards4({ showPopup, overSection }) {
                             />
                         } alt="guard 1" className={Guards4Css.guardImage}/> */}
                             {/* <TextH2 className={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
-                            <h2>
+                            <h2 className="Guards4Css"
+                            //  style={{textAlign:'center'}}
+                             >
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -108,7 +110,7 @@ export default function OurGuards4({ showPopup, overSection }) {
                                 }}
                             />
                             </h2>
-                            <h4>
+                            <h4 className="Guards4Css">
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}

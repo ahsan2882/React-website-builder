@@ -33,9 +33,7 @@ global
 }
 
 .serviceWrapper h2 {
-    color: rgb(255, 255, 255);
-    width: 100%;
-    font-size: 24px;
+    color:#fff; width: 100%;font-size: 24px;
 }
 
 .serviceWrapper h3 {
@@ -47,9 +45,10 @@ global
 }
 
 .serviceWrapper h4 {
-    color: rgb(255, 255, 255);
+    color: rgb(26, 195, 224);
     width: 100%;
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .serviceWrapper h5 {
@@ -65,10 +64,12 @@ global
 }
 
 .serviceWrapper p {
-    color: rgb(255, 255, 255);
+    width: 30%;
     font-size: 16px;
+    color: #fff;
     line-height: 1.75rem;
-    padding: 0.75rem 0;
+    padding: 0.75rem 0 3rem;
+    margin:0 auto;
 }
 .serviceLayerH2 {
     transition: 0.2s;

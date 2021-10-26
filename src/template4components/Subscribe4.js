@@ -8,11 +8,11 @@ export default function Subscribe4() {
     return (
         <div className={`${Subscribe4Css.container1} ${Subscribe4Css.subscribeSection} w-full`}>
             <div className={Subscribe4Css.subscribeWrapper}>
-                <img src={rsswifi} alt="subscribe logo" />
+                <img className={Subscribe4Css.wifi} src={rsswifi} alt="subscribe logo" />
                 <div className={Subscribe4Css.rightContainer}>
                     <div className={Subscribe4Css.offer}>
                         {/* <TextH3 classStyle={Subscribe4Css.offerH3} text="Want to know about our offers first?" /> */}
-                        <h3>
+                        <h3 className="Subscribe4Css">
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -31,7 +31,7 @@ export default function Subscribe4() {
                             />
                         </h3>
                         {/* <TextH1 classStyle={Subscribe4Css.offerH1} text="Subscribe our newsletter" /> */}
-                        <h1>
+                        <h1 className="Subscribe4Css">
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -58,7 +58,7 @@ export default function Subscribe4() {
                             className={Subscribe4Css.emailField}
                         />
                         {/* <button className={Subscribe4Css.subscribeBtn}>SUBSCRIBE</button> */}
-                        <button>
+                        <button style={{background:`black`,padding:`1.2rem 0`,width:`50%`,borderRadius:`2rem`,color:`white`}}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}

@@ -16,7 +16,7 @@ export default function Blog4({ showPopup, overSection }) {
             <section className={` py-28 px-0 w-full ${Blog4Css.sectionBlog}`} style={{ background: currentBackground }}>
                 <div className={`text-center ${Blog4Css.headingWrapper}`}>
                     {/* <TextH3 classStyle={Blog4Css.blogMainHead} text="WHATS NEW" /> */}
-                    <h3>
+                    <h3 className="Blog4Css">
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -35,7 +35,8 @@ export default function Blog4({ showPopup, overSection }) {
                         />
                     </h3>
                     {/* <TextH1 className="text-white font-black mb-12 text-5xl" text="Latest News" /> */}
-                    <h1>
+ 
+                    <h1 style={{color: `#fff`,width: `100%`, fontSize: `48px`,fontWeight:`600`}}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -73,7 +74,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 }}
                             />
                             {/* <TextH1 className={`${Blog4Css.blogArticH1} text-2xl p-3 mb-8 hover:text-white`} text="Personal Security Services" /> */}
-                            <h1>
+                            <h1 style={{fontSize:`22px`, color:`rgb(26, 195, 224)`, fontWeight:`600`,margin:`0 auto`}}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -94,7 +95,7 @@ export default function Blog4({ showPopup, overSection }) {
                             {/* <TextPara className="text-white text-center" text="vamus tristique ligula quis orci malesuada tincidunt. Praesent
                                     magna purus, pharetra eu eleifend non, euismod vitae leo.
                                     Interdum et malesuada fames ac ante ipsum ..."/> */}
-                            <p>
+                            <p className="Blog4Css">
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -153,7 +154,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 }}
                             />
                             {/* <TextH1 classStyle={`${Blog4Css.blogArticH1} text-2xl p-3 mb-8 hover:text-white`} text="Personal Security Services" /> */}
-                            <h1>
+                            <h1 style={{fontSize:`22px`, color:`rgb(26, 195, 224)`, fontWeight:`600`,margin:`0 auto`}}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -233,13 +234,13 @@ export default function Blog4({ showPopup, overSection }) {
                                 }}
                             />
                             {/* <TextH1 classStyle={`${Blog4Css.blogArticH1} text-2xl p-3 mb-8 hover:text-white`} text="Personal Security Services" /> */}
-                            <h1>
+                            <h1 style={{fontSize:`22px`, color:`rgb(26, 195, 224)`, fontWeight:`600`,margin:`0 auto`}}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='blog4ed9'
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                    initialValue="Personal Security Services"
+                                    initialValue="Security For Bussiness"
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
