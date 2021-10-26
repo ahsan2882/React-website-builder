@@ -5,8 +5,8 @@ import navlogo from '../assets/template4images/thefnflogo.png'
 export default function Navigation4() {
     return (
         <>
-            <div className={`${Nav4Css.navWrapper} w-full`}>
-                <div className={`flex justify-between items-center py-6 ${Nav4Css.container1}`}>
+            <div className="w-full" style={{ backgroundColor: 'rgba(0, 193, 207, 0.75)'}}>
+                <div className={`flex justify-between items-center py-6 px-6`} style={{maxWidth: '73.5rem', margin: '0 auto' }}>
                     <img src={navlogo} alt="nav-logo" className="w-52" />
                     <nav>
                         <ul className={Nav4Css.navBar}>
