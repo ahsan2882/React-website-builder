@@ -1,15 +1,14 @@
 var express = require('express'),
-    fs = require('fs'),
-    url = require('url');
-var cookieParser = require('cookie-parser');
+    fs = require('fs');
 var router = express.Router();
 
 router.post("/",  (req, res, next) => {
     let response = {
-        first_name: req.body.first_name,
-        last_name: req.body.last_name
+        file_name: req.body.file_name,
+        file_content: req.body.file_content
     };
-    console.log(response);
+    console.log(response.file_content);
+    fs.writeFile(response.)
     res.end(JSON.stringify(response));
 })
 
