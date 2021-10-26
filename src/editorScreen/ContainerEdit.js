@@ -53,21 +53,31 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
             // for (let style in styleComponent) {
             //     console.log(styleComponent[style])
             // }
-            let htmlString = document.getElementsByClassName("getInnerHTML")[0].innerHTML
 
-            let newDoc = document.documentElement.innerHTML
-
-            // let newDocument = new DOMParser().parseFromString(htmlString, 'text/html')
-            // let removed = newDocument.getElementsByClassName("toBeRemoved")
-            // for (let elem in removed) {
-            //     removed[elem].remove()
+            let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
+            let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
+            let removed = newDoc.getElementsByClassName("toBeRemoved")
+            while (removed.length > 0) {
+                removed[0].parentNode.removeChild(removed[0]);
+            }
+            let editableFalse = newDoc.getElementsByClassName("mce-content-body")
+            let i = 0
+            while (i < editableFalse.length) {
+                editableFalse[i].setAttribute("contenteditable", "false")
+                console.log(editableFalse[i].innerHTML)
+                console.log(editableFalse[i].parentNode.nodeName)
+                i++;
+            }
+            // while(editableFalse.length > 0){
+                
             // }
-
-
-            // htmlString = htmlString.replace("contenteditable=\"true\"", "contenteditable=\"false\"")
-            htmlString = htmlString.replace(/contenteditable="true"/g, "contenteditable=\"false\"")
+            let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
+            
+            // for (let elem in editableFalse) {
+            //     console.log(elem, editableFalse[elem])
+            // }
+            // let childToParent = new DOMParser().parseFromString(htmlString)
             setFileData(htmlString)
-            // console.log(htmlString)
             let compressed = lz.encodeBase64(lz.compress(htmlString))
             setToSave({
                 templateID: curTemplate,
