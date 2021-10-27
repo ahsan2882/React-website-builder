@@ -42,13 +42,13 @@ export const Footer1 = () => {
             }}
           />
           </h1>
-        <p className={`${Footer1Css['main-para']}`}>
-          
+        {/* <p className={`${Footer1Css['main-para']}`}> */}
+    
         <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Footer3'
-            initialValue="Visualize quality intellectual capital without superior collaboration and idea sharing installed base portals."
+            initialValue={`<p class="${Footer1Css['main-para']}">Visualize quality intellectual capital without superior collaboration and idea sharing installed base portals.</p>`}
             init={{
               forced_root_block: "",
               menubar: false,
@@ -58,13 +58,13 @@ export const Footer1 = () => {
               font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
             }}
           />
-          </p>
-        <p><i className={`${Footer1Css['fas fa-map-marker-alt i1']}`}></i>
+        
+       <i className={`${Footer1Css['fas fa-map-marker-alt i1']}`}></i>
         <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Footer4'
-            initialValue="Address: 4010 Feeney Way"
+            initialValue="<p>Address: 4010 Feeney Way</p>"
             init={{
               forced_root_block: "",
               menubar: false,
@@ -74,14 +74,14 @@ export const Footer1 = () => {
               font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
             }}
           />
-        </p>
+       
 
-        <p> <i style={{color:`white`}} className={`${Footer1Css['fas fa-phone-alt i1']}`}></i>
+        <i style={{color:`white`}} className={`${Footer1Css['fas fa-phone-alt i1']}`}></i>
         <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Footer5'
-            initialValue="020 7946 0020"
+            initialValue="<p>020 7946 0020</p>"
             init={{
               forced_root_block: "",
               menubar: false,
@@ -91,14 +91,14 @@ export const Footer1 = () => {
               font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
             }}
           />
-        </p>
+        
 
-        <p><i className={`${Footer1Css['fas fa-envelope i1']}`}></i>
+        <i className={`${Footer1Css['fas fa-envelope i1']}`}></i>
         <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Footer6'
-            initialValue="critrixconsultancy @gmail.com"
+            initialValue="<p>critrixconsultancy @gmail.com</p>"
             init={{
               forced_root_block: "",
               menubar: false,
@@ -108,8 +108,6 @@ export const Footer1 = () => {
               font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
             }}
           />
-        </p>
-
         </div>
         <div className={`${Footer1Css['column-foot']}`} >
         <div className={`${Footer1Css.span}`}></div>
@@ -152,12 +150,12 @@ export const Footer1 = () => {
 
         <div   className={`${Footer1Css['column-foot']}`}>
         <div className={`${Footer1Css.col}`}>
-        <p><i style={{color:`#00D4FF`}} className='fas fa-map-marker-alt i1 p-5 text-3xl'></i>
+        <i style={{color:`#00D4FF`}} className='fas fa-map-marker-alt i1 p-5 text-3xl'></i>
         <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Footer7'
-            initialValue=" San Diego: 619 270 8578 "
+            initialValue="<p>San Diego: 619 270 8578</p>"
             init={{
               forced_root_block: "",
               menubar: false,
@@ -167,15 +165,13 @@ export const Footer1 = () => {
               font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
             }}
         />
-       </p>
-
         <p><i style={{color:`#00D4FF`}} className='fas fa-map-marker-alt i1 p-5 text-3xl'></i>
         
         <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Footer8'
-            initialValue="Ontario: 613 285 5534"
+            initialValue="<p>Ontario: 613 285 5534</p>"
             init={{
               forced_root_block: "",
               menubar: false,
@@ -186,12 +182,12 @@ export const Footer1 = () => {
             }}
         />
         </p>
-        <p><i style={{color:`#00D4FF`}} className='fas fa-map-marker-alt i1 p-5 text-3xl'></i>
+        <i style={{color:`#00D4FF`}} className='fas fa-map-marker-alt i1 p-5 text-3xl'></i>
         <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Footer8'
-            initialValue="London: 020 7946 0020"
+            initialValue="<p>London: 020 7946 0020</p>"
             init={{
               forced_root_block: "",
               menubar: false,
@@ -201,7 +197,7 @@ export const Footer1 = () => {
               font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
             }}
         />
-       </p>
+       
         </div>
         </div>
 
@@ -240,12 +236,13 @@ export const Footer1 = () => {
             }}
         />
           </h1>
-        <p className={`${Footer1Css['main-para']}`}>
+        
+        {/* <p className={`${Footer1Css['main-para']}`}> */}
         <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Footer10'
-            initialValue=" Taking seamless key performance indicators offline to maximise the long tail"
+            initialValue={`<p class="${Footer1Css['main-para']}">Taking seamless key performance indicators offline to maximise the long tail</p>`}
             init={{
               forced_root_block: "",
               menubar: false,
@@ -255,7 +252,7 @@ export const Footer1 = () => {
               font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
             }}
         />
-         </p>
+      
         <p>
         <i  className="fab fa-facebook text-white p-1 text-4xl text-center"></i>
         <i className="fab fa-twitter text-white p-1 text-4xl text-center"></i>
@@ -272,12 +269,12 @@ export const Footer1 = () => {
 
         <div className={`${Footer1Css['bottom-foot']}`}>
         <div className={`${Footer1Css.copyright}`}>
-        <p>
+     
         <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Footer11'
-            initialValue="Copyright © 2021 CITRIX CONSULTANCY.All Rights Reserved."
+            initialValue="<p>Copyright © 2021 CITRIX CONSULTANCY.All Rights Reserved.</p>"
             init={{
               forced_root_block: "",
               menubar: false,
@@ -287,7 +284,6 @@ export const Footer1 = () => {
               font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
             }}
         />
-        </p>
         </div>
 
 

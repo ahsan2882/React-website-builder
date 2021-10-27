@@ -60,14 +60,15 @@ export default function Footer3() {
                                     }}
                                 />
                             </h1>
-                            <p className={Footer3Css['main-para']}>
+                           
+                            {/* <p className={Footer3Css['main-para']}> */}
 
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='Footer3'
-                                    initialValue="Visualize quality intellectual capital without superior collaboration and idea sharing
-                                    installed base portals."
+                                    initialValue= {`<p class="${Footer3Css['main-para']}">Visualize quality intellectual capital without superior collaboration and idea sharing
+                                    installed base portals.</p>`}
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -77,13 +78,13 @@ export default function Footer3() {
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                     }}
                                 />
-                            </p>
-                            <p><i className="fas fa-map-marker-alt i1 "></i>
+                            {/* </p> */}
+                            <i className="fas fa-map-marker-alt i1 "></i>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='Footer4'
-                                    initialValue="Address: 4010 Feeney Way"
+                                    initialValue="<p>Address: 4010 Feeney Way </p>"
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -93,14 +94,15 @@ export default function Footer3() {
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                     }}
                                 />
-                            </p>
+                           
 
-                            <p> <i className="fas fa-phone-alt i1 "></i>
+                             <i className="fas fa-phone-alt i1 "></i>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='Footer5'
-                                    initialValue="020 7946 0020"
+                                    initialValue="<p>020 7946 0020</p> "
+                                   
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -110,15 +112,14 @@ export default function Footer3() {
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                     }}
                                 />
-                            </p>
-
-                            <p><i className="fas fa-envelope i1"></i>
+                            
+                            <i className="fas fa-envelope i1"></i>
 
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='Footer6'
-                                    initialValue="critrixconsultancy @gmail.com"
+                                    initialValue="<p>critrixconsultancy @gmail.com </p>"
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -128,7 +129,7 @@ export default function Footer3() {
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                     }}
                                 />
-                            </p>
+                           
 
                         </div>
                         <div className={Footer3Css['column-foot']}>
@@ -187,12 +188,12 @@ export default function Footer3() {
 
                         <div className={Footer3Css['column-foot']} style={{ "background-color": "transparent" }}>
                             <div className={Footer3Css['col']}>
-                                <p><i className="fas fa-map-marker-alt i1 "></i>
+                               <i className="fas fa-map-marker-alt i1 "></i>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
                                         key='Footer9'
-                                        initialValue="San Diego: 619 270 8578"
+                                        initialValue=" <p>San Diego: 619 270 8578  </p>"
                                         init={{
                                             forced_root_block: "",
                                             menubar: false,
@@ -202,15 +203,15 @@ export default function Footer3() {
                                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
                                     />
-                                </p>
+                              
 
-                                <p><i className="fas fa-map-marker-alt i1 "></i>
+                              <i className="fas fa-map-marker-alt i1 "></i>
 
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
                                         key='Footer10'
-                                        initialValue="Ontario: 613 285 5534"
+                                        initialValue="<p>Ontario: 613 285 5534</p>"
                                         init={{
                                             forced_root_block: "",
                                             menubar: false,
@@ -220,13 +221,13 @@ export default function Footer3() {
                                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
                                     />
-                                </p>
-                                <p><i className="fas fa-map-marker-alt i1 "></i>
+                              
+                                <i className="fas fa-map-marker-alt i1 "></i>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
                                         key='Footer11'
-                                        initialValue=" London: 020 7946 0020"
+                                        initialValue="<p>London: 020 7946 0020</p>"
                                         init={{
                                             forced_root_block: "",
                                             menubar: false,
@@ -237,7 +238,7 @@ export default function Footer3() {
                                         }}
                                     />
 
-                                </p>
+                              
                             </div>
                         </div>
                         <div>
@@ -291,12 +292,13 @@ export default function Footer3() {
                                         }}
                                     />
                                 </h1>
+                            
                                 <p className={Footer3Css['main-para']}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
                                         key='Footer15'
-                                        initialValue="Taking seamless key performance indicators offline to maximise the long tail"
+                                        initialValue={`<p class="${Footer3Css['main-para']}">Taking seamless key performance indicators offline to maximise the long tail</p>`}
                                         init={{
                                             forced_root_block: "",
                                             menubar: false,
@@ -323,12 +325,12 @@ export default function Footer3() {
 
                     <div className={Footer3Css['bottom-foot']}>
                         <div className={Footer3Css['copyright']}>
-                            <p>
+                          
                             <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='Footer16'
-                                    initialValue= "Copyright © 2021 CITRIX CONSULTANCY.All Rights Reserved."
+                                    initialValue= "<p>Copyright © 2021 CITRIX CONSULTANCY.All Rights Reserved.</p>"
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -338,7 +340,7 @@ export default function Footer3() {
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                     }}
                                 /> 
-                                </p>
+                                
                         </div>
 
 

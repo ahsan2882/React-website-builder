@@ -64,6 +64,10 @@ export default function Accrediation3() {
                   key='Accre3'
                   initialValue={`< img src=${accre1} alt="aacre1" w-96 h-64 object-cover"/>`}
                   init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
                     forced_root_block: "",
                     menubar: false,
                     plugins: [
@@ -81,6 +85,10 @@ export default function Accrediation3() {
                   key='Accre4'
                   initialValue={`<img src=${accre2} alt="accre2" w-96 h-64 object-cover"/>`}
                   init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
                     forced_root_block: "",
                     menubar: false,
                     plugins: [
@@ -99,6 +107,10 @@ export default function Accrediation3() {
                   key='Accre5'
                   initialValue={`<img src=${accre3} alt="accre3" /> w-96 h-64 object-cover"/>`}
                   init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
                     forced_root_block: "",
                     menubar: false,
                     plugins: [
@@ -111,13 +123,17 @@ export default function Accrediation3() {
 
               </div>
               <div className={Accrediation3Css['a-card']}>
-                 
-              <Editor
+
+                <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Accre6'
                   initialValue={`<img src=${accre4} alt="accre4" w-96 h-64 object-cover"/>`}
                   init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
                     forced_root_block: "",
                     menubar: false,
                     plugins: [
@@ -129,12 +145,16 @@ export default function Accrediation3() {
 
               </div>
               <div className={Accrediation3Css['a-card']}>
-              <Editor
+                <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Accre6'
                   initialValue={`<img src=${accre5} alt="accre5" w-96 h-64 object-cover"/>`}
                   init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
                     forced_root_block: "",
                     menubar: false,
                     plugins: [
@@ -142,18 +162,22 @@ export default function Accrediation3() {
                     ],
                     toolbar: 'image'
                   }}
-                /> 
-                
+                />
+
 
               </div>
               <div className={Accrediation3Css['a-card']}>
 
-              <Editor
+                <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Accre6'
                   initialValue={`img src=${accre6} alt="accre6"  w-96 h-64 object-cover"/>`}
                   init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
                     forced_root_block: "",
                     menubar: false,
                     plugins: [
@@ -170,6 +194,10 @@ export default function Accrediation3() {
                   key='Accre6'
                   initialValue={`img src=${accre7} alt="accre7"  w-96 h-64 object-cover"/>`}
                   init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
                     forced_root_block: "",
                     menubar: false,
                     plugins: [
