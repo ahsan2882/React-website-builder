@@ -15,7 +15,7 @@ export default function Services4({ showPopup, overSection }) {
     const editorRef = useRef(null);
     return (
         <>
-            <div className={`text-center py-28 px-0  ${Service4Css.serviceWrapper} w-full`} style={{ background: currentBackground }}>
+            <div className={`text-center py-32 px-0  ${Service4Css.serviceWrapper} w-full`} style={{ background: currentBackground }}>
                 {/* <TextH4 className={`text-center font-black ${Service4Css.serviceMainHead}`} text="WHAT WE DO" /> */}
                 <h4 className="Service4Css">
                     <Editor
