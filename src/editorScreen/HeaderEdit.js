@@ -33,7 +33,7 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
                 file_content: fileData
             })
         };
-        fetch('http://localhost:9000/generate-file', requestOptions)
+        fetch('/generate-file', requestOptions)
             .then(response => response.json())
             .catch(error => console.log(error))
     }
