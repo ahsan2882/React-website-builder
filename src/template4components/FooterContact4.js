@@ -6,7 +6,7 @@ export default function FooterContact4() {
     const editorRef = useRef(null);
     return (
         <div className={`${FooterContact4Css.contactFooterWrapper} w-full`}>
-            <div className={`${FooterContact4Css.container1} flex flex-col justify-around items-center py-28`}>
+            <div className={`${FooterContact4Css.container1} flex flex-col justify-around items-center py-32`}>
                 {/* <TextPara classStyle={`${FooterContact4Css.contactParaFooter} text-center text-white`}
                     text="Pellentesque congue non augue vitae pellentesque. Morbi sollicitudin
                             eleifend rhoncus. Mauris vel nisl a massa viverra sollicitudin

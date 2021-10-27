@@ -13,7 +13,7 @@ export default function Blog4({ showPopup, overSection }) {
     const editorRef = useRef(null);
     return (
         <>
-            <section className={` py-28 px-0 w-full ${Blog4Css.sectionBlog}`} style={{ background: currentBackground }}>
+            <section className={` py-32 px-0 w-full ${Blog4Css.sectionBlog}`} style={{ background: currentBackground }}>
                 <div className={`text-center ${Blog4Css.headingWrapper}`}>
                     {/* <TextH3 classStyle={Blog4Css.blogMainHead} text="WHATS NEW" /> */}
                     <h3 className="Blog4Css">
