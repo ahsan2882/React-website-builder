@@ -19,17 +19,23 @@ import OurGuards4 from "../template4components/OurGuards4";
 import Pricing4 from "../template4components/Pricing4";
 import Services4 from "../template4components/Services4";
 import Subscribe4 from "../template4components/Subscribe4";
-import Services3 from '../template3components/Services3'
-import Latestnews3 from '../template3components/Latestnews3'
-import Ourprograms3 from '../template3components/Ourprograms3'
-import About3 from'../template3components/About3'
-import Accrediation3 from '../template3components/Accrediation3'
-import Footer3 from '../template3components/Footer3'
-import Guard3 from '../template3components/Guard3'
+// import Services3 from '../template3components/Services3'
+// import Latestnews3 from '../template3components/Latestnews3'
+// import Ourprograms3 from '../template3components/Ourprograms3'
+// import About3 from'../template3components/About3'
+// import Accrediation3 from '../template3components/Accrediation3'
+// import Footer3 from '../template3components/Footer3'
+// import Guard3 from '../template3components/Guard3'
 
 export let templateComponents = {
     template1Components: [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
     template2Components: [],
-    template3Components: [Services3, Latestnews3 , Guard3, Ourprograms3, About3, Accrediation3, Footer3],
-    template4Components: [Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Subscribe4, FooterContact4, BottomFooter4]
+    template3Components: [],
+    template4Components: {
+        "Home": [Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Subscribe4, FooterContact4, BottomFooter4],
+        "About" : [Header4 , Navigation4, Services4],
+        "Contact": [Header4 , Navigation4, AboutUs4]
+    }
+
+    // [Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Subscribe4, FooterContact4, BottomFooter4]
 }
