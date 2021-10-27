@@ -62,27 +62,32 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
             }
             let editableFalse = newDoc.getElementsByClassName("mce-content-body")
             let i = 0
-            while (i < 86 ) {
+            while (i < 1000) {
+
+                console.log(editableFalse[0])
                 // i = 0
                 // let childNode = editableFalse[i]
-                if (editableFalse[0].parentNode.nodeName === "LI") {
+                if (editableFalse[0] === undefined) {
+                    break;
+                }
+                else if (editableFalse[0].parentNode.nodeName === "LI") {
                     let newDiv = newDoc.createElement("div")
                     newDiv.className = "newText"
                     newDiv.innerHTML = editableFalse[0].innerHTML
                     editableFalse[0].parentNode.replaceChild(newDiv ,editableFalse[0])
-                } else if (editableFalse[0].parentNode.nodeName === "BUTTON" || editableFalse[0].parentNode.nodeName === "H1" || editableFalse[0].parentNode.nodeName === "H2" || editableFalse[0].parentNode.nodeName === "H3" || editableFalse[0].parentNode.nodeName === "H4" || editableFalse[0].parentNode.nodeName === "H5" || editableFalse[0].parentNode.nodeName === "H6" || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<p>"))) {
+                } else if (editableFalse[0].parentNode.nodeName === "BUTTON" || editableFalse[0].parentNode.nodeName === "H1" || editableFalse[0].parentNode.nodeName === "H2" || editableFalse[0].parentNode.nodeName === "H3" || editableFalse[0].parentNode.nodeName === "H4" || editableFalse[0].parentNode.nodeName === "H5" || editableFalse[0].parentNode.nodeName === "H6" || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<p")) || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<img"))) {
                     let nodeText = newDoc.createTextNode(editableFalse[0].innerHTML)
                     editableFalse[0].parentNode.replaceChild(nodeText, editableFalse[0])
                 }
                 i++
-                console.log(editableFalse[0].innerHTML)
-                console.log(editableFalse[0].parentNode)
-                console.log(editableFalse[0].parentNode.nodeName)
             }
             // while(editableFalse.length > 0){
                 
             // }
             let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
+            htmlString = htmlString.replace(/&lt;/g, "<")
+            htmlString = htmlString.replace(/&gt;/g, ">")
+            console.log(htmlString)
             
             // for (let elem in editableFalse) {
             //     console.log(elem, editableFalse[elem])
