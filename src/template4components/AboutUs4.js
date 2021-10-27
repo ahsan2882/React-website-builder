@@ -9,7 +9,7 @@ export default function AboutUs4({ showPopup, overSection }) {
     const editorRef = useRef(null);
     return (
         <>
-            <div className={`${About4Css.container02} py-28 px-12 flex items-center justify-evenly`} style={{ background: currentBackground }}>
+            <div className={`${About4Css.container02} py-32 px-12 flex items-center justify-evenly`} style={{ background: currentBackground }}>
                 <div className={`${About4Css.box1} flex flex-col max-w-lg`}>
                     {/* <img className={`${About4Css.aboutImg} w-11/12`} src={aboutimg} alt="about" /> */}
                     <Editor
@@ -21,6 +21,13 @@ export default function AboutUs4({ showPopup, overSection }) {
                             forced_root_block:"",
                             menubar: false,
                             images_upload_handler: function (blobInfo, success, failure) {
+                                fetch('/upload-images', {
+                                    headers: {
+                                        "Accept":"multipart/form-data"
+                                    }
+                                })
+                                    .then((response) => response.json())
+                                    .catch(error => console.log(error))
                                 success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                             },
                             images_upload_url: '/upload-images',
