@@ -6,7 +6,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setFileData,templateSubPage }) {
+export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setFileData, templateSubPage }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
@@ -59,12 +59,12 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                 templateData: compressed
             })
             setFileData({
-                "html": `${htmlString}`,
-                "css" : `${cssString}`
+                html: `${htmlString}`,
+                css: `${cssString}`
             })
         }
         setTimeout(function () { setSaveClicked(false); }, 1000);
-       
+
     }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData])
     const getHTMLData = () => {
         let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
@@ -97,10 +97,18 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     const getCSSData = () => {
         let cssString = ''
         let styleComponent = document.getElementsByTagName("style")
-        for (let style in styleComponent) {
-            cssString += styleComponent[style].innerHTML
+        console.log(styleComponent.length)
+        let i = 0
+        while (i < styleComponent.length) {
+            if (i < 1 || (i >= 5 && i <= 35) || i === 47) {
+                cssString += styleComponent[i].innerHTML
+            }
+            i++
         }
-        console.log(cssString)
+        // for (let style in styleComponent) {
+        //     console.log(styleComponent[style], parseInt(style))
+        //     // cssString += styleComponent[style].innerHTML
+        // }
         return cssString;
     }
     const moveUp = (indexC) => {
