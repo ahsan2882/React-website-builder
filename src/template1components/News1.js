@@ -199,7 +199,7 @@ export const News1 = () => {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='News7'
-                  initialValue={`img src=${news3} alt="news"class="w-full" />`}
+                  initialValue={`  <img src=${news3} alt="news"class="w-full" />`}
                   init={{
                     forced_root_block: "",
                     menubar: false,
