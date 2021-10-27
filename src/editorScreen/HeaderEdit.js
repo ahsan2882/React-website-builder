@@ -34,7 +34,19 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
             })
         };
         fetch('/generate-file', requestOptions)
-            .then(response => response.json())
+            .then(response => console.log(response.blob()))
+            .then((blob) => {
+                const url = window.URL.createObjectURL(
+                    new Blob([blob]),
+                );
+                const link = document.createElement('a');
+                link.href = url;
+                const zip = require('jszip')();
+
+                document.body.appendChild(link);
+                link.click();
+                link.parentNode.removeChild(link);
+            })
             .catch(error => console.log(error))
     }
     return (
