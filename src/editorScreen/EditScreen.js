@@ -11,6 +11,7 @@ export default function EditScreen({ temp }) {
         templateID: null,
         templateData: null
     });
+    const [templateSubPage, setTemplateSubPage] = useState("Home");
     const [saveClicked, setSaveClicked] = useState(null);
     const [fileData, setFileData] = useState({});
 
@@ -18,6 +19,7 @@ export default function EditScreen({ temp }) {
         <>
             <DndProvider backend={HTML5Backend}>
                 <HeaderEdit
+                    setTemplateSubPage={setTemplateSubPage}
                     templateNum={temp}
                     setSaveClicked={setSaveClicked}
                     saveClicked={saveClicked}
@@ -25,6 +27,7 @@ export default function EditScreen({ temp }) {
                     fileData={fileData}
                 />
                 <ContainerEdit
+                    templateSubPage={templateSubPage}
                     templateNum={temp}
                     overlayPresent={assetSelected}
                     saveClicked={saveClicked}

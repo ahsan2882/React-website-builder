@@ -6,7 +6,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setFileData }) {
+export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setFileData,templateSubPage }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
@@ -42,13 +42,13 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
             setCurTemplate("Template 3");
         }
         else if (temp === 4) {
-            setUpdateChildren(templateComponents.template4Components)
+            setUpdateChildren(templateComponents.template4Components[`${templateSubPage}`])
             setCurTemplate("Template 4");
         }
         else if (temp === 0) {
             setUpdateChildren([])
         }
-    }, [temp])
+    }, [temp, templateSubPage])
     useEffect(() => {
         if (saveClicked) {
             let htmlString = getHTMLData()
