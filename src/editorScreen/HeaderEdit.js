@@ -1,29 +1,36 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import HeaderEditCss from './HeaderEdit.module.css'
 import { Link } from 'react-router-dom';
+import subPages from './TemplateSubPages';
 
-export default function Header({ templateNum, setSaveClicked, toSave, saveClicked, fileData }) {
+export default function Header({ templateNum, setSaveClicked, toSave, saveClicked, fileData,setTemplateSubPage }) {
 const [isClicked , setIsClicked] = useState(false);
 const onClicked = () => setIsClicked ((condition) => !condition);
+const [subPageList, setSubPageList] = useState([]);
+const [newPath, setNewPath] = useState([]);
 
-
-
-    let path = '';
-    if (templateNum === 1) {
-        path = '/preview/template-1'
-    }
-    else if (templateNum === 2) {
-        path = '/prevew/template-2'
-    }
-    else if (templateNum === 3) {
-        path = '/preview/template-3'
-    }
-    else if (templateNum === 4) {
-        path = '/preview/template-4'
-    }
-    else if (templateNum === 0) {
-        path = '/preview/new-template'
-    }
+    useEffect(() => {
+        if (templateNum === 1) {
+            setNewPath('/preview/template-1')
+            setSubPageList(subPages.template1Subpages)
+        }
+        else if (templateNum === 2) {
+            setNewPath('/preview/template-2')
+            setSubPageList(subPages.template2Subpages)
+        }
+        else if (templateNum === 3) {
+            setNewPath('/preview/template-3')
+            setSubPageList(subPages.template3Subpages)
+        }
+        else if (templateNum === 4) {
+            setNewPath('/preview/template-4')
+            setSubPageList(subPages.template4Subpages)
+        }
+        else if (templateNum === 0) {
+            setNewPath('/preview/new-template')
+        }
+        
+    }, [templateNum])
     const saveTemplate = () => {
         setSaveClicked(true);
         localStorage.setItem('Template-4', JSON.stringify(toSave))
@@ -51,13 +58,14 @@ const onClicked = () => setIsClicked ((condition) => !condition);
             <div className="w-80 ml-4">
                 {/* ---usama */}
             <div className="list">
-                <h1 style={{background:`rgb(60,172,254)`,width:`120px`,borderRadius:`25px`,color:`white`,cursor:`pointer`}} onClick={onClicked}> {isClicked ? <h2 style={{background:`red`,padding:`12px 30px 12px`,borderRadius:`25px`}}> Close </h2> : <h2 style={{padding:`12px 30px 12px`}}> Pages </h2>} </h1>
-<div className="w-48" style={ isClicked ? { left: `0`,position:`absolute`, top:`100%`} : {position:`absolute`, top:`100%`,left:`-10%`, height:`100vh`,background:`white`,boxShadow:`1px 2px 2px 2px rgba(0,0,0,0.3)`}}>
+                <h1 style={{background:`rgb(60,172,254)`,width:`120px`,borderRadius:`25px`,color:`white`,cursor:`pointer`,transition:`2s all ease`}} onClick={onClicked}> {isClicked ? <h2 style={{background:`red`,padding:`12px 30px 12px`,borderRadius:`25px`,transition:`0.25s all ease`}}> Close </h2> : <h2 style={{padding:`12px 30px 12px`}}> Pages </h2>} </h1>
+<div className="w-48" style={ isClicked ? { left: `0`,position:`absolute`, top:`100%`,transition:`0.25s all ease`,background:`white`, height:`100vh`} : {position:`absolute`, top:`100%`,left:`-10%`, height:`100vh`,background:`white`,boxShadow:`1px 4px 2px 2px rgba(0,0,0,0.3)`,transition:`0.25s all ease`}}>
    <div className="flex flex-col mt-12">
-       <h5 className="m-10"> Home </h5>
-       <h5 className="m-10"> Contact </h5>
-       <h5 className="m-10"> About  </h5>
-       <h5 className="m-10"> Service </h5>
+       {/* <h5 onClick={() => setTemplateSubPage('')} style={{padding:`12px 15px 12px`,borderRadius:`12px`,color:`white`,fontWeight:`600`,cursor:`pointer`}} className="m-6 bg-BL-600"> Home <i class="fas fa-home"></i> </h5>
+       <h5 style={{padding:`12px 15px 12px`,borderRadius:`12px`,color:`white`,fontWeight:`600`,cursor:`pointer`}} className="m-6 bg-BL-600"> Contact <i class="fas fa-id-card"></i> </h5>
+       <h5 style={{padding:`12px 15px 12px`,borderRadius:`12px`,color:`white`,fontWeight:`600`,cursor:`pointer`}} className="m-6 bg-BL-600"> About <i class="fab fa-accusoft"></i> </h5> */}
+       {/* {subPages[currentTemplate].map((label) => <h5 style={{padding:`12px 15px 12px`,borderRadius:`12px`,color:`white`,fontWeight:`600`,cursor:`pointer`}} className="m-6 bg-BL-600">{label}</h5>)} */}
+       {subPageList.map((item) => <h5 onClick={() =>setTemplateSubPage(item)} style={{padding:`12px 15px 12px`,borderRadius:`12px`,color:`white`,fontWeight:`600`,cursor:`pointer`}} className="m-6 bg-BL-600">{item}</h5>)}
      
 
 
@@ -98,7 +106,7 @@ const onClicked = () => setIsClicked ((condition) => !condition);
                     <h2> SAVE</h2>
                     <i className={saveClicked ? "fas fa-check" : null}></i>
                 </button>
-                <Link to={path} target='_blank' rel='noopener noreferrer' className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl">
+                <Link to={newPath} target='_blank' rel='noopener noreferrer' className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl">
                     {/* <img src={previewIm} alt="Preview" className={`w-9 h-auto`} /> */}
                     <i className="far fa-eye text-2xl"></i>
                     <h2>PREVIEW</h2>
