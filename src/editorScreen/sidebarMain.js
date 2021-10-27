@@ -163,5 +163,5 @@ export const sidebarAssets = [
             { imageName: accreAss3, id: "accre3" },
             { imageName: accreAss4, id: "accre4" },
         ]
-    },
+    }
 ]
