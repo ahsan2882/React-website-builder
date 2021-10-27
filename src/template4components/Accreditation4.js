@@ -13,7 +13,7 @@ export default function Accreditation4({ showPopup, overSection }) {
     const editorRef = useRef(null);
     return (
         <>
-            <section className="py-28 px-0 w-full" style={{ background: currentBackground }}>
+            <section className="py-32 px-0 w-full" style={{ background: currentBackground }}>
                 <div className={Accre4Css.containerMain}>
                     <div className="flex flex-col items-center py-10 px-0">
                         {/* <TextH2 classStyle={`${Accre4Css.accreMainH2} text-2xl`} text="we are verified" /> */}
@@ -56,7 +56,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                             />
                         </h1>
                     </div>
-                    <div className="flex justify-center my-0 mx-auto mb-8">
+                    <div className="flex flex-wrap justify-center my-0 mx-auto mb-8">
                         <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
                             <div className="p-5 flex flex-col items-center">
                                 {/* <img src={cl1} alt="client 1" className="w-full" /> */}
