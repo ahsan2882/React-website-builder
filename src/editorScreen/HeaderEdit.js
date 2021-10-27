@@ -2,6 +2,7 @@ import React from 'react'
 import HeaderEditCss from './HeaderEdit.module.css'
 import { Link } from 'react-router-dom';
 
+
 export default function Header({ templateNum, setSaveClicked, toSave, saveClicked, fileData }) {
     let path = '';
     if (templateNum === 1) {
@@ -41,7 +42,6 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
                 );
                 const link = document.createElement('a');
                 link.href = url;
-                const zip = require('jszip')();
 
                 document.body.appendChild(link);
                 link.click();
