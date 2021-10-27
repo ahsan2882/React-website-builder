@@ -12,7 +12,7 @@ export default function EditScreen({ temp }) {
         templateData: null
     });
     const [saveClicked, setSaveClicked] = useState(null);
-    const [fileData, setFileData] = useState(null);
+    const [fileData, setFileData] = useState({});
 
     return (
         <>
