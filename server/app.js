@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var generateFileRouter = require('./routes/generateFile')
 var imageUploader = require('./routes/uploadImages')
+var zipGenerator = require('./routes/generateZip')
 var app = express();
 
 // view engine setup
@@ -25,6 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/generate-file', generateFileRouter)
 app.use('/upload-images', imageUploader)
+app.use('/download-zip', zipGenerator)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
