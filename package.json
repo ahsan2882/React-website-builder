@@ -39,7 +39,8 @@
     "react-serialize": "^0.2.0",
     "react-style-tag": "^2.0.4",
     "styled-components": "^5.3.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "zip-a-folder": "^1.1.0"
   },
   "scripts": {
     "server": "node ./server/bin/www",
