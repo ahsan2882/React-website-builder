@@ -7,6 +7,12 @@ import { Prizing1 } from "../template1components/Prizing1";
 import { Program1 } from "../template1components/Program1";
 import { Service1 } from "../template1components/Service1";
 import { Testimonials1 } from "../template1components/Testimonials1";
+import { Navbar2 } from "../template2components/Navbar2";
+import { Services2 } from "../template2components/Services2";
+import { Pricing2 } from "../template2components/Pricing2";
+import { Blog2}   from '../template2components/Blog2'
+import {Client2}  from '../template2components/Client2'
+import {Guard2} from '../template2components/Guard2'
 import AboutUs4 from "../template4components/AboutUs4";
 import Accreditation4 from "../template4components/Accreditation4";
 import Blog4 from "../template4components/Blog4";
@@ -29,7 +35,7 @@ import Subscribe4 from "../template4components/Subscribe4";
 
 export let templateComponents = {
     template1Components: [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
-    template2Components: [],
+    template2Components: [Navbar2, Services2, Pricing2, Blog2, Client2, Guard2],
     template3Components: [],
     template4Components: {
         "Home": [Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Subscribe4, FooterContact4, BottomFooter4],

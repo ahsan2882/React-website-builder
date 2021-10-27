@@ -1,0 +1,157 @@
+.wrapper2 {
+    width: 100%;
+  }
+  .blog2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 163px;
+  }
+  .SpanColor {
+    color: #c0272d;
+  }
+  .single-blog {
+    flex-basis: 350px;
+    border: 5px solid var(--clr-light);
+    margin: 10px 12px;
+  }
+  .blog-img {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--clr-gray);
+  }
+  .blog-img img {
+    width: 100%;
+    transition: 0.3s;
+  }
+  .single-blog:hover .blog-img img {
+    transform: scale(1.1);
+  }
+  
+  .btn-post {
+    text-align: center;
+  }
+  
+  .blog-content {
+    padding: 20px;
+    background: #c0272d;
+  }
+  
+  .blog-content h4 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-bottom: 1px dashed white;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    color: white;
+    text-align: center;
+  }
+
+  
+  .post-para {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+  }
+  .MainHeading {
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+  
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    /* background-color: darkgray; */
+  }
+  
+  .head-main {
+    margin: 60px 0;
+  }
+  
+  .SpanColor {
+    color: #c0272d;
+  }
+  
+  .spanDesc {
+    /* background-color: darkcyan; */
+    text-align: center;
+  }
+  
+  .spanDesc p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #292929;
+  }
+  
+  .dot {
+    margin: 0 12px;
+    width: 22px;
+  }
+  
+  .divMainHeading {
+    display: flex;
+    /* background-color: green; */
+    height: 20px;
+    margin-left: 25%;
+  }
+  
+  .divMainHeadingSubDiv {
+    /* background-color: gold;  */
+    width: 30%;
+    border-top: 3px dashed firebrick;
+    margin-top: 9px;
+  }
+  .btnb-2 {
+    background:white;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 25px;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+  .btnb-2::before {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    background: black;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.3s ease-out;
+  }
+  
+  .btnb-2::after {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    right: 0;
+    top: 0;
+    background:black;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.3s ease-out;
+  }
+  
+  .btnb-2:hover:before {
+    width: 0;
+  }
+  
+  .btnb-2:hover:after {
+    width: 0;
+  }
+  
+  .btnb-2:hover {
+    cursor: pointer;
+    color: black;
+  }
