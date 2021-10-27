@@ -6,7 +6,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setFileData, templateSubPage }) {
+export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setFileData, templateSubPage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
@@ -167,12 +167,24 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                     </>
                                 )
                             })}
+                            {chatInclude ? <WhatsAppChat /> : null}
                         </section>
                     </div>
                 </div>
+                
             </section>
 
         </>
 
     );
+}
+
+
+
+const WhatsAppChat = () => {
+    return (
+        <>
+            <a href="https://wa.me/2348100000000" className="fixed w-16 h-16 text-white text-center text-3xl bg-green-600 flex justify-center items-center rounded-full" style={{right:"12%", bottom: "10%"}}target="_blank" rel="noopener noreferrer" ><i className="fa fa-whatsapp whatsapp-icon"></i></a>
+        </>
+    )
 }
