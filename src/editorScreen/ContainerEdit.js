@@ -49,11 +49,6 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     }, [temp])
     useEffect(() => {
         if (saveClicked) {
-            // let styleComponent = document.getElementsByTagName("style");
-            // for (let style in styleComponent) {
-            //     console.log(styleComponent[style])
-            // }
-
             let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
             let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
             let removed = newDoc.getElementsByClassName("toBeRemoved")
@@ -63,10 +58,6 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
             let editableFalse = newDoc.getElementsByClassName("mce-content-body")
             let i = 0
             while (i < 1000) {
-
-                console.log(editableFalse[0])
-                // i = 0
-                // let childNode = editableFalse[i]
                 if (editableFalse[0] === undefined) {
                     break;
                 }
@@ -81,18 +72,9 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                 }
                 i++
             }
-            // while(editableFalse.length > 0){
-                
-            // }
             let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
             htmlString = htmlString.replace(/&lt;/g, "<")
             htmlString = htmlString.replace(/&gt;/g, ">")
-            console.log(htmlString)
-            
-            // for (let elem in editableFalse) {
-            //     console.log(elem, editableFalse[elem])
-            // }
-            // let childToParent = new DOMParser().parseFromString(htmlString)
             setFileData(htmlString)
             let compressed = lz.encodeBase64(lz.compress(htmlString))
             setToSave({
@@ -103,6 +85,14 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
         setTimeout(function () { setSaveClicked(false); }, 1000);
        
     }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData])
+    useEffect(() => {
+        if (saveClicked) {
+            // let styleComponent = document.getElementsByTagName("style");
+            // for (let style in styleComponent) {
+            //     console.log(styleComponent[style])
+            // }
+        }
+    }, [saveClicked])
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
@@ -155,12 +145,6 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                                     setShowPopUp((popup) => !popup);
                                                 }}><i className="far fa-images text-white"></i></button>
                                             </div>
-                                            {/* <div
-                                                className={(overSection && sectionKey === index) ? "absolute border-2 border-red-500 w-full h-full top-0" : "hidden"}
-                                                // className="absolute border-2 border-red-500 w-full h-full"
-                                            >
-
-                                            </div> */}
                                         </section>
                                     </>
                                 )
