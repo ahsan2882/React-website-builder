@@ -7,19 +7,27 @@ var htmlClosingTemplate = "</main></body></html>"
 
 router.post("/",  (req, res, next) => {
     let response = {
-        file_name: req.body.file_name,
-        file_content: req.body.file_content
+        file_name: `${req.body.file_name}`,
+        file_content: `${req.body.file_content}`
     };
     console.log(response.file_content);
-    let fileData = htmlTemplate + response.file_content + htmlClosingTemplate;
-    fs.writeFile(`output/${response.file_name}`, fileData, err => {
-        if (err) {
-            console.error(err)
-            return null;
-        }
-        //file written successfully
-    })
+    let fileData = '';
+    if (response.file_name.includes(".html")) {
+        fileData = htmlTemplate + response.file_content + htmlClosingTemplate;
+        fs.writeFile(`output/${response.file_name}`, fileData, err => logError(err))
+    }
+    else if (response.file_name.includes(".css")) {
+        fileData = response.file_content
+        fs.writeFile(`output/css/${response.file_name}`, fileData, err => logError(err))
+    }
+    
     res.end(JSON.stringify(response));
 })
 
+const logError = (err) => {
+    if (err) {
+        console.error(err)
+        return null;
+    }
+}
 module.exports = router;
