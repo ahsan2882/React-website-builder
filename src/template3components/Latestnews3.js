@@ -1,18 +1,50 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Latestnews3Css from './Latestnews3.module.css'
 import news1 from '../assets/template3images/news1.png'
 import news2 from '../assets/template3images/news2.png'
 import news3 from '../assets/template3images/news3.png'
+import { Editor } from '@tinymce/tinymce-react';
 export default function Latestnews3() {
+    const editorRef = useRef(null);
     return (
         <>
             <section className={Latestnews3Css['heading-sec-w']}>
 
                 <div className={Latestnews3Css['heading-main-title-w']}>
                     <div className={Latestnews3Css['sub-title-w']}>
-                        <h3>Daily Updates</h3>
+                        <h3>
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='latesnews1'
+                                initialValue="Daily Updates"
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | fontselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                }}
+                            />
+                        </h3>
                     </div>
-                    <h1>Latest News</h1>
+                    <h1>
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='latesnews2'
+                            initialValue="Latest News"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                            }}
+                        />
+                    </h1>
                 </div>
             </section>
 
@@ -20,32 +52,211 @@ export default function Latestnews3() {
                 <div className={Latestnews3Css['contain-news']}>
                     <div className={Latestnews3Css['ncards-wrapper']}>
                         <div className={Latestnews3Css['news-card']}>
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='About5'
+                                initialValue={`<img src=${news1} alt="news1" class="w-full" />`}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
 
-                            <img src={news1} alt="news1" />
                             <div className={Latestnews3Css['news-card-content']}>
-                                <h2>CCTV Installation Tricks.</h2>
-                                <p>If you are able to install a camera, there is still a few tricks to pay extra attention.</p>
-                                <button className={Latestnews3Css['button-sq-red']}>Read More</button>
+                                <h2>
+                                    <Editor
+                                        onInit={(evt, editor) => editorRef.current = editor}
+                                        inline={true}
+                                        key='latesnews3'
+                                        initialValue="CCTV Installation Tricks."
+                                        init={{
+                                            forced_root_block: "",
+                                            menubar: false,
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
+                                    />
+
+                                </h2>
+                                <p>
+                                    <Editor
+                                        onInit={(evt, editor) => editorRef.current = editor}
+                                        inline={true}
+                                        key='latesnews4'
+                                        initialValue=" 
+                                        If you are able to install a camera, there is still a few tricks to pay extra attention."
+                                        init={{
+                                            forced_root_block: "",
+                                            menubar: false,
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
+                                    />
+                                </p>
+                                <button className={Latestnews3Css['button-sq-red']}>
+
+                                    <Editor
+                                        onInit={(evt, editor) => editorRef.current = editor}
+                                        inline={true}
+                                        key='latesnews5'
+                                        initialValue="Read More"
+                                        init={{
+                                            forced_root_block: "",
+                                            menubar: false,
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
+                                    />
+                                </button>
 
                             </div>
 
                         </div>
                         <div className={Latestnews3Css['news-card']}>
-                            <img src={news2} alt="news2" />
+                        <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='About5'
+                                initialValue={`<img src=${news2} alt="news2" class="w-full" />`}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
+                          
                             <div className={Latestnews3Css['news-card-content']}>
-                                <h2>How To Monitor Your Facility.</h2>
-                                <p>Hire a special man who knows how to deal with this. Or read this post.</p>
-                                <button className={Latestnews3Css['button-sq-red']}>Read More</button>
+                                <h2>
+                                    <Editor
+                                        onInit={(evt, editor) => editorRef.current = editor}
+                                        inline={true}
+                                        key='latesnews6'
+                                        initialValue="How To Monitor Your Facility."
+                                        init={{
+                                            forced_root_block: "",
+                                            menubar: false,
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
+                                    />
+                                </h2>
+                                <p>
+                                    <Editor
+                                        onInit={(evt, editor) => editorRef.current = editor}
+                                        inline={true}
+                                        key='latesnews6'
+                                        initialValue="How To Monitor Your Facility."
+                                        init={{
+                                            forced_root_block: "",
+                                            menubar: false,
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
+                                    />
+                                </p>
+                                <button className={Latestnews3Css['button-sq-red']}>
+                                    <Editor
+                                        onInit={(evt, editor) => editorRef.current = editor}
+                                        inline={true}
+                                        key='latesnews7'
+                                        initialValue="Read More"
+                                        init={{
+                                            forced_root_block: "",
+                                            menubar: false,
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
+                                    />
+                                </button>
 
                             </div>
                         </div>
                         <div className={Latestnews3Css['news-card']}>
+                        <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='About5'
+                                initialValue={`<img src=${news3} alt="news3" class="w-full" />`}
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
 
-                            <img src={news3} alt="" />
                             <div className={Latestnews3Css['news-card-content']}>
-                                <h2>Outdoor Security Process.</h2>
-                                <p>Working with different clients, we collected rich experience and want to share it with you..</p>
-                                <button className={Latestnews3Css['button-sq-red']}>Read More</button>
+                                <h2>
+                                    <Editor
+                                        onInit={(evt, editor) => editorRef.current = editor}
+                                        inline={true}
+                                        key='latesnews8'
+                                        initialValue="Outdoor Security Process."
+                                        init={{
+                                            forced_root_block: "",
+                                            menubar: false,
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
+                                    />
+                                </h2>
+                                <p>
+                                    <Editor
+                                        onInit={(evt, editor) => editorRef.current = editor}
+                                        inline={true}
+                                        key='latesnews8'
+                                        initialValue="Outdoor Security Process."
+                                        init={{
+                                            forced_root_block: "",
+                                            menubar: false,
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
+                                    />
+
+                                </p>
+                                <button className={Latestnews3Css['button-sq-red']}>
+                                    <Editor
+                                        onInit={(evt, editor) => editorRef.current = editor}
+                                        inline={true}
+                                        key='latesnews9'
+                                        initialValue="Read More"
+                                        init={{
+                                            forced_root_block: "",
+                                            menubar: false,
+                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
+                                    />
+                                </button>
 
                             </div>
                         </div>
