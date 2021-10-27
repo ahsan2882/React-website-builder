@@ -14,6 +14,7 @@ export default function EditScreen({ temp }) {
     const [templateSubPage, setTemplateSubPage] = useState("Home");
     const [saveClicked, setSaveClicked] = useState(null);
     const [fileData, setFileData] = useState({});
+    const [chatInclude, setChatInclude] = useState(false);
 
     return (
         <>
@@ -33,10 +34,13 @@ export default function EditScreen({ temp }) {
                     saveClicked={saveClicked}
                     setToSave={setToSave}
                     setSaveClicked={setSaveClicked}
+                    chatInclude={chatInclude}
                     setFileData={setFileData}
                 />
                 <FooterEdit
                     setOverlay={setAssetSelected}
+                    setChatInclude={setChatInclude}
+                    chatInclude={chatInclude}
                 />
             </DndProvider>
         </>
