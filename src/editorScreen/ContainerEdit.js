@@ -12,6 +12,8 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     const [showPopUp, setShowPopUp] = useState(false)
     const [sectionKey, setSectionKey] = useState(null);
     const [curTemplate, setCurTemplate] = useState(null);
+    // const [htmlData, setHtmlData] = useState(null);
+    // const [cssData, setCssData] = useState(null);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -49,50 +51,58 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     }, [temp])
     useEffect(() => {
         if (saveClicked) {
-            let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
-            let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
-            let removed = newDoc.getElementsByClassName("toBeRemoved")
-            while (removed.length > 0) {
-                removed[0].parentNode.removeChild(removed[0]);
-            }
-            let editableFalse = newDoc.getElementsByClassName("mce-content-body")
-            let i = 0
-            while (i < 1000) {
-                if (editableFalse[0] === undefined) {
-                    break;
-                }
-                else if (editableFalse[0].parentNode.nodeName === "LI") {
-                    let newDiv = newDoc.createElement("div")
-                    newDiv.className = "newText"
-                    newDiv.innerHTML = editableFalse[0].innerHTML
-                    editableFalse[0].parentNode.replaceChild(newDiv ,editableFalse[0])
-                } else if (editableFalse[0].parentNode.nodeName === "BUTTON" || editableFalse[0].parentNode.nodeName === "H1" || editableFalse[0].parentNode.nodeName === "H2" || editableFalse[0].parentNode.nodeName === "H3" || editableFalse[0].parentNode.nodeName === "H4" || editableFalse[0].parentNode.nodeName === "H5" || editableFalse[0].parentNode.nodeName === "H6" || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<p")) || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<img"))) {
-                    let nodeText = newDoc.createTextNode(editableFalse[0].innerHTML)
-                    editableFalse[0].parentNode.replaceChild(nodeText, editableFalse[0])
-                }
-                i++
-            }
-            let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
-            htmlString = htmlString.replace(/&lt;/g, "<")
-            htmlString = htmlString.replace(/&gt;/g, ">")
-            setFileData(htmlString)
+            let htmlString = getHTMLData()
+            let cssString = getCSSData()
             let compressed = lz.encodeBase64(lz.compress(htmlString))
             setToSave({
                 templateID: curTemplate,
                 templateData: compressed
             })
+            setFileData({
+                "html": `${htmlString}`,
+                "css" : `${cssString}`
+            })
         }
         setTimeout(function () { setSaveClicked(false); }, 1000);
        
     }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData])
-    useEffect(() => {
-        if (saveClicked) {
-            // let styleComponent = document.getElementsByTagName("style");
-            // for (let style in styleComponent) {
-            //     console.log(styleComponent[style])
-            // }
+    const getHTMLData = () => {
+        let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
+        let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
+        let removed = newDoc.getElementsByClassName("toBeRemoved")
+        while (removed.length > 0) {
+            removed[0].parentNode.removeChild(removed[0]);
         }
-    }, [saveClicked])
+        let editableFalse = newDoc.getElementsByClassName("mce-content-body")
+        let i = 0
+        while (i < 1000) {
+            if (editableFalse[0] === undefined) {
+                break;
+            }
+            else if (editableFalse[0].parentNode.nodeName === "LI") {
+                let newDiv = newDoc.createElement("div")
+                newDiv.className = "newText"
+                newDiv.innerHTML = editableFalse[0].innerHTML
+                editableFalse[0].parentNode.replaceChild(newDiv, editableFalse[0])
+            } else if (editableFalse[0].parentNode.nodeName === "BUTTON" || editableFalse[0].parentNode.nodeName === "H1" || editableFalse[0].parentNode.nodeName === "H2" || editableFalse[0].parentNode.nodeName === "H3" || editableFalse[0].parentNode.nodeName === "H4" || editableFalse[0].parentNode.nodeName === "H5" || editableFalse[0].parentNode.nodeName === "H6" || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<p")) || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<img"))) {
+                let nodeText = newDoc.createTextNode(editableFalse[0].innerHTML)
+                editableFalse[0].parentNode.replaceChild(nodeText, editableFalse[0])
+            }
+            i++
+        }
+        let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
+        htmlString = htmlString.replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+        return htmlString;
+    }
+    const getCSSData = () => {
+        let cssString = ''
+        let styleComponent = document.getElementsByTagName("style")
+        for (let style in styleComponent) {
+            cssString += styleComponent[style].innerHTML
+        }
+        console.log(cssString)
+        return cssString;
+    }
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
