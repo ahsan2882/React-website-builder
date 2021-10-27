@@ -60,10 +60,10 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
     return (
         <>
 
-            <div className={`flex justify-between items-center border-b-2 border-gray-100 py-6 ${HeaderEditCss['max-w-7xl']} ${HeaderEditCss.maxHeadH} mx-auto px-4 bg-white fixed z-50 w-full top-0`}>
+            <div className={`flex justify-between items-center border-b-2 border-gray-100 py-6 ${HeaderEditCss['max-w-7xl']} ${HeaderEditCss.maxHeadH} mx-auto px-16 bg-black fixed z-50 w-full top-0`}>
                 <div className="w-80 ml-4">
                     <div className="list">
-                        <h1 style={{ background: `rgb(60,172,254)`, width: `120px`, borderRadius: `25px`, color: `white`, cursor: `pointer`, transition: `2s all ease` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px 12px`, borderRadius: `25px`, transition: `0.25s all ease` }}> Close </h2> : <h2 style={{ padding: `12px 30px 12px` }}> Pages </h2>} </h1>
+                        <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px` }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, background: `rgb(60,172,254)`}}> Pages </h2>} </div>
                         <div className="w-48" style={isClicked ? { left: `0`, position: `absolute`, top: `100%`, transition: `0.25s all ease`, background: `white`, height: `100vh` } : { position: `absolute`, top: `100%`, left: `-10%`, height: `100vh`, background: `white`, boxShadow: `1px 4px 2px 2px rgba(0,0,0,0.3)`, transition: `0.25s all ease` }}>
                             <div className="flex flex-col mt-12">
                                 {subPageList.map((item) => <h5 onClick={() => setTemplateSubPage(item)} style={{ padding: `12px 15px 12px`, borderRadius: `12px`, color: `white`, fontWeight: `600`, cursor: `pointer` }} className="m-6 bg-BL-600">{item}</h5>)}
@@ -73,17 +73,17 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
                 </div>
                 <nav>
                     <div className="relative w-32 flex justify-between">
-                        <button className="hover:bg-BL-400 rounded-full w-20 h-16" >
+                        <button className="hover:bg-BL-400 rounded-full w-20 h-16 text-white" >
                             <i className={`fas fa-desktop text-2xl`}>
                             </i>
                         </button>
-                        <button className="hover:bg-BL-400 rounded-full w-20 h-16">
+                        <button className="hover:bg-BL-400 rounded-full w-20 h-16 text-white">
                             <i className="fas fa-mobile-alt text-2xl"></i>
                         </button>
                     </div>
                 </nav>
                 <div className="flex items-center justify-between w-80">
-                    <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-20 justify-between rounded-2xl"
+                    <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-20 justify-between rounded-2xl text-white"
                         onClick={() => {
                             saveTemplate();
                         }}
@@ -92,12 +92,12 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
                         <h2> SAVE</h2>
                         <i className={saveClicked ? "fas fa-check" : null}></i>
                     </button>
-                    <Link to={newPath} target='_blank' rel='noopener noreferrer' className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl">
+                    <Link to={newPath} target='_blank' rel='noopener noreferrer' className="flex items-center px-2 py-3 text-white hover:bg-BL-400 w-28 justify-between rounded-2xl">
                         {/* <img src={previewIm} alt="Preview" className={`w-9 h-auto`} /> */}
                         <i className="far fa-eye text-2xl"></i>
                         <h2>PREVIEW</h2>
                     </Link>
-                    <button className="flex items-center px-2 py-3 hover:bg-BL-400 w-28 justify-between rounded-2xl" onClick={() => exportCode()}>
+                    <button className="flex items-center px-2 py-3 hover:bg-BL-400 text-white w-28 justify-between rounded-2xl" onClick={() => exportCode()}>
                         <i className="fas fa-file-export text-2xl"></i>
                         <h2>EXPORT</h2>
                     </button>
