@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import HeaderEditCss from './HeaderEdit.module.css'
 import { Link } from 'react-router-dom';
 import subPages from './TemplateSubPages';
+import FileSaver from 'file-saver';
 
 export default function Header({ templateNum, setSaveClicked, toSave, saveClicked, fileData, setTemplateSubPage }) {
     const [isClicked, setIsClicked] = useState(false);
@@ -34,6 +35,7 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
     const saveTemplate = () => {
         setSaveClicked(true);
         localStorage.setItem('Template-4', JSON.stringify(toSave))
+        console.log(fileData)
     }
     const exportCode = () => {
         console.log("Sending Request")
@@ -46,20 +48,12 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
             })
         };
         fetch('/generate-file', requestOptions)
-            .then(response => console.log(response.blob()))
-            // .then(fetch('/download-zip')
-            //     .then((response) => {
-            //         return response.text();
-            //     })
-            //     .then((zipAsBase64) => {
-            //         // const blob = b64toBlob(zipAsBase64, "application/zip");
-            //         // FileSaver.saveAs(blob, `example.zip`);
-            //         let contentType = 'application/zip'
-            //         let data = zipAsBase64
-            //         var blob = b64toBlob(data, contentType);
-            //         var blobUrl = URL.createObjectURL(blob);
-            //         window.location = blobUrl;
-            //     }))
+            .then(response => response.text())
+            .then((fileText) => {
+                let blob = new Blob([fileText], { type: "text/html;charset=utf-8" })
+                FileSaver.saveAs(blob, "index.html")
+                console.log(fileText, "header check file content")
+            })
             .catch(error => console.log(error))
     }
 
