@@ -19,6 +19,13 @@ import OurGuards4 from "../template4components/OurGuards4";
 import Pricing4 from "../template4components/Pricing4";
 import Services4 from "../template4components/Services4";
 import Subscribe4 from "../template4components/Subscribe4";
+import Services3 from '../template3components/Services3'
+import Latestnews3 from '../template3components/Latestnews3'
+import Ourprograms3 from '../template3components/Ourprograms3'
+import About3 from'../template3components/About3'
+import Accrediation3 from '../template3components/Accrediation3'
+import Footer3 from '../template3components/Footer3'
+import Guard3 from '../template3components/Guard3'
 
 export let templateComponents = {
     template1Components: [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],

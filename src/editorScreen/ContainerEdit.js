@@ -49,11 +49,6 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     }, [temp, templateSubPage])
     useEffect(() => {
         if (saveClicked) {
-            // let styleComponent = document.getElementsByTagName("style");
-            // for (let style in styleComponent) {
-            //     console.log(styleComponent[style])
-            // }
-
             let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
             let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
             let removed = newDoc.getElementsByClassName("toBeRemoved")
@@ -62,21 +57,24 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
             }
             let editableFalse = newDoc.getElementsByClassName("mce-content-body")
             let i = 0
-            while (i < editableFalse.length) {
-                editableFalse[i].setAttribute("contenteditable", "false")
-                console.log(editableFalse[i].innerHTML)
-                console.log(editableFalse[i].parentNode.nodeName)
-                i++;
+            while (i < 1000) {
+                if (editableFalse[0] === undefined) {
+                    break;
+                }
+                else if (editableFalse[0].parentNode.nodeName === "LI") {
+                    let newDiv = newDoc.createElement("div")
+                    newDiv.className = "newText"
+                    newDiv.innerHTML = editableFalse[0].innerHTML
+                    editableFalse[0].parentNode.replaceChild(newDiv ,editableFalse[0])
+                } else if (editableFalse[0].parentNode.nodeName === "BUTTON" || editableFalse[0].parentNode.nodeName === "H1" || editableFalse[0].parentNode.nodeName === "H2" || editableFalse[0].parentNode.nodeName === "H3" || editableFalse[0].parentNode.nodeName === "H4" || editableFalse[0].parentNode.nodeName === "H5" || editableFalse[0].parentNode.nodeName === "H6" || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<p")) || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<img"))) {
+                    let nodeText = newDoc.createTextNode(editableFalse[0].innerHTML)
+                    editableFalse[0].parentNode.replaceChild(nodeText, editableFalse[0])
+                }
+                i++
             }
-            // while(editableFalse.length > 0){
-                
-            // }
             let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
-            
-            // for (let elem in editableFalse) {
-            //     console.log(elem, editableFalse[elem])
-            // }
-            // let childToParent = new DOMParser().parseFromString(htmlString)
+            htmlString = htmlString.replace(/&lt;/g, "<")
+            htmlString = htmlString.replace(/&gt;/g, ">")
             setFileData(htmlString)
             let compressed = lz.encodeBase64(lz.compress(htmlString))
             setToSave({
@@ -87,6 +85,14 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
         setTimeout(function () { setSaveClicked(false); }, 1000);
        
     }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData])
+    useEffect(() => {
+        if (saveClicked) {
+            // let styleComponent = document.getElementsByTagName("style");
+            // for (let style in styleComponent) {
+            //     console.log(styleComponent[style])
+            // }
+        }
+    }, [saveClicked])
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
@@ -139,12 +145,6 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                                     setShowPopUp((popup) => !popup);
                                                 }}><i className="far fa-images text-white"></i></button>
                                             </div>
-                                            {/* <div
-                                                className={(overSection && sectionKey === index) ? "absolute border-2 border-red-500 w-full h-full top-0" : "hidden"}
-                                                // className="absolute border-2 border-red-500 w-full h-full"
-                                            >
-
-                                            </div> */}
                                         </section>
                                     </>
                                 )

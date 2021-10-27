@@ -45,8 +45,19 @@ const [newPath, setNewPath] = useState([]);
                 file_content: fileData
             })
         };
-        fetch('http://localhost:9000/generate-file', requestOptions)
-            .then(response => response.json())
+        fetch('/generate-file', requestOptions)
+            .then(response => console.log(response.blob()))
+            .then((blob) => {
+                const url = window.URL.createObjectURL(
+                    new Blob([blob]),
+                );
+                const link = document.createElement('a');
+                link.href = url;
+
+                document.body.appendChild(link);
+                link.click();
+                link.parentNode.removeChild(link);
+            })
             .catch(error => console.log(error))
     }
    
