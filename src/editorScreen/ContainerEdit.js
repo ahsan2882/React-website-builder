@@ -6,7 +6,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked }) {
+export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setFileData }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
@@ -49,10 +49,33 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     }, [temp])
     useEffect(() => {
         if (saveClicked) {
-            let htmlString = document.getElementsByClassName("getInnerHTML")[0].innerHTML
-            // htmlString = htmlString.replace("contenteditable=\"true\"", "contenteditable=\"false\"")
-            htmlString = htmlString.replace(/contenteditable="true"/g, "contenteditable=\"false\"")
-            // console.log(htmlString)
+            let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
+            let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
+            let removed = newDoc.getElementsByClassName("toBeRemoved")
+            while (removed.length > 0) {
+                removed[0].parentNode.removeChild(removed[0]);
+            }
+            let editableFalse = newDoc.getElementsByClassName("mce-content-body")
+            let i = 0
+            while (i < 1000) {
+                if (editableFalse[0] === undefined) {
+                    break;
+                }
+                else if (editableFalse[0].parentNode.nodeName === "LI") {
+                    let newDiv = newDoc.createElement("div")
+                    newDiv.className = "newText"
+                    newDiv.innerHTML = editableFalse[0].innerHTML
+                    editableFalse[0].parentNode.replaceChild(newDiv ,editableFalse[0])
+                } else if (editableFalse[0].parentNode.nodeName === "BUTTON" || editableFalse[0].parentNode.nodeName === "H1" || editableFalse[0].parentNode.nodeName === "H2" || editableFalse[0].parentNode.nodeName === "H3" || editableFalse[0].parentNode.nodeName === "H4" || editableFalse[0].parentNode.nodeName === "H5" || editableFalse[0].parentNode.nodeName === "H6" || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<p")) || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<img"))) {
+                    let nodeText = newDoc.createTextNode(editableFalse[0].innerHTML)
+                    editableFalse[0].parentNode.replaceChild(nodeText, editableFalse[0])
+                }
+                i++
+            }
+            let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
+            htmlString = htmlString.replace(/&lt;/g, "<")
+            htmlString = htmlString.replace(/&gt;/g, ">")
+            setFileData(htmlString)
             let compressed = lz.encodeBase64(lz.compress(htmlString))
             setToSave({
                 templateID: curTemplate,
@@ -61,7 +84,15 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
         }
         setTimeout(function () { setSaveClicked(false); }, 1000);
        
-    }, [curTemplate, setToSave, saveClicked, setSaveClicked])
+    }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData])
+    useEffect(() => {
+        if (saveClicked) {
+            // let styleComponent = document.getElementsByTagName("style");
+            // for (let style in styleComponent) {
+            //     console.log(styleComponent[style])
+            // }
+        }
+    }, [saveClicked])
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
         let currentCom = newArray[indexC];
@@ -106,7 +137,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                             }}
                                             className="relative">
                                             <ItemX overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
-                                            <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
+                                            <div className="flex w-52 justify-evenly items-center toBeRemoved" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
                                                 <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                                 <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
                                                 <button className="bg-red-500 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
@@ -114,12 +145,6 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                                     setShowPopUp((popup) => !popup);
                                                 }}><i className="far fa-images text-white"></i></button>
                                             </div>
-                                            {/* <div
-                                                className={(overSection && sectionKey === index) ? "absolute border-2 border-red-500 w-full h-full top-0" : "hidden"}
-                                                // className="absolute border-2 border-red-500 w-full h-full"
-                                            >
-
-                                            </div> */}
                                         </section>
                                     </>
                                 )

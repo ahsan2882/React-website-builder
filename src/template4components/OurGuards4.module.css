@@ -18,16 +18,13 @@
     justify-content: space-around;
     align-items: center;
 }
-.teamSection h1 {
-    color: rgb(26, 195, 224);
-    width: 100%;
-    font-size: 32px;
-}
+
 
 .teamSection h2 {
-    color: rgb(26, 207, 192);
-    width: 100%;
-    font-size: 24px;
+    color: rgb(26, 195, 224);
+    font-weight: 600;
+    font-size: 22px;
+    margin: 1rem 0;
 }
 
 .teamSection h3 {
@@ -40,7 +37,7 @@
 
 .teamSection h4 {
     color: rgb(0, 0, 0);
-    width: 100%;
+  margin: 0 0 1rem;
     font-size: 16px;
 }
 
@@ -55,13 +52,13 @@
     width: 100%;
     font-size: 10.72px;
 }
-
+/* 
 .teamSection p {
     color: rgb(0, 0, 0);
-    font-size: 16px;
+    font-size: px;
     line-height: 1.75rem;
     padding: 0.75rem 0;
-}
+} */
 
 
 .guardsList {

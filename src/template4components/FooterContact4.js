@@ -11,15 +11,14 @@ export default function FooterContact4() {
                     text="Pellentesque congue non augue vitae pellentesque. Morbi sollicitudin
                             eleifend rhoncus. Mauris vel nisl a massa viverra sollicitudin
                             semper a diam."/> */}
-                <p>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='footer4ed1'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue="Pellentesque congue non augue vitae pellentesque. Morbi sollicitudin
+                        initialValue="<p>Pellentesque congue non augue vitae pellentesque. Morbi sollicitudin
                             eleifend rhoncus. Mauris vel nisl a massa viverra sollicitudin
-                            semper a diam."
+                            semper a diam.</p>"
                         init={{
                             forced_root_block: "",
                             menubar: false,
@@ -31,15 +30,13 @@ export default function FooterContact4() {
 
                         }}
                     />
-                </p>
                 {/* <TextPara classStyle={`${FooterContact4Css.contactParaFooter} text-center text-white`} text="021-34556899" /> */}
-                <p>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='footer4ed2'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue="021-34556899"
+                        initialValue="<p>021-34556899</p>"
                         init={{
                             forced_root_block: "",
                             menubar: false,
@@ -50,7 +47,6 @@ export default function FooterContact4() {
 
                         }}
                     />
-                </p>
                 <div className={`${FooterContact4Css.contactBottomLink} flex justify-evenly`}>
                     <i className="fab fa-twitter p-4 bg-black text-white rounded-full"></i>
                     <i className="fab fa-facebook p-4 bg-black text-white rounded-full"></i>

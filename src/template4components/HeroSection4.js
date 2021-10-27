@@ -30,13 +30,13 @@ export default function HeroSection4() {
                     />
                     </h1>
                     {/* <TextPara text="For your personal safety" classStyle={Hero4Css.paragraphHero} /> */}
-                    <p style={{ lineHeight:`28px`,marginBottom:`2em`}}>
+                    {/* <p style={{ lineHeight:`28px`,marginBottom:`2em`}}> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='heroed2'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue="For your personal safety"
+                        initialValue="<p>For your personal safety</p>"
                         init={{
                             forced_root_block:"",
                             menubar: false,
@@ -47,7 +47,7 @@ export default function HeroSection4() {
 
                         }}
                     />
-                    </p>
+                    {/* </p> */}
                     <div className={Hero4Css.secHeroBtn}>
                         {/* <ButtonText classStyle={Hero4Css.secBtn} text="Contact Us"></ButtonText> */}
                         <button className={Hero4Css.allbtn}> 

@@ -15,8 +15,9 @@
 }
 
 .subscribeSection h1 {
-    color: rgb(26, 195, 224);
+    color: white;
     width: 100%;
+    font-weight: 600;
     font-size: 32px;
 }
 
@@ -27,11 +28,11 @@
 }
 
 .subscribeSection h3 {
-    color: #fff;
-    font-size: 18.72px;
+    color: #000;
+    font-size: 22px;
     line-height: 2.25rem;
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .subscribeSection h4 {
@@ -102,7 +103,7 @@
 }
 
 .inputEmail>div {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
     color: white;
     background-color: black;
@@ -112,12 +113,18 @@
     width: 50%;
 }
 
-.inputEmail>div>p>button {
+/* .inputEmail>div>p>.Subbtn {
     width: 100%;
     height: 100%;
     padding: 1.2rem 0;
+    color: red;
+    background-color: red;
+} */
+@media (max-width: 2000px){
+    .wifi img {
+        display: none;
+    }
 }
-
 @media (max-width: 1200px) {
     .container1 {
         max-width: 63rem;
@@ -154,7 +161,7 @@
         margin-bottom: -5rem;
         max-width: 100%;
     }
-
+    
     .inputEmail {
         width: 80%;
         flex-direction: column;
