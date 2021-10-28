@@ -9,7 +9,6 @@ import { Service1 } from "../template1components/Service1";
 import Contact2 from "../template2components/template2contactcomponent/Contact2";
 import Form2 from "../template2components/template2contactcomponent/Form2";
 import Feedback2 from "../template2components/template2contactcomponent/Feedback2";
-import Contact2Footer from "../template2components/template2contactcomponent/Contact2Footer";
 import { Testimonials1 } from "../template1components/Testimonials1";
 import { Navbar2 } from "../template2components/Navbar2";
 import { Services2 } from "../template2components/Services2";
@@ -20,6 +19,7 @@ import {Guard2} from '../template2components/Guard2'
 import About2bannercomponent from '../template2components/template2aboutcomponent/About2bannercomponent'
 import About2Vision from '../template2components/template2aboutcomponent/About2Vision'
 import About2service from '../template2components/template2aboutcomponent/About2service'
+import About2policy from '../template2components/template2aboutcomponent/About2policy'
 import {Program2} from '../template2components/Program2'
 import { About2 } from "../template2components/About2";
 import { Accreditation2 } from "../template2components/Accreditation2";
@@ -48,8 +48,8 @@ export let templateComponents = {
     template1Components: [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
     template2Components:{
         "Home": [Navbar2,Services2,Pricing2,Blog2,Client2,Guard2,Program2, About2,Accreditation2,Footer2],
-        "About" : [About2bannercomponent,About2Vision,About2service,Pricing2,Guard2],
-        "Contact": [Contact2,Form2,Feedback2,Contact2Footer]
+        "About" : [About2bannercomponent,About2Vision,About2service,Pricing2,Guard2,Accreditation2,About2policy,Footer2],
+        "Contact": [Contact2,Form2,Feedback2,Footer2]
     },
     template3Components: {
         "Home": [Services3,Latestnews3,Ourprograms3,Guard3,About3,Accrediation3,Footer3],
