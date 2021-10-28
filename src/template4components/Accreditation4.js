@@ -17,7 +17,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                 <div className={displayDevice ? `${Accre4Css.containerMain}` : `${Accre4Css.containerMain} p-0.5`}>
                     <div className="flex flex-col items-center py-10 px-0">
                         {/* <TextH2 classStyle={`${Accre4Css.accreMainH2} text-2xl`} text="we are verified" /> */}
-                        <h2 className="Accre4Css" style={{fontWeight:`400`}}>
+                        <h2 className="Accre4Css" style={{ fontWeight: `400` }}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -66,6 +66,10 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     key='AccreIm1'
                                     initialValue={`<img src=${cl1} alt="client 1" class="w-72 h-36 object-cover"/>`}
                                     init={{
+                                        images_upload_handler: function (blobInfo, success, failure) {
+                                            success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                        },
+                                        images_upload_url: '/upload-images',
                                         forced_root_block: "",
                                         menubar: false,
                                         plugins: [
@@ -75,7 +79,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     }}
                                 />
                                 {/* <TextH3 classStyle={Accre4Css.accreH3} text="Lorem ipsum." /> */}
-                                <h3 style={displayDevice ? null : {fontSize : "0.8rem"}}>
+                                <h3 style={displayDevice ? null : { fontSize: "0.8rem" }}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
@@ -105,6 +109,10 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     key='AccreIm2'
                                     initialValue={`<img src=${cl2} alt="client 2" class="w-72 h-36 object-cover"/>`}
                                     init={{
+                                        images_upload_handler: function (blobInfo, success, failure) {
+                                            success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                        },
+                                        images_upload_url: '/upload-images',
                                         forced_root_block: "",
                                         menubar: false,
                                         plugins: [
@@ -143,6 +151,10 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     key='AccreIm3'
                                     initialValue={`<img src=${cl3} alt="client 3" class="w-72 h-36 object-cover"/>`}
                                     init={{
+                                        images_upload_handler: function (blobInfo, success, failure) {
+                                            success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                        },
+                                        images_upload_url: '/upload-images',
                                         forced_root_block: "",
                                         menubar: false,
                                         plugins: [
@@ -171,7 +183,25 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
 
                         <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
                             <div className="p-5 flex flex-col items-center">
-                                <img src={cl4} alt="client 4" className="w-full" />
+                                {/* <img src={cl4} alt="client 4" className="w-full" /> */}
+                                <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='AccreIm3'
+                                    initialValue={`<img src=${cl4} alt="client 4" class="w-72 h-36 object-cover"/>`}
+                                    init={{
+                                        images_upload_handler: function (blobInfo, success, failure) {
+                                            success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                        },
+                                        images_upload_url: '/upload-images',
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        plugins: [
+                                            "image"
+                                        ],
+                                        toolbar: 'image'
+                                    }}
+                                />
                                 <h3>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}

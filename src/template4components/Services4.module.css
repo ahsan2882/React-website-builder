@@ -1,22 +1,23 @@
-
-
 .container1 {
     max-width: 73.5rem;
     margin: 0 auto;
 }
 
 /* global end  */
- 
-.serviceWrapper{
+
+.serviceWrapper {
     max-width: 100vw;
     min-height: 40rem;
 }
-.serviceCard{
+
+.serviceCard {
     border-radius: 10px;
 }
-.servicesMoreLink{
+
+.servicesMoreLink {
     background-color: #00c1cf;
 }
+
 .servicesMoreLink:hover {
     background-color: #00c1cf;
 }
@@ -24,6 +25,7 @@
 .serviceImages {
     filter: contrast(0.5) brightness(0.9);
 }
+
 .serviceWrapper h1 {
     color: rgb(26, 195, 224);
     width: 100%;
@@ -31,7 +33,8 @@
 }
 
 .serviceWrapper h2 {
-    color:#fff; width: 100%;font-size: 24px;
+    color: #fff;
+    font-size: 24px;
 }
 
 .serviceWrapper h3 {
@@ -67,8 +70,9 @@
     color: #fff;
     line-height: 1.75rem;
     padding: 0.75rem 0 3rem;
-    margin:0 auto;
+    margin: 0 auto;
 }
+
 .serviceLayerH2 {
     transition: 0.2s;
 }
