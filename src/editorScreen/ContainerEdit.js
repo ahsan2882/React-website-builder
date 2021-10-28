@@ -6,7 +6,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, displayDevice, setFileData, templateSubPage, chatInclude }) {
+export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templateSubPage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
@@ -51,6 +51,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     }, [temp, templateSubPage])
     useEffect(() => {
         if (saveClicked) {
+            setDisplayDevice(true)
             let htmlString = getHTMLData()
             let cssString = getCSSData()
             let compressed = lz.encodeBase64(lz.compress(htmlString))
@@ -65,7 +66,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
         }
         setTimeout(function () { setSaveClicked(false); }, 1000);
 
-    }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData])
+    }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData, setDisplayDevice])
     const getHTMLData = () => {
         let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
         let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
@@ -100,9 +101,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
         console.log(styleComponent.length)
         let i = 0
         while (i < styleComponent.length) {
-            if (i < 1 || (i >= 5 && i <= 35) || i === 47) {
-                cssString += styleComponent[i].innerHTML
-            }
+            cssString += styleComponent[i].innerHTML
             i++
         }
         // for (let style in styleComponent) {
@@ -132,7 +131,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     }
     return (
         <>
-            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} style={displayDevice ? {maxWidth: "80vw"} : {maxWidth: "30vw"}}>
+            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} style={displayDevice ? { maxWidth: "80vw" } : { maxWidth: "30vw" }}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
@@ -171,7 +170,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                         </section>
                     </div>
                 </div>
-                
+
             </section>
 
         </>
@@ -184,7 +183,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
 const WhatsAppChat = () => {
     return (
         <>
-            <a href="https://wa.me/2348100000000" className="fixed w-16 h-16 text-white text-center text-3xl bg-green-600 flex justify-center items-center rounded-full" style={{right:"12%", bottom: "10%"}}target="_blank" rel="noopener noreferrer" ><i className="fa fa-whatsapp whatsapp-icon"></i></a>
+            <a href="https://wa.me/2348100000000" className="fixed w-16 h-16 text-white text-center text-3xl bg-green-600 flex justify-center items-center rounded-full" style={{ right: "12%", bottom: "10%" }} target="_blank" rel="noopener noreferrer" ><i className="fa fa-whatsapp whatsapp-icon"></i></a>
         </>
     )
 }
