@@ -8,7 +8,7 @@ import guard3 from '../assets/template4images/guard3.png';
 import guard4 from '../assets/template4images/guard4.png';
 import Guards4Css from './OurGuards4.module.css';
 
-export default function OurGuards4({ showPopup, overSection }) {
+export default function OurGuards4({ showPopup, overSection, displayDevice }) {
     const [currentBackground, setCurrentBackground] = useState("white");
     const editorRef = useRef(null);
     return (
@@ -56,7 +56,7 @@ export default function OurGuards4({ showPopup, overSection }) {
                         }}
                     />
                     {/* </p> */}
-                    <div className={`${Guards4Css.container1} ${Guards4Css.guardsList}`}>
+                    <div className={displayDevice ? `${Guards4Css.container1} ${Guards4Css.guardsList} flex` : `${Guards4Css.container1} ${Guards4Css.guardsList} block`}>
                         <div className={Guards4Css.guards}>
                             {/* <img src={guard1} className={Guards4Css.guardImage} alt="guard 1" /> */}
                             <Editor
