@@ -7,6 +7,12 @@ import { Prizing1 } from "../template1components/Prizing1";
 import { Program1 } from "../template1components/Program1";
 import { Service1 } from "../template1components/Service1";
 import { Testimonials1 } from "../template1components/Testimonials1";
+import { Navbar2 } from "../template2components/Navbar2";
+import { Services2 } from "../template2components/Services2";
+import { Pricing2 } from "../template2components/Pricing2";
+import { Blog2}   from '../template2components/Blog2'
+import {Client2}  from '../template2components/Client2'
+import {Guard2} from '../template2components/Guard2'
 import AboutUs4 from "../template4components/AboutUs4";
 import Accreditation4 from "../template4components/Accreditation4";
 import Blog4 from "../template4components/Blog4";
