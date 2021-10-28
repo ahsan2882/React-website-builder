@@ -1,15 +1,32 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import { Editor } from '@tinymce/tinymce-react';
 import Guard2moduleCss from './Guard2.module.css'
 import dot from '../assets/template2images/dot.png'
 
 export const Guard2 = () => {
+  const editorRef = useRef();
+
     return (
      <>
  <section className={`${Guard2moduleCss['our-guards']}`}>
     <section className={`${Guard2moduleCss['head-main']}`}>
     <div className={`${Guard2moduleCss.MainHeading}`}><span className={`${Guard2moduleCss.SpanColor}`}> OUR </span> Guard</div>
       <div className={`${Guard2moduleCss.spanDesc}`}>
-        <p>Our Services are best in town and premium Lorem ipsum dolor sit amet.</p>
+      <Editor
+            onInit={(evt, editor) => editorRef.current = editor}
+            inline={true}
+            key='Guard(2)1'
+            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+            initialValue={`<p>Our Guards are best in town and premium Lorem ipsum dolor sit amet.</p>`}
+            init={{
+              forced_root_block: "",
+              menubar: false,
+              toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                'alignright alignjustify | fontselect',
+              fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+              font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+            }}
+          />
       </div>
       <div className={`${Guard2moduleCss.divMainHeading}`}>
         <div className={`${Guard2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div> <img className={`${Guard2moduleCss.dot}`} src={dot} data-aos="fade" alt="dot"/>
@@ -23,11 +40,42 @@ export const Guard2 = () => {
 
       </div>
       <div className={`${Guard2moduleCss.box4}`}>
-        <h1 className={`${Guard2moduleCss.h1}`}>Lorem Lupsum</h1>
-        <p style={{fontSize:`1rem`,padding:`25px 20px`, color:`white`}}>Loremhhhh ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
-          previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and
-          publishing industries for
-          previewing layouts and visual mockups.</p>
+        <h1 className={`${Guard2moduleCss.h1}`}>
+        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='Guard(2)2'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                            initialValue="Lorem Lupsum"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                            }}
+                        />
+        
+        </h1>
+        <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='Guard(2)8'
+                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                        initialValue={`<p class="${Guard2moduleCss.dash}">Loremhhhh ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+                        previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                        publishing industries for
+                        previewing layouts and visual mockups.</p>`}
+                        init={{
+                            forced_root_block: "",
+                            menubar: false,
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                        }}
+                    />
+       
         <div className={`${Guard2moduleCss['icons-guards']}`}>
           <div className={`${Guard2moduleCss['span-guards']}`}></div>
           <div className={`${Guard2moduleCss['icons-g']}`}>
@@ -43,11 +91,40 @@ export const Guard2 = () => {
 
       </div>
       <div className={`${Guard2moduleCss.box4}`}>
-        <h1 className={`${Guard2moduleCss.h1}`}>Lorem Lupsum</h1>
-        <p className={`${Guard2moduleCss.pg}`}>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
-          previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and
-          publishing industries for
-          previewing layouts and visual mockups.</p>
+        <h1 className={`${Guard2moduleCss.h1}`}>
+        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='Guard(2)2'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                            initialValue="Lorem Lupsum"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                            }}
+                        />
+        </h1>
+        <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='Guard(2)10'
+                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                        initialValue={`<p class="${Guard2moduleCss.pg}">Loremhhhh ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+                        previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                        publishing industries for
+                        previewing layouts and visual mockups.</p>`}
+                        init={{
+                            forced_root_block: "",
+                            menubar: false,
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                        }}
+                    />
         <div className={`${Guard2moduleCss['icons-guards']}`}>
           <div className={`${Guard2moduleCss['span-guards']}`}></div>
           <div className={`${Guard2moduleCss['icons-g']}`}>
@@ -63,11 +140,41 @@ export const Guard2 = () => {
 
       </div>
       <div className={`${Guard2moduleCss.box4}`}>
-        <h1 className={`${Guard2moduleCss.h1}`}>Lorem Lupsum</h1>
-        <p className={`${Guard2moduleCss.pg}`}>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
-          previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and
-          publishing industries for
-          previewing layouts and visual mockups.</p>
+        <h1 className={`${Guard2moduleCss.h1}`}>
+        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='Guard(2)12'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                            initialValue="Lorem Lupsum"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                            }}
+                        />
+        </h1>
+       
+        <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='Guard(2)15'
+                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                        initialValue={`<p class="${Guard2moduleCss.pg}">Loremhhhh ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
+                        previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                        publishing industries for
+                        previewing layouts and visual mockups.</p>`}
+                        init={{
+                            forced_root_block: "",
+                            menubar: false,
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                        }}
+                    />
 
         <div className={`${Guard2moduleCss['icons-guards']}`}>
           <div className={`${Guard2moduleCss['span-guards']}`}></div>
