@@ -90,11 +90,11 @@ color: rgb(0,193,207);
         align-items: center;
     }
 
-    .sectionHero>div>div:nth-child(1)>h1 {
+    .sectionHero h1 {
         font-size: 3rem;
     }
 
-    .sectionHero>div>div:nth-child(2)>p {
+    .sectionHero p {
         font-size: 1.2rem;
     }
 
@@ -102,7 +102,7 @@ color: rgb(0,193,207);
         margin-bottom: 2rem;
     }
 
-    .sectionHero>div>div:nth-child(3)>div>p>button {
+    .sectionHero button {
         font-size: 0.9rem;
     }
 }
