@@ -16,15 +16,14 @@ html {
   color: white;
 }
 
-.input-container {
-  /* IE10 */
+/* .input-container {
   display: flex;
   width: 100%;
-  margin-top: 0px;
+  margin-top: 0;
   color: black;
-}
+} */
 
-.input-field {
+/* .input-field {
   margin-top: 40px;
   width: 100%;
   padding: 30px;
@@ -33,7 +32,7 @@ html {
   border-bottom: 2px solid var(--clr-secondary);
   font-size: 18px;
   margin-left: 30px;
-}
+} */
 
 .btn {
   font-size: 18px;
@@ -52,14 +51,13 @@ html {
   color: whitesmoke;
   transition: all 0.2s ease-out;
 }
-.MainHeading {
+/* .MainHeading {
   font-size: 40px;
   font-weight: 900;
 
   font-family: "Poppins", sans-serif;
   text-align: center;
-  /* background-color: darkgray; */
-}
+} */
 
 .contact-i {
   font-size: 30px;
@@ -100,13 +98,13 @@ html {
     padding: 27px;
     height: 330px;
   }
-  .section-form {
+  /* .section-form {
     padding: 0 30px;
-  }
-  .box2 {
+  } */
+  /* .box2 {
     padding-right: 50px;
     padding-top: 50px;
-  }
+  } */
   .addresses h1 {
     font-size: 40px;
   }
@@ -151,13 +149,13 @@ html {
     margin-top: 20px;
     margin-bottom: 50px;
 }
-.SpanColor {
+/* .SpanColor {
   color:#c0272d;
-}
+} */
 .input-container {
   display: flex;
   width: 100%;
-  margin-top: 0px;
+  margin-top: 0;
   color: black;
 }
 .input-field {
@@ -183,7 +181,6 @@ html {
   display: inline-block;
   margin-top: 20px;
   position: relative;
-  z-index: 2;
   overflow: hidden;
   border-radius: 25px;
   z-index: 1;

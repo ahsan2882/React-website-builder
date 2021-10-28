@@ -36,7 +36,6 @@ html {
     padding-top: 60px;
   }
   .row-foot:after {
-    display: flex;
   
     content: "";
     display: table;
@@ -112,7 +111,7 @@ html {
   
   .foot-container {
     width: 100%;
-    padding: 0px 10px;
+    padding: 0 10px;
   }
   
   .bottom-foot {
