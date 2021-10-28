@@ -12,6 +12,7 @@ html {
 .policy-top {
     height: 100px;
     margin-bottom: 20px;
+    padding: 0 15px;
   }
   .divi {
     padding: 60px 20px;
@@ -37,14 +38,14 @@ html {
     padding: 20px 10px;
   }
   
-  .policy-top {
+  /* .policy-top {
     padding: 0 15px;
-  }
+  } */
   .policy-top p {
     font-size: 20px;
   }
   .contain-sub {
-    padding: 0px 15px;
+    padding: 0 15px;
   }
   .contain-sub p {
     font-size: 13px;
