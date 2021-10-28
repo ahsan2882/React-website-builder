@@ -54,7 +54,7 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                         </h1>
                     </div>
 
-                    <div className={displayDevice ? `flex justify-center px-0 w-full ${Pricing4Css.container1}` : `flex justify-center flex-wrap px-0 w-full ${Pricing4Css.container1}`}>
+                    <div className={displayDevice ? `${Pricing4Css.container1} ${Pricing4Css.cardsWrapper}` : `${Pricing4Css.cardsWrapperM} ${Pricing4Css.container1}`}>
                         <div className={`${Pricing4Css.pricingCards} bg-white border-2 border-solid border-black flex flex-col items-center p-5 m-2`}>
                             {/* <TextH1 className={`text-2xl text-center ${Pricing4Css.cardH1}`} text="Personal security" /> */}
                             <h1 style={{ fontSize: `25px`, color: `rgb(26, 195, 224)`, fontWeight: `bold` }}>
