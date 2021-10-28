@@ -15,6 +15,7 @@ export default function EditScreen({ temp }) {
     const [saveClicked, setSaveClicked] = useState(null);
     const [fileData, setFileData] = useState({});
     const [chatInclude, setChatInclude] = useState(false);
+    const [displayDevice, setDisplayDevice] = useState(true)
 
     return (
         <>
@@ -26,6 +27,7 @@ export default function EditScreen({ temp }) {
                     saveClicked={saveClicked}
                     toSave={toSave}
                     fileData={fileData}
+                    setDisplayDevice={setDisplayDevice}
                 />
                 <ContainerEdit
                     templateSubPage={templateSubPage}
@@ -35,6 +37,7 @@ export default function EditScreen({ temp }) {
                     setToSave={setToSave}
                     setSaveClicked={setSaveClicked}
                     chatInclude={chatInclude}
+                    displayDevice ={displayDevice}
                     setFileData={setFileData}
                 />
                 <FooterEdit
