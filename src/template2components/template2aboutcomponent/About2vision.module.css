@@ -1,0 +1,59 @@
+html {
+
+    --clr-primary: #c0272d;
+    --clr-primary-dark: #bd170b;
+    --clr-secondary: #000000;
+    --clr-gray: #dddddd;
+    --clr-light: #ffff;
+    --clr-white-smoke: #ebebeb;
+    --clr-secondary-light: #292929;
+  }
+
+
+.our-vision {
+    background-image: url(../template2aboutcomponent/side.png);
+    background-repeat: no-repeat;
+    padding: 44px 0;
+  }
+  .container-about {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  .flex-about {
+    display: flex;
+
+  }
+  .container-content {
+    padding: 0 90px;
+   
+  }
+  
+  .vision-img img {
+    border: 5px solid black;
+   
+    width:650px;
+    height:300px;
+  }
+  .vision-top-content h1 {
+    font-size: 4vw;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+  }
+  .vision-top-content p {
+    font-size: 1.4vw;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    color: var(--clr-secondary-light);
+  }
+ 
+  .flex-cont {
+    display: flex;
+  }
+  .vision-bottom-content p {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    color: var(--clr-secondary-light);
+    padding: 15px;
+  }
