@@ -50,12 +50,14 @@
     text-align: left;
 }
 
-
 @media(max-width:500px){
     .containerMain {
         padding: 1px;
     }
     .accreH3 {
         font-size: 0.8rem;
+    }
+    .flexWrapped{
+        flex-wrap: wrap;
     }
 }
