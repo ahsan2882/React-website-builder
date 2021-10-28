@@ -24,7 +24,7 @@
   }
   
   .dot {
-    margin: 0px 12px;
+    margin: 0 12px;
       width: 22px;
   }
   
@@ -95,7 +95,7 @@
   .profile-img {
     width: 20%;
     margin-top: 4.5rem;
-    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
     border-radius: 50%;
     z-index: 22;
     position: relative;
@@ -108,7 +108,7 @@
     background: var(--clr-light);
     position: relative;
     border-radius: 50%;
-    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
     top: 7rem;
   }
   .serv-ot-logo {
@@ -134,7 +134,6 @@
   .description {
     font-size: 1rem;
     padding: 35px 10px;
-    text-align: start;
     margin: 0 20px;
     text-align: center;
   }
@@ -149,7 +148,7 @@
     display: inline-block;
     margin-top: 20px;
     position: relative;
-    z-index: 2;
+    
     overflow: hidden;
     border-radius: 25px;
     z-index: 1;
@@ -203,7 +202,7 @@
     display: inline-block;
     margin-top: 20px;
     position: relative;
-    z-index: 2;
+    
     overflow: hidden;
     border-radius: 25px;
     z-index: 1;
@@ -258,7 +257,7 @@
     display: inline-block;
     margin-top: 20px;
     position: relative;
-    z-index: 2;
+    
     overflow: hidden;
     border-radius: 25px;
     z-index: 1;

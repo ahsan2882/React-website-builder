@@ -6,7 +6,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setFileData,templateSubPage }) {
+export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, displayDevice, setFileData, templateSubPage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
@@ -30,15 +30,15 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     const temp = templateNum;
     useEffect(() => {
         if (temp === 1) {
-            setUpdateChildren(templateComponents.template1Components)
+            setUpdateChildren(templateComponents.template1Components[`${templateSubPage}`])
             setCurTemplate("Template 1");
         }
         else if (temp === 2) {
-            setUpdateChildren(templateComponents.template2Components)
+            setUpdateChildren(templateComponents.template2Components[`${templateSubPage}`])
             setCurTemplate("Template 2");
         }
         else if (temp === 3) {
-            setUpdateChildren(templateComponents.template3Components)
+            setUpdateChildren(templateComponents.template3Components[`${templateSubPage}`])
             setCurTemplate("Template 3");
         }
         else if (temp === 4) {
@@ -59,12 +59,12 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                 templateData: compressed
             })
             setFileData({
-                "html": `${htmlString}`,
-                "css" : `${cssString}`
+                html: `${htmlString}`,
+                css: `${cssString}`
             })
         }
         setTimeout(function () { setSaveClicked(false); }, 1000);
-       
+
     }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData])
     const getHTMLData = () => {
         let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
@@ -97,10 +97,18 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     const getCSSData = () => {
         let cssString = ''
         let styleComponent = document.getElementsByTagName("style")
-        for (let style in styleComponent) {
-            cssString += styleComponent[style].innerHTML
+        console.log(styleComponent.length)
+        let i = 0
+        while (i < styleComponent.length) {
+            if (i < 1 || (i >= 5 && i <= 35) || i === 47) {
+                cssString += styleComponent[i].innerHTML
+            }
+            i++
         }
-        console.log(cssString)
+        // for (let style in styleComponent) {
+        //     console.log(styleComponent[style], parseInt(style))
+        //     // cssString += styleComponent[style].innerHTML
+        // }
         return cssString;
     }
     const moveUp = (indexC) => {
@@ -124,7 +132,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     }
     return (
         <>
-            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`}>
+            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} style={displayDevice ? {maxWidth: "80vw"} : {maxWidth: "30vw"}}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
@@ -146,7 +154,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                                 setShowPopUp(false);
                                             }}
                                             className="relative">
-                                            <ItemX overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
+                                            <ItemX displayDevice={displayDevice} overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
                                             <div className="flex w-52 justify-evenly items-center toBeRemoved" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
                                                 <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                                 <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
@@ -159,12 +167,24 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                     </>
                                 )
                             })}
+                            {chatInclude ? <WhatsAppChat /> : null}
                         </section>
                     </div>
                 </div>
+                
             </section>
 
         </>
 
     );
+}
+
+
+
+const WhatsAppChat = () => {
+    return (
+        <>
+            <a href="https://wa.me/2348100000000" className="fixed w-16 h-16 text-white text-center text-3xl bg-green-600 flex justify-center items-center rounded-full" style={{right:"12%", bottom: "10%"}}target="_blank" rel="noopener noreferrer" ><i className="fa fa-whatsapp whatsapp-icon"></i></a>
+        </>
+    )
 }

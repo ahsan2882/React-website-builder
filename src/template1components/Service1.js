@@ -63,13 +63,14 @@ export const Service1 = () => {
               }}
             />
           </h1>
-          <p className={`${Service1Css.description}`}>
+         
+          {/* <p className={`${Service1Css.description}`}> */}
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
               key='Service4'
-              initialValue=" Our bodyguards are strong men and professionals who served in
-            military forces."
+              initialValue= {`<p class="${Service1Css.description}">Our bodyguards are strong men and professionals who served in
+              military forces.</p>`}
               init={{
                 forced_root_block: "",
                 menubar: false,
@@ -79,7 +80,7 @@ export const Service1 = () => {
                 font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
               }}
             />
-          </p>
+          {/* </p> */}
 
           <a style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`} href={2}
           >
@@ -121,13 +122,13 @@ export const Service1 = () => {
               }}
             />
           </h1>
-          <p className={`${Service1Css.description}`}>
+          {/* <p className={`${Service1Css.description}`}> */}
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
               key='Service6'
-              initialValue="Settle a guard house behind your facility and we'll monitor the
-              activity around the house."
+              initialValue={`<p class="${Service1Css.description}">Settle a guard house behind your facility and we'll monitor the
+              activity around the house.</p>`}
               init={{
                 forced_root_block: "",
                 menubar: false,
@@ -138,7 +139,7 @@ export const Service1 = () => {
               }}
             />
 
-          </p>
+         {/*  </p> */}
 
           <a style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`} href={2}
           >
@@ -179,13 +180,14 @@ export const Service1 = () => {
               }}
             />
           </h1>
-          <p className={`${Service1Css.description}`}>
+         
+          {/* <p className={`${Service1Css.description}`}> */}
           <Editor
           onInit={(evt, editor) => editorRef.current = editor}
           inline={true}
           key='Service9'
-          initialValue="our strong men and professionals will do 24/7 security surveillance
-          of your house with focus ."
+          initialValue={`<p class="${Service1Css.description}">our strong men and professionals will do 24/7 security surveillance
+          of your house with focus .</p>`}
           init={{
             forced_root_block: "",
                menubar: false,
@@ -195,7 +197,7 @@ export const Service1 = () => {
             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
           }}
         />
-          </p>
+          {/* </p> */}
 
           <a style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`} href={2}
           >

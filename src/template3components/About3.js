@@ -55,6 +55,10 @@ export default function About3() {
             key='About3'
             initialValue={`<img src=${news3} alt="news3" class="w-full" />`}
             init={{
+              images_upload_handler: function (blobInfo, success, failure) {
+                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+            },
+            images_upload_url: '/upload-images',
               forced_root_block: "",
               menubar: false,
               plugins: [
@@ -82,13 +86,13 @@ export default function About3() {
                   }}
                 />
               </h1>
-              <p>
+          
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='about5'
-                initialValue="Given the complexity of forming a team including consciously or unconsciously developing team interaction norms and
-                guidelines, ending up with an effective, functioning team is downright amazing."
+                initialValue="<p>Given the complexity of forming a team including consciously or unconsciously developing team interaction norms and
+                guidelines, ending up with an effective, functioning team is downright amazing.</p>"
                 init={{
                   forced_root_block: "",
                   menubar: false,
@@ -98,7 +102,7 @@ export default function About3() {
                   font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                 }}
               /> 
-              </p>
+         
               <button className={About3Css['button-sq-red']}>
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}

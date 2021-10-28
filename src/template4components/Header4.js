@@ -2,24 +2,16 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
 import Header4Css from './Header4.module.css'
 
-import styled from 'styled-components';
-
-const Header4Component = styled.header`
-    background-color: black;
-    padding: 0.5em 0;
-    width: 100%;
-`
 
 
-
-export default function Header4() {
+export default function Header4({displayDevice}) {
 
     const editorRef = useRef(null);
 
     return (
 
         <>
-            <Header4Component>
+            <header className={displayDevice ? `${Header4Css.header}` : `hidden`}>
                 <section className={`flex justify-between items-center py-2 px-6`} style={{ maxWidth: '73.5rem', margin: '0 auto' }}>
                     <ul className={`list-none flex p-0 justify-between items-center ${Header4Css.contactHeader}`}>
                         <li className={`${Header4Css.HeaderLinks} flex justify-around items-center`}>
@@ -109,7 +101,7 @@ export default function Header4() {
                         </li>
                     </ul>
                 </section>
-            </Header4Component>
+            </header>
         </>
 
     );

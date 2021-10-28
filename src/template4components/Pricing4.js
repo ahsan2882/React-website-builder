@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import Pricing4Css from './Pricing4.module.css'
 
-export default function Pricing4({ showPopup, overSection }) {
+export default function Pricing4({ showPopup, overSection, displayDevice }) {
     const [currentBackground, setCurrentBackground] = useState("white");
     const editorRef = useRef(null);
     return (
@@ -54,7 +54,7 @@ export default function Pricing4({ showPopup, overSection }) {
                         </h1>
                     </div>
 
-                    <div className={`flex justify-center px-0 w-full ${Pricing4Css.container1}`}>
+                    <div className={`flex justify-center px-0 w-full ${Pricing4Css.container1} flex-wrap`}>
                         <div className={`${Pricing4Css.pricingCards} bg-white border-2 border-solid border-black flex flex-col items-center p-5 m-2`}>
                             {/* <TextH1 className={`text-2xl text-center ${Pricing4Css.cardH1}`} text="Personal security" /> */}
                             <h1 style={{ fontSize: `25px`, color: `rgb(26, 195, 224)`, fontWeight: `bold` }}>

@@ -1,7 +1,7 @@
 .container-guards-wrapper {
     display: flex;
     width: 100%;
-    padding: 0 0px;
+    padding: 0;
     justify-content: center;
     height: auto;
   }
@@ -13,8 +13,8 @@
   }
   .box2 {
     background-color:#c0272d;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
     height: 400px;
   }
   .box3 {
@@ -81,8 +81,8 @@
     height: 2px;
     background-color: #fff;
     position: relative;
-    left: 0pc;
-    top: 1pc;
+    left: 0;
+    top: 1px;
     padding: -5px;
     margin-top: -33px;
   }

@@ -58,6 +58,10 @@ export default function Latestnews3() {
                                 key='About5'
                                 initialValue={`<img src=${news1} alt="news1" class="w-full" />`}
                                 init={{
+                                    images_upload_handler: function (blobInfo, success, failure) {
+                                    success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                    },
+                                    images_upload_url: '/upload-images',
                                     forced_root_block: "",
                                     menubar: false,
                                     plugins: [
@@ -85,23 +89,22 @@ export default function Latestnews3() {
                                     />
 
                                 </h2>
-                                <p>
-                                    <Editor
-                                        onInit={(evt, editor) => editorRef.current = editor}
-                                        inline={true}
-                                        key='latesnews4'
-                                        initialValue=" 
-                                        If you are able to install a camera, there is still a few tricks to pay extra attention."
-                                        init={{
-                                            forced_root_block: "",
-                                            menubar: false,
-                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                'alignright alignjustify | fontselect',
-                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                                        }}
-                                    />
-                                </p>
+
+                                <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='latesnews4'
+                                    initialValue="<p>If you are able to install a camera, there is still a few tricks to pay extra attention.</p>"
+                                    init={{
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | fontselect',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                    }}
+                                />
+
                                 <button className={Latestnews3Css['button-sq-red']}>
 
                                     <Editor
@@ -124,12 +127,16 @@ export default function Latestnews3() {
 
                         </div>
                         <div className={Latestnews3Css['news-card']}>
-                        <Editor
+                            <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='About5'
                                 initialValue={`<img src=${news2} alt="news2" class="w-full" />`}
                                 init={{
+                                    images_upload_handler: function (blobInfo, success, failure) {
+                                        success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                    },
+                                    images_upload_url: '/upload-images',
                                     forced_root_block: "",
                                     menubar: false,
                                     plugins: [
@@ -138,7 +145,7 @@ export default function Latestnews3() {
                                     toolbar: 'image'
                                 }}
                             />
-                          
+
                             <div className={Latestnews3Css['news-card-content']}>
                                 <h2>
                                     <Editor
@@ -156,22 +163,21 @@ export default function Latestnews3() {
                                         }}
                                     />
                                 </h2>
-                                <p>
-                                    <Editor
-                                        onInit={(evt, editor) => editorRef.current = editor}
-                                        inline={true}
-                                        key='latesnews6'
-                                        initialValue="How To Monitor Your Facility."
-                                        init={{
-                                            forced_root_block: "",
-                                            menubar: false,
-                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                'alignright alignjustify | fontselect',
-                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                                        }}
-                                    />
-                                </p>
+                                <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='latesnews6'
+                                    initialValue="<p>How To Monitor Your Facility. </p>"
+                                    init={{
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | fontselect',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                    }}
+                                />
+
                                 <button className={Latestnews3Css['button-sq-red']}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -192,12 +198,16 @@ export default function Latestnews3() {
                             </div>
                         </div>
                         <div className={Latestnews3Css['news-card']}>
-                        <Editor
+                            <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='About5'
                                 initialValue={`<img src=${news3} alt="news3" class="w-full" />`}
                                 init={{
+                                    images_upload_handler: function (blobInfo, success, failure) {
+                                        success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                    },
+                                    images_upload_url: '/upload-images',
                                     forced_root_block: "",
                                     menubar: false,
                                     plugins: [
@@ -224,23 +234,23 @@ export default function Latestnews3() {
                                         }}
                                     />
                                 </h2>
-                                <p>
-                                    <Editor
-                                        onInit={(evt, editor) => editorRef.current = editor}
-                                        inline={true}
-                                        key='latesnews8'
-                                        initialValue="Outdoor Security Process."
-                                        init={{
-                                            forced_root_block: "",
-                                            menubar: false,
-                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                'alignright alignjustify | fontselect',
-                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                                        }}
-                                    />
 
-                                </p>
+                                <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='latesnews8'
+                                    initialValue="<p>Outdoor Security Process.</p>
+                                        "
+                                    init={{
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | fontselect',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                    }}
+                                />
+
                                 <button className={Latestnews3Css['button-sq-red']}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}

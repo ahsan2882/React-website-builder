@@ -22,24 +22,23 @@ export const Prizing1 = () => {
         />
       </h1>
       <div className={`${Prizing1Css.subhead}`}>
-        <p>
-          <Editor
-            onInit={(evt, editor) => editorRef.current = editor}
-            inline={true}
-            key='Pricing2'
-            initialValue="Our prices can let you secure your business or life with no large
-            expenses."
-            init={{
-              forced_root_block: "",
-              menubar: false,
-              toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                'alignright alignjustify | fontselect',
-              fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-              font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-            }}
-          />
+        <Editor
+          onInit={(evt, editor) => editorRef.current = editor}
+          inline={true}
+          key='Pricing2'
+          initialValue="<p>Our prices can let you secure your business or life with no large
+            expenses.</p>"
+          init={{
+            forced_root_block: "",
+            menubar: false,
+            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+              'alignright alignjustify | fontselect',
+            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+          }}
+        />
 
-        </p>
+
       </div>
       <div className={`${Prizing1Css['container-1']}`}>
         <div className={`${Prizing1Css.box1}`}>
@@ -60,57 +59,58 @@ export const Prizing1 = () => {
                 }}
               />
             </h2>
-            <p className={`${Prizing1Css.subtitle1}`}>
-              <Editor
-                onInit={(evt, editor) => editorRef.current = editor}
-                inline={true}
-                key='Pricing4'
-                initialValue="For small business"
-                init={{
-                  forced_root_block: "",
-                  menubar: false,
-                  toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                    'alignright alignjustify | fontselect',
-                  fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                  font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                }}
-              />
-            </p>
+
+            {/* <p className={`${Prizing1Css.subtitle1}`}> */}
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Pricing4'
+              initialValue={`<p class="${Prizing1Css.subtitle1}">For small business</p>`}
+              init={{
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
           </header>
-          <p className={`${Prizing1Css.price1}`}>
-            <span className={`${Prizing1Css.nb1}`}>
-              <Editor
-                onInit={(evt, editor) => editorRef.current = editor}
-                inline={true}
-                key='Pricing5'
-                initialValue="$29"
-                init={{
-                  forced_root_block: "",
-                  menubar: false,
-                  toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                    'alignright alignjustify | fontselect',
-                  fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                  font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                }}
-              />
-            </span>
-            <small className={`${Prizing1Css.year1}`}>
-              <Editor
-                onInit={(evt, editor) => editorRef.current = editor}
-                inline={true}
-                key='Pricing6'
-                initialValue="/yr"
-                init={{
-                  forced_root_block: "",
-                  menubar: false,
-                  toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                    'alignright alignjustify | fontselect',
-                  fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                  font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                }}
-              />
-            </small>
-          </p>
+
+          {/* <p className={`${Prizing1Css.price1}`}> */}
+          <span className={`${Prizing1Css.nb1}`}>
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Pricing5'
+              initialValue={`<p class="${Prizing1Css.price1}">$29</p>`}
+              init={{
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+          </span>
+          <small className={`${Prizing1Css.year1}`}>
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Pricing6'
+              initialValue={`<p class="${Prizing1Css.price1}">/yr</p>`}
+              init={{
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+          </small>
+
 
           <ul>
             <li>
@@ -232,58 +232,59 @@ export const Prizing1 = () => {
                 }}
               />
             </h2>
-            <p className={`${Prizing1Css.subtitle2}`}>
 
-              <Editor
-                onInit={(evt, editor) => editorRef.current = editor}
-                inline={true}
-                key='Pricing14'
-                initialValue="For small business"
-                init={{
-                  forced_root_block: "",
-                  menubar: false,
-                  toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                    'alignright alignjustify | fontselect',
-                  fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                  font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                }}
-              />
-            </p>
+            {/* <p className={`${Prizing1Css.subtitle2}`}> */}
+
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Pricing14'
+              initialValue={`<p class="${Prizing1Css.subtitle2}">For small business</p>`}
+              init={{
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
           </header>
-          <p className={`${Prizing1Css.price2}`}>
-            <span className={`${Prizing1Css.nb2}`}>
-              <Editor
-                onInit={(evt, editor) => editorRef.current = editor}
-                inline={true}
-                key='Pricing15'
-                initialValue="$59"
-                init={{
-                  forced_root_block: "",
-                  menubar: false,
-                  toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                    'alignright alignjustify | fontselect',
-                  fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                  font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                }}
-              />
-            </span>
-            <small className={`${Prizing1Css.year2}`}>
-              <Editor
-                onInit={(evt, editor) => editorRef.current = editor}
-                inline={true}
-                key='Pricing16'
-                initialValue="/yr"
-                init={{
-                  forced_root_block: "",
-                  menubar: false,
-                  toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                    'alignright alignjustify | fontselect',
-                  fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                  font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                }}
-              />
-            </small>
-          </p>
+
+          {/* <p className={`${Prizing1Css.price2}`}> */}
+          <span className={`${Prizing1Css.nb2}`}>
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Pricing15'
+              initialValue={`<p class="${Prizing1Css.price2}">$59</p>`}
+              init={{
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+          </span>
+          <small className={`${Prizing1Css.year2}`}>
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Pricing16'
+              initialValue={`<p class="${Prizing1Css.price2}">/yr</p>`}
+              init={{
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+          </small>
+          {/* </p> */}
 
           <ul className={`${Prizing1Css['price-text']}`}>
             <li>
@@ -405,12 +406,13 @@ export const Prizing1 = () => {
                 }}
               />
             </h2>
-            <p className={`${Prizing1Css.subtitle1}`}>
+          
+            {/* <p className={`${Prizing1Css.subtitle1}`}> */}
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Pricing22'
-                initialValue="For small business"
+                initialValue={`<p class="${Prizing1Css.subtitle1}">For small business</p>`}
                 init={{
                   forced_root_block: "",
                   menubar: false,
@@ -420,15 +422,15 @@ export const Prizing1 = () => {
                   font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                 }}
               />
-            </p>
           </header>
-          <p className={`${Prizing1Css.price1}`}>
+         
+          {/* <p className={`${Prizing1Css.price1}`}> */}
             <span className={`${Prizing1Css.nb1}`}>
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Pricing23'
-                initialValue="$29"
+                initialValue={`<p class="${Prizing1Css.price1}">$29</p>`}
                 init={{
                   forced_root_block: "",
                   menubar: false,
@@ -444,7 +446,7 @@ export const Prizing1 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Pricing24'
-                initialValue="/yr"
+                initialValue={`<p class="${Prizing1Css.price1}">/yr</p>`}
                 init={{
                   forced_root_block: "",
                   menubar: false,
@@ -455,7 +457,7 @@ export const Prizing1 = () => {
                 }}
               />
             </small>
-          </p>
+          {/* </p> */}
 
           <ul>
             <li>
@@ -475,7 +477,7 @@ export const Prizing1 = () => {
               />
             </li>
             <li>
-            <Editor
+              <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Pricing26'
@@ -489,9 +491,9 @@ export const Prizing1 = () => {
                   font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                 }}
               />
-              </li>
+            </li>
             <li>
-            <Editor
+              <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Pricing26'
@@ -505,9 +507,9 @@ export const Prizing1 = () => {
                   font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                 }}
               />
-              </li> 
+            </li>
             <li>
-            <Editor
+              <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Pricing26'
@@ -521,9 +523,9 @@ export const Prizing1 = () => {
                   font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                 }}
               />
-              </li>
+            </li>
             <li>
-            <Editor
+              <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Pricing27'
@@ -537,7 +539,7 @@ export const Prizing1 = () => {
                   font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                 }}
               />
-              </li>
+            </li>
           </ul>
 
           <div className={`${Prizing1Css['btn-center']}`}>
@@ -556,7 +558,7 @@ export const Prizing1 = () => {
                   font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                 }}
               />
-             <i className={`${Prizing1Css['fas fa-long-arrow-alt-right']}`}></i></a>
+              <i className={`${Prizing1Css['fas fa-long-arrow-alt-right']}`}></i></a>
           </div>
         </div>
       </div>

@@ -8,13 +8,13 @@ import cl3 from '../assets/template4images/client3.png';
 import cl4 from '../assets/template4images/client4.png';
 import Accre4Css from './Accreditation4.module.css';
 
-export default function Accreditation4({ showPopup, overSection }) {
+export default function Accreditation4({ showPopup, overSection, displayDevice }) {
     const [currentBackground, setCurrentBackground] = useState("white");
     const editorRef = useRef(null);
     return (
         <>
-            <section className="py-28 px-0 w-full" style={{ background: currentBackground }}>
-                <div className={Accre4Css.containerMain}>
+            <section className="py-32 px-0 w-full" style={{ background: currentBackground }}>
+                <div className={displayDevice ? `${Accre4Css.containerMain}` : `${Accre4Css.containerMain} p-0.5`}>
                     <div className="flex flex-col items-center py-10 px-0">
                         {/* <TextH2 classStyle={`${Accre4Css.accreMainH2} text-2xl`} text="we are verified" /> */}
                         <h2 className="Accre4Css" style={{fontWeight:`400`}}>
@@ -56,7 +56,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                             />
                         </h1>
                     </div>
-                    <div className="flex justify-center my-0 mx-auto mb-8">
+                    <div className={displayDevice ? `flex justify-center my-0 mx-auto mb-8 ${Accre4Css.flexWrapped}` : `flex justify-center my-0 mx-auto mb-8 flex-wrap`}>
                         <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
                             <div className="p-5 flex flex-col items-center">
                                 {/* <img src={cl1} alt="client 1" className="w-full" /> */}
@@ -75,7 +75,7 @@ export default function Accreditation4({ showPopup, overSection }) {
                                     }}
                                 />
                                 {/* <TextH3 classStyle={Accre4Css.accreH3} text="Lorem ipsum." /> */}
-                                <h3>
+                                <h3 style={displayDevice ? null : {fontSize : "0.8rem"}}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
