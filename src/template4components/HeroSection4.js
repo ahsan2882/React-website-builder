@@ -219,7 +219,7 @@ const HeroSection4ComponentVideo = ({ displayDevice }) => {
                         forced_root_block: "",
                         menubar: false,
                         plugins: [
-                            "image"
+                            "media"
                         ],
                         toolbar: 'image'
                     }}
