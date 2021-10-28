@@ -76,11 +76,14 @@ export default function Services4({ showPopup, overSection }) {
                 />
                 {/* </p> */}
                 <div className="flex flex-wrap my-0 mx-auto justify-center w-4/5">
+
+                    {/* YE WAALI LOGIC HAR JAGA LAGANI HAI */}
                     <div className={`${Service4Css.serviceCard} relative w-96 h-64`}>
-                        <img src={serv1} alt="London" className={`${Service4Css.serviceImages} w-full h-full object-cover top-0 z-50`} />
+                        <img src={serv1} alt="London" className={`${Service4Css.serviceImages} w-full h-full object-cover top-0 z-50 rounded-xl`} />
                         <h2 className="absolute top-12 left-0 w-4/5">Home CCTV camera</h2>
                         <button className="absolute bottom-12 left-8 bg-BL-500 rounded-full px-4 py-1">Read More</button>
                     </div>
+                    {/* YE WAALI LOGIC HAR JAGA LAGANI HAI */}
                     {/* <div className={`mx-2 mb-8 mt-0 relative overflow-hidden ${Service4Css.serviceCard}`}>
                         <img src={serv1} alt="london" className={`w-96 h-64 block ${Service4Css.serviceImages}`} />
                         <div className={Service4Css.layer}>
