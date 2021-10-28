@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import Pricing4Css from './Pricing4.module.css'
 
-export default function Pricing4({ showPopup, overSection }) {
+export default function Pricing4({ showPopup, overSection, displayDevice }) {
     const [currentBackground, setCurrentBackground] = useState("white");
     const editorRef = useRef(null);
     return (
