@@ -1,0 +1,264 @@
+<<<<<<< Updated upstream
+=======
+
+
+/* html {
+ 
+
+  --clr-primary: #c0272d;
+  --clr-primary-dark: #bd170b;
+  --clr-secondary: #000000;
+  --clr-gray: #dddddd;
+  --clr-light: #ffff;
+  --clr-white-smoke: #ebebeb;
+  --clr-secondary-light: #292929;
+} */
+/* navbar */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  z-index: 4;
+}
+
+.navbar .navbar1 {
+  display: flex;
+  height: 100%;
+  max-width: 2500px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 5px;
+  margin-top: 1%;
+}
+
+
+
+.logo-png{
+  width: 100px;
+}
+
+.navbar .navbar1 .nav-links {
+  height: 100%;
+  line-height: 50px;
+}
+
+.navbar .navbar1 .nav-links .menus li {
+  display: flex;
+  position: relative;
+  align-items: center;
+  list-style: none;
+  padding: 0 10px;
+}
+.navbar .navbar1 .nav-links .menus {
+  display: flex;
+}
+
+.navbar .navbar1 .nav-links .menus li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  white-space: nowrap;
+  padding: 8px 15px;
+  border-radius: 5px;
+  /* letter-spacing: 1px; */
+  font-size: 1.8rem;
+  margin-top: 15px;
+}
+.navbar .navbar1 .nav-links .menus li:hover > .waves span {
+  display: inline-block;
+  animation: animate 1s ease-in-out none;
+  animation-delay: calc(0.1s * var(--spell));
+}
+
+@keyframes animate {
+  0% {
+    transform: 2s translateY(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-09.5678px);
+    opacity: 0;
+  }
+  40% {
+    transform: translatey(09.5678px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.call-to-action {
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--clr-light);
+  color: var(--clr-primary);
+  font-weight: 900;
+  white-space: nowrap;
+  padding: 0 15px;
+  border-radius: 5px;
+  /* letter-spacing: 1px; */
+  font-size: 1.8rem;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.call-to-action:hover {
+  background: var(--clr-primary);
+  color: var(--clr-light);
+}
+
+.navbar1 .nav-links .menus .sub-menu {
+  position: absolute;
+  top: 65px;
+  line-height: 20px;
+  left: 10px;
+  background: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+  /* border-radius: 0 0 5px 5px; */
+  display: none;
+  z-index: -0.5;
+}
+
+.navbar1 .nav-links .menus .sub-menu li {
+  /* padding: 0 20px; */
+  width: 239px;
+  padding-bottom: 10px;
+}
+
+.navbar1 .nav-links .menus .sub-menu li a {
+  font-size: 1.5rem;
+  color: black;
+}
+.navbar1 .nav-links .menus li:hover .sub-menu {
+  display: block;
+}
+.navbar1 .nav-links .menus .sub-menu li a:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+}
+
+.pnt {
+  position: relative;
+  text-align: start;
+  order: 3;
+}
+.pnt:after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 0;
+  background: gray;
+  opacity: 0;
+  transition: all 0.3s;
+  display: block;
+  bottom: 12%;
+  pointer-events: none;
+  height: 2px;
+  width: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0;
+}
+.pnt:hover:after {
+  opacity: 1;
+  width: 10px;
+  background: #00d4ff;
+}
+
+.navbar1 .fa-bars,
+.navbar .navbar1 .nav-links .sidebar-logo .logo-name,
+.navbar .navbar1 .nav-links .sidebar-logo .fa-times {
+  font-size: 30px;
+  font-weight: 700;
+  display: none;
+}
+
+.navbar .navbar1 .nav-links .menus li > .contact-btn {
+  background-color: #00d4ff;
+  color: white;
+}
+
+.navbar .navbar1 .nav-links .menus li > .contact-btn:hover {
+  box-shadow: 0 0 0 4em #00d4ff inset, 0 5px 15px rgb(0 0 0 / 10%);
+  transform: translateY(-1px);
+}
+
+/* navbar media query */
+@media (max-width: 1348px) {
+  .navbar .navbar1 {
+    max-width: 100%;
+    padding: 0 25px;
+    margin: 10px;
+  }
+  .navbar .navbar1 .nav-links {
+    display: block;
+    position: fixed;
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+    top: 0;
+    left: -100%;
+    max-width: 270px;
+    width: 100%;
+    transition: left 0.3s ease-in;
+  }
+
+  .navbar .navbar1 .nav-links .sidebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    line-height: 40px;
+  }
+
+  .navbar1 .fa-bars,
+  .navbar .navbar1 .nav-links .sidebar-logo .logo-name {
+    display: block;
+    transition: transform 0.25s, opacity 0.25s;
+    cursor: pointer;
+    color: var(--clr-light);
+  }
+  .navbar .navbar1 .nav-links .sidebar-logo .fa-times {
+    display: block;
+    transition: transform 0.25s, opacity 0.25s;
+    cursor: pointer;
+    color: var(--clr-secondary);
+  }
+
+  .fa-times:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+
+  .navbar .navbar1 .nav-links .menus {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .navbar .navbar1 .nav-links .menus li {
+    display: block;
+    line-height: 40px;
+  }
+
+  .navbar .navbar1 .nav-links .menus .sub-menu {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .navbar1 .nav-links .menus .sub-menu li {
+    line-height: 30px;
+  }
+
+  .navbar .navbar1 .nav-links .menus li a {
+    color: var(--clr-secondary);
+  }
+}
+>>>>>>> Stashed changes
