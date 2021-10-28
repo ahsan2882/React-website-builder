@@ -2,14 +2,14 @@ import React from 'react'
 import Nav4Css from './Navigation4.module.css'
 import navlogo from '../assets/template4images/thefnflogo.png'
 
-export default function Navigation4() {
+export default function Navigation4({displayDevice}) {
     return (
         <>
             <div className="w-full" style={{ backgroundColor: 'rgba(0, 193, 207, 0.75)'}}>
                 <div className={`flex justify-between items-center py-6 px-6`} style={{maxWidth: '73.5rem', margin: '0 auto' }}>
                     <img src={navlogo} alt="nav-logo" className="w-52" />
                     <nav>
-                        <ul className={Nav4Css.navBar}>
+                        <ul className={ displayDevice ? `${Nav4Css.navBar}` : `absolute -left-full top-28 flex-col bg-white w-full rounded-xl text-center transition duration-300 shadow-xl`}>
                             <li className={`${Nav4Css.navBarLink} hover:text-black`}>
                                 <button className="text-white">HOME</button>
                             </li>
@@ -81,7 +81,7 @@ export default function Navigation4() {
                                 <button className="text-white">CONTACT US</button>
                             </li>
                         </ul>
-                        <section className={Nav4Css.hamburger}>
+                        <section className={displayDevice ? `${Nav4Css.hamburger}` : `${Nav4Css.hamburgerMobile}`}>
                             <span className={Nav4Css.bar}></span>
                             <span className={Nav4Css.bar}></span>
                             <span className={Nav4Css.bar}></span>
