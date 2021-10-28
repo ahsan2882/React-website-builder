@@ -5,8 +5,8 @@ import FooterContact4Css from './FooterContact4.module.css'
 export default function FooterContact4({displayDevice}) {
     const editorRef = useRef(null);
     return (
-        <div className={`${FooterContact4Css.contactFooterWrapper} w-full`}>
-            <div className={`${FooterContact4Css.container1} flex flex-col justify-around items-center py-32`}>
+        <div className={displayDevice ? `${FooterContact4Css.contactFooterWrapper}` : `${FooterContact4Css.contactFooterWrapperM}`}>
+            <div className={`${FooterContact4Css.container1} flex flex-col justify-around items-center`}>
                 {/* <TextPara classStyle={`${FooterContact4Css.contactParaFooter} text-center text-white`}
                     text="Pellentesque congue non augue vitae pellentesque. Morbi sollicitudin
                             eleifend rhoncus. Mauris vel nisl a massa viverra sollicitudin
@@ -16,7 +16,9 @@ export default function FooterContact4({displayDevice}) {
                     inline={true}
                     key='footer4ed1'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                    initialValue={`<p class="${FooterContact4Css.contactParaFooter}>Pellentesque congue non augue vitae pellentesque. Morbi sollicitudin
+                    initialValue={displayDevice ? `<p class="${FooterContact4Css.contactParaFooter}">Pellentesque congue non augue vitae pellentesque. Morbi sollicitudin
+                            eleifend rhoncus. Mauris vel nisl a massa viverra sollicitudin
+                            semper a diam.</p>` : `<p class="${FooterContact4Css.contactParaFooterM}">Pellentesque congue non augue vitae pellentesque. Morbi sollicitudin
                             eleifend rhoncus. Mauris vel nisl a massa viverra sollicitudin
                             semper a diam.</p>`}
                     init={{
@@ -36,7 +38,7 @@ export default function FooterContact4({displayDevice}) {
                     inline={true}
                     key='footer4ed2'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                    initialValue={`<p class="${FooterContact4Css.contactParaFooter}">021-34556899</p>`}
+                    initialValue={displayDevice ? `<p class="${FooterContact4Css.contactParaFooter}">021-34556899</p>` : `<p class="${FooterContact4Css.contactParaFooterM}">021-34556899</p>`}
                     init={{
                         forced_root_block: "",
                         menubar: false,
@@ -47,7 +49,7 @@ export default function FooterContact4({displayDevice}) {
 
                     }}
                 />
-                <div className={displayDevice ? `${FooterContact4Css.contactBottomLink} flex justify-evenly` : `${FooterContact4Css.contactBottomLink} flex justify-evenly w-4/5`}>
+                <div className={displayDevice ? `${FooterContact4Css.contactBottomLink}` : `${FooterContact4Css.contactBottomLinkM}`}>
                     <i className="fab fa-twitter p-4 bg-black text-white rounded-full"></i>
                     <i className="fab fa-facebook p-4 bg-black text-white rounded-full"></i>
                     <i className="fab fa-instagram p-4 bg-black text-white rounded-full"></i>
