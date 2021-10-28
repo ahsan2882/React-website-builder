@@ -1,5 +1,5 @@
 
-.bodyWrapper>.body {
+.bodyWrapper>.bodySign  {
     height: 100vh;
     display: flex;
     justify-content: space-around;
@@ -7,7 +7,7 @@
     flex-direction: column;
 }
 
-.bodyWrapper>.body>form {
+.bodyWrapper>.bodySign >form {
 
     padding: 40px;
     height: 40em;
@@ -18,7 +18,7 @@
   
 }
 
-.body>form {
+.bodySign >form {
     padding: 50px;
     width: 100%;
     position: relative;
@@ -28,7 +28,7 @@
     overflow: hidden;
 }
 
-.body>form input {
+.bodySign >form input {
     width: 100%;
     height: 100%;
     padding-top:4rem;
@@ -40,14 +40,14 @@
     background: none;
     border-bottom: 1px solid white;
 }
-.body>form input::placeholder {
+.bodySign >form input::placeholder {
     color: #fff;
     font-size: 1.2rem;
 }
 
 
 
-.body>form .button {
+.bodySign >form .button {
     padding: 10px 40px;
     background: white;
     display: flex;
@@ -57,7 +57,7 @@
     transition: .3s all;
 }
 
-.body>form .button:hover {
+.bodySign >form .button:hover {
     background: #000000;
     color: #FFFFFF;
 }

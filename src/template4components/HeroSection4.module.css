@@ -6,11 +6,13 @@
     background-position: left center;
     text-align: center;
     background-size: cover;
+    width: 100%;
 }
 .sectionHero h1 {
     width: 100%;
     font-size: 80px;
-color: rgb(0,193,207);
+    font-weight: 600;
+    color: rgb(0,193,207);
 }
 
 .sectionHero h2 {
@@ -82,8 +84,23 @@ color: rgb(0,193,207);
 }
 
 
-
-@media (max-width: 500px) {
+.sectionHeroM {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 45.7rem;
+    background-position: top;
+    text-align: center;
+    background-size: cover;
+    width: 100%;
+}
+.sectionHeroM h1{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(0, 193, 207);
+}
+@media (max-width: 600px) {
     .sectionHero {
         background-position: top;
         min-height: 100vh;

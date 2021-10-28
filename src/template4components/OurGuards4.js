@@ -56,7 +56,7 @@ export default function OurGuards4({ showPopup, overSection, displayDevice }) {
                         }}
                     />
                     {/* </p> */}
-                    <div className={displayDevice ? `${Guards4Css.container1} ${Guards4Css.guardsList} flex` : `${Guards4Css.container1} ${Guards4Css.guardsList} block`}>
+                    <div className={displayDevice ? `${Guards4Css.container1} ${Guards4Css.guardsList}` : `${Guards4Css.container1} ${Guards4Css.guardsListM}`}>
                         <div className={Guards4Css.guards}>
                             {/* <img src={guard1} className={Guards4Css.guardImage} alt="guard 1" /> */}
                             <Editor

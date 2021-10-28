@@ -9,8 +9,8 @@ export default function AboutUs4({ showPopup, overSection, displayDevice }) {
     const editorRef = useRef(null);
     return (
         <>
-            <div className={displayDevice ? `${About4Css.container02} py-32 px-12 flex items-center justify-evenly` : `${About4Css.container02} py-32 px-12 flex items-center justify-evenly flex-col`} style={{ background: currentBackground }}>
-                <div className={displayDevice ? `${About4Css.box1} flex flex-col max-w-lg` : `${About4Css.box1} flex flex-col max-w-lg w-4/5 text-center`}>
+            <div className={displayDevice ? `${About4Css.container02}` : `${About4Css.container02M}`} style={{ background: currentBackground }}>
+                <div className={displayDevice ? `${About4Css.box1}` : `${About4Css.box1M}`}>
                     {/* <img className={`${About4Css.aboutImg} w-11/12`} src={aboutimg} alt="about" /> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
@@ -31,7 +31,7 @@ export default function AboutUs4({ showPopup, overSection, displayDevice }) {
                         }}
                     />
                 </div>
-                <div className={displayDevice ? `${About4Css.box1} flex flex-col max-w-lg` : `${About4Css.box1} flex flex-col max-w-lg w-4/5 text-center`}>
+                <div className={displayDevice ? `${About4Css.box1}` : `${About4Css.box1M}`}>
                     <section>
                         <article>
                             <div className={About4Css.editableAbout}>

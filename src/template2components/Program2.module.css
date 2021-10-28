@@ -1,0 +1,120 @@
+.our-experience {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 163px 0;
+    padding: 0 100px;
+  }
+  .ecard-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid white;
+  }
+  .ecard-top h2 {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+  .ecard-top img {
+    width: 100px;
+    height: 100px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .container-experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  }
+  .pp p {
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 18px;
+  }
+  
+  .pp-2 {
+    color:white;
+  }
+  .exp-card1 {
+    height: auto;
+    background-color:#c0272d;
+    padding: 15px;
+  }
+  .exp-card2 {
+    height: auto;
+    background-color:#ebebeb;
+    padding: 15px;
+  }
+  .exp-card3 {
+    height: auto;
+    background-color: #c0272d;
+    padding: 15px;
+  }
+  .exp-card4 {
+    /* width: 300px; */
+    height: auto;
+
+    background-color: #ebebeb;
+    padding: 15px;
+  }
+  .exp-card5 {
+
+    height: auto;
+  
+    background-color:#c0272d;
+    padding: 15px;
+  }
+  .exp-card6 {
+
+    height: auto;
+
+    background-color: #ebebeb;
+    padding: 15px;
+  }
+  .MainHeading {
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+  
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    /* background-color: darkgray; */
+  }
+  
+  .head-main {
+    margin: 60px 0;
+  }
+  
+  .SpanColor {
+    color: #c0272d;
+  }
+  
+  .spanDesc {
+    /* background-color: darkcyan; */
+    text-align: center;
+  }
+  
+  .spanDesc p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #292929;
+  }
+  
+  .dot {
+    margin: 0 12px;
+    width: 22px;
+  }
+  
+  .divMainHeading {
+    display: flex;
+    /* background-color: green; */
+    height: 20px;
+    margin-left: 25%;
+  }
+  
+  .divMainHeadingSubDiv {
+    /* background-color: gold;  */
+    width: 30%;
+    border-top: 3px dashed firebrick;
+    margin-top: 9px;
+  }

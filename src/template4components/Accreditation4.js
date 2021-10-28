@@ -56,7 +56,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                             />
                         </h1>
                     </div>
-                    <div className={displayDevice ? `flex justify-center my-0 mx-auto mb-8 ${Accre4Css.flexWrapped}` : `flex justify-center my-0 mx-auto mb-8 flex-wrap`}>
+                    <div className={displayDevice ? `${Accre4Css.flexWrapped}` : `${Accre4Css.flexWrappedM}`}>
                         <div className={`${Accre4Css.accreCardWrapper} bg-black m-5`}>
                             <div className="p-5 flex flex-col items-center">
                                 {/* <img src={cl1} alt="client 1" className="w-full" /> */}

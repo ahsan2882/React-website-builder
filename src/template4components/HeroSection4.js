@@ -7,13 +7,13 @@ export default function HeroSection4({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
-            <section className={displayDevice ? `w-full ${Hero4Css.sectionHero}` : `w-full ${Hero4Css.sectionHero} bg-top min-h-screen items-center`} style={{
+            <section className={displayDevice ? `${Hero4Css.sectionHero}` : `${Hero4Css.sectionHeroM}`} style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url(${background})`
             }}>
                 <div className="w-full">
                     {/* <TextH1 classStyle={Hero4Css.secHeroH1} text="Security Services"></TextH1> */}
-                    <h1 className={displayDevice ? `text-7xl font-semibold` : `text-4xl font-semibold leading-none`}>
+                    <h1>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}

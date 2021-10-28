@@ -37,6 +37,7 @@ export default function EditScreen({ temp }) {
                     setToSave={setToSave}
                     setSaveClicked={setSaveClicked}
                     chatInclude={chatInclude}
+                    setDisplayDevice={setDisplayDevice}
                     displayDevice ={displayDevice}
                     setFileData={setFileData}
                 />

@@ -64,6 +64,14 @@
 .guardsList {
     justify-content: space-between;
     width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+.guardsListM{
+    justify-content: space-between;
+    width: 100%;
+    display: block;
     box-sizing: border-box;
     align-items: center;
 }

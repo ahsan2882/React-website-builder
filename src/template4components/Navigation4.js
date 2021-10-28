@@ -1,15 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Nav4Css from './Navigation4.module.css'
 import navlogo from '../assets/template4images/thefnflogo.png'
 
-export default function Navigation4({displayDevice}) {
+export default function Navigation4({ displayDevice }) {
+    const [activeHamburger, setActiveHamburger] = useState(false);
+    const toggleHamburger = () => {
+        setActiveHamburger(state => !state);
+    }
     return (
         <>
             <div className="w-full" style={{ backgroundColor: 'rgba(0, 193, 207, 0.75)'}}>
-                <div className={`flex justify-between items-center py-6 px-6`} style={{maxWidth: '73.5rem', margin: '0 auto' }}>
+                <div className={`flex justify-between items-center py-6 px-6 ${Nav4Css.container1}`}>
                     <img src={navlogo} alt="nav-logo" className="w-52" />
                     <nav>
-                        <ul className={ displayDevice ? `${Nav4Css.navBar}` : `absolute -left-full top-28 flex-col bg-white w-full rounded-xl text-center transition duration-300 shadow-xl`}>
+                        <ul className={displayDevice ? `${Nav4Css.navBar}` : `${Nav4Css.navBarM}`} style={(!displayDevice && activeHamburger) ? {left: "0"} : null}>
                             <li className={`${Nav4Css.navBarLink} hover:text-black`}>
                                 <button className="text-white">HOME</button>
                             </li>
@@ -81,7 +85,7 @@ export default function Navigation4({displayDevice}) {
                                 <button className="text-white">CONTACT US</button>
                             </li>
                         </ul>
-                        <section className={displayDevice ? `${Nav4Css.hamburger}` : `${Nav4Css.hamburgerMobile}`}>
+                        <section className={displayDevice ? `${Nav4Css.hamburger}` : (activeHamburger ? `${Nav4Css.hamburgerMobile} ${Nav4Css.active}` : `${Nav4Css.hamburgerMobile}`)} onClick={() => toggleHamburger()}>
                             <span className={Nav4Css.bar}></span>
                             <span className={Nav4Css.bar}></span>
                             <span className={Nav4Css.bar}></span>

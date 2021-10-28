@@ -1,14 +1,16 @@
-.box1 h1{
+.box1 h1 {
     color: #fff;
     width: 100%;
     font-size: 32px;
 }
+
 .box1 h2 {
     color: #fff;
     width: 100%;
     font-size: 24px;
 }
-.box1 h3{
+
+.box1 h3 {
     color: #fff;
     font-size: 32px;
     line-height: 2.25rem;
@@ -16,23 +18,27 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
+
 .box1 h4 {
     color: #fff;
     width: 100%;
     font-size: 16px;
 }
+
 .box1 h5 {
     color: #fff;
     width: 100%;
     font-size: 13.28px;
 }
+
 .box1 h6 {
-    color: rgb(0,193,207);
+    color: rgb(0, 193, 207);
     width: 100%;
     font-size: 19px;
     font-weight: 600;
 }
-.box1 p{
+
+.box1 p {
     color: #fff;
     font-size: 16px;
     line-height: 1.75rem;
@@ -41,24 +47,56 @@
     font-weight: 400;
 }
 
-.artH1{
+.artH1 {
     color: #00c1cf;
 }
-.btnReadMore{
+
+.btnReadMore {
     background-color: #00c1cf;
     border-radius: 20px;
     border-color: #00c1cf;
     font-size: 13px;
-    
+
 }
+
 .aboutImg {
     border-radius: 2rem;
+}
+
+.container02 {
+    padding: 8rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container02M {
+    padding: 8rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 32rem;
+}
+
+.box1M {
+    display: flex;
+    flex-direction: column;
+    max-width: 32rem;
+    width: 80%;
+    text-align: center;
 }
 
 @media (max-width: 850px) {
     .container02 {
         flex-direction: column;
     }
+
     .box1 {
         width: 80%;
         text-align: center;
