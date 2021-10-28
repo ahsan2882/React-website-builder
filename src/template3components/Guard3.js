@@ -72,13 +72,14 @@ export default function Guard3() {
                     }}
                   />
                 </h2>
-                <p className={Guard3Css['g-card-body']}>
+               
+                {/* <p className={Guard3Css['g-card-body']}> */}
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='Guard3'
-                    initialValue="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-              animi laudantium sint pariatur doloribus tempora!"
+                    initialValue={`<p class="${Guard3Css['g-card-body']} ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                    animi laudantium sint pariatur doloribus tempora!</p>`}
                     init={{
                       forced_root_block: "",
                       menubar: false,
@@ -88,7 +89,7 @@ export default function Guard3() {
                       font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                     }}
                   />
-                </p>
+                {/* </p> */}
 
 
               </div>
@@ -111,13 +112,14 @@ export default function Guard3() {
                     }}
                   />
                 </h2>
-                <p className={Guard3Css['g-card-body']}>
+              
+                {/* <p className={Guard3Css['g-card-body']}> */}
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='Guard5'
-                    initialValue="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-              animi laudantium sint pariatur doloribus tempora!"
+                    initialValue={`<p class="${Guard3Css['g-card-body']} ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                    animi laudantium sint pariatur doloribus tempora!</p>`}
                     init={{
                       forced_root_block: "",
                       menubar: false,
@@ -127,7 +129,7 @@ export default function Guard3() {
                       font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                     }}
                   />
-                </p>
+                {/* </p> */}
 
               </div>
             </div>
@@ -150,13 +152,14 @@ export default function Guard3() {
                   />
 
                   </h2>
-                <p className={Guard3Css['g-card-body']}>
+                {/* <p className={Guard3Css['g-card-body']}> */}
+               
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='Guard7'
-                    initialValue=" Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-                    animi laudantium sint pariatur doloribus tempora!"
+                    initialValue= {`<p class="${Guard3Css['g-card-body']} ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                    animi laudantium sint pariatur doloribus tempora!</p>`}
                     init={{
                       forced_root_block: "",
                       menubar: false,
@@ -166,18 +169,11 @@ export default function Guard3() {
                       font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                     }}
                   />
-                </p>
+                {/* </p> */}
 
 
               </div>
             </div>
-
-
-
-
-
-
-
           </div>
         </div>
       </section>

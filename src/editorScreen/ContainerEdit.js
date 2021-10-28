@@ -30,15 +30,15 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     const temp = templateNum;
     useEffect(() => {
         if (temp === 1) {
-            setUpdateChildren(templateComponents.template1Components)
+            setUpdateChildren(templateComponents.template1Components[`${templateSubPage}`])
             setCurTemplate("Template 1");
         }
         else if (temp === 2) {
-            setUpdateChildren(templateComponents.template2Components)
+            setUpdateChildren(templateComponents.template2Components[`${templateSubPage}`])
             setCurTemplate("Template 2");
         }
         else if (temp === 3) {
-            setUpdateChildren(templateComponents.template3Components)
+            setUpdateChildren(templateComponents.template3Components[`${templateSubPage}`])
             setCurTemplate("Template 3");
         }
         else if (temp === 4) {
