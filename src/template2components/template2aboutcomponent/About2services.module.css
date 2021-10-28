@@ -1,0 +1,86 @@
+html {
+
+    --clr-primary: #c0272d;
+    --clr-primary-dark: #bd170b;
+    --clr-secondary: #000000;
+    --clr-gray: #dddddd;
+    --clr-light: #ffff;
+    --clr-white-smoke: #ebebeb;
+    --clr-secondary-light: #292929;
+  }
+  .MainHeading {
+    font-size: 40px;
+    font-weight: 900;
+  
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+ 
+  }
+  .head-main {
+    margin: 60px 0;
+  }
+  .SpanColor {
+    color: var(--clr-primary);
+  }
+  .spanDesc {
+  
+    text-align: center;
+  }
+  
+  .spanDesc p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color:#292929;
+  }
+  .divMainHeading {
+    display: flex;
+    /* background-color: green; */
+    height: 20px;
+    margin-left: 25%;
+  }
+  .divMainHeadingSubDiv {
+    /* background-color: gold;  */
+    width: 30%;
+    border-top: 3px dashed firebrick;
+    margin-top: 9px;
+  }
+.our-experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .ecard-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgb(177, 177, 177);
+  }
+  .ecard-top h2 {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+  .ecard-top img {
+    width: 100px;
+    height: 100px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .container-experience {
+    
+    padding: 20px 90px;
+  
+  }
+  .pp p {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  
+  .exp-card {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+  }
+  .flex-cont {
+    display: flex;
+  }
