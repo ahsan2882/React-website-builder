@@ -29,7 +29,7 @@
     text-transform: capitalize;
     color: white;
   }
-  .test-footer .test-child {
+  .test-footer .testchild {
     font-size: 1.5rem;
     color: white;
 
@@ -93,7 +93,7 @@
     }
   } */
   
-  .test-para {
+  .testpara {
     color: white;
     text-align: center;
     font-size: 1rem;

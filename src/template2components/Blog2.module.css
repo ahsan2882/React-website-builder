@@ -49,7 +49,7 @@
   }
 
   
-  .post-para {
+  .postpara {
     font-size: 1rem;
     color: white;
     text-align: center;
@@ -105,10 +105,10 @@
     background:white;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 16px;
     text-transform: capitalize;
-    display: inline-block;
+    display: inline-flex;
     margin-top: 20px;
     position: relative;
     

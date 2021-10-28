@@ -1,17 +1,34 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Client2moduleCss from './Client2.module.css'
 import dot from '../assets/template2images/dot.png'
+import { Editor } from '@tinymce/tinymce-react';
 import client1 from '../assets/template2images/client1.png'
 import client2 from '../assets/template2images/client2.png'
 import client3 from '../assets/template2images/client3.png'
 
 export const Client2 = () => {
-    return (
+  const editorRef = useRef();
+  return (
        <>
         <section className={`${Client2moduleCss['head-main']}`}>
     <div className={`${Client2moduleCss.MainHeading}`}><span className={`${Client2moduleCss.SpanColor}`}> OUR </span> Clients says</div>
     <div className={`${Client2moduleCss.spanDesc}`}>
-      <p>Our Services are best in town and premium Lorem ipsum dolor sit amet.</p>
+    <Editor
+            onInit={(evt, editor) => editorRef.current = editor}
+            inline={true}
+            key='Client(2)1'
+            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+            initialValue={`<p>  Our Services are best in town and premium Lorem ipsum dolor sit amet.</p>`}
+            init={{
+              forced_root_block: "",
+              menubar: false,
+              toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                'alignright alignjustify | fontselect',
+              fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+              font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+            }}
+          />
+    
     </div>
     <div className={`${Client2moduleCss.divMainHeading}`}>
       <div className={`${Client2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div> <img className={`${Client2moduleCss.dot}`} src={dot} data-aos="fade" alt="Dot"/>
@@ -27,20 +44,68 @@ export const Client2 = () => {
             <div className={`${Client2moduleCss.test}`}>
               <img className={`${Client2moduleCss['test-logo']}`} src={client1} alt="1" />
             </div>
-            <div className={`${Client2moduleCss['test-para']}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur vel esse veniam commodi saepe amet veritatis quam,
-              dolore error, inventore modi tenetur ullam eligendi eveniet,
-              soluta perferendis dicta aperiam molestias qui voluptas
-              reprehenderit nemo placeat. Quia similique temporibus autem odio
-              repellat nisi doloribus dicta praesentium?
-            </div>
+            <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='Client(2)4'
+                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                        initialValue={`   <p class="${Client2moduleCss.testpara}"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur vel esse veniam commodi saepe amet veritatis quam,
+                        dolore error, inventore modi tenetur ullam eligendi eveniet,
+                        soluta perferendis dicta aperiam molestias qui voluptas
+                        reprehenderit nemo placeat. Quia similique temporibus autem odio
+                        repellat nisi doloribus dicta praesentium?
+                        </p>`}
+                        init={{
+                            forced_root_block: "",
+                            menubar: false,
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                        }}
+                    />
             <div className={`${Client2moduleCss['test-line']}`}>
               <div className={`${Client2moduleCss.line}`}></div>
             </div>
             <div className={`${Client2moduleCss['test-footer']}`}>
-              <h1 style={{color:`white`}} className={`${Client2moduleCss['test-main']}`}>Shams W.pawel</h1>
-              <div className={`${Client2moduleCss['test-child']}`}>Founder & CEo of Speed Studio</div>
+              <h1 style={{color:`white`}} className={`${Client2moduleCss['test-main']}`}>
+              <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='Client(2)5'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                            initialValue="Shams W.pawel"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                            }}
+                        />
+              
+              
+              </h1>
+              <h2 className={`${Client2moduleCss.testchild}`}>
+                <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='Client(2)11'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                            initialValue="Founder & CEo of Speed Studio"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                            }}
+                        />
+
+
+                  
+                </h2>
             </div>
           </div>
         </div>
@@ -49,20 +114,67 @@ export const Client2 = () => {
             <div className={`${Client2moduleCss.test}`}>
             <img className={`${Client2moduleCss['test-logo']}`} src={client2} alt="2" />
             </div>
-            <div className={`${Client2moduleCss['test-para']}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur vel esse veniam commodi saepe amet veritatis quam,
-              dolore error, inventore modi tenetur ullam eligendi eveniet,
-              soluta perferendis dicta aperiam molestias qui voluptas
-              reprehenderit nemo placeat. Quia similique temporibus autem odio
-              repellat nisi doloribus dicta praesentium?
-            </div>
+            <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='Client(2)2'
+                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                        initialValue={`   <p class="${Client2moduleCss.testpara}"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur vel esse veniam commodi saepe amet veritatis quam,
+                        dolore error, inventore modi tenetur ullam eligendi eveniet,
+                        soluta perferendis dicta aperiam molestias qui voluptas
+                        reprehenderit nemo placeat. Quia similique temporibus autem odio
+                        repellat nisi doloribus dicta praesentium?
+                        </p>`}
+                        init={{
+                            forced_root_block: "",
+                            menubar: false,
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                        }}
+                    />
+          
+       
             <div className={`${Client2moduleCss['test-line']}`}>
               <div className={`${Client2moduleCss.line}`}></div>
             </div>
             <div className={`${Client2moduleCss['test-footer']}`}>
-              <h1 className={`${['test-main']}`}>Shams W.pawel</h1>
-              <div className={`${Client2moduleCss['test-child']}`}>Founder & CEo of Speed Studio</div>
+              <h1 className={`${['test-main']}`}>
+              <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='Client(2)6'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                            initialValue="Shams W.pawel"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                            }}
+                        /></h1>
+                <h2 className={`${Client2moduleCss.testchild}`}>
+                <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='Client(2)9'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                            initialValue="Founder & CEo of Speed Studio"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                            }}
+                        />
+
+
+                  
+                </h2>
             </div>
           </div>
         </div>
@@ -71,20 +183,69 @@ export const Client2 = () => {
             <div className={`${Client2moduleCss.test}`}>
             <img className={`${Client2moduleCss['test-logo']}`} src={client3} alt="3" />
             </div>
-            <div className={`${Client2moduleCss['test-para']}`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur vel esse veniam commodi saepe amet veritatis quam,
-              dolore error, inventore modi tenetur ullam eligendi eveniet,
-              soluta perferendis dicta aperiam molestias qui voluptas
-              reprehenderit nemo placeat. Quia similique temporibus autem odio
-              repellat nisi doloribus dicta praesentium?
-            </div>
-            <div className={`${Client2moduleCss['test-line']}`}>
+            <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='Client(2)3'
+                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                        initialValue={`<p class="${Client2moduleCss.testpara}"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur vel esse veniam commodi saepe amet veritatis quam,
+                        dolore error, inventore modi tenetur ullam eligendi eveniet,
+                        soluta perferendis dicta aperiam molestias qui voluptas
+                        reprehenderit nemo placeat. Quia similique temporibus autem odio
+                        repellat nisi doloribus dicta praesentium?
+                        </p>`}
+                        init={{
+                            forced_root_block: "",
+                            menubar: false,
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                        }}
+                    />
+            <div className={`${Client2moduleCss.testline}`}>
+
               <div className={`${Client2moduleCss.line}}`}></div>
             </div>
             <div className={`${Client2moduleCss['test-footer']}`}>
-              <h1 className={`${Client2moduleCss['test-main']}`}>Shams W.pawel</h1>
-              <div className={`${Client2moduleCss['test-child']}`}>Founder & CEo of Speed Studio</div>
+              <h1 className={`${Client2moduleCss['test-main']}`}>
+              <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='Client(2)8'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                            initialValue="Shams W.pawel"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                            }}
+                        /></h1>
+          
+            
+                <h2 className={`${Client2moduleCss.testchild}`}>
+                <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='Client(2)9'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                            initialValue="Founder & CEo of Speed Studio"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                            }}
+                        />
+
+
+                  
+                </h2>
+               
             </div>
           </div>
           </div>
