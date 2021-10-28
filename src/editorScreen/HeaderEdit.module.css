@@ -6,3 +6,6 @@
     max-height: 6rem;
    
 }
+.sideButton:hover{
+    border: 2px solid white
+}

@@ -73,11 +73,24 @@
 .pricingCards > div:last-child > div > p > button{
     background-color: #00c1cf;
     border-radius: 30px;
- 
-   
     border: 2px solid #00c1cf;
     padding: 0.5rem 2.25rem;
     color: black;
+}
+.cardsWrapper{
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+.cardsWrapperM{
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    flex-wrap: wrap;
 }
 .pricingCards > div:last-child > div > p > button:hover {
     background-color: #000;
@@ -90,9 +103,12 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .containerMainPrice {
         padding: 1px;
+    }
+    .cardsWrapper{
+        flex-wrap: wrap;
     }
 }
 .price-btn {

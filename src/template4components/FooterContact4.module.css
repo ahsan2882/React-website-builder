@@ -5,6 +5,7 @@
 .container1 {
     max-width: 73.5rem;
     margin: 0 auto;
+    padding: 10rem 0;
 }
 
 /* global end  */
@@ -15,7 +16,10 @@
 .contactBottomLink{
     width: 20%;
     margin: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
 }
+
 .container1 > div:nth-child(1), .container1 > div:nth-child(2){
     width: 100%;
 }
@@ -57,17 +61,35 @@
     font-size: 10.72px;
 }
 .contactFooterWrapper p{
-    width: 70%;
     margin: 0 auto;
     font-size: 16px;
     text-align: center;
     color: #fff;
 }
-
+.contactFooterWrapperM{
+    background-color:rgba(0, 193, 207, 0.75);
+}
+.contactFooterWrapperM p {
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+.contactBottomLinkM {
+    width: 80%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.contactParaFooter{
+    width: 70%;
+}
+.contactParaFooterM{
+    width: 100%;
+}
 @media (max-width: 1200px) {
     .container1 {
         max-width: 63rem;
-        padding: 1rem 2rem;
     }
     .contactParaFooter {
         width: 80%;
@@ -86,7 +108,10 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+    .contactFooterWrapper{
+        padding-top: 2rem;
+    }
     .contactParaFooter {
         width: 100%;
     }

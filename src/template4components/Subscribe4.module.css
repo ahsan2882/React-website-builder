@@ -70,10 +70,11 @@
 
 .rightContainer {
     display: flex;
-    width: 90%;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
 }
+
 
 .offer {
     display: flex;
@@ -85,12 +86,13 @@
 
 .inputEmail {
     border-radius: 40px;
-    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 50%;
+    background-color: white;
 }
+
 
 .emailField {
     appearance: none;
@@ -102,7 +104,7 @@
     width: 50%;
 }
 
-.inputEmail>div {
+.inputEmail div {
     font-size: 1rem;
     text-decoration: none;
     color: white;
@@ -120,10 +122,48 @@
     color: red;
     background-color: red;
 } */
-@media (max-width: 2000px){
-    .wifi img {
-        display: none;
-    }
+.rightContainerM {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.inputEmailM {
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    background-color: transparent;
+    flex-direction: column;
+    width: 80%;
+}
+.inputEmailM div {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 40px;
+    z-index: 3;
+    text-align: center;
+    width: 50%;
+}
+.emailFieldM {
+    appearance: none;
+    outline: none;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.3rem;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+.subscribeBtn{
+    width: 50%;
+}
+.subscribeBtnM{
+    width: 90%;
 }
 @media (max-width: 1200px) {
     .container1 {
@@ -143,6 +183,7 @@
 
     .rightContainer {
         flex-direction: column;
+        width: 100%;
     }
 
     .offer {
@@ -161,7 +202,7 @@
         margin-bottom: -5rem;
         max-width: 100%;
     }
-    
+
     .inputEmail {
         width: 80%;
         flex-direction: column;
@@ -178,9 +219,14 @@
     .subscribeBtn {
         width: 70%;
     }
+    .wifi {
+        display: none;
+    }
 }
 
-@media(max-width:500px) {
+@media(max-width:600px) {
+    
+
     .subscribeSection {
         padding: 0;
     }
@@ -189,11 +235,11 @@
         padding: 2rem 0;
     }
 
-    .offer>div:first-child>h3 {
+    .offer h3 {
         font-size: 1rem;
     }
 
-    .offer>div:last-child>h1 {
+    .offer h1 {
         font-size: 1.2rem;
     }
 
@@ -205,7 +251,7 @@
     }
 
     .subscribeBtn {
-        width: 100%;
+        width: 90%;
         font-size: 1.1rem;
     }
 }

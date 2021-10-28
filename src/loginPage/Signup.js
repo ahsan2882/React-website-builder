@@ -5,7 +5,7 @@ export default function Signup() {
     return (
         <div className={SignupCss.bodyWrapper}style={{ "background": `url(${loginBackground}) no-repeat center/cover` }}>
          
-        <div className={SignupCss.body}>
+        <div className={SignupCss.bodySign}>
           <form>
          
             <input type="text" name="text" autoComplete="off"  placeholder="Firstname" />

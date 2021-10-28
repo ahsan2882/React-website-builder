@@ -4,30 +4,23 @@ import About4Css from './AboutUs4.module.css'
 import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 
-export default function AboutUs4({ showPopup, overSection }) {
+export default function AboutUs4({ showPopup, overSection, displayDevice }) {
     const [currentBackground, setCurrentBackground] = useState("black");
     const editorRef = useRef(null);
     return (
         <>
-            <div className={`${About4Css.container02} py-32 px-12 flex items-center justify-evenly`} style={{ background: currentBackground }}>
-                <div className={`${About4Css.box1} flex flex-col max-w-lg`}>
+            <div className={displayDevice ? `${About4Css.container02}` : `${About4Css.container02M}`} style={{ background: currentBackground }}>
+                <div className={displayDevice ? `${About4Css.box1}` : `${About4Css.box1M}`}>
                     {/* <img className={`${About4Css.aboutImg} w-11/12`} src={aboutimg} alt="about" /> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='abouted1'
-                        initialValue={`<img  src=${aboutimg} alt="about" className="${About4Css.aboutImg}  w-96 h-64 object-cover"/>`}
+                        initialValue={`<img  src=${aboutimg} alt="about" className="${About4Css.aboutImg} w-96 h-64 object-cover"/>`}
                         init={{
                             forced_root_block:"",
                             menubar: false,
                             images_upload_handler: function (blobInfo, success, failure) {
-                                fetch('/upload-images', {
-                                    headers: {
-                                        "Accept":"multipart/form-data"
-                                    }
-                                })
-                                    .then((response) => response.json())
-                                    .catch(error => console.log(error))
                                 success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                             },
                             images_upload_url: '/upload-images',
@@ -38,7 +31,7 @@ export default function AboutUs4({ showPopup, overSection }) {
                         }}
                     />
                 </div>
-                <div className={`${About4Css.box1} flex flex-col max-w-lg`}>
+                <div className={displayDevice ? `${About4Css.box1}` : `${About4Css.box1M}`}>
                     <section>
                         <article>
                             <div className={About4Css.editableAbout}>
