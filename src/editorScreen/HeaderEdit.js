@@ -73,11 +73,11 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
                 </div>
                 <nav>
                     <div className="relative w-32 flex justify-between">
-                        <button className="hover:bg-BL-400 rounded-full w-20 h-16 text-white" onClick={() => setDisplayDevice(true)}>
+                        <button className="rounded-full w-20 h-16 text-white" onClick={() => setDisplayDevice(true)}>
                             <i className={`fas fa-desktop text-2xl`}>
                             </i>
                         </button>
-                        <button className="hover:bg-BL-400 rounded-full w-20 h-16 text-white" onClick={() => setDisplayDevice(false)}>
+                        <button className="rounded-full w-20 h-16 text-white" onClick={() => setDisplayDevice(false)}>
                             <i className="fas fa-mobile-alt text-2xl"></i>
                         </button>
                     </div>
