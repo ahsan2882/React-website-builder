@@ -121,7 +121,7 @@
     background-color: red;
 } */
 @media (max-width: 2000px){
-    .wifi img {
+    .wifi {
         display: none;
     }
 }
