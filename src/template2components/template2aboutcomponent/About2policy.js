@@ -4,7 +4,8 @@ import Img1 from '../template2aboutcomponent/news3.jpg'
 export default function About2policy() {
     return (
         <>
-        <section className={AboutpolicyCss['policies']} className={AboutpolicyCss['head-main']}>
+       
+        <section className= {`${AboutpolicyCss['policies']} ${AboutpolicyCss['head-main']}`}>
     <div className={AboutpolicyCss['MainHeading']}><span className={AboutpolicyCss['SpanColor']}> OUR </span> Policy</div>
     <div className={AboutpolicyCss['spanDesc']}>
       <p>Our Services are best in town and premium Lorem ipsum dolor sit amet.</p>

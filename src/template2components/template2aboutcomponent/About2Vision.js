@@ -3,7 +3,8 @@ import About2vissionCss from './About2vision.module.css'
 import Img1 from '../template2aboutcomponent/campaign-creators-gMsnXqILjp4-unsplash.jpg'
 export default function About2Vision() {
     return (
-        <section className={About2vissionCss['vision']} className={About2vissionCss['our-vision']}>
+     
+        <section className= {`${About2vissionCss['vision']} ${About2vissionCss['our-vision']}`}>
         <div className={About2vissionCss['flex-about']}>
             <div className={`${About2vissionCss['content-our-vision']} ${About2vissionCss['container-content']}`}>
                 <div className={About2vissionCss['vision-top-content']}>
