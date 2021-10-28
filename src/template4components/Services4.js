@@ -36,7 +36,7 @@ export default function Services4({ showPopup, overSection }) {
                     />
                 </h4>
                 {/* <TextH2 className="text-center text-5xl opacity-80 text-white font-black" text="Our Services" /> */}
-                <h2 style={{fontSize:`48px`, fontWeight:`600`}}>
+                <h2 style={{ fontSize: `48px`, fontWeight: `600` }}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
@@ -57,26 +57,31 @@ export default function Services4({ showPopup, overSection }) {
                 {/* <TextPara className={`${Service4Css.servicsDesc} text-center text-white my-12 mx-auto leading-6 font-light`} */}
 
                 {/* <p style={{}}> */}
-                    <Editor
-                        onInit={(evt, editor) => editorRef.current = editor}
-                        inline={true}
-                        key='service4ed3'
-                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue="<p>Vestibulum commodo at dolor eu aliquam. In congue ornare augue eu
+                <Editor
+                    onInit={(evt, editor) => editorRef.current = editor}
+                    inline={true}
+                    key='service4ed3'
+                    tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                    initialValue="<p>Vestibulum commodo at dolor eu aliquam. In congue ornare augue eu
                         scelerisque. Duis vestibulum, dolor sed facilisis laoreet.</p>"
-                        init={{
-                            forced_root_block: "",
-                            menubar: false,
-                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                'alignright alignjustify | fontselect',
-                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                    init={{
+                        forced_root_block: "",
+                        menubar: false,
+                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                            'alignright alignjustify | fontselect',
+                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
 
-                        }}
-                    />
+                    }}
+                />
                 {/* </p> */}
                 <div className="flex flex-wrap my-0 mx-auto justify-center w-4/5">
-                    <div className={`mx-2 mb-8 mt-0 relative overflow-hidden ${Service4Css.serviceCard}`}>
+                    <div className={`${Service4Css.serviceCard} relative w-96 h-64`}>
+                        <img src={serv1} alt="London" className={`${Service4Css.serviceImages} w-full h-full object-cover top-0 z-50`} />
+                        <h2 className="absolute top-12 left-0 w-4/5">Home CCTV camera</h2>
+                        <button className="absolute bottom-12 left-8 bg-BL-500 rounded-full px-4 py-1">Read More</button>
+                    </div>
+                    {/* <div className={`mx-2 mb-8 mt-0 relative overflow-hidden ${Service4Css.serviceCard}`}>
                         <img src={serv1} alt="london" className={`w-96 h-64 block ${Service4Css.serviceImages}`} />
                         <div className={Service4Css.layer}>
                             <h2 className={`opacity-100 text-left leading-none font-extrabold mt-8 ml-3 text-3xl text-white ${Service4Css.serviceLayerH2}`} id="head">Home CCTV camera</h2>
@@ -84,7 +89,7 @@ export default function Services4({ showPopup, overSection }) {
                                 <Link id="btn" to="#" className={`${Service4Css.servicesMoreLink} py-2 px-8 no-underline text-black text-sm rounded-3xl`}> Read more</Link>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className={`mx-2 mb-8 mt-0 relative overflow-hidden ${Service4Css.serviceCard}`}>
                         <img src={serv2} alt="london" className={`w-96 h-64 block ${Service4Css.serviceImages}`} />
                         <div className={Service4Css.layer}>
