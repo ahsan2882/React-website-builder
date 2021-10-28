@@ -6,7 +6,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setFileData, templateSubPage, chatInclude }) {
+export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, displayDevice, setFileData, templateSubPage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
@@ -132,7 +132,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     }
     return (
         <>
-            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`}>
+            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} style={displayDevice ? {maxWidth: "80vw"} : {maxWidth: "30vw"}}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
@@ -154,7 +154,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                                 setShowPopUp(false);
                                             }}
                                             className="relative">
-                                            <ItemX overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
+                                            <ItemX displayDevice={displayDevice} overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
                                             <div className="flex w-52 justify-evenly items-center toBeRemoved" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
                                                 <button className="bg-red-500 p-3" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                                 <button className="bg-red-500 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
