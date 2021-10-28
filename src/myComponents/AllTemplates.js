@@ -6,6 +6,10 @@ import { News1 } from "../template1components/News1";
 import { Prizing1 } from "../template1components/Prizing1";
 import { Program1 } from "../template1components/Program1";
 import { Service1 } from "../template1components/Service1";
+import Contact2 from "../template2components/template2contactcomponent/Contact2";
+import Form2 from "../template2components/template2contactcomponent/Form2";
+import Feedback2 from "../template2components/template2contactcomponent/Feedback2";
+import Contact2Footer from "../template2components/template2contactcomponent/Contact2Footer";
 import { Testimonials1 } from "../template1components/Testimonials1";
 import { Navbar2 } from "../template2components/Navbar2";
 import { Services2 } from "../template2components/Services2";
@@ -35,9 +39,13 @@ import Guard3 from '../template3components/Guard3'
 
 export let templateComponents = {
     template1Components: [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
-    template2Components: [],
+    template2Components: {
+        "Home": [],
+        "About" : [],
+        "Contact":[Contact2,Form2,Feedback2,Contact2Footer]
+    },
     template3Components: {
-        "Home": [Services3,Latestnews3,Ourprograms3,About3,Accrediation3,Footer3,Guard3],
+        "Home": [Services3,Latestnews3,Ourprograms3,Guard3,About3,Accrediation3,Footer3],
         "About" : [],
         "Contact": []
     },

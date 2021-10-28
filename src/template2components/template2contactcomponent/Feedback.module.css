@@ -1,0 +1,138 @@
+/* html {
+    --clr-primary: #c0272d;
+    --clr-primary-dark: #bd170b;
+    --clr-secondary: #000000;
+    --clr-gray: #dddddd;
+    --clr-light: #ffff;
+    --clr-white-smoke: #ebebeb;
+    --clr-secondary-light: #292929;
+  } */
+
+.feed-contain {
+    padding: 200px 50px;
+    display: flex;
+  }
+  
+  .feed-content {
+    padding: 20px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .feed-content p {
+    font-size: 15px;
+  }
+  
+  .feed-img {
+    width: 35vw;
+    border-right: 7px solid var(--clr-primary);
+    border-bottom: 7px solid var(--clr-primary);
+  }
+  
+  .feedback {
+    background-color: var(--clr-white-smoke);
+  }
+  
+  
+  .btnb {
+    background-color: var(--clr-secondary);
+    color: var(--clr-light);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+  
+  .btnb::before {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    background: var(--clr-primary);
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.3s ease-out;
+  }
+  
+  .btnb::after {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    right: 0;
+    top: 0;
+    background: var(--clr-primary);
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.3s ease-out;
+  }
+  
+  .btnb:hover:before {
+    width: 0;
+  }
+  
+  .btnb:hover:after {
+    width: 0;
+  }
+  
+  .btnb:hover {
+    cursor: pointer;
+    color: var(--clr-light);
+  }
+  
+  .form-post{
+    text-align: end;
+  }
+  .MainHeading {
+    font-size: 40px;
+    font-weight: 900;
+  
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    /* background-color: darkgray; */
+  }
+  .head-main {
+    margin: 60px 0;
+  }
+  .SpanColor {
+    color: var(--clr-primary);
+  }
+  .spanDesc {
+  
+    text-align: center;
+  }
+  
+  .spanDesc p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color:#292929;
+  }
+  .divMainHeading {
+    display: flex;
+    /* background-color: green; */
+    height: 20px;
+    margin-left: 25%;
+  }
+  .divMainHeadingSubDiv {
+    /* background-color: gold;  */
+    width: 30%;
+    border-top: 3px dashed firebrick;
+    margin-top: 9px;
+  }
+  .mapsec{
+    width: 100%;
+    background: var(--clr-white-smoke);
+  }
+  .map {
+    height: 600px;
+  }
+  
