@@ -7,6 +7,7 @@ import {Client2} from './Client2.js'
 import {Guard2} from './Guard2.js'
 import {Program2} from './Program2'
 import { About2 } from './About2.js'
+import { Footer2 } from './Footer2.js'
 export default function Template2Page() {
   return (
     <>
@@ -18,6 +19,7 @@ export default function Template2Page() {
       <Guard2/>
       <Program2/>
       <About2/>
+      <Footer2/>
     </>
   )
 }
