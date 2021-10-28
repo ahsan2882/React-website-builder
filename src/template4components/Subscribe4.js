@@ -3,13 +3,13 @@ import React, { useRef } from 'react'
 import rsswifi from '../assets/template4images/rsswifi.png'
 import Subscribe4Css from './Subscribe4.module.css'
 
-export default function Subscribe4() {
+export default function Subscribe4({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <div className={`${Subscribe4Css.container1} ${Subscribe4Css.subscribeSection} w-full`}>
             <div className={Subscribe4Css.subscribeWrapper}>
-                <img className={Subscribe4Css.wifi} src={rsswifi} alt="subscribe logo" />
-                <div className={Subscribe4Css.rightContainer}>
+                <img className={displayDevice ? `${Subscribe4Css.wifi}` : `hidden`} src={rsswifi} alt="subscribe logo" />
+                <div className={displayDevice ? `${Subscribe4Css.rightContainer}` : `${Subscribe4Css.rightContainerM}`}>
                     <div className={Subscribe4Css.offer}>
                         {/* <TextH3 classStyle={Subscribe4Css.offerH3} text="Want to know about our offers first?" /> */}
                         <h3 className="Subscribe4Css">
@@ -31,7 +31,7 @@ export default function Subscribe4() {
                             />
                         </h3>
                         {/* <TextH1 classStyle={Subscribe4Css.offerH1} text="Subscribe our newsletter" /> */}
-                        <h1 className="Subscribe4Css">
+                        <h1>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -50,15 +50,15 @@ export default function Subscribe4() {
                             />
                         </h1>
                     </div>
-                    <div className={Subscribe4Css.inputEmail}>
+                    <div className={displayDevice ? `${Subscribe4Css.inputEmail}` : `${Subscribe4Css.inputEmailM}`}>
                         <input
                             type="email"
                             name="email"
                             placeholder="Your email-address"
-                            className={Subscribe4Css.emailField}
+                            className={displayDevice ? `${Subscribe4Css.emailField}` : `${Subscribe4Css.emailFieldM}`}
                         />
                         {/* <button className={Subscribe4Css.subscribeBtn}>SUBSCRIBE</button> */}
-                        <button style={{background:`black`,padding:`1.2rem 0`,width:`50%`,borderRadius:`2rem`,color:`white`}}>
+                        <button style={{ background: `black`, padding: `1.2rem 0`, borderRadius: `2rem`, color: `white`, display: "flex", justifyContent: "center", alignItems: "center"}} className={displayDevice ? `${Subscribe4Css.subscribeBtn}` : `${Subscribe4Css.subscribeBtnM} w-3/4`}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
