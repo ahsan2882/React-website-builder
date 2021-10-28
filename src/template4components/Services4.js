@@ -78,10 +78,63 @@ export default function Services4({ showPopup, overSection }) {
                 <div className="flex flex-wrap my-0 mx-auto justify-center w-4/5">
 
                     {/* YE WAALI LOGIC HAR JAGA LAGANI HAI */}
-                    <div className={`${Service4Css.serviceCard} relative w-96 h-64`}>
-                        <img src={serv1} alt="London" className={`${Service4Css.serviceImages} w-full h-full object-cover top-0 z-50 rounded-xl`} />
-                        <h2 className="absolute top-12 left-0 w-4/5">Home CCTV camera</h2>
-                        <button className="absolute bottom-12 left-8 bg-BL-500 rounded-full px-4 py-1">Read More</button>
+                    <div className={`${Service4Css.serviceCard} relative w-96 h-64 ml-3`}>
+                        {/* <img src={serv1} alt="London" className={`${Service4Css.serviceImages} w-full h-full object-cover top-0 z-50 rounded-xl`} /> */}
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='Service4Im1'
+                            initialValue={`<img src=${serv1} alt="london" class="${Service4Css.serviceImages} w-96 h-64 object-cover top-0 z-50 rounded-xl"/>`}
+                            init={{
+                                images_upload_handler: function (blobInfo, success, failure) {
+                                    success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                },
+                                images_upload_url: '/upload-images',
+                                forced_root_block: "",
+                                menubar: false,
+                                plugins: [
+                                    "image"
+                                ],
+                                toolbar: 'image'
+                            }}
+                        />
+                        {/* <h2 className="absolute top-12 left-0 w-4/5">Home CCTV camera</h2> */}
+                        <h2 className="absolute top-12 left-0 w-4/5">
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='service4ed49'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                initialValue="Home CCTV camera"
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+
+                            }}
+                        />
+                        </h2>
+                        <button className="absolute bottom-12 left-8 bg-BL-500 rounded-full px-4 py-1">
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='service4ed50'
+                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                initialValue="Read More"
+                                init={{
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | fontselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+
+                                }}
+                            />
+                        </button>
                     </div>
                     {/* YE WAALI LOGIC HAR JAGA LAGANI HAI */}
                     {/* <div className={`mx-2 mb-8 mt-0 relative overflow-hidden ${Service4Css.serviceCard}`}>
