@@ -120,7 +120,7 @@ const HeroSection4ComponentImage = ({ displayDevice }) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='Service4Im1'
-                    initialValue={`<img src=${background} alt="london" class="${Hero4Css.backgroundImg} object-cover top-0"/>`}
+                    initialValue={`<img src=${background} alt="london" class="${Hero4Css.backgroundImg} w-full h-full object-cover top-0"/>`}
                     init={{
                         images_upload_handler: function (blobInfo, success, failure) {
                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -202,29 +202,44 @@ const HeroSection4ComponentImage = ({ displayDevice }) => {
 
 const HeroSection4ComponentVideo = ({ displayDevice }) => {
     const editorRef = useRef(null);
+    const inputRef = useRef(null);
+    const [source, setSource] = useState(null);
+    const handleFileChange = (event) => {
+        console.log(event.target.files[0])
+        const file = event.target.files[0];
+        if (event.target.files[0] !== undefined) {
+            const url = URL.createObjectURL(file);
+            setSource(url);
+        }
+    };
+    const handleChoose = (event) => {
+        inputRef.current.click();
+    };
     return (
         <>
             <section className={displayDevice ? `${Hero4Css.sectionHero} relative` : `${Hero4Css.sectionHeroM} relative`}
             // style={{ background: color }}
             >
-                <video class="" autoPlay muted loop playsInline controls>
-                    {/* <source src={heroVideo} type="video/mp4" /> */}
-                    <Editor
-                        onInit={(evt, editor) => editorRef.current = editor}
-                        key='Hero4Vid1'
-                        initialValue={`<source src="${heroVideo}" type="video/mp4"/>`}
-                        init={{
-                            forced_root_block: "",
-                            menubar: false,
-                            file_picker_types: 'media',
-                            file_browser_callback_types: 'media',
-                            plugins: [
-                                "media"
-                            ],
-                            toolbar: "media"
-                        }}
+                <input
+                    ref={inputRef}
+                    className="VideoInput_input absolute top-0 left-0 z-10"
+                    type="file"
+                    onChange={handleFileChange}
+                    accept=".mov,.mp4"
+                />
+                {!source && <button onClick={handleChoose}>Choose</button>}
+                {source && (
+                    <video
+                        className="VideoInput_video absolute top-0"
+                        width="100%"
+                        height="100%"
+                        autoPlay={true}
+                        loop={true}
+                        muted={true}
+                        playsInline={true}
+                        src={source}
                     />
-                </video>
+                )}
                 <div className="w-full absolute">
                     {/* <TextH1 classStyle={Hero4Css.secHeroH1} text="Security Services"></TextH1> */}
                     <h1>

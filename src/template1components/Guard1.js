@@ -47,7 +47,7 @@ export const Guard1 = () => {
           <div className={`${Guard1Css.blog2}`}>
             <div className={`${Guard1Css['single-blog']}`}>
               <div className={`${Guard1Css['blog-img']}`}>
-                <img src={ourteam} alt="team" />
+                <img src={ourteam} alt="Temp1Img2" />
 
               </div>
 
@@ -89,7 +89,7 @@ export const Guard1 = () => {
             </div>
             <div className={`${Guard1Css['single-blog']}`}>
               <div className={`${Guard1Css['blog-img']}`}>
-                <img src={ourteam2} alt="team" />
+                <img src={ourteam2} alt="Temp1Img3" />
 
               </div>
 
@@ -131,7 +131,7 @@ export const Guard1 = () => {
             </div>
             <div className={`${Guard1Css['single-blog']}`}>
               <div className={`${Guard1Css['blog-img']}`}>
-                <img src={ourteam3} alt="team" />
+                <img src={ourteam3} alt="Temp1Img4" />
 
               </div>
 

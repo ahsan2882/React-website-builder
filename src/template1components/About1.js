@@ -90,7 +90,7 @@ export const About1 = () => {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='About5'
-            initialValue={`<img src=${buss} alt="buss" class="w-full" />`}
+            initialValue={`<img src=${buss} alt="Temp1Img1" class="w-full" />`}
             init={
               {
               images_upload_handler: function (blobInfo, success, failure) {

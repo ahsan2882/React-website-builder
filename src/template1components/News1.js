@@ -52,7 +52,7 @@ export const News1 = () => {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='News3'
-                  initialValue={`  <img src=${news1} alt="news"class="w-full" />`}
+                  initialValue={`  <img src=${news1} alt="Temp1Img6"class="w-full" />`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -129,7 +129,7 @@ export const News1 = () => {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='News7'
-                  initialValue={`<img src=${news2} alt="news"class="w-full" />`}
+                  initialValue={`<img src=${news2} alt="Temp1Img7"class="w-full" />`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -204,7 +204,7 @@ export const News1 = () => {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='News7'
-                  initialValue={`<img src=${news3} alt="news"class="w-full" />`}
+                  initialValue={`<img src=${news3} alt="Temp1Img8"class="w-full" />`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());

@@ -108,7 +108,7 @@ export const Header1 = () => {
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
               key='About5'
-              initialValue={` <img src=${bgcover} alt="bg-cover" />`}
+              initialValue={` <img src=${bgcover} alt="Temp1Img5" />`}
               init={{
                 forced_root_block: "",
                 menubar: false,
