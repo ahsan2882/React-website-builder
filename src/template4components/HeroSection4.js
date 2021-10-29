@@ -2,6 +2,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import background from '../assets/template4images/blog_15-770x545.png'
+import heroVideo from '../assets/videos/homepage-hero-bg.mp4'
 import Hero4Css from './HeroSection4.module.css'
 
 export default function HeroSection4({ showPopup, overSection, displayDevice }) {
@@ -206,24 +207,24 @@ const HeroSection4ComponentVideo = ({ displayDevice }) => {
             <section className={displayDevice ? `${Hero4Css.sectionHero} relative` : `${Hero4Css.sectionHeroM} relative`}
             // style={{ background: color }}
             >
-                <Editor
-                    onInit={(evt, editor) => editorRef.current = editor}
-                    inline={true}
-                    key='Service4Im1'
-                    initialValue={`<img src=${background} alt="london" class="${Hero4Css.backgroundImg} object-cover top-0"/>`}
-                    init={{
-                        images_upload_handler: function (blobInfo, success, failure) {
-                            success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
-                        },
-                        images_upload_url: '/upload-images',
-                        forced_root_block: "",
-                        menubar: false,
-                        plugins: [
-                            "media"
-                        ],
-                        toolbar: 'image'
-                    }}
-                />
+                <video class="" autoPlay muted loop playsInline controls>
+                    {/* <source src={heroVideo} type="video/mp4" /> */}
+                    <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='Hero4Vid1'
+                        initialValue={`<source src="${heroVideo}" type="video/mp4"/>`}
+                        init={{
+                            forced_root_block: "",
+                            menubar: false,
+                            file_picker_types: 'media',
+                            plugins: [
+                                "media"
+                            ],
+                            toolbar: "media"
+                        }}
+                    />
+                </video>
                 <div className="w-full absolute">
                     {/* <TextH1 classStyle={Hero4Css.secHeroH1} text="Security Services"></TextH1> */}
                     <h1>
