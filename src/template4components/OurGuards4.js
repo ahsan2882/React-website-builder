@@ -2,10 +2,6 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import { Link } from 'react-router-dom';
-// import guard1 from '../assets/template4images/guard1.png';
-// import guard2 from '../assets/template4images/guard2.png';
-// import guard3 from '../assets/template4images/guard3.png';
-// import guard4 from '../assets/template4images/guard4.png';
 import Guards4Css from './OurGuards4.module.css';
 
 export default function OurGuards4({ showPopup, overSection, displayDevice }) {
@@ -65,6 +61,10 @@ export default function OurGuards4({ showPopup, overSection, displayDevice }) {
                                 key='guardIm1'
                                 initialValue={`<img src="https://i.ibb.co/r786FyQ/guard1.png" alt="guard 1" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                                 init={{
+                                    images_upload_handler: function (blobInfo, success, failure) {
+                                        success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                    },
+                                    images_upload_url: '/upload-images',
                                     forced_root_block: "",
                                     menubar: false,
                                     plugins: [
@@ -143,6 +143,10 @@ export default function OurGuards4({ showPopup, overSection, displayDevice }) {
                                 key='guardIm2'
                                 initialValue={`<img src="https://i.ibb.co/jz8R5mw/guard2.png" alt="guard 2" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                                 init={{
+                                    images_upload_handler: function (blobInfo, success, failure) {
+                                        success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                    },
+                                    images_upload_url: '/upload-images',
                                     forced_root_block: "",
                                     menubar: false,
                                     plugins: [
@@ -204,6 +208,10 @@ export default function OurGuards4({ showPopup, overSection, displayDevice }) {
                                 key='guardIm3'
                                 initialValue={`<img src="https://i.ibb.co/p4kzfVB/guard3.png" alt="guard 3" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                                 init={{
+                                    images_upload_handler: function (blobInfo, success, failure) {
+                                        success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                    },
+                                    images_upload_url: '/upload-images',
                                     forced_root_block: "",
                                     menubar: false,
                                     plugins: [
@@ -265,6 +273,10 @@ export default function OurGuards4({ showPopup, overSection, displayDevice }) {
                                 key='guardIm4'
                                 initialValue={`<img src="https://i.ibb.co/0ZMZXfV/guard4.png" alt="guard 4" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                                 init={{
+                                    images_upload_handler: function (blobInfo, success, failure) {
+                                        success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                    },
+                                    images_upload_url: '/upload-images',
                                     forced_root_block: "",
                                     menubar: false,
                                     plugins: [
