@@ -1,12 +1,17 @@
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import heroVideo from '../assets/videos/homepage-hero-bg.mp4'
 import Hero4Css from './HeroSection4.module.css'
 
 export default function HeroSection4({ showPopup, overSection, displayDevice }) {
-    const [backgroundType, setBackgroundType] = useState("image");
-    const [currentBackgroundColor, setCurrentBackgroundColor] = useState("white");
+    const [backgroundType, setBackgroundType] = useState("color");
+    const [currentBackgroundColor, setCurrentBackgroundColor] = useState("lightblue");
+    // useEffect(() => {
+    //     if (backgroundType === "image") {
+    //         document.getElementById("heroImg").parentElement.click()
+    //     }
+    // }, [backgroundType])
 
     return (
         <>
@@ -117,9 +122,9 @@ const HeroSection4ComponentImage = ({ displayDevice }) => {
             >
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
-                    inline={true}
+                    // inline={true}
                     key='Service4Im1'
-                    initialValue={`<img src="https://i.ibb.co/C8ZPc41/blog-15-770x545.png" alt="london" class="${Hero4Css.backgroundImg} w-full h-full object-cover top-0"/>`}
+                    initialValue={`<img src="https://i.ibb.co/C8ZPc41/blog-15-770x545.png" id="heroImg" alt="london" class="${Hero4Css.backgroundImg} w-full h-full object-cover top-0"/>`}
                     init={{
                         images_upload_handler: function (blobInfo, success, failure) {
                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
