@@ -1,6 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
-import rsswifi from '../assets/template4images/rsswifi.png'
+// import rsswifi from '../assets/template4images/rsswifi.png'
 import Subscribe4Css from './Subscribe4.module.css'
 
 export default function Subscribe4({displayDevice}) {
@@ -8,7 +8,7 @@ export default function Subscribe4({displayDevice}) {
     return (
         <div className={`${Subscribe4Css.container1} ${Subscribe4Css.subscribeSection} w-full`}>
             <div className={Subscribe4Css.subscribeWrapper}>
-                <img className={displayDevice ? `${Subscribe4Css.wifi}` : `hidden`} src={rsswifi} alt="subscribe logo" />
+                <img className={displayDevice ? `${Subscribe4Css.wifi}` : `hidden`} src="https://i.ibb.co/0VmhwWc/rsswifi.png" alt="subscribe logo" />
                 <div className={displayDevice ? `${Subscribe4Css.rightContainer}` : `${Subscribe4Css.rightContainerM}`}>
                     <div className={Subscribe4Css.offer}>
                         {/* <TextH3 classStyle={Subscribe4Css.offerH3} text="Want to know about our offers first?" /> */}
