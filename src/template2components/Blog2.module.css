@@ -21,7 +21,8 @@
     border-bottom: 1px solid var(--clr-gray);
   }
   .blog-img img {
-    width: 100%;
+    /* width: 100%;
+    height: 100%; */
     transition: 0.3s;
   }
   .single-blog:hover .blog-img img {

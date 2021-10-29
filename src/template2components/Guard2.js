@@ -29,7 +29,8 @@ export const Guard2 = () => {
           />
       </div>
       <div className={`${Guard2moduleCss.divMainHeading}`}>
-        <div className={`${Guard2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div> <img className={`${Guard2moduleCss.dot}`} src={dot} data-aos="fade" alt="dot"/>
+        <div className={`${Guard2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div> 
+        <img className={`${Guard2moduleCss.dot}`} src={dot} data-aos="fade" alt="dot"/>
         <div className={`${Guard2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-right"> </div>
       </div>
     </section>

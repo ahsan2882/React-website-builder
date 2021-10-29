@@ -21,7 +21,7 @@
     height: 400px; 
     margin: 5px;
   }
-  
+
   .row-foot {
     padding-top: 60px;
   }
@@ -112,7 +112,7 @@
     justify-content: center;
     height: auto;
   }
-  .main-para {
+  .mainpara {
     margin-bottom: 10px;
     line-height: 30px;
   }

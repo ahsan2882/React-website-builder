@@ -1,6 +1,4 @@
-.about-img {
-    width: 100%;
-  }
+
   
   .about-sec {
     width: 100%;
@@ -23,35 +21,17 @@
   }
   
   .about-post-img {
-    min-width: 30rem;
-
-    height: 25rem;
-    transform: translateX(-8rem);
+    margin-right: 1rem;
     position: relative;
   }
   
-  .about-post-img img {
-    width: 100%;
-    height: 100%;
+  /* .about-post-img img { */
+    /* width: 100%;
+    height: 100%; */
     /* object-fit: cover; */
     /* display: block; */
-  }
-  
-  .about-post-img::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* background: rgb(255,49,63); */
-    background: linear-gradient(
-      135deg,
-      rgba(255, 49, 63, 0.3393732492997199) 0%,
-      rgba(241, 140, 132, 0.24693627450980393) 100%
-    );
-    box-shadow: 0.5rem 0.5rem 3rem 1px rgb(0 0 0 / 30%);
-  }
+  /* } */
+
   
   .about-title {
     font-size: 3rem;

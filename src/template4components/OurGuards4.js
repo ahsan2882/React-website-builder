@@ -73,26 +73,8 @@ export default function OurGuards4({ showPopup, overSection, displayDevice }) {
                                     toolbar: 'image'
                                 }}
                             />
-                            {/* <img src={
-                            <Editor
-                                onInit={(evt, editor) => editorRef.current = editor}
-                                inline={true}
-                                key='guardIm1'
-                                initialValue={``}
-                                init={{
-                                    forced_root_block: "",
-                                    menubar: false,
-                                    plugins: [
-                                        "image"
-                                    ],
-                                    toolbar: 'image'
-                                }}
-                            />
-                        } alt="guard 1" className={Guards4Css.guardImage}/> */}
-                            {/* <TextH2 className={`m-0 mt-8 ${Guards4Css.guardName}`} text="John Richards" /> */}
-                            <h2 className="Guards4Css"
-                            //  style={{textAlign:'center'}}
-                             >
+                        
+                            <h2 className="Guards4Css" >
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
