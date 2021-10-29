@@ -1,17 +1,37 @@
-import React, {useState} from 'react'
+import { Editor } from '@tinymce/tinymce-react';
+import React, { useRef, useState } from 'react';
 import Nav4Css from './Navigation4.module.css'
-// import navlogo from '../assets/template4images/thefnflogo.png'
 
 export default function Navigation4({ displayDevice }) {
     const [activeHamburger, setActiveHamburger] = useState(false);
     const toggleHamburger = () => {
         setActiveHamburger(state => !state);
     }
+    const editorRef = useRef(null);
     return (
+        
         <>
             <div className="w-full" style={{ backgroundColor: 'rgba(0, 193, 207, 0.75)'}}>
                 <div className={`flex justify-between items-center py-6 px-6 ${Nav4Css.container1}`}>
-                    <img src="https://i.ibb.co/Xyt25vh/thefnflogo.png" alt="nav-logo" className="w-52" />
+                    {/* <img src="https://i.ibb.co/Xyt25vh/thefnflogo.png" alt="nav-logo" className="w-52" /> */}
+                    <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='AccreIm1'
+                        initialValue={`<img src="https://i.ibb.co/Xyt25vh/thefnflogo.png" alt="client 1" class="w-52 h-16 object-cover"/>`}
+                        init={{
+                            images_upload_handler: function (blobInfo, success, failure) {
+                                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                            },
+                            images_upload_url: '/upload-images',
+                            forced_root_block: "",
+                            menubar: false,
+                            plugins: [
+                                "image"
+                            ],
+                            toolbar: 'image'
+                        }}
+                    />
                     <nav>
                         <ul className={displayDevice ? `${Nav4Css.navBar}` : `${Nav4Css.navBarM}`} style={(!displayDevice && activeHamburger) ? {left: "0"} : null}>
                             <li className={`${Nav4Css.navBarLink} hover:text-black`}>
