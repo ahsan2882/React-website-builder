@@ -120,7 +120,7 @@ const HeroSection4ComponentImage = ({ displayDevice }) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='Service4Im1'
-                    initialValue={`<img src=${background} alt="london" class="${Hero4Css.backgroundImg} object-cover top-0"/>`}
+                    initialValue={`<img src=${background} alt="london" class="${Hero4Css.backgroundImg} w-full h-full object-cover top-0"/>`}
                     init={{
                         images_upload_handler: function (blobInfo, success, failure) {
                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -222,7 +222,7 @@ const HeroSection4ComponentVideo = ({ displayDevice }) => {
             >
                 <input
                     ref={inputRef}
-                    className="VideoInput_input absolute top-0 left-0 z-50"
+                    className="VideoInput_input absolute top-0 left-0 z-10"
                     type="file"
                     onChange={handleFileChange}
                     accept=".mov,.mp4"
