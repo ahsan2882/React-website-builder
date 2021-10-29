@@ -89,6 +89,9 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                 let nodeText = newDoc.createTextNode(editableFalse[0].innerHTML)
                 editableFalse[0].parentNode.replaceChild(nodeText, editableFalse[0])
             }
+            // console.log(editableFalse[0])
+            // console.log(editableFalse[0].innerHTML)
+            // console.log(editableFalse[0].parentNode.nodeName)
             i++
         }
         let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
