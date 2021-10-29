@@ -8,11 +8,12 @@
     background-size: cover;
     width: 100%;
 }
+
 .sectionHero h1 {
     width: 100%;
     font-size: 80px;
     font-weight: 600;
-    color: rgb(0,193,207);
+    color: rgb(0, 193, 207);
 }
 
 .sectionHero h2 {
@@ -53,12 +54,12 @@
     font-weight: 400;
     line-height: 1.75rem;
     padding: 0.75rem 0;
-    
+
 }
 
 
 
-.sectionHero>div>div:nth-child(3)> div>p>button {
+.sectionHero>div>div:nth-child(3)>div>p>button {
     color: white;
     background-color: #00c1cf;
     border-radius: 30px;
@@ -74,7 +75,7 @@
 .allbtn {
     padding: 15px 50px;
     border-radius: 40px;
-    background-color: rgb(0,193,207);
+    background-color: rgb(0, 193, 207);
     margin-bottom: 10rem;
 }
 
@@ -94,22 +95,34 @@
     background-size: cover;
     width: 100%;
 }
-.sectionHeroM h1{
+
+.sectionHeroM h1 {
     width: 100%;
     font-size: 2rem;
     font-weight: 600;
     color: rgb(0, 193, 207);
 }
-.backgroundImg{
+
+.backgroundImg {
     width: 100vw;
     overflow-x: hidden;
-    max-height: 45.7rem;
+    height: 45.7rem;
 }
+.backgroundImgM{
+     width: 100vw;
+     overflow-x: hidden;
+     height: 100vh;
+}
+
 @media (max-width: 600px) {
     .sectionHero {
         background-position: top;
         min-height: 100vh;
         align-items: center;
+    }
+
+    .backgroundImg {
+        height: 100vh;
     }
 
     .sectionHero h1 {
