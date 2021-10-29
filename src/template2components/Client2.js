@@ -42,7 +42,25 @@ export const Client2 = () => {
         <div className={`${Client2moduleCss['test-card']}`} >
           <div className={`${Client2moduleCss['test-body']}`}>
             <div className={`${Client2moduleCss.test}`}>
-              <img className={`${Client2moduleCss['test-logo']}`} src={client1} alt="1" />
+              {/* <img className={`${Client2moduleCss['testlogo']}`} src={client1} alt="1" /> */}
+              <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                inline={true}
+                key='Client(2)96'
+                initialValue={`<img src="${client1}" alt="Client 1" class="${Client2moduleCss.testlogo} w-36 h-18 object-cover"/>`}
+                init={{
+                  images_upload_handler: function (blobInfo, success, failure) {
+                    success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                  },
+                  images_upload_url: '/upload-images',
+                  forced_root_block: "",
+                  menubar: false,
+                  plugins: [
+                    "image"
+                  ],
+                  toolbar: 'image'
+                }}
+              />
             </div>
             <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
@@ -112,7 +130,25 @@ export const Client2 = () => {
         <div className={`${Client2moduleCss['test-card']} ${Client2moduleCss['t-mid']}`}>
           <div className={`${Client2moduleCss['test-body']}`}>
             <div className={`${Client2moduleCss.test}`}>
-            <img className={`${Client2moduleCss['test-logo']}`} src={client2} alt="2" />
+            {/* <img className={`${Client2moduleCss['testlogo']}`} src={client2} alt="2" /> */}
+            <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                inline={true}
+                key='Client(2)97'
+                initialValue={`<img src="${client2}" alt="Client 2" class="${Client2moduleCss.testlogo} w-36 h-18 object-cover"/>`}
+                init={{
+                  images_upload_handler: function (blobInfo, success, failure) {
+                    success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                  },
+                  images_upload_url: '/upload-images',
+                  forced_root_block: "",
+                  menubar: false,
+                  plugins: [
+                    "image"
+                  ],
+                  toolbar: 'image'
+                }}
+              />
             </div>
             <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
@@ -141,7 +177,7 @@ export const Client2 = () => {
               <div className={`${Client2moduleCss.line}`}></div>
             </div>
             <div className={`${Client2moduleCss['test-footer']}`}>
-              <h1 className={`${['test-main']}`}>
+              <h1 className={`${Client2moduleCss['test-main']}`}>
               <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -181,7 +217,25 @@ export const Client2 = () => {
         <div className={`${Client2moduleCss['test-card']}`}>
           <div className={`${Client2moduleCss['test-body']}`}>
             <div className={`${Client2moduleCss.test}`}>
-            <img className={`${Client2moduleCss['test-logo']}`} src={client3} alt="3" />
+            {/* <img className={`${Client2moduleCss['testlogo']}`} src={client3} alt="3" /> */}
+            <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                inline={true}
+                key='Client(2)98'
+                initialValue={`<img src="${client3}" alt="Client 3" class="${Client2moduleCss.testlogo} w-36 h-18 object-cover"/>`}
+                init={{
+                  images_upload_handler: function (blobInfo, success, failure) {
+                    success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                  },
+                  images_upload_url: '/upload-images',
+                  forced_root_block: "",
+                  menubar: false,
+                  plugins: [
+                    "image"
+                  ],
+                  toolbar: 'image'
+                }}
+              />
             </div>
             <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
@@ -204,9 +258,9 @@ export const Client2 = () => {
                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                         }}
                     />
-            <div className={`${Client2moduleCss.testline}`}>
+            <div className={`${Client2moduleCss['test-line']}`}>
 
-              <div className={`${Client2moduleCss.line}}`}></div>
+              <div className={`${Client2moduleCss.line}`}></div>
             </div>
             <div className={`${Client2moduleCss['test-footer']}`}>
               <h1 className={`${Client2moduleCss['test-main']}`}>
