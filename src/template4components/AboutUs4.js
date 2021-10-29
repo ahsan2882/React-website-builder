@@ -1,5 +1,4 @@
 import React, { useRef ,useState } from 'react'
-// import aboutimg from '../assets/template4images/news3.png'
 import About4Css from './AboutUs4.module.css'
 import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
@@ -10,13 +9,13 @@ export default function AboutUs4({ showPopup, overSection, displayDevice }) {
     return (
         <>
             <div className={displayDevice ? `${About4Css.container02}` : `${About4Css.container02M}`} style={{ background: currentBackground }}>
-                <div className={displayDevice ? `${About4Css.box1}` : `${About4Css.box1M}`}>
+                
                     {/* <img className={`${About4Css.aboutImg} w-11/12`} src={aboutimg} alt="about" /> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='abouted1'
-                        initialValue={`<img  src="https://i.ibb.co/c8STtRy/news3.png" alt="about" className="${About4Css.aboutImg} w-96 h-64 object-cover"/>`}
+                        initialValue={`<img  src="https://i.ibb.co/c8STtRy/news3.png" alt="about" class="${About4Css.aboutImg} w-96 h-72 object-cover"/>`}
                         init={{
                             forced_root_block:"",
                             menubar: false,
@@ -30,7 +29,6 @@ export default function AboutUs4({ showPopup, overSection, displayDevice }) {
                             toolbar: 'image'
                         }}
                     />
-                </div>
                 <div className={displayDevice ? `${About4Css.box1}` : `${About4Css.box1M}`}>
                     <section>
                         <article>
