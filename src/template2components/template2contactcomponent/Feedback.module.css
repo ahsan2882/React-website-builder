@@ -23,8 +23,8 @@
     font-size: 15px;
   }
   
-  .feed-img {
-    width: 35vw;
+  .feedImg {
+    width: 253vw;
     border-right: 7px solid var(--clr-primary);
     border-bottom: 7px solid var(--clr-primary);
   }

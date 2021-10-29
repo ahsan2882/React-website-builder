@@ -8,10 +8,11 @@
     position: absolute;
     top: 22%;
     left: 15%;
+    z-index:100;
   }
   .dash {
     border-top: dashed 3px white;
   }
   .head-img-text h1 {
-    font-size: 4vw;
+    font-size: 20vw;
   }
