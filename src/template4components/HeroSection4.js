@@ -211,13 +211,13 @@ const HeroSection4ComponentVideo = ({ displayDevice }) => {
                     {/* <source src={heroVideo} type="video/mp4" /> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
-                        inline={true}
                         key='Hero4Vid1'
                         initialValue={`<source src="${heroVideo}" type="video/mp4"/>`}
                         init={{
                             forced_root_block: "",
                             menubar: false,
                             file_picker_types: 'media',
+                            file_browser_callback_types: 'media',
                             plugins: [
                                 "media"
                             ],
