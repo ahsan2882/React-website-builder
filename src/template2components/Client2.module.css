@@ -1,13 +1,11 @@
 .test {
     margin-top: 20%;
     margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  .test-logo {
-    width: 50%;
-    margin: 0 auto;
-  
-  }
   
   .test-sec {
     width: 100%;
