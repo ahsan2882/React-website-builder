@@ -2,10 +2,10 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import { Link } from 'react-router-dom';
-import guard1 from '../assets/template4images/guard1.png';
-import guard2 from '../assets/template4images/guard2.png';
-import guard3 from '../assets/template4images/guard3.png';
-import guard4 from '../assets/template4images/guard4.png';
+// import guard1 from '../assets/template4images/guard1.png';
+// import guard2 from '../assets/template4images/guard2.png';
+// import guard3 from '../assets/template4images/guard3.png';
+// import guard4 from '../assets/template4images/guard4.png';
 import Guards4Css from './OurGuards4.module.css';
 
 export default function OurGuards4({ showPopup, overSection, displayDevice }) {
@@ -63,7 +63,7 @@ export default function OurGuards4({ showPopup, overSection, displayDevice }) {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='guardIm1'
-                                initialValue={`<img src=${guard1} alt="guard 1" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
+                                initialValue={`<img src="https://i.ibb.co/r786FyQ/guard1.png" alt="guard 1" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -141,7 +141,7 @@ export default function OurGuards4({ showPopup, overSection, displayDevice }) {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='guardIm2'
-                                initialValue={`<img src=${guard2} alt="guard 2" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
+                                initialValue={`<img src="https://i.ibb.co/jz8R5mw/guard2.png" alt="guard 2" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -202,7 +202,7 @@ export default function OurGuards4({ showPopup, overSection, displayDevice }) {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='guardIm3'
-                                initialValue={`<img src=${guard3} alt="guard 3" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
+                                initialValue={`<img src="https://i.ibb.co/p4kzfVB/guard3.png" alt="guard 3" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -263,7 +263,7 @@ export default function OurGuards4({ showPopup, overSection, displayDevice }) {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='guardIm4'
-                                initialValue={`<img src=${guard4} alt="guard 4" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
+                                initialValue={`<img src="https://i.ibb.co/0ZMZXfV/guard4.png" alt="guard 4" class="${Guards4Css.guardImage} mx-auto object-cover w-60 h-60"/>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
