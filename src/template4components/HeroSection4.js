@@ -122,7 +122,7 @@ const HeroSection4ComponentImage = ({ displayDevice }) => {
             >
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
-                    // inline={true}
+                    inline={true}
                     key='Service4Im1'
                     initialValue={`<img src="https://i.ibb.co/C8ZPc41/blog-15-770x545.png" id="heroImg" alt="london" class="${Hero4Css.backgroundImg} w-full h-full object-cover top-0"/>`}
                     init={{
