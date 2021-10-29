@@ -64,7 +64,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='AccreIm1'
-                                    initialValue={`<img src=${cl1} alt="client 1" class="w-72 h-36 object-cover"/>`}
+                                    initialValue={`<img src="${cl1}" alt="client 1" class="w-72 h-36 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -107,7 +107,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='AccreIm2'
-                                    initialValue={`<img src=${cl2} alt="client 2" class="w-72 h-36 object-cover"/>`}
+                                    initialValue={`<img src="${cl2}" alt="client 2" class="w-72 h-36 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -149,7 +149,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='AccreIm3'
-                                    initialValue={`<img src=${cl3} alt="client 3" class="w-72 h-36 object-cover"/>`}
+                                    initialValue={`<img src="${cl3}" alt="client 3" class="w-72 h-36 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -187,8 +187,9 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
-                                    key='AccreIm3'
-                                    initialValue={`<img src=${cl4} alt="client 4" class="w-72 h-36 object-cover"/>`}
+                                    key='AccreIm4'
+                                    // initialValue={`<img src=${cl4} alt="client 4" class="w-72 h-36 object-cover"/>`}
+                                    initialValue={`<img src="${cl4}" alt="client 4" class="w-72 h-36 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
