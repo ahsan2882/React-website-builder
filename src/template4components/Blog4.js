@@ -1,9 +1,9 @@
 
 import React, { useRef, useState } from 'react';
 import { GithubPicker } from 'react-color';
-import news1 from '../assets/template4images/news1.png';
-import news2 from '../assets/template4images/news2.png';
-import news3 from '../assets/template4images/news3.png';
+// import news1 from '../assets/template4images/news1.png';
+// import news2 from '../assets/template4images/news2.png';
+// import news3 from '../assets/template4images/news3.png';
 import { Editor } from '@tinymce/tinymce-react';
 import Blog4Css from './Blog4.module.css';
 
@@ -63,7 +63,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='blogIm1'
-                                initialValue={`<img src=${news1} alt="news 1" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
+                                initialValue={`<img src="https://i.ibb.co/tJdb2JZ/news1.png" alt="news 1" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -141,7 +141,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='blogIm2'
-                                initialValue={`<img src=${news2} alt="news 2" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
+                                initialValue={`<img src="https://i.ibb.co/kqLdps8/news2.png" alt="news 2" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -219,7 +219,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='blogIm3'
-                                initialValue={`<img src=${news3} alt="news 3" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
+                                initialValue={`<img src="https://i.ibb.co/c8STtRy/news3.png" alt="news 3" class="${Blog4Css.contImg} border-b-4 border-solid mx-auto my-8"/>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
