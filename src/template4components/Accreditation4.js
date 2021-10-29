@@ -2,10 +2,6 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react';
 import { GithubPicker } from 'react-color';
-// import cl1 from '../assets/template4images/client1.png';
-// import cl2 from '../assets/template4images/client2.png';
-// import cl3 from '../assets/template4images/client3.png';
-// import cl4 from '../assets/template4images/client4.png';
 import Accre4Css from './Accreditation4.module.css';
 
 export default function Accreditation4({ showPopup, overSection, displayDevice }) {
