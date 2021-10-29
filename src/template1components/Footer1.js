@@ -144,7 +144,7 @@ export const Footer1 = () => {
           />        
           </h1>
           
-        <img style={{height:`200px`}} src="https://i.ibb.co/L0HJLvC/img-footer-map.png" alt="img-footer-map" border="0" />
+        <img style={{height:`200px`}} src="https://i.ibb.co/L0HJLvC/img-footer-map.png" alt="Temp1Img2" border="0" />
 
         </div>
 
