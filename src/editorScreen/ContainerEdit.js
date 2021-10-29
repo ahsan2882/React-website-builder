@@ -85,10 +85,13 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                 newDiv.className = "newText"
                 newDiv.innerHTML = editableFalse[0].innerHTML
                 editableFalse[0].parentNode.replaceChild(newDiv, editableFalse[0])
-            } else if (editableFalse[0].parentNode.nodeName === "BUTTON" || editableFalse[0].parentNode.nodeName === "H1" || editableFalse[0].parentNode.nodeName === "H2" || editableFalse[0].parentNode.nodeName === "H3" || editableFalse[0].parentNode.nodeName === "H4" || editableFalse[0].parentNode.nodeName === "H5" || editableFalse[0].parentNode.nodeName === "H6" || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<p")) || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<img"))) {
+            } else if (editableFalse[0].parentNode.nodeName === "BUTTON" || editableFalse[0].parentNode.nodeName === "H1" || editableFalse[0].parentNode.nodeName === "H2" || editableFalse[0].parentNode.nodeName === "H3" || editableFalse[0].parentNode.nodeName === "H4" || editableFalse[0].parentNode.nodeName === "H5" || editableFalse[0].parentNode.nodeName === "H6" || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<p")) || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<img")) || (editableFalse[0].parentNode.nodeName === "SECTION" && editableFalse[0].innerHTML.includes("<img"))) {
                 let nodeText = newDoc.createTextNode(editableFalse[0].innerHTML)
                 editableFalse[0].parentNode.replaceChild(nodeText, editableFalse[0])
             }
+            // console.log(editableFalse[0])
+            // console.log(editableFalse[0].parentNode.nodeName)
+            // console.log(editableFalse[0].innerHTML)
             i++
         }
         let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
