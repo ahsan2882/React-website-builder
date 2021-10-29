@@ -64,7 +64,7 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
                 <div className="w-96 ml-4">
                     <div className="list">
                         <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px` }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, background: `rgb(60,172,254)`}}> Pages </h2>} </div>
-                        <div className="w-48" style={isClicked ? { left: `0`, position: `absolute`, top: `100%`, transition: `0.25s all ease`, background: `white`, height: `100vh` } : { position: `absolute`, top: `100%`, left: `-10%`, height: `100vh`, background: `white`, boxShadow: `1px 4px 2px 2px rgba(0,0,0,0.3)`, transition: `0.25s all ease` }}>
+                        <div className="w-48" style={isClicked ? { left: `0`, position: `absolute`, top: `100%`, transition: `0.25s all ease`, background: `white`, height: `100vh` } : { position: `absolute`, top: `100%`, left: `-100%`, height: `100vh`, background: `white`, boxShadow: `1px 4px 2px 2px rgba(0,0,0,0.3)`, transition: `0.25s all ease` }}>
                             <div className="flex flex-col mt-12">
                                 {subPageList.map((item) => <h5 onClick={() => setTemplateSubPage(item)} style={{ padding: `12px 15px 12px`, borderRadius: `12px`, color: `white`, fontWeight: `600`, cursor: `pointer` }} className="m-6 bg-BL-600">{item}</h5>)}
                             </div>
