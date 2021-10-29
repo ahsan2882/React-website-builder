@@ -1,7 +1,7 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
-import background from '../assets/template4images/blog_15-770x545.png'
+// import background from '../assets/template4images/blog_15-770x545.png'
 import heroVideo from '../assets/videos/homepage-hero-bg.mp4'
 import Hero4Css from './HeroSection4.module.css'
 
@@ -120,7 +120,7 @@ const HeroSection4ComponentImage = ({ displayDevice }) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='Service4Im1'
-                    initialValue={`<img src=${background} alt="london" class="${Hero4Css.backgroundImg} w-full h-full object-cover top-0"/>`}
+                    initialValue={`<img src="https://i.ibb.co/C8ZPc41/blog-15-770x545.png" alt="london" class="${Hero4Css.backgroundImg} w-full h-full object-cover top-0"/>`}
                     init={{
                         images_upload_handler: function (blobInfo, success, failure) {
                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -203,7 +203,7 @@ const HeroSection4ComponentImage = ({ displayDevice }) => {
 const HeroSection4ComponentVideo = ({ displayDevice }) => {
     const editorRef = useRef(null);
     const inputRef = useRef(null);
-    const [source, setSource] = useState(null);
+    const [source, setSource] = useState(heroVideo);
     const handleFileChange = (event) => {
         console.log(event.target.files[0])
         const file = event.target.files[0];
@@ -222,12 +222,14 @@ const HeroSection4ComponentVideo = ({ displayDevice }) => {
             >
                 <input
                     ref={inputRef}
-                    className="VideoInput_input absolute top-0 left-0 z-10"
+                    className="VideoInput_input absolute top-0 left-0 z-10 toBeRemoved"
                     type="file"
                     onChange={handleFileChange}
                     accept=".mov,.mp4"
                 />
-                {!source && <button onClick={handleChoose}>Choose</button>}
+                {/* <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
+                <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" className="absolute top-0 left-0 z-10" multiple /> */}
+                {!source && <button className="toBeRemoved" onClick={handleChoose}>Choose</button>}
                 {source && (
                     <video
                         className="VideoInput_video absolute top-0"
