@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Nav4Css from './Navigation4.module.css'
-import navlogo from '../assets/template4images/thefnflogo.png'
+// import navlogo from '../assets/template4images/thefnflogo.png'
 
 export default function Navigation4({ displayDevice }) {
     const [activeHamburger, setActiveHamburger] = useState(false);
@@ -11,7 +11,7 @@ export default function Navigation4({ displayDevice }) {
         <>
             <div className="w-full" style={{ backgroundColor: 'rgba(0, 193, 207, 0.75)'}}>
                 <div className={`flex justify-between items-center py-6 px-6 ${Nav4Css.container1}`}>
-                    <img src={navlogo} alt="nav-logo" className="w-52" />
+                    <img src="https://i.ibb.co/Xyt25vh/thefnflogo.png" alt="nav-logo" className="w-52" />
                     <nav>
                         <ul className={displayDevice ? `${Nav4Css.navBar}` : `${Nav4Css.navBarM}`} style={(!displayDevice && activeHamburger) ? {left: "0"} : null}>
                             <li className={`${Nav4Css.navBarLink} hover:text-black`}>
