@@ -60,7 +60,9 @@
 }
 
 .aboutImg {
-    border-radius: 2rem;
+    border-radius: 10px;
+    width: 36rem;
+    height: 24rem;
 }
 
 .container02 {
