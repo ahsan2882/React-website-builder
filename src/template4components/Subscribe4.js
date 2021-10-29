@@ -1,6 +1,5 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
-// import rsswifi from '../assets/template4images/rsswifi.png'
 import Subscribe4Css from './Subscribe4.module.css'
 
 export default function Subscribe4({displayDevice}) {
