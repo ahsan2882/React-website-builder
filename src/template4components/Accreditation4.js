@@ -2,10 +2,10 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react';
 import { GithubPicker } from 'react-color';
-import cl1 from '../assets/template4images/client1.png';
-import cl2 from '../assets/template4images/client2.png';
-import cl3 from '../assets/template4images/client3.png';
-import cl4 from '../assets/template4images/client4.png';
+// import cl1 from '../assets/template4images/client1.png';
+// import cl2 from '../assets/template4images/client2.png';
+// import cl3 from '../assets/template4images/client3.png';
+// import cl4 from '../assets/template4images/client4.png';
 import Accre4Css from './Accreditation4.module.css';
 
 export default function Accreditation4({ showPopup, overSection, displayDevice }) {
@@ -64,7 +64,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='AccreIm1'
-                                    initialValue={`<img src="${cl1}" alt="client 1" class="w-72 h-36 object-cover"/>`}
+                                    initialValue={`<img src="https://i.ibb.co/cXXJYMk/client1.png" alt="client 1" class="w-72 h-36 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -107,7 +107,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='AccreIm2'
-                                    initialValue={`<img src="${cl2}" alt="client 2" class="w-72 h-36 object-cover"/>`}
+                                    initialValue={`<img src="https://i.ibb.co/dBjdw5Z/client2.png" alt="client 2" class="w-72 h-36 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -149,7 +149,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='AccreIm3'
-                                    initialValue={`<img src="${cl3}" alt="client 3" class="w-72 h-36 object-cover"/>`}
+                                    initialValue={`<img src="https://i.ibb.co/4P60VRN/client3.png" alt="client 3" class="w-72 h-36 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -189,7 +189,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                     inline={true}
                                     key='AccreIm4'
                                     // initialValue={`<img src=${cl4} alt="client 4" class="w-72 h-36 object-cover"/>`}
-                                    initialValue={`<img src="${cl4}" alt="client 4" class="w-72 h-36 object-cover"/>`}
+                                    initialValue={`<img src="https://i.ibb.co/92C0Hwn/client4.png" alt="client 4" class="w-72 h-36 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
