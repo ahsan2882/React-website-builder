@@ -1,14 +1,5 @@
 import React, { useRef }  from 'react'
 import Accreditation2moduleCss from './Accreditation2.module.css'
-import Acc1 from '../assets/template2images/accrediation1.jpg'
-import dot from '../assets/template2images/dot.png'
-
-import Acc2 from '../assets/template2images/accrediation2.jpg'
-import Acc3 from '../assets/template2images/accrediation3.jpg'
-import Acc4 from '../assets/template2images/accrediation4.jpg'
-import Acc5 from '../assets/template2images/accrediation5.jpg'
-import Acc6 from '../assets/template2images/accrediation6.jpg'
-import Acc7 from '../assets/template2images/accrediation7.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 
 
@@ -52,7 +43,8 @@ export const Accreditation2 = () => {
           />
           </div>
           <div className={`${Accreditation2moduleCss.divMainHeading}`}>
-            <div className={`${Accreditation2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left" /> <img className={`${Accreditation2moduleCss.dot}`} src={dot} data-aos="fade" alt="Dot"/>
+            <div className={`${Accreditation2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left" />
+            <img className={`${Accreditation2moduleCss.dot}`} src="https://i.ibb.co/VBwYpF5/dot.png" data-aos="fade" alt="Dot" />
             <div className={`${Accreditation2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-right"> </div>
           </div>
         </section>
@@ -65,7 +57,7 @@ export const Accreditation2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Acce1'
-                initialValue={`<img src="${Acc1}" alt="Client 3" class=" w-72 h-48 object-contain"/>`}
+                  initialValue={`<img src="https://i.ibb.co/mzv3r2W/accrediation1.jpg" alt="Client 1" class=" w-72 h-48 object-contain"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -123,7 +115,7 @@ export const Accreditation2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Acce9'
-                initialValue={`<img src="${Acc2}" alt="Acce2" class=" w-72 h-48 object-contain"/>`}
+                  initialValue={`<img src="https://i.ibb.co/L8Cd7Rc/accrediation2.jpg" alt="accrediation2" class=" w-72 h-48 object-contain"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -177,7 +169,7 @@ export const Accreditation2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Acce87'
-                initialValue={`<img src="${Acc3}" alt="Acce3" class=" w-72 h-48 object-contain"/>`}
+                  initialValue={`<img src="https://i.ibb.co/64Y67mm/accrediation3.jpg" alt="accrediation3" class=" w-72 h-48 object-contain"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -231,7 +223,7 @@ export const Accreditation2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Acce57'
-                initialValue={`<img src="${Acc4}" alt="Acce4" class=" w-72 h-48 object-contain"/>`}
+                  initialValue={`<img src="https://i.ibb.co/wQ0F5Wx/accrediation4.jpg" alt="accrediation4" class=" w-72 h-48 object-contain"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -287,7 +279,7 @@ export const Accreditation2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Acce95'
-                initialValue={`<img src="${Acc5}" alt="Acce5" class=" w-72 h-48 object-contain"/>`}
+                  initialValue={`<img src="https://i.ibb.co/qm8c9hZ/accrediation5.jpg" alt="accrediation5" class=" w-72 h-48 object-contain"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -344,7 +336,7 @@ export const Accreditation2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Acce45'
-                initialValue={`<img src="${Acc6}" alt="Acce6" class=" w-72 h-48 object-contain"/>`}
+                  initialValue={`<img src="https://i.ibb.co/MBTshjL/accrediation6.jpg" alt="accrediation6" class=" w-72 h-48 object-contain"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -399,7 +391,7 @@ export const Accreditation2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Acce47'
-                initialValue={`<img src="${Acc7}" alt="Acce7" class=" w-72 h-48 object-contain"/>`}
+                  initialValue={`<img src="https://i.ibb.co/gmxmDgF/accrediation7.jpg" alt="accrediation7" class=" w-72 h-48 object-contain"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
