@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import Guard2moduleCss from './Guard2.module.css'
-import dot from '../assets/template2images/dot.png'
 
 export const Guard2 = () => {
   const editorRef = useRef();
@@ -30,7 +29,7 @@ export const Guard2 = () => {
       </div>
       <div className={`${Guard2moduleCss.divMainHeading}`}>
         <div className={`${Guard2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div> 
-        <img className={`${Guard2moduleCss.dot}`} src={dot} data-aos="fade" alt="dot"/>
+              <img className={`${Guard2moduleCss.dot}`} src="https://i.ibb.co/VBwYpF5/dot.png" data-aos="fade" alt="dot"/>
         <div className={`${Guard2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-right"> </div>
       </div>
     </section>
