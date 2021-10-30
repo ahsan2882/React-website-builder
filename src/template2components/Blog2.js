@@ -2,10 +2,6 @@ import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 
 import Blog2moduleCss from './Blog2.module.css'
-import news1 from '../assets/template2images/news1.jpg'
-import news2 from '../assets/template2images/news2.jpg'
-import news3 from '../assets/template2images/news3.jpg'
-import dot from '../assets/template2images/dot.png'
 
 export const Blog2 = () => {
   const editorRef = useRef();
@@ -48,7 +44,8 @@ export const Blog2 = () => {
 
         </div>
         <div className={`${Blog2moduleCss.divMainHeading}`}>
-          <div className={`${Blog2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div> <img className={`${Blog2moduleCss.dot}`} src={dot} data-aos="fade" alt="dot" />
+          <div className={`${Blog2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div>
+          <img className={`${Blog2moduleCss.dot}`} src="https://i.ibb.co/VBwYpF5/dot.png" data-aos="fade" alt="dot" />
           <div className={`${Blog2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-right"> </div>
         </div>
       </section>
@@ -61,7 +58,7 @@ export const Blog2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='AccreIm1'
-                initialValue={`<img src="${news1}" alt="news 1" class="w-96 h-60 object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/Xbp3jt5/news1.jpg" alt="news1" class="w-96 h-60 object-cover"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -140,7 +137,7 @@ export const Blog2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='AccreIm1'
-                initialValue={`<img src="${news2}" alt="news 2" class="w-96 h-60 object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/fCtnB7P/news2.jpg" alt="news2" class="w-96 h-60 object-cover"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -218,7 +215,7 @@ export const Blog2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='AccreIm1'
-                initialValue={`<img src="${news3}" alt="news 3" class="w-96 h-60 object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/6XHDXXN/news3.jpg" alt="news3" class="w-96 h-60 object-cover"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
