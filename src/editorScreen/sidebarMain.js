@@ -13,6 +13,7 @@ import footerAss1 from '../assets/editingScreenAssets/footerEditAssets/footer1.p
 import footerAss2 from '../assets/editingScreenAssets/footerEditAssets/footer2.png'
 import footerAss3 from '../assets/editingScreenAssets/footerEditAssets/footer3.png'
 import footerAss4 from '../assets/editingScreenAssets/footerEditAssets/footer4.png'
+import footerAss5 from '../assets/editingScreenAssets/footerEditAssets/footer5.JPG'
 
 import pricingAss1 from '../assets/editingScreenAssets/pricingEditAssets/pricing1.png'
 import pricingAss2 from '../assets/editingScreenAssets/pricingEditAssets/pricing2.png'
@@ -86,7 +87,8 @@ export const sidebarAssets = [
             { imageName: footerAss1, id: "footer1" },
             { imageName: footerAss2, id: "footer2" },
             { imageName: footerAss3, id: "footer3" },
-            { imageName: footerAss4, id: "footer4" }
+            { imageName: footerAss4, id: "footer4" },
+            { imageName: footerAss5, id: "footer5" }
         ]
     },
     {
