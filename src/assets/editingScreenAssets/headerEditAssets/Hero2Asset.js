@@ -51,7 +51,25 @@ export default function Hero2Asset() {
           />
         </div>
         <div className="w-1/2">
-          <img src="https://i.ibb.co/0ZMZXfV/guard4.png" alt="guard4" style={{ width: "48rem", height: "50rem" }} class="object-cover" />
+          {/* <img src="https://i.ibb.co/0ZMZXfV/guard4.png" alt="guard4" style={{ width: "48rem", height: "50rem" }} class="object-cover" /> */}
+          <Editor
+            onInit={(evt, editor) => editorRef.current = editor}
+            inline={true}
+            key='Service4Im1'
+            initialValue={`<img src="https://i.ibb.co/0ZMZXfV/guard4.png" alt="guard4" style={{ width: "48rem", height: "50rem" }} class="object-cover"/>`}
+            init={{
+              images_upload_handler: function (blobInfo, success, failure) {
+                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+              },
+              images_upload_url: '/upload-images',
+              forced_root_block: "",
+              menubar: false,
+              plugins: [
+                "image"
+              ],
+              toolbar: 'image'
+            }}
+          />
         </div>
       </section>
     </>
