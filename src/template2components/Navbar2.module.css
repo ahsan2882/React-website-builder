@@ -6,7 +6,7 @@
   right: 0;
   width: 100%;
   height: 80px;
-  background-color: black;
+  background-color: transparent;
   z-index: 4;
 }
 
@@ -75,8 +75,8 @@
 .call-to-action {
   text-decoration: none;
   text-transform: uppercase;
-  background: var(--clr-light);
-  color: var(--clr-primary);
+  background: white;
+  color: #c0272d;
   font-weight: 900;
   white-space: nowrap;
   padding: 0 15px;
@@ -208,7 +208,7 @@
     display: block;
     transition: transform 0.25s, opacity 0.25s;
     cursor: pointer;
-    color: var(--clr-secondary);
+    color:black;
   }
 
   .fa-times:hover {
@@ -238,6 +238,6 @@
   }
 
   .navbar .navbar1 .nav-links .menus li a {
-    color: var(--clr-secondary);
+    color:black;
   }
 }
