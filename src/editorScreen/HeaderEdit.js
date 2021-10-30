@@ -9,23 +9,28 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
     const onClicked = () => setIsClicked((condition) => !condition);
     const [subPageList, setSubPageList] = useState([]);
     const [newPath, setNewPath] = useState([]);
+    const [currentTemp, setCurrentTemp] = useState([]);
 
     useEffect(() => {
         if (templateNum === 1) {
             setNewPath('/preview/template-1')
             setSubPageList(subPages.template1Subpages)
+            setCurrentTemp("Template-1")
         }
         else if (templateNum === 2) {
             setNewPath('/preview/template-2')
             setSubPageList(subPages.template2Subpages)
+            setCurrentTemp("Template-2")
         }
         else if (templateNum === 3) {
             setNewPath('/preview/template-3')
             setSubPageList(subPages.template3Subpages)
+            setCurrentTemp("Template-3")
         }
         else if (templateNum === 4) {
             setNewPath('/preview/template-4')
             setSubPageList(subPages.template4Subpages)
+            setCurrentTemp("Template-4")
         }
         else if (templateNum === 0) {
             setNewPath('/preview/new-template')
@@ -40,11 +45,11 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
     const saveTemplate = () => {
         setSaveClicked(true);
         setTimeout(function () { setSaveClicked(true); }, 3000);
-        localStorage.setItem('Template-4', JSON.stringify(toSave))
-        console.log(fileData)
+        localStorage.setItem(currentTemp, JSON.stringify(toSave))
+        // console.log(fileData)
     }
     const exportCode = () => {
-        console.log("Sending Request")
+        // console.log("Sending Request")
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -58,7 +63,7 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
             .then((fileText) => {
                 let blob = new Blob([fileText], { type: "text/html;charset=utf-8" })
                 FileSaver.saveAs(blob, "index.html")
-                console.log(fileText, "header check file content")
+                // console.log(fileText, "header check file content")
             })
             .catch(error => console.log(error))
     }
