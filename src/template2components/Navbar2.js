@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import Navbar2moduleCss from './Navbar2.module.css'
-import logo from '../assets/template2images/securoty_d.png'
 import { Editor } from '@tinymce/tinymce-react';
 
 export const Navbar2 = () => {
@@ -95,7 +94,7 @@ export const Navbar2 = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className={`${Navbar2moduleCss.logo}`}><a href={2}>
+                        <div className={`${Navbar2moduleCss.logo}`}>
                             
                             
                             
@@ -104,7 +103,7 @@ export const Navbar2 = () => {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='Navbar(2)44'
-                                    initialValue={`<img src="${logo}"  alt="client 1" class="w-20 h-20 object-cover"/>`}
+                                initialValue={`<img src="https://i.ibb.co/Lpk5L5z/securoty-d.png"  alt="client 1" class="w-20 h-20 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -117,8 +116,7 @@ export const Navbar2 = () => {
                                         ],
                                         toolbar: 'image'
                                     }}
-                                />
-                                </a></div>
+                                /></div>
                         <div className={`${Navbar2moduleCss['nav-links']}`}>
 
                             <ul className={`${Navbar2moduleCss.menus}`}>
