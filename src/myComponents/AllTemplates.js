@@ -11,6 +11,7 @@ import Form2 from "../template2components/template2contactcomponent/Form2";
 import Feedback2 from "../template2components/template2contactcomponent/Feedback2";
 import { Testimonials1 } from "../template1components/Testimonials1";
 import { Navbar2 } from "../template2components/Navbar2";
+import {Hero2} from '../template2components/Hero2'
 import { Services2 } from "../template2components/Services2";
 import { Pricing2 } from "../template2components/Pricing2";
 import { Blog2}   from '../template2components/Blog2'
@@ -47,7 +48,7 @@ import Guard3 from '../template3components/Guard3'
 export let templateComponents = {
     template1Components: [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
     template2Components:{
-        "Home": [Navbar2,Services2,Pricing2,Blog2,Client2,Guard2,Program2, About2,Accreditation2,Footer2],
+        "Home": [Navbar2,Hero2,Services2,Pricing2,Blog2,Client2,Guard2,Program2, About2,Accreditation2,Footer2],
         "About" : [About2bannercomponent,About2Vision,About2service,Pricing2,Guard2,Accreditation2,About2policy,Footer2],
         "Contact": [Contact2,Form2,Feedback2,Footer2]
     },
