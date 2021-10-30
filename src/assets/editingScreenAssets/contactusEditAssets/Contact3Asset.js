@@ -15,92 +15,78 @@ export default function Contact3Asset() {
                                 <div className={Contact3AssetCss['icon-head']}>
                                     <lord-icon src="https://cdn.lordicon.com/xtkehzkm.json" trigger="loop" colors={{ "primary": "#000000", "secondary": "#c01120" }}
                                         style={{ "width": "70px", "height": "70px" }}></lord-icon>
-                                    <Editor
-                                        onInit={(evt, editor) => (editorRef.current = editor)}
-                                        inline={true}
-                                        key="Contact1asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
-                                        initialValue="<h1> Address </h1>"
-                                        init={{
-                                            forced_root_block:"",
-                                            menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                    <h1>
+                                        <Editor
+                                            onInit={(evt, editor) => (editorRef.current = editor)}
+                                            inline={true}
+                                            key="Contact1asset3"
+                                            initialValue="Address"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
-                                    />
-
+                                        />
+                                    </h1>
                                 </div>
                                 <div className={Contact3AssetCss['separator-one']}></div>
-                                <p className={Contact3AssetCss.paragraph}> <Editor
+                                {/* <p className={Contact3AssetCss.paragraph}> */}
+                                    <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
                                     inline={true}
                                     key="Contact2asset3"
-                                    tinymceScriptSrc={
-                                        process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                    }
-                                    initialValue="London Office"
+                                    initialValue={`<p class="${Contact3AssetCss.paragraph}">London Office</p>`}
                                     init={{
-                                        forced_root_block:"",
+                                        plugins: [
+                                            "link"
+                                        ],
+                                        forced_root_block: "",
                                         menubar: false,
-                                        toolbar:
-                                            "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                            "alignright alignjustify | fontselect",
-                                        fontsize_formats:
-                                            "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                        font_formats:
-                                            "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
-                                    }}
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | fontselect',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
                                 />
-
-                                    <br />
                                     <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact3asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
-                                        initialValue=" 418-426 Lewisham High Street, SE13 6LJ"
+                                    initialValue={`<p>418-426 Lewisham High Street, SE13 6LJ</p>`}
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
                                     />
-
-                                </p>
                                 <p className={Contact3AssetCss.paragraph}>
                                     <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact4asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="Birmingham Office"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
                                     />
                                     <br />
@@ -108,20 +94,17 @@ export default function Contact3Asset() {
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact4asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="3 Brindley Place, B1 2JB"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
                                     />
                                 </p>
@@ -130,20 +113,17 @@ export default function Contact3Asset() {
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact5asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue=" 3 Brindley Place, B1 2JBManchester Office"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
                                     />
 
@@ -152,20 +132,17 @@ export default function Contact3Asset() {
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact6asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="Chancery Place, 50 Brown Street, M2 2JG"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
                                     />
 
@@ -182,20 +159,17 @@ export default function Contact3Asset() {
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact6asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="<h1> Phone </h1>"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
                                     />
 
@@ -203,121 +177,105 @@ export default function Contact3Asset() {
                                 </div>
                                 <div className={Contact3AssetCss['separator-one']}></div>
                                 <p className={Contact3AssetCss.paragraph}>
-                                <Editor
+                                    <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact7asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="London: 020 8690 1903"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
-                                    />  
-                                    </p>
+                                    />
+                                </p>
 
 
                                 <p className={Contact3AssetCss.paragraph}>
-                                <Editor
+                                    <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact8asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="Birmingham: 0121 824 1075"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
-                                    />    
-                                    </p>
-
-                                <p className={Contact3AssetCss.paragraph}>
-                                <Editor
-                                        onInit={(evt, editor) => (editorRef.current = editor)}
-                                        inline={true}
-                                        key="Contact9asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
-                                        initialValue="Birmingham: 0121 824 1076"
-                                        init={{
-                                            forced_root_block:"",
-                                            menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
-                                        }}
-                                    />    
+                                    />
                                 </p>
 
                                 <p className={Contact3AssetCss.paragraph}>
-                                <Editor
+                                    <Editor
+                                        onInit={(evt, editor) => (editorRef.current = editor)}
+                                        inline={true}
+                                        initialValue="Birmingham: 0121 824 1076"
+                                        init={{
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
+                                            menubar: false,
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
+                                    />
+                                </p>
+
+                                <p className={Contact3AssetCss.paragraph}>
+                                    <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact10asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="Manchester: 0161 511 3397"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
-                                    />    
+                                    />
                                 </p>
                                 <p className={Contact3AssetCss.paragraph}>
-                                <Editor
+                                    <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact11asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="Manchester: 0161 511 3398"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
-                                    />    
+                                    />
                                 </p>
 
-                              
+
                             </div>
                             <div className={Contact3AssetCss['c-info']}>
                                 <div className={Contact3AssetCss['icon-head']}>
@@ -328,47 +286,41 @@ export default function Contact3Asset() {
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact12asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="<h1> Email </h1>"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
-                                    />    
-                                    
+                                    />
+
                                 </div>
                                 <div className={Contact3AssetCss['separator-one']}></div>
                                 <p className={Contact3AssetCss.paragraph}>
-                                <Editor
+                                    <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact13asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="info@critrixconsultancy.com"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
-                                    /> 
-                                     </p>
+                                    />
+                                </p>
 
 
 
@@ -379,47 +331,43 @@ export default function Contact3Asset() {
 
                                 <div className={Contact3AssetCss['heading2-main-title']}>
                                     <div className={Contact3AssetCss['sub-title2']}>
-                                    <Editor
-                                        onInit={(evt, editor) => (editorRef.current = editor)}
-                                        inline={true}
-                                        key="Contact14asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
-                                        initialValue="<h3>Best In Town</h3>"
-                                        init={{
-                                            menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                        <Editor
+                                            onInit={(evt, editor) => (editorRef.current = editor)}
+                                            inline={true}
+                                            key="Contact14asset3"
+                                            initialValue="<h3>Best In Town</h3>"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
-                                    />
-                                      
+                                        />
+
                                     </div>
                                     <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="Contact14asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="<h1>CONTACT</h1>"
                                         init={{
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
                                     />
-                                  
+
                                 </div>
                             </section>
 
