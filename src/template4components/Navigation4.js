@@ -1,5 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Nav4Css from './Navigation4.module.css'
 
 export default function Navigation4({ displayDevice }) {
@@ -35,9 +36,9 @@ export default function Navigation4({ displayDevice }) {
                     <nav>
                         <ul className={displayDevice ? `${Nav4Css.navBar}` : `${Nav4Css.navBarM}`} style={(!displayDevice && activeHamburger) ? {left: "0"} : null}>
                             <li className={`${Nav4Css.navBarLink} hover:text-black`}>
-                                <button className="text-white">HOME</button>
+                                <Link to="" className="text-white">HOME</Link>
                             </li>
-                            <li className={`${Nav4Css.navBarLink} hover:text-black`}><button className="text-white">ABOUT US</button></li>
+                            <li className={`${Nav4Css.navBarLink} hover:text-black`}><Link to="" className="text-white">ABOUT US</Link></li>
                             <li className={`${Nav4Css.navBarLink} hover:text-black ${Nav4Css.dropdownServiceListItem}`}>
                                 <section className="cursor-pointer my-4">SERVICES</section>
                                 <ul className={`${Nav4Css.dropdownServicesContent} list-none p-0 absolute`}>
