@@ -7,9 +7,9 @@ export default function Hero2Asset() {
   return (
     <>
       <section className="flex justify-evenly items-center">
-        <div className="w-1/2 text-center">
+        <div className="w-1/2 ml-20">
           {/* <h1>Security Guards for your Everyday needs</h1> */}
-          <h1 className="text-6xl w-11/12 font-bold text-blue-700">
+          <h1 className="text-4xl w-11/12 font-bold text-blue-700">
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
@@ -35,7 +35,7 @@ export default function Hero2Asset() {
             inline={true}
             key='hero4ed2'
             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-            initialValue={`<p class="text-2xl w-4/5">Ad elit magna ipsum ea. Culpa fugiat ipsum laborum in tempor ex ea occaecat qui minim adipisicing anim proident pariatur. Quis cillum proident dolor ipsum quis ea consectetur aliqua commodo.</p>`}
+            initialValue={`<p class="text-xl w-4/5">Ad elit magna ipsum ea. Culpa fugiat ipsum laborum in tempor ex ea occaecat qui minim adipisicing anim proident pariatur. Quis cillum proident dolor ipsum quis ea consectetur aliqua commodo.</p>`}
             init={{
               plugins: [
                 "link"
@@ -56,7 +56,7 @@ export default function Hero2Asset() {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Service4Im1'
-            initialValue={`<img src="https://i.ibb.co/0ZMZXfV/guard4.png" alt="guard4" style={{ width: "48rem", height: "50rem" }} class="object-cover"/>`}
+            initialValue={`<img src="https://i.ibb.co/0ZMZXfV/guard4.png" alt="guard4" class="object-cover ${Hero2Css.bgImg}"/>`}
             init={{
               images_upload_handler: function (blobInfo, success, failure) {
                 success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
