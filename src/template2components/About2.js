@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import About2moduleCss from './About2.module.css'
 import  service from '../assets/template2images/service_05-1280x960.jpg'
-import logo from '../assets/template2images/dot.png'
 import { Editor } from '@tinymce/tinymce-react';
 
 export const About2 = () => {
@@ -46,7 +45,8 @@ export const About2 = () => {
           />
         </div>
         <div class={`${About2moduleCss.divMainHeading}`}>
-          <div class={`${About2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div><img className={`${About2moduleCss.dot}`} src={logo} data-aos="fade" alt="this is"/>
+            <div class={`${About2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div>
+            <img className={`${About2moduleCss.dot}`} src="https://i.ibb.co/VBwYpF5/dot.png" data-aos="fade" alt="dot" />
           <div class={`${About2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-right"> </div>
         </div>
       </section>
@@ -58,7 +58,7 @@ export const About2 = () => {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='AccreIm1'
-                                    initialValue={`<img src="${service}" alt="Service1" class="w-96 h-60 object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/NWGbFbP/service-05-1280x960.jpg" alt="Service1" class="w-96 h-60 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
