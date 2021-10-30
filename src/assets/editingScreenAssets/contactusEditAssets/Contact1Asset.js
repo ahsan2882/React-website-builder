@@ -14,21 +14,18 @@ export default function Contact1Asset() {
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
                                 key="contact1asset1"
-                                tinymceScriptSrc={
-                                    process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                }
                                 initialValue="Contact us"
                                 init={{
-                                    forced_root_block:"",
+                                    plugins: [
+                                        "link"
+                                    ],
+                                    forced_root_block: "",
                                     menubar: false,
-                                    toolbar:
-                                        "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                        "alignright alignjustify | fontselect",
-                                    fontsize_formats:
-                                        "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                    font_formats:
-                                        "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
-                                }}
+                                    toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | fontselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        }}
                             />
                         </h1>
                         {/* <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-100">Security is not a product, it is a process..</p> */}
@@ -37,10 +34,7 @@ export default function Contact1Asset() {
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
                                 key="contact1asset2"
-                                tinymceScriptSrc={
-                                    process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                }
-                                initialValue="Security is not a product, it is a process.."
+                                initialValue={`<p class=" lg:w-2 /3 mx-auto leading-relaxed text-base text-gray-100">Security is not a product, it is a process..</p>`}
                                 init={{
                                     forced_root_block:"",
                                     menubar: false,
@@ -85,33 +79,27 @@ export default function Contact1Asset() {
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="contact1asset3"
-                                        tinymceScriptSrc={
-                                            process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                        }
                                         initialValue="critrixconsultancy@gmail.com"
                                         init={{
-                                            forced_root_block:"",
+                                            plugins: [
+                                                "link"
+                                            ],
+                                            forced_root_block: "",
                                             menubar: false,
-                                            toolbar:
-                                                "bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter " +
-                                                "alignright alignjustify | fontselect",
-                                            fontsize_formats:
-                                                "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                            font_formats:
-                                                "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                'alignright alignjustify | fontselect',
+                                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                         }}
                                     />
                                 </button>
                                 {/* <p className="leading-normal my-5 text-white">4010 Feeney Way Saint Cloud, MN 56301</p> */}
-                                <p className="leading-normal my-5 text-white">
+                                {/* <p className="leading-normal my-5 text-white"> */}
                                     <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
                                     inline={true}
                                     key="contact1asset4"
-                                    tinymceScriptSrc={
-                                        process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
-                                    }
-                                        initialValue="4010 Feeney Way Saint Cloud, MN 56301"
+                                        initialValue={`<p class="leading-normal my-5 text-white">4010 Feeney Way Saint Cloud, MN 56301</p>`}
                                     init={{
                                         forced_root_block:"",
                                         menubar: false,
@@ -124,7 +112,7 @@ export default function Contact1Asset() {
                                             "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
                                     }}
                                     />
-                                </p>
+                                {/* </p> */}
                                 <span className="inline-flex">
                                     <button className="text-gray-100">
                                         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
