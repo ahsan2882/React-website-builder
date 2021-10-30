@@ -1,5 +1,5 @@
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useEffect, useRef, useState } from 'react'
+import React, {  useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import heroVideo from '../assets/videos/homepage-hero-bg.mp4'
 import Hero4Css from './HeroSection4.module.css'
