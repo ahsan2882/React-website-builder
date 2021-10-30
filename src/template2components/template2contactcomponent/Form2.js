@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import Form2Css from './Form2.module.css'
-import Dot from '../template2contactcomponent/dot.png'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Form2() {
   const editorRef = useRef(null);
@@ -238,7 +237,8 @@ export default function Form2() {
 
               </div>
               <div className={Form2Css['divMainHeading']}>
-                <div className={Form2Css['divMainHeadingSubDiv']} data-aos="fade-left"></div> <img className={Form2Css.dot} src={Dot} data-aos="fade" alt="form2Im" />
+                <div className={Form2Css['divMainHeadingSubDiv']} data-aos="fade-left"></div>
+                <img className={Form2Css.dot} src="https://i.ibb.co/VBwYpF5/dot.png" data-aos="fade" alt="form2Im" />
                 <div className={Form2Css['divMainHeadingSubDiv']} data-aos="fade-right"> </div>
               </div>
             </section>
