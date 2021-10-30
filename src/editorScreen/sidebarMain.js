@@ -73,11 +73,11 @@ export const sidebarAssets = [
     {
         assetName: 'header',
         assets: [
-            { imageName: heroAss1, id: "hero1" },
-            { imageName: heroAss2, id: "hero2" },
-            { imageName: heroAss3, id: "hero3" },
-            { imageName: heroAss4, id: "hero4" },
-            { imageName: heroAss5, id: "hero5" }
+            { imageName: heroAss1, id: "header1" },
+            { imageName: heroAss2, id: "header2" },
+            { imageName: heroAss3, id: "header3" },
+            { imageName: heroAss4, id: "header4" },
+            { imageName: heroAss5, id: "header5" }
         ]
     },
     {
