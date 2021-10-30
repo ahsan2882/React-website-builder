@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import About2Css from './About2banner.module.css'
-import Img1 from '../template2aboutcomponent/about-us-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 export default function About2bannercomponent() {
     const editorRef = useRef(null);
@@ -27,7 +26,7 @@ export default function About2bannercomponent() {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                    initialValue={`<img src=${Img1} alt="about-banner" />`}
+                initialValue={`<img src="https://i.ibb.co/Fmz3cdv/about-us-banner.jpg" alt="about-banner" />`}
                     init={
                         {
                             images_upload_handler: function (blobInfo, success, failure) {
