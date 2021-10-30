@@ -17,9 +17,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
-            console.log(item)
             let valueString = Object.values(item)[0];
-            console.log(valueString)
             let Comp = assetObject[valueString]
             setUpdateChildren([...updateChildren, Comp])
         },
@@ -101,7 +99,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     const getCSSData = () => {
         let cssString = ''
         let styleComponent = document.getElementsByTagName("style")
-        console.log(styleComponent.length)
+        // console.log(styleComponent.length)
         let i = 0
         while (i < styleComponent.length) {
             cssString += styleComponent[i].innerHTML
