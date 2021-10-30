@@ -1,6 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react';
-import React, {useRef} from 'react'
-
+import React, { useRef } from 'react'
+import Hero3Css from './Hero3.module.css'
 export default function Hero3Asset() {
     const editorRef = useRef(null);
     return (
@@ -13,7 +13,7 @@ export default function Hero3Asset() {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='Service4Im1'
-                    initialValue={`<img src="https://i.ibb.co/c8STtRy/news3.png" alt="news3" class="object-cover" style="width:96rem; height:50rem;"/>`}
+                    initialValue={`<img src="https://i.ibb.co/c8STtRy/news3.png" alt="news3" class="object-cover ${Hero3Css.bgImg}"/>`}
                     init={{
                         images_upload_handler: function (blobInfo, success, failure) {
                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -33,7 +33,6 @@ export default function Hero3Asset() {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='hero4ed1'
-                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                             initialValue="Security Services"
                             init={{
                                 plugins: [
@@ -52,7 +51,6 @@ export default function Hero3Asset() {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='hero4ed2'
-                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                         initialValue={`<p class="text-2xl text-white">Ad elit magna ipsum ea. Culpa fugiat ipsum laborum in tempor ex ea occaecat qui minim adipisicing anim proident pariatur. Quis cillum proident dolor ipsum quis ea consectetur aliqua commodo.</p>`}
                         init={{
                             plugins: [
