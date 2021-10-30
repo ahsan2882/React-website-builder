@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import Contact2Css from './Contact2.module.css'
-import Img1 from '../template2contactcomponent/contact-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Contact2() {
     const editorRef = useRef(null);
@@ -31,7 +30,7 @@ export default function Contact2() {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='Contact2'
-                    initialValue={`<img src=${Img1} alt="contact-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/n0LTNT3/contact-banner.jpg" alt="contact-banner" />`}
                     init={
                         {
                             images_upload_handler: function (blobInfo, success, failure) {
