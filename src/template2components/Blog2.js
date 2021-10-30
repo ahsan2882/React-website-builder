@@ -13,7 +13,22 @@ export const Blog2 = () => {
   return (
     <>
       <section className={`${Blog2moduleCss['head-main']}`}>
-        <div className={`${Blog2moduleCss.MainHeading}`}><span className={`${Blog2moduleCss.SpanColor}`}> latest </span> News</div>
+      <h1 class={`${Blog2moduleCss.MainHeading}`}>
+                    <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='About(2)48'
+                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                        initialValue={`<span class="${Blog2moduleCss.SpanColor}">Latest </span> News`}
+                        init={{
+                            forced_root_block: "",
+                            menubar: false,
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                        }}
+                    />
+                </h1>
         <div className={`${Blog2moduleCss.spanDesc}`}>
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
@@ -113,7 +128,7 @@ export const Blog2 = () => {
                       fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                     }}
                   />
-                  <i className="fas fa-long-arrow-alt-right"></i></button>
+                  <i style={{ margin: `0.35rem`}} className="fas fa-long-arrow-alt-right"></i></button>
               </div>
             </div>
           </div>
@@ -192,7 +207,7 @@ export const Blog2 = () => {
                       fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                     }}
                   />
-                  <i className="fas fa-long-arrow-alt-right"></i></button>
+                  <i style={{margin: `0.35rem`}} className="fas fa-long-arrow-alt-right"></i></button>
               </div>
             </div>
           </div>
@@ -276,7 +291,7 @@ export const Blog2 = () => {
                       fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
                     }}
                   />
-                  <i className="fas fa-long-arrow-alt-right"></i></button>
+                  <i style={{ margin: `0.35rem`}} className="fas fa-long-arrow-alt-right"></i></button>
               </div>
             </div>
           </div>
