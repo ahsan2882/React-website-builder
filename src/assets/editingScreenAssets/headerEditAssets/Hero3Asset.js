@@ -27,8 +27,8 @@ export default function Hero3Asset() {
                         toolbar: 'image'
                     }}
                 />
-                <div className="absolute top-96 left-36 flex flex-col justify-center items-center w-4/5">
-                    <h1 className="text-8xl font-bold text-BL-500">
+                <div className="absolute top-80 left-36 flex flex-col justify-center items-center w-4/5">
+                    <h1 className="text-5xl font-bold text-BL-500">
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -51,7 +51,7 @@ export default function Hero3Asset() {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='hero4ed2'
-                        initialValue={`<p class="text-2xl text-white">Ad elit magna ipsum ea. Culpa fugiat ipsum laborum in tempor ex ea occaecat qui minim adipisicing anim proident pariatur. Quis cillum proident dolor ipsum quis ea consectetur aliqua commodo.</p>`}
+                        initialValue={`<p class="text-xl text-white">Ad elit magna ipsum ea. Culpa fugiat ipsum laborum in tempor ex ea occaecat qui minim adipisicing anim proident pariatur. Quis cillum proident dolor ipsum quis ea consectetur aliqua commodo.</p>`}
                         init={{
                             plugins: [
                                 "link"
@@ -65,9 +65,9 @@ export default function Hero3Asset() {
 
                         }}
                     />
-                    <div className="flex justify-evenly items-center w-full mt-8">
-                        <button className="text-white bg-BL-500 rounded-3xl px-7 py-2 text-3xl">Contact Us</button>
-                        <button className="text-black bg-white rounded-3xl px-7 py-2 text-3xl">Get Quotes</button>
+                    <div className="flex justify-evenly items-center w-1/3 mt-8">
+                        <button className="text-white bg-BL-500 rounded-3xl px-7 py-2 text-lg">Contact Us</button>
+                        <button className="text-black bg-white rounded-3xl px-7 py-2 text-lg">Get Quotes</button>
                     </div>
                 </div>
             </section>
