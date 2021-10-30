@@ -22,13 +22,15 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="Reasonable Pricing Plans"
                                 init={{
+                                    plugins: [
+                                        "link"
+                                    ],
                                     forced_root_block: "",
                                     menubar: false,
-                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | fontselect',
                                     fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                     font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
 
                                 }}
                             />
@@ -42,9 +44,12 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                 initialValue="Our Pricing"
                                 init={{
+                                    plugins: [
+                                        "link"
+                                    ],
                                     forced_root_block: "",
                                     menubar: false,
-                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                         'alignright alignjustify | fontselect',
                                     fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                     font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
@@ -65,13 +70,15 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue="Personal Security"
                                     init={{
+                                        plugins: [
+                                            "link"
+                                        ],
                                         forced_root_block: "",
                                         menubar: false,
-                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
                                         fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
                                     }}
                                 />
                             </h1>
@@ -84,13 +91,15 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue="Start"
                                     init={{
+                                        plugins: [
+                                            "link"
+                                        ],
                                         forced_root_block: "",
                                         menubar: false,
-                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
                                         fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
                                     }}
                                 />
                             </h2>
@@ -100,22 +109,24 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
 
                                         {/* <p className="Pricing4Css"> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed5'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="CCTV Service"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed5'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="CCTV Service"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                     <li className="p-1 flex">
@@ -124,22 +135,24 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                         {/* <i className="fas fa-times"></i> Alarm signaling */}
                                         {/* <IconText classNameStyle="fas fa-times" text=" Alarm signaling" /> */}
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed6'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Alarm Signaling"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed6'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Alarm Signaling"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                     <li className="p-1 flex">
@@ -149,23 +162,25 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                         {/* <p className="Pricing4Css"> */}
 
 
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed7'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Access Control"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed7'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Access Control"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
 
-                                                }}
-
-                                            />
+                                        />
                                         {/* </p> */}
                                     </li>
                                     <li className="p-1 flex">
@@ -173,21 +188,24 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                         {/* <i className="fas fa-times"></i> Alarm signaling */}
                                         {/* <IconText classNameStyle="fas fa-times" text=" Alarm signaling" /> */}
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed8'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Alarm Signaling"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed8'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Alarm Signaling"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                 </ul>
@@ -201,9 +219,12 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="Get Quote"
                                         init={{
+                                            plugins: [
+                                                "link"
+                                            ],
                                             forced_root_block: "",
                                             menubar: false,
-                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                                 'alignright alignjustify | fontselect',
                                             fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
@@ -227,9 +248,12 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue="Home Security"
                                     init={{
+                                        plugins: [
+                                            "link"
+                                        ],
                                         forced_root_block: "",
                                         menubar: false,
-                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
                                         fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
@@ -244,9 +268,12 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue="Medium"
                                     init={{
+                                        plugins: [
+                                            "link"
+                                        ],
                                         forced_root_block: "",
                                         menubar: false,
-                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
                                         fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
@@ -258,88 +285,96 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
 
                                     <li className="p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
-                                    {/* <li className="p-1"><IconText classNameStyle="fas fa-check" text=" CCTV Service" /></li> */}
+                                        {/* <li className="p-1"><IconText classNameStyle="fas fa-check" text=" CCTV Service" /></li> */}
                                         {/* <p> */}
-                                            <Editor
-                                                key='price4ed12'
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="CCTV Service"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            key='price4ed12'
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="CCTV Service"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                     <li className="p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed13'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Alarm Signaling"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed13'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Alarm Signaling"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
 
                                     <li className="p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed14'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Access Control"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed14'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Access Control"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                     <li className="p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed15'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Alarm Signaling"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed15'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Alarm Signaling"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                 </ul>
@@ -353,13 +388,15 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="Get Quote"
                                         init={{
+                                            plugins: [
+                                                "link"
+                                            ],
                                             forced_root_block: "",
                                             menubar: false,
-                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                                 'alignright alignjustify | fontselect',
                                             fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
                                         }}
                                     />
                                 </button>
@@ -380,13 +417,15 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue="Personal Security"
                                     init={{
+                                        plugins: [
+                                            "link"
+                                        ],
                                         forced_root_block: "",
                                         menubar: false,
-                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
                                         fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
                                     }}
                                 />
                             </h1>
@@ -398,13 +437,15 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue="Pro"
                                     init={{
+                                        plugins: [
+                                            "link"
+                                        ],
                                         forced_root_block: "",
                                         menubar: false,
-                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
                                         fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
                                     }}
                                 />
                             </h2>
@@ -413,86 +454,94 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                     <li className="text-white p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed19'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="CCTV Service"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed19'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="CCTV Service"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                     <li className="text-white p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed20'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Alarm Signaling"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed20'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Alarm Signaling"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                     <li className="text-white p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed21'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Access Control"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed21'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Access Control"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                     {/* <li className="text-white p-1"><IconText classStyle="fas fa-times" text=" Alarm signaling" /></li> */}
                                     <li className="text-white p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed22'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Alarm Signaling"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed22'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Alarm Signaling"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                 </ul>
@@ -506,13 +555,15 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="Get Quote"
                                         init={{
+                                            plugins: [
+                                                "link"
+                                            ],
                                             forced_root_block: "",
                                             menubar: false,
-                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                                 'alignright alignjustify | fontselect',
                                             fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
                                         }}
                                     />
                                 </button>
@@ -533,13 +584,15 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue="Personal Security"
                                     init={{
+                                        plugins: [
+                                            "link"
+                                        ],
                                         forced_root_block: "",
                                         menubar: false,
-                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
                                         fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
                                     }}
                                 />
                             </h1>
@@ -551,13 +604,15 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue="Start"
                                     init={{
+                                        plugins: [
+                                            "link"
+                                        ],
                                         forced_root_block: "",
                                         menubar: false,
-                                        toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                             'alignright alignjustify | fontselect',
                                         fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
                                     }}
                                 />
                             </h2>
@@ -566,84 +621,93 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                     <li className="p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p className="Pricing4Css"> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed26'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="CCTV Service"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed26'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="CCTV Service"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                     <li className="p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed27'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Alarm Signaling"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed27'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Alarm Signaling"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                     <li className="p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed28'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Access Control"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed28'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Access Control"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                     <li className="p-1 flex">
                                         <i style={{ margin: `3px` }} class="fas fa-times icon-price"></i>
                                         {/* <p> */}
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='price4ed29'
-                                                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                initialValue="Alarm Signaling"
-                                                init={{
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
-                                                }}
-                                            />
+                                        <Editor
+                                            onInit={(evt, editor) => editorRef.current = editor}
+                                            inline={true}
+                                            key='price4ed29'
+                                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                                            initialValue="Alarm Signaling"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                            }}
+                                        />
                                         {/* </p> */}
                                     </li>
                                 </ul>
@@ -657,13 +721,15 @@ export default function Pricing4({ showPopup, overSection, displayDevice }) {
                                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                         initialValue="Get Quote"
                                         init={{
+                                            plugins: [
+                                                "link"
+                                            ],
                                             forced_root_block: "",
                                             menubar: false,
-                                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                                                 'alignright alignjustify | fontselect',
                                             fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-
                                         }}
                                     />
                                 </button>
