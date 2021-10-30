@@ -152,7 +152,25 @@ export const Footer2 = () => {
 
 
               </h1>
-              <img className={Footer2moduleCss['foot-img']} src="https://i.ibb.co/L0HJLvC/img-footer-map.png" alt="img-footer-map" border="0" />
+              <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='AccreIm1'
+                                    initialValue={`<img className={Footer2moduleCss['footimg']} src="https://i.ibb.co/L0HJLvC/img-footer-map.png"  alt="client 1" class="w-72 h-36 object-cover"/>`}
+                                    init={{
+                                        images_upload_handler: function (blobInfo, success, failure) {
+                                            success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                        },
+                                        images_upload_url: '/upload-images',
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        plugins: [
+                                            "image"
+                                        ],
+                                        toolbar: 'image'
+                                    }}
+                                />
+              
             </div>
             <div className={Footer2moduleCss['column-foot']} style={{ "background-color": "transparent" }}>
               <div className={Footer2moduleCss.col}>
