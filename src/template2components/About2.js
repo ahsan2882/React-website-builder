@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import About2moduleCss from './About2.module.css'
-import  service from '../assets/template2images/service_05-1280x960.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 
 export const About2 = () => {
