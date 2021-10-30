@@ -94,12 +94,12 @@
     font-weight: 900;
   }
   
-  .card-header .card-child {
+  .card-header .cardchild {
     color: #c0272d;
     font-size: 1rem;
     text-transform: uppercase;
   }
-  
+
   .container {
     width: 100%;
     margin: 20px auto;
@@ -107,10 +107,11 @@
   
   .row {
     display: flex;
-    /* flex-direction: row; */
+   
     justify-content: center;
-    flex-flow: row-wrap;
+    /* flex-flow: wrap; */
     margin: 10px;
+    flex-wrap: wrap;
   }
   
   .card {
