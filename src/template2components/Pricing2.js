@@ -91,17 +91,13 @@ export const Pricing2 = () => {
                                 </h3>
                             </div>
                             <div className={Pricing2Css['card-body']}>
-                                {/* <p className={Pricing2Css['price1']}>
-
-                  <span className={Pricing2Css['nb1']}>$29</span>
-                  <small className={Pricing2Css['year1']}>/yr</small>
-                </p> */}<div className="price1">
+                <div className="price1">
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
-                                    key='abouted3'
+                                    key='Pricing(2)09'
                                     tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                                    initialValue={`<p class="${Pricing2Css.nb1}">$29/yr</p>`}
+                                    initialValue={`<span  class="${Pricing2Css['nb1']} text-5xl text-red-700 font-bold">$29</span> <span class="font-light text-red-500 text-4xl">/yr</span>`}
                                     init={{
                                         plugins: [
                                             "link"
@@ -315,10 +311,27 @@ export const Pricing2 = () => {
                                 />
                             </h3>
                             <div className={Pricing2Css['card-body']}>
-                                <p className={Pricing2Css['price1']}>
-                                    <span className={Pricing2Css['nb1']}>$29</span>
-                                    <small className={Pricing2Css['year1']}>/yr</small>
-                                </p>
+                            <div className="price1">
+                                <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='Price(2)44'
+                                    tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
+                                    initialValue={`<span  class="${Pricing2Css['nb1']} text-5xl text-red-700 font-bold">$29</span> <span class="font-light text-red-500 text-4xl">/yr</span>`}
+                                    init={{
+                                        plugins: [
+                                            "link"
+                                        ],
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | fontselect',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+
+                                    }}
+                                />
+                                </div>
                                 <ul className={Pricing2Css['price-ser']}>
                                     <li>
 
@@ -538,10 +551,28 @@ export const Pricing2 = () => {
                                 </h3>
                             </div>
                             <div className={Pricing2Css['card-body']}>
-                                <p className={Pricing2Css['price1']}>
-                                    <span className={Pricing2Css['nb1']}>$29</span>
-                                    <small className={Pricing2Css['year1']}>/yr</small>
-                                </p>
+                            <div className="price1">
+                                <Editor
+                                    onInit={(evt, editor) => editorRef.current = editor}
+                                    inline={true}
+                                    key='(pricing(2)33'
+                                    tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
+                                    initialValue={`<span  class="${Pricing2Css['nb1']} text-5xl text-red-700 font-bold">$29</span> <span class="font-light text-red-500 text-4xl">/yr</span>`}
+                                    init={{
+                                        plugins: [
+                                            "link"
+                                        ],
+                                        forced_root_block: "",
+                                        menubar: false,
+                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                            'alignright alignjustify | fontselect',
+                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+
+                                    }}
+                                />
+                                </div>
+                            
                                 <ul className={Pricing2Css['price-ser']}>
                                     <li>
                                         <Editor
