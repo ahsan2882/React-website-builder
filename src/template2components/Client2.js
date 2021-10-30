@@ -1,10 +1,6 @@
 import React, { useRef } from 'react'
 import Client2moduleCss from './Client2.module.css'
-import dot from '../assets/template2images/dot.png'
 import { Editor } from '@tinymce/tinymce-react';
-import client1 from '../assets/template2images/client1.png'
-import client2 from '../assets/template2images/client2.png'
-import client3 from '../assets/template2images/client3.png'
 
 export const Client2 = () => {
   const editorRef = useRef();
@@ -46,7 +42,8 @@ export const Client2 = () => {
     
     </div>
     <div className={`${Client2moduleCss.divMainHeading}`}>
-      <div className={`${Client2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div> <img className={`${Client2moduleCss.dot}`} src={dot} data-aos="fade" alt="Dot"/>
+          <div className={`${Client2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div>
+          <img className={`${Client2moduleCss.dot}`} src="https://i.ibb.co/VBwYpF5/dot.png" data-aos="fade" alt="Dot" />
       <div className={`${Client2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-right"> </div>
     </div>
   </section>
@@ -62,7 +59,7 @@ export const Client2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Client(2)96'
-                initialValue={`<img src="${client1}" alt="Client 1" class="${Client2moduleCss.testlogo} w-36 h-18 object-cover"/>`}
+                    initialValue={`<img src="https://i.ibb.co/cXXJYMk/client1.png" alt="client1" class="${Client2moduleCss.testlogo} w-36 h-18 object-cover"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -150,7 +147,7 @@ export const Client2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Client(2)97'
-                initialValue={`<img src="${client2}" alt="Client 2" class="${Client2moduleCss.testlogo} w-36 h-18 object-cover"/>`}
+                    initialValue={`<img src="https://i.ibb.co/dBjdw5Z/client2.png" alt="client2" class="${Client2moduleCss.testlogo} w-36 h-18 object-cover"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -237,7 +234,7 @@ export const Client2 = () => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Client(2)98'
-                initialValue={`<img src="${client3}" alt="Client 3" class="${Client2moduleCss.testlogo} w-36 h-18 object-cover"/>`}
+                    initialValue={`<img src="https://i.ibb.co/4P60VRN/client3.png" alt="client3" class="${Client2moduleCss.testlogo} w-36 h-18 object-cover"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
