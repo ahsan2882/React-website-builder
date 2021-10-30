@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import FeedbackCss from './Feedback.module.css'
-import Img1 from '../template2contactcomponent/news1.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Feedback2() {
   const editorRef = useRef(null);
@@ -13,7 +12,7 @@ export default function Feedback2() {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Feeback 6'
-            initialValue={`<img class=${FeedbackCss.feedImg} src=${Img1} alt="feedback"  />`}
+            initialValue={`<img class=${FeedbackCss.feedImg} src="https://i.ibb.co/Xbp3jt5/news1.jpg" alt="feedback"  />`}
             init={
               {
               images_upload_handler: function (blobInfo, success, failure) {
@@ -116,7 +115,7 @@ export default function Feedback2() {
         </div>
       </section>
       <section className={FeedbackCss.mapsec}>
-        <div className={FeedbackCss.map}></div>
+        <div className={FeedbackCss.map}><iframe width="100%" height="100%" title="map" class="" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" ></iframe></div>
       </section>
     </>
   )
