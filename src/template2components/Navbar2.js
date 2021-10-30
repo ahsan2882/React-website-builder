@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import Navbar2moduleCss from './Navbar2.module.css'
+import logo from '../assets/template2images/securoty_d.png'
 import { Editor } from '@tinymce/tinymce-react';
 
 export const Navbar2 = () => {
@@ -94,7 +95,7 @@ export const Navbar2 = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className={`${Navbar2moduleCss.logo}`}>
+                        <div className={`${Navbar2moduleCss.logo}`}><a href={2}>
                             
                             
                             
@@ -103,7 +104,7 @@ export const Navbar2 = () => {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='Navbar(2)44'
-                                initialValue={`<img src="https://i.ibb.co/Lpk5L5z/securoty-d.png"  alt="client 1" class="w-20 h-20 object-cover"/>`}
+                                    initialValue={`<img src="${logo}"  alt="client 1" class="w-20 h-20 object-cover"/>`}
                                     init={{
                                         images_upload_handler: function (blobInfo, success, failure) {
                                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -116,7 +117,8 @@ export const Navbar2 = () => {
                                         ],
                                         toolbar: 'image'
                                     }}
-                                /></div>
+                                />
+                                </a></div>
                         <div className={`${Navbar2moduleCss['nav-links']}`}>
 
                             <ul className={`${Navbar2moduleCss.menus}`}>
@@ -133,7 +135,7 @@ export const Navbar2 = () => {
                                     <span>t</span>
                                 </a></li>
 
-                                <li><span className={`${Navbar2moduleCss['call-to-action waves']}`} href={2}>
+                                <li><span className={`${Navbar2moduleCss['call-to-action']} ${Navbar2moduleCss.waves}`} href={2}>
                                     <span><i className="fas fa-phone-alt"></i></span>
                                     <span>0</span>
                                     <span>9</span>
