@@ -13,7 +13,7 @@ export default function Hero1Asset() {
           onInit={(evt, editor) => editorRef.current = editor}
           inline={true}
           key='Service4Im1'
-          initialValue={`<img src="https://i.ibb.co/C8ZPc41/blog-15-770x545.png" alt="london" class="relative ${Hero1Css.bgImg} w-full h-full object-cover top-0"/>`}
+          initialValue={`<img src="https://i.ibb.co/C8ZPc41/blog-15-770x545.png" alt="london" class=" ${Hero1Css.bgImg} object-cover "/>`}
           init={{
             images_upload_handler: function (blobInfo, success, failure) {
               success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -29,7 +29,7 @@ export default function Hero1Asset() {
         />
         <div className="absolute top-4 left-4 toBeRemoved">Click here to upload another image</div>
         {/* <TextH1 classStyle={Hero4Css.secHeroH1} text="Security Services"></TextH1> */}
-        <h1 className="text-9xl text-white font-bold absolute top-80 left-48">
+        <h1 className="text-7xl text-white font-bold absolute top-80 left-96">
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
@@ -49,8 +49,8 @@ export default function Hero1Asset() {
             }}
           />
         </h1>
-        <div className={`bg-pink-300 absolute top-0 right-0 ${Hero1Css.bgImg}`}>
-          <h1 className="text-9xl text-black font-bold absolute top-80 right-28">
+        <div className={`bg-BL-400 absolute top-0 right-0 ${Hero1Css.bgImg}`}>
+          <h1 className="text-7xl text-black font-bold absolute top-80 right-96">
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
