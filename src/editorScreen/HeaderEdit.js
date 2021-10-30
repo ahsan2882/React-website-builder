@@ -32,8 +32,14 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
         }
 
     }, [templateNum])
+    // useEffect(() => {
+    //     if (saveClicked) {
+            
+    //     }
+    // }, [saveClicked])
     const saveTemplate = () => {
         setSaveClicked(true);
+        setTimeout(function () { setSaveClicked(true); }, 3000);
         localStorage.setItem('Template-4', JSON.stringify(toSave))
         console.log(fileData)
     }
@@ -63,7 +69,7 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
             <div className={`flex justify-between items-center border-b-2 border-gray-100 py-6 ${HeaderEditCss['max-w-7xl']} ${HeaderEditCss.maxHeadH} mx-auto px-16 bg-black fixed z-50 w-full top-0`}>
                 <div className="w-96 ml-4">
                     <div className="list">
-                        <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px` }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, background: `rgb(60,172,254)`}}> Pages </h2>} </div>
+                        <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px`, color: "white", fontWeight: "700" }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, fontWeight: "700", background: `rgb(60,172,254)`}}> Pages </h2>} </div>
                         <div className="w-48" style={isClicked ? { left: `0`, position: `absolute`, top: `100%`, transition: `0.25s all ease`, background: `white`, height: `100vh` } : { position: `absolute`, top: `100%`, left: `-100%`, height: `100vh`, background: `white`, boxShadow: `1px 4px 2px 2px rgba(0,0,0,0.3)`, transition: `0.25s all ease` }}>
                             <div className="flex flex-col mt-12">
                                 {subPageList.map((item) => <h5 onClick={() => setTemplateSubPage(item)} style={{ padding: `12px 15px 12px`, borderRadius: `12px`, color: `white`, fontWeight: `600`, cursor: `pointer` }} className="m-6 bg-BL-600">{item}</h5>)}
@@ -89,7 +95,7 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
                         }}
                     >
                         <h2> SAVE</h2>
-                        <i className={saveClicked ? "fas fa-check" : "fas fa-check text-black"}></i>
+                        <i className={saveClicked ? "ml-2 fas fa-check text-green-600" : " ml-2 fas fa-check text-black"}></i>
                     </button>
                     <Link to={newPath} target='_blank' rel='noopener noreferrer' className={`${HeaderEditCss.sideButton} flex items-center px-2 py-3 text-white w-28 justify-center rounded-2xl`}>
                         {/* <img src={previewIm} alt="Preview" className={`w-9 h-auto`} /> */}
