@@ -1,7 +1,6 @@
 import React , {useRef}  from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import Services2moduleCss from './Services2.module.css'
-import dot from '../assets/template2images/dot.png'
 export const Services2 = () => {
   const editorRef = useRef();
     return (
@@ -41,14 +40,10 @@ export const Services2 = () => {
                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                         }}
                     />
-
-        {/* <p>
-        Our Services are best in town and premium Lorem ipsum dolor sit amet.
-          </p> */}
       </div>
       <div className={`${Services2moduleCss.divMainHeading}`}>
         <div className={`${Services2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div> 
-        <img src={dot} alt="dotimages"/>
+                        <img src="https://i.ibb.co/VBwYpF5/dot.png" alt="dotimages"/>
 
 
 
@@ -114,17 +109,17 @@ export const Services2 = () => {
                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                         }}
                     />
-          <i className="fas fa-long-arrow-alt-right"></i>
+          <i style={{margin:`0.35rem`}}  className="fas fa-long-arrow-alt-right"></i>
           
           </button>
 
         </div>
       </div>
 
-      <div className={`${Services2moduleCss['container-services']}`} data-aos="zoom-in">
+      <div style={{background:`transparent`,margin:`20px`,width:`355px`}} className={`${Services2moduleCss['container-services']}`} data-aos="fade-right">
        
-        <div className={`${Services2moduleCss['container-text']} ${['container-text-2']}`}>
-          <h1 className={`${Services2moduleCss.name} ${Services2moduleCss.name-2}}`}>
+        <div style={{background:`#C0272D`,height:`auto`,textAlign:`center`,overflowX:'hidden'}}  className={`${Services2moduleCss['container-text']} ${['container-text-2']}`}>
+          <h1 style={{color:`white`,paddingTop:`15%`,fontWeight:`bolder`,fontSize:`1.5rem`}}>
             <Editor
           onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -146,7 +141,7 @@ export const Services2 = () => {
                         inline={true}
                         key='services(2)4'
                         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                        initialValue={`<p class="${Services2moduleCss['description-2']}"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto natus facere quae provident aut */}
+                        initialValue={`<p class="${Services2moduleCss.description2}"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto natus facere quae provident aut 
                         officiis iste similique optio animi nostrum.</p>`}
                         init={{
                             forced_root_block: "",
@@ -175,7 +170,7 @@ export const Services2 = () => {
                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                         }}
                     />
-          <i className="fas fa-long-arrow-alt-right"></i>
+          <i style={{margin:`0.35rem`}} className="fas fa-long-arrow-alt-right"></i>
           </button>
         </div>
       </div>
@@ -237,7 +232,7 @@ export const Services2 = () => {
                             font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                         }}
                     />
-          <i className="fas fa-long-arrow-alt-right"></i>
+          <i style={{margin:`0.35rem`}}  className="fas fa-long-arrow-alt-right"></i>
           
           
           </button>
