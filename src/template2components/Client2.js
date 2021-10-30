@@ -11,7 +11,22 @@ export const Client2 = () => {
   return (
        <>
         <section className={`${Client2moduleCss['head-main']}`}>
-    <div className={`${Client2moduleCss.MainHeading}`}><span className={`${Client2moduleCss.SpanColor}`}> OUR </span> Clients says</div>
+        <h1 class={`${Client2moduleCss.MainHeading}`}>
+                    <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='About(2)48'
+                        tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                        initialValue={`<span class="${Client2moduleCss.SpanColor}"> Client  </span> Says`}
+                        init={{
+                            forced_root_block: "",
+                            menubar: false,
+                            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px"
+                        }}
+                    />
+                </h1>
     <div className={`${Client2moduleCss.spanDesc}`}>
     <Editor
             onInit={(evt, editor) => editorRef.current = editor}
@@ -111,7 +126,7 @@ export const Client2 = () => {
                             inline={true}
                             key='Client(2)11'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                            initialValue="Founder & CEo of Speed Studio"
+                            initialValue="Founder & CEO of Speed Studio"
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -198,7 +213,7 @@ export const Client2 = () => {
                             inline={true}
                             key='Client(2)9'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                            initialValue="Founder & CEo of Speed Studio"
+                            initialValue="Founder & CEO of Speed Studio"
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -286,7 +301,7 @@ export const Client2 = () => {
                             inline={true}
                             key='Client(2)9'
                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                            initialValue="Founder & CEo of Speed Studio"
+                            initialValue="Founder & CEO of Speed Studio"
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
