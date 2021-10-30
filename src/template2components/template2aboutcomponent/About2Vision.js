@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import About2vissionCss from './About2vision.module.css'
-import Img1 from '../template2aboutcomponent/campaign-creators-gMsnXqILjp4-unsplash.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 export default function About2Vision() {
   const editorRef = useRef(null);
@@ -134,7 +133,7 @@ export default function About2Vision() {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Feeback 6'
-            initialValue={`<img src=${Img1} alt="about-vision" />`}
+            initialValue={`<img src="https://i.ibb.co/12Yysjd/campaign-creators-g-Msn-Xq-ILjp4-unsplash.jpg" alt="about-vision" />`}
             init={
               {
               images_upload_handler: function (blobInfo, success, failure) {
