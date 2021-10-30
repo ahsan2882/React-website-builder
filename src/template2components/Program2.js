@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import Program2moduleCss from "./Program2.module.css";
-import dot from "../assets/template2images/dot.png";
 import { Editor } from "@tinymce/tinymce-react";
 
 export const Program2 = () => {
@@ -56,7 +55,7 @@ export const Program2 = () => {
             className={`${Program2moduleCss.divMainHeadingSubDiv}`}
             data-aos="fade-left"
           ></div>{" "}
-          <img src={dot} className={`${Program2moduleCss.dot}`} alt="del" />
+          <img src="https://i.ibb.co/VBwYpF5/dot.png" className={`${Program2moduleCss.dot}`} alt="del" />
           <div
             className={`${Program2moduleCss.divMainHeadingSubDiv}`}
             data-aos="fade-right"
