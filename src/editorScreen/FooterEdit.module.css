@@ -23,11 +23,11 @@
 }
 .mainNav {
     position: fixed;
-    top: 6.2rem;
+    top: 6rem;
     left: 0;
     width: 10vw;
     height: 100vh;
-    background-color: rgb(0, 0, 0); 
+    background-color: rgb(52, 52, 52); 
     z-index: 23;
     transform: translateX(-100%);
     transition: all 0.15s ease;
