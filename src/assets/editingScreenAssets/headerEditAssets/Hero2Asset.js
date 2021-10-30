@@ -1,26 +1,59 @@
-import React from 'react'
+import { Editor } from '@tinymce/tinymce-react'
+import React, { useRef } from 'react'
 
 import Hero2Css from './Hero2Asset.module.css'
 export default function Hero2Asset() {
-    return (
-        <>
-  <section  className={`${Hero2Css.phantom}`}>
-    <div className=" container mx-auto flex flex-col px-8 py-72 w-full justify-center items-center">
-  
-      <div className="w-full md:w-2/3 flex flex-col mb-16 items-center text-center mt-36">
-        <h1 className="title-font sm:text-4xl text-7xl mb-4 font-medium text-white">Knausgaard typewriter readymade marfa</h1>
-        <p className="mb-8 leading-relaxed text-white">Kickstarter biodiesel roof party wayfarers cold-pressed. Palo santo live-edge tumeric scenester copper mug flexitarian. Prism vice offal plaid everyday carry. Gluten-free chia VHS squid listicle artisan.</p>
-        <div className="flex w-full justify-center items-end">
-          <div className="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
-            <label for="hero-field" className="leading-7 text-sm text-gray-600">Placeholder</label>
-            <input type="text" id="hero-field" name="hero-field" className="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
-          </div>
-          <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+  const editorRef = useRef(null);
+  return (
+    <>
+      <section className="flex justify-evenly items-center">
+        <div className="w-1/2 text-center">
+          {/* <h1>Security Guards for your Everyday needs</h1> */}
+          <h1 className="text-6xl w-11/12 font-bold text-blue-700">
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='hero4ed1'
+              tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+              initialValue="Security Guards for your Everyday needs"
+              init={{
+                plugins: [
+                  "link"
+                ],
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+          </h1>
+          {/* <p>Ad elit magna ipsum ea. Culpa fugiat ipsum laborum in tempor ex ea occaecat qui minim adipisicing anim proident pariatur. Quis cillum proident dolor ipsum quis ea consectetur aliqua commodo.</p> */}
+          <Editor
+            onInit={(evt, editor) => editorRef.current = editor}
+            inline={true}
+            key='hero4ed2'
+            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+            initialValue={`<p class="text-2xl w-4/5">Ad elit magna ipsum ea. Culpa fugiat ipsum laborum in tempor ex ea occaecat qui minim adipisicing anim proident pariatur. Quis cillum proident dolor ipsum quis ea consectetur aliqua commodo.</p>`}
+            init={{
+              plugins: [
+                "link"
+              ],
+              forced_root_block: "",
+              menubar: false,
+              toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                'alignright alignjustify | fontselect',
+              fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+              font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+
+            }}
+          />
         </div>
-   
-      </div>
-    </div>
-  </section>
-        </>
-    )
+        <div className="w-1/2">
+          <img src="https://i.ibb.co/0ZMZXfV/guard4.png" alt="guard4" style={{ width: "48rem", height: "50rem" }} class="object-cover" />
+        </div>
+      </section>
+    </>
+  )
 }
