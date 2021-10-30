@@ -18,6 +18,7 @@ import Footer1Asset from '../assets/editingScreenAssets/footerEditAssets/Footer1
 import Footer2Asset from '../assets/editingScreenAssets/footerEditAssets/Footer2Asset';
 import Footer3Asset from '../assets/editingScreenAssets/footerEditAssets/Footer3Asset';
 import Footer4Asset from '../assets/editingScreenAssets/footerEditAssets/Footer4Asset';
+import Footer5Asset from '../assets/editingScreenAssets/footerEditAssets/Footer5Asset';
 
 import Hero1Asset from '../assets/editingScreenAssets/headerEditAssets/Hero1Asset';
 import Hero2Asset from '../assets/editingScreenAssets/headerEditAssets/Hero2Asset';
@@ -73,6 +74,7 @@ export const assetObject = {
     'footer2': Footer2Asset,
     'footer3': Footer3Asset,
     'footer4': Footer4Asset,
+    'footer5': Footer5Asset,
     'testimonial1': Testimonial1Asset,
     'testimonial2': Testimonial2Asset,
     'testimonial3': Testimonial3Asset,
