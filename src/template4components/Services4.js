@@ -2,7 +2,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import Service4Css from './Services4.module.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Services4({ showPopup, overSection }) {
     const [currentBackground, setCurrentBackground] = useState("black");
