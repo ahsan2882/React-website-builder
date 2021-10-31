@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import About2moduleCss from './About2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
-export const About2 = () => {
+export const About2 = ({ displayDevice }) => {
   const editorRef = useRef();
 
   return (
@@ -56,9 +56,9 @@ export const About2 = () => {
           <div className={`${About2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-right"> </div>
         </div>
       </section>
-      <section className={`${About2moduleCss['about-sec']}`} data-aos="fade">
-        <div className={`${About2moduleCss['about-post']}`}>
-          <div className={`${About2moduleCss['about-post-img']}`}>
+      <section className={displayDevice ? `${About2moduleCss['about-sec']}` : `${About2moduleCss['aboutSecM']}`} data-aos="fade">
+        <div className={displayDevice ? `${About2moduleCss['about-post']}` : `${About2moduleCss['aboutPostM']}`}>
+          <div className={displayDevice ? `${About2moduleCss['about-post-img']}` : `${About2moduleCss['aboutPostImgM']}`}>
             {/* <img className={`${About2moduleCss['about-img']}`} src={service} alt="this is "/> */}
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -76,7 +76,7 @@ export const About2 = () => {
                   "image"
                 ],
                 toolbar: 'image'
-                    }}
+              }}
             />
           </div>
           <div className={`${About2moduleCss['about-content']}`}>
