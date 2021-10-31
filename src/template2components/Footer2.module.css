@@ -43,6 +43,11 @@
     margin-top: 2px;
     color: white;
   }
+  .hh1M{
+    font-size: 18px;
+    margin-top: 2px;
+    color: white;
+  }
   .hh2 {
     font-size: 25px;
     font-weight: 900;
@@ -74,13 +79,11 @@
   }
   .copy {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
     color: white;
     height: 80px;
-    text-align: left;
-    padding: 40px;
     width: 100%;
   }
   
@@ -106,7 +109,6 @@
   
   .bottom-foot {
     width: 100%;
-    padding: 15px 200px;
     background-color: var(--clr-secondary);
     display: flex;
     justify-content: center;
@@ -127,4 +129,48 @@
     padding: 0 10px;
     color: #f2f2f2;
     font-weight: 600;
+  }
+  .columnFootM{
+    display: flex;
+    flex-direction: column;
+    float: none;
+    width: 98%;
+    padding: 30px;
+    height: 300px;
+    margin: 5px;
+    justify-content: center;
+    padding: 5px 50px;
+  }
+  .footImgM{
+    width:100%;
+  }
+  
+  @media (max-width: 1169px) {
+    .column-foot {
+      display: flex;
+      flex-direction: column;
+      float: none;
+      width: 98%;
+      height: 266px;
+      margin: 5px;
+      justify-content: center;
+      padding: 5px 50px;
+    }
+
+    .foot-img {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .foot-img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 834px) {
+    .bottom-foot {
+      padding: 15px 25px;
+      height: auto;
+    }
   }
