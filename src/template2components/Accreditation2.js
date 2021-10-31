@@ -10,7 +10,7 @@ export const Accreditation2 = () => {
   return (
     <>
       <section className={`${Accreditation2moduleCss['head-main']}`}>
-        <h1 class={`${Accreditation2moduleCss.MainHeading}`}>
+        <h1 className={`${Accreditation2moduleCss.MainHeading}`}>
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
