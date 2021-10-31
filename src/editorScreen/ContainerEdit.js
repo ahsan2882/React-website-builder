@@ -72,6 +72,11 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
         }
         let editableFalse = newDoc.getElementsByClassName("mce-content-body")
         let i = 0
+        while (i < editableFalse.length) {
+            editableFalse[i].setAttribute("contenteditable", "false")
+            i++
+        }
+        i = 0
         while (i < 1000) {
             if (editableFalse[0] === undefined) {
                 break;
