@@ -269,7 +269,7 @@ export const Blog2 = () => {
                     inline={true}
                     key='Pblog(2)4'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                    initialValue="Mobilies UX Treend 6:31"
+                    initialValue="Mobilies UX Trend"
                     init={{
                       plugins: [
                         "link"
