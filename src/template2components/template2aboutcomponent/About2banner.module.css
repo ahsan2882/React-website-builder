@@ -13,6 +13,9 @@
   .dash {
     border-top: dashed 3px white;
   }
-  .head-img-text h1 {
-    font-size: 20vw;
+  .head1 {
+    font-size: 6rem;
+  }
+  .headM{
+    font-size: 2rem;
   }
