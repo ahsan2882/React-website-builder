@@ -7,9 +7,9 @@ export const About2 = () => {
 
   return (
     <>
-      <section class={`${About2moduleCss['head-main']}`}>
+      <section className={`${About2moduleCss['head-main']}`}>
 
-        <h1 class={`${About2moduleCss.MainHeading}`}>
+        <h1 className={`${About2moduleCss.MainHeading}`}>
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
@@ -30,7 +30,7 @@ export const About2 = () => {
           />
           {/* <span class={`${About2moduleCss.SpanColor}`}>About </span> Us */}
         </h1>
-        <div class={`${About2moduleCss.spanDesc}`}>
+        <div className={`${About2moduleCss.spanDesc}`}>
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
@@ -50,10 +50,10 @@ export const About2 = () => {
             }}
           />
         </div>
-        <div class={`${About2moduleCss.divMainHeading}`}>
-          <div class={`${About2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div>
+        <div className={`${About2moduleCss.divMainHeading}`}>
+          <div className={`${About2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left"></div>
           <img className={`${About2moduleCss.dot}`} src="https://i.ibb.co/VBwYpF5/dot.png" data-aos="fade" alt="dot" />
-          <div class={`${About2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-right"> </div>
+          <div className={`${About2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-right"> </div>
         </div>
       </section>
       <section className={`${About2moduleCss['about-sec']}`} data-aos="fade">
