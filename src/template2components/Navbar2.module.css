@@ -37,8 +37,7 @@
   display: flex;
 }
 
-.navbar .navbar1 .nav-links .menus li a {
-  text-decoration: none;
+.navbar .navbar1 .nav-links .menus > li {
   text-transform: uppercase;
   color: white;
   white-space: nowrap;
@@ -48,7 +47,18 @@
   font-size: 1rem;
   margin-top: 15px;
 }
-.navbar .navbar1 .nav-links .menus li:hover > .waves span {
+/* .navbar .navbar1 .nav-links .sub-menu li {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  white-space: nowrap;
+  padding: 8px 15px;
+  border-radius: 5px; */
+  /* letter-spacing: 1px; */
+  /* font-size: 1rem;
+  margin-top: 15px;
+} */
+.navbar .navbar1 .nav-links .menus > li:hover > .waves span {
   display: inline-block;
   animation: animate 1s ease-in-out none;
   animation-delay: calc(0.1s * var(--spell));
@@ -202,7 +212,7 @@
     display: block;
     transition: transform 0.25s, opacity 0.25s;
     cursor: pointer;
-    color: var(--clr-light);
+    color: white;
   }
   .navbar .navbar1 .nav-links .sidebar-logo .fa-times {
     display: block;
@@ -240,4 +250,12 @@
   .navbar .navbar1 .nav-links .menus li a {
     color:black;
   }
+}
+
+
+.subMenu li{
+  margin: 1.5rem;
+}
+.menu:hover .subMenu{
+  display: block;
 }
