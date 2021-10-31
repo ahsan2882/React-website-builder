@@ -8,7 +8,7 @@ export const Program2 = () => {
   return (
     <>
       <section className={`${Program2moduleCss["head-main"]}`}>
-        <h1 class={`${Program2moduleCss.MainHeading}`}>
+        <h1 className={`${Program2moduleCss.MainHeading}`}>
           <Editor
             onInit={(evt, editor) => (editorRef.current = editor)}
             inline={true}
