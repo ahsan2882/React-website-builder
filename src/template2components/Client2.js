@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import Client2moduleCss from './Client2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
-export const Client2 = () => {
+export const Client2 = ({displayDevice}) => {
   const editorRef = useRef();
   return (
     <>
@@ -57,7 +57,7 @@ export const Client2 = () => {
       <section className={`${Client2moduleCss['test-sec']}`} data-aos="fade">
 
         <div className={`${Client2moduleCss['container-test']}`}>
-          <div className={`${Client2moduleCss['row-test']}`}>
+          <div className={displayDevice ? `${Client2moduleCss['row-test']}` : `${Client2moduleCss['rowTestM']}`}>
             <div className={`${Client2moduleCss['test-card']}`} >
               <div className={`${Client2moduleCss['test-body']}`}>
                 <div className={`${Client2moduleCss.test}`}>
