@@ -32,18 +32,17 @@ export default function About2bannercomponent() {
                 initialValue={`<img src="https://i.ibb.co/Fmz3cdv/about-us-banner.jpg" alt="about-banner" />`}
                     init={
                         {
+                            forced_root_block: "",
+                            menubar: false,
                             images_upload_handler: function (blobInfo, success, failure) {
                                 success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                             },
                             images_upload_url: '/upload-images',
-
-                            forced_root_block: "",
-                            menubar: false,
                             plugins: [
                                 "image"
                             ],
                             toolbar: 'image'
-                        }}
+                    }}
                 />
             </section>
            
