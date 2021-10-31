@@ -1,4 +1,4 @@
-html {
+/* html {
 
     --clr-primary: #c0272d;
     --clr-primary-dark: #bd170b;
@@ -7,7 +7,7 @@ html {
     --clr-light: #ffff;
     --clr-white-smoke: #ebebeb;
     --clr-secondary-light: #292929;
-  }
+  } */
 
 
 .our-vision {
@@ -44,7 +44,7 @@ html {
     font-size: 1.4vw;
     font-weight: 500;
     font-family: "Open Sans", sans-serif;
-    color: var(--clr-secondary-light);
+    color: #292929;
   }
  
   .flex-cont {
