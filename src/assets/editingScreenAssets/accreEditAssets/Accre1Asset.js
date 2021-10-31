@@ -5,9 +5,6 @@ import dot from '../../template2images/dot.png'
 import Acc2 from '../../template2images/accrediation2.jpg'
 import Acc3 from '../../template2images/accrediation3.jpg'
 import Acc4 from '../../template2images/accrediation4.jpg'
-import Acc5 from '../../template2images/accrediation5.jpg'
-import Acc6 from '../../template2images/accrediation6.jpg'
-import Acc7 from '../../template2images/accrediation7.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Accre1Asset() {
     const editorRef = useRef();
