@@ -102,7 +102,7 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
                         <h2> SAVE</h2>
                         <i className={saveClicked ? "ml-2 fas fa-check text-green-600" : " ml-2 fas fa-check text-black"}></i>
                     </button>
-                    <Link to={newPath} target='_blank' rel='noopener noreferrer' className={`${HeaderEditCss.sideButton} flex items-center px-2 py-3 text-white w-28 justify-center rounded-2xl`}>
+                    <Link to={`${newPath}`} target='_blank' rel='noopener noreferrer' className={`${HeaderEditCss.sideButton} flex items-center px-2 py-3 text-white w-28 justify-center rounded-2xl`}>
                         {/* <img src={previewIm} alt="Preview" className={`w-9 h-auto`} /> */}
                         <h2>PREVIEW</h2>
                     </Link>
