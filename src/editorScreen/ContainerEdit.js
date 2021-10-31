@@ -12,8 +12,6 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     const [showPopUp, setShowPopUp] = useState(false)
     const [sectionKey, setSectionKey] = useState(null);
     const [curTemplate, setCurTemplate] = useState(null);
-    // const [htmlData, setHtmlData] = useState(null);
-    // const [cssData, setCssData] = useState(null);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -98,13 +96,14 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
             // console.log(editableFalse[0].innerHTML)
             i++
         }
+        let vid = document.getElementsByTagName("video")[0]
+        if (vid !== undefined) {
+            let att = document.createAttribute("muted");
+            att.value = "true";
+            vid.setAttributeNode(att)
+        }
         let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
         htmlString = htmlString.replace(/&lt;/g, "<").replace(/&gt;/g, ">")
-        let vid = document.getElementsByTagName("video")[0]
-        let att = document.createAttribute("muted");
-        att.value = "true";
-        vid.setAttributeNode(att)
-        console.log(vid)
         return htmlString;
     }
     const getCSSData = () => {
