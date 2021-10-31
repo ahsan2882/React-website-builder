@@ -16,9 +16,12 @@ export default function About2Vision() {
               key='Vision1'
               initialValue="<h1>About Us</h1>"
               init={{
+                plugins: [
+                  "link"
+                ],
                 forced_root_block: "",
                 menubar: false,
-                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                   'alignright alignjustify | fontselect',
                 fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                 font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
@@ -31,9 +34,12 @@ export default function About2Vision() {
               key='Vision2'
               initialValue='<h1 style={{ "color": "#c0272d" }}>Our Vision</h1>'
               init={{
+                plugins: [
+                  "link"
+                ],
                 forced_root_block: "",
                 menubar: false,
-                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                   'alignright alignjustify | fontselect',
                 fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                 font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
@@ -46,9 +52,12 @@ export default function About2Vision() {
               initialValue="<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit beatae qui a facilis, quam non aliquid repellat ab laboriosam molestias ullam assumenda consequuntur!</p>
               "
               init={{
+                plugins: [
+                  "link"
+                ],
                 forced_root_block: "",
                 menubar: false,
-                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
                   'alignright alignjustify | fontselect',
                 fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                 font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
@@ -57,99 +66,111 @@ export default function About2Vision() {
           </div>
           <div className={About2vissionCss['vision-bottom-content']}>
             <div className={About2vissionCss['flex-cont']}>
-            <Editor
-              onInit={(evt, editor) => editorRef.current = editor}
-              inline={true}
-              key='Vision3'
-              initialValue="<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aut unde nulla quod, deserunt ipsam et? Cum similique, perferendis animi laborum dicta esse.</p>
+              <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                inline={true}
+                key='Vision3'
+                initialValue="<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aut unde nulla quod, deserunt ipsam et? Cum similique, perferendis animi laborum dicta esse.</p>
               "
-              
-              init={{
-                forced_root_block: "",
-                menubar: false,
-                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                  'alignright alignjustify | fontselect',
-                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-              }}
-            />
-            <Editor
-              onInit={(evt, editor) => editorRef.current = editor}
-              inline={true}
-              key='Vision4'
-              initialValue="<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aut unde nulla quod, deserunt ipsam et? Cum similique, perferendis animi laborum dicta esse.</p>
+
+                init={{
+                  plugins: [
+                    "link"
+                  ],
+                  forced_root_block: "",
+                  menubar: false,
+                  toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                    'alignright alignjustify | fontselect',
+                  fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                  font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                }}
+              />
+              <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                inline={true}
+                key='Vision4'
+                initialValue="<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aut unde nulla quod, deserunt ipsam et? Cum similique, perferendis animi laborum dicta esse.</p>
               "
-              
-              init={{
-                forced_root_block: "",
-                menubar: false,
-                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                  'alignright alignjustify | fontselect',
-                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-              }}
-            />
-              
+
+                init={{
+                  plugins: [
+                    "link"
+                  ],
+                  forced_root_block: "",
+                  menubar: false,
+                  toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                    'alignright alignjustify | fontselect',
+                  fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                  font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                }}
+              />
+
             </div>
             <div className={About2vissionCss['flex-cont']}>
-            <Editor
-              onInit={(evt, editor) => editorRef.current = editor}
-              inline={true}
-              key='Vision4'
-              initialValue="<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aut unde nulla quod, deserunt ipsam et? Cum
+              <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                inline={true}
+                key='Vision4'
+                initialValue="<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aut unde nulla quod, deserunt ipsam et? Cum
               similique, perferendis animi laborum dicta esse.</p>"
-              
-              init={{
-                forced_root_block: "",
-                menubar: false,
-                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                  'alignright alignjustify | fontselect',
-                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-              }}
-            />
-             <Editor
-              onInit={(evt, editor) => editorRef.current = editor}
-              inline={true}
-              key='Vision4'
-              initialValue="<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aut unde nulla quod, deserunt ipsam et? Cum
+
+                init={{
+                  plugins: [
+                    "link"
+                  ],
+                  forced_root_block: "",
+                  menubar: false,
+                  toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                    'alignright alignjustify | fontselect',
+                  fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                  font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                }}
+              />
+              <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                inline={true}
+                key='Vision4'
+                initialValue="<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aut unde nulla quod, deserunt ipsam et? Cum
               similique, perferendis animi laborum dicta esse.</p>"
-              
-              init={{
-                forced_root_block: "",
-                menubar: false,
-                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                  'alignright alignjustify | fontselect',
-                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-              }}
-            />  
-            
+
+                init={{
+                  plugins: [
+                    "link"
+                  ],
+                  forced_root_block: "",
+                  menubar: false,
+                  toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                    'alignright alignjustify | fontselect',
+                  fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                  font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                }}
+              />
+
             </div>
           </div>
         </div>
         <div className={About2vissionCss['vision-img']}>
-        <Editor
+          <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Feeback 6'
             initialValue={`<img src="https://i.ibb.co/12Yysjd/campaign-creators-g-Msn-Xq-ILjp4-unsplash.jpg" alt="about-vision" />`}
             init={
               {
-              images_upload_handler: function (blobInfo, success, failure) {
-                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
-            },
-            images_upload_url: '/upload-images',
+                images_upload_handler: function (blobInfo, success, failure) {
+                  success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                },
+                images_upload_url: '/upload-images',
 
-              forced_root_block: "",
-              menubar: false,
-              plugins: [
-                "image"
-              ],
-              toolbar: 'image'
-            }}
+                forced_root_block: "",
+                menubar: false,
+                plugins: [
+                  "image"
+                ],
+                toolbar: 'image'
+              }}
           />
-         
+
         </div>
       </div>
     </section>
