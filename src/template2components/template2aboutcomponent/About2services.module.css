@@ -83,4 +83,5 @@ html {
   }
   .flex-cont {
     display: flex;
+    flex-wrap: wrap;
   }
