@@ -92,7 +92,7 @@ export const Footer2 = () => {
                 />
               </div>
               <div className="flex items-center">
-                <i class="fas fa-phone-alt i1 mr-2"></i>
+                <i className="fas fa-phone-alt i1 mr-2"></i>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
@@ -113,7 +113,7 @@ export const Footer2 = () => {
                 />
               </div>
               <div className="flex items-center">
-                <i class="fas fa-envelope i1 mr-2"></i>
+                <i className="fas fa-envelope i1 mr-2"></i>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
@@ -200,10 +200,10 @@ export const Footer2 = () => {
               />
 
             </div>
-            <div className={Footer2moduleCss['column-foot']} style={{ "background-color": "transparent" }}>
+            <div className={Footer2moduleCss['column-foot']} style={{ backgroundColor: "transparent" }}>
               <div className={Footer2moduleCss.col}>
                 <div className="flex items-center">
-                  <i class="fas fa-map-marker-alt i1 mr-2"></i>
+                  <i className="fas fa-map-marker-alt i1 mr-2"></i>
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -224,7 +224,7 @@ export const Footer2 = () => {
                   />
                 </div>
                 <div className="flex items-center">
-                  <i class="fas fa-map-marker-alt i1 mr-2"></i>
+                  <i className="fas fa-map-marker-alt i1 mr-2"></i>
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -246,7 +246,7 @@ export const Footer2 = () => {
                   />
                 </div>
                 <div className="flex items-center">
-                  <i class="fas fa-map-marker-alt i1 mr-2"></i>
+                  <i className="fas fa-map-marker-alt i1 mr-2"></i>
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
