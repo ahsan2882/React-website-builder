@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 
 import Hero2moduleCss from './Hero2.module.css'
-export const Hero2 = () => {
+export const Hero2 = ({displayDevice}) => {
     const editorRef = useRef();
 
     return (
@@ -13,25 +13,7 @@ export const Hero2 = () => {
                         <img className={`${Hero2moduleCss['bg-line']}`} src="https://i.ibb.co/VwB7mhG/Path-7.png" alt="" />
 
                         <div className={`${Hero2moduleCss['{flex__item']} ${Hero2moduleCss['flex__item--left']}`}>
-                            {/* <img className={`${Hero2moduleCss.pokemonimg}`} src="https://i.ibb.co/9Wt8w45/guarg.png" alt="rhuis " /> */}
-                            <Editor
-                                onInit={(evt, editor) => editorRef.current = editor}
-                                inline={true}
-                                key='AccreIm1'
-                                initialValue={`<img src="https://i.ibb.co/9Wt8w45/guarg.png" alt="cover 1" class="${Hero2moduleCss.pokemonimg}" />`}
-                                init={{
-                                    images_upload_handler: function (blobInfo, success, failure) {
-                                        success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
-                                    },
-                                    images_upload_url: '/upload-images',
-                                    forced_root_block: "",
-                                    menubar: false,
-                                    plugins: [
-                                        "image"
-                                    ],
-                                    toolbar: 'image'
-                                }}
-                            />
+                            <img className={displayDevice ? `${Hero2moduleCss.pokemonimg}` : `${Hero2moduleCss.pokemonimgM}`} src="https://i.ibb.co/9Wt8w45/guarg.png" alt="rhuis " />
                             <div className={`${Hero2moduleCss['flex__content']}`}>
 
                                 <Editor
@@ -39,7 +21,7 @@ export const Hero2 = () => {
                                     inline={true}
                                     key='hero4ed2'
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                    initialValue={`<p class="${Hero2moduleCss.textSub}">Security</p>`}
+                                    initialValue={displayDevice ? `<p class="${Hero2moduleCss.textSub}">Security</p>` : `<p class="${Hero2moduleCss.textSubM}">Security</p>`}
                                     init={{
                                         plugins: [
                                             "link"
@@ -53,7 +35,7 @@ export const Hero2 = () => {
                                     }}
                                 />
 
-                                <h1 className={`${Hero2moduleCss['text--big']}`}>
+                                <h1 className={displayDevice ? `${Hero2moduleCss['text--big']}` : `${Hero2moduleCss['text--bigM']}`}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
