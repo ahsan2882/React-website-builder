@@ -1,4 +1,4 @@
-html {
+/* html {
 
     --clr-primary: #c0272d;
     --clr-primary-dark: #bd170b;
@@ -7,7 +7,7 @@ html {
     --clr-light: #ffff;
     --clr-white-smoke: #ebebeb;
     --clr-secondary-light: #292929;
-  }
+  } */
 
 .policy-top {
     height: 100px;
@@ -28,6 +28,7 @@ html {
     padding: 0 160px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .paradiv {
     display: flex;
@@ -53,7 +54,7 @@ html {
   
   .container-sub-b {
     padding: 30px;
-    background-color: var(--clr-white-smoke);
+    background-color: #ebebeb;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
