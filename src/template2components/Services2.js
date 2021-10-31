@@ -8,7 +8,7 @@ export const Services2 = () => {
 
             <section className={`${Services2moduleCss['section-serv']}`}>
                 <section className={`${Services2moduleCss['head-main']}`}>
-                    <h1 class={`${Services2moduleCss.MainHeading}`}>
+                    <h1 className={`${Services2moduleCss.MainHeading}`}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
