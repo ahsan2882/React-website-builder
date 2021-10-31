@@ -100,6 +100,11 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
         }
         let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
         htmlString = htmlString.replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+        let vid = document.getElementsByTagName("video")[0]
+        let att = document.createAttribute("muted");
+        att.value = "true";
+        vid.setAttributeNode(att)
+        console.log(vid)
         return htmlString;
     }
     const getCSSData = () => {
