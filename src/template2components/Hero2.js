@@ -1,8 +1,6 @@
 import React, { useRef } from 'react'
-import line from '../assets/template2images/Path_7.png'
 import { Editor } from '@tinymce/tinymce-react';
 
-import Guarg from '../assets/template2images/guarg.png'
 import Hero2moduleCss from './Hero2.module.css'
 export const Hero2 = () => {
     const editorRef = useRef();
@@ -12,28 +10,28 @@ export const Hero2 = () => {
             <section style={{ background: `#c0272d` }} className={`${Hero2moduleCss['slider-temp2']}`}>
                 <div className={`${Hero2moduleCss['slider__warpper']}`}>
                     <div className={`${Hero2moduleCss['flex__container']} ${Hero2moduleCss['flex--pikachu']} ${Hero2moduleCss['flex--active']}`}>
-                        <img className={`${Hero2moduleCss['bg-line']}`} src={line} alt="" />
+                        <img className={`${Hero2moduleCss['bg-line']}`} src="https://i.ibb.co/VwB7mhG/Path-7.png" alt="" />
 
                         <div className={`${Hero2moduleCss['{flex__item']} ${Hero2moduleCss['flex__item--left']}`}>
-                            <img className={`${Hero2moduleCss.pokemonimg}`} src={Guarg} alt="rhuis " />
-                            {/* <Editor
-                                    onInit={(evt, editor) => editorRef.current = editor}
-                                    inline={true}
-                                    key='AccreIm1'
-                                    initialValue={`<img src="${Guarg}" alt="cover 1" class="${Hero2moduleCss.pokemonimg}"/>`}
-                                    init={{
-                                        images_upload_handler: function (blobInfo, success, failure) {
-                                            success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
-                                        },
-                                        images_upload_url: '/upload-images',
-                                        forced_root_block: "",
-                                        menubar: false,
-                                        plugins: [
-                                            "image"
-                                        ],
-                                        toolbar: 'image'
-                                    }}
-                                /> */}
+                            {/* <img className={`${Hero2moduleCss.pokemonimg}`} src="https://i.ibb.co/9Wt8w45/guarg.png" alt="rhuis " /> */}
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='AccreIm1'
+                                initialValue={`<img src="https://i.ibb.co/9Wt8w45/guarg.png" alt="cover 1" class="${Hero2moduleCss.pokemonimg}" />`}
+                                init={{
+                                    images_upload_handler: function (blobInfo, success, failure) {
+                                        success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                                    },
+                                    images_upload_url: '/upload-images',
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    plugins: [
+                                        "image"
+                                    ],
+                                    toolbar: 'image'
+                                }}
+                            />
                             <div className={`${Hero2moduleCss['flex__content']}`}>
 
                                 <Editor
