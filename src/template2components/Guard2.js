@@ -40,7 +40,25 @@ export const Guard2 = () => {
           <div className={`${Guard2moduleCss['container-guards']}`} data-aos="fade-right">
 
             <div className={`${Guard2moduleCss.box1}`}>
-
+              {/* <img src="https://i.ibb.co/tJdb2JZ/news1.png" alt="news1" /> */}
+              <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                inline={true}
+                key='abouted1'
+                initialValue={`<img  src="https://i.ibb.co/tJdb2JZ/news1.png" alt="about" class="${Guard2moduleCss.bgImg} object-cover"/>`}
+                init={{
+                  forced_root_block: "",
+                  menubar: false,
+                  images_upload_handler: function (blobInfo, success, failure) {
+                    success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                  },
+                  images_upload_url: '/upload-images',
+                  plugins: [
+                    "image"
+                  ],
+                  toolbar: 'image'
+                }}
+              />
             </div>
             <div className={`${Guard2moduleCss.box4}`}>
               <h1 className={`${Guard2moduleCss.h1}`}>
@@ -98,7 +116,24 @@ export const Guard2 = () => {
 
             </div>
             <div className={`${Guard2moduleCss.box3}`}>
-
+              <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                inline={true}
+                key='abouted1'
+                initialValue={`<img src="https://i.ibb.co/kqLdps8/news2.png" alt="about" class="${Guard2moduleCss.bgImg} object-cover"/>`}
+                init={{
+                  forced_root_block: "",
+                  menubar: false,
+                  images_upload_handler: function (blobInfo, success, failure) {
+                    success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                  },
+                  images_upload_url: '/upload-images',
+                  plugins: [
+                    "image"
+                  ],
+                  toolbar: 'image'
+                }}
+              />
             </div>
             <div className={`${Guard2moduleCss.box4}`}>
               <h1 className={`${Guard2moduleCss.h1}`}>
@@ -154,7 +189,24 @@ export const Guard2 = () => {
 
             </div>
             <div className={`${Guard2moduleCss.box5}`}>
-
+              <Editor
+                onInit={(evt, editor) => editorRef.current = editor}
+                inline={true}
+                key='abouted1'
+                initialValue={`<img  src="https://i.ibb.co/c8STtRy/news3.png" alt="about" class="${Guard2moduleCss.bgImg} object-cover"/>`}
+                init={{
+                  forced_root_block: "",
+                  menubar: false,
+                  images_upload_handler: function (blobInfo, success, failure) {
+                    success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                  },
+                  images_upload_url: '/upload-images',
+                  plugins: [
+                    "image"
+                  ],
+                  toolbar: 'image'
+                }}
+              />
             </div>
             <div className={`${Guard2moduleCss.box4}`}>
               <h1 className={`${Guard2moduleCss.h1}`}>
