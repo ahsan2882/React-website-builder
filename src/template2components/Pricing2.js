@@ -7,7 +7,7 @@ export const Pricing2 = () => {
     return (
         <>
             <section className={Pricing2Css['head-main']}>
-                <h1 class={`${Pricing2Css.MainHeading}`}>
+                <h1 className={`${Pricing2Css.MainHeading}`}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
@@ -57,8 +57,6 @@ export const Pricing2 = () => {
                         <div className={Pricing2Css['card']}>
                             <div className={Pricing2Css['card-header']}>
                                 <h1 className={Pricing2Css['card-main']}>
-
-                                    <h1>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
                                             inline={true}
@@ -78,12 +76,6 @@ export const Pricing2 = () => {
                                             }}
                                         />
                                     </h1>
-
-
-
-
-                                </h1>
-
                                 <h3 className={Pricing2Css.cardchild}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
