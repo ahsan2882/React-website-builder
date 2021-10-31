@@ -13,20 +13,18 @@ export default function Feedback2() {
             inline={true}
             key='Feeback 6'
             initialValue={`<img class=${FeedbackCss.feedImg} src="https://i.ibb.co/Xbp3jt5/news1.jpg" alt="feedback"  />`}
-            init={
-              {
-              images_upload_handler: function (blobInfo, success, failure) {
-                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
-            },
-            images_upload_url: '/upload-images',
-
+            init={{
               forced_root_block: "",
               menubar: false,
+              images_upload_handler: function (blobInfo, success, failure) {
+                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+              },
+              images_upload_url: '/upload-images',
               plugins: [
                 "image"
               ],
               toolbar: 'image'
-            }}
+                    }}
           />
           <div className={FeedbackCss['feed-content']}>
             <div className={FeedbackCss.MainHeading}>
