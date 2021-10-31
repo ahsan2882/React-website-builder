@@ -66,17 +66,17 @@ export const About2 = () => {
               key='AccreIm1'
               initialValue={`<img src="https://i.ibb.co/NWGbFbP/service-05-1280x960.jpg" alt="Service1" class="w-96 h-60 object-cover"/>`}
               init={{
+                forced_root_block: "",
+                menubar: false,
                 images_upload_handler: function (blobInfo, success, failure) {
                   success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                 },
                 images_upload_url: '/upload-images',
-                forced_root_block: "",
-                menubar: false,
                 plugins: [
                   "image"
                 ],
                 toolbar: 'image'
-              }}
+                    }}
             />
           </div>
           <div className={`${About2moduleCss['about-content']}`}>
