@@ -74,7 +74,7 @@
   font-size: 4rem;
   display: -ms-flex;
   align-items: center;
-
+  position: relative;
   -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
@@ -164,11 +164,11 @@
 .pokemonimg {
   position: absolute;
   left: 503px;
-  z-index: 500;
+  z-index: 50;
   width: 35rem;
   height: 37rem;
-  bottom: -278px;
-  max-width: 50rem;
+  top: 80px;
+  max-width: 70rem;
 }
 
 .guard2__img {
