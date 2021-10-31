@@ -1,195 +1,319 @@
-
-  
-  .about-sec {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin: 9rem 0; */
-    margin: 180px 0;
-  }
-  
-  .about-post {
-    width: 100%;
-    max-width: 119rem;
-    padding: 5rem;
-    background-color: #ebebeb;
-    box-shadow: 0 1.4rem 8rem tgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-  }
-  
-  .about-post-img {
-    margin-right: 1rem;
-    position: relative;
-  }
-  
-  /* .about-post-img img { */
-    /* width: 100%;
-    height: 100%; */
-    /* object-fit: cover; */
-    /* display: block; */
-  /* } */
-
-  
-  .about-title {
-    font-size: 3rem;
-    margin: 1.5rem 0 2rem;
-    text-transform: uppercase;
-    color: var(--clr-primary);
-    font-weight: 600;
-  }
-  
-  .about-para {
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    color: #292929;
-    margin-top: 5rem;
-    line-height: 1.4rem;
-  }
-  
-.about-title  span{
-    color: #c0272d;
+.about-sec {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 9rem 0; */
+  margin: 180px 0;
 }
-  
-  @media (max-width: 868px) {
-    .about-sec {
-      margin: 300px 0;
-    }
-    .about-post {
-      padding: 2.5rem;
-      flex-direction: column;
-    }
-  
-    .about-post-img {
-      min-width: 100%;
-      max-width: 100%;
-      transform: (0, -8rem);
-    }
-  
-    .about-post-img {
-      left: 83px;
-    }
+
+.about-post {
+  width: 100%;
+  max-width: 119rem;
+  padding: 5rem;
+  background-color: #ebebeb;
+  box-shadow: 0 1.4rem 8rem tgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.about-post-img {
+  margin-right: 1rem;
+  position: relative;
+}
+
+/* .about-post-img img { */
+/* width: 100%;
+    height: 100%; */
+/* object-fit: cover; */
+/* display: block; */
+/* } */
+
+
+.about-title {
+  font-size: 3rem;
+  margin: 1.5rem 0 2rem;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  font-weight: 600;
+}
+
+.about-para {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #292929;
+  margin-top: 5rem;
+  line-height: 1.4rem;
+}
+
+.about-title span {
+  color: #c0272d;
+}
+
+
+
+
+.MainHeading {
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  /* background-color: darkgray; */
+}
+
+.head-main {
+  margin: 60px 0;
+}
+
+.SpanColor {
+  color: #c0272d;
+}
+
+.spanDesc {
+  /* background-color: darkcyan; */
+  text-align: center;
+}
+
+.spanDesc p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #292929;
+}
+
+.dot {
+  margin: 0 12px;
+  width: 22px;
+}
+
+.divMainHeading {
+  display: flex;
+  /* background-color: green; */
+  height: 20px;
+  margin-left: 25%;
+}
+
+.divMainHeadingSubDiv {
+  /* background-color: gold;  */
+  width: 30%;
+  border-top: 3px dashed firebrick;
+  margin-top: 9px;
+}
+
+.btnb {
+  background-color: var(--clr-secondary);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-top: 20px;
+  position: relative;
+
+  overflow: hidden;
+  border-radius: 25px;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.btnb::before {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  background: #C0272D;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  z-index: -1;
+  transition: all 0.3s ease-out;
+}
+
+.btnb::after {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  right: 0;
+  top: 0;
+  background: #C0272D;
+  border-radius: 5px;
+  z-index: -1;
+  transition: all 0.3s ease-out;
+}
+
+.btnb:hover:before {
+  width: 0;
+}
+
+.btnb:hover:after {
+  width: 0;
+}
+
+.btnb:hover {
+  cursor: pointer;
+  color: var(--clr-light);
+  background-color: white;
+}
+
+.aboutSecM {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 350px 0;
+}
+
+.aboutPostM {
+  width: 100%;
+  max-width: 70rem;
+  padding: 2.5rem;
+  background-color: #ebebeb;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutPostImgM{
+  margin-right: 1rem;
+  position: relative;
+  min-width: 100%;
+  max-width: 100%;
+  transform: (0, -8rem);
+  left: 83px;
+}
+
+@media (max-width: 1068px) {
+  .about-post {
+    max-width: 80rem;
   }
-  @media (max-width: 768px) {
-    .about-sec {
-      margin: 350px 0;
-    }
-    .about-post {
-      max-width: 70rem;
-    }
+
+  .about-post-img {
+    min-width: 25rem;
+    max-width: 25rem;
   }
-  @media (max-width: 1068px) {
-    .about-post {
-      max-width: 80rem;
-    }
-  
-    .about-post-img {
-      min-width: 25rem;
-      max-width: 25rem;
-    }
+}
+
+@media (max-width: 868px) {
+  .about-sec {
+    margin: 300px 0;
   }
-  .MainHeading {
-    font-size: 60px;
-    font-weight: 900;
-    text-transform: uppercase;
-  
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    /* background-color: darkgray; */
+
+  .about-post {
+    padding: 2.5rem;
+    flex-direction: column;
   }
-  
-  .head-main {
-    margin: 60px 0;
+
+  .about-post-img {
+    min-width: 100%;
+    max-width: 100%;
+    transform: (0, -8rem);
+    left: 83px;
   }
-  
-  .SpanColor {
-    color: #c0272d;
+}
+
+@media (max-width: 768px) {
+  .about-sec {
+    margin: 350px 0;
   }
-  
-  .spanDesc {
-    /* background-color: darkcyan; */
-    text-align: center;
+
+  .about-post {
+    max-width: 70rem;
   }
-  
-  .spanDesc p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #292929;
+}
+@media (max-width: 1550px) {
+  .pokemon__img {
+    max-height: 53.4vw;
+    left: 22%;
   }
-  
-  .dot {
-    margin: 0 12px;
-    width: 22px;
+
+  .guard2__img {
+    max-height: 53.4vw;
+    /* left: 22%; */
   }
-  
-  .divMainHeading {
-    display: flex;
-    /* background-color: green; */
-    height: 20px;
-    margin-left: 25%;
+
+  .text--big {
+    font-size: 20vw;
+    margin-left: 200px;
   }
-  
-  .divMainHeadingSubDiv {
-    /* background-color: gold;  */
-    width: 30%;
-    border-top: 3px dashed firebrick;
-    margin-top: 9px;
-  }  
-  .btnb {
-    background-color: var(--clr-secondary);
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-transform: capitalize;
-    display: inline-block;
-    margin-top: 20px;
-    position: relative;
-    
-    overflow: hidden;
-    border-radius: 25px;
-    z-index: 1;
-    margin-bottom: 20px;
+
+  .text--sub {
+    margin-left: 240px;
   }
-  
-  .btnb::before {
-    content: " ";
-    position: absolute;
-    height: 100%;
-    width: 55%;
-    background: #C0272D;
-    top: 0;
-    left: 0;
-    border-radius: 5px;
-    z-index: -1;
-    transition: all 0.3s ease-out;
+}
+
+@media (max-width: 1182px) {
+  .pokemon__img {
+    max-height: 65.4vw;
+    left: 13%;
   }
-  
-  .btnb::after {
-    content: " ";
-    position: absolute;
-    height: 100%;
-    width: 55%;
-    right: 0;
-    top: 0;
-    background: #C0272D;
-    border-radius: 5px;
-    z-index: -1;
-    transition: all 0.3s ease-out;
+
+  .guard2__img {
+    max-height: 65.4vw;
+    /* left: 13%; */
   }
-  
-  .btnb:hover:before {
-    width: 0;
+
+  .text--big {
+    font-size: 24vw;
+    margin-left: 25px;
   }
-  
-  .btnb:hover:after {
-    width: 0;
+
+  .text--sub {
+    margin-left: 60px;
   }
-  
-  .btnb:hover {
-    cursor: pointer;
-    color: var(--clr-light);
-    background-color: white;
+}
+
+@media (max-width: 1066px) {
+  .pokemon__img {
+    max-height: 55.4vw;
+    left: 28%;
   }
+
+  .slider-temp2 {
+    height: 550px;
+
+  }
+
+  .guard2__img {
+    max-height: 55.4vw;
+    left: 28%;
+  }
+
+  .text--big {
+    font-size: 24vw;
+    margin-left: 0px;
+  }
+
+  .text--sub {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .flex__item {
+    height: 550px;
+  }
+
+  .bg-line {
+    height: 550px;
+  }
+
+  .flex__container {
+    height: 550px;
+  }
+}
+
+@media (max-width: 612px) {
+  .text--big {
+    font-size: 21vw;
+    margin-left: -32px;
+  }
+
+  .text--sub {
+    margin-bottom: 0;
+  }
+}
