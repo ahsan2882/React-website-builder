@@ -87,6 +87,12 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                 let nodeText = newDoc.createTextNode(editableFalse[0].innerHTML)
                 editableFalse[0].parentNode.replaceChild(nodeText, editableFalse[0])
             }
+            else if (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<span")) {
+                let para = newDoc.createElement("p");
+                let paraText = newDoc.createTextNode(editableFalse[0].innerHTML)
+                para.appendChild(paraText);
+                editableFalse[0].parentNode.replaceChild(para, editableFalse[0])
+            }
             // console.log(editableFalse[0])
             // console.log(editableFalse[0].parentNode.nodeName)
             // console.log(editableFalse[0].innerHTML)
