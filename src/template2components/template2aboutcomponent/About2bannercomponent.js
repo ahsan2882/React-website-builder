@@ -1,11 +1,12 @@
 import React, { useRef } from 'react'
 import About2Css from './About2banner.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-export default function About2bannercomponent() {
+export default function About2bannercomponent({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <section className={About2Css['header-img-serv']}>
-                <div className={About2Css['head-img-text']}>
+            <div className={About2Css['head-img-text']}>
+                <h1 className={displayDevice ? About2Css['head1'] : About2Css['headM']}>
                 <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -23,6 +24,7 @@ export default function About2bannercomponent() {
                                 font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                          }}
                         />
+                        </h1>
                     <div className={About2Css.dash}></div>
                 </div>
                 <Editor
