@@ -36,18 +36,17 @@ export default function Contact2() {
                     initialValue={`<img src="https://i.ibb.co/n0LTNT3/contact-banner.jpg" alt="contact-banner" />`}
                     init={
                         {
+                            forced_root_block: "",
+                            menubar: false,
                             images_upload_handler: function (blobInfo, success, failure) {
                                 success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                             },
                             images_upload_url: '/upload-images',
-
-                            forced_root_block: "",
-                            menubar: false,
                             plugins: [
                                 "image"
                             ],
                             toolbar: 'image'
-                        }}
+                    }}
                 />
             </section>
 
