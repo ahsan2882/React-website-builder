@@ -66,12 +66,12 @@ export const Accreditation2 = () => {
                 key='Acce1'
                 initialValue={`<img src="https://i.ibb.co/mzv3r2W/accrediation1.jpg" alt="Client 1" class=" w-72 h-48 object-contain"/>`}
                 init={{
+                  forced_root_block: "",
+                  menubar: false,
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                   },
                   images_upload_url: '/upload-images',
-                  forced_root_block: "",
-                  menubar: false,
                   plugins: [
                     "image"
                   ],
@@ -131,12 +131,12 @@ export const Accreditation2 = () => {
                 key='Acce9'
                 initialValue={`<img src="https://i.ibb.co/L8Cd7Rc/accrediation2.jpg" alt="accrediation2" class=" w-72 h-48 object-contain"/>`}
                 init={{
+                  forced_root_block: "",
+                  menubar: false,
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                   },
                   images_upload_url: '/upload-images',
-                  forced_root_block: "",
-                  menubar: false,
                   plugins: [
                     "image"
                   ],
@@ -192,12 +192,12 @@ export const Accreditation2 = () => {
                 key='Acce87'
                 initialValue={`<img src="https://i.ibb.co/64Y67mm/accrediation3.jpg" alt="accrediation3" class=" w-72 h-48 object-contain"/>`}
                 init={{
+                  forced_root_block: "",
+                  menubar: false,
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                   },
                   images_upload_url: '/upload-images',
-                  forced_root_block: "",
-                  menubar: false,
                   plugins: [
                     "image"
                   ],
@@ -253,12 +253,12 @@ export const Accreditation2 = () => {
                 key='Acce57'
                 initialValue={`<img src="https://i.ibb.co/wQ0F5Wx/accrediation4.jpg" alt="accrediation4" class=" w-72 h-48 object-contain"/>`}
                 init={{
+                  forced_root_block: "",
+                  menubar: false,
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                   },
                   images_upload_url: '/upload-images',
-                  forced_root_block: "",
-                  menubar: false,
                   plugins: [
                     "image"
                   ],
@@ -316,12 +316,12 @@ export const Accreditation2 = () => {
                 key='Acce95'
                 initialValue={`<img src="https://i.ibb.co/qm8c9hZ/accrediation5.jpg" alt="accrediation5" class=" w-72 h-48 object-contain"/>`}
                 init={{
+                  forced_root_block: "",
+                  menubar: false,
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                   },
                   images_upload_url: '/upload-images',
-                  forced_root_block: "",
-                  menubar: false,
                   plugins: [
                     "image"
                   ],
@@ -380,12 +380,12 @@ export const Accreditation2 = () => {
                 key='Acce45'
                 initialValue={`<img src="https://i.ibb.co/MBTshjL/accrediation6.jpg" alt="accrediation6" class=" w-72 h-48 object-contain"/>`}
                 init={{
+                  forced_root_block: "",
+                  menubar: false,
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                   },
                   images_upload_url: '/upload-images',
-                  forced_root_block: "",
-                  menubar: false,
                   plugins: [
                     "image"
                   ],
@@ -442,12 +442,12 @@ export const Accreditation2 = () => {
                 key='Acce47'
                 initialValue={`<img src="https://i.ibb.co/gmxmDgF/accrediation7.jpg" alt="accrediation7" class=" w-72 h-48 object-contain"/>`}
                 init={{
+                  forced_root_block: "",
+                  menubar: false,
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
                   },
                   images_upload_url: '/upload-images',
-                  forced_root_block: "",
-                  menubar: false,
                   plugins: [
                     "image"
                   ],
