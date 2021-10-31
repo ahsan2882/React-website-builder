@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 
 import Pricing2Css from './Pricing2.module.css'
-export const Pricing2 = () => {
+export const Pricing2 = ({displayDevice}) => {
     const editorRef = useRef();
     return (
         <>
@@ -53,8 +53,8 @@ export const Pricing2 = () => {
 
                 <div className={Pricing2Css['container']}>
 
-                    <div className={Pricing2Css['row']}>
-                        <div className={Pricing2Css['card']}>
+                    <div className={displayDevice ? Pricing2Css['row'] : `${Pricing2Css.rowM} text-center`}>
+                        <div className={displayDevice ? Pricing2Css['card'] : `${Pricing2Css['cardM']}`}>
                             <div className={Pricing2Css['card-header']}>
                                 <h1 className={Pricing2Css['card-main']}>
                                         <Editor
@@ -592,7 +592,7 @@ export const Pricing2 = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className={Pricing2Css['card']}>
+                        <div className={displayDevice ? Pricing2Css['card'] : `${Pricing2Css['cardM']}`}>
                             <div className={Pricing2Css['card-header']}>
                                 <h1 className={Pricing2Css['card-main']}>
 
