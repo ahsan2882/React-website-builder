@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import Navbar2moduleCss from './Navbar2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
-export const Navbar2 = () => {
+export const Navbar2 = ({ displayDevice }) => {
     const editorRef = useRef();
     return (
         <>
@@ -137,8 +137,15 @@ export const Navbar2 = () => {
             <header className="absolute top-0 left-0 z-10 w-full h-20 font-bold">
                 <nav>
                     <ul className="flex justify-evenly items-center">
+                        <li className={displayDevice ? "hidden" : "block"}>
+                            <section style={{ cursor:"pointer"}}>
+                                <div className="w-6 h-1 my-1 mx-auto transition-all duration-500 bg-white"></div>
+                                <div className="w-6 h-1 my-1 mx-auto transition-all duration-500 bg-white"></div>
+                                <div className="w-6 h-1 my-1 mx-auto transition-all duration-500 bg-white"></div>
+                            </section>
+                        </li>
                         <li>
-                            <ul className="flex items-center justify-around text-white" style={{ width: "30rem" }}>
+                            <ul className={displayDevice ? "flex items-center justify-around text-white" : "hidden"} style={{ width: "30rem" }}>
                                 <li className="px-4 py-4">HOME</li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>ABOUT
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
@@ -198,7 +205,7 @@ export const Navbar2 = () => {
                             />
                         </li>
                         <li>
-                            <ul className="flex items-center justify-around text-white" style={{width:"30rem"}}>
+                            <ul className={displayDevice ? "flex items-center justify-around text-white" : "hidden"} style={{ width: "30rem" }}>
                                 <li className="px-4 py-4">CONTACT</li>
                                 <li className="px-4 py-4">
                                     <lord-icon
