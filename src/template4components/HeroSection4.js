@@ -224,11 +224,12 @@ const HeroSection4ComponentImage = ({ displayDevice }) => {
     )
 }
 
+// <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/ucd7t9?autoplay=1&nocontrols=1" frameborder="0" width="100%" height="100%" allowfullscreen allow="autoplay" style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
 
 const HeroSection4ComponentVideo = ({ displayDevice }) => {
     const editorRef = useRef(null);
     const inputRef = useRef(null);
-    const [source, setSource] = useState(heroVideo);
+    const [source, setSource] = useState("https://drive.google.com/uc?id=17arHWOvLAXnMF5molg_mlKVc7M17mosS");
     const handleFileChange = (event) => {
         console.log(event.target.files[0])
         const file = event.target.files[0];
@@ -262,7 +263,6 @@ const HeroSection4ComponentVideo = ({ displayDevice }) => {
                         height="100%"
                         autoPlay={true}
                         loop={true}
-                        muted={true}
                         playsInline={true}
                         src={source}
                     />
