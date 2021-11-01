@@ -1,12 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 import Footer2moduleCss from './Footer2.module.css'
-export const Footer2 = ({displayDevice}) => {
+export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
+  const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef();
 
   return (
     <>
-      <footer className={`${Footer2moduleCss.footer2}`}>
+      <footer className={`${Footer2moduleCss.footer2}`} style={{ background: currentBackground }}>
         <div className={Footer2moduleCss.footer}>
           <div className={displayDevice ? Footer2moduleCss['row-foot'] : Footer2moduleCss['rowFootM']}>
             <div className={displayDevice ? Footer2moduleCss['column-foot'] : Footer2moduleCss['columnFootM']}>
@@ -370,6 +372,14 @@ export const Footer2 = ({displayDevice}) => {
           </div>
         </div>
       </footer>
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+        <GithubPicker
+          triangle="top-right"
+          onChangeComplete={(color) => {
+            setCurrentBackground(color.hex);
+          }}
+        />
+      </div>
     </>
   )
 }
