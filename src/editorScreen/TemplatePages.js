@@ -1,11 +1,3 @@
-// const pages = {
-//     "template1pages": ["Home"],
-//     "template2pages": ["Home", "About", "Sectors", "Services", "Contact"],
-//     "template3pages": ["Home"],
-//     "template4pages": ["Home", "Contact", "About"],
-// }
-
-
 const pages = {
     "template1pages": [
         {
