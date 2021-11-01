@@ -13,6 +13,7 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
     const [linksfunc, setLinksfunc] = useState(false)
     const [sectionKey, setSectionKey] = useState(null);
     const [curTemplate, setCurTemplate] = useState(null);
+    const [fileName, setfilename] = useState(null);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -30,51 +31,52 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
         if (temp === 1) {
             setUpdateChildren(templateComponents.template1Components[`${templatePage}`])
             if (templatePage === "Home") {
-                setFileName("index.html")
+                setfilename("index.html")
             }
             else {
                 fileName = String(templatePage).toLowerCase().replace(" ", "-").concat(".html")
-                setFileName(fileName);
+                setfilename(fileName);
             }
             setCurTemplate("Template 1");
         }
         else if (temp === 2) {
             setUpdateChildren(templateComponents.template2Components[`${templatePage}`])
             if (templatePage === "Home") {
-                setFileName("index.html")
+                setfilename("index.html")
             }
             else {
+                console.log(templatePage)
                 fileName = String(templatePage).toLowerCase().replace(" ", "-").concat(".html")
-                setFileName(fileName);
+                setfilename(fileName);
             }
             setCurTemplate("Template 2");
         }
         else if (temp === 3) {
             setUpdateChildren(templateComponents.template3Components[`${templatePage}`])
             if (templatePage === "Home") {
-                setFileName("index.html")
+                setfilename("index.html")
             }
             else {
                 fileName = String(templatePage).toLowerCase().replace(" ", "-").concat(".html")
-                setFileName(fileName);
+                setfilename(fileName);
             }
             setCurTemplate("Template 3");
         }
         else if (temp === 4) {
             setUpdateChildren(templateComponents.template4Components[`${templatePage}`])
             if (templatePage === "Home") {
-                setFileName("index.html")
+                setfilename("index.html")
             }
             else {
                 fileName = String(templatePage).toLowerCase().replace(" ", "-").concat(".html")
-                setFileName(fileName);
+                setfilename(fileName);
             }
             setCurTemplate("Template 4");
         }
         else if (temp === 0) {
             setUpdateChildren([])
         }
-    }, [temp, templatePage, setFileName])
+    }, [temp, templatePage, setfilename])
     useEffect(() => {
         if (saveClicked) {
             setLinksfunc(true)
@@ -83,6 +85,7 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
             let cssString = getCSSData()
             let compressed = lz.encodeBase64(lz.compress(htmlString))
             setToSave({
+                filename: fileName,
                 templateID: curTemplate,
                 templateData: compressed
             })
@@ -91,9 +94,10 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
                 css: `${cssString}`
             })
         }
+        setFileName(fileName)
         setTimeout(function () { setSaveClicked(false); setLinksfunc(false); }, 1000);
 
-    }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData, setDisplayDevice])
+    }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData, setDisplayDevice, fileName, setFileName])
     const getHTMLData = () => {
         let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
         let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
