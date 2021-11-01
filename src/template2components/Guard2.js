@@ -1,13 +1,15 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 import Guard2moduleCss from './Guard2.module.css'
 
-export const Guard2 = () => {
+export const Guard2 = ({ showPopup, overSection }) => {
+  const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef();
 
   return (
     <>
-      <section className={`${Guard2moduleCss['our-guards']}`} id="our-team">
+      <section className={`${Guard2moduleCss['our-guards']}`} id="our-team" style={{ background: currentBackground }}>
         <section className={`${Guard2moduleCss['head-main']}`}>
           <h1 className={`${Guard2moduleCss.MainHeading}`}><span className={`${Guard2moduleCss.SpanColor}`}> OUR </span> Guard</h1>
           <div className={`${Guard2moduleCss.spanDesc}`}>
@@ -273,6 +275,14 @@ export const Guard2 = () => {
           </div>
         </div>
       </section>
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+        <GithubPicker
+          triangle="top-right"
+          onChangeComplete={(color) => {
+            setCurrentBackground(color.hex);
+          }}
+        />
+      </div>
     </>
   )
 }
