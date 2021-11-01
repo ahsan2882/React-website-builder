@@ -16,7 +16,7 @@ const pages = {
         },
         {
             "groupName": "Sectors",
-            "subpages": ["About", "Contact", "Property Management", "Home", "Home", "Home"]
+            "subpages": ["Home"]
         },
         {
             "groupName": "Services",
