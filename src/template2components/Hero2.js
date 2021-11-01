@@ -1,18 +1,20 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 
 import Hero2moduleCss from './Hero2.module.css'
-export const Hero2 = ({displayDevice}) => {
+export const Hero2 = ({ displayDevice, showPopup, overSection }) => {
+    const [currentBackground, setCurrentBackground] = useState("#c0272d");
     const editorRef = useRef();
 
     return (
         <>
-            <section style={{ background: `#c0272d` }} className={`${Hero2moduleCss['slider-temp2']}`}>
+            <section className={`${Hero2moduleCss['slider-temp2']}`} >
                 <div className={`${Hero2moduleCss['slider__warpper']}`}>
                     <div className={`${Hero2moduleCss['flex__container']} ${Hero2moduleCss['flex--pikachu']} ${Hero2moduleCss['flex--active']}`}>
                         <img className={`${Hero2moduleCss['bg-line']}`} src="https://i.ibb.co/VwB7mhG/Path-7.png" alt="" />
 
-                        <div className={`${Hero2moduleCss['{flex__item']} ${Hero2moduleCss['flex__item--left']}`}>
+                        <div className={`${Hero2moduleCss['{flex__item']} ${Hero2moduleCss['flex__item--left']}`} style={{ background: currentBackground }}>
                             <img className={displayDevice ? `${Hero2moduleCss.pokemonimg}` : `${Hero2moduleCss.pokemonimgM}`} src="https://i.ibb.co/9Wt8w45/guarg.png" alt="rhuis " />
                             <div className={`${Hero2moduleCss['flex__content']}`}>
 
@@ -69,6 +71,14 @@ export const Hero2 = ({displayDevice}) => {
 
 
             </section>
+            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
         </>
     )
 }
