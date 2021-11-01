@@ -11,26 +11,28 @@ export default function EditScreen({ temp }) {
         templateID: null,
         templateData: null
     });
-    const [templateSubPage, setTemplateSubPage] = useState("Home");
+    const [templatePage, setTemplatePage] = useState("Home");
     const [saveClicked, setSaveClicked] = useState(null);
     const [fileData, setFileData] = useState({});
     const [chatInclude, setChatInclude] = useState(false);
-    const [displayDevice, setDisplayDevice] = useState(true)
+    const [displayDevice, setDisplayDevice] = useState(true);
+    const [fileName, setFileName] = useState("");
 
     return (
         <>
             <DndProvider backend={HTML5Backend}>
                 <HeaderEdit
-                    setTemplateSubPage={setTemplateSubPage}
+                    setTemplatePage={setTemplatePage}
                     templateNum={temp}
                     setSaveClicked={setSaveClicked}
                     saveClicked={saveClicked}
                     toSave={toSave}
                     fileData={fileData}
                     setDisplayDevice={setDisplayDevice}
+                    fileName={fileName}
                 />
                 <ContainerEdit
-                    templateSubPage={templateSubPage}
+                    templatePage={templatePage}
                     templateNum={temp}
                     overlayPresent={assetSelected}
                     saveClicked={saveClicked}
@@ -40,6 +42,7 @@ export default function EditScreen({ temp }) {
                     setDisplayDevice={setDisplayDevice}
                     displayDevice ={displayDevice}
                     setFileData={setFileData}
+                    setFileName={setFileName}
                 />
                 <FooterEdit
                     setOverlay={setAssetSelected}
