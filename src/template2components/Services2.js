@@ -4,6 +4,12 @@ import { Editor } from '@tinymce/tinymce-react';
 import Services2moduleCss from './Services2.module.css'
 export const Services2 = ({ showPopup, overSection }) => {
     const [currentBackground, setCurrentBackground] = useState("white");
+    const [currentBackground0, setCurrentBackground0] = useState("#ebebeb");
+    const [showPopup0, setShowPopup0] = useState(false);
+    const [currentBackground1, setCurrentBackground1] = useState("#c0272d");
+    const [showPopup1, setShowPopup1] = useState(false);
+    const [currentBackground2, setCurrentBackground2] = useState("#ebebeb");
+    const [showPopup2, setShowPopup2] = useState(false);
     const editorRef = useRef();
     return (
         <>
@@ -66,7 +72,7 @@ export const Services2 = ({ showPopup, overSection }) => {
 
 
 
-                            <div className={`${Services2moduleCss['container-text']}`}>
+                            <div className={`${Services2moduleCss['container-text']} relative`} onClick={() => setShowPopup0(state => !state)} style={{background:currentBackground0}}>
 
                                 <h1 className={`${Services2moduleCss.name}`}>
                                     <Editor
@@ -132,13 +138,20 @@ export const Services2 = ({ showPopup, overSection }) => {
                                     <i style={{ margin: `0.35rem` }} className="fas fa-long-arrow-alt-right"></i>
 
                                 </button>
-
+                                <div style={(showPopup0) ? { position: "absolute", top: "2rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                                    <GithubPicker
+                                        triangle="top-right"
+                                        onChangeComplete={(color) => {
+                                            setCurrentBackground0(color.hex);
+                                        }}
+                                    />
+                                </div>
                             </div>
                         </div>
 
                         <div style={{ background: `transparent`, margin: `20px`, width: `355px` }} className={`${Services2moduleCss['container-services']}`} data-aos="fade-right">
 
-                            <div style={{ background: `#C0272D`, height: `auto`, textAlign: `center`, overflowX: 'hidden' }} className={`${Services2moduleCss['container-text']} ${['container-text-2']}`}>
+                            <div style={{ background: currentBackground1, height: `auto`, textAlign: `center`, overflowX: 'hidden' }} onClick={ () => setShowPopup1(state => !state)} className={`relative ${Services2moduleCss['container-text']} ${['container-text-2']}`}>
                                 <h1 style={{ color: `white`, paddingTop: `15%`, fontWeight: `bolder`, fontSize: `1.5rem` }}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -202,11 +215,19 @@ export const Services2 = ({ showPopup, overSection }) => {
                                     />
                                     <i style={{ margin: `0.35rem` }} className="fas fa-long-arrow-alt-right"></i>
                                 </button>
+                                <div style={(showPopup1) ? { position: "absolute", top: "2rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                                    <GithubPicker
+                                        triangle="top-right"
+                                        onChangeComplete={(color) => {
+                                            setCurrentBackground1(color.hex);
+                                        }}
+                                    />
+                                </div>
                             </div>
                         </div>
                         <div className={`${Services2moduleCss['container-services']}`} data-aos="fade-left">
 
-                            <div className={`${Services2moduleCss['container-text']}`}>
+                            <div className={`${Services2moduleCss['container-text']} relative`} style={{background:currentBackground2}} onClick={() => setShowPopup2(state => !state)}>
                                 <h1 className={`${Services2moduleCss.name}`}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -276,6 +297,14 @@ export const Services2 = ({ showPopup, overSection }) => {
 
 
                                 </button>
+                                <div style={(showPopup2) ? { position: "absolute", top: "2rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                                    <GithubPicker
+                                        triangle="top-right"
+                                        onChangeComplete={(color) => {
+                                            setCurrentBackground2(color.hex);
+                                        }}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
