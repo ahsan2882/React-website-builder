@@ -79,13 +79,13 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
     const dropdownClicked = (e) => {
         setShowSidebar(e.target.innerHTML)
         if (currentTemp === "Template-1") {
-            setSubpages(pages.template1pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(item => item))[0])
+            setSubpages(pages.template1pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
         } else if (currentTemp === "Template-2") {
-            setSubpages(pages.template2pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(item => item))[0])
+            setSubpages(pages.template2pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
         } else if (currentTemp === "Template-3") {
-            setSubpages(pages.template3pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(item => item))[0])
+            setSubpages(pages.template3pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
         } else if (currentTemp === "Template-4") {
-            setSubpages(pages.template4pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(item => item))[0])
+            setSubpages(pages.template4pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
         }
     }
 
@@ -102,7 +102,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
                                     <div key={i}>
                                         <button onClick={(e) => dropdownClicked(e)} style={{ width: "100px", padding: "0.7rem 0", borderRadius: `12px`, color: `white`, fontWeight: `600`, cursor: `pointer` }} className=" m-6 bg-BL-600">{item}</button>
                                         <ul className={showSidebar === item ? "flex flex-col justify-around items-start" : "hidden"}>
-                                            {subpages.map((item, i) => <li key={i} onClick={() => setTemplatePage(item)}><button className="ml-10 w-24 px-4 py-3 bg-BL-500 rounded-xl my-2">{item}</button></li>)}
+                                            {subpages.map((items, index) => <li key={index} onClick={() => setTemplatePage(items)}><button className="ml-10 w-24 px-4 py-3 bg-BL-500 rounded-xl my-2">{item}</button></li>)}
                                         </ul>
                                     </div>
                                 )}
