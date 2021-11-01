@@ -5,6 +5,12 @@ import Guard2moduleCss from './Guard2.module.css'
 
 export const Guard2 = ({ showPopup, overSection }) => {
   const [currentBackground, setCurrentBackground] = useState("white");
+  const [currentBackground0, setCurrentBackground0] = useState("#c0272d");
+  const [showPopup0, setShowPopup0] = useState(false);
+  const [currentBackground1, setCurrentBackground1] = useState("#c0272d");
+  const [showPopup1, setShowPopup1] = useState(false);
+  const [currentBackground2, setCurrentBackground2] = useState("#c0272d");
+  const [showPopup2, setShowPopup2] = useState(false);
   const editorRef = useRef();
 
   return (
@@ -64,7 +70,7 @@ export const Guard2 = ({ showPopup, overSection }) => {
                     }}
                   />
                 </div>
-                <div className={`${Guard2moduleCss.box4}`}>
+                <div className={`${Guard2moduleCss.box4} relative`} onClick={() => setShowPopup0(state => !state)} style={{ background: currentBackground0 }}>
                   <h1 className={`${Guard2moduleCss.h1}`}>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
@@ -117,7 +123,14 @@ export const Guard2 = ({ showPopup, overSection }) => {
                     </div>
                   </div>
 
-
+                  <div style={(showPopup0) ? { position: "absolute", top: "2rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                    <GithubPicker
+                      triangle="top-right"
+                      onChangeComplete={(color) => {
+                        setCurrentBackground0(color.hex);
+                      }}
+                    />
+                  </div>
                 </div>
                 <div className={`${Guard2moduleCss.box3}`}>
                   <Editor
@@ -139,7 +152,7 @@ export const Guard2 = ({ showPopup, overSection }) => {
                     }}
                   />
                 </div>
-                <div className={`${Guard2moduleCss.box4}`}>
+                <div className={`${Guard2moduleCss.box4} relative`} onClick={() => setShowPopup1(state => !state)} style={{ background: currentBackground1 }}>
                   <h1 className={`${Guard2moduleCss.h1}`}>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
@@ -189,7 +202,14 @@ export const Guard2 = ({ showPopup, overSection }) => {
                       <a href={2}><i style={{ color: `white`, margin: `0 0.75rem` }} className="fab fa-youtube i"></i></a>
                     </div>
                   </div>
-
+                  <div style={(showPopup1) ? { position: "absolute", top: "2rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                    <GithubPicker
+                      triangle="top-right"
+                      onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                      }}
+                    />
+                  </div>
 
                 </div>
                 <div className={`${Guard2moduleCss.box5}`}>
@@ -212,7 +232,7 @@ export const Guard2 = ({ showPopup, overSection }) => {
                     }}
                   />
                 </div>
-                <div className={`${Guard2moduleCss.box4}`}>
+                <div className={`${Guard2moduleCss.box4} relative`} onClick={() => setShowPopup2(state => !state)} style={{ background: currentBackground2 }}>
                   <h1 className={`${Guard2moduleCss.h1}`}>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
@@ -265,7 +285,14 @@ export const Guard2 = ({ showPopup, overSection }) => {
                     </div>
                   </div>
 
-
+                  <div style={(showPopup2) ? { position: "absolute", top: "2rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                    <GithubPicker
+                      triangle="top-right"
+                      onChangeComplete={(color) => {
+                        setCurrentBackground2(color.hex);
+                      }}
+                    />
+                  </div>
                 </div>
 
 
