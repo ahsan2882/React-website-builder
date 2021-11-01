@@ -6,6 +6,12 @@
     max-height: 6rem;
    
 }
+.pagebar{
+    position: absolute;
+    top:100%;
+    background-color: white;
+    transition: 0.3s all ease;
+}
 .sideButton:hover{
     border: 2px solid white
 }
