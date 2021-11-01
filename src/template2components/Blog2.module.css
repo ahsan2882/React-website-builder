@@ -248,3 +248,8 @@
       margin-bottom: 0;
     }
   }
+  @media(max-width: 860px){
+    .MainHeading{
+      font-size: 2rem !important;
+    }
+  }
