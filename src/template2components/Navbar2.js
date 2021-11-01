@@ -146,16 +146,16 @@ export const Navbar2 = ({ displayDevice, linksfunc }) => {
                         </li>
                         <li>
                             <ul className={displayDevice ? "flex items-center justify-around text-white" : "hidden"} style={{ width: "30rem" }}>
-                                <li className="px-4 py-4">HOME</li>
+                                <li className="px-4 py-4">{linksfunc ? <a href="index.html" className="no-underline">HOME</a> : <>HOME</>}</li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>ABOUT
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        <li>{linksfunc ? <a href="contact.html#vision" className="no-underline">OUR VISION</a> : <>OUR VISION</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#experience" className="no-underline">OUR EXPERIENCE</a> : <>OUR EXPERIENCE</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#policies" className="no-underline">OUR POLICIES</a> : <>OUR POLICIES</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#prices" className="no-underline">OUR PRICES</a> : <>OUR PRICES</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#accreditation" className="no-underline">OUR ACCREDITATIONS</a> : <>OUR ACCREDITATIONS</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#team" className="no-underline">OUR TEAM</a> : <>OUR TEAM</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#partners" className="no-underline">OUR PARTNERS</a> : <>OUR PARTNERS</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#vision" className="no-underline">OUR VISION</a> : <>OUR VISION</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#experience" className="no-underline">OUR EXPERIENCE</a> : <>OUR EXPERIENCE</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#policies" className="no-underline">OUR POLICIES</a> : <>OUR POLICIES</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#prices" className="no-underline">OUR PRICES</a> : <>OUR PRICES</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#accreditation" className="no-underline">OUR ACCREDITATIONS</a> : <>OUR ACCREDITATIONS</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#team" className="no-underline">OUR TEAM</a> : <>OUR TEAM</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#partners" className="no-underline">OUR PARTNERS</a> : <>OUR PARTNERS</>}</li>
                                     </ul>
                                 </li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SECTORS
@@ -206,7 +206,7 @@ export const Navbar2 = ({ displayDevice, linksfunc }) => {
                         </li>
                         <li>
                             <ul className={displayDevice ? "flex items-center justify-around text-white" : "hidden"} style={{ width: "30rem" }}>
-                                <li className="px-4 py-4">CONTACT</li>
+                                <li className="px-4 py-4">{linksfunc ? <a href="contact.html" className="no-underline">CONTACT</a> : <>CONTACT</>}</li>
                                 <li className="px-4 py-4">
                                     <lord-icon
                                         src="https://cdn.lordicon.com/msoeawqm.json"
