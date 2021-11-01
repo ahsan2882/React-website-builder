@@ -1,15 +1,17 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import Accreditation2moduleCss from './Accreditation2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
 
 
-export const Accreditation2 = () => {
+export const Accreditation2 = ({ showPopup, overSection }) => {
+  const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef();
 
   return (
     <>
-      <section className={`${Accreditation2moduleCss['head-main']}`} id="our-accreditations">
+      <section className={`${Accreditation2moduleCss['head-main']}`} id="our-accreditations" style={{ background: currentBackground }}>
         <h1 className={`${Accreditation2moduleCss.MainHeading}`}>
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
@@ -498,6 +500,14 @@ export const Accreditation2 = () => {
           </div>
         </div>
       </section>
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+        <GithubPicker
+          triangle="top-right"
+          onChangeComplete={(color) => {
+            setCurrentBackground(color.hex);
+          }}
+        />
+      </div>
     </>
   )
 }
