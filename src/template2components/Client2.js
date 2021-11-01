@@ -1,12 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import Client2moduleCss from './Client2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
-export const Client2 = ({displayDevice}) => {
+export const Client2 = ({ displayDevice, showPopup, overSection }) => {
+  const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef();
   return (
     <>
-      <section className={`${Client2moduleCss['head-main']}`}>
+      <section className={`${Client2moduleCss['head-main']}`} style={{ background: currentBackground }}>
         <h1 className={`${Client2moduleCss.MainHeading}`}>
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
@@ -358,6 +360,14 @@ export const Client2 = ({displayDevice}) => {
           </div>
         </div>
       </section>
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+        <GithubPicker
+          triangle="top-right"
+          onChangeComplete={(color) => {
+            setCurrentBackground(color.hex);
+          }}
+        />
+      </div>
     </>
   )
 }
