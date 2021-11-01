@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import pages from './TemplatePages';
 import FileSaver from 'file-saver';
 
-export default function Header({ templateNum, fileName, setSaveClicked, toSave, saveClicked, fileData, setTemplatePage, setDisplayDevice }) {
+export default function Header({ templateNum, fileName, setSaveClicked, setLinksfunc, toSave, saveClicked, fileData, setTemplatePage, setDisplayDevice }) {
     const [isClicked, setIsClicked] = useState(false);
     const onClicked = () => setIsClicked((condition) => !condition);
     const [PageList, setPageList] = useState([]);
@@ -49,8 +49,12 @@ export default function Header({ templateNum, fileName, setSaveClicked, toSave, 
     //     }
     // }, [saveClicked])
     const saveTemplate = () => {
+        setLinksfunc(true);
         setSaveClicked(true);
         localStorage.setItem(currentTemp, JSON.stringify(toSave))
+        setTimeout(() => {
+            setLinksfunc(false);
+        }, 2000);
         // console.log(fileData)
     }
     const exportCode = () => {
