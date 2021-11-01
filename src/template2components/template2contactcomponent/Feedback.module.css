@@ -136,3 +136,11 @@
     height: 600px;
   }
   
+
+  @media screen and (max-width: 860px) {
+    .feed-contain{
+      flex-direction: column !important;
+    }
+    
+    
+  }
