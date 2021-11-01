@@ -2,8 +2,6 @@
   font-size: 60px;
   font-weight: 900;
   text-transform: uppercase;
-
-  font-family: "Poppins", sans-serif;
   text-align: center;
   /* background-color: darkgray; */
 }
@@ -136,7 +134,11 @@
     margin-left: 60px;
   }
 }
-
+@media(max-width: 860px){
+  .MainHeading {
+    font-size: 2rem !important;
+  }
+}
 @media (max-width: 1066px) {
   .pokemon__img {
     max-height: 55.4vw;
@@ -181,6 +183,9 @@
   .text--big {
     font-size: 21vw;
     margin-left: -32px;
+  }
+  .MainHeading{
+    font-size: 2rem !important;
   }
 
   .text--sub {
