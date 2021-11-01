@@ -1,14 +1,16 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 
 import Blog2moduleCss from './Blog2.module.css'
 
-export const Blog2 = () => {
+export const Blog2 = ({ showPopup, overSection }) => {
+  const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef();
 
   return (
     <>
-      <section className={`${Blog2moduleCss['head-main']}`}>
+      <section className={`${Blog2moduleCss['head-main']}`} style={{ background: currentBackground }}>
         <h1 className={`${Blog2moduleCss.MainHeading}`}>
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
@@ -328,7 +330,14 @@ export const Blog2 = () => {
           </div>
         </div>
       </div>
-
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+        <GithubPicker
+          triangle="top-right"
+          onChangeComplete={(color) => {
+            setCurrentBackground(color.hex);
+          }}
+        />
+      </div>
     </>
   )
 }
