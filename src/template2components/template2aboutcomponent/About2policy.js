@@ -1,13 +1,15 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import AboutpolicyCss from './About2policy.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
-export default function About2policy() {
+export default function About2policy({ showPopup, overSection }) {
+  const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef(null);
   return (
     <>
 
-      <section className={`${AboutpolicyCss['policies']} ${AboutpolicyCss['head-main']}`} id="our-policies">
+      <section className={`${AboutpolicyCss['policies']} ${AboutpolicyCss['head-main']}`} id="our-policies" style={{ background: currentBackground }}>
         <div className={AboutpolicyCss['MainHeading']}>
           <Editor
 
@@ -470,6 +472,14 @@ export default function About2policy() {
           </div>
         </div>
       </section>
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+        <GithubPicker
+          triangle="top-right"
+          onChangeComplete={(color) => {
+            setCurrentBackground(color.hex);
+          }}
+        />
+      </div>
     </>
   )
 }
