@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import Navbar2moduleCss from './Navbar2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
-export const Navbar2 = ({ displayDevice }) => {
+export const Navbar2 = ({ displayDevice, linksfunc }) => {
     const editorRef = useRef();
     return (
         <>
@@ -149,23 +149,29 @@ export const Navbar2 = ({ displayDevice }) => {
                                 <li className="px-4 py-4">HOME</li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>ABOUT
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        <li>OUR VISION</li>
-                                        <li>OUR EXPERIENCE</li>
-                                        <li>OUR POLICIES</li>
-                                        <li>OUR PRICES</li>
-                                        <li>OUR ACCREDITATIONS</li>
-                                        <li>OUR TEAM</li>
-                                        <li>OUR PARTNERS</li>
+                                        <li>{ linksfunc ? <a href="contact.html#vision">OUR VISION</a> : <>OUR VISION</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#experience">OUR EXPERIENCE</a> : <>OUR EXPERIENCE</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#policies">OUR POLICIES</a> : <>OUR POLICIES</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#prices">OUR PRICES</a> : <>OUR PRICES</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#accreditation">OUR ACCREDITATIONS</a> : <>OUR ACCREDITATIONS</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#team">OUR TEAM</a> : <>OUR TEAM</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#partners">OUR PARTNERS</a> : <>OUR PARTNERS</>}</li>
                                     </ul>
                                 </li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SECTORS
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
                                         <li>CONSTRUCTION</li>
+                                        <li>{linksfunc ? <a href="construction.html">CONSTRUCTION</a> : <>CONSTRUCTION</>}</li>
                                         <li>CORPORATE</li>
+                                        <li>{linksfunc ? <a href="corporate.html">CORPORATE</a> : <>CORPORATE</>}</li>
                                         <li>INDUSTRIAL</li>
+                                        <li>{linksfunc ? <a href="industrial.html">INDUSTRIAL</a> : <>INDUSTRIAL</>}</li>
                                         <li>RETAIL</li>
+                                        <li>{linksfunc ? <a href="retail.html">RETAIL</a> : <>RETAIL</>}</li>
                                         <li>LOGISTICS</li>
+                                        <li>{linksfunc ? <a href="logistics.html">LOGISTICS</a> : <>LOGISTICS</>}</li>
                                         <li>PROPERTY MANAGEMENT</li>
+                                        <li>{linksfunc ? <a href="proprty-management.html">PROPERTY MANAGEMENT</a> : <>PROPERTY MANAGEMENT</>}</li>
                                     </ul>
                                 </li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SERVICES
@@ -178,7 +184,7 @@ export const Navbar2 = ({ displayDevice }) => {
                                         <li>TECHNOLOGY PRODUCT</li>
                                         <li>MANNED GUARDING</li>
                                         <li>SUPPORT & MANAGEMENT</li>
-                                        <li>EVENT SECUTITY</li>
+                                        <li>EVENT SECURITY</li>
                                         <li>GUARD HOUSE</li>
                                     </ul>
                                 </li>
