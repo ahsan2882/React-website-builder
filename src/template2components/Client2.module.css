@@ -268,3 +268,8 @@
       margin-bottom: 0;
     }
   }
+  @media(max-width: 860px){
+    .MainHeading, .test-main{
+      font-size: 2rem !important;
+    }
+  }
