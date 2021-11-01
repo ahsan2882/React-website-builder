@@ -1,35 +1,41 @@
 import React, { useEffect, useState } from 'react'
 import HeaderEditCss from './HeaderEdit.module.css'
 import { Link } from 'react-router-dom';
-import subPages from './TemplateSubPages';
+import pages from './TemplatePages';
 import FileSaver from 'file-saver';
 
-export default function Header({ templateNum, setSaveClicked, toSave, saveClicked, fileData, setTemplateSubPage, setDisplayDevice }) {
+export default function Header({ templateNum, fileName, setSaveClicked, toSave, saveClicked, fileData, setTemplatePage, setDisplayDevice }) {
     const [isClicked, setIsClicked] = useState(false);
     const onClicked = () => setIsClicked((condition) => !condition);
-    const [subPageList, setSubPageList] = useState([]);
+    const [PageList, setPageList] = useState([]);
+    const [subpages, setSubpages] = useState([]);
+    const [showSidebar, setShowSidebar] = useState("");
     const [newPath, setNewPath] = useState([]);
     const [currentTemp, setCurrentTemp] = useState([]);
 
     useEffect(() => {
         if (templateNum === 1) {
             setNewPath('/preview/template-1')
-            setSubPageList(subPages.template1Subpages)
+            setPageList(pages.template1pages.map((item) => item.groupName))
+            // setSubPages(pages.template1pages.map((item) => item.subpages))
             setCurrentTemp("Template-1")
         }
         else if (templateNum === 2) {
             setNewPath('/preview/template-2')
-            setSubPageList(subPages.template2Subpages)
+            setPageList(pages.template2pages.map((item) => item.groupName))
+            // setSubPages(pages.template2pages.map((item) => item.subpages))
             setCurrentTemp("Template-2")
         }
         else if (templateNum === 3) {
             setNewPath('/preview/template-3')
-            setSubPageList(subPages.template3Subpages)
+            setPageList(pages.template3pages.map((item) => item.groupName))
+            // setSubPages(pages.template3pages.map((item) => item.subpages))
             setCurrentTemp("Template-3")
         }
         else if (templateNum === 4) {
             setNewPath('/preview/template-4')
-            setSubPageList(subPages.template4Subpages)
+            setPageList(pages.template4pages.map((item) => item.groupName))
+            // setSubPages(pages.template4pages.map((item) => item.subpages))
             setCurrentTemp("Template-4")
         }
         else if (templateNum === 0) {
@@ -39,7 +45,7 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
     }, [templateNum])
     // useEffect(() => {
     //     if (saveClicked) {
-            
+
     //     }
     // }, [saveClicked])
     const saveTemplate = () => {
@@ -54,7 +60,7 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                file_name: "index.html",
+                file_name: fileName,
                 file_content: fileData
             })
         };
@@ -67,6 +73,18 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
             })
             .catch(error => console.log(error))
     }
+    const dropdownClicked = (e) => {
+        setShowSidebar(e.target.innerHTML)
+        if (currentTemp === "Template-1") {
+            setSubpages(pages.template1pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(item => item))[0])
+        } else if (currentTemp === "Template-2") {
+            setSubpages(pages.template2pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(item => item))[0])
+        } else if (currentTemp === "Template-3") {
+            setSubpages(pages.template3pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(item => item))[0])
+        } else if (currentTemp === "Template-4") {
+            setSubpages(pages.template4pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(item => item))[0])
+        }
+    }
 
     return (
         <>
@@ -74,10 +92,17 @@ export default function Header({ templateNum, setSaveClicked, toSave, saveClicke
             <div className={`flex justify-between items-center py-6 ${HeaderEditCss['max-w-7xl']} ${HeaderEditCss.maxHeadH} mx-auto px-16 bg-black fixed z-50 w-full top-0`}>
                 <div className="w-96 ml-4">
                     <div className="list">
-                        <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px`, color: "white", fontWeight: "700" }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, fontWeight: "700", background: `rgb(60,172,254)`}}> Pages </h2>} </div>
-                        <div className="w-48" style={isClicked ? { left: `0`, position: `absolute`, top: `100%`, transition: `0.25s all ease`, background: `white`, height: `100vh` } : { position: `absolute`, top: `100%`, left: `-100%`, height: `100vh`, background: `white`, boxShadow: `1px 4px 2px 2px rgba(0,0,0,0.3)`, transition: `0.25s all ease` }}>
-                            <div className="flex flex-col mt-12">
-                                {subPageList.map((item) => <h5 onClick={() => setTemplateSubPage(item)} style={{ padding: `12px 15px 12px`, borderRadius: `12px`, color: `white`, fontWeight: `600`, cursor: `pointer` }} className="m-6 bg-BL-600">{item}</h5>)}
+                        <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px`, color: "white", fontWeight: "700" }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, fontWeight: "700", background: `rgb(60,172,254)` }}> Pages </h2>} </div>
+                        <div className={`${HeaderEditCss.pagebar} h-screen`} style={isClicked ? { left: `0`} : { left: `-100%`}}>
+                            <div className="flex flex-col mt-12 h-full">
+                                {PageList.map((item,i) =>
+                                    <div key={i}>
+                                        <button onClick={(e) => dropdownClicked(e)} style={{ width: "100px", padding: "0.7rem 0", borderRadius: `12px`, color: `white`, fontWeight: `600`, cursor: `pointer` }} className=" m-6 bg-BL-600">{item}</button>
+                                        <ul className={showSidebar === item ? "flex flex-col justify-around items-start" : "hidden"}>
+                                            {subpages.map((item, i) => <li key={i} onClick={() => setTemplatePage(item)}><button className="ml-10 w-24 px-4 py-3 bg-BL-500 rounded-xl my-2">{item}</button></li>)}
+                                        </ul>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
