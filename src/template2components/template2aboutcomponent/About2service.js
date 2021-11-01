@@ -5,7 +5,7 @@ export default function About2service() {
     const editorRef = useRef(null);
     return (
         <>
-            <section class={About2servicesCss['head-main']} id="experience">
+            <section class={About2servicesCss['head-main']} id="our-experience">
                 <div class={About2servicesCss['MainHeading']}>
                     <Editor
 
