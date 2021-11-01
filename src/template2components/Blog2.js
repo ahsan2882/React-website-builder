@@ -6,6 +6,12 @@ import Blog2moduleCss from './Blog2.module.css'
 
 export const Blog2 = ({ showPopup, overSection }) => {
   const [currentBackground, setCurrentBackground] = useState("white");
+  const [currentBackground0, setCurrentBackground0] = useState("#c0272d");
+  const [showPopup0, setShowPopup0] = useState(false);
+  const [currentBackground1, setCurrentBackground1] = useState("#c0272d");
+  const [showPopup1, setShowPopup1] = useState(false);
+  const [currentBackground2, setCurrentBackground2] = useState("#c0272d");
+  const [showPopup2, setShowPopup2] = useState(false);
   const editorRef = useRef();
 
   return (
@@ -85,7 +91,7 @@ export const Blog2 = ({ showPopup, overSection }) => {
                   />
                 </div>
 
-                <div className={`${Blog2moduleCss['blog-content']}`} >
+                <div className={`${Blog2moduleCss['blog-content']} relative`} onClick={() => setShowPopup0(state => !state)} style={{background: currentBackground0}}>
                   <h4>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
@@ -149,6 +155,14 @@ export const Blog2 = ({ showPopup, overSection }) => {
                       />
                       <i style={{ margin: `0.35rem` }} className="fas fa-long-arrow-alt-right"></i></button>
                   </div>
+                  <div style={(showPopup0) ? { position: "absolute", top: "2rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                    <GithubPicker
+                      triangle="top-right"
+                      onChangeComplete={(color) => {
+                        setCurrentBackground0(color.hex);
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
               <div className={`${Blog2moduleCss['single-blog']}`} data-aos="zoom-in">
@@ -176,7 +190,7 @@ export const Blog2 = ({ showPopup, overSection }) => {
 
                 </div>
 
-                <div className={`${Blog2moduleCss['blog-content']}`}>
+                <div className={`${Blog2moduleCss['blog-content']} relative`} onClick={() => setShowPopup1(state => !state)} style={{background:currentBackground1}}>
                   <h4>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
@@ -239,6 +253,14 @@ export const Blog2 = ({ showPopup, overSection }) => {
                       />
                       <i style={{ margin: `0.35rem` }} className="fas fa-long-arrow-alt-right"></i></button>
                   </div>
+                  <div style={(showPopup1) ? { position: "absolute", top: "2rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                    <GithubPicker
+                      triangle="top-right"
+                      onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
               <div className={`${Blog2moduleCss['single-blog']}`} data-aos="fade-left">
@@ -265,7 +287,7 @@ export const Blog2 = ({ showPopup, overSection }) => {
 
                 </div>
 
-                <div className={`${Blog2moduleCss['blog-content']}`}>
+                <div className={`${Blog2moduleCss['blog-content']} relative`} onClick={() => setShowPopup2(state => !state)} style={{background: currentBackground2}}>
                   <h4>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
@@ -327,6 +349,14 @@ export const Blog2 = ({ showPopup, overSection }) => {
                         }}
                       />
                       <i style={{ margin: `0.35rem` }} className="fas fa-long-arrow-alt-right"></i></button>
+                  </div>
+                  <div style={(showPopup2) ? { position: "absolute", top: "2rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                    <GithubPicker
+                      triangle="top-right"
+                      onChangeComplete={(color) => {
+                        setCurrentBackground2(color.hex);
+                      }}
+                    />
                   </div>
                 </div>
               </div>
