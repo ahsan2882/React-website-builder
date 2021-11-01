@@ -164,13 +164,9 @@ export const Navbar2 = ({ displayDevice, linksfunc }) => {
                                         <li>{linksfunc ? <a href="construction.html">CONSTRUCTION</a> : <>CONSTRUCTION</>}</li>
                                         <li>CORPORATE</li>
                                         <li>{linksfunc ? <a href="corporate.html">CORPORATE</a> : <>CORPORATE</>}</li>
-                                        <li>INDUSTRIAL</li>
                                         <li>{linksfunc ? <a href="industrial.html">INDUSTRIAL</a> : <>INDUSTRIAL</>}</li>
-                                        <li>RETAIL</li>
                                         <li>{linksfunc ? <a href="retail.html">RETAIL</a> : <>RETAIL</>}</li>
-                                        <li>LOGISTICS</li>
                                         <li>{linksfunc ? <a href="logistics.html">LOGISTICS</a> : <>LOGISTICS</>}</li>
-                                        <li>PROPERTY MANAGEMENT</li>
                                         <li>{linksfunc ? <a href="proprty-management.html">PROPERTY MANAGEMENT</a> : <>PROPERTY MANAGEMENT</>}</li>
                                     </ul>
                                 </li>
