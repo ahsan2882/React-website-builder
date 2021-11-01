@@ -138,7 +138,7 @@ export const Navbar2 = ({ displayDevice, linksfunc }) => {
                 <nav>
                     <ul className="flex justify-evenly items-center">
                         <li className={displayDevice ? "hidden" : "block"}>
-                            <section style={{ cursor:"pointer"}}>
+                            <section style={{ cursor: "pointer" }}>
                                 <div className="w-6 h-1 my-1 mx-auto transition-all duration-500 bg-white"></div>
                                 <div className="w-6 h-1 my-1 mx-auto transition-all duration-500 bg-white"></div>
                                 <div className="w-6 h-1 my-1 mx-auto transition-all duration-500 bg-white"></div>
@@ -149,39 +149,37 @@ export const Navbar2 = ({ displayDevice, linksfunc }) => {
                                 <li className="px-4 py-4">HOME</li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>ABOUT
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        <li>{ linksfunc ? <a href="contact.html#vision">OUR VISION</a> : <>OUR VISION</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#experience">OUR EXPERIENCE</a> : <>OUR EXPERIENCE</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#policies">OUR POLICIES</a> : <>OUR POLICIES</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#prices">OUR PRICES</a> : <>OUR PRICES</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#accreditation">OUR ACCREDITATIONS</a> : <>OUR ACCREDITATIONS</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#team">OUR TEAM</a> : <>OUR TEAM</>}</li>
-                                        <li>{linksfunc ? <a href="contact.html#partners">OUR PARTNERS</a> : <>OUR PARTNERS</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#vision" className="no-underline">OUR VISION</a> : <>OUR VISION</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#experience" className="no-underline">OUR EXPERIENCE</a> : <>OUR EXPERIENCE</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#policies" className="no-underline">OUR POLICIES</a> : <>OUR POLICIES</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#prices" className="no-underline">OUR PRICES</a> : <>OUR PRICES</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#accreditation" className="no-underline">OUR ACCREDITATIONS</a> : <>OUR ACCREDITATIONS</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#team" className="no-underline">OUR TEAM</a> : <>OUR TEAM</>}</li>
+                                        <li>{linksfunc ? <a href="contact.html#partners" className="no-underline">OUR PARTNERS</a> : <>OUR PARTNERS</>}</li>
                                     </ul>
                                 </li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SECTORS
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        <li>CONSTRUCTION</li>
-                                        <li>{linksfunc ? <a href="construction.html">CONSTRUCTION</a> : <>CONSTRUCTION</>}</li>
-                                        <li>CORPORATE</li>
-                                        <li>{linksfunc ? <a href="corporate.html">CORPORATE</a> : <>CORPORATE</>}</li>
-                                        <li>{linksfunc ? <a href="industrial.html">INDUSTRIAL</a> : <>INDUSTRIAL</>}</li>
-                                        <li>{linksfunc ? <a href="retail.html">RETAIL</a> : <>RETAIL</>}</li>
-                                        <li>{linksfunc ? <a href="logistics.html">LOGISTICS</a> : <>LOGISTICS</>}</li>
-                                        <li>{linksfunc ? <a href="proprty-management.html">PROPERTY MANAGEMENT</a> : <>PROPERTY MANAGEMENT</>}</li>
+                                        <li>{linksfunc ? <a href="construction.html" className="no-underline">CONSTRUCTION</a> : <>CONSTRUCTION</>}</li>
+                                        <li>{linksfunc ? <a href="corporate.html" className="no-underline">CORPORATE</a> : <>CORPORATE</>}</li>
+                                        <li>{linksfunc ? <a href="industrial.html" className="no-underline">INDUSTRIAL</a> : <>INDUSTRIAL</>}</li>
+                                        <li>{linksfunc ? <a href="retail.html" className="no-underline">RETAIL</a> : <>RETAIL</>}</li>
+                                        <li>{linksfunc ? <a href="logistics.html" className="no-underline">LOGISTICS</a> : <>LOGISTICS</>}</li>
+                                        <li>{linksfunc ? <a href="property-management.html" className="no-underline">PROPERTY MANAGEMENT</a> : <>PROPERTY MANAGEMENT</>}</li>
                                     </ul>
                                 </li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SERVICES
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        <li>STATIC SECURITY</li>
-                                        <li>MOBILE PATROLLING</li>
-                                        <li>CCTV MONITORING</li>
-                                        <li>LOCK & UNLOCK</li>
-                                        <li>VACANT UNIT CHECKS</li>
-                                        <li>TECHNOLOGY PRODUCT</li>
-                                        <li>MANNED GUARDING</li>
-                                        <li>SUPPORT & MANAGEMENT</li>
-                                        <li>EVENT SECURITY</li>
-                                        <li>GUARD HOUSE</li>
+                                        <li>{linksfunc ? <a href="static-security.html" className="no-underline">STATIC SECURITY</a> : <>STATIC SECURITY</>}</li>
+                                        <li>{linksfunc ? <a href="mobile-patrolling.html" className="no-underline">MOBILE PATROLLING</a> : <>MOBILE PATROLLING</>}</li>
+                                        <li>{linksfunc ? <a href="cctv-monitoring.html" className="no-underline">CCTV MONITORING</a> : <>CCTV MONITORING</>}</li>
+                                        <li>{linksfunc ? <a href="lock-unlock.html" className="no-underline">LOCK & UNLOCK</a> : <>LOCK & UNLOCK</>}</li>
+                                        <li>{linksfunc ? <a href="vacant-unit-checks.html" className="no-underline">VACANT UNIT CHECKS</a> : <>VACANT UNIT CHECKS</>}</li>
+                                        <li>{linksfunc ? <a href="technology-product.html" className="no-underline">TECHNOLOGY PRODUCT</a> : <>TECHNOLOGY PRODUCT</>}</li>
+                                        <li>{linksfunc ? <a href="manned-guarding.html" className="no-underline">MANNED GUARDING</a> : <>MANNED GUARDING</>}</li>
+                                        <li>{linksfunc ? <a href="support-management.html" className="no-underline">SUPPORT & MANAGEMENT</a> : <>SUPPORT & MANAGEMENT</>}</li>
+                                        <li>{linksfunc ? <a href="event-security.html" className="no-underline">EVENT SECURITY</a> : <>EVENT SECURITY</>}</li>
+                                        <li>{linksfunc ? <a href="guard-house.html" className="no-underline">GUARD HOUSE</a> : <>GUARD HOUSE</>}</li>
                                     </ul>
                                 </li>
                             </ul>
