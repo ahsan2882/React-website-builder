@@ -1,7 +1,7 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, {  useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
-import heroVideo from '../assets/videos/homepage-hero-bg.mp4'
+// import heroVideo from '../assets/videos/homepage-hero-bg.mp4'
 import Hero4Css from './HeroSection4.module.css'
 
 export default function HeroSection4({ showPopup, overSection, displayDevice }) {
