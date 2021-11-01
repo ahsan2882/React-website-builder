@@ -5,7 +5,7 @@ export default function About2Vision({ displayDevice }) {
   const editorRef = useRef(null);
   return (
 
-    <section className={`${About2vissionCss['vision']} ${About2vissionCss['our-vision']}`} id="vision">
+    <section className={`${About2vissionCss['vision']} ${About2vissionCss['our-vision']}`} id="our-vision">
       <div className={About2vissionCss['flex-about']}>
         <div className={`${About2vissionCss['content-our-vision']} ${About2vissionCss['container-content']}`}>
           <div className={About2vissionCss['vision-top-content']}>
