@@ -6,7 +6,7 @@ export const Pricing2 = ({displayDevice}) => {
     const editorRef = useRef();
     return (
         <>
-            <section className={Pricing2Css['head-main']}>
+            <section className={Pricing2Css['head-main']} id="prices">
                 <h1 className={`${Pricing2Css.MainHeading}`}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
