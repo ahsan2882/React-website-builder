@@ -50,7 +50,6 @@ export default function Header({ templateNum, fileName, setSaveClicked, toSave, 
     // }, [saveClicked])
     const saveTemplate = () => {
         setSaveClicked(true);
-        setTimeout(function () { setSaveClicked(true); }, 3000);
         localStorage.setItem(currentTemp, JSON.stringify(toSave))
         // console.log(fileData)
     }
@@ -68,7 +67,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, toSave, 
             .then(response => response.text())
             .then((fileText) => {
                 let blob = new Blob([fileText], { type: "text/html;charset=utf-8" })
-                FileSaver.saveAs(blob, "index.html")
+                FileSaver.saveAs(blob, fileName)
                 // console.log(fileText, "header check file content")
             })
             .catch(error => console.log(error))
