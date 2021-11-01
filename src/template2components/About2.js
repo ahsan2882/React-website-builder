@@ -1,13 +1,15 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import About2moduleCss from './About2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
+import { GithubPicker } from 'react-color';
 
-export const About2 = ({ displayDevice }) => {
+export const About2 = ({ displayDevice, showPopup, overSection }) => {
+  const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef();
 
   return (
     <>
-      <section className={`${About2moduleCss['head-main']}`}>
+      <section className={`${About2moduleCss['head-main']}`} style={{ background: currentBackground }}>
 
         <h1 className={`${About2moduleCss.MainHeading}`}>
           <Editor
@@ -87,7 +89,14 @@ export const About2 = ({ displayDevice }) => {
           </div>
         </div>
       </section>
-
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+        <GithubPicker
+          triangle="top-right"
+          onChangeComplete={(color) => {
+            setCurrentBackground(color.hex);
+          }}
+        />
+      </div>
 
     </>
   )
