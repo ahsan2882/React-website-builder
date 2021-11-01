@@ -251,7 +251,14 @@
     color:black;
   }
 }
-
+@media(max-width: 860px){
+  .navbar2 > li{
+    display: block;
+  }
+  .navbar2 .hide{
+    display: none;
+  }
+}
 
 .subMenu li{
   margin: 1.5rem;
