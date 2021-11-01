@@ -1,12 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import Form2Css from './Form2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Form2() {
+export default function Form2({ showPopup, overSection }) {
+  const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef(null);
   return (
     <>
       <section>
-        <div className={Form2Css['section-form']}>
+        <div className={Form2Css['section-form']} style={{ background: currentBackground }}>
           <div className={Form2Css['box2']}>
             <div className={Form2Css['addresses']}>
               <h1>{/*<lord-icon src="https://cdn.lordicon.com/burmxlrn.json" trigger="loop" colors={{ "primary": "#121331", "secondary": "#c0272d" }}
@@ -325,6 +327,14 @@ export default function Form2() {
           </div>
         </div>
       </section>
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+        <GithubPicker
+          triangle="top-right"
+          onChangeComplete={(color) => {
+            setCurrentBackground(color.hex);
+          }}
+        />
+      </div>
     </>
   )
 }
