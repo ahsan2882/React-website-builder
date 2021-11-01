@@ -16,4 +16,9 @@
   .head-img-text h1 {
     font-size: 4vw;
   }
-  
+
+  @media screen and (max-width: 860px) {
+    .head-img-text{
+      top: 50%;
+    }
+  }
