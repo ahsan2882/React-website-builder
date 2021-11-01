@@ -394,3 +394,9 @@
     border: 5px solid white;
     transition: 0.3s;
   }
+
+  @media(max-width: 860px){
+    .MainHeading{
+      font-size: 2rem !important;
+    }
+  }
