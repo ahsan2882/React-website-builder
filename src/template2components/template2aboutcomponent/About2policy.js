@@ -7,7 +7,7 @@ export default function About2policy() {
   return (
     <>
 
-      <section className={`${AboutpolicyCss['policies']} ${AboutpolicyCss['head-main']}`}>
+      <section className={`${AboutpolicyCss['policies']} ${AboutpolicyCss['head-main']}`} id="policies">
         <div className={AboutpolicyCss['MainHeading']}>
           <Editor
 
