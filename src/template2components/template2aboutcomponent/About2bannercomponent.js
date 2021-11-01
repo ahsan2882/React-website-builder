@@ -4,6 +4,7 @@ import { Editor } from '@tinymce/tinymce-react';
 export default function About2bannercomponent({displayDevice}) {
     const editorRef = useRef(null);
     return (
+        <>
         <section className={About2Css['header-img-serv']}>
             <div className={About2Css['head-img-text']}>
                 <h1 className={displayDevice ? About2Css['head1'] : About2Css['headM']}>
@@ -47,6 +48,7 @@ export default function About2bannercomponent({displayDevice}) {
                     }}
                 />
             </section>
+            </>
            
     )
 } 
