@@ -6,10 +6,11 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, overlayPresent, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templateSubPage, chatInclude }) {
+export default function ContainerEdit({ templateNum, setFileName, overlayPresent, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
+    const [linksfunc, setLinksfunc] = useState(false)
     const [sectionKey, setSectionKey] = useState(null);
     const [curTemplate, setCurTemplate] = useState(null);
     const [{ canDrop }, drop] = useDrop({
@@ -25,28 +26,58 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
     })
     const temp = templateNum;
     useEffect(() => {
+        let fileName = "";
         if (temp === 1) {
-            setUpdateChildren(templateComponents.template1Components[`${templateSubPage}`])
+            setUpdateChildren(templateComponents.template1Components[`${templatePage}`])
+            if (templatePage === "Home") {
+                setFileName("index.html")
+            }
+            else {
+                fileName = String(templatePage).toLowerCase().replace(" ", "-").concat(".html")
+                setFileName(fileName);
+            }
             setCurTemplate("Template 1");
         }
         else if (temp === 2) {
-            setUpdateChildren(templateComponents.template2Components[`${templateSubPage}`])
+            setUpdateChildren(templateComponents.template2Components[`${templatePage}`])
+            if (templatePage === "Home") {
+                setFileName("index.html")
+            }
+            else {
+                fileName = String(templatePage).toLowerCase().replace(" ", "-").concat(".html")
+                setFileName(fileName);
+            }
             setCurTemplate("Template 2");
         }
         else if (temp === 3) {
-            setUpdateChildren(templateComponents.template3Components[`${templateSubPage}`])
+            setUpdateChildren(templateComponents.template3Components[`${templatePage}`])
+            if (templatePage === "Home") {
+                setFileName("index.html")
+            }
+            else {
+                fileName = String(templatePage).toLowerCase().replace(" ", "-").concat(".html")
+                setFileName(fileName);
+            }
             setCurTemplate("Template 3");
         }
         else if (temp === 4) {
-            setUpdateChildren(templateComponents.template4Components[`${templateSubPage}`])
+            setUpdateChildren(templateComponents.template4Components[`${templatePage}`])
+            if (templatePage === "Home") {
+                setFileName("index.html")
+            }
+            else {
+                fileName = String(templatePage).toLowerCase().replace(" ", "-").concat(".html")
+                setFileName(fileName);
+            }
             setCurTemplate("Template 4");
         }
         else if (temp === 0) {
             setUpdateChildren([])
         }
-    }, [temp, templateSubPage])
+    }, [temp, templatePage, setFileName])
     useEffect(() => {
         if (saveClicked) {
+            setLinksfunc(true)
             setDisplayDevice(true)
             let htmlString = getHTMLData()
             let cssString = getCSSData()
@@ -60,7 +91,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                 css: `${cssString}`
             })
         }
-        setTimeout(function () { setSaveClicked(false); }, 1000);
+        setTimeout(function () { setSaveClicked(false); setLinksfunc(false); }, 1000);
 
     }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData, setDisplayDevice])
     const getHTMLData = () => {
@@ -169,7 +200,7 @@ export default function ContainerEdit({ templateNum, overlayPresent, saveClicked
                                                 setShowPopUp(false);
                                             }}
                                             className="relative">
-                                            <ItemX displayDevice={displayDevice} overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
+                                            <ItemX displayDevice={displayDevice} linksfunc={linksfunc} overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
                                             <div className="flex w-52 justify-evenly items-center toBeRemoved" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
                                                 <button className="p-3 bg-BL-600" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                                 <button className="bg-BL-600 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
