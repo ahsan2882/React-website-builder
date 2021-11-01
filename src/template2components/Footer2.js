@@ -3,15 +3,15 @@ import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 import Footer2moduleCss from './Footer2.module.css'
 export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
-  const [currentBackground, setCurrentBackground] = useState("white");
+  const [currentBackground, setCurrentBackground] = useState("#c0272d");
   const editorRef = useRef();
 
   return (
     <>
       <footer className={`${Footer2moduleCss.footer2}`} style={{ background: currentBackground }}>
-        <div className={Footer2moduleCss.footer}>
-          <div className={displayDevice ? Footer2moduleCss['row-foot'] : Footer2moduleCss['rowFootM']}>
-            <div className={displayDevice ? Footer2moduleCss['column-foot'] : Footer2moduleCss['columnFootM']}>
+        <div className={Footer2moduleCss.footer} style={{ background: currentBackground }}>
+          <div className={displayDevice ? Footer2moduleCss['row-foot'] : Footer2moduleCss['rowFootM']} style={{ background: currentBackground }}>
+            <div className={displayDevice ? Footer2moduleCss['column-foot'] : Footer2moduleCss['columnFootM']} style={{ background: currentBackground }}>
               <div className={Footer2moduleCss.span}></div>
               <h2 className={displayDevice ? Footer2moduleCss.hh1 : Footer2moduleCss.hh1M}>
                 <Editor
