@@ -1,11 +1,13 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import FeedbackCss from './Feedback.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Feedback2() {
+export default function Feedback2({ showPopup, overSection }) {
+  const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef(null);
   return (
     <>
-      <section className={FeedbackCss.feedback}>
+      <section className={FeedbackCss.feedback} style={{ background: currentBackground }}>
 
         <div className={FeedbackCss['feed-contain']}>
         <Editor
@@ -127,6 +129,14 @@ export default function Feedback2() {
       <section className={FeedbackCss.mapsec}>
         <div className={FeedbackCss.map}><iframe width="100%" height="100%" title="map" class="" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" ></iframe></div>
       </section>
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+        <GithubPicker
+          triangle="top-right"
+          onChangeComplete={(color) => {
+            setCurrentBackground(color.hex);
+          }}
+        />
+      </div>
     </>
   )
 }
