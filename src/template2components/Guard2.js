@@ -7,7 +7,7 @@ export const Guard2 = () => {
 
   return (
     <>
-      <section className={`${Guard2moduleCss['our-guards']}`}>
+      <section className={`${Guard2moduleCss['our-guards']}`} id="team">
         <section className={`${Guard2moduleCss['head-main']}`}>
           <div className={`${Guard2moduleCss.MainHeading}`}><span className={`${Guard2moduleCss.SpanColor}`}> OUR </span> Guard</div>
           <div className={`${Guard2moduleCss.spanDesc}`}>
