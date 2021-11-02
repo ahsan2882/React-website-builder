@@ -10,7 +10,7 @@ import Contact2 from "../template2components/template2contactcomponent/Contact2"
 import Form2 from "../template2components/template2contactcomponent/Form2";
 import Feedback2 from "../template2components/template2contactcomponent/Feedback2";
 import { Testimonials1 } from "../template1components/Testimonials1";
-import { Navbar2 } from "../template2components/Navbar2";
+import  {Navbar2} from "../template2components/Navbar2";
 import {Hero2} from '../template2components/Hero2'
 import { Services2 } from "../template2components/Services2";
 import { Pricing2 } from "../template2components/Pricing2";
@@ -45,23 +45,156 @@ import Accrediation3 from '../template3components/Accrediation3'
 import Footer3 from '../template3components/Footer3'
 import Guard3 from '../template3components/Guard3'
 
-export let templateComponents = {
-    template1Components: [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
-    template2Components:{
-        "Home": [Navbar2,Hero2,Services2,Pricing2,Blog2,Client2,Guard2,Program2, About2,Accreditation2,Footer2],
-        "About": [Navbar2,About2bannercomponent,About2Vision,About2service,Pricing2,Guard2,Accreditation2,About2policy,Footer2],
-        "Contact": [Navbar2, Contact2, Form2, Feedback2, Footer2],
-        "Property Management":[Navbar2]
-    },
-    template3Components: {
-        "Home": [Services3,Latestnews3,Ourprograms3,Guard3,About3,Accrediation3,Footer3],
-        "About" : [],
-        "Contact": []
-    },
-    template4Components: {
-        "Home": [Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Subscribe4, FooterContact4, BottomFooter4],
-        "About" : [Header4 , Navigation4, Services4],
-        "Contact": [Header4 , Navigation4, AboutUs4]
-    }
+export const templateComponents = {
+    template1Components: [
+        {
+            groupName: "home",
+            pageName: "Home",
+            pageSections: [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1]
+        },
+        {
+            groupName: "about",
+            pageName: "About",
+            pageSections: [Header1]
+        }
+    ],
+        // [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
+    template2Components:[
+        {
+            groupName: "home",
+            pageName: "Home",
+            pageSections: [Navbar2, Hero2, Services2, Pricing2, Blog2, Client2, Guard2, Program2, About2, Accreditation2, Footer2]
+        },
+        {
+            groupName: "about",
+            pageName: "About",
+            pageSections: [Navbar2, About2bannercomponent, About2Vision, About2service, Pricing2, Guard2, Accreditation2, About2policy, Footer2]
+        },
+        {
+            groupName: "sectors",
+            pageName: "Construction",
+            pageSections:[Navbar2]
+        },
+        {
+            groupName: "sectors",
+            pageName: "Corporate",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "sectors",
+            pageName: "Industrial",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "sectors",
+            pageName: "Retail",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "sectors",
+            pageName: "Logistics",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "sectors",
+            pageName: "Property Management",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "Static Security",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "Mobile Patrolling",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "CCTV Monitoring",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "Lock & Unlock",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "Vacant Unit Checks",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "Technology Product",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "Manned Guarding",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "Support & Management",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "Event Security",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "Guard House",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "services",
+            pageName: "24-7 Surveillance",
+            pageSections: [Navbar2]
+        },
+        {
+            groupName: "contact",
+            pageName: "Contact",
+            pageSections: [Navbar2, Contact2, Form2, Feedback2, Footer2]
+        },
+
+    ],
+    template3Components: [
+        {
+            groupName: "home",
+            pageName: "Home",
+            pageSections: [Services3, Latestnews3, Ourprograms3, Guard3, About3, Accrediation3, Footer3]
+        }
+    ],
+    // {
+    //     "Home": [Services3,Latestnews3,Ourprograms3,Guard3,About3,Accrediation3,Footer3],
+    //     "About" : [],
+    //     "Contact": []
+    // },
+    template4Components: [
+        {
+            groupName: "home",
+            pageName: "Home",
+            pageSections: [Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Subscribe4, FooterContact4, BottomFooter4]
+        },
+        {
+            groupName: "about",
+            pageName: "About",
+            pageSections: [Header4, Navigation4, Services4]
+        },
+        {
+            groupName: "contact",
+            pageName: "Contact",
+            pageSections: [Header4, Navigation4, AboutUs4]
+        },
+    ]
+    // {
+    //     "Home": [Header4, Navigation4, HeroSection4, AboutUs4, Pricing4, Services4, OurGuards4, Blog4, Accreditation4, Subscribe4, FooterContact4, BottomFooter4],
+    //     "About" : [Header4 , Navigation4, Services4],
+    //     "Contact": [Header4 , Navigation4, AboutUs4]
+    // }
 
 }
