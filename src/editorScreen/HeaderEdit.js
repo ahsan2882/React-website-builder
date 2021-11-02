@@ -102,7 +102,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
                                     <div key={i}>
                                         <button onClick={(e) => dropdownClicked(e)} style={{ width: "100px", padding: "0.7rem 0", borderRadius: `12px`, color: `white`, fontWeight: `600`, cursor: `pointer` }} className=" m-6 bg-BL-600">{item}</button>
                                         <ul className={showSidebar === item ? "flex flex-col justify-around items-start" : "hidden"}>
-                                            {subpages.map((items, index) => <li key={index} onClick={() => setTemplatePage(items)}><button className="ml-10 w-24 px-4 py-3 bg-BL-500 rounded-xl my-2">{item}</button></li>)}
+                                            {subpages.map((items, index) => <li className="ml-11" key={index} onClick={() => setTemplatePage(items)}>&gt;{items}</li>)}
                                         </ul>
                                     </div>
                                 )}
