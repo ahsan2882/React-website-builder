@@ -29,7 +29,7 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
     useEffect(() => {
         let filename = "";
         if (temp === 1) {
-            setUpdateChildren(templateComponents.template1Components[`${templatePage}`])
+            setUpdateChildren(templateComponents.template1Components.filter((item) => item.pageName === String(templatePage)).map((item) => item.pageSections.map((items) => items))[0])
             if (templatePage === "Home") {
                 setfilename("index.html")
             }
@@ -40,7 +40,7 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
             setCurTemplate("Template 1");
         }
         else if (temp === 2) {
-            setUpdateChildren(templateComponents.template2Components[`${templatePage}`])
+            setUpdateChildren(templateComponents.template2Components.filter((item) => item.pageName === String(templatePage)).map((item) => item.pageSections.map((items) => items))[0])
             if (templatePage === "Home") {
                 setfilename("index.html")
             }
@@ -52,7 +52,7 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
             setCurTemplate("Template 2");
         }
         else if (temp === 3) {
-            setUpdateChildren(templateComponents.template3Components[`${templatePage}`])
+            setUpdateChildren(templateComponents.template3Components.filter((item) => item.pageName === String(templatePage)).map((item) => item.pageSections.map((items) => items))[0])
             if (templatePage === "Home") {
                 setfilename("index.html")
             }
@@ -63,7 +63,7 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
             setCurTemplate("Template 3");
         }
         else if (temp === 4) {
-            setUpdateChildren(templateComponents.template4Components[`${templatePage}`])
+            setUpdateChildren(templateComponents.template4Components.filter((item) => item.pageName === String(templatePage)).map((item) => item.pageSections.map((items) => items))[0])
             if (templatePage === "Home") {
                 setfilename("index.html")
             }
