@@ -77,8 +77,8 @@ export const sidebarAssets = [
             { imageName: heroAss1, id: "header1" },
             { imageName: heroAss2, id: "header2" },
             { imageName: heroAss3, id: "header3" },
-            // { imageName: heroAss4, id: "header4" },
-            // { imageName: heroAss5, id: "header5" }
+            { imageName: heroAss4, id: "header4" },
+            { imageName: heroAss5, id: "header5" }
         ]
     },
     {
@@ -113,7 +113,7 @@ export const sidebarAssets = [
         assetName: 'contact',
         assets: [
             { imageName: contactusAss1, id: "contactus1" },
-            // { imageName: contactusAss2, id: "contactus2" },
+            { imageName: contactusAss2, id: "contactus2" },
             { imageName: contactusAss3, id: "contactus3" },
             { imageName: contactusAss4, id: "contactus4" },
             { imageName: contactusAss5, id: "contactus5" }
@@ -127,16 +127,16 @@ export const sidebarAssets = [
             { imageName: socialAss3, id: "social3" }
         ]
     },
-    // {
-    //     assetName: 'sliders',
-    //     assets: [
-    //         { imageName: sliderAss1, id: "slider1" },
-    //         { imageName: sliderAss2, id: "slider2" },
-    //         { imageName: sliderAss3, id: "slider3" },
-    //         { imageName: sliderAss4, id: "slider4" },
-    //         { imageName: sliderAss5, id: "slider5" }
-    //     ]
-    // },
+    {
+        assetName: 'sliders',
+        assets: [
+            { imageName: sliderAss1, id: "slider1" },
+            { imageName: sliderAss2, id: "slider2" },
+            { imageName: sliderAss3, id: "slider3" },
+            { imageName: sliderAss4, id: "slider4" },
+            { imageName: sliderAss5, id: "slider5" }
+        ]
+    },
     {
         assetName: 'pricing',
         assets: [
