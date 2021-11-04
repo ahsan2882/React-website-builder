@@ -1,0 +1,64 @@
+.service-container {
+    padding: 139px 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.service-content {
+    background-image: url(../../../assets/template2images/side.png);
+    background-repeat: no-repeat;
+}
+.serv-head h1 {
+    font-size: 5em;
+}
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-bottom: 1px solid rgb(143, 143, 143);
+    padding-bottom: 9px;
+  }
+  
+  .service-grid p {
+    font-size: 15px;
+  }
+  
+  .sg1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .sg2 {
+    grid-area: 2 / 1 / 4 / 2;
+    display: flex;
+    justify-content: center;
+  }
+  .sg2 img {
+    width: 40vh;
+    background-size: cover;
+    object-fit: cover;
+    border: 5px solid black;
+  }
+  .sg3 {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+  .sg4 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  .sg5 {
+    grid-area: 1 / 3 / 3 / 4;
+    background-image: url(../../../assets/template2images/qoute.png);
+    background-repeat: no-repeat;
+  }
+  .sg5 p {
+    font-size: 25px;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+  }
+  
+  .sg6 {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+   
+  
