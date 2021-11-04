@@ -129,7 +129,7 @@ export default function Feedback2({ showPopup, overSection }) {
       <section className={FeedbackCss.mapsec}>
         <div className={FeedbackCss.map}><iframe width="100%" height="100%" title="map" class="" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" ></iframe></div>
       </section>
-      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
         <GithubPicker
           triangle="top-right"
           onChangeComplete={(color) => {
