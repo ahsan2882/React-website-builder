@@ -1,14 +1,21 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Latestnews3Css from './Latestnews3.module.css'
+import { GithubPicker } from 'react-color';
 import news1 from '../assets/template3images/news1.png'
 import news2 from '../assets/template3images/news2.png'
 import news3 from '../assets/template3images/news3.png'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Latestnews3() {
+export default function Latestnews3({ showPopup, overSection }) {
+    const [currentBackground, setCurrentBackground] = useState("black");
+    const [currentBackground1, setCurrentBackground1] = useState("white");
+    const [currentBackground2, setCurrentBackground2] = useState("white");
+    const [currentBackground3, setCurrentBackground3] = useState("white");
+
+
     const editorRef = useRef(null);
     return (
         <>
-            <section className={Latestnews3Css['heading-sec-w']}>
+            <section style={{background: currentBackground}} className={Latestnews3Css['heading-sec-w']}>
 
                 <div className={Latestnews3Css['heading-main-title-w']}>
                     <div className={Latestnews3Css['sub-title-w']}>
@@ -48,9 +55,9 @@ export default function Latestnews3() {
                 </div>
             </section>
 
-            <section className={Latestnews3Css['news-sec']}>
-                <div className={Latestnews3Css['contain-news']}>
-                    <div className={Latestnews3Css['ncards-wrapper']}>
+            <section style={{ background: currentBackground }} className={Latestnews3Css['news-sec']}>
+                <div  className={Latestnews3Css['contain-news']}>
+                    <div  className={Latestnews3Css['ncards-wrapper']}>
                         <div className={Latestnews3Css['news-card']}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
@@ -71,7 +78,7 @@ export default function Latestnews3() {
                                 }}
                             />
 
-                            <div className={Latestnews3Css['news-card-content']}>
+                            <div style={{background: currentBackground1}} className={Latestnews3Css['news-card-content']}>
                                 <h2>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -94,7 +101,7 @@ export default function Latestnews3() {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='latesnews4'
-                                    initialValue="<p>If you are able to install a camera, there is still a few tricks to pay extra attention.</p>"
+                                    initialValue="<p>CCtv Full secuirty</p>"
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -124,8 +131,17 @@ export default function Latestnews3() {
                                 </button>
 
                             </div>
+                            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                    }}
+                />
+            </div>
 
                         </div>
+               
                         <div className={Latestnews3Css['news-card']}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
@@ -146,7 +162,7 @@ export default function Latestnews3() {
                                 }}
                             />
 
-                            <div className={Latestnews3Css['news-card-content']}>
+                            <div style={{background: currentBackground2}} className={Latestnews3Css['news-card-content']}>
                                 <h2>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -194,8 +210,16 @@ export default function Latestnews3() {
                                         }}
                                     />
                                 </button>
-
+                                <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground2(color.hex);
+                    }}
+                />
+            </div>
                             </div>
+                            
                         </div>
                         <div className={Latestnews3Css['news-card']}>
                             <Editor
@@ -217,7 +241,7 @@ export default function Latestnews3() {
                                 }}
                             />
 
-                            <div className={Latestnews3Css['news-card-content']}>
+                            <div style={{background: currentBackground3}} className={Latestnews3Css['news-card-content']}>
                                 <h2>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -267,13 +291,29 @@ export default function Latestnews3() {
                                         }}
                                     />
                                 </button>
-
+                                <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground3(color.hex);
+                    }}
+                />
+            </div>
                             </div>
+                            
                         </div>
 
                     </div>
                 </div>
             </section>
+            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
         </>
     )
 }
