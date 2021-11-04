@@ -1,19 +1,18 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import { GithubPicker } from 'react-color';
 import Accrediation3Css from './Accrediation3.module.css'
 import accre1 from '../assets/template3images/accre1.png'
 import accre2 from '../assets/template3images/accre2.png'
-import accre3 from '../assets/template3images/accre3.png'
 import accre4 from '../assets/template3images/accre4.png'
-import accre5 from '../assets/template3images/accre5.png'
-import accre6 from '../assets/template3images/accre6.png'
 import accre7 from '../assets/template3images/accre7.png'
 import { Editor } from '@tinymce/tinymce-react';
 
-export default function Accrediation3() {
+export default function Accrediation3({ showPopup, overSection }) {
+  const [currentBackground, setCurrentBackground] = useState("#c01120");
   const editorRef = useRef(null);
   return (
     <>
-      <section className={Accrediation3Css['heading-sec']}>
+      <section  className={Accrediation3Css['heading-sec']}>
 
         <div className={Accrediation3Css['heading-main-title']}>
           <div className={Accrediation3Css['sub-title']}>
@@ -53,7 +52,7 @@ export default function Accrediation3() {
           </h1>
         </div>
       </section>
-      <section className={Accrediation3Css['accrediations-sec']}>
+      <section style={{ background: currentBackground }} className={Accrediation3Css['accrediations-sec']}>
         <div className={Accrediation3Css['container-accre']}>
           <div className={Accrediation3Css['accre-wrapper']}>
             <div className={Accrediation3Css.arow}>
@@ -62,7 +61,7 @@ export default function Accrediation3() {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Accre3'
-                  initialValue={`< img src=${accre1} alt="aacre1" w-96 h-64 object-cover"/>`}
+                  initialValue={`<img src=${accre1} alt="aacre1" class="w-24 h-24 object-cover"/>`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -83,7 +82,7 @@ export default function Accrediation3() {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Accre4'
-                  initialValue={`<img src=${accre2} alt="accre2" w-96 h-64 object-cover"/>`}
+                  initialValue={`<img src=${accre2} alt="accre2" class="w-24 h-24 object-cover"/>`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -105,7 +104,7 @@ export default function Accrediation3() {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Accre5'
-                  initialValue={`<img src=${accre3} alt="accre3" /> w-96 h-64 object-cover"/>`}
+                  initialValue={`<img src=${accre1} alt="accre3" class="w-24 h-24 object-cover"/>`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -128,7 +127,7 @@ export default function Accrediation3() {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Accre6'
-                  initialValue={`<img src=${accre4} alt="accre4" w-96 h-64 object-cover"/>`}
+                  initialValue={`<img src=${accre2} alt="accre4" class="w-24 h-24 object-cover"/>`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -149,7 +148,7 @@ export default function Accrediation3() {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Accre6'
-                  initialValue={`<img src=${accre5} alt="accre5" w-96 h-64 object-cover"/>`}
+                  initialValue={`<img src=${accre4} alt="accre5" class="w-24 h-24 object-cover"/>`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -172,7 +171,7 @@ export default function Accrediation3() {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Accre6'
-                  initialValue={`img src=${accre6} alt="accre6"  w-96 h-64 object-cover"/>`}
+                  initialValue={`<img src=${accre7} alt="accre6" class="w-24 h-24 object-cover"/>`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -188,11 +187,12 @@ export default function Accrediation3() {
                 />
               </div>
               <div className={Accrediation3Css['a-card']}>
+                
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Accre6'
-                  initialValue={`img src=${accre7} alt="accre7"  w-96 h-64 object-cover"/>`}
+                  initialValue={`<img src=${accre7} alt="accre7"  class="w-24 h-24 object-cover"/>`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -206,16 +206,40 @@ export default function Accrediation3() {
                     toolbar: 'image'
                   }}
                 />
-
+              </div>    
+              <div className={Accrediation3Css['a-card']}>
+                <Editor
+                  onInit={(evt, editor) => editorRef.current = editor}
+                  inline={true}
+                  key='Accre6'
+                  initialValue={`<img src=${accre7} alt="accre7"  class="w-24 h-24 object-cover"/>`}
+                  init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
+                    forced_root_block: "",
+                    menubar: false,
+                    plugins: [
+                      "image"
+                    ],
+                    toolbar: 'image'
+                  }}
+                />
               </div>
-
             </div>
-
-
           </div>
 
         </div>
       </section>
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
     </>
   )
 }
