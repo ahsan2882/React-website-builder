@@ -43,16 +43,17 @@
   }
   
   .hh1 {
-    font-size: 18px;
+    font-size: 13px;
     margin-left: 58px;
     margin-top: 2px;
-    color: -clr-red-new;
+    color: #c01120;
   }
   .hh2 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 900;
-    margin-top: 10px;
+    margin-top: 16px;
     color: white;
+   
   }
   
   .i1 {
@@ -118,6 +119,7 @@
     height: auto;
   }
   .main-para {
+    font-size: 12px;
     margin-bottom: 10px;
     line-height: 30px;
   }
@@ -133,6 +135,9 @@
     color: #f2f2f2;
     font-weight: 600;
   }
+.flex {
+  font-size: 12px;
+}
   
   @media (max-width: 1169px) {
     .column-foot {
@@ -172,7 +177,7 @@
     padding: 21px 0;
   }
   .heading2-main-title h3 {
-    font-size: 2.5em;
+    font-size: calc(2.5em * 0.625);
     border-bottom: 1px solid #c01120;
     color: #575757;
     padding: 17px 0;
@@ -190,7 +195,7 @@
     bottom: -2px;
   }
   .heading2-main-title h1 {
-    font-size: 7em;
+    font-size: calc(5em * 0.625);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 4px;
