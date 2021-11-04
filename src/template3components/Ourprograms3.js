@@ -1,15 +1,24 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Ourprograms3Css from './Ourprograms.module.css'
+import { GithubPicker } from 'react-color';
+
 import news1 from '../assets/template3images/news1.png'
 import news2 from '../assets/template3images/news2.png'
 import news3 from '../assets/template3images/news3.png'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Ourprograms3() {
+export default function Ourprograms3({ showPopup, overSection }) {
+const [currentBackground, setCurrentBackground] = useState("white");
+const [currentBackground1, setCurrentBackground1] = useState("#c01120");
+const [currentBackground2, setCurrentBackground2] = useState("#c01120");
+const [currentBackground3, setCurrentBackground3] = useState("#c01120");
+
+
+
     const editorRef = useRef(null);
     return (
         <>
 
-            <section className={Ourprograms3Css['heading-sec']}>
+            <section style={{ background: currentBackground }} className={Ourprograms3Css['heading-sec']}>
 
                 <div className={Ourprograms3Css['heading-main-title']}>
                     <div className={Ourprograms3Css['sub-title']}>
@@ -48,9 +57,17 @@ export default function Ourprograms3() {
                     </h1>
                 </div>
             </section>
+            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
 
-            <div className={Ourprograms3Css['our-programs-section']}>
-                <div className={Ourprograms3Css['container-main']}>
+            <div style={{ background: currentBackground }} className={Ourprograms3Css['our-programs-section']}>
+                <div style={{ background: currentBackground }} className={Ourprograms3Css['container-main']}>
                     <div className={Ourprograms3Css['programs-cards-wrapper']}>
 
                         <div className={Ourprograms3Css['program-card']}>
@@ -59,7 +76,7 @@ export default function Ourprograms3() {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='ourprogram3'
-                                    initialValue={`img src=${news1} alt="news1" class="w-full" />`}
+                                    initialValue={`<img src=${news1} alt="news1" class="w-full" />`}
                                     init={
                                         {
                                             images_upload_handler: function (blobInfo, success, failure) {
@@ -84,7 +101,7 @@ export default function Ourprograms3() {
 
                                 </div>
                             </div>
-                            <div className={Ourprograms3Css['program-card-content']}>
+                            <div style={{ background: currentBackground1 }} className={Ourprograms3Css['program-card-content']}>
                                 <h2 className={Ourprograms3Css['program-card_title']}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -124,6 +141,14 @@ export default function Ourprograms3() {
                                 <button className={Ourprograms3Css['button-sq']}>Read More</button>
 
                             </div>
+                            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                    }}
+                />
+            </div>
                         </div>
                         <div className={Ourprograms3Css['program-card']}>
                             <div className={Ourprograms3Css['program-card-img']}>
@@ -131,7 +156,7 @@ export default function Ourprograms3() {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='ourprogram6'
-                                    initialValue={`img src=${news2} alt="news1" class="w-full" />`}
+                                    initialValue={`<img src=${news2} alt="news1" class="w-full" />`}
                                     init={
                                         {
                                             images_upload_handler: function (blobInfo, success, failure) {
@@ -155,7 +180,7 @@ export default function Ourprograms3() {
 
                                 </div>
                             </div>
-                            <div class={Ourprograms3Css['program-card-content']}>
+                            <div style={{ background: currentBackground2 }} class={Ourprograms3Css['program-card-content']}>
                                 <h2 class={Ourprograms3Css['program-card_title']}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -208,6 +233,14 @@ export default function Ourprograms3() {
                                 </button>
 
                             </div>
+                            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground2(color.hex);
+                    }}
+                />
+            </div>
                         </div>
                         <div className={Ourprograms3Css['program-card']}>
                             <div className={Ourprograms3Css['program-card-img']}>
@@ -215,7 +248,7 @@ export default function Ourprograms3() {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='About5'
-                                    initialValue={`img src=${news3} alt="news1" class="w-full" />`}
+                                    initialValue={`<img src=${news3} alt="news1" class="w-full" />`}
                                     init={
                                         {
                                             images_upload_handler: function (blobInfo, success, failure) {
@@ -239,7 +272,7 @@ export default function Ourprograms3() {
 
                                 </div>
                             </div>
-                            <div className={Ourprograms3Css['program-card-content']}>
+                            <div style={{ background: currentBackground3 }} className={Ourprograms3Css['program-card-content']}>
                                 <h2 className={Ourprograms3Css['program-card_title']}>
                                 <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -289,12 +322,28 @@ export default function Ourprograms3() {
                                      </button>
 
                             </div>
+                            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground3(color.hex);
+                    }}
+                />
+            </div>
                         </div>
 
 
                     </div></div>
-
+                    <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
             </div>
+            </div>
+           
         </>
     )
 }
