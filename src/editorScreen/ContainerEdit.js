@@ -46,7 +46,7 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
             }
             else {
                 console.log(templatePage)
-                filename = String(templatePage).toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")
+                filename = String(templatePage).toLowerCase().replace("/", "").replace(" &", "").replace(" ", "-").concat(".html")
                 setfilename(filename);
             }
             setCurTemplate("Template 2");
