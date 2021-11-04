@@ -7,7 +7,7 @@
  }
 
  .heading-main-title h3 {
-   font-size: 2.5em;
+  font-size: calc(2.5em * 0.625);
    border-bottom: 1px solid #c01120;
    color: #575757;
    padding: 17px 0;
@@ -28,7 +28,7 @@
  }
 
  .heading-main-title h1 {
-   font-size: 5em;
+  font-size: calc(5em * 0.625);
    font-weight: 900;
    text-transform: uppercase;
    letter-spacing: 4px;
@@ -63,33 +63,37 @@
    width: max-content;
    max-width: 100%;
    color: #fff;
-   font-size: 3em;
+   font-size: calc(3em * 0.625);
    border-bottom: 1px solid white;
  }
 
  p {
    display: block;
-   margin-block-start: 1em;
+   font-size: 20px;
+   /* margin-block-start: 1em;
    margin-block-end: 1em;
    margin-inline-start: 0;
-   margin-inline-end: 0;
+   margin-inline-end: 0; */
  }
 
  .program-card-content {
-   --padding: 2.5rem;
+   --padding: 1.5rem;
    padding: var(--padding);
+
    /* transform: translateY(65%); */
    transition: transform 500ms ease;
    display: flex;
    flex-direction: column;
    align-items: center;
  }
-
+ .program-card-content h2 {
+   font-size: 20px;
+ }
  .program-card {
    background-color: #c01120;
    color: white;
    /* padding: 30rem 0 0; */
-   max-width: 70ch;
+   max-width: 30ch;
    margin: 20px;
    border-top: 2px solid black;
    box-shadow: rgb(0 0 0 / 25%) 0 54px 55px;
@@ -106,7 +110,7 @@
  }
 
  .program-card-body {
-   font-size: 1.5em;
+  font-size: calc(1.5em * 0.625);
    padding: 30px 10px;
    text-align: center;
  }
