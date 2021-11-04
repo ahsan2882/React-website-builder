@@ -7,7 +7,8 @@
 }
 
 .heading-main-title-w h3 {
-  font-size: 2.5em;
+  
+  font-size: calc(2.5em * 0.625);
   border-bottom: 1px solid #c01120;
   color: #575757;
   padding: 17px 0;
@@ -28,7 +29,7 @@
 }
 
 .heading-main-title-w h1 {
-  font-size: 5em;
+  font-size: calc(5em * 0.625);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -46,17 +47,19 @@
 .ncards-wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .news-card {
   border-top: 3px solid #c01120;
   margin: 10px 40px;
-  max-width: 70ch;
+  max-width: 30ch;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: relative;
+
   /* padding-top: 100px; */
   /* background-color: #c01120; */
   box-shadow: rgb(0 0 0 / 25%) 0 54px 55px;
@@ -131,3 +134,93 @@
 .button-sq-red:hover {
   background-position: right;
 }
+@media only screen and (min-device-width: 480px) and (max-device-width: 769px) {
+
+  .ncards-wrapper {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 320px) {
+  .ncards-wrapper {
+    flex-direction: column;
+  }
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+  .ncards-wrapper {
+    flex-direction: column;
+  }
+  .contain-news {
+    padding: 24px 0px;
+  }
+  .ncards-wrapper {
+    flex-direction: column;
+  }
+  .news-card::after {
+    left: 26px;
+    width: 300px;
+  }
+  .news-card h2 {
+    font-size: 25px;
+  }
+  .news-card p {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+   
+  .contain-news {
+    padding: 24px 0px;
+  }
+    .ncards-wrapper {
+      flex-direction: column;
+
+    }
+    .news-card::after {
+      left: 26px;
+      width: 300px;
+    }
+    .news-card h2 {
+      font-size: 25px;
+    }
+    .news-card p {
+      font-size: 15px;
+    }
+  }
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1180px) {
+  .ncards-wrapper {
+    flex-direction: column;
+  }
+  .news-card img {
+    width: 365px;
+  }
+  .news-card h2 {
+    padding-top: 20px;
+    font-size: 25px;
+  }
+  .news-card p {
+    font-size: 17px;
+    padding: 40px 0px;
+    text-align: center;
+  }
+  .news-card {
+    margin: 70px 40px;
+  }
+  }
+  @media only screen and (min-device-width: 1200px) and (max-device-width: 1440px) {
+    .news-card img {
+      width: 365px;
+    }
+    .news-card h2 {
+      padding-top: 20px;
+      font-size: 25px;
+    }
+    .news-card p {
+      font-size: 17px;
+      padding: 40px 0px;
+      text-align: center;
+    }
+  }
