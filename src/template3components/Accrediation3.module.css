@@ -28,6 +28,7 @@
 .arow {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 20px 30px;
 }
 
@@ -40,7 +41,7 @@
 }
 
 .heading-main-title h3 {
-  font-size: 2.5em;
+  font-size: calc(2.5em * 0.625);
   border-bottom: 1px solid #c01120;
   color: #575757;
   padding: 17px 0;
@@ -61,7 +62,7 @@
 }
 
 .heading-main-title h1 {
-  font-size: 5em;
+  font-size: calc(5em * 0.625);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 4px;
