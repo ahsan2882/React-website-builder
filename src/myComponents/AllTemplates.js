@@ -10,18 +10,18 @@ import Contact2 from "../template2components/template2contactcomponent/Contact2"
 import Form2 from "../template2components/template2contactcomponent/Form2";
 import Feedback2 from "../template2components/template2contactcomponent/Feedback2";
 import { Testimonials1 } from "../template1components/Testimonials1";
-import  {Navbar2} from "../template2components/Navbar2";
-import {Hero2} from '../template2components/Hero2'
+import { Navbar2 } from "../template2components/Navbar2";
+import { Hero2 } from '../template2components/Hero2'
 import { Services2 } from "../template2components/Services2";
 import { Pricing2 } from "../template2components/Pricing2";
-import { Blog2}   from '../template2components/Blog2'
-import {Client2 }  from '../template2components/Client2'
-import {Guard2} from '../template2components/Guard2'
+import { Blog2 } from '../template2components/Blog2'
+import { Client2 } from '../template2components/Client2'
+import { Guard2 } from '../template2components/Guard2'
 import About2bannercomponent from '../template2components/template2aboutcomponent/About2bannercomponent'
 import About2Vision from '../template2components/template2aboutcomponent/About2Vision'
 import About2service from '../template2components/template2aboutcomponent/About2service'
 import About2policy from '../template2components/template2aboutcomponent/About2policy'
-import {Program2} from '../template2components/Program2'
+import { Program2 } from '../template2components/Program2'
 import { About2 } from "../template2components/About2";
 import { Accreditation2 } from "../template2components/Accreditation2";
 import { Footer2 } from "../template2components/Footer2";
@@ -40,10 +40,22 @@ import Subscribe4 from "../template4components/Subscribe4";
 import Services3 from '../template3components/Services3'
 import Latestnews3 from '../template3components/Latestnews3'
 import Ourprograms3 from '../template3components/Ourprograms3'
-import About3 from'../template3components/About3'
+import About3 from '../template3components/About3'
 import Accrediation3 from '../template3components/Accrediation3'
 import Footer3 from '../template3components/Footer3'
 import Guard3 from '../template3components/Guard3'
+import { Construction } from "../template2components/template2SectorComponents/construction/Construction";
+import { ConstHero } from '../template2components/template2SectorComponents/construction/ConstHero'
+import { Corporatehero } from '../template2components/template2SectorComponents/corporate/Corporatehero'
+import { Corporate } from '../template2components/template2SectorComponents/corporate/Corporate'
+import { Industrialhero } from '../template2components/template2SectorComponents/industrial/Indutrialhero'
+import { Industrial } from '../template2components/template2SectorComponents/industrial/Industrial'
+import { Retailhero } from '../template2components/template2SectorComponents/retail/Retailhero'
+import { Retail } from "../template2components/template2SectorComponents/retail/Retail";
+import { LogisticBanner } from '../template2components/template2SectorComponents/logistics/LogisticBanner'
+import { LogisticSector } from '../template2components/template2SectorComponents/logistics/LogisticsSector'
+import { Propertyhero } from '../template2components/template2SectorComponents/propertyManagement/Propertyhero'
+import { Property } from "../template2components/template2SectorComponents/propertyManagement/Property";
 
 export const templateComponents = {
     template1Components: [
@@ -58,8 +70,8 @@ export const templateComponents = {
             pageSections: [Header1]
         }
     ],
-        // [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
-    template2Components:[
+    // [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
+    template2Components: [
         {
             groupName: "home",
             pageName: "Home",
@@ -73,32 +85,32 @@ export const templateComponents = {
         {
             groupName: "sectors",
             pageName: "Construction",
-            pageSections:[Navbar2]
+            pageSections: [Navbar2, ConstHero, Construction, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Corporate",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Corporatehero, Corporate, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Industrial",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Industrialhero, Industrial, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Retail",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Retailhero, Retail, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Logistics",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, LogisticBanner, LogisticSector, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Property Management",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Propertyhero, Property, Footer2]
         },
         {
             groupName: "services",
@@ -166,7 +178,7 @@ export const templateComponents = {
         {
             groupName: "home",
             pageName: "Home",
-            pageSections: [Services3, Latestnews3, Ourprograms3, Guard3, About3, Accrediation3, Footer3]
+            pageSections: [Services3, Guard3, Latestnews3, Ourprograms3, About3, Accrediation3, Footer3]
         }
     ],
     // {
