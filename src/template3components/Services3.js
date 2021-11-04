@@ -1,11 +1,19 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Services3Css from './Services3.module.css'
+import { GithubPicker } from 'react-color';
+
 import { Editor } from '@tinymce/tinymce-react';
-export default function Services3() {
+export default function Services3({ showPopup, overSection }) {
+    const [currentBackground, setCurrentBackground] = useState("white");
+    const [currentBackground1, setCurrentBackground1] = useState("#c01120");
+    const [currentBackground2, setCurrentBackground2] = useState("#c01120");
+    const [currentBackground3, setCurrentBackground3] = useState("#c01120");
+
+
     const editorRef = useRef(null);
     return (
         <>
-            <section className={Services3Css['heading-sec']}>
+            <section style={{ background: currentBackground }} className={Services3Css['heading-sec']}>
 
                 <div className={Services3Css['heading-main-title']}>
                     <div className={Services3Css['sub-title']}>
@@ -45,13 +53,16 @@ export default function Services3() {
                 </div>
             </section>
             <section>
-                <div className={`${Services3Css['container-services']} ${Services3Css['flex-row']}`}>
+                <div style={{ background: currentBackground}}
+                //  className={`${Services3Css['container-services']}
+                 className={Services3Css['flex-row']}>
                     <div className={Services3Css['card-and-content-wrap']}>
 
                         <div className={Services3Css['serv-cards-wrapper']}>
-                            <div className={Services3Css['serv-card']}>
+                            <div style={{ background: currentBackground1}} className={Services3Css['serv-card']}>
                                 <lord-icon src="https://cdn.lordicon.com/rruosuro.json" trigger="loop-on-hover"
-                                    colors={{ "primary": "#ffffff", "secondary": "#ffffff" }} style={{ "width": "150px;", "height": "150px" }}>
+                                    colors={{ "primary": "#ffffff", "secondary": "#ffffff" }} 
+                                    style={{ "width": "200px;", "height": "200px" }}>
                                 </lord-icon>
                                 <div className={Services3Css['card-text']}>
                                     <h1>
@@ -88,6 +99,16 @@ export default function Services3() {
                                     />
 
                                 </div>
+
+                                <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                    }}
+                />
+            </div>
+
                                 <button className={Services3Css['button-sq']}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -107,7 +128,7 @@ export default function Services3() {
 
 
                             </div>
-                            <div className={Services3Css['serv-card']}>
+                            <div style={{ background: currentBackground2}}  className={Services3Css['serv-card']}>
 
 
                                 <lord-icon src="https://cdn.lordicon.com/idxcmsio.json" trigger="loop-on-hover"
@@ -150,6 +171,14 @@ export default function Services3() {
                                     />
 
                                 </div>
+                                <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground2(color.hex);
+                    }}
+                />
+            </div>
                                 <button className={Services3Css['button-sq']}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -167,7 +196,7 @@ export default function Services3() {
                                     />
                                 </button>
                             </div>
-                            <div className={Services3Css['serv-card']}>
+                            <div style={{ background: currentBackground3}} className={Services3Css['serv-card']}>
                                 <lord-icon src="https://cdn.lordicon.com/tvafngxn.json" trigger="loop-on-hover"
                                     colors={{ "primary": "#ffffff", "secondary": "#ffffff" }} style={{ "width": "150px;", "height": "150px" }}>
                                 </lord-icon>
@@ -205,6 +234,14 @@ export default function Services3() {
                                         }}
                                     />
                                 </div>
+                                <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground3(color.hex);
+                    }}
+                />
+            </div>
                                 <button className={Services3Css['button-sq']}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -226,6 +263,14 @@ export default function Services3() {
                     </div>
                 </div>
             </section>
+            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
         </>
 
     )
