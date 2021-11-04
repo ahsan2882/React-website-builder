@@ -1,12 +1,18 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import About3Css from './About3.module.css'
-import news3 from '../assets/template3images/news3.png'
+import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
-export default function About3() {
+import news3 from '../assets/template3images/news3.png'
+export default function About3({ showPopup, overSection }) {
+  const [currentBackground, setCurrentBackground] = useState("white");
+  const [currentBackground1, setCurrentBackground1] = useState("#c01120");
+
+  
+
   const editorRef = useRef(null);
   return (
     <>
-      <section className={About3Css['heading-sec']}>
+      <section style={{ background: currentBackground }} className={About3Css['heading-sec']}>
 
         <div className={About3Css['heading-main-title']}>
           <div className={About3Css['sub-title']}>
@@ -45,10 +51,11 @@ export default function About3() {
           </h1>
         </div>
       </section>
-      <div className={About3Css['about-sec']}>
-        <div className={About3Css['about-containe']}>
+     
+      <div style={{ background: currentBackground }} className={About3Css['about-sec']}>
+        <div className={About3Css['about-container']}>
           <div className={About3Css['about-wrap']}>
-            <div className={About3Css['ab-img']}>
+            <div style={{background: currentBackground1}} className={About3Css['ab-img']}>
             <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
@@ -68,6 +75,14 @@ export default function About3() {
             }}
           />
            
+            </div>
+            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                    }}
+                />
             </div>
             <div className={About3Css['about-content']}>
               <h1>
@@ -126,7 +141,14 @@ export default function About3() {
         </div>
 
       </div>
-
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
     </>
   )
 }
