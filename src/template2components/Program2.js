@@ -373,7 +373,7 @@ export const Program2 = ({ showPopup, overSection }) => {
           </section>
         </section>
       </section>
-      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
         <GithubPicker
           triangle="top-right"
           onChangeComplete={(color) => {
