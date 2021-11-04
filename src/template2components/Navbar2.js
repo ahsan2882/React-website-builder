@@ -1,33 +1,33 @@
 import React, { useRef } from 'react'
 import Navbar2moduleCss from './Navbar2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-import navbar2 from './nav2Edits';
+// import navbar2 from './nav2Edits';
 
-const EditLink = ({ item, index }) => {
-    const editorRef = useRef();
-    return (
-        <>
-            <Editor
-                onInit={(evt, editor) => editorRef.current = editor}
-                inline={true}
-                key='NavEd2'
-                tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                initialValue={`${item}`}
-                init={{
-                    plugins: [
-                        "link"
-                    ],
-                    forced_root_block: "",
-                    menubar: false,
-                    toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                        'alignright alignjustify | fontselect',
-                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                }}
-            />
-        </>
-    )
-}
+// const EditLink = ({ item, index }) => {
+//     const editorRef = useRef();
+//     return (
+//         <>
+//             <Editor
+//                 onInit={(evt, editor) => editorRef.current = editor}
+//                 inline={true}
+//                 key='NavEd2'
+//                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+//                 initialValue={`${item}`}
+//                 init={{
+//                     plugins: [
+//                         "link"
+//                     ],
+//                     forced_root_block: "",
+//                     menubar: false,
+//                     toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+//                         'alignright alignjustify | fontselect',
+//                     fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+//                     font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+//                 }}
+//             />
+//         </>
+//     )
+// }
 
 export const Navbar2 = ({ displayDevice, linksfunc }) => {
     const editorRef = useRef();
@@ -175,19 +175,43 @@ export const Navbar2 = ({ displayDevice, linksfunc }) => {
                         <li className={Navbar2moduleCss.hide}>
                             <ul className={displayDevice ? "flex items-center justify-around text-white" : "hidden"} style={{ width: "30rem" }}>
                                 <li className="px-4 py-4">{linksfunc ? <a href="index.html" className="no-underline">HOME</a> : <>HOME</>}</li>
-                                <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>ABOUT
+                                <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>{linksfunc ? <a href="about.html">ABOUT</a> : <>ABOUT</>}
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        {navbar2.aboutLinks.map((item, index) => <li>{linksfunc ? <a href={`about.html#${item.toLowerCase().replace(" ", "-")}`} className="no-underline">{item.toUpperCase()}</a> : <>{item.toUpperCase()}</>}</li>)}
+                                        {/* {navbar2.aboutLinks.map((item, index) => <li>{linksfunc ? <a href={`about.html#${item.toLowerCase().replace(" ", "-")}`} className="no-underline">{item.toUpperCase()}</a> : <>{item.toUpperCase()}</>}</li>)} */}
+                                        <li>{linksfunc ? <a href="about.html#our-vison">OUR VISION</a> : <>OUR VISION</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#our-experience">OUR EXPERIENCE</a> : <>OUR EXPERIENCE</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#our-policies">OUR POLICIES</a> : <>OUR POLICIES</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#our-prices">OUR PRICES</a> : <>OUR PRICES</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#our-accreditations">OUR ACCREDITATIONS</a> : <>OUR ACCREDITATIONS</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#our-team">OUR TEAM</a> : <>OUR TEAM</>}</li>
+                                        <li>{linksfunc ? <a href="about.html#our-partners">OUR PARTNERS</a> : <>OUR PARTNERS</>}</li>
                                     </ul>
                                 </li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SECTORS
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        {navbar2.sectorLinks.map((item, index) => <li>{linksfunc ? <a href={`${item.toLowerCase().replace(" &", "").replace(" ", "-")}.html`} className="no-underline">{item.toUpperCase()}</a> : <>{item.toUpperCase()}</>}</li>)}
+                                        {/* {navbar2.sectorLinks.map((item, index) => <li>{linksfunc ? <a href={`${item.toLowerCase().replace(" &", "").replace(" ", "-")}.html`} className="no-underline">{item.toUpperCase()}</a> : <>{item.toUpperCase()}</>}</li>)} */}
+                                        <li>{linksfunc ? <a href="construction.html">CONSTRUCTION</a> : <>CONSTRUCTION</>}</li>
+                                        <li>{linksfunc ? <a href="corporate.html">CORPORATE</a> : <>CORPORATE</>}</li>
+                                        <li>{linksfunc ? <a href="industrial.html">INDUSTRIAL</a> : <>INDUSTRIAL</>}</li>
+                                        <li>{linksfunc ? <a href="retail.html">RETAIL</a> : <>RETAIL</>}</li>
+                                        <li>{linksfunc ? <a href="logistics.html">LOGISTICS</a> : <>LOGISTICS</>}</li>
+                                        <li>{linksfunc ? <a href="property-management.html">PROPERTY MANAGEMENT</a> : <>PROPERTY MANAGEMENT</>}</li>
                                     </ul>
                                 </li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SERVICES
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        {navbar2.serviceLinks.map((item, index) => <li>{linksfunc ? <a href={`${item.toLowerCase().replace(" &", "").replace(" ", "-")}.html`} className="no-underline">{item.toUpperCase()}</a> : <>{item.toUpperCase()}</>}</li>)}
+                                        {/* {navbar2.serviceLinks.map((item, index) => <li>{linksfunc ? <a href={`${item.toLowerCase().replace(" &", "").replace(" ", "-")}.html`} className="no-underline">{item.toUpperCase()}</a> : <>{item.toUpperCase()}</>}</li>)} */}
+                                        <li>{linksfunc ? <a href="static-security.html">STATIC SECURITY</a> : <>STATIC SECURITY</>}</li>
+                                        <li>{linksfunc ? <a href="mobile-patrolling.html">MOBILE PATROLLING</a> : <>MOBILE PATROLLING</>}</li>
+                                        <li>{linksfunc ? <a href="cctv-monitoring.html">CCTV MONITORING</a> : <>CCTV MONITORING</>}</li>
+                                        <li>{linksfunc ? <a href="lock-unlock.html">LOCK & UNLOCK</a> : <>LOCK & UNLOCK</>}</li>
+                                        <li>{linksfunc ? <a href="vacant-unit-checks.html">VACANT UNIT CHECKS</a> : <>VACANT UNIT CHECKS</>}</li>
+                                        <li>{linksfunc ? <a href="technology-product.html">TECHNOLOGY PRODUCT</a> : <>TECHNOLOGY PRODUCT</>}</li>
+                                        <li>{linksfunc ? <a href="manned-guarding.html">MANNED GUARDING</a> : <>MANNED GUARDING</>}</li>
+                                        <li>{linksfunc ? <a href="support-management.html">SUPPORT & MANAGEMENT</a> : <>SUPPORT & MANAGEMENT</>}</li>
+                                        <li>{linksfunc ? <a href="event-security.html">EVENT SECURITY</a> : <>EVENT SECURITY</>}</li>
+                                        <li>{linksfunc ? <a href="guard-house.html">GUARD HOUSE</a> : <>GUARD HOUSE</>}</li>
+                                        <li>{linksfunc ? <a href="24-7-surveillance.html">24/7 SURVEILLANCE</a> : <>24/7 SURVEILLANCE</>}</li>
                                     </ul>
                                 </li>
                                 {/* {navbar2.map((item) => item.subSections.length > 1 ? <li className="px-4 py-4">{item.isLink && linksfunc ? <a>{item.sectionName.toUpperCase()}</a> : <>{item.sectionName.toUpperCase()}</>}</li> : <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>{item.sectionName.toUpperCase()}<ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>{item.subSections.map((items) => <li>{ it}</li>)}</ul></li>)} */}
