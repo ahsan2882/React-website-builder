@@ -1,11 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Guard3Css from './Guard3.module.css'
+import { GithubPicker } from 'react-color';
+
 import { Editor } from '@tinymce/tinymce-react';
-export default function Guard3() {
+export default function Guard3({ showPopup, overSection }) {
+  const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef(null);
   return (
     <>
-      <section className={Guard3Css['heading-sec']}>
+      <section  style={{ background: currentBackground }} className={Guard3Css['heading-sec']}>
 
         <div className={Guard3Css['heading-main-title']}>
           <div className={Guard3Css['sub-title']}>
@@ -49,8 +52,8 @@ export default function Guard3() {
 
 
 
-      <section className={Guard3Css['guard-section']}>
-        <div className={Guard3Css['container-main']}>
+      <section  style={{ background: currentBackground }} className={Guard3Css['guard-section']}>
+        <div style={{ background: currentBackground }} className={Guard3Css['container-main']}>
           <div className={Guard3Css['guard-cards-wrapper']}>
 
 
@@ -177,6 +180,14 @@ export default function Guard3() {
           </div>
         </div>
       </section>
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
     </>
   )
 }
