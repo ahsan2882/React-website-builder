@@ -56,6 +56,28 @@ import { LogisticBanner } from '../template2components/template2SectorComponents
 import { LogisticSector } from '../template2components/template2SectorComponents/logistics/LogisticsSector'
 import { Propertyhero } from '../template2components/template2SectorComponents/propertyManagement/Propertyhero'
 import { Property } from "../template2components/template2SectorComponents/propertyManagement/Property";
+import Staticsecuritybanner from '../template2components/template2ServiceComponents/staticSecurity/Staticsecuritybanner'
+import StaticsecurityDescription from "../template2components/template2ServiceComponents/staticSecurity/StaticsecurityDescription";
+import Mobilepatrollingbanner from '../template2components/template2ServiceComponents/mobilePatrolling/Mobilepatrollingbanner'
+import Mobilemonetoringdescription from '../template2components/template2ServiceComponents/mobilePatrolling/Mobilemonetoringdescription'
+import Cctvmonetoringbanner from '../template2components/template2ServiceComponents/cctvMonitoring/Cctvmonetoringbanner'
+import Cctvmonetoringdescription from '../template2components/template2ServiceComponents/cctvMonitoring/Cctvmonetoringdescription'
+import Lockandunlockbanner from '../template2components/template2ServiceComponents/lockUnlock/Lockandunlockbanner'
+import Lockandunlockdescription from '../template2components/template2ServiceComponents/lockUnlock/Lockandunlockdescription'
+import Vacantunitcheckbanner from '../template2components/template2ServiceComponents/vacantUnitChecks/Vacantunitcheckbanner'
+import Vacantunitdescription from '../template2components/template2ServiceComponents/vacantUnitChecks/Vacantunitdescription'
+import Technologyproductbanner from '../template2components/template2ServiceComponents/technologyProduct/Technologyproductbanner'
+import Technologyproductdecription from '../template2components/template2ServiceComponents/technologyProduct/Technologyproductdecription'
+import Mannedguardingbanner from '../template2components/template2ServiceComponents/mannedGuarding/Mannedguardingbanner'
+import Mannedguardingdescription from "../template2components/template2ServiceComponents/mannedGuarding/Mannedguardingdescription";
+import SupportManagmentbanner from '../template2components/template2ServiceComponents/supportManagement/SupportManagmentbanner'
+import Supportmanagmentdescription from '../template2components/template2ServiceComponents/supportManagement/Supportmanagmentdescription'
+import Eventsecuritybanner from '../template2components/template2ServiceComponents/eventSecurity/Eventsecuritybanner'
+import Eventsecuritydescription from '../template2components/template2ServiceComponents/eventSecurity/Eventsecuritydescription'
+import Guardhousebanner from '../template2components/template2ServiceComponents/guardHouse/Guardhousebanner'
+import Guardhousedescription from '../template2components/template2ServiceComponents/guardHouse/Guardhousedescription'
+import Servillancebanner from '../template2components/template2ServiceComponents/247surveillance/SurveillanceBanner'
+import ServillanceDescription from '../template2components/template2ServiceComponents/247surveillance/ServillanceDescription'
 
 export const templateComponents = {
     template1Components: [
@@ -115,57 +137,57 @@ export const templateComponents = {
         {
             groupName: "services",
             pageName: "Static Security",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Staticsecuritybanner, StaticsecurityDescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Mobile Patrolling",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Mobilepatrollingbanner, Mobilemonetoringdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "CCTV Monitoring",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Cctvmonetoringbanner, Cctvmonetoringdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Lock & Unlock",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Lockandunlockbanner, Lockandunlockdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Vacant Unit Checks",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Vacantunitcheckbanner, Vacantunitdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Technology Product",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Technologyproductbanner, Technologyproductdecription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Manned Guarding",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Mannedguardingbanner, Mannedguardingdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Support & Management",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, SupportManagmentbanner, Supportmanagmentdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Event Security",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Eventsecuritybanner, Eventsecuritydescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Guard House",
-            pageSections: [Navbar2]
+            pageSections: [Navbar2, Guardhousebanner, Guardhousedescription, Footer2]
         },
         {
             groupName: "services",
-            pageName: "24-7 Surveillance",
-            pageSections: [Navbar2]
+            pageName: "24/7 Surveillance",
+            pageSections: [Navbar2, Servillancebanner, ServillanceDescription, Footer2]
         },
         {
             groupName: "contact",
