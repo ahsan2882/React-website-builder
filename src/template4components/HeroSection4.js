@@ -6,7 +6,7 @@ import Hero4Css from './HeroSection4.module.css'
 
 export default function HeroSection4({ showPopup, overSection, displayDevice }) {
     const [backgroundType, setBackgroundType] = useState("color");
-    const [currentBackgroundColor, setCurrentBackgroundColor] = useState("lightblue");
+    const [currentBackgroundColor, setCurrentBackgroundColor] = useState("black");
     // useEffect(() => {
     //     if (backgroundType === "image") {
     //         document.getElementById("heroImg").parentElement.click()
