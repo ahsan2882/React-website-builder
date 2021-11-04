@@ -8,7 +8,7 @@
     padding: 100px 0;
   }
   .heading-main-title h3 {
-    font-size: 2.5em;
+    font-size: calc(2.5em * 0.625);
     border-bottom: 1px solid #c01120;
     color: #575757;
     padding: 17px 0;
@@ -26,7 +26,7 @@
     bottom: -2px;
   }
   .heading-main-title h1 {
-    font-size: 5em;
+    font-size: calc(5em * 0.625);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -45,7 +45,8 @@
     padding: 90px 150px;
   }
   .ab-img img {
-    width: 30vw;
+    width: 50vw;
+    margin: 3em 3em 0;
   }
   .ab-img {
     padding-right: 10px;
@@ -69,8 +70,12 @@
     border-radius: 20px;
   }
   .about-wrap {
+    
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+ 
   }
   
   .about-content {
@@ -95,41 +100,121 @@
    
     padding: 40px 0;
   }
-  .button-sq {
-    font-size: 15px;
-    display: inline-block;
-    padding: 1em 1.3em;
-    text-align: center;
-    letter-spacing: 4px;
-    color: white;
-    background: red;
-    border-right: 3px solid white;
-    text-decoration: none;
-    text-transform: uppercase;
-  
-   
-  }
-  .button-sq:hover {
-    background-position: right;
-    color: #000;
-  }
   .button-sq-red {
     font-size: 15px;
-    display: inline-block;
-    padding: 1em 1.3em;
+    display: block;
+    padding: 1em 0.45em;
     text-align: center;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     color: white;
-    border-right: 3px solid #c01120;
+    width: 25%;
+    background: red;
+    border-right: 3px solid red;
     text-decoration: none;
     text-transform: uppercase;
   
-    background: linear-gradient(to right, rgb(0, 0, 0) 50% rgb(204, 48, 48) 50% )
+    background: linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(204, 48, 48) 50%)
       left;
     background-size: 200%;
     transition: 0.5s ease-out;
+   
   }
   .button-sq-red:hover {
     background-position: right;
+  }
+
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1180px) { 
+    .ab-img img {
+      padding-top: 132px;
+    }
+    .about-wrap {
+      justify-content: center;
+      align-items: center;
+      flex-flow: wrap;
+    }
+    .button-sq-red {
+      width: 50%;
+   
+    }
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { 
+    .ab-img img {
+      width: 30vw;
+
+    }
+    .about-wrap {
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .ab-img img {
+      padding-top: 1px;
+    }
+    .button-sq-red {
+ width: 100%;
+   
+    }
+    .about-container {
+      background-position-x: right;
+      background-size: 90px;
+      display: flex;
+  
+      padding-left: 34px;
+      padding-right: 0px;
+    }
+    .about-wrap {
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @media only screen and (min-device-width: 540px) and (max-device-width: 720px) {
+    .button-sq-red {
+      width: 70%;
+        
+         }
+         .about-wrap {
+          flex-flow: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+  }
+  @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) { 
+    .ab-img img {
+      width: 30vw;
+    }
+    .ab-img img {
+      padding-top: 1px;
+    }
+    .ab-img img {
+      width: 300px;
+    }
+    .about-wrap {
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .about-wrap {
+      justify-content: center;
+      align-items: center;
+    }
+    .about-content {
+      background-position-x: right;
+      background-size: 90px;
+      display: flex;
+  
+      padding-left: 34px;
+      padding-right: 0px;
+    }
+  }
+  @media only screen and (min-device-width: 1200px) and (max-device-width: 1400px) { 
+    .ab-img img {
+      padding-top: 132px;
+    }
+    .about-wrap {
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: center;
+    }
   }
   
