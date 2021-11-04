@@ -5,6 +5,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import Hero2moduleCss from './Hero2.module.css'
 export const Hero2 = ({ displayDevice, showPopup, overSection }) => {
     const [currentBackground, setCurrentBackground] = useState("#c0272d");
+    const [backgroundType, setBackgroundType] = useState("color");
     const editorRef = useRef();
 
     return (
@@ -135,7 +136,7 @@ export const Hero2 = ({ displayDevice, showPopup, overSection }) => {
                     />
                 </h1>
             </section>
-            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+            <div style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
