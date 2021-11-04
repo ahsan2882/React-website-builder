@@ -7,7 +7,7 @@
 }
 
 .heading-main-title h3 {
-  font-size: 2.5em;
+  font-size: calc(2.5em * 0.625);
   border-bottom: 1px solid #c01120;
   color: #575757;
   padding: 17px 0;
@@ -28,18 +28,18 @@
 }
 
 .heading-main-title h1 {
-  font-size: 5em;
+  font-size: calc(5em * 0.625);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 
 /* services section */
-.flex-row {
+ .flex-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+
 }
 
 .container-services {
@@ -51,11 +51,19 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
+@media (max-width:1150px){
+  .serv-cards-wrapper {
+  
+    justify-content: center;
 
+   
+  }
+}
 .serv-card {
   width: 350px;
-  height: 50em;
+  height: 30em;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -68,7 +76,8 @@
 }
 
 .card-text h1 {
-  font-size: 3rem;
+ 
+  font-size: calc(3em * 0.625);
   padding: 15px 0;
   text-align: center;
   color: whitesmoke;
@@ -76,7 +85,8 @@
 }
 
 .card-text p {
-  font-size: 1.5rem;
+  font-size: calc(1.5em * 0.625);
+
   padding: 20px 0;
   color: whitesmoke;
   text-align: center;
@@ -172,4 +182,53 @@
 .content-serv-img-inner p {
   font-size: 25px;
   padding: 20px 0;
+}
+/* Responsive  */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+
+
+  .content-serv-img-inner {
+    padding: 100px 40px;
+  }
+  .content-serv-img-inner h1 {
+    font-size: 25px;
+  }
+  .content-serv-img-inner h3 {
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .content-serv-img-inner p {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .serv-img-content {
+    max-width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+  }
+  .serv-cards-wrapper {
+    flex-direction: column;
+  }
+  .serv-card {
+    width: 300px;
+    padding: 50px 25px;
+  }
+
+  
+  .services-sec {
+    justify-content: center;
+  }
+
+  .flex-row {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
 }
