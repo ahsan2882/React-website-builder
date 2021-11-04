@@ -278,6 +278,17 @@
 
 }
 
+.heroSection {
+  width: 80vw;
+  height: 90vh;
+}
+.guardImg{
+  width: 35rem;
+  height: 40rem;
+}
+.mainHead{
+  font-size: 18rem;
+}
 @media (max-width: 1550px) {
   .pokemonimg {
     max-height: 53.4vw;
@@ -370,6 +381,7 @@
     margin-bottom: 0;
   }
 }
+
 @media (max-width: 1550px) {
   .pokemon__img {
     max-height: 53.4vw;
@@ -411,6 +423,7 @@
     margin-left: 60px;
   }
 }
+
 
 @media (max-width: 1066px) {
   .pokemon__img {
