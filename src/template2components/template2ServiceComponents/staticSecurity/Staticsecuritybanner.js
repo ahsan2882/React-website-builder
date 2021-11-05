@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import StaticsecurityCss from './staticsecuritybanner.module.css'
-import Img1 from '../../../assets/template2images/static-security-banner.jpg'
+// import Img1 from '../../../assets/template2images/static-security-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
@@ -36,7 +36,7 @@ export default function Staticsecuritybanner({ displayDevice, linksfunc }) {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='EventSecurity4'
-                initialValue={`<img src="${Img1}" alt="static-security" class="w-full h-full object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/m94CDch/static-security-banner.jpg" alt="static-security-banner" class="w-full h-full object-cover"/>`}
                 init={{
                     forced_root_block: "",
                     menubar: false,
