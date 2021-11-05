@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import ConstHeromoduleCss from './ConstHero.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-import img from './construction-banner.jpg'
+// import img from './construction-banner.jpg'
 import { Navbar2 } from '../../Navbar2';
 export const ConstHero = ({displayDevice, linksfunc}) => {
     const editorRef = useRef(null);
@@ -36,7 +36,7 @@ export const ConstHero = ({displayDevice, linksfunc}) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                initialValue={`<img src=${img} alt="about-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/hfnXV9H/construction-banner.jpg" alt="construction-banner" />`}
                     init={
                         {
                             forced_root_block: "",
