@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import EventsecurityCss from './Eventsecuritybanner.module.css'
-import Img1 from '../../../assets/template2images/event-secure-banner.jpg'
+// import Img1 from '../../../assets/template2images/event-secure-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
@@ -36,7 +36,7 @@ export default function Eventsecuritybanner({ displayDevice, linksfunc }) {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='EventSecurity4'
-                initialValue={`<img src="${Img1}" alt="event-security" class="w-full h-full object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/MBzdfnM/event-secure-banner.jpg" alt="event-secure-banner" class="w-full h-full object-cover"/>`}
                 init={{
                     forced_root_block: "",
                     menubar: false,
