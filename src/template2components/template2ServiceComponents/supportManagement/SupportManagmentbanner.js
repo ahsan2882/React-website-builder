@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import SupportManagmentbannerCss from './Supportmanagmentbanner.module.css'
-import Img1 from '../../../assets/template2images/supportandmanagement-banner.jpg'
+// import Img1 from '../../../assets/template2images/supportandmanagement-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
@@ -35,7 +35,7 @@ export default function SupportManagmentbanner({ displayDevice, linksfunc }) {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='EventSecurity4'
-                initialValue={`<img src="${Img1}" alt="technology-product" class="w-full h-full object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/frDN0dy/supportandmanagement-banner.jpg" alt="supportandmanagement-banner" class="w-full h-full object-cover"/>`}
                 init={{
                     forced_root_block: "",
                     menubar: false,
