@@ -1,5 +1,5 @@
 import React, { useRef, useState }from 'react'
-import image from './news1.jpg'
+// import image from './news1.jpg'
 import { GithubPicker } from 'react-color';
 
 import { Editor } from '@tinymce/tinymce-react';
