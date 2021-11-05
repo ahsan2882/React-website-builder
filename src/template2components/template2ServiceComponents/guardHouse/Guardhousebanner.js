@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import GuardhouseBannerCss from './Guardhousebanner.module.css'
-import Img1 from '../../../assets/template2images/guard-house-banner.jpg'
+// import Img1 from '../../../assets/template2images/guard-house-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
@@ -37,7 +37,7 @@ export default function Guardhousebanner({ displayDevice, linksfunc }) {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='EventSecurity4'
-                initialValue={`<img src="${Img1}" alt="event-security" class="w-full h-full object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/MVBJqz3/guard-house-banner.jpg" alt="guard-house-banner" class="w-full h-full object-cover"/>`}
                 init={{
                     forced_root_block: "",
                     menubar: false,
