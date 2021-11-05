@@ -4,13 +4,13 @@ import { Editor } from '@tinymce/tinymce-react';
 import img from './property.jpg'
 import { Navbar2 } from '../../Navbar2';
 
-export const Propertyhero = ({ displayDevice }) => {
+export const Propertyhero = ({displayDevice, linksfunc}) => {
     const editorRef = useRef(null);
 
     return (
         <>
             <section className={PropertyheromoduleCss['header-img-serv']}>
-                <Navbar2 displayDevice={displayDevice} />
+                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
                 <div className={`${PropertyheromoduleCss['head-img-text']}`}>
                     <h1>
                         <Editor
