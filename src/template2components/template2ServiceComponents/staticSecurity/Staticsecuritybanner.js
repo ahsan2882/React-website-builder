@@ -2,13 +2,16 @@ import React, { useRef } from 'react'
 import StaticsecurityCss from './staticsecuritybanner.module.css'
 import Img1 from '../../../assets/template2images/static-security-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Staticsecuritybanner() {
+import { Navbar2 } from '../../Navbar2';
+
+export default function Staticsecuritybanner({ displayDevice, linksfunc }) {
     const editorRef = useRef(null);
     return (
         <section className={StaticsecurityCss['header-img-serv']}>
-        <div class={StaticsecurityCss['head-img-text']}>
-            <h1 className={StaticsecurityCss.head1}>
-            <Editor
+            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
+            <div class={StaticsecurityCss['head-img-text']}>
+                <h1 className={StaticsecurityCss.head1}>
+                    <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='Guard1'
@@ -26,14 +29,14 @@ export default function Staticsecuritybanner() {
                         }}
                     />
                 </h1>
-            <div className={StaticsecurityCss.dash}></div>
-            
-        </div>
-        <Editor
+                <div className={StaticsecurityCss.dash}></div>
+
+            </div>
+            <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='EventSecurity4'
-                initialValue={`<img src=${Img1} alt="static-security" w-96 h-72 object-cover"/>`}
+                initialValue={`<img src="${Img1}" alt="static-security" class="w-full h-full object-cover"/>`}
                 init={{
                     forced_root_block: "",
                     menubar: false,
@@ -47,8 +50,8 @@ export default function Staticsecuritybanner() {
                     toolbar: 'image'
                 }}
             />
-       
-        
-    </section>
+
+
+        </section>
     )
 }
