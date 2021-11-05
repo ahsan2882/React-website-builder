@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import Service1Css from './Service5.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-import serv1 from '../../template2images/serv-1.png'
-import serv2 from '../../template2images/serv-2.png'
-import serv3 from '../../template2images/serv-3.png'
+// import serv1 from '../../template2images/serv-1.png'
+// import serv2 from '../../template2images/serv-2.png'
+// import serv3 from '../../template2images/serv-3.png'
 
 export default function Service5Asset() {
     const editorRef = useRef(null);
@@ -46,7 +46,7 @@ export default function Service5Asset() {
       <div className={`${Service1Css['wrapper-flex']}`}>
         <div className={`${Service1Css['container-services']}  ${Service1Css['fade-in']}`}>
           <div className={`${Service1Css['banner-img']}`}></div>
-          <img src={serv1} alt="profileimage" className={`${Service1Css['profile-img']}`}
+          <img src="https://i.ibb.co/zJs31mh/serv-1.png" alt="serv-1" className={`${Service1Css['profile-img']}`}
           />
           <h1 className={`${Service1Css.name}`}>
             <Editor
@@ -105,7 +105,7 @@ export default function Service5Asset() {
         <div className={`${Service1Css['container-services']} ${Service1Css['fade-in']}`}>
           <div className={`${Service1Css['banner-img']}`}></div>
 
-          <img src={serv2} alt="profileimage" className={`${Service1Css['profile-img']}`}
+          <img src="https://i.ibb.co/dG4RKvb/serv-2.png" alt="serv-2" className={`${Service1Css['profile-img']}`}
           />
           <h1 className={`${Service1Css.name}`}>
             <Editor
@@ -163,7 +163,7 @@ export default function Service5Asset() {
         <div className={`${Service1Css['container-services']} ${Service1Css['fade-in']}`}>
           <div className={`${Service1Css['banner-img']}`}></div>
 
-          <img src={serv3} alt="profileImage" className={`${Service1Css['profile-img']}`}
+          <img src="https://i.ibb.co/PDB2XJM/serv-3.png" alt="serv-3" className={`${Service1Css['profile-img']}`}
           />
           <h1 className={`${Service1Css.name}`}>
             <Editor
