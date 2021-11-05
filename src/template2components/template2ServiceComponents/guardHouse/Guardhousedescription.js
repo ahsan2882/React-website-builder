@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import GuardhousedescriptionCss from './Guardhousedescription.module.css'
-import Img1 from '../../../assets/template2images/support.jpg'
+// import Img1 from '../../../assets/template2images/support.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Guardhousedescription() {   
     const editorRef = useRef(null);
@@ -78,7 +78,7 @@ export default function Guardhousedescription() {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='EventSecurity4'
-                            initialValue={`<img src=${Img1} alt="news1"w-96 h-72 object-cover"/>`}
+                            initialValue={`<img src="https://i.ibb.co/GkHRXxP/support.jpg" alt="support" class="w-96 h-72 object-cover"/>`}
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
