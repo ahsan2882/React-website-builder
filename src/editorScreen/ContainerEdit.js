@@ -208,13 +208,15 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
                                             }}
                                             className="relative">
                                             <ItemX displayDevice={displayDevice} linksfunc={linksfunc} overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
-                                            <div className="flex w-52 justify-evenly items-center toBeRemoved" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
-                                                <button className="p-3 bg-BL-600" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
-                                                <button className="bg-BL-600 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
-                                                <button className="bg-BL-600 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
-                                                <button className="bg-BL-600 p-3" onClick={() => {
-                                                    setShowPopUp((popup) => !popup);
-                                                }}><i className="far fa-images text-white"></i></button>
+                                            <div className="toBeRemoved" style={displayDevice ? null : {display: "none"}}>
+                                                <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
+                                                    <button className="p-3 bg-BL-600" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
+                                                    <button className="bg-BL-600 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
+                                                    <button className="bg-BL-600 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
+                                                    <button className="bg-BL-600 p-3" onClick={() => {
+                                                        setShowPopUp((popup) => !popup);
+                                                    }}><i className="far fa-images text-white"></i></button>
+                                                </div>
                                             </div>
                                         </section>
                                     </>
