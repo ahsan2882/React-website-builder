@@ -1,11 +1,13 @@
 import React, { useRef } from 'react'
 import Contact2Css from './Contact2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Contact2() {
+import { Navbar2 } from '../Navbar2';
+export default function Contact2({displayDevice, linksfunc}) {
     const editorRef = useRef(null);
     return (
         <>
             <section className={Contact2Css['header-img-serv']}>
+                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
                 <div className={Contact2Css['head-img-text']}>
                     <h1>
                         <Editor
