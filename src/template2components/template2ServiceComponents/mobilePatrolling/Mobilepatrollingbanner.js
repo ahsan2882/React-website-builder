@@ -2,17 +2,20 @@ import React, { useRef } from 'react'
 import Img1 from '../../../assets/template2images/mobile patrolling.jpg'
 import MobilepatrollingCss from './Mobilepatrollingbanner.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Mobilepatrollingbanner() {
+import { Navbar2 } from '../../Navbar2';
+
+export default function Mobilepatrollingbanner({ displayDevice, linksfunc }) {
     const editorRef = useRef(null);
     return (
         <section className={MobilepatrollingCss['header-img-serv']}>
-        <div class={MobilepatrollingCss['head-img-text']}>
-            <h1 className={MobilepatrollingCss.head1}>
-            <Editor
+            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
+            <div class={MobilepatrollingCss['head-img-text']}>
+                <h1 className={MobilepatrollingCss.head1}>
+                    <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='Guard1'
-                        initialValue="  Mobile Patrolling"
+                        initialValue="Mobile Patrolling"
                         init={{
                             plugins: [
                                 "link"
@@ -26,14 +29,14 @@ export default function Mobilepatrollingbanner() {
                         }}
                     />
                 </h1>
-            <div className={MobilepatrollingCss.dash}></div>
-            
-        </div>
-        <Editor
+                <div className={MobilepatrollingCss.dash}></div>
+
+            </div>
+            <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='EventSecurity4'
-                initialValue={`<img src=${Img1} alt="Mobile-Patrolling" w-96 h-72 object-cover"/>`}
+                initialValue={`<img src="${Img1}" alt="mobile-patrolling" class="w-full h-full object-cover"/>`}
                 init={{
                     forced_root_block: "",
                     menubar: false,
@@ -47,8 +50,8 @@ export default function Mobilepatrollingbanner() {
                     toolbar: 'image'
                 }}
             />
-     
-        
-    </section>
+
+
+        </section>
     )
 }
