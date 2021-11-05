@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import pages from './TemplatePages';
 import FileSaver from 'file-saver';
 
-export default function Header({ templateNum, fileName, setSaveClicked, setLinksfunc, toSave, saveClicked, fileData, setTemplatePage, setDisplayDevice }) {
+export default function Header({ templateNum, fileName, setSaveClicked, setLinksfunc, toSave, setEditMenu, saveClicked, fileData, setTemplatePage, setDisplayDevice }) {
     const [isClicked, setIsClicked] = useState(false);
     const onClicked = () => setIsClicked((condition) => !condition);
     const [PageList, setPageList] = useState([]);
     const [subpages, setSubpages] = useState([]);
     const [showSidebar, setShowSidebar] = useState("");
+    const [showDropdown, setShowDropdown] = useState(false);
     const [newPath, setNewPath] = useState([]);
     const [currentTemp, setCurrentTemp] = useState([]);
 
@@ -17,25 +18,21 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
         if (templateNum === 1) {
             setNewPath('/preview/template-1')
             setPageList(pages.template1pages.map((item) => item.groupName))
-            // setSubPages(pages.template1pages.map((item) => item.subpages))
             setCurrentTemp("Template-1")
         }
         else if (templateNum === 2) {
             setNewPath('/preview/template-2')
             setPageList(pages.template2pages.map((item) => item.groupName))
-            // setSubPages(pages.template2pages.map((item) => item.subpages))
             setCurrentTemp("Template-2")
         }
         else if (templateNum === 3) {
             setNewPath('/preview/template-3')
             setPageList(pages.template3pages.map((item) => item.groupName))
-            // setSubPages(pages.template3pages.map((item) => item.subpages))
             setCurrentTemp("Template-3")
         }
         else if (templateNum === 4) {
             setNewPath('/preview/template-4')
             setPageList(pages.template4pages.map((item) => item.groupName))
-            // setSubPages(pages.template4pages.map((item) => item.subpages))
             setCurrentTemp("Template-4")
         }
         else if (templateNum === 0) {
@@ -54,6 +51,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
         localStorage.setItem(currentTemp, JSON.stringify(toSave))
         setTimeout(() => {
             setLinksfunc(false);
+            setSaveClicked(false);
         }, 2000);
         // console.log(fileData)
     }
@@ -77,6 +75,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
             .catch(error => console.log(error))
     }
     const dropdownClicked = (e) => {
+        setShowDropdown(states => !states)
         setShowSidebar(e.target.innerHTML)
         if (currentTemp === "Template-1") {
             setSubpages(pages.template1pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
@@ -96,16 +95,17 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
                 <div className="w-96 ml-4">
                     <div className="list">
                         <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px`, color: "white", fontWeight: "700" }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, fontWeight: "700", background: `rgb(60,172,254)` }}> Pages </h2>} </div>
-                        <div className={`${HeaderEditCss.pagebar} h-screen`} style={isClicked ? { left: `0`} : { left: `-100%`}}>
+                        <div className={`${HeaderEditCss.pagebar}`} style={isClicked ? { left: `0`} : { left: `-100%`}}>
                             <div className="flex flex-col mt-12 h-full w-full">
                                 {PageList.map((item,i) =>
-                                    <div key={i} className="w-full">
+                                    <div key={i} className="w-full h-4/5">
                                         <button onClick={(e) => dropdownClicked(e)} style={{ width: "100px", padding: "0.7rem 0", borderRadius: `12px`, color: `white`, fontWeight: `600`, cursor: `pointer` }} className=" m-6 bg-BL-600">{item}</button>
-                                        <ul className={showSidebar === item ? "flex flex-col justify-around items-start w-full" : "hidden"}>
+                                        <ul className={(showDropdown && showSidebar === item) ? "flex flex-col justify-around items-start w-full" : "hidden"}>
                                             {subpages.map((items, index) => <li className="ml-11 w-full cursor-pointer" key={index} onClick={() => setTemplatePage(items)}>&gt;&nbsp;{items}</li>)}
                                         </ul>
                                     </div>
                                 )}
+                                <div><button className="m-6 bg-BL-600 text-white py-3 px-2 font-semibold rounded-md" onClick={() => setEditMenu(true)}>Edit Menu</button></div>
                             </div>
                         </div>
                     </div>
