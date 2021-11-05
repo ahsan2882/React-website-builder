@@ -97,7 +97,7 @@ export const templateComponents = {
         {
             groupName: "home",
             pageName: "Home",
-            pageSections: [Navbar2, Hero2]
+            pageSections: [Hero2]
         },
         // , Services2, Pricing2, Blog2, Client2, Guard2, Program2, About2, Accreditation2, Footer2
         {
