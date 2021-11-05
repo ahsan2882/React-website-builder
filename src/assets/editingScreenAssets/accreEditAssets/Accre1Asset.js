@@ -1,10 +1,10 @@
 import React, { useRef } from 'react'
 import Accreditation2moduleCss from './Accre1asset.module.css'
-import Acc1 from '../../template2images/accrediation1.jpg'
-import dot from '../../template2images/dot.png'
-import Acc2 from '../../template2images/accrediation2.jpg'
-import Acc3 from '../../template2images/accrediation3.jpg'
-import Acc4 from '../../template2images/accrediation4.jpg'
+// import Acc1 from '../../template2images/accrediation1.jpg'
+// import dot from '../../template2images/dot.png'
+// import Acc2 from '../../template2images/accrediation2.jpg'
+// import Acc3 from '../../template2images/accrediation3.jpg'
+// import Acc4 from '../../template2images/accrediation4.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Accre1Asset() {
     const editorRef = useRef();
@@ -44,7 +44,8 @@ export default function Accre1Asset() {
                     />
                 </div>
                 <div className={`${Accreditation2moduleCss.divMainHeading}`}>
-                    <div className={`${Accreditation2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left" /> <img className={`${Accreditation2moduleCss.dot}`} src={dot} data-aos="fade" alt="Dot" />
+                    <div className={`${Accreditation2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-left" />
+                    <img className={`${Accreditation2moduleCss.dot}`} src="https://i.ibb.co/Y4596xB/dot.png" alt="dot" />
                     <div className={`${Accreditation2moduleCss.divMainHeadingSubDiv}`} data-aos="fade-right"> </div>
                 </div>
             </section>
@@ -57,7 +58,7 @@ export default function Accre1Asset() {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Acce1'
-                                initialValue={`<img src="${Acc1}" alt="Client 3" class=" w-72 h-48 object-contain"/>`}
+                                initialValue={`<img src="https://i.ibb.co/zP7ckCF/accrediation1.jpg" alt="accrediation1" class=" w-72 h-48 object-contain"/>`}
                                 init={{
                                     images_upload_handler: function (blobInfo, success, failure) {
                                         success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -115,7 +116,7 @@ export default function Accre1Asset() {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Acce9'
-                                initialValue={`<img src="${Acc2}" alt="Acce2" class=" w-72 h-48 object-contain"/>`}
+                                initialValue={`<img src="https://i.ibb.co/K2zcszT/accrediation2.jpg" alt="accrediation2" class=" w-72 h-48 object-contain"/>`}
                                 init={{
                                     images_upload_handler: function (blobInfo, success, failure) {
                                         success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -169,7 +170,7 @@ export default function Accre1Asset() {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Acce87'
-                                initialValue={`<img src="${Acc3}" alt="Acce3" class=" w-72 h-48 object-contain"/>`}
+                                initialValue={`<img src="https://i.ibb.co/9THhxT2/accrediation3.jpg" alt="accrediation3" class=" w-72 h-48 object-contain"/>`}
                                 init={{
                                     images_upload_handler: function (blobInfo, success, failure) {
                                         success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -223,7 +224,7 @@ export default function Accre1Asset() {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Acce57'
-                                initialValue={`<img src="${Acc4}" alt="Acce4" class=" w-72 h-48 object-contain"/>`}
+                                initialValue={`<img src="https://i.ibb.co/Rg1kC5Y/accrediation4.jpg" alt="accrediation4" class=" w-72 h-48 object-contain"/>`}
                                 init={{
                                     images_upload_handler: function (blobInfo, success, failure) {
                                         success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
