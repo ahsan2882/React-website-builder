@@ -7,6 +7,9 @@ import news2 from '../assets/template3images/news2.png'
 import news3 from '../assets/template3images/news3.png'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Ourprograms3({ showPopup, overSection }) {
+    const [showPopup1, setShowPopup1] = useState(false);
+    const [showPopup2, setShowPopup2] = useState(false);
+    const [showPopup3, setShowPopup3] = useState(false);
 const [currentBackground, setCurrentBackground] = useState("white");
 const [currentBackground1, setCurrentBackground1] = useState("#c01120");
 const [currentBackground2, setCurrentBackground2] = useState("#c01120");
@@ -18,7 +21,7 @@ const [currentBackground3, setCurrentBackground3] = useState("#c01120");
     return (
         <>
 
-            <section style={{ background: currentBackground }} className={Ourprograms3Css['heading-sec']}>
+            <section style={{ background: currentBackground }} className={Ourprograms3Css['heading-sec']} >
 
                 <div className={Ourprograms3Css['heading-main-title']}>
                     <div className={Ourprograms3Css['sub-title']}>
@@ -101,7 +104,7 @@ const [currentBackground3, setCurrentBackground3] = useState("#c01120");
 
                                 </div>
                             </div>
-                            <div style={{ background: currentBackground1 }} className={Ourprograms3Css['program-card-content']}>
+                            <div style={{ background: currentBackground1 }} className={Ourprograms3Css['program-card-content']} onClick={() => setShowPopup1(state => !state)}>
                                 <h2 className={Ourprograms3Css['program-card_title']}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -141,7 +144,7 @@ const [currentBackground3, setCurrentBackground3] = useState("#c01120");
                                 <button className={Ourprograms3Css['button-sq']}>Read More</button>
 
                             </div>
-                            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                            <div style={(showPopup1) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
@@ -180,7 +183,7 @@ const [currentBackground3, setCurrentBackground3] = useState("#c01120");
 
                                 </div>
                             </div>
-                            <div style={{ background: currentBackground2 }} class={Ourprograms3Css['program-card-content']}>
+                            <div style={{ background: currentBackground2 }} class={Ourprograms3Css['program-card-content']} onClick={() => setShowPopup2(state => !state)}>
                                 <h2 class={Ourprograms3Css['program-card_title']}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -233,7 +236,7 @@ const [currentBackground3, setCurrentBackground3] = useState("#c01120");
                                 </button>
 
                             </div>
-                            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                            <div style={(showPopup2) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
@@ -272,7 +275,7 @@ const [currentBackground3, setCurrentBackground3] = useState("#c01120");
 
                                 </div>
                             </div>
-                            <div style={{ background: currentBackground3 }} className={Ourprograms3Css['program-card-content']}>
+                            <div style={{ background: currentBackground3 }} className={Ourprograms3Css['program-card-content']} onClick={() => setShowPopup3(state => !state)}>
                                 <h2 className={Ourprograms3Css['program-card_title']}>
                                 <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -322,7 +325,7 @@ const [currentBackground3, setCurrentBackground3] = useState("#c01120");
                                      </button>
 
                             </div>
-                            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                            <div style={(showPopup3) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
