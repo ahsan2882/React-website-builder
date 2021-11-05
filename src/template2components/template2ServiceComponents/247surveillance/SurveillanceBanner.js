@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import ServillancebannerCss from './ServillanceBanner.module.css'
-import Img1 from '../../../assets/template2images/247surveillance-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 export default function Servillancebanner({displayDevice, linksfunc}) {
@@ -35,7 +34,7 @@ export default function Servillancebanner({displayDevice, linksfunc}) {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='Servillance4'
-                initialValue={`<img src="${Img1}" alt="servillance-banner" class="w-full h-full object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/jfLLpNL/247surveillance-banner.jpg" alt="247surveillance-banner" class="w-full h-full object-cover"/>`}
                         init={{
                             forced_root_block: "",
                             menubar: false,
