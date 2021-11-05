@@ -97,43 +97,43 @@ export const templateComponents = {
         {
             groupName: "home",
             pageName: "Home",
-            pageSections: [Hero2]
+            pageSections: [Hero2, Services2, Pricing2, Blog2, Client2, Guard2, Program2, About2, Accreditation2, Footer2]
         },
         // , Services2, Pricing2, Blog2, Client2, Guard2, Program2, About2, Accreditation2, Footer2
         {
             groupName: "about",
             pageName: "About",
-            pageSections: [Navbar2, About2bannercomponent, About2Vision, About2service, Pricing2, Guard2, Accreditation2, About2policy, Footer2]
+            pageSections: [About2bannercomponent, About2Vision, About2service, Pricing2, Guard2, Accreditation2, About2policy, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Construction",
-            pageSections: [Navbar2, ConstHero, Construction, Footer2]
+            pageSections: [ConstHero, Construction, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Corporate",
-            pageSections: [Navbar2, Corporatehero, Corporate, Footer2]
+            pageSections: [Corporatehero, Corporate, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Industrial",
-            pageSections: [Navbar2, Industrialhero, Industrial, Footer2]
+            pageSections: [Industrialhero, Industrial, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Retail",
-            pageSections: [Navbar2, Retailhero, Retail, Footer2]
+            pageSections: [Retailhero, Retail, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Logistics",
-            pageSections: [Navbar2, LogisticBanner, LogisticSector, Footer2]
+            pageSections: [LogisticBanner, LogisticSector, Footer2]
         },
         {
             groupName: "sectors",
             pageName: "Property Management",
-            pageSections: [Navbar2, Propertyhero, Property, Footer2]
+            pageSections: [Propertyhero, Property, Footer2]
         },
         {
             groupName: "services",
