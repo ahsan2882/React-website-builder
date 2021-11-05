@@ -1,6 +1,6 @@
 import React from 'react'
 import TechnologyproductbannerCss from './Technologyproductbanner.module.css'
-import Img1 from '../../../assets/template2images/technoproduct.jpg'
+// import Img1 from '../../../assets/template2images/technoproduct.jpg'
 export default function Technologyproductbanner() {
     return (
         <section className={TechnologyproductbannerCss['header-img-serv']}>
@@ -8,7 +8,7 @@ export default function Technologyproductbanner() {
             <h1 className={TechnologyproductbannerCss.head1}>Technology Product</h1>
             <div className={TechnologyproductbannerCss.dash}></div>   
         </div>
-         <img src={Img1} alt="technology-product"/>
+            <img src="https://i.ibb.co/1TK5sRr/technoproduct.jpg" alt="technoproduct"/>
         
     </section>
     )
