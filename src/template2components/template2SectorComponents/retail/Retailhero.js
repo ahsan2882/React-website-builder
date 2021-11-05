@@ -2,16 +2,18 @@ import React, { useRef } from 'react'
 import RetailheromoduleCss from './Retailhero.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import img from './retail-banner.jpg'
+import { Navbar2 } from '../../Navbar2';
 
-export const Retailhero = () => {
+export const Retailhero = ({ displayDevice }) => {
     const editorRef = useRef(null);
 
     return (
-     <>
- <section className={RetailheromoduleCss['header-img-serv']}>
+        <>
+            <section className={RetailheromoduleCss['header-img-serv']}>
+                <Navbar2 displayDevice={displayDevice} />
                 <div className={`${RetailheromoduleCss['head-img-text']}`}>
                     <h1>
-                <Editor
+                        <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='About1'
@@ -26,16 +28,16 @@ export const Retailhero = () => {
                                     'alignright alignjustify | fontselect',
                                 fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                 font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                                         }}
+                            }}
                         />
-                        </h1>
+                    </h1>
                     <div className={RetailheromoduleCss.dash}></div>
                 </div>
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                initialValue={`<img src=${img} alt="about-banner" />`}
+                    initialValue={`<img src=${img} alt="about-banner" />`}
                     init={
                         {
                             forced_root_block: "",
@@ -48,11 +50,11 @@ export const Retailhero = () => {
                                 "image"
                             ],
                             toolbar: 'image'
-                    }}
+                        }}
                 />
             </section>
 
 
-     </>
+        </>
     )
 }
