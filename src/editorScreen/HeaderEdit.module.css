@@ -12,6 +12,7 @@
     background-color: white;
     transition: 0.3s all ease;
     width: 20rem;
+    min-height: 90vh;
 }
 .sideButton:hover{
     border: 2px solid white
