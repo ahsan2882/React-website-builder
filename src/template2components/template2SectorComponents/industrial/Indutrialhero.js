@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import IndustrialheromoduleCss from './Industrialhero.module.css'
-import img from './industrial-banner.jpg'
+// import img from './industrial-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
@@ -37,7 +37,7 @@ export const Industrialhero = ({displayDevice, linksfunc}) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                    initialValue={`<img src=${img} alt="about-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/wpGLZHN/industrial-banner.jpg" alt="industrial-banner" />`}
                     init={
                         {
                             forced_root_block: "",
