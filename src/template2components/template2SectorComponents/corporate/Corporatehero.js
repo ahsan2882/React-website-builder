@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import CorporateheromoduleCss from './Corporatehero.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-import img from './corporate-banner.jpg'
+// import img from './corporate-banner.jpg'
 import { Navbar2 } from '../../Navbar2';
 export const Corporatehero = ({displayDevice, linksfunc}) => {
     const editorRef = useRef(null);
@@ -36,7 +36,7 @@ export const Corporatehero = ({displayDevice, linksfunc}) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                initialValue={`<img src=${img} alt="about-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/9cbXRT5/corporate-banner.jpg" alt="corporate-banner" />`}
                     init={
                         {
                             forced_root_block: "",
