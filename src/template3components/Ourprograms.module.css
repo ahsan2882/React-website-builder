@@ -67,14 +67,10 @@
    border-bottom: 1px solid white;
  }
 
- p {
+ /* p {
    display: block;
    font-size: 20px;
-   /* margin-block-start: 1em;
-   margin-block-end: 1em;
-   margin-inline-start: 0;
-   margin-inline-end: 0; */
- }
+ } */
 
  .program-card-content {
    --padding: 1.5rem;
