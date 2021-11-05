@@ -4,6 +4,10 @@ import { GithubPicker } from 'react-color';
 
 import { Editor } from '@tinymce/tinymce-react';
 export default function Services3({ showPopup, overSection }) {
+    const [showPopup1, setShowPopup1] = useState(false);
+    const [showPopup2, setShowPopup2] = useState(false);
+    const [showPopup3, setShowPopup3] = useState(false);
+
     const [currentBackground, setCurrentBackground] = useState("white");
     const [currentBackground1, setCurrentBackground1] = useState("#c01120");
     const [currentBackground2, setCurrentBackground2] = useState("#c01120");
@@ -53,13 +57,13 @@ export default function Services3({ showPopup, overSection }) {
                 </div>
             </section>
             <section>
-                <div style={{ background: currentBackground}}
+                <div style={{ background: currentBackground } }
                 //  className={`${Services3Css['container-services']}
                  className={Services3Css['flex-row']}>
                     <div className={Services3Css['card-and-content-wrap']}>
 
                         <div className={Services3Css['serv-cards-wrapper']}>
-                            <div style={{ background: currentBackground1}} className={Services3Css['serv-card']}>
+                            <div style={{ background: currentBackground1} } className={Services3Css['serv-card'] } onClick={() => setShowPopup1(state => !state)} >
                                 <lord-icon src="https://cdn.lordicon.com/rruosuro.json" trigger="loop-on-hover"
                                     colors={{ "primary": "#ffffff", "secondary": "#ffffff" }} 
                                     style={{ "width": "200px;", "height": "200px" }}>
@@ -100,7 +104,7 @@ export default function Services3({ showPopup, overSection }) {
 
                                 </div>
 
-                                <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                                <div style={(showPopup1) ?   { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
@@ -128,7 +132,7 @@ export default function Services3({ showPopup, overSection }) {
 
 
                             </div>
-                            <div style={{ background: currentBackground2}}  className={Services3Css['serv-card']}>
+                            <div style={{ background: currentBackground2}}  className={Services3Css['serv-card']} onClick={() => setShowPopup2(state => !state)}>
 
 
                                 <lord-icon src="https://cdn.lordicon.com/idxcmsio.json" trigger="loop-on-hover"
@@ -171,7 +175,7 @@ export default function Services3({ showPopup, overSection }) {
                                     />
 
                                 </div>
-                                <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                                <div style={(showPopup2)   ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
@@ -196,7 +200,7 @@ export default function Services3({ showPopup, overSection }) {
                                     />
                                 </button>
                             </div>
-                            <div style={{ background: currentBackground3}} className={Services3Css['serv-card']}>
+                            <div style={{ background: currentBackground3}} className={Services3Css['serv-card']} onClick={() => setShowPopup3(state => !state)}>
                                 <lord-icon src="https://cdn.lordicon.com/tvafngxn.json" trigger="loop-on-hover"
                                     colors={{ "primary": "#ffffff", "secondary": "#ffffff" }} style={{ "width": "150px;", "height": "150px" }}>
                                 </lord-icon>
@@ -234,7 +238,7 @@ export default function Services3({ showPopup, overSection }) {
                                         }}
                                     />
                                 </div>
-                                <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                                <div style={(showPopup3) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
