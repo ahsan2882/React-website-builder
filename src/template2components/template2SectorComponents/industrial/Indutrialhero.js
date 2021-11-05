@@ -4,13 +4,13 @@ import img from './industrial-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
-export const Industrialhero = ({ displayDevice }) => {
+export const Industrialhero = ({displayDevice, linksfunc}) => {
     const editorRef = useRef(null);
 
     return (
         <>
             <section className={IndustrialheromoduleCss['header-img-serv']}>
-                <Navbar2 displayDevice={displayDevice} />
+                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
                 <div className={`${IndustrialheromoduleCss['head-img-text']}`}>
                     <h1>
                         <Editor
