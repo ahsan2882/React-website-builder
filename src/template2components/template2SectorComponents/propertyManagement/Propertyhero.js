@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import PropertyheromoduleCss from './Propertyhero.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-import img from './property.jpg'
+// import img from './property.jpg'
 import { Navbar2 } from '../../Navbar2';
 
 export const Propertyhero = ({displayDevice, linksfunc}) => {
@@ -37,7 +37,7 @@ export const Propertyhero = ({displayDevice, linksfunc}) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                    initialValue={`<img src=${img} alt="about-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/5MsP8xJ/property.jpg" alt="property" />`}
                     init={
                         {
                             forced_root_block: "",
