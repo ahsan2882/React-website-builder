@@ -1,6 +1,6 @@
 import React from 'react'
 import MannedguardingdescriptionCss from './Mannedguardingdescription.module.css'
-import Img1 from '../../../assets/template2images/services33.jpg'
+// import Img1 from '../../../assets/template2images/services33.jpg'
 export default function Mannedguardingdescription() {
     return (
         <section class={MannedguardingdescriptionCss['service-content']}>
@@ -11,7 +11,7 @@ export default function Mannedguardingdescription() {
             </div>
             <div class={MannedguardingdescriptionCss['service-grid']}>
                 <div class={MannedguardingdescriptionCss.sg1}><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, Lorem ipsum dolor sit amet consectetur error?</p> </div>
-                <div class={MannedguardingdescriptionCss.sg2}><img src={Img1} alt="news1"/> </div>
+                    <div class={MannedguardingdescriptionCss.sg2}><img src="https://i.ibb.co/Kqv4DKK/services33.jpg" alt="services33"/> </div>
                 <div class={MannedguardingdescriptionCss.sg3}><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates provident voluptas sint obcaecati pariatur dolor culpa ad distinctio magni delectus.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates provident voluptas sint obcaecati pariatur dolor
                 culpa ad distinctio magni delectus.culpa ad distinctio magni delectus.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates provident
                 voluptas sint obcaecati pariatur dolor
