@@ -6,7 +6,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, setFileName, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
+export default function ContainerEdit({ templateNum, setFileName, editMenu, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
@@ -78,28 +78,25 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
         }
     }, [temp, templatePage, setfilename])
     useEffect(() => {
-        if (saveClicked) {
-            
-            setDisplayDevice(true)
-            let htmlString = getHTMLData()
-            let cssString = getCSSData()
-            let compressed = lz.encodeBase64(lz.compress(htmlString))
-            setToSave({
-                filename: fileName,
-                templateID: curTemplate,
-                templateData: compressed
-            })
-            setFileData({
-                html: `${htmlString}`,
-                css: `${cssString}`
-            })
-        }
+
+        setDisplayDevice(true)
+        let htmlString = getHTMLData()
+        let cssString = getCSSData()
+        let compressed = lz.encodeBase64(lz.compress(htmlString))
+        setToSave({
+            filename: fileName,
+            templateID: curTemplate,
+            templateData: compressed
+        })
+        setFileData({
+            html: `${htmlString}`,
+            css: `${cssString}`
+        })
         setFileName(fileName)
-        setTimeout(function () { setSaveClicked(false); }, 1000);
 
     }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData, setDisplayDevice, fileName, setFileName])
     const getHTMLData = () => {
-        
+
         let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
         let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
         let removed = newDoc.getElementsByClassName("toBeRemoved")
@@ -208,7 +205,7 @@ export default function ContainerEdit({ templateNum, setFileName, overlayPresent
                                             }}
                                             className="relative">
                                             <ItemX displayDevice={displayDevice} linksfunc={linksfunc} overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
-                                            <div className="toBeRemoved" style={displayDevice ? null : {display: "none"}}>
+                                            <div className="toBeRemoved" style={displayDevice ? null : { display: "none" }}>
                                                 <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
                                                     <button className="p-3 bg-BL-600" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
                                                     <button className="bg-BL-600 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
@@ -240,6 +237,14 @@ const WhatsAppChat = () => {
     return (
         <>
             <a href="https://wa.me/2348100000000" className="fixed w-16 h-16 text-white text-center text-3xl bg-green-600 flex justify-center items-center rounded-full" style={{ right: "12%", bottom: "10%" }} target="_blank" rel="noopener noreferrer" ><i className="fa fa-whatsapp whatsapp-icon"></i></a>
+        </>
+    )
+}
+
+const MenuEdit = () => {
+    return (
+        <>
+
         </>
     )
 }
