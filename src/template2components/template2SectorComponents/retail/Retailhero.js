@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import RetailheromoduleCss from './Retailhero.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-import img from './retail-banner.jpg'
+// import img from './retail-banner.jpg'
 import { Navbar2 } from '../../Navbar2';
 
 export const Retailhero = ({displayDevice, linksfunc}) => {
@@ -37,7 +37,7 @@ export const Retailhero = ({displayDevice, linksfunc}) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                    initialValue={`<img src=${img} alt="about-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/3Nq1M6B/retail-banner.jpg" alt="retail-banner" />`}
                     init={
                         {
                             forced_root_block: "",
