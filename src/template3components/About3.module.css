@@ -79,7 +79,7 @@
   }
   
   .about-content {
-    background-image: url(../assets/template3images/qoute.png);
+    background-image: url('https://i.ibb.co/gd3RdcQ/qoute.png');
     background-repeat: no-repeat;
     background-position: top;
     background-position-x: right;
