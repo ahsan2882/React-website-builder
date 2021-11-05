@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import Form2Css from './Contact5Asset.module.css'
-import Dot from '../../template2images/bgdots.png'
+// import Dot from '../../template2images/bgdots.png'
 import { Editor } from '@tinymce/tinymce-react';
 
 export default function Contact5Asset() {
@@ -239,7 +239,7 @@ export default function Contact5Asset() {
 
                             </div>
                             <div className={Form2Css['divMainHeading']}>
-                                <div className={Form2Css['divMainHeadingSubDiv']} data-aos="fade-left"></div> <img className={Form2Css.dot} src={Dot} data-aos="fade" alt="form2Im" />
+                                <div className={Form2Css['divMainHeadingSubDiv']} data-aos="fade-left"></div> <img className={Form2Css.dot} src="https://i.ibb.co/c6ZP1Zx/bgdots.png" alt="bgdots" />
                                 <div className={Form2Css['divMainHeadingSubDiv']} data-aos="fade-right"> </div>
                             </div>
                         </section>
