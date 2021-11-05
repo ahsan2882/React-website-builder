@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import Img1 from '../../../assets/template2images/mobile patrolling.jpg'
+// import Img1 from '../../../assets/template2images/mobile patrolling.jpg'
 import MobilepatrollingCss from './Mobilepatrollingbanner.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
@@ -36,7 +36,7 @@ export default function Mobilepatrollingbanner({ displayDevice, linksfunc }) {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='EventSecurity4'
-                initialValue={`<img src="${Img1}" alt="mobile-patrolling" class="w-full h-full object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/Z66pydT/mobile-patrolling.jpg" alt="mobile-patrolling" class="w-full h-full object-cover"/>`}
                 init={{
                     forced_root_block: "",
                     menubar: false,
