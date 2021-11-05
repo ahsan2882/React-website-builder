@@ -1,14 +1,17 @@
 import React, { useRef } from 'react'
 import MannedBannerCss from './Mannedguardingbanner.module.css'
-import Img1 from'../../../assets/template2images/manned-banner.jpg'
+import Img1 from '../../../assets/template2images/manned-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Mannedguardingbanner() {
+import { Navbar2 } from '../../Navbar2';
+
+export default function Mannedguardingbanner({ displayDevice, linksfunc }) {
     const editorRef = useRef(null);
     return (
         <section className={MannedBannerCss['header-img-serv']}>
-        <div class={MannedBannerCss['head-img-text']}>
-            <h1 className={MannedBannerCss.head1}>
-            <Editor
+            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
+            <div class={MannedBannerCss['head-img-text']}>
+                <h1 className={MannedBannerCss.head1}>
+                    <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='Guard1'
@@ -26,13 +29,13 @@ export default function Mannedguardingbanner() {
                         }}
                     />
                 </h1>
-            <div className={MannedBannerCss.dash}></div>   
-        </div>
-        <Editor
+                <div className={MannedBannerCss.dash}></div>
+            </div>
+            <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='EventSecurity4'
-                initialValue={`<img src=${Img1} alt="technology-product" w-96 h-72 object-cover"/>`}
+                initialValue={`<img src="${Img1}" alt="technology-product" class="w-full h-full object-cover"/>`}
                 init={{
                     forced_root_block: "",
                     menubar: false,
@@ -46,8 +49,8 @@ export default function Mannedguardingbanner() {
                     toolbar: 'image'
                 }}
             />
-       
-        
-    </section>
+
+
+        </section>
     )
 }
