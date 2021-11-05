@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import LockandunlockbannerCss from './Lockandunlockbanner.module.css'
-import Img1 from '../../../assets/template2images/lockadnunlock.jpg'
+// import Img1 from '../../../assets/template2images/lockadnunlock.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
@@ -36,7 +36,7 @@ export default function Lockandunlockbanner({ displayDevice, linksfunc }) {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='EventSecurity4'
-                initialValue={`<img src="${Img1}" alt="cctv-monetoring" class="w-full h-full object-cover"/>`}
+                initialValue={`<img src="https://i.ibb.co/SKpRttq/lockadnunlock.jpg" alt="lockadnunlock" class="w-full h-full object-cover"/>`}
                 init={{
                     forced_root_block: "",
                     menubar: false,
