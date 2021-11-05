@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import LogisticBannerCss from './LogisticBanner.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-import img from './logistics-banner.jpg'
+// import img from './logistics-banner.jpg'
 import { Navbar2 } from '../../Navbar2';
 export const LogisticBanner = ({displayDevice, linksfunc}) => {
     const editorRef = useRef(null);
@@ -36,7 +36,7 @@ export const LogisticBanner = ({displayDevice, linksfunc}) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                    initialValue={`<img src=${img} alt="about-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/HtgrBtS/logistics-banner.jpg" alt="logistics-banner" />`}
                     init={
                         {
                             forced_root_block: "",
