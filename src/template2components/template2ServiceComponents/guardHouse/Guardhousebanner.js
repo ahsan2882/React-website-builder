@@ -2,10 +2,13 @@ import React, { useRef } from 'react'
 import GuardhouseBannerCss from './Guardhousebanner.module.css'
 import Img1 from '../../../assets/template2images/guard-house-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Guardhousebanner() {
+import { Navbar2 } from '../../Navbar2';
+
+export default function Guardhousebanner({ displayDevice, linksfunc }) {
     const editorRef = useRef(null);
     return (
         <section className={GuardhouseBannerCss['header-img-serv']}>
+            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
             <div className={GuardhouseBannerCss['head-img-text']}>
                 <h1 className={GuardhouseBannerCss.head1}>
                     <Editor
@@ -34,7 +37,7 @@ export default function Guardhousebanner() {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='EventSecurity4'
-                initialValue={`<img src=${Img1} alt="event-security" w-96 h-72 object-cover"/>`}
+                initialValue={`<img src="${Img1}" alt="event-security" class="w-full h-full object-cover"/>`}
                 init={{
                     forced_root_block: "",
                     menubar: false,
