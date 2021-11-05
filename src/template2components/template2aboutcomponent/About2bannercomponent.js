@@ -2,11 +2,12 @@ import React, { useRef } from 'react'
 import About2Css from './About2banner.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../Navbar2';
-export default function About2bannercomponent({ displayDevice }) {
+export default function About2bannercomponent({ displayDevice, linksfunc }) {
     const editorRef = useRef(null);
     return (
         <>
-            <Navbar2 displayDevice={displayDevice} />
+            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
+            
             <section className={About2Css['header-img-serv']}>
                 <div className={About2Css['head-img-text']}>
                     <h1 className={displayDevice ? About2Css['head1'] : About2Css['headM']}>
