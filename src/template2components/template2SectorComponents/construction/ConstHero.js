@@ -3,13 +3,13 @@ import ConstHeromoduleCss from './ConstHero.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import img from './construction-banner.jpg'
 import { Navbar2 } from '../../Navbar2';
-export const ConstHero = ({displayDevice}) => {
+export const ConstHero = ({displayDevice, linksfunc}) => {
     const editorRef = useRef(null);
 
     return (
      <>
             <section className={ConstHeromoduleCss['header-img-serv']}>
-                <Navbar2 displayDevice={displayDevice} />
+                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
                 <div className={`${ConstHeromoduleCss['head-img-text']}`}>
                     <h1>
                 <Editor
