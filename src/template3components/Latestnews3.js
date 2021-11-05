@@ -6,6 +6,9 @@ import news2 from '../assets/template3images/news2.png'
 import news3 from '../assets/template3images/news3.png'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Latestnews3({ showPopup, overSection }) {
+    const [showPopup1, setShowPopup1] = useState(false);
+    const [showPopup2, setShowPopup2] = useState(false);
+    const [showPopup3, setShowPopup3] = useState(false);
     const [currentBackground, setCurrentBackground] = useState("black");
     const [currentBackground1, setCurrentBackground1] = useState("white");
     const [currentBackground2, setCurrentBackground2] = useState("white");
@@ -78,7 +81,7 @@ export default function Latestnews3({ showPopup, overSection }) {
                                 }}
                             />
 
-                            <div style={{background: currentBackground1}} className={Latestnews3Css['news-card-content']}>
+                            <div style={{background: currentBackground1}} className={Latestnews3Css['news-card-content']} onClick={() => setShowPopup1(state => !state)}>
                                 <h2>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -131,7 +134,7 @@ export default function Latestnews3({ showPopup, overSection }) {
                                 </button>
 
                             </div>
-                            <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                            <div style={(showPopup1) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
@@ -162,7 +165,7 @@ export default function Latestnews3({ showPopup, overSection }) {
                                 }}
                             />
 
-                            <div style={{background: currentBackground2}} className={Latestnews3Css['news-card-content']}>
+                            <div style={{background: currentBackground2}} className={Latestnews3Css['news-card-content']} onClick={() => setShowPopup2(state => !state)}>
                                 <h2>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -210,7 +213,7 @@ export default function Latestnews3({ showPopup, overSection }) {
                                         }}
                                     />
                                 </button>
-                                <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                                <div style={(showPopup2) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
@@ -241,7 +244,7 @@ export default function Latestnews3({ showPopup, overSection }) {
                                 }}
                             />
 
-                            <div style={{background: currentBackground3}} className={Latestnews3Css['news-card-content']}>
+                            <div style={{background: currentBackground3}} className={Latestnews3Css['news-card-content']} onClick={() => setShowPopup3(state => !state)}>
                                 <h2>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -291,7 +294,7 @@ export default function Latestnews3({ showPopup, overSection }) {
                                         }}
                                     />
                                 </button>
-                                <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                                <div style={(showPopup3) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                 <GithubPicker
                     triangle="top-right"
                     onChangeComplete={(color) => {
