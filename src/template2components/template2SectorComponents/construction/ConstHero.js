@@ -2,12 +2,14 @@ import React, { useRef } from 'react'
 import ConstHeromoduleCss from './ConstHero.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import img from './construction-banner.jpg'
-export const ConstHero = () => {
+import { Navbar2 } from '../../Navbar2';
+export const ConstHero = ({displayDevice}) => {
     const editorRef = useRef(null);
 
     return (
      <>
- <section className={ConstHeromoduleCss['header-img-serv']}>
+            <section className={ConstHeromoduleCss['header-img-serv']}>
+                <Navbar2 displayDevice={displayDevice} />
                 <div className={`${ConstHeromoduleCss['head-img-text']}`}>
                     <h1>
                 <Editor
