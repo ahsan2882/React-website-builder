@@ -13,6 +13,7 @@ export default function EditScreen({ temp }) {
     });
     const [templatePage, setTemplatePage] = useState("Home");
     const [editMenu, setEditMenu] = useState(false)
+    const [editTemplateMenu, setEditTemplateMenu] = useState("")
     const [saveClicked, setSaveClicked] = useState(null);
     const [linksfunc, setLinksfunc] = useState(false)
     const [fileData, setFileData] = useState({});
@@ -30,6 +31,7 @@ export default function EditScreen({ temp }) {
                     saveClicked={saveClicked}
                     toSave={toSave}
                     fileData={fileData}
+                    setEditTemplateMenu={setEditTemplateMenu}
                     setEditMenu={setEditMenu}
                     setLinksfunc={setLinksfunc}
                     setDisplayDevice={setDisplayDevice}
@@ -42,6 +44,7 @@ export default function EditScreen({ temp }) {
                     saveClicked={saveClicked}
                     editMenu={editMenu}
                     setToSave={setToSave}
+                    editTemplateMenu={editTemplateMenu}
                     setSaveClicked={setSaveClicked}
                     chatInclude={chatInclude}
                     linksfunc={linksfunc}
