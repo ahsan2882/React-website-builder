@@ -95,7 +95,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
                 <div className="w-96 ml-4">
                     <div className="list">
                         <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px`, color: "white", fontWeight: "700" }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, fontWeight: "700", background: `rgb(60,172,254)` }}> Pages </h2>} </div>
-                        <div className={`${HeaderEditCss.pagebar}`} style={isClicked ? { left: `0` } : { left: `-100%` }}>
+                        <div className={`${HeaderEditCss.pagebar}`} style={isClicked ? { left: `0`, display:"block" } : { left: `-100%`, display:"none" }}>
                             <div className="flex flex-col mt-12 h-full w-full">
                                 {PageList.map((item, i) =>
                                     <div key={i} className="w-full h-4/5">
@@ -108,8 +108,8 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
                                 <div>
                                     <button className="m-6 bg-BL-600 text-white py-3 px-2 font-semibold rounded-md"
                                         onClick={() => {
-                                            setEditMenu(true)
-                                            setEditTemplateMenu(currentTemp)
+                                            setEditMenu((state) => !state)
+                                            // setEditTemplateMenu(currentTemp)
                                         }}>Edit Menu</button></div>
                             </div>
                         </div>
