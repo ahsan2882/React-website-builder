@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import pages from './TemplatePages';
 import FileSaver from 'file-saver';
 
-export default function Header({ templateNum, fileName, setSaveClicked, setLinksfunc, toSave, setEditMenu, saveClicked, fileData, setTemplatePage, setDisplayDevice }) {
+export default function Header({ templateNum, fileName, setSaveClicked, setLinksfunc, toSave, setEditMenu, setEditTemplateMenu, saveClicked, fileData, setTemplatePage, setDisplayDevice }) {
     const [isClicked, setIsClicked] = useState(false);
     const onClicked = () => setIsClicked((condition) => !condition);
     const [PageList, setPageList] = useState([]);
@@ -95,9 +95,9 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
                 <div className="w-96 ml-4">
                     <div className="list">
                         <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px`, color: "white", fontWeight: "700" }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, fontWeight: "700", background: `rgb(60,172,254)` }}> Pages </h2>} </div>
-                        <div className={`${HeaderEditCss.pagebar}`} style={isClicked ? { left: `0`} : { left: `-100%`}}>
+                        <div className={`${HeaderEditCss.pagebar}`} style={isClicked ? { left: `0` } : { left: `-100%` }}>
                             <div className="flex flex-col mt-12 h-full w-full">
-                                {PageList.map((item,i) =>
+                                {PageList.map((item, i) =>
                                     <div key={i} className="w-full h-4/5">
                                         <button onClick={(e) => dropdownClicked(e)} style={{ width: "100px", padding: "0.7rem 0", borderRadius: `12px`, color: `white`, fontWeight: `600`, cursor: `pointer` }} className=" m-6 bg-BL-600">{item}</button>
                                         <ul className={(showDropdown && showSidebar === item) ? "flex flex-col justify-around items-start w-full" : "hidden"}>
@@ -105,7 +105,12 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
                                         </ul>
                                     </div>
                                 )}
-                                <div><button className="m-6 bg-BL-600 text-white py-3 px-2 font-semibold rounded-md" onClick={() => setEditMenu(true)}>Edit Menu</button></div>
+                                <div>
+                                    <button className="m-6 bg-BL-600 text-white py-3 px-2 font-semibold rounded-md"
+                                        onClick={() => {
+                                            setEditMenu(true)
+                                            setEditTemplateMenu(currentTemp)
+                                        }}>Edit Menu</button></div>
                             </div>
                         </div>
                     </div>
