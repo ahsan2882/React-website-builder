@@ -1,10 +1,10 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Nav4Css from './Navigation4.module.css'
 
 export default function Navigation4({ displayDevice }) {
     const [activeHamburger, setActiveHamburger] = useState(false);
+    // const [navbarOpt, setNavOpt] = useState([]);
     const toggleHamburger = () => {
         setActiveHamburger(state => !state);
     }
@@ -35,12 +35,9 @@ export default function Navigation4({ displayDevice }) {
                     />
                     <nav>
                         <ul className={displayDevice ? `${Nav4Css.navBar}` : `${Nav4Css.navBarM}`} style={(!displayDevice && activeHamburger) ? {left: "0"} : null}>
-                            <li className={`${Nav4Css.navBarLink} hover:text-black`}>
-                                <Link to="" className="text-white">HOME</Link>
-                            </li>
-                            <li className={`${Nav4Css.navBarLink} hover:text-black`}><Link to="" className="text-white">ABOUT US</Link></li>
-                            <li className={`${Nav4Css.navBarLink} hover:text-black ${Nav4Css.dropdownServiceListItem}`}>
-                                <section className="cursor-pointer my-4">SERVICES</section>
+                            <li className={`${Nav4Css.navBarLink} hover:text-black`}>HOME</li>
+                            <li className={`${Nav4Css.navBarLink} hover:text-black`}>ABOUT US</li>
+                            <li className={`${Nav4Css.navBarLink} hover:text-black ${Nav4Css.dropdownServiceListItem}`}>SERVICES
                                 <ul className={`${Nav4Css.dropdownServicesContent} list-none p-0 absolute`}>
                                     <li className={`${Nav4Css.servicesLinks} flex mt-8 mx-4 mb-0`}>
                                         <h4 className={Nav4Css.navigationLinkContent}>STATIC SECURITY</h4>
@@ -77,8 +74,7 @@ export default function Navigation4({ displayDevice }) {
                                     </li>
                                 </ul>
                             </li>
-                            <li className={`${Nav4Css.navBarLink} hover:text-black ${Nav4Css.dropdownSectorsListItem}`}>
-                                <section className="cursor-pointer my-4">SECTORS</section>
+                            <li className={`${Nav4Css.navBarLink} hover:text-black ${Nav4Css.dropdownSectorsListItem}`}>SECTORS
                                 <ul className={`${Nav4Css.dropdownSectorsContent} list-none p-0 absolute`}>
                                     <li className={`${Nav4Css.sectorsLink} flex mt-8 mx-4 mb-0`}>
                                         <h4 className={Nav4Css.navigationLinkContent}>CONSTRUCTION</h4>
