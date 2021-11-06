@@ -5,6 +5,10 @@ const pages = {
         {
             "groupName": "Home",
             "subpages": ["Home"]
+        },
+        {
+            "groupName": "About",
+            "subpages" :["About"]
         }
     ],
     "template2pages": 
