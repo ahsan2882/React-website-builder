@@ -6,7 +6,7 @@ import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 
-export default function ContainerEdit({ templateNum, setFileName, editMenu, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
+export default function ContainerEdit({ templateNum, setFileName, editTemplateMenu, editMenu, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
@@ -189,39 +189,42 @@ export default function ContainerEdit({ templateNum, setFileName, editMenu, over
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto overflow-x-hidden`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
-                    <div className="getInnerHTML">
-                        <section className="filterHTML">
-                            {updateChildren.map((ItemX, index) => {
-                                return (
-                                    <>
-                                        <section key={index}
-                                            onMouseEnter={() => {
-                                                setOverSection(true);
-                                                setSectionKey(index)
-                                            }}
-                                            onMouseLeave={() => {
-                                                setOverSection(false);
-                                                setShowPopUp(false);
-                                            }}
-                                            className="relative">
-                                            <ItemX displayDevice={displayDevice} linksfunc={linksfunc} overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
-                                            <div className="toBeRemoved" style={displayDevice ? null : { display: "none" }}>
-                                                <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
-                                                    <button className="p-3 bg-BL-600" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
-                                                    <button className="bg-BL-600 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
-                                                    <button className="bg-BL-600 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
-                                                    <button className="bg-BL-600 p-3" onClick={() => {
-                                                        setShowPopUp((popup) => !popup);
-                                                    }}><i className="far fa-images text-white"></i></button>
+                    {editMenu
+                        ? <MenuEdit editTemplateMenu={editTemplateMenu} />
+                        : <div className="getInnerHTML">
+                            <section className="filterHTML">
+                                {updateChildren.map((ItemX, index) => {
+                                    return (
+                                        <>
+                                            <section key={index}
+                                                onMouseEnter={() => {
+                                                    setOverSection(true);
+                                                    setSectionKey(index)
+                                                }}
+                                                onMouseLeave={() => {
+                                                    setOverSection(false);
+                                                    setShowPopUp(false);
+                                                }}
+                                                className="relative">
+                                                <ItemX displayDevice={displayDevice} linksfunc={linksfunc} overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
+                                                <div className="toBeRemoved" style={displayDevice ? null : { display: "none" }}>
+                                                    <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
+                                                        <button className="p-3 bg-BL-600" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
+                                                        <button className="bg-BL-600 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
+                                                        <button className="bg-BL-600 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
+                                                        <button className="bg-BL-600 p-3" onClick={() => {
+                                                            setShowPopUp((popup) => !popup);
+                                                        }}><i className="far fa-images text-white"></i></button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </section>
-                                    </>
-                                )
-                            })}
-                            {chatInclude ? <WhatsAppChat /> : null}
-                        </section>
-                    </div>
+                                            </section>
+                                        </>
+                                    )
+                                })
+                                }
+                                {chatInclude ? <WhatsAppChat /> : null}
+                            </section>
+                        </div>}
                 </div>
 
             </section>
@@ -241,7 +244,7 @@ const WhatsAppChat = () => {
     )
 }
 
-const MenuEdit = () => {
+const MenuEdit = ({ editTemplateMenu }) => {
     return (
         <>
 
