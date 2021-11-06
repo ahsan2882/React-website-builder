@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import ContainerEditCss from './ContainerEdit.module.css'
 import lz from "lzutf8";
 import { useDrop } from 'react-dnd'
+import { Editor } from '@tinymce/tinymce-react';
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
-
+import nav4edit from '../template4components/nav4edits'
+import Modal from 'react-modal';
+Modal.setAppElement(document.getElementById('editorScreen'));
 export default function ContainerEdit({ templateNum, setFileName, editTemplateMenu, editMenu, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
@@ -14,6 +17,7 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
     const [sectionKey, setSectionKey] = useState(null);
     const [curTemplate, setCurTemplate] = useState(null);
     const [fileName, setfilename] = useState(null);
+    const [modalIsOpen, setIsOpen] = React.useState(false);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -146,6 +150,18 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
         console.log(htmlString)
         return htmlString;
     }
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        // subtitle.style.color = '#f00';
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
     const getCSSData = () => {
         let cssString = ''
         let styleComponent = document.getElementsByTagName("style")
@@ -182,49 +198,55 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
     }
     return (
         <>
-            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} style={displayDevice ? { maxWidth: "80vw" } : { maxWidth: "30vw" }}>
+            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} id='editorScreen' style={displayDevice ? { maxWidth: "80vw" } : { maxWidth: "500px" }}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto overflow-x-hidden`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
-                    {editMenu
-                        ? <MenuEdit editTemplateMenu={editTemplateMenu} />
-                        : <div className="getInnerHTML">
-                            <section className="filterHTML">
-                                {updateChildren.map((ItemX, index) => {
-                                    return (
-                                        <>
-                                            <section key={index}
-                                                onMouseEnter={() => {
-                                                    setOverSection(true);
-                                                    setSectionKey(index)
-                                                }}
-                                                onMouseLeave={() => {
-                                                    setOverSection(false);
-                                                    setShowPopUp(false);
-                                                }}
-                                                className="relative">
-                                                <ItemX displayDevice={displayDevice} linksfunc={linksfunc} overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
-                                                <div className="toBeRemoved" style={displayDevice ? null : { display: "none" }}>
-                                                    <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
-                                                        <button className="p-3 bg-BL-600" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
-                                                        <button className="bg-BL-600 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
-                                                        <button className="bg-BL-600 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
-                                                        <button className="bg-BL-600 p-3" onClick={() => {
-                                                            setShowPopUp((popup) => !popup);
-                                                        }}><i className="far fa-images text-white"></i></button>
-                                                    </div>
+                    {editMenu ? <Modal
+                        isOpen={modalIsOpen}
+                        onAfterOpen={afterOpenModal}
+                        onRequestClose={closeModal}
+                        contentLabel="Edit Navigation Menu Here"
+                    >
+
+                    </Modal> : null}
+                    <div className="getInnerHTML">
+                        <section className="filterHTML">
+                            {updateChildren.map((ItemX, index) => {
+                                return (
+                                    <>
+                                        <section key={index}
+                                            onMouseEnter={() => {
+                                                setOverSection(true);
+                                                setSectionKey(index)
+                                            }}
+                                            onMouseLeave={() => {
+                                                setOverSection(false);
+                                                setShowPopUp(false);
+                                            }}
+                                            className="relative">
+                                            <ItemX displayDevice={displayDevice} linksfunc={linksfunc} overSection={(overSection && sectionKey === index) ? true : false} showPopup={showPopUp} />
+                                            <div className="toBeRemoved" style={displayDevice ? null : { display: "none" }}>
+                                                <div className="flex w-52 justify-evenly items-center" style={(overSection && sectionKey === index) ? { position: "absolute", top: "1rem", right: "4rem", zIndex: "9999999" } : { display: "none" }}>
+                                                    <button className="p-3 bg-BL-600" onClick={() => moveUp(index)}><i className="fas fa-arrow-up text-white"></i></button>
+                                                    <button className="bg-BL-600 p-3" onClick={() => moveDown(index)}><i className="fas fa-arrow-down text-white"></i></button>
+                                                    <button className="bg-BL-600 p-3" onClick={() => removeComponent(index)}><i className="fas fa-trash-alt text-white"></i></button>
+                                                    <button className="bg-BL-600 p-3" onClick={() => {
+                                                        setShowPopUp((popup) => !popup);
+                                                    }}><i className="far fa-images text-white"></i></button>
                                                 </div>
-                                            </section>
-                                        </>
-                                    )
-                                })
-                                }
-                                {chatInclude ? <WhatsAppChat /> : null}
-                            </section>
-                        </div>}
+                                            </div>
+                                        </section>
+                                    </>
+                                )
+                            })
+                            }
+                            {chatInclude ? <WhatsAppChat /> : null}
+                        </section>
+                    </div>
                 </div>
 
             </section>
@@ -245,9 +267,36 @@ const WhatsAppChat = () => {
 }
 
 const MenuEdit = ({ editTemplateMenu }) => {
+    const editorRef = useRef();
+    // const [menuOpt, setMenuOpt] = useState([])
+    const [showModal, setShowModal] = useState(false)
     return (
         <>
-
+            <section className="bg-gray-300 w-10/12 h-full mx-auto">
+                <h1>Edit Menu Here</h1>
+                {nav4edit.map((item) => <div className="w-1/2 flex justify-between items-center border-2 border-black rounded my-6 mx-4 bg-white">
+                    <div>
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='NavMenu1'
+                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                            initialValue={`${item}`}
+                            init={{
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                            }}
+                        />
+                    </div>
+                    <div>
+                        <button className="px-1.5 py-1 rounded-full hover:bg-gray-300"><i className="fas fa-link"></i></button>
+                    </div>
+                </div>)}
+            </section>
         </>
     )
 }
