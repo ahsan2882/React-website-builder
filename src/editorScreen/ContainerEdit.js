@@ -8,7 +8,7 @@ import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
 import nav4edit from '../template4components/nav4edits'
 import Modal from 'react-modal';
-Modal.setAppElement(document.getElementById('editorScreen'));
+// Modal.setAppElement(document.getElementById('editorScreen'));
 export default function ContainerEdit({ templateNum, setFileName, editTemplateMenu, editMenu, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
@@ -17,7 +17,7 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
     const [sectionKey, setSectionKey] = useState(null);
     const [curTemplate, setCurTemplate] = useState(null);
     const [fileName, setfilename] = useState(null);
-    const [modalIsOpen, setIsOpen] = React.useState(false);
+    // const [modalIsOpen, setIsOpen] = React.useState(false);
     const [{ canDrop }, drop] = useDrop({
         accept: ItemTypes.SECTION,
         drop: (item, monitor) => {
@@ -150,18 +150,18 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
         console.log(htmlString)
         return htmlString;
     }
-    function openModal() {
-        setIsOpen(true);
-    }
+    // function openModal() {
+    //     setIsOpen(true);
+    // }
 
-    function afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        // subtitle.style.color = '#f00';
-    }
+    // function afterOpenModal() {
+    //     // references are now sync'd and can be accessed.
+    //     // subtitle.style.color = '#f00';
+    // }
 
-    function closeModal() {
-        setIsOpen(false);
-    }
+    // function closeModal() {
+    //     setIsOpen(false);
+    // }
     const getCSSData = () => {
         let cssString = ''
         let styleComponent = document.getElementsByTagName("style")
@@ -205,14 +205,14 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto overflow-x-hidden`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
-                    {editMenu ? <Modal
+                    {/* {editMenu ? <Modal
                         isOpen={modalIsOpen}
                         onAfterOpen={afterOpenModal}
                         onRequestClose={closeModal}
                         contentLabel="Edit Navigation Menu Here"
                     >
 
-                    </Modal> : null}
+                    </Modal> : null} */}
                     <div className="getInnerHTML">
                         <section className="filterHTML">
                             {updateChildren.map((ItemX, index) => {
