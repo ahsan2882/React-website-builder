@@ -53,12 +53,15 @@
     display: flex;
     justify-content: center;
     margin: 0 auto 2rem auto;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .flexWrappedM{
     display: flex;
     justify-content: center;
     margin: 0 auto 2rem auto;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 @media(max-width:600px){
