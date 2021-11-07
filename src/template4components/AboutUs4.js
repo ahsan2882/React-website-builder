@@ -84,7 +84,7 @@ export default function AboutUs4({ showPopup, overSection, displayDevice }) {
                                     inline={true}
                                     key='abouted3'
                                     tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                                    initialValue="<p>Nunc pretium nibh non aliquam scelerisque. Integer porttitor dolor sit amet leo malesuada scelerisque. Sed sed tortor lobortis, dictum lacus sed, mollis enim. Aenean ullamcorper accumsan sem sit amet aliquam. Cras euismod mauris felis, eget bibendum nibh facilisis ac.</p>"
+                                    initialValue={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="readMoreDots" id="about4ParaDots">...</span><span id="about4ParaText" class="readMoreText">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>`}
                                     init={{
                                         plugins: [
                                             "link"
@@ -98,6 +98,14 @@ export default function AboutUs4({ showPopup, overSection, displayDevice }) {
 
                                     }}
                                 />
+                                <button id="about4readbtn" className="text-white" onClick={() => {
+                                    let dots = document.getElementById("about4ParaDots")
+                                    dots.style.display = "none"
+                                    let read = document.getElementById("about4ParaText")
+                                    read.style.display = "initial"
+                                    let btn = document.getElementById("about4readbtn")
+                                    btn.style.display = "none"
+                                }}>Read More</button>
                             </div>
                             <div className="py-5">
                                 <button className={`${About4Css.btnReadMore} text-white font-normal border flex justify-center w-40 items-center border-solid py-2 px-8 hover:text-black hover:bg-white`}>
