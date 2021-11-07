@@ -59,8 +59,8 @@ export default function Blog4({ showPopup, overSection }) {
                     </h1>
                 </div>
                 <div className="flex justify-center items-center">
-                    <div className="flex flex-wrap justify-around items-center">
-                        <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-center`}>
+                    <div className="flex flex-wrap justify-around items-stretch">
+                        <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-between`}>
                             {/* <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news1} alt="news 1" /> */}
                             <div className="mx-auto my-8">
                                 <Editor
@@ -112,9 +112,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 inline={true}
                                 key='blog4ed4'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<p>vamus tristique ligula quis orci malesuada tincidunt. Praesent
-                                    magna purus, pharetra eu eleifend non, euismod vitae leo.
-                                    Interdum et malesuada fames ac ante ipsum ...</p>"
+                                initialValue={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="readMoreDots" id="blog4ParaDots1">...</span><span id="blog4ParaText1" class="readMoreText">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>`}
                                 init={{
                                     plugins: [
                                         "link"
@@ -128,6 +126,14 @@ export default function Blog4({ showPopup, overSection }) {
 
                                 }}
                             />
+                            <button id="blog4readbtn1" className="text-white inline" onClick={() => {
+                                let dots = document.getElementById("blog4ParaDots1")
+                                dots.style.display = "none"
+                                let read = document.getElementById("blog4ParaText1")
+                                read.style.display = "initial"
+                                let btn = document.getElementById("blog4readbtn1")
+                                btn.style.display = "none"
+                            }}>Read More</button>
                             <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
                                 {/* <ButtonText className={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
 
@@ -153,7 +159,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 </button>
                             </div>
                         </div>
-                        <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-center`}>
+                        <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-between`}>
                             {/* <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news2} alt="news 2" /> */}
                             <div className="mx-auto my-8">
                                 <Editor
@@ -205,9 +211,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 inline={true}
                                 key='blog4ed7'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<p>vamus tristique ligula quis orci malesuada tincidunt. Praesent
-                                    magna purus, pharetra eu eleifend non, euismod vitae leo.
-                                    Interdum et malesuada fames ac ante ipsum ...</p>"
+                                initialValue={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="readMoreDots" id="blog4ParaDots2">...</span><span id="blog4ParaText2" class="readMoreText">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>`}
                                 init={{
                                     plugins: [
                                         "link"
@@ -221,6 +225,14 @@ export default function Blog4({ showPopup, overSection }) {
 
                                 }}
                             />
+                            <button id="blog4readbtn2" className="text-white" onClick={() => {
+                                let dots = document.getElementById("blog4ParaDots2")
+                                dots.style.display = "none"
+                                let read = document.getElementById("blog4ParaText2")
+                                read.style.display = "initial"
+                                let btn = document.getElementById("blog4readbtn2")
+                                btn.style.display = "none"
+                            }}>Read More</button>
                             <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
                                 {/* <ButtonText classStyle={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
                                 <button>
@@ -246,7 +258,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 </button>
                             </div>
                         </div>
-                        <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-center`}>
+                        <div className={`${Blog4Css.blogArticWrap} bg-transparent flex flex-col justify-between`}>
                             {/* <img className={`${Blog4Css.contImg} border-b-4 border-solid mb-8`} src={news3} alt="news 3" /> */}
                             <div className="mx-auto my-8">
                                 <Editor
@@ -298,9 +310,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 inline={true}
                                 key='blog4ed10'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="<p>vamus tristique ligula quis orci malesuada tincidunt. Praesent
-                                    magna purus, pharetra eu eleifend non, euismod vitae leo.
-                                    Interdum et malesuada fames ac ante ipsum ...</p>"
+                                initialValue={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="readMoreDots" id="blog4ParaDots3">...</span><span id="blog4ParaText3" class="readMoreText">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>`}
                                 init={{
                                     plugins: [
                                         "link"
@@ -314,6 +324,14 @@ export default function Blog4({ showPopup, overSection }) {
 
                                 }}
                             />
+                            <button id="blog4readbtn3" className="text-white" onClick={() => {
+                                let dots = document.getElementById("blog4ParaDots3")
+                                dots.style.display = "none"
+                                let read = document.getElementById("blog4ParaText3")
+                                read.style.display = "initial"
+                                let btn = document.getElementById("blog4readbtn3")
+                                btn.style.display = "none"
+                            }}>Read More</button>
                             <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
                                 {/* <ButtonText classStyle={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
                                 <button>
