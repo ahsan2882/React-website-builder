@@ -1,11 +1,52 @@
-.coll-2 {
-    height: 100vh;
-    align-items: center;
-    display: flex;
-    justify-content:flex-end;
-    width: 50%;
-}
 .bgImg{
     width: 50%;
     height: 50rem;
+}
+.bgClr{
+    width: 50%;
+    height: 50rem;
+}
+.mainHead1, .mainHead2{
+    top: 40%;
+}
+.mainHead1{
+    left: 25%;
+}
+.mainHead2{
+    left: 10%;
+}
+.bgImgM{
+    width: 100%;
+    height: 50rem;
+}
+.bgClrM{
+    background: none;
+}
+.mainHead1M{
+    top: 50%;
+    color: rgb(24, 148, 179);
+    left: 1rem;
+}
+.mainHead2M{
+    top: 30rem;
+    color: rgb(24, 148, 179);
+    left: -29rem;
+}
+@media (max-width: 500px){
+    .bgClr {
+        display: none;
+    }
+    .mainHead1{
+        top: 50%;
+        color: rgb(24, 148, 179);
+        left: 1rem;
+    }
+    .mainHead2 {
+        top: 30rem;
+        color: rgb(24, 148, 179);
+        left: -29rem;
+    }
+    .bgImg{
+        width: 100%;
+    }
 }
