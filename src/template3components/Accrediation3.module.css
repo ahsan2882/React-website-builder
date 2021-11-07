@@ -30,6 +30,7 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px 30px;
+  align-items: center;
 }
 
 .heading-main-title {
