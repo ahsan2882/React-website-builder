@@ -5,7 +5,7 @@ export default function Hero3Asset() {
     const editorRef = useRef(null);
     return (
         <>
-            <section className="relative text-center" style={{ width: "96rem", height: "50rem" }}>
+            <section className="relative text-center" style={{ width: "100%", height: "80vh" }}>
                 {/* <img src="https://i.ibb.co/jRSgBwv/background1.jpg" alt="background1" border="0">
                 <img src="https://i.ibb.co/c8STtRy/news3.png" alt="news3" border="0">
                     <img src="https://i.ibb.co/pPMDx5D/background2.jpg" alt="background2" border="0"> */}
