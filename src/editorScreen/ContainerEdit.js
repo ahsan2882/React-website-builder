@@ -1,13 +1,14 @@
-import React, { useEffect, useState, useRef } from 'react'
+// import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import ContainerEditCss from './ContainerEdit.module.css'
 import lz from "lzutf8";
 import { useDrop } from 'react-dnd'
-import { Editor } from '@tinymce/tinymce-react';
+// import { Editor } from '@tinymce/tinymce-react';
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import { templateComponents } from '../myComponents/AllTemplates';
-import nav4edit from '../template4components/nav4edits'
-import Modal from 'react-modal';
+// import nav4edit from '../template4components/nav4edits'
+// import Modal from 'react-modal';
 // Modal.setAppElement(document.getElementById('editorScreen'));
 export default function ContainerEdit({ templateNum, setFileName, editTemplateMenu, editMenu, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
@@ -266,37 +267,37 @@ const WhatsAppChat = () => {
     )
 }
 
-const MenuEdit = ({ editTemplateMenu }) => {
-    const editorRef = useRef();
-    // const [menuOpt, setMenuOpt] = useState([])
-    const [showModal, setShowModal] = useState(false)
-    return (
-        <>
-            <section className="bg-gray-300 w-10/12 h-full mx-auto">
-                <h1>Edit Menu Here</h1>
-                {nav4edit.map((item) => <div className="w-1/2 flex justify-between items-center border-2 border-black rounded my-6 mx-4 bg-white">
-                    <div>
-                        <Editor
-                            onInit={(evt, editor) => editorRef.current = editor}
-                            inline={true}
-                            key='NavMenu1'
-                            tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                            initialValue={`${item}`}
-                            init={{
-                                forced_root_block: "",
-                                menubar: false,
-                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                    'alignright alignjustify | fontselect',
-                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                            }}
-                        />
-                    </div>
-                    <div>
-                        <button className="px-1.5 py-1 rounded-full hover:bg-gray-300"><i className="fas fa-link"></i></button>
-                    </div>
-                </div>)}
-            </section>
-        </>
-    )
-}
+// const MenuEdit = ({ editTemplateMenu }) => {
+//     const editorRef = useRef();
+//     // const [menuOpt, setMenuOpt] = useState([])
+//     const [showModal, setShowModal] = useState(false)
+//     return (
+//         <>
+//             <section className="bg-gray-300 w-10/12 h-full mx-auto">
+//                 <h1>Edit Menu Here</h1>
+//                 {nav4edit.map((item) => <div className="w-1/2 flex justify-between items-center border-2 border-black rounded my-6 mx-4 bg-white">
+//                     <div>
+//                         <Editor
+//                             onInit={(evt, editor) => editorRef.current = editor}
+//                             inline={true}
+//                             key='NavMenu1'
+//                             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+//                             initialValue={`${item}`}
+//                             init={{
+//                                 forced_root_block: "",
+//                                 menubar: false,
+//                                 toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+//                                     'alignright alignjustify | fontselect',
+//                                 fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+//                                 font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+//                             }}
+//                         />
+//                     </div>
+//                     <div>
+//                         <button className="px-1.5 py-1 rounded-full hover:bg-gray-300"><i className="fas fa-link"></i></button>
+//                     </div>
+//                 </div>)}
+//             </section>
+//         </>
+//     )
+// }
