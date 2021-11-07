@@ -1,19 +1,61 @@
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Hero1Css from './Hero1Asset.module.css'
+import { GithubPicker } from 'react-color';
 
-export default function Hero1Asset() {
+export default function Hero1Asset({ displayDevice, overSection, showPopup }) {
+  const [backgroundType, setBackgroundType] = useState("image");
+  const [currentBackgroundColor, setCurrentBackgroundColor] = useState("black");
+  return (
+    <>
+      <section className="overflow-hidden">
+        {/* {backgroundType === "color" ? <HeroSection4ComponentColorImage color={currentBackgroundColor} /> : (backgroundType === "image" ? <HeroSection4ComponentColorImage image={currentBackgroundImage} /> : <HeroSection4ComponentVideo />)} */}
+        {backgroundType === "color" ? <HeroAsset1ComponentColor color={currentBackgroundColor} displayDevice={displayDevice} /> : null}
+        {backgroundType === "image" ? <HeroAsset1ComponentImage displayDevice={displayDevice} /> : null}
+        {backgroundType === "video" ? <HeroAsset1ComponentVideo displayDevice={displayDevice} /> : null}
+        <div className="toBeRemoved" style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+          <div className="flex flex-col justify-center items-center border-2 border-black w-64 rounded-lg bg-white">
+            <button className="py-4" onClick={() => setBackgroundType("color")}>Color</button>
+            {backgroundType === "color" ? <GithubPicker
+              triangle="top-right"
+              onChangeComplete={(color) => {
+                setBackgroundType("color")
+                setCurrentBackgroundColor(color.hex);
+              }}
+            /> : null}
+            <button className="py-2" onClick={() => setBackgroundType("image")}>Image</button>
+            <button className="py-4" onClick={() => setBackgroundType("video")}>Video</button>
+
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+
+
+const HeroAsset1ComponentColor = ({ color, displayDevice }) => {
+  const editorRef = useRef(null);
+  return (
+    <>
+      
+    </>
+  )
+}
+
+const HeroAsset1ComponentImage = ({ displayDevice }) => {
   const editorRef = useRef(null);
   return (
     <>
       <section className={`relative`}
-      // style={{ background: color }}
       >
         <Editor
           onInit={(evt, editor) => editorRef.current = editor}
           inline={true}
+          disabled={displayDevice ? false : true}
           key='Service4Im1'
-          initialValue={`<img src="https://i.ibb.co/C8ZPc41/blog-15-770x545.png" alt="london" class=" ${Hero1Css.bgImg} object-cover "/>`}
+          initialValue={displayDevice ? `<img src="https://i.ibb.co/C8ZPc41/blog-15-770x545.png" alt="london" class=" ${Hero1Css.bgImg} object-cover "/>` : `<img src="https://i.ibb.co/C8ZPc41/blog-15-770x545.png" alt="london" class=" ${Hero1Css.bgImgM} object-cover "/>`}
           init={{
             images_upload_handler: function (blobInfo, success, failure) {
               success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -27,12 +69,12 @@ export default function Hero1Asset() {
             toolbar: 'image'
           }}
         />
-        {/* <TextH1 classStyle={Hero4Css.secHeroH1} text="Security Services"></TextH1> */}
-        <h1 className="text-7xl text-white font-bold absolute top-80 left-96">
+        <h1 className={displayDevice ? `text-7xl text-white font-bold absolute top-80 left-96 ${Hero1Css.mainHead1}` : `text-7xl text-white font-bold absolute top-80 left-96 ${Hero1Css.mainHead1M}`}>
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='hero4ed1'
+            disabled={displayDevice ? false : true}
             tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
             initialValue="Security"
             init={{
@@ -48,12 +90,13 @@ export default function Hero1Asset() {
             }}
           />
         </h1>
-        <div className={`bg-BL-400 absolute top-0 right-0 ${Hero1Css.bgImg}`}>
-          <h1 className="text-7xl text-black font-bold absolute top-80 right-96">
+        <div className={displayDevice ? `bg-BL-400 absolute top-0 right-0 ${Hero1Css.bgClr}` : `bg-BL-400 absolute top-0 right-0 ${Hero1Css.bgClrM}`}>
+          <h1 className={displayDevice ? `text-7xl text-black font-bold absolute ${Hero1Css.mainHead2}` : `text-7xl text-black font-bold absolute ${Hero1Css.mainHead2M}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
               key='hero4ed1'
+              disabled={displayDevice ? false : true}
               tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
               initialValue="Solutions"
               init={{
@@ -74,3 +117,14 @@ export default function Hero1Asset() {
     </>
   )
 }
+
+
+const HeroAsset1ComponentVideo = ({ displayDevice }) => {
+  const editorRef = useRef(null);
+  return (
+    <>
+
+    </>
+  )
+}
+
