@@ -22,6 +22,11 @@ export const Accreditation2 = ({ showPopup, overSection }) => {
   const addAccred = () => {
     setAccred2([...accred2, Accreditation2Array[1]])
   }
+  const removeAccred = (index) => {
+    let newArray = [...accred2];
+    newArray.splice(index, 1);
+    setAccred2([...newArray])
+  }
 
   return (
     <>
@@ -78,7 +83,7 @@ export const Accreditation2 = ({ showPopup, overSection }) => {
 
             <div className={`${Accreditation2moduleCss['brand-carousel']} ${Accreditation2moduleCss['section-padding']} ${Accreditation2moduleCss['owl-carousel']}`}>
               {accred2.map((item, index) =>
-                <div
+                <div className="relative"
                   onMouseEnter={() => setAccredKey(String(index))}
                   onMouseLeave={() => setAccredKey("")}
                 >
@@ -142,8 +147,8 @@ export const Accreditation2 = ({ showPopup, overSection }) => {
                       />
                     </div>
                   </div>
-                  <div>
-
+                  <div className="toBeRemoved" style={accredKey === String(index) ? {position:"absolute", top:"2%", right:"2%"} : {display: "none"}}>
+                      <button className="w-8 h-8 bg-BL-600" onClick={() => removeAccred(index)}><i className="fas fa-trash-alt"></i></button>
                   </div>
                 </div>
               )}
