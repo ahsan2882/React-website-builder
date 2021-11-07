@@ -30,6 +30,13 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
             canDrop: !!monitor.canDrop()
         })
     })
+    let readMores = document.getElementsByClassName("readMoreText");
+    let inde = 0;
+    while (inde < readMores.length) {
+        readMores[inde].classList.add("hidden")
+        inde++
+    }
+    console.log(readMores)
     const temp = templateNum;
     useEffect(() => {
         let filename = "";
@@ -114,31 +121,31 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
             editableFalse[i].setAttribute("contenteditable", "false")
             i++
         }
-        i = 0
-        while (i < 1000) {
-            if (editableFalse[0] === undefined) {
-                break;
-            }
-            else if (editableFalse[0].parentNode.nodeName === "LI") {
-                let newDiv = newDoc.createElement("div")
-                newDiv.className = "newText"
-                newDiv.innerHTML = editableFalse[0].innerHTML
-                editableFalse[0].parentNode.replaceChild(newDiv, editableFalse[0])
-            } else if (editableFalse[0].parentNode.nodeName === "BUTTON" || editableFalse[0].parentNode.nodeName === "H1" || editableFalse[0].parentNode.nodeName === "H2" || editableFalse[0].parentNode.nodeName === "H3" || editableFalse[0].parentNode.nodeName === "H4" || editableFalse[0].parentNode.nodeName === "H5" || editableFalse[0].parentNode.nodeName === "H6" || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<p")) || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<img")) || (editableFalse[0].parentNode.nodeName === "SECTION" && editableFalse[0].innerHTML.includes("<img"))) {
-                let nodeText = newDoc.createTextNode(editableFalse[0].innerHTML)
-                editableFalse[0].parentNode.replaceChild(nodeText, editableFalse[0])
-            }
-            else if (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<span")) {
-                let para = newDoc.createElement("p");
-                let paraText = newDoc.createTextNode(editableFalse[0].innerHTML)
-                para.appendChild(paraText);
-                editableFalse[0].parentNode.replaceChild(para, editableFalse[0])
-            }
-            // console.log(editableFalse[0])
-            // console.log(editableFalse[0].parentNode.nodeName)
-            // console.log(editableFalse[0].innerHTML)
-            i++
-        }
+        // i = 0
+        // while (i < 1000) {
+        //     if (editableFalse[0] === undefined) {
+        //         break;
+        //     }
+        //     else if (editableFalse[0].parentNode.nodeName === "LI") {
+        //         let newDiv = newDoc.createElement("div")
+        //         newDiv.className = "newText"
+        //         newDiv.innerHTML = editableFalse[0].innerHTML
+        //         editableFalse[0].parentNode.replaceChild(newDiv, editableFalse[0])
+        //     } else if (editableFalse[0].parentNode.nodeName === "BUTTON" || editableFalse[0].parentNode.nodeName === "H1" || editableFalse[0].parentNode.nodeName === "H2" || editableFalse[0].parentNode.nodeName === "H3" || editableFalse[0].parentNode.nodeName === "H4" || editableFalse[0].parentNode.nodeName === "H5" || editableFalse[0].parentNode.nodeName === "H6" || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<p")) || (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<img")) || (editableFalse[0].parentNode.nodeName === "SECTION" && editableFalse[0].innerHTML.includes("<img"))) {
+        //         let nodeText = newDoc.createTextNode(editableFalse[0].innerHTML)
+        //         editableFalse[0].parentNode.replaceChild(nodeText, editableFalse[0])
+        //     }
+        //     else if (editableFalse[0].parentNode.nodeName === "DIV" && editableFalse[0].innerHTML.includes("<span")) {
+        //         let para = newDoc.createElement("p");
+        //         let paraText = newDoc.createTextNode(editableFalse[0].innerHTML)
+        //         para.appendChild(paraText);
+        //         editableFalse[0].parentNode.replaceChild(para, editableFalse[0])
+        //     }
+        //     // console.log(editableFalse[0])
+        //     // console.log(editableFalse[0].parentNode.nodeName)
+        //     // console.log(editableFalse[0].innerHTML)
+        //     i++
+        // }
         let vid = document.getElementsByTagName("video")[0]
         if (vid !== undefined) {
             let att = document.createAttribute("muted");
