@@ -1,50 +1,8 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react';
 import Hero1Css from './Hero1Asset.module.css'
-import { GithubPicker } from 'react-color';
 
-export default function Hero1Asset({ displayDevice, overSection, showPopup }) {
-  const [backgroundType, setBackgroundType] = useState("image");
-  const [currentBackgroundColor, setCurrentBackgroundColor] = useState("black");
-  return (
-    <>
-      <section className="overflow-hidden">
-        {/* {backgroundType === "color" ? <HeroSection4ComponentColorImage color={currentBackgroundColor} /> : (backgroundType === "image" ? <HeroSection4ComponentColorImage image={currentBackgroundImage} /> : <HeroSection4ComponentVideo />)} */}
-        {backgroundType === "color" ? <HeroAsset1ComponentColor color={currentBackgroundColor} displayDevice={displayDevice} /> : null}
-        {backgroundType === "image" ? <HeroAsset1ComponentImage displayDevice={displayDevice} /> : null}
-        {backgroundType === "video" ? <HeroAsset1ComponentVideo displayDevice={displayDevice} /> : null}
-        <div className="toBeRemoved" style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
-          <div className="flex flex-col justify-center items-center border-2 border-black w-64 rounded-lg bg-white">
-            <button className="py-4" onClick={() => setBackgroundType("color")}>Color</button>
-            {backgroundType === "color" ? <GithubPicker
-              triangle="top-right"
-              onChangeComplete={(color) => {
-                setBackgroundType("color")
-                setCurrentBackgroundColor(color.hex);
-              }}
-            /> : null}
-            <button className="py-2" onClick={() => setBackgroundType("image")}>Image</button>
-            <button className="py-4" onClick={() => setBackgroundType("video")}>Video</button>
-
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
-
-
-
-const HeroAsset1ComponentColor = ({ color, displayDevice }) => {
-  const editorRef = useRef(null);
-  return (
-    <>
-      
-    </>
-  )
-}
-
-const HeroAsset1ComponentImage = ({ displayDevice }) => {
+export default function Hero1Asset({ displayDevice }) {
   const editorRef = useRef(null);
   return (
     <>
@@ -117,14 +75,3 @@ const HeroAsset1ComponentImage = ({ displayDevice }) => {
     </>
   )
 }
-
-
-const HeroAsset1ComponentVideo = ({ displayDevice }) => {
-  const editorRef = useRef(null);
-  return (
-    <>
-
-    </>
-  )
-}
-
