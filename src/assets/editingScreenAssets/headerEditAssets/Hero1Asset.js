@@ -27,7 +27,6 @@ export default function Hero1Asset() {
             toolbar: 'image'
           }}
         />
-        <div className="absolute top-4 left-4 toBeRemoved">Click here to upload another image</div>
         {/* <TextH1 classStyle={Hero4Css.secHeroH1} text="Security Services"></TextH1> */}
         <h1 className="text-7xl text-white font-bold absolute top-80 left-96">
           <Editor
