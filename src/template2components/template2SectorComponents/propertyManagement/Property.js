@@ -5,6 +5,14 @@ import { GithubPicker } from 'react-color';
 
 import PropertymoduleCss from './Property.module.css'
 export const Property = ({ showPopup, overSection }) => {
+    const [showPopup1, setShowPopup1] = useState(false);
+    const [showPopup2, setShowPopup2] = useState(false);
+    const [showPopup3, setShowPopup3] = useState(false);
+    const [showPopup4, setShowPopup4] = useState(false);
+    const [currentBackground1, setCurrentBackground1] = useState("#C0272D");
+    const [currentBackground2, setCurrentBackground2] = useState("#C0272D");
+    const [currentBackground3, setCurrentBackground3] = useState("#C0272D");
+    const [currentBackground4, setCurrentBackground4] = useState("#C0272D");
     const editorRef = useRef();
     const [currentBackground, setCurrentBackground] = useState("white");
 
@@ -173,7 +181,7 @@ export const Property = ({ showPopup, overSection }) => {
         </div>
         <div class={`${PropertymoduleCss['sector_right-cards']}`}>
             <div class={`${PropertymoduleCss['sector-cards-row']}`}>
-            <div class={`${PropertymoduleCss['sector-card']}`}>
+            <div style={{ background: currentBackground1}} class={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -234,7 +242,15 @@ export const Property = ({ showPopup, overSection }) => {
                 </div>
                 
             </div>
-            <div class={`${PropertymoduleCss['sector-card']}`}>
+            <div style={(showPopup1) ?   { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                    }}
+                />
+            </div>
+            <div style={{ background: currentBackground2}} class={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -293,10 +309,17 @@ export const Property = ({ showPopup, overSection }) => {
                                 />                </div>
                 
             </div>
-            
+            <div style={(showPopup2)   ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground2(color.hex);
+                    }}
+                />
+            </div> 
         </div>
         <div class={`${PropertymoduleCss['sector-cards-row']}`}>
-            <div class={`${PropertymoduleCss['sector-card']}`}>
+            <div style={{ background: currentBackground3}} class={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -353,7 +376,15 @@ export const Property = ({ showPopup, overSection }) => {
                                 />                </div>
                 
             </div>
-            <div class={`${PropertymoduleCss['sector-card']}`}>
+            <div style={(showPopup3) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground3(color.hex);
+                    }}
+                />
+            </div>
+            <div style={{ background: currentBackground4}} class={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -410,7 +441,14 @@ export const Property = ({ showPopup, overSection }) => {
                                 />                </div>
                 
             </div>
-            
+            <div style={(showPopup4)   ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground4(color.hex);
+                    }}
+                />
+            </div>
         </div>
         </div>
     </div>

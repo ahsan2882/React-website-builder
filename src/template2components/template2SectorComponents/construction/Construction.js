@@ -6,6 +6,14 @@ import { Editor } from '@tinymce/tinymce-react';
 import ConstructionmoduleCss from './Construction.module.css'
 export const Construction = ({ showPopup, overSection }) => {
     const editorRef = useRef();
+    const [showPopup1, setShowPopup1] = useState(false);
+    const [showPopup2, setShowPopup2] = useState(false);
+    const [showPopup3, setShowPopup3] = useState(false);
+    const [showPopup4, setShowPopup4] = useState(false);
+    const [currentBackground1, setCurrentBackground1] = useState("#C0272D");
+    const [currentBackground2, setCurrentBackground2] = useState("#C0272D");
+    const [currentBackground3, setCurrentBackground3] = useState("#C0272D");
+    const [currentBackground4, setCurrentBackground4] = useState("#C0272D");
     const [currentBackground, setCurrentBackground] = useState("white");
     return (
 <>
@@ -172,7 +180,7 @@ export const Construction = ({ showPopup, overSection }) => {
         </div>
         <div class={`${ConstructionmoduleCss['sector_right-cards']}`}>
             <div class={`${ConstructionmoduleCss['sector-cards-row']}`}>
-            <div class={`${ConstructionmoduleCss['sector-card']}`}>
+            <div style={{ background: currentBackground1}} class={`${ConstructionmoduleCss['sector-card']}`}  onClick={() => setShowPopup1(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -233,7 +241,15 @@ export const Construction = ({ showPopup, overSection }) => {
                 </div>
                 
             </div>
-            <div class={`${ConstructionmoduleCss['sector-card']}`}>
+            <div style={(showPopup1) ?   { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                    }}
+                />
+            </div>
+            <div style={{ background: currentBackground2}} class={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -292,10 +308,17 @@ export const Construction = ({ showPopup, overSection }) => {
                                 />                </div>
                 
             </div>
-            
+            <div style={(showPopup2)   ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground2(color.hex);
+                    }}
+                />
+            </div>   
         </div>
         <div class={`${ConstructionmoduleCss['sector-cards-row']}`}>
-            <div class={`${ConstructionmoduleCss['sector-card']}`}>
+            <div style={{ background: currentBackground3}} class={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -352,7 +375,15 @@ export const Construction = ({ showPopup, overSection }) => {
                                 />                </div>
                 
             </div>
-            <div class={`${ConstructionmoduleCss['sector-card']}`}>
+            <div style={(showPopup3) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground3(color.hex);
+                    }}
+                />
+            </div>
+            <div style={{ background: currentBackground4}} class={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -409,7 +440,14 @@ export const Construction = ({ showPopup, overSection }) => {
                                 />                </div>
                 
             </div>
-            
+            <div style={(showPopup4)   ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground4(color.hex);
+                    }}
+                />
+            </div>
         </div>
         </div>
     </div>

@@ -1,0 +1,72 @@
+html {
+    --clr-secondary-light: #292929;
+    --clr-secondary: #000000;
+    --clr-gray: #dddddd;
+    --clr-light: #ffff;
+    --clr-font: #747474;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    --clr-primary: #0b131a;
+    --clr-white-smoke: #ebebeb;
+    --clr-red-new: #c01120;
+    --clr-light: #ffff;
+  }
+
+
+.container-main {
+    padding: 30px 3px;
+  
+}
+.container-main {
+    padding: 33px 167px !important;
+}
+.service-card-wrap {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+    backdrop-filter: blur(5px);
+}
+.service-card-wrap {
+    display: flex;
+    justify-content: center;
+}
+.heading-main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+.sub-title {
+    position: relative;
+  }
+  .sub-title::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 30%;
+    background: var(--clr-red-new);
+    left: 0;
+    bottom: -2px;
+  }
+
+.heading-main-title h1 {
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.box_content-hover {
+    opacity: 0;
+    visibility: hidden;
+    width: 350px;
+    height: 100px;
+  }

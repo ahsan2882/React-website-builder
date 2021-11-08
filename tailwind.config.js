@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      dropShadow: {
+        'AHS': '10px 10px 0 rgba(0, 193, 207, 0.9)',
+      },
       colors: {
         UB: {
           400: "#FF6666"

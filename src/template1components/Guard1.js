@@ -1,14 +1,25 @@
-import React, { useRef} from 'react'
+import React, { useRef, useState} from 'react'
 import Guard1Css from './Guard1.module.css'
 import ourteam from '../assets/template1images/ourteam.png'
 import ourteam2 from '../assets/template1images/ourteam2.png'
 import ourteam3 from '../assets/template1images/ourteam3.png'
 import { Editor } from '@tinymce/tinymce-react';
-export const Guard1 = () => {
+import { GithubPicker } from 'react-color';
+
+export const Guard1 = ({ showPopup, overSection }) => {
+  const [showPopup1, setShowPopup1] = useState(false);
+  const [showPopup2, setShowPopup2] = useState(false);
+  const [showPopup3, setShowPopup3] = useState(false);
+  const [currentBackground1, setCurrentBackground1] = useState("white");
+  const [currentBackground2, setCurrentBackground2] = useState("white");
+  const [currentBackground3, setCurrentBackground3] = useState("white");
+  const [currentBackground, setCurrentBackground] = useState("white");
+
   const editorRef = useRef(null);
+  
   return (
     <>
-      <div id="ourteam" className={`${Guard1Css['cards-contain']}`}>
+      <div style={{ background: currentBackground }} id="ourteam" className={`${Guard1Css['cards-contain']}`}>
         <h1 className={`${Guard1Css.headings}`}>
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
@@ -43,9 +54,9 @@ export const Guard1 = () => {
             />
          
         </div>
-        <div className={`${Guard1Css.wrapper2}`}>
+        <div style={{ background: currentBackground }} className={`${Guard1Css.wrapper2}`}>
           <div className={`${Guard1Css.blog2}`}>
-            <div className={`${Guard1Css['single-blog']}`}>
+            <div style={{ background: currentBackground1}} className={`${Guard1Css['single-blog']}`} onClick={() => setShowPopup1(state => !state)}>
               <div className={`${Guard1Css['blog-img']}`}>
                 <img src={ourteam} alt="Temp1Img2" />
 
@@ -87,7 +98,15 @@ export const Guard1 = () => {
 
               </div>
             </div>
-            <div className={`${Guard1Css['single-blog']}`}>
+            <div style={(showPopup1) ?   { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                    }}
+                />
+            </div>
+            <div  style={{ background: currentBackground2}} className={`${Guard1Css['single-blog']}`} onClick={() => setShowPopup2(state => !state)}>
               <div className={`${Guard1Css['blog-img']}`}>
                 <img src={ourteam2} alt="Temp1Img3" />
 
@@ -129,7 +148,15 @@ export const Guard1 = () => {
 
               </div>
             </div>
-            <div className={`${Guard1Css['single-blog']}`}>
+            <div style={(showPopup2)   ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground2(color.hex);
+                    }}
+                />
+            </div>
+            <div style={{ background: currentBackground3}} className={`${Guard1Css['single-blog']}`} onClick={() => setShowPopup3(state => !state)}>
               <div className={`${Guard1Css['blog-img']}`}>
                 <img src={ourteam3} alt="Temp1Img4" />
 
@@ -168,10 +195,25 @@ export const Guard1 = () => {
                   />
               </div>
             </div>
+            <div style={(showPopup3) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground3(color.hex);
+                    }}
+                />
+            </div>
           </div>
         </div>
       </div>
-
+      <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
 
     </>
   );

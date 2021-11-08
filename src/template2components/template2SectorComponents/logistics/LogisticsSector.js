@@ -5,6 +5,14 @@ import { GithubPicker } from 'react-color';
 
 import LogisticSectorCss from './LogisticSector.module.css'
 export const LogisticSector = ({ showPopup, overSection }) => {
+    const [showPopup1, setShowPopup1] = useState(false);
+    const [showPopup2, setShowPopup2] = useState(false);
+    const [showPopup3, setShowPopup3] = useState(false);
+    const [showPopup4, setShowPopup4] = useState(false);
+    const [currentBackground1, setCurrentBackground1] = useState("#C0272D");
+    const [currentBackground2, setCurrentBackground2] = useState("#C0272D");
+    const [currentBackground3, setCurrentBackground3] = useState("#C0272D");
+    const [currentBackground4, setCurrentBackground4] = useState("#C0272D");
     const editorRef = useRef();
     const [currentBackground, setCurrentBackground] = useState("white");
     return (
@@ -172,7 +180,7 @@ export const LogisticSector = ({ showPopup, overSection }) => {
         </div>
         <div class={`${LogisticSectorCss['sector_right-cards']}`}>
             <div class={`${LogisticSectorCss['sector-cards-row']}`}>
-            <div class={`${LogisticSectorCss['sector-card']}`}>
+            <div style={{ background: currentBackground1}} class={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -231,9 +239,16 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                                     }}
                                 />
                 </div>
-                
+                <div style={(showPopup1) ?   { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                    }}
+                />
+            </div> 
             </div>
-            <div class={`${LogisticSectorCss['sector-card']}`}>
+            <div style={{ background: currentBackground2}} class={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -290,12 +305,19 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                     }}
                                 />                </div>
-                
+                 <div style={(showPopup2)   ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground2(color.hex);
+                    }}
+                />
+            </div> 
             </div>
             
         </div>
         <div class={`${LogisticSectorCss['sector-cards-row']}`}>
-            <div class={`${LogisticSectorCss['sector-card']}`}>
+            <div  style={{ background: currentBackground3}} class={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -350,9 +372,16 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                     }}
                                 />                </div>
-                
+                         <div style={(showPopup3) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground3(color.hex);
+                    }}
+                />
             </div>
-            <div class={`${LogisticSectorCss['sector-card']}`}>
+            </div>
+            <div style={{ background: currentBackground4}} class={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
             <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -409,7 +438,14 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                                 />                </div>
                 
             </div>
-            
+            <div style={(showPopup4)   ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground4(color.hex);
+                    }}
+                />
+            </div>  
         </div>
         </div>
     </div>
