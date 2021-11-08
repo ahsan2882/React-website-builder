@@ -156,6 +156,7 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
         htmlString = htmlString.replace(/&lt;/g, "<").replace(/&gt;/g, ">")
         // setLinksfunc(false);
         console.log(htmlString)
+        console.log(linksfunc)
         return htmlString;
     }
     // function openModal() {
