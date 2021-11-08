@@ -1,0 +1,28 @@
+.services-sec {
+    background-image: url(./head2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70vh;
+    background-position: center;
+  }
+  .contentserv {
+    background-image: url(./headingblob.png);
+    background-size: cover;
+    background-position: 0%;
+    opacity: 80%;
+  display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+  }
+  .headings {
+    font-size: 5rem;
+    text-align: center;
+    max-width: 100%;
+    color: #333434;
+  }
