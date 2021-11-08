@@ -1,5 +1,6 @@
 .headings {
-    font-size: 5rem;
+    font-size: 3rem;
+    font-weight: 700;
     /* padding-top: 100px; */
     text-align: center;
     max-width: 100%;
@@ -39,7 +40,7 @@
   .single-blog:hover .blog-img img {
     transform: scale(1.1);
   }
-  .blog-img a {
+  .blog-img a{
     position: absolute;
     left: 0;
     top: 0;
