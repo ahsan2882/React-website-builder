@@ -5,7 +5,7 @@ import { GithubPicker } from 'react-color';
 import Hero4Css from './HeroSection4.module.css'
 
 export default function HeroSection4({ showPopup, overSection, displayDevice }) {
-    const [backgroundType, setBackgroundType] = useState("color");
+    const [backgroundType, setBackgroundType] = useState("image");
     const [currentBackgroundColor, setCurrentBackgroundColor] = useState("black");
     // useEffect(() => {
     //     if (backgroundType === "image") {
