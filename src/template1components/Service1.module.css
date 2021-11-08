@@ -1,9 +1,10 @@
 .headings {
-  font-size: 5rem;
+  font-size: 3rem;
   /* padding-top: 100px; */
   text-align: center;
   max-width: 100%;
   color: #333434;
+  font-weight: 700;
 }
 
 .text-main-text {
@@ -18,7 +19,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: url('https://i.ibb.co/c6ZP1Zx/bgdots.png');
+    background: url(../assets/template1images/bgdots.png);
     background-repeat: no-repeat;
     background-position: left center;
     padding-bottom: 16em;
@@ -61,7 +62,7 @@
     } */
   .banner-img {
     position: absolute;
-    background-image: url('https://i.ibb.co/DWp5xLs/blobthebuilder.png');
+    background-image: url(../assets/template1images/blobthebuilder.png);
     height: 24rem;
     width: 100%;
     background-position: center;
@@ -86,8 +87,8 @@
   }
   .name {
     padding-top: 30px;
-    /* font-weight: bold; */
-    font-size: 3rem;
+    font-weight: 600;
+    font-size: 2rem;
   }
   .name-2 {
     color: white;
@@ -99,7 +100,7 @@
   
   .description {
     margin: 1rem 2rem;
-    font-size: 16px;
+    font-size:16px;
  
   }
   
@@ -114,14 +115,11 @@
     font-weight: bold;
     color: white;
     padding: 1rem;
-    /* background-color: var(--primary-color); */
   }
   .b-tn-2 {
     background-color: white;
-    /* color: var(--primary-color); */
   }
   .btnb {
-    /* background-color: var(--primary-color); */
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
