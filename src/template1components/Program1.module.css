@@ -1,5 +1,6 @@
 .headings {
-    font-size: 5rem;
+    font-size: 3rem;
+	font-weight: 700;
     /* padding-top: 100px; */
     text-align: center;
     max-width: 100%;
@@ -16,7 +17,7 @@
   }
   .services{
 	width:100%;
-	height: 400px;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -30,6 +31,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 4rem;
 }
 .service-item{
 	display:flex;
@@ -46,6 +48,7 @@
 	border-radius: 10px;
 	box-shadow: 0 1px 2px rgba(122, 119, 119, 0.07);
 	cursor: pointer;
+	height: auto;
 }
 .service-item img{
 	height: 75px;
@@ -118,7 +121,7 @@ text-align: center;
 	
 }
 .pro-head{
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     text-align: center;
     padding: 20px;
   }
