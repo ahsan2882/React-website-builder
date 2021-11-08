@@ -1,5 +1,5 @@
 import { Editor } from '@tinymce/tinymce-react';
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import Hero1Css from './Hero1Asset.module.css'
 
 export default function Hero1Asset({ displayDevice }) {
