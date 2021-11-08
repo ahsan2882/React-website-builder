@@ -1,13 +1,24 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Program1Css from './Program1.module.css'
 import img1 from '../assets/template1images/1.svg'
 import img2 from '../assets/template1images/2.svg'
 import img3 from '../assets/template1images/3.svg'
 import { Editor } from '@tinymce/tinymce-react';
-export const Program1 = () => {
+import { GithubPicker } from 'react-color';
+
+export const Program1 = ({ showPopup, overSection }) => {
+   const [showPopup1, setShowPopup1] = useState(false);
+   const [showPopup2, setShowPopup2] = useState(false);
+   const [showPopup3, setShowPopup3] = useState(false);
+   const [currentBackground1, setCurrentBackground1] = useState("white");
+   const [currentBackground2, setCurrentBackground2] = useState("white");
+   const [currentBackground3, setCurrentBackground3] = useState("white");
+  const [currentBackground, setCurrentBackground] = useState("white");
+
    const editorRef = useRef(null);
    return (
       <>
+      <div style={{ background: currentBackground }}>
          <div className={`${Program1Css['text-main-text']}`}>
             <h1 style={{ color: `black` }} className={`${Program1Css.headings}`}>
                <Editor
@@ -43,9 +54,9 @@ export const Program1 = () => {
 
             </div>
          </div>
-         <section className={`${Program1Css.services}`}>
+         <section style={{ background: currentBackground }} className={`${Program1Css.services}`}>
             <div className={`${Program1Css['service-item-container']}`}>
-               <div className={`${Program1Css['service-item']}  ${Program1Css['fade-in']}`} style={{ height: `auto` }}>
+               <div  className={`${Program1Css['service-item']}  ${Program1Css['fade-in']}`} style={{background:currentBackground1}}onClick={() => setShowPopup1(state => !state)}>
                   <div className={`${Program1Css.bar}`}></div>
                   <div className={`${Program1Css.item}`}>
                      <Editor
@@ -120,7 +131,15 @@ export const Program1 = () => {
                      />
                      <i className="fas fa-long-arrow-alt-right"></i></a>
                </div>
-               <div className={`${Program1Css['service-item']}  ${Program1Css['fade-in']}`} style={{ height: `auto` }}>
+               <div style={(showPopup1) ?   { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground1(color.hex);
+                    }}
+                />
+            </div>
+               <div style={{ background: currentBackground2}} className={`${Program1Css['service-item']}  ${Program1Css['fade-in']}`} onClick={() => setShowPopup2(state => !state)}>
                   <div className={`${Program1Css.bar}`}></div>
                   <div className={`${Program1Css.item}`}>
                      <Editor
@@ -194,7 +213,15 @@ export const Program1 = () => {
                      />
                      <i className="fas fa-long-arrow-alt-right"></i></a>
                </div>
-               <div className={`${Program1Css['service-item']}  ${Program1Css['fade-in']}`} style={{ height: `auto` }}>
+               <div style={(showPopup2)   ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground2(color.hex);
+                    }}
+                />
+            </div>
+               <div style={{ background: currentBackground3}} className={`${Program1Css['service-item']}  ${Program1Css['fade-in']}`} onClick={() => setShowPopup3(state => !state)}>
                   <div className={`${Program1Css.bar}`}></div>
                   <div className={`${Program1Css.item}`}>
                      <Editor
@@ -239,7 +266,7 @@ export const Program1 = () => {
                         inline={true}
                         key='Program7'
                         initialValue= {`<p class="${Program1Css['pro-para']}">Resilience allows individuals to bounce back from setbacks and stressful situations.
-                        Without this quality,some people may develop increased risks associated with an insider threat.</p>`}
+                        Without this quality,some people may develop increased risks associated with an insider</p>`}
                         init={{
                            forced_root_block: "",
                            menubar: false,
@@ -267,8 +294,25 @@ export const Program1 = () => {
                      /> 
                       <i className="fas fa-long-arrow-alt-right"></i></a>
                </div>
+               <div style={(showPopup3) ?  { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground3(color.hex);
+                    }}
+                />
+            </div>
             </div>
          </section>
+         </div>
+         <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                <GithubPicker
+                    triangle="top-right"
+                    onChangeComplete={(color) => {
+                        setCurrentBackground(color.hex);
+                    }}
+                />
+            </div>
       </>
    )
 }
