@@ -63,23 +63,23 @@ export const Service1 = () => {
               }}
             />
           </h1>
-         
+
           {/* <p className={`${Service1Css.description}`}> */}
-            <Editor
-              onInit={(evt, editor) => editorRef.current = editor}
-              inline={true}
-              key='Service4'
-              initialValue= {`<p class="${Service1Css.description}">Our bodyguards are strong men and professionals who served in
+          <Editor
+            onInit={(evt, editor) => editorRef.current = editor}
+            inline={true}
+            key='Service4'
+            initialValue={`<p class="${Service1Css.description}">Our bodyguards are strong men and professionals who served in
               military forces.</p>`}
-              init={{
-                forced_root_block: "",
-                menubar: false,
-                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                  'alignright alignjustify | fontselect',
-                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-              }}
-            />
+            init={{
+              forced_root_block: "",
+              menubar: false,
+              toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                'alignright alignjustify | fontselect',
+              fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+              font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+            }}
+          />
           {/* </p> */}
 
           <a style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`} href={2}
@@ -123,23 +123,23 @@ export const Service1 = () => {
             />
           </h1>
           {/* <p className={`${Service1Css.description}`}> */}
-            <Editor
-              onInit={(evt, editor) => editorRef.current = editor}
-              inline={true}
-              key='Service6'
-              initialValue={`<p class="${Service1Css.description}">Settle a guard house behind your facility and we'll monitor the
+          <Editor
+            onInit={(evt, editor) => editorRef.current = editor}
+            inline={true}
+            key='Service6'
+            initialValue={`<p class="${Service1Css.description}">Settle a guard house behind your facility and we'll monitor the
               activity around the house.</p>`}
-              init={{
-                forced_root_block: "",
-                menubar: false,
-                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                  'alignright alignjustify | fontselect',
-                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-              }}
-            />
+            init={{
+              forced_root_block: "",
+              menubar: false,
+              toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                'alignright alignjustify | fontselect',
+              fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+              font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+            }}
+          />
 
-         {/*  </p> */}
+          {/*  </p> */}
 
           <a style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`} href={2}
           >
@@ -180,43 +180,43 @@ export const Service1 = () => {
               }}
             />
           </h1>
-         
+
           {/* <p className={`${Service1Css.description}`}> */}
           <Editor
-          onInit={(evt, editor) => editorRef.current = editor}
-          inline={true}
-          key='Service9'
-          initialValue={`<p class="${Service1Css.description}">our strong men and professionals will do 24/7 security surveillance
+            onInit={(evt, editor) => editorRef.current = editor}
+            inline={true}
+            key='Service9'
+            initialValue={`<p class="${Service1Css.description}">our strong men and professionals will do 24/7 security surveillance
           of your house with focus .</p>`}
-          init={{
-            forced_root_block: "",
-               menubar: false,
-            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-              'alignright alignjustify | fontselect',
-            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-          }}
-        />
+            init={{
+              forced_root_block: "",
+              menubar: false,
+              toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                'alignright alignjustify | fontselect',
+              fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+              font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+            }}
+          />
           {/* </p> */}
 
           <a style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`} href={2}
           >
             <Editor
-          onInit={(evt, editor) => editorRef.current = editor}
-          inline={true}
-          key='Service10'
-          initialValue="Sign Up"
-          init={{
-            forced_root_block: "",
-               menubar: false,
-            toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-              'alignright alignjustify | fontselect',
-            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-          }}
-        />
-         <i className={`${Service1Css['fas fa-long-arrow-alt-right']}`}></i
-          ></a>
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Service10'
+              initialValue="Sign Up"
+              init={{
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+            <i className={`${Service1Css['fas fa-long-arrow-alt-right']}`}></i
+            ></a>
         </div>
       </div>
 
