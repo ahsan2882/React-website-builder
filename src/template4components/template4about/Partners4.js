@@ -21,8 +21,46 @@ export default function Partners4({ showPopup, overSection }) {
             <section className={`${Partner4Css.accwrap}`}>
                 <div style={{ background: currentBackground, maxWidth: "74rem;" }} className={`${Partner4Css['text-2']}`}>
                     {/* <img src="https://i.ibb.co/8crhHN4/client5.png" alt="client5" border="0"> */}
-                    <p>  Collaboration</p>
-                    <h1> Our Partners</h1>
+                    {/* <p>  Collaboration</p> */}
+                    <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='abouted4'
+                        tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
+                        initialValue={` <p>Collaboration</p>`}
+                        init={{
+                            plugins: [
+                                "link"
+                            ],
+                            forced_root_block: "",
+                            menubar: false,
+                            toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | fontselect',
+                            fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                            font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                        }}
+                    />
+                    {/* <h1> Our Partners</h1> */}
+                    <h1>
+                        <Editor
+                            onInit={(evt, editor) => editorRef.current = editor}
+                            inline={true}
+                            key='abouted4'
+                            tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
+                            initialValue="Our Partners"
+                            init={{
+                                plugins: [
+                                    "link"
+                                ],
+                                forced_root_block: "",
+                                menubar: false,
+                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                    'alignright alignjustify | fontselect | lineheight',
+                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                            }}
+                        />
+                    </h1>
                     <div style={{ background: currentBackground1 }} className={`${Partner4Css.row3} relative`} onClick={() => setShowPopup1((state) => !state)} onMouseLeave={() => setShowPopup1(false)}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
