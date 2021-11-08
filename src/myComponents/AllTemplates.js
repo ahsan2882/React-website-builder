@@ -79,6 +79,10 @@ import Guardhousedescription from '../template2components/template2ServiceCompon
 import Servillancebanner from '../template2components/template2ServiceComponents/247surveillance/SurveillanceBanner'
 import ServillanceDescription from '../template2components/template2ServiceComponents/247surveillance/ServillanceDescription'
 import HeroSection3 from "../template3components/HeroSection3";
+import VisionAbout from "../template4components/template4about/VisionAbout";
+import AboutServices from "../template4components/template4about/AboutServices";
+import PolicyAbout from "../template4components/template4about/PolicyAbout";
+import Partners4 from "../template4components/template4about/Partners4";
 
 export const templateComponents = {
     template1Components: [
@@ -219,7 +223,7 @@ export const templateComponents = {
         {
             groupName: "about",
             pageName: "About",
-            pageSections: [Header4, Navigation4, Services4]
+            pageSections: [Header4, Navigation4, VisionAbout, AboutServices, PolicyAbout, OurGuards4, Partners4, Pricing4, Subscribe4, FooterContact4, BottomFooter4]
         },
         {
             groupName: "contact",
