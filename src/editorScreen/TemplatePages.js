@@ -9,7 +9,15 @@ const pages = {
         {
             "groupName": "About",
             "subpages" :["About"]
-        }
+        },
+        {
+            "groupName": "Services",
+            "subpages" :["Static Security", "Mobile Patrolling", "CCTV Monitoring", "Lock & Unlock", "Vacant Unit Checks", "Technology Product", "Manned Guarding", "Support & Management", "Event Security", "Guard House"]
+        },
+        {
+            "groupName": "Contact",
+            "subpages" :["Contact"]
+        },
     ],
     "template2pages": 
         // navbar2.map((item) => {
@@ -45,6 +53,14 @@ const pages = {
             "groupName": "Home",
             "subpages": ["Home"]
         },
+        {
+            "groupName": "About",
+            "subpages": ["About"]
+        },
+        {
+            "groupName": "Contact",
+            "subpages": ["Contact"]
+        },
     ],
     "template4pages": [
         {
@@ -52,13 +68,14 @@ const pages = {
             "subpages": ["Home"]
         },
         {
-            "groupName": "Contact",
-            "subpages": ["Contact"]
-        },
-        {
             "groupName": "About",
             "subpages": ["About"]
         },
+        {
+            "groupName": "Contact",
+            "subpages": ["Contact"]
+        },
+        
     ],
 }
 export default pages;
