@@ -19,7 +19,7 @@ export default function TextEditor() {
                         ],
                         toolbar: 'bold italic backcolor | alignleft aligncenter ' +
                             'alignright alignjustify |',
-                        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                        'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
                     }}
                 />
                 <Editor
@@ -35,7 +35,7 @@ export default function TextEditor() {
                         ],
                         toolbar: 'bold italic backcolor | alignleft aligncenter ' +
                             'alignright alignjustify |',
-                        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                        'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
                     }}
                 />
             </div>

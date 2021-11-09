@@ -36,7 +36,7 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
         readMores[inde].classList.add("hidden")
         inde++
     }
-    console.log(readMores)
+    // console.log(readMores)
     const temp = templateNum;
     useEffect(() => {
         let filename = "";
@@ -57,7 +57,7 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
                 setfilename("index.html")
             }
             else {
-                console.log(templatePage)
+                // console.log(templatePage)
                 filename = String(templatePage).toLowerCase().replace("/", "").replace(" &", "").replace(" ", "-").concat(".html")
                 setfilename(filename);
             }
@@ -91,20 +91,22 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
     }, [temp, templatePage, setfilename])
     useEffect(() => {
 
-        setDisplayDevice(true)
-        let htmlString = getHTMLData()
-        let cssString = getCSSData()
-        let compressed = lz.encodeBase64(lz.compress(htmlString))
-        setToSave({
-            filename: fileName,
-            templateID: curTemplate,
-            templateData: compressed
-        })
-        setFileData({
-            html: `${htmlString}`,
-            css: `${cssString}`
-        })
-        setFileName(fileName)
+        if (saveClicked) {
+            setDisplayDevice(true)
+            let htmlString = getHTMLData()
+            let cssString = getCSSData()
+            let compressed = lz.encodeBase64(lz.compress(htmlString))
+            setToSave({
+                filename: fileName,
+                templateID: curTemplate,
+                templateData: compressed
+            })
+            setFileData({
+                html: `${htmlString}`,
+                css: `${cssString}`
+            })
+            setFileName(fileName)
+        }
 
     }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData, setDisplayDevice, fileName, setFileName])
     
