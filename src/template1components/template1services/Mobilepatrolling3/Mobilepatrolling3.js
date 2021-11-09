@@ -3,12 +3,12 @@ import Mobilepatrolling3Css from '../Mobilepatrolling3/Mobilepatrolling3.module.
 import Img1 from '../../../assets/template1images/wavef1.png'
 import Img2 from '../../../assets/template1images/services22.jpg'
 import { Editor } from '@tinymce/tinymce-react';
-
-export default function Mobilepatrolling3() {
+import Navbar1 from '../../Navbar1';
+export default function Mobilepatrolling3({displayDevice, linksfunc}) {
     const editorRef = useRef(null);
     return (
         <>
-           
+           <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
            <section className={ Mobilepatrolling3Css['services-sec']}>
 
 <div className={`${ Mobilepatrolling3Css['containers']} ${ Mobilepatrolling3Css['grid-contact']}`}>
