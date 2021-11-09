@@ -83,6 +83,28 @@ import VisionAbout from "../template4components/template4about/VisionAbout";
 import AboutServices from "../template4components/template4about/AboutServices";
 import PolicyAbout from "../template4components/template4about/PolicyAbout";
 import Partners4 from "../template4components/template4about/Partners4";
+// import AboutAccredi from "../template4components/template4about/AboutAccredi";
+import Form from "../template4components/template4contact/Form";
+import Feedback from '../template4components/template4contact/Feedback'
+import Navbar3 from "../template3components/Navbar3";
+import HomeAbout from "../template1components/Template1Aboutcomponents/HomeAbout";
+import Experince1 from '../template1components/Template1Aboutcomponents/Experince1'
+import ProgramAbout from "../template1components/Template1Aboutcomponents/ProgramAbout";
+import Company1 from "../template1components/Template1Aboutcomponents/Company1";
+import Advantage from '../template1components/Template1Aboutcomponents/Advantage'
+import Partner from "../template1components/Template1Aboutcomponents/Partner";
+import Staticsecurity from '../template1components/template1services/Staticsecurity/Staticsecurity'
+import Mobilepatrolling3 from "../template1components/template1services/Mobilepatrolling3/Mobilepatrolling3";
+import Cctvmonetoring3 from "../template1components/template1services/Cctvmonetoring/Cctvmonetoring3";
+import Lockandunlock from "../template1components/template1services/lock & unlock3/Lockandunlock";
+import Vacantunitcheck from "../template1components/template1services/Vacant unit check/Vacantunitcheck";
+import Technologyproduct3 from "../template1components/template1services/technologyproduct/Technologyproduct3";
+import Mannedguarding from '../template1components/template1services/Manned Guarding3/Mannedguarding'
+import SupportandManagment from "../template1components/template1services/SupportandManagment/SupportandManagment";
+import Eventsecurity3 from '../template1components/template1services/Event Security/Eventsecurity3'
+import Contact3banner from '../template3components/template3Contact/Contact3banner'
+import Contact3form from '../template3components/template3Contact/Contact3form'
+import Contact3feedback from '../template3components/template3Contact/Contact3feedback'
 
 export const templateComponents = {
     template1Components: [
@@ -94,7 +116,52 @@ export const templateComponents = {
         {
             groupName: "about",
             pageName: "About",
-            pageSections: [Header1]
+            pageSections: [HomeAbout, Experince1, ProgramAbout, Company1, Advantage, Prizing1, Guard1, Partner, Footer1]
+        },
+        {
+            groupName: "services",
+            pageName: "Static Security",
+            pageSections: [Staticsecurity, Footer1]
+        },
+        {
+            groupName: "services",
+            pageName: "Mobile Patrolling",
+            pageSections: [Mobilepatrolling3, Footer1]
+        },
+        {
+            groupName: "services",
+            pageName: "CCTV Monitoring",
+            pageSections: [Cctvmonetoring3, Footer1]
+        },
+        {
+            groupName: "services",
+            pageName: "Lock & Unlock",
+            pageSections: [Lockandunlock, Footer1]
+        },
+        {
+            groupName: "services",
+            pageName: "Vacant Unit Checks",
+            pageSections: [Vacantunitcheck, Footer1]
+        },
+        {
+            groupName: "services",
+            pageName: "Technology Product",
+            pageSections: [Technologyproduct3, Footer1]
+        },
+        {
+            groupName: "services",
+            pageName: "Manned Guarding",
+            pageSections: [Mannedguarding, Footer1]
+        },
+        {
+            groupName: "services",
+            pageName: "Support & Management",
+            pageSections: [SupportandManagment, Footer1]
+        },
+        {
+            groupName: "services",
+            pageName: "Event Security",
+            pageSections: [Eventsecurity3, Footer1]
         }
     ],
     // [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
@@ -206,7 +273,17 @@ export const templateComponents = {
         {
             groupName: "home",
             pageName: "Home",
-            pageSections: [HeroSection3, Services3, Guard3, Latestnews3, Ourprograms3, About3, Accrediation3, Footer3]
+            pageSections: [Navbar3, HeroSection3, Services3, Guard3, Latestnews3, Ourprograms3, About3, Accrediation3, Footer3]
+        },
+        {
+            groupName: "about",
+            pageName: "About",
+            pageSections: [Navbar3, HeroSection3, Services3, Guard3, Latestnews3, Ourprograms3, About3, Accrediation3, Footer3]
+        },
+        {
+            groupName: "contact",
+            pageName: "Contact",
+            pageSections: [Navbar3, Contact3banner, Contact3form, Contact3feedback, Footer3]
         }
     ],
     // {
@@ -223,12 +300,12 @@ export const templateComponents = {
         {
             groupName: "about",
             pageName: "About",
-            pageSections: [Header4, Navigation4, VisionAbout, AboutServices, PolicyAbout, OurGuards4, Partners4, Pricing4, Subscribe4, FooterContact4, BottomFooter4]
+            pageSections: [Header4, Navigation4, VisionAbout, AboutServices, PolicyAbout, OurGuards4, Partners4, Pricing4, Accreditation4, Subscribe4, FooterContact4, BottomFooter4]
         },
         {
             groupName: "contact",
             pageName: "Contact",
-            pageSections: [Header4, Navigation4, AboutUs4]
+            pageSections: [Header4, Navigation4, AboutUs4, Form, Feedback, Subscribe4, FooterContact4, BottomFooter4]
         },
     ]
     // {
