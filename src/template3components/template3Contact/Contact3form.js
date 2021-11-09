@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
-import Contact3formCss from '../template3contactcomponents/Contact3form.module.css'
+import Contact3formCss from './Contact3form.module.css'
 export default function Contact3form() {
     const editorRef = useRef(null);
     return (
