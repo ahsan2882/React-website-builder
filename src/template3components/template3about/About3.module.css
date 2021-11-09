@@ -20,4 +20,10 @@
   .headM{
     font-size: 2rem;
   }
-  
+  @media (max-width: 500px) {
+    .head1 {
+      font-size: 1rem;
+      color:white;
+    }
+   
+    }
