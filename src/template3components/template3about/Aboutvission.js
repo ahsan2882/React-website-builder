@@ -87,7 +87,7 @@ export default function Aboutvission({ showPopup, overSection }) {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Service4'
-                                initialValue={` <img src=${Img1} alt=""/>`}
+                                initialValue={` <img src=${Img1} alt="news1"/> `}
                                 init={
                                     {
                                         forced_root_block: "",
