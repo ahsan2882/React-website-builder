@@ -34,7 +34,7 @@
   justify-content: space-around;
 }
 
-@media(max-width:900px) {
+@media(max-width:600px) {
   .row-1 {
     flex-direction: column;
     margin: 8rem 0 2rem;
