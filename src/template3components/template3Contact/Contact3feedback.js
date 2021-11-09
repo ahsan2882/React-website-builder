@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
-import Feedback3Css from '../template3contactcomponents/Contact3feedback.module.css'
-import Img1 from '../template3contactcomponents/news1.jpg'
+import Feedback3Css from './Contact3feedback.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Contact3feedback() {
     const editorRef = useRef(null);
@@ -9,7 +8,7 @@ export default function Contact3feedback() {
             <div className={Feedback3Css['container-main']}>
                 <div className={Feedback3Css['feedback-wrap']}>
                     <div className={Feedback3Css['feed-img']}>
-                        <img src={Img1} alt="news1" />
+                        <img src="https://i.ibb.co/tJdb2JZ/news1.png" alt="news1" />
                     </div>
                     <div className={Feedback3Css['feed-content']}>
                         <section className={Feedback3Css['heading-sec']}>
