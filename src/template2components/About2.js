@@ -137,7 +137,7 @@ export const About2 = ({ displayDevice, showPopup, overSection }) => {
 
 
 
-                <button href={2} className={`${About2moduleCss.btnb}`}>
+                <button className={`${About2moduleCss.btnb}`}>
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
