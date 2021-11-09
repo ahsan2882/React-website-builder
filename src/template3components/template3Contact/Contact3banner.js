@@ -1,6 +1,6 @@
 import React from 'react'
-import ContactBannerCss from '../template3contactcomponents/Contact3banner.module.css'
-import Img1 from '../template3contactcomponents/gPeonv.png'
+import ContactBannerCss from './Contact3banner.module.css'
+import Img1 from '../../assets/template3images/gPeonv.png'
 export default function Contact3banner() {
     return (
         <section className={ContactBannerCss['header-img-serv']}>
