@@ -3,11 +3,12 @@ import SupportManagment3Css from '../SupportandManagment/Supportmanagment.module
 import Img1 from '../../../assets/template1images/wavef1.png'
 import Img2 from '../../../assets/template1images/services66.jpg'
 import { Editor } from '@tinymce/tinymce-react';
-
-export default function SupportandManagment() {
+import Navbar1 from '../../Navbar1';
+export default function SupportandManagment({displayDevice, linksfunc}) {
     const editorRef = useRef(null);
     return (
         <>
+        <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
         <section className={SupportManagment3Css['services-sec']}>
 
             <div className={`${SupportManagment3Css['containers']} ${SupportManagment3Css['grid-contact']}`}>
