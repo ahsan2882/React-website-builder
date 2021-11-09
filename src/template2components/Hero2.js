@@ -4,7 +4,7 @@ import { Editor } from '@tinymce/tinymce-react';
 
 import Hero2moduleCss from './Hero2.module.css'
 import { Navbar2 } from './Navbar2';
-export const Hero2 = ({ displayDevice, showPopup, overSection }) => {
+export const Hero2 = ({ displayDevice, showPopup, overSection, linksfunc }) => {
     const [currentBackgroundColor, setCurrentBackgroundColor] = useState("#c0272d");
     const [backgroundType, setBackgroundType] = useState("color");
 
@@ -99,12 +99,12 @@ export const Hero2 = ({ displayDevice, showPopup, overSection }) => {
     )
 }
 
-const Hero2ColorComponent = ({ color, displayDevice }) => {
+const Hero2ColorComponent = ({ color, displayDevice, linksfunc }) => {
     const editorRef = useRef(null);
     return (
         <>
             <section style={{ background: color }} className={`${Hero2moduleCss.heroSection} relative`}>
-                <Navbar2 displayDevice={displayDevice} />
+                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
                 <img src="https://i.ibb.co/VwB7mhG/Path-7.png" alt="Pah 7" className="w-full h-full" />
                 {/* <img src="https://i.ibb.co/9Wt8w45/guarg.png" alt="guarg" border="0">*/}
                 <section className="absolute bottom-8 right-1/4 z-10">
@@ -171,13 +171,13 @@ const Hero2ColorComponent = ({ color, displayDevice }) => {
 }
 
 
-const Hero2ImageComponent = ({ displayDevice }) => {
+const Hero2ImageComponent = ({ displayDevice, linksfunc }) => {
     const editorRef = useRef(null);
     // <img src="https://i.ibb.co/r786FyQ/guard1.png" alt="guard1" border="0">
     return (
         <>
             <section className={`relative ${Hero2moduleCss.heroSection}`}>
-                <Navbar2 displayDevice={displayDevice} />
+                <Navbar2 displayDevice={displayDevice} linksfunc={ linksfunc}/>
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
