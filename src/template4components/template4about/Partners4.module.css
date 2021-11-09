@@ -1,25 +1,39 @@
 .accwrap {
     width: 100%;
 }
+
 .row3 {
     display: flex;
     background: #00c1cf;
-    height: 20rem;
+
     align-items: center;
     justify-content: space-around;
-     width: 100%;
+    width: 100%;
 
 }
+
 .text-2 {
     text-align: center;
     background: black;
 }
+
 .text-2 h1 {
     color: #00c1cf;
     font-size: 3rem;
     font-weight: 700;
 }
+
 .text-2 p {
     color: grey;
     font-weight: 500;
+}
+
+@media (max-width:900px) {
+    .row3 {
+        flex-direction: column;
+        margin: 8rem 0 2rem;
+
+
+
+    }
 }
