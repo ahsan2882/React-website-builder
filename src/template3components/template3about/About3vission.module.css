@@ -63,11 +63,10 @@ html {
   
   .vision-img img {
     width: 1050px;
-  
     border: 5px solid white;
   }
   .vision-wrap {
-display: flex;
+   display: flex;
     justify-content: space-between;
   }
   .pragraph-vision p {
@@ -78,5 +77,19 @@ display: flex;
   .container-main {
     padding: 33px  167px !important;
     
-
 }
+
+@media (max-width: 500px) {
+  .vision-wrap {
+    display: flex;
+    flex-wrap: wrap;
+     justify-content: space-between;
+   }
+   .container-main {
+    padding: 33px 20px !important;
+    
+}
+  }
+
+
+
