@@ -3,11 +3,12 @@ import Eventsecurity3Css from '../Event Security/Eventsecurity.module.css'
 import Img1 from '../../../assets/template1images/wavef1.png'
 import Img2 from '../../../assets/template1images/servicesbg.jpg'
 import { Editor } from '@tinymce/tinymce-react';
-
-export default function Eventsecurity3() {
+import Navbar1 from '../../Navbar1';
+export default function Eventsecurity3({displayDevice, linksfunc}) {
     const editorRef = useRef(null);
     return (
         <>
+        <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
         <section className={Eventsecurity3Css['services-sec']}>
 
             <div className={`${Eventsecurity3Css['containers']} ${Eventsecurity3Css['grid-contact']}`}>
