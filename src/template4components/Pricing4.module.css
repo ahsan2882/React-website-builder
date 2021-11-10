@@ -103,12 +103,13 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .containerMainPrice {
         padding: 1px;
     }
-    .cardsWrapper{
-        flex-wrap: wrap;
+
+    .cardsWrapper {
+        flex-direction: column;
     }
 }
 .price-btn {
