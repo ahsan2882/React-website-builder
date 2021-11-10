@@ -27,7 +27,7 @@
     "test": "craco --max_old_space_size=4096 test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:9000",
+  "proxy": "https://builder-server-express.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
