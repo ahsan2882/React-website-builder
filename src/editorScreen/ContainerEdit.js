@@ -91,25 +91,25 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
     }, [temp, templatePage, setfilename])
     useEffect(() => {
 
-        if (saveClicked) {
-            setDisplayDevice(true)
-            let htmlString = getHTMLData()
-            let cssString = getCSSData()
-            let compressed = lz.encodeBase64(lz.compress(htmlString))
-            setToSave({
-                filename: fileName,
-                templateID: curTemplate,
-                templateData: compressed
-            })
-            setFileData({
-                html: `${htmlString}`,
-                css: `${cssString}`
-            })
-            setFileName(fileName)
-        }
+        // if (saveClicked) {
+        setDisplayDevice(true)
+        let htmlString = getHTMLData()
+        let cssString = getCSSData()
+        let compressed = lz.encodeBase64(lz.compress(htmlString))
+        setToSave({
+            filename: fileName,
+            templateID: curTemplate,
+            templateData: compressed
+        })
+        setFileData({
+            html: `${htmlString}`,
+            css: `${cssString}`
+        })
+        setFileName(fileName)
+        // }
 
     }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData, setDisplayDevice, fileName, setFileName])
-    
+
     const getHTMLData = () => {
 
         let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
