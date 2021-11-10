@@ -2,7 +2,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react';
 import Nav4Css from './Navigation4.module.css'
 
-export default function Navigation4({ displayDevice, linksfunc }) {
+export default function Navigation4({ displayDevice,linksfunc }) {
     const [activeHamburger, setActiveHamburger] = useState(false);
     // const [navbarOpt, setNavOpt] = useState([]);
     const toggleHamburger = () => {
@@ -36,7 +36,7 @@ export default function Navigation4({ displayDevice, linksfunc }) {
                     <nav>
                         <ul className={displayDevice ? `${Nav4Css.navBar}` : `${Nav4Css.navBarM}`} style={(!displayDevice && activeHamburger) ? {left: "0"} : null}>
                             <li className={`${Nav4Css.navBarLink} hover:text-black`}>{ linksfunc ? <a href="index.html">HOME</a> : <>HOME</>}</li>
-                            <li className={`${Nav4Css.navBarLink} hover:text-black`}>ABOUT US</li>
+                            <li className={`${Nav4Css.navBarLink} hover:text-black`}> { linksfunc ? <a href="about.html">ABOUT US</a> : <> ABOUT US</>}ABOUT US</li>
                             <li className={`${Nav4Css.navBarLink} hover:text-black ${Nav4Css.dropdownServiceListItem}`}>SERVICES
                                 <ul className={`${Nav4Css.dropdownServicesContent} list-none p-0 absolute`}>
                                     <li className={`${Nav4Css.servicesLinks} flex mt-8 mx-4 mb-0`}>
@@ -99,7 +99,7 @@ export default function Navigation4({ displayDevice, linksfunc }) {
                                 </ul>
                             </li>
                             <li className={`${Nav4Css.navBarLink} hover:text-black`}>
-                                <button className="text-white">CONTACT US</button>
+                                <button className="text-white"> { linksfunc ? <a href="contact.html"> CONTACT Us</a> : <>CONTACT Us</>}</button>
                             </li>
                         </ul>
                         <section className={displayDevice ? `${Nav4Css.hamburger}` : (activeHamburger ? `${Nav4Css.hamburgerMobile} ${Nav4Css.active}` : `${Nav4Css.hamburgerMobile}`)} onClick={() => toggleHamburger()}>

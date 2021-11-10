@@ -36,31 +36,21 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                 <i className={`${Navbar1moduleCss['fas fa-times']}`}></i>
               </div>
               <ul className={`${Navbar1moduleCss.menus}`}>
-                <li><button className={`${Navbar1moduleCss.line}`} >Home</button></li>
-                <li><button className={`${Navbar1moduleCss.line}`} >About</button>
-                  <ul className={`${Navbar1moduleCss['sub-menu']}`}>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Our Vision</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Our Experience</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Our Policies</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Our Prices</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Our Accreditations</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Our Team</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Our Partners</button></li>
-
-                  </ul>
-
-                </li>
+                <li><button className={`${Navbar1moduleCss.line}`}> Home</button></li>
+                <li><button className={`${Navbar1moduleCss.line}`} >{linksfunc ? <a href="about.html">ABOUT</a> : <>ABOUT</>}</button></li>
                 <li><button className={`${Navbar1moduleCss.line}`}>Services</button>
                   <ul className={`${Navbar1moduleCss['sub-menu']}`}>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Static Security</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Mobile Patrolling</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >CCTV Monitoring</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Lock & unlock</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Vacant Unit Checks</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Technology Product</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Manned Guarding</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Support & Management</button></li>
-                    <li><button className={`${Navbar1moduleCss.pnt}`} >Event Security</button></li>
+                  <li>{linksfunc ? <a href="static-security.html">STATIC SECURITY</a> : <>STATIC SECURITY</>}</li>
+                                        <li>{linksfunc ? <a href="mobile-patrolling.html">MOBILE PATROLLING</a> : <>MOBILE PATROLLING</>}</li>
+                                        <li>{linksfunc ? <a href="cctv-monitoring.html">CCTV MONITORING</a> : <>CCTV MONITORING</>}</li>
+                                        <li>{linksfunc ? <a href="lock-unlock.html">LOCK & UNLOCK</a> : <>LOCK & UNLOCK</>}</li>
+                                        <li>{linksfunc ? <a href="vacant-unit-checks.html">VACANT UNIT CHECKS</a> : <>VACANT UNIT CHECKS</>}</li>
+                                        <li>{linksfunc ? <a href="technology-product.html">TECHNOLOGY PRODUCT</a> : <>TECHNOLOGY PRODUCT</>}</li>
+                                        <li>{linksfunc ? <a href="manned-guarding.html">MANNED GUARDING</a> : <>MANNED GUARDING</>}</li>
+                                        <li>{linksfunc ? <a href="support-management.html">SUPPORT & MANAGEMENT</a> : <>SUPPORT & MANAGEMENT</>}</li>
+                                        <li>{linksfunc ? <a href="event-security.html">EVENT SECURITY</a> : <>EVENT SECURITY</>}</li>
+                                        <li>{linksfunc ? <a href="guard-house.html">GUARD HOUSE</a> : <>GUARD HOUSE</>}</li>
+                                        <li>{linksfunc ? <a href="24-7-surveillance.html">24/7 SURVEILLANCE</a> : <>24/7 SURVEILLANCE</>}</li>
                   </ul>
                 </li>
 
