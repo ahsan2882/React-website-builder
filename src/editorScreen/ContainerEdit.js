@@ -145,12 +145,12 @@ export default function ContainerEdit({ templateNum, setFileName, setLinksfunc, 
             att.value = "true";
             vid.setAttributeNode(att)
         }
-        let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
-        htmlString = htmlString.replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+        let htmlStrings = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
+        htmlStrings = htmlStrings.replace(/&lt;/g, "<").replace(/&gt;/g, ">")
         // setLinksfunc(false);
-        console.log(htmlString)
+        console.log(htmlStrings)
         // console.log(linksfunc)
-        return htmlString;
+        return htmlStrings;
     }
     // function openModal() {
     //     setIsOpen(true);
@@ -165,19 +165,19 @@ export default function ContainerEdit({ templateNum, setFileName, setLinksfunc, 
     //     setIsOpen(false);
     // }
     const getCSSData = () => {
-        let cssString = ''
+        let cssStrings = ''
         let styleComponent = document.getElementsByTagName("style")
         // console.log(styleComponent.length)
         let i = 0
         while (i < styleComponent.length) {
-            cssString += styleComponent[i].innerHTML
+            cssStrings += styleComponent[i].innerHTML
             i++
         }
         // for (let style in styleComponent) {
         //     console.log(styleComponent[style], parseInt(style))
         //     // cssString += styleComponent[style].innerHTML
         // }
-        return cssString;
+        return cssStrings;
     }
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
