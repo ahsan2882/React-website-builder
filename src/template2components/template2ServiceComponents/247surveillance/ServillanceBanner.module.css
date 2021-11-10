@@ -1,22 +1,30 @@
-.header-img-serv {
-    width: 100%;
-    height: 40vh;
-    background-position: center;
-    background-size: cover;
-  }
+.header-img-serv img {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
 
-  .head-img-text {
-    position: absolute;
-    top: 22%;
-    left: 15%;
-    z-index:2;
-  }
-  .dash {
-    border-top: dashed 3px white;
-  }
+.head-img-text {
+  position: absolute;
+  top: 22%;
+  left: 15%;
+  z-index: 2;
+}
+
+.dash {
+  border-top: dashed 3px white;
+}
+
+.head1 {
+  font-size: 4rem;
+}
+
+.headM {
+  font-size: 2rem;
+}
+
+@media (max-width:500px) {
   .head1 {
-    font-size: 4rem;
-  }
-  .headM{
     font-size: 2rem;
   }
+}
