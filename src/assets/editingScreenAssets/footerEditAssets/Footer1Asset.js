@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
-import logo from '../footerEditAssets/logo.png'
+// import logo from '../footerEditAssets/logo.png'
 
 export default function Footer1Asset() {
     const editorRef = useRef(null);
@@ -11,7 +11,7 @@ export default function Footer1Asset() {
                     <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
                         <button className="flex title-font font-medium items-center md:justify-start justify-center text-white">
 
-                            <img src={logo} alt="Header logo" />
+                            <img src="https://i.ibb.co/Xyt25vh/thefnflogo.png" alt="client 1" />
 
 
                         </button>

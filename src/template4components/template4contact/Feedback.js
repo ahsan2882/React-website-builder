@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import FeedbackmoduleCss from './Feedback.module.css'
-import img from './news3.jpg'
+// import img from './news3.jpg'
 import { GithubPicker } from 'react-color';
 
 import { Editor } from '@tinymce/tinymce-react';
@@ -17,11 +17,12 @@ export default function Feedback({ showPopup, overSection }) {
                 <section style={{ background: currentBackground }} className={`${FeedbackmoduleCss.feedback} ${FeedbackmoduleCss.container}`}>
 
                     {/* <img src={img} className="feedbackimg" alt="this is"/> */}
+                    {/* <img src="https://i.ibb.co/6Y2JjXp/news3.jpg" alt="news3" border="0"> */}
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='abouted1'
-                        initialValue={`<img  src="${img}" alt="about" class="${FeedbackmoduleCss.feedbackimg} filter drop-shadow-AHS w-96 h-80 object-cover"/>`}
+                        initialValue={`<img  src="https://i.ibb.co/6Y2JjXp/news3.jpg" alt="news3" class="${FeedbackmoduleCss.feedbackimg} filter drop-shadow-AHS w-96 h-80 object-cover"/>`}
                         init={{
                             forced_root_block: "",
                             menubar: false,

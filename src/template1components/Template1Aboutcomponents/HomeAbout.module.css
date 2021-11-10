@@ -1,5 +1,5 @@
 .services-sec {
-    background-image: url(./head2.jpg);
+    background-image: url("https://i.ibb.co/vXJvB5q/head2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -10,7 +10,7 @@
     background-position: center;
   }
   .contentserv {
-    background-image: url(./headingblob.png);
+    background-image: url("https://i.ibb.co/Vg37Gp9/headingblob.png");
     background-size: cover;
     background-position: 0%;
     opacity: 80%;

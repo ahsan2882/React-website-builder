@@ -2,7 +2,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react';
 import Nav4Css from './Navigation4.module.css'
 
-export default function Navigation4({ displayDevice }) {
+export default function Navigation4({ displayDevice, linksfunc }) {
     const [activeHamburger, setActiveHamburger] = useState(false);
     // const [navbarOpt, setNavOpt] = useState([]);
     const toggleHamburger = () => {
@@ -35,7 +35,7 @@ export default function Navigation4({ displayDevice }) {
                     />
                     <nav>
                         <ul className={displayDevice ? `${Nav4Css.navBar}` : `${Nav4Css.navBarM}`} style={(!displayDevice && activeHamburger) ? {left: "0"} : null}>
-                            <li className={`${Nav4Css.navBarLink} hover:text-black`}>HOME</li>
+                            <li className={`${Nav4Css.navBarLink} hover:text-black`}>{ linksfunc ? <a href="index.html">HOME</a> : <>HOME</>}</li>
                             <li className={`${Nav4Css.navBarLink} hover:text-black`}>ABOUT US</li>
                             <li className={`${Nav4Css.navBarLink} hover:text-black ${Nav4Css.dropdownServiceListItem}`}>SERVICES
                                 <ul className={`${Nav4Css.dropdownServicesContent} list-none p-0 absolute`}>

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
-import Test from '../assets/template1images/testiEdit.png'
+// import Test from '../assets/template1images/testiEdit.png'
 import Testimonial1Css from './Testimonials1.module.css'
 import { GithubPicker } from 'react-color';
 
@@ -111,7 +111,7 @@ export const Testimonials1 = ({ showPopup, overSection }) => {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Testimal6'
-            initialValue={`<img  src=${Test} alt="about" class="w-96 h-96 object-cover"/>`}
+            initialValue={`<img  src="https://i.ibb.co/HTpZQ9p/testi-Edit.png" alt="testi-Edit" class="w-96 h-96 object-cover"/>`}
             init={{
               forced_root_block: "",
               menubar: false,

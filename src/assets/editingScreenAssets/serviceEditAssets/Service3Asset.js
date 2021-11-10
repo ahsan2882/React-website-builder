@@ -1,8 +1,8 @@
 import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
-import Service3 from './logo1.png'
-import Service4 from './logo2.png'
-import Service5 from './logo3.png'
+// import Service3 from './logo1.png'
+// import Service4 from './logo2.png'
+// import Service5 from './logo3.png'
 
 
 export default function Service3Asset() {
@@ -75,7 +75,7 @@ export default function Service3Asset() {
                                     tinymceScriptSrc={
                                         process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                                     }
-                                    initialValue={`<img alt="content" class="object-cover object-center h-full w-full" src=${Service3} />`}
+                                    initialValue={`<img class="object-cover object-center h-full w-full" src="https://i.ibb.co/y68gwmt/logo-security-red-black.png" alt="logo-security-red-black" />`}
                                     init={{
                                         menubar: false,
                                         plugins: [
@@ -169,7 +169,7 @@ export default function Service3Asset() {
                                     tinymceScriptSrc={
                                         process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                                     }
-                                    initialValue={`<img alt="content" class="object-cover object-center h-full w-full" src=${Service4} />`}
+                                    initialValue={`<img class="object-cover object-center h-full w-full" src="https://i.ibb.co/DpyxY8F/logo2.png" alt="logo2" />`}
                                     init={{
                                         menubar: false,
                                         plugins: [
@@ -263,7 +263,7 @@ export default function Service3Asset() {
                                     tinymceScriptSrc={
                                         process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                                     }
-                                    initialValue={`<img alt="content" class="object-cover object-center h-full w-full" src=${Service5} />`}
+                                    initialValue={`<img class="object-cover object-center h-full w-full" src="https://i.ibb.co/5LDWfPq/logo3.png" alt="logo3" />`}
                                     init={{
                                         menubar: false,
                                         plugins: [

@@ -1,5 +1,5 @@
 import contactusAss1 from '../assets/editingScreenAssets/contactusEditAssets/contactus1.png'
-import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/contactus2.png'
+// import contactusAss2 from '../assets/editingScreenAssets/contactusEditAssets/contactus2.png'
 import contactusAss3 from '../assets/editingScreenAssets/contactusEditAssets/contactus3.png'
 import contactusAss4 from '../assets/editingScreenAssets/contactusEditAssets/contactus4.png'
 import contactusAss5 from '../assets/editingScreenAssets/contactusEditAssets/contactus5.jpg'
@@ -54,11 +54,11 @@ import accreAss2 from '../assets/editingScreenAssets/accreEditAssets/accreditati
 import accreAss3 from '../assets/editingScreenAssets/accreEditAssets/accreditation3.png'
 import accreAss4 from '../assets/editingScreenAssets/accreEditAssets/accreditation4.png'
 
-import sliderAss1 from '../assets/editingScreenAssets/sliderEditAssets/slider1.png'
-import sliderAss2 from '../assets/editingScreenAssets/sliderEditAssets/slider2.png'
-import sliderAss3 from '../assets/editingScreenAssets/sliderEditAssets/slider3.png'
-import sliderAss4 from '../assets/editingScreenAssets/sliderEditAssets/slider4.png'
-import sliderAss5 from '../assets/editingScreenAssets/sliderEditAssets/slider5.png'
+// import sliderAss1 from '../assets/editingScreenAssets/sliderEditAssets/slider1.png'
+// import sliderAss2 from '../assets/editingScreenAssets/sliderEditAssets/slider2.png'
+// import sliderAss3 from '../assets/editingScreenAssets/sliderEditAssets/slider3.png'
+// import sliderAss4 from '../assets/editingScreenAssets/sliderEditAssets/slider4.png'
+// import sliderAss5 from '../assets/editingScreenAssets/sliderEditAssets/slider5.png'
 
 export const sidebarAssets = [
     {
@@ -113,7 +113,7 @@ export const sidebarAssets = [
         assetName: 'contact',
         assets: [
             { imageName: contactusAss1, id: "contactus1" },
-            { imageName: contactusAss2, id: "contactus2" },
+            // { imageName: contactusAss2, id: "contactus2" },
             { imageName: contactusAss3, id: "contactus3" },
             { imageName: contactusAss4, id: "contactus4" },
             { imageName: contactusAss5, id: "contactus5" }
@@ -127,16 +127,16 @@ export const sidebarAssets = [
             { imageName: socialAss3, id: "social3" }
         ]
     },
-    {
-        assetName: 'sliders',
-        assets: [
-            { imageName: sliderAss1, id: "slider1" },
-            { imageName: sliderAss2, id: "slider2" },
-            { imageName: sliderAss3, id: "slider3" },
-            { imageName: sliderAss4, id: "slider4" },
-            { imageName: sliderAss5, id: "slider5" }
-        ]
-    },
+    // {
+    //     assetName: 'sliders',
+    //     assets: [
+    //         { imageName: sliderAss1, id: "slider1" },
+    //         { imageName: sliderAss2, id: "slider2" },
+    //         { imageName: sliderAss3, id: "slider3" },
+    //         { imageName: sliderAss4, id: "slider4" },
+    //         { imageName: sliderAss5, id: "slider5" }
+    //     ]
+    // },
     {
         assetName: 'pricing',
         assets: [

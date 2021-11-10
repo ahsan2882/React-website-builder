@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
-import serv1 from './serv-1.png'
-import serv2 from './serv-2.png'
-import serv3 from './serv-3.png'
+// import serv1 from './serv-1.png'
+// import serv2 from './serv-2.png'
+// import serv3 from './serv-3.png'
 import AdvantagemoduleCss from './Advantage.module.css'
 export default function Advantage({ showPopup, overSection }) {
   const [showPopup1, setShowPopup1] = useState(false);
@@ -63,7 +63,7 @@ export default function Advantage({ showPopup, overSection }) {
       <div style={{ background: currentBackground }} className={`${AdvantagemoduleCss['wrapper-flex']}`}>
         <div style={{ background: currentBackground1 }} className={`${AdvantagemoduleCss['container-services']}  ${AdvantagemoduleCss['fade-in']}`} onClick={() => setShowPopup1(state => !state)}>
           <div className={`${AdvantagemoduleCss['banner-img']}`}></div>
-          <img src={serv1} alt="profileimage" className={`${AdvantagemoduleCss['profile-img']}`}
+          <img src="https://i.ibb.co/9vkqXYh/serv-1.png" alt="serv-1" className={`${AdvantagemoduleCss['profile-img']}`}
           />
           <h1 className={`${AdvantagemoduleCss.name}`}>
             <Editor
@@ -139,7 +139,7 @@ export default function Advantage({ showPopup, overSection }) {
         <div style={{ background: currentBackground2 }} className={`${AdvantagemoduleCss['container-services']} ${AdvantagemoduleCss['fade-in']}`} onClick={() => setShowPopup2(state => !state)}>
           <div className={`${AdvantagemoduleCss['banner-img']}`}></div>
 
-          <img src={serv2} alt="profileimage" className={`${AdvantagemoduleCss['profile-img']}`}
+          <img src="https://i.ibb.co/FKwNMbn/serv-2.png" alt="serv-2" className={`${AdvantagemoduleCss['profile-img']}`}
           />
           <h1 className={`${AdvantagemoduleCss.name}`}>
             <Editor
@@ -217,7 +217,7 @@ export default function Advantage({ showPopup, overSection }) {
         <div style={{ background: currentBackground3 }} className={`${AdvantagemoduleCss['container-services']} ${AdvantagemoduleCss['fade-in']}`} onClick={() => setShowPopup3(state => !state)}>
           <div className={`${AdvantagemoduleCss['banner-img']}`}></div>
 
-          <img src={serv3} alt="profileImage" className={`${AdvantagemoduleCss['profile-img']}`}
+          <img src="https://i.ibb.co/mGs9gt3/serv-3.png" alt="serv-3" className={`${AdvantagemoduleCss['profile-img']}`}
           />
           <h1 className={`${AdvantagemoduleCss.name}`}>
             <Editor

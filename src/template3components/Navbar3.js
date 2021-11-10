@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 // import { GithubPicker } from 'react-color';
-import logo from '../assets/template3images/logo-security-red-black.png'
+// import logo from '../assets/template3images/logo-security-red-black.png'
 import Navbar3moduleCss from './Navbar3.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Navbar3({ displayDevice, linksfunc }) {
@@ -67,7 +67,7 @@ export default function Navbar3({ displayDevice, linksfunc }) {
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='abouted1'
-                                initialValue={`<img src="${logo}" alt="logo" class="w-20 h-20 object-cover"/>`}
+                                initialValue={`<img src="https://i.ibb.co/y68gwmt/logo-security-red-black.png" alt="logo-security-red-black" class="w-20 h-20 object-cover"/>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,

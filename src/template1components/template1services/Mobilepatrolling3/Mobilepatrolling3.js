@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Mobilepatrolling3Css from '../Mobilepatrolling3/Mobilepatrolling3.module.css'
-import Img1 from '../../../assets/template1images/wavef1.png'
-import Img2 from '../../../assets/template1images/services22.jpg'
+// import Img1 from '../../../assets/template1images/wavef1.png'
+// import Img2 from '../../../assets/template1images/services22.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1 from '../../Navbar1';
 export default function Mobilepatrolling3({ displayDevice, linksfunc }) {
@@ -85,7 +85,7 @@ export default function Mobilepatrolling3({ displayDevice, linksfunc }) {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='Static12'
-                            initialValue={`<img src=${Img2} alt="wavef1"w-96 h-72 object-cover"/>`}
+                            initialValue={`<img src="https://i.ibb.co/5kVNqfF/services22.jpg" alt="services22" class="w-96 h-72 object-cover"/>`}
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -105,7 +105,7 @@ export default function Mobilepatrolling3({ displayDevice, linksfunc }) {
                 </div>
             </section>
             <div className={Mobilepatrolling3Css['wave-services']}>
-                <img src={Img1} alt="" />
+                <img src="https://i.ibb.co/NL83nFf/wavef1.png" alt="wavef1" />
             </div>
             <section className={`${Mobilepatrolling3Css['sec-serv']} ${Mobilepatrolling3Css['desc-services']}`}>
                 <div className={Mobilepatrolling3Css.container}>

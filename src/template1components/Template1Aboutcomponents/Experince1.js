@@ -1,6 +1,6 @@
 import React from 'react'
 import ExpermoduleCss from './Experince1.module.css'
-import Service from './services11.jpg'
+// import Service from './services11.jpg'
 export default function Experince1() {
     return (
 <>
@@ -21,7 +21,7 @@ export default function Experince1() {
         
             </div>
             <div   className={`${ExpermoduleCss['service-img']}`}>
-                <img src={Service} alt="thi is "/>
+                        <img src="https://i.ibb.co/8zsQjgJ/services11.jpg" alt="services11"/>
             </div>
         
         </div>

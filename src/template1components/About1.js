@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import About1Css from './About1.module.css'
-import buss from '../assets/template1images/img-commited-to-business.png'
+// import buss from '../assets/template1images/img-commited-to-business.png'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 
@@ -112,7 +112,7 @@ export const About1 = ({ showPopup, overSection }) => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='About5'
-                initialValue={`<img src=${buss} alt="Temp1Img1" class="w-18/>`}
+                initialValue={`<img src="https://i.ibb.co/QM1wmBp/img-commited-to-business.png" alt="img-commited-to-business" class="w-18/>`}
                 init={
                   {
                     images_upload_handler: function (blobInfo, success, failure) {

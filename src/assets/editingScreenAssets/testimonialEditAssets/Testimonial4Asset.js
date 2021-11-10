@@ -1,7 +1,7 @@
 import React from 'react'
-import Img1 from '../testimonialEditAssets/1.png'
-import Img2 from '../testimonialEditAssets/2.png'
-import Img3 from '../testimonialEditAssets/3.png'
+// import Img1 from '../testimonialEditAssets/1.png'
+// import Img2 from '../testimonialEditAssets/2.png'
+// import Img3 from '../testimonialEditAssets/3.png'
 export default function Testimonial4Asset() {
 
 
@@ -23,7 +23,7 @@ export default function Testimonial4Asset() {
                                         </div>
                                         <div class="pl-6 pr-6 pt-10 relative h-64">
                                             <div class="h-16 w-16 rounded-full bg-cover border-4 border-white absolute top-0 right-0 -mt-8 mr-6">
-                                                <img src={Img1} alt="Testimonal1"  class="h-full w-full object-cover rounded-full overflow-hidden" />
+                                                <img src="https://i.ibb.co/Vmm79rX/1.png" alt="1"  class="h-full w-full object-cover rounded-full overflow-hidden" />
                                             </div>
 
                                             <p class="text-base text-gray-600 leading-8">It really saves me time and effort. Chamer is exactly what our business has been lacking. Chamer was worth a fortune to my company.</p>
@@ -48,7 +48,7 @@ export default function Testimonial4Asset() {
                                         </div>
                                         <div class="pl-6 pr-6 pt-10 relative h-64">
                                             <div class="h-16 w-16 rounded-full bg-cover border-4 border-white absolute top-0 right-0 -mt-8 mr-6">
-                                                <img src={Img2} alt="Testimonal1"   class="h-full w-full object-cover rounded-full overflow-hidden" />
+                                                <img src="https://i.ibb.co/cLG3vCx/2.png" alt="2"   class="h-full w-full object-cover rounded-full overflow-hidden" />
                                             </div>
 
                                             <p class="text-base text-gray-600 leading-8">It really saves me time and effort. Chamer is exactly what our business has been lacking. Chamer was worth a fortune to my company.</p>
@@ -73,7 +73,7 @@ export default function Testimonial4Asset() {
                                         </div>
                                         <div class="pl-6 pr-6 pt-10 relative h-64">
                                             <div class="h-16 w-16 rounded-full bg-cover border-4 border-white absolute top-0 right-0 -mt-8 mr-6">
-                                                <img src={Img3} alt="Testimonal1"  class="h-full w-full object-cover rounded-full overflow-hidden" />
+                                                <img src="https://i.ibb.co/FzMsJvZ/3.png" alt="3"  class="h-full w-full object-cover rounded-full overflow-hidden" />
                                             </div>
 
                                             <p class="text-base text-gray-600 leading-8">It really saves me time and effort. Chamer is exactly what our business has been lacking. Chamer was worth a fortune to my company.</p>

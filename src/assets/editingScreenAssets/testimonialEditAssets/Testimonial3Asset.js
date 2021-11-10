@@ -1,6 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
-import Img1 from '../testimonialEditAssets/person.png'
+// import Img1 from '../testimonialEditAssets/person.png'
 import Testimonial3AssetCss from './Testimonial3Asset.module.css'
 export default function Testimonial3Asset() {
   const editorRef = useRef(null);
@@ -59,7 +59,7 @@ export default function Testimonial3Asset() {
                   }}
                 />
                 <button className="inline-flex items-center">
-                  <img alt="testimonial" src={Img1} className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+                  <img src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
                   <span className="flex-grow flex flex-col pl-4">
                     {/* <span className="title-font font-medium text-white">Holden Caulfield</span> */}
                     <Editor
@@ -115,7 +115,7 @@ export default function Testimonial3Asset() {
                   }}
                 />
                 <button className="inline-flex items-center">
-                  <img alt="testimonial" src={Img1} className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
+                  <img src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
                   <span className="flex-grow flex flex-col pl-4">
                     {/* <span className="title-font font-medium text-white">Alper Kamu</span> */}
                     <Editor

@@ -26,7 +26,7 @@
     font-size: 16px;
   }
   .services-text {
-    background: url(../../../assets/template1images/headingblob.png);
+    background: url("https://i.ibb.co/Vg37Gp9/headingblob.png");
     background-repeat: no-repeat;
     padding: 0 100px;
   }
@@ -58,7 +58,7 @@
   }
   
   .serviceimg-right img {
-    background-image: url(../../../assets/template1images/services11.jpg);
+    background-image: url("https://i.ibb.co/8zsQjgJ/services11.jpg");
     background-size: cover;
     background-position: right;
     height: auto;
@@ -122,7 +122,7 @@
   
   }
   .services-sec {
-    background-image: url(../../../assets/template1images/blobthebuilder.jpg);
+    background-image: url("https://i.ibb.co/2hZrqyt/blobthebuilder.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: auto;

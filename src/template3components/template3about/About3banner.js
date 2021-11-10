@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import About3Css from '../template3about/About3.module.css'
-import Img1 from '../template3contactcomponents/gPeonv.png'
+// import Img1 from '../template3contactcomponents/gPeonv.png'
 import { Editor } from '@tinymce/tinymce-react';
 export default function About3banner() {
     const [currentBackground, setCurrentBackground] = useState("white");
@@ -31,7 +31,7 @@ export default function About3banner() {
             </div>
 
 
-            <img src={Img1} alt="contact-components" />
+            <img src="https://i.ibb.co/QH3ksQx/gPeonv.png" alt="gPeonv" />
         </section>
     )
 }

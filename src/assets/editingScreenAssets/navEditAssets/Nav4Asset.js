@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './logo3.png'
+// import logo from './logo3.png'
 export default function Nav4Asset() {
   return (
     <>
@@ -7,7 +7,7 @@ export default function Nav4Asset() {
         <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
           {/* <a href={2} class="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0"> */}
 
-          <img class="h-20 w-30" src={logo} alt="logo"/>
+          <img class="h-20 w-30" src="https://i.ibb.co/5LDWfPq/logo3.png" alt="logo3"/>
           {/* </a> */}
           <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
             <a href={2} class="mr-5 cursor-pointer hover:text-2xl text-white">Home</a>

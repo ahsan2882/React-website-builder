@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import StaticSecurity3Css from '../technologyproduct/Technologyproduct.module.css'
-import Img1 from '../../../assets/template1images/wavef1.png'
-import Img2 from '../../../assets/template1images/services56.jpg'
+// import Img1 from '../../../assets/template1images/wavef1.png'
+// import Img2 from '../../../assets/template1images/services56.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1 from '../../Navbar1';
 export default function Technologyproduct3({ displayDevice, linksfunc }) {
@@ -85,7 +85,7 @@ export default function Technologyproduct3({ displayDevice, linksfunc }) {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='Static2'
-                            initialValue={`<img src=${Img2} alt="wavef1" class="w-96 h-72 object-cover"/>`}
+                            initialValue={`<img src="https://i.ibb.co/47P9jLk/services56.jpg" alt="services56" class="w-96 h-72 object-cover"/>`}
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -105,7 +105,7 @@ export default function Technologyproduct3({ displayDevice, linksfunc }) {
                 </div>
             </section>
             <div className={StaticSecurity3Css['wave-services']}>
-                <img src={Img1} alt="wave " />
+                <img src="https://i.ibb.co/NL83nFf/wavef1.png" alt="wavef1" />
             </div>
             <section className={`${StaticSecurity3Css['sec-serv']} ${StaticSecurity3Css['desc-services']}`}>
                 <div className={StaticSecurity3Css.container}>

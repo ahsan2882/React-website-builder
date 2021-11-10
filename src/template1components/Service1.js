@@ -3,9 +3,9 @@ import Service1Css from './Service1.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 
-import serv1 from '../assets/template1images/serv-1.png'
-import serv2 from '../assets/template1images/serv-2.png'
-import serv3 from '../assets/template1images/serv-3.png'
+// import serv1 from '../assets/template1images/serv-1.png'
+// import serv2 from '../assets/template1images/serv-2.png'
+// import serv3 from '../assets/template1images/serv-3.png'
 export const Service1 = ({ showPopup, overSection }) => {
   const [showPopup1, setShowPopup1] = useState(false);
   const [showPopup2, setShowPopup2] = useState(false);
@@ -64,7 +64,7 @@ export const Service1 = ({ showPopup, overSection }) => {
       <div style={{ background: currentBackground }} className={`${Service1Css['wrapper-flex']}`}>
         <div style={{ background: currentBackground1 }} className={`${Service1Css['container-services']}  ${Service1Css['fade-in']}`} onClick={() => setShowPopup1(state => !state)}>
           <div className={`${Service1Css['banner-img']}`}></div>
-          <img src={serv1} alt="profileimage" className={`${Service1Css['profile-img']}`}
+          <img src="https://i.ibb.co/9vkqXYh/serv-1.png" alt="serv-1" className={`${Service1Css['profile-img']}`}
           />
           <h1 className={`${Service1Css.name}`}>
             <Editor
@@ -140,7 +140,7 @@ export const Service1 = ({ showPopup, overSection }) => {
         <div style={{ background: currentBackground2 }} className={`${Service1Css['container-services']} ${Service1Css['fade-in']}`} onClick={() => setShowPopup2(state => !state)}>
           <div className={`${Service1Css['banner-img']}`}></div>
 
-          <img src={serv2} alt="profileimage" className={`${Service1Css['profile-img']}`}
+          <img src="https://i.ibb.co/FKwNMbn/serv-2.png" alt="serv-2" className={`${Service1Css['profile-img']}`}
           />
           <h1 className={`${Service1Css.name}`}>
             <Editor
@@ -218,7 +218,7 @@ export const Service1 = ({ showPopup, overSection }) => {
         <div style={{ background: currentBackground3 }} className={`${Service1Css['container-services']} ${Service1Css['fade-in']}`} onClick={() => setShowPopup3(state => !state)}>
           <div className={`${Service1Css['banner-img']}`}></div>
 
-          <img src={serv3} alt="profileImage" className={`${Service1Css['profile-img']}`}
+          <img src="https://i.ibb.co/mGs9gt3/serv-3.png" alt="serv-3" className={`${Service1Css['profile-img']}`}
           />
           <h1 className={`${Service1Css.name}`}>
             <Editor

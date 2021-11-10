@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react'
 import Guard1Css from './Guard1.module.css'
-import ourteam from '../assets/template1images/ourteam.png'
-import ourteam2 from '../assets/template1images/ourteam2.png'
-import ourteam3 from '../assets/template1images/ourteam3.png'
+// import ourteam from '../assets/template1images/ourteam.png'
+// import ourteam2 from '../assets/template1images/ourteam2.png'
+// import ourteam3 from '../assets/template1images/ourteam3.png'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 
@@ -66,7 +66,7 @@ export const Guard1 = ({ showPopup, overSection }) => {
           <div className={`${Guard1Css.blog2}`}>
             <div style={{ background: currentBackground1 }} className={`${Guard1Css['single-blog']}`} onClick={() => setShowPopup1(state => !state)}>
               <div className={`${Guard1Css['blog-img']}`}>
-                <img src={ourteam} alt="Temp1Img2" />
+                <img src="https://i.ibb.co/c8RG8Lh/ourteam.png" alt="ourteam" />
 
               </div>
 
@@ -124,7 +124,7 @@ export const Guard1 = ({ showPopup, overSection }) => {
             </div>
             <div style={{ background: currentBackground2 }} className={`${Guard1Css['single-blog']}`} onClick={() => setShowPopup2(state => !state)}>
               <div className={`${Guard1Css['blog-img']}`}>
-                <img src={ourteam2} alt="Temp1Img3" />
+                <img src="https://i.ibb.co/TqJDmw8/ourteam2.png" alt="ourteam2" />
 
               </div>
 
@@ -182,7 +182,7 @@ export const Guard1 = ({ showPopup, overSection }) => {
             </div>
             <div style={{ background: currentBackground3 }} className={`${Guard1Css['single-blog']}`} onClick={() => setShowPopup3(state => !state)}>
               <div className={`${Guard1Css['blog-img']}`}>
-                <img src={ourteam3} alt="Temp1Img4" />
+                <img src="https://i.ibb.co/VpyLN72/ourteam3.png" alt="ourteam3" />
 
               </div>
 

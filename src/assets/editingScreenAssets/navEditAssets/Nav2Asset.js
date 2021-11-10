@@ -1,12 +1,12 @@
 import React from 'react'
-import logo from './logo2.png'
+// import logo from './logo2.png'
 export default function Nav2Asset() {
   return (
     <>
       <header class="text-gray-600 body-font bg-green-100 mt-10 mb-10 h-20 ">
         <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
           {/* <a href={2} class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"> */}
-          <img class="h-16 w-18" src={logo} alt="logos"/>
+          <img class="h-16 w-18" src="https://i.ibb.co/DpyxY8F/logo2.png" alt="logo2"/>
             <span class=" text-3xl text-green-800">Secuiruty</span>
           {/* </a> */}
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">

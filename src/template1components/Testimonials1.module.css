@@ -24,7 +24,7 @@ display: flex;
     padding:50px;
     border-radius: 10px;
     background-color: #ffffff;
-    background-image: url(../assets/template1images/blobthebuilder.png);
+    background-image: url("https://i.ibb.co/S7BZmnL/blobthebuilder.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
@@ -40,7 +40,7 @@ display: flex;
   font-weight: 700;
   }
     .testimonial-text {
-    background-image: url(../assets/template1images/qoute.png);
+    background-image: url("https://i.ibb.co/7Ss5VQ9/qoute.png");
     background-repeat: no-repeat;
     background-position: left top;
     padding: 30px 5%;

@@ -22,7 +22,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      background: url(./bgdots.png);
+      background: url("https://i.ibb.co/Y3LBbwF/bgdots.png");
       background-repeat: no-repeat;
       background-position: left center;
       padding-bottom: 16em;
@@ -65,7 +65,7 @@
       } */
     .banner-img {
       position: absolute;
-      background-image: url(./blobthebuilder.jpg);
+      background-image: url("https://i.ibb.co/2hZrqyt/blobthebuilder.jpg");
       height: 24rem;
       width: 100%;
       background-position: center;

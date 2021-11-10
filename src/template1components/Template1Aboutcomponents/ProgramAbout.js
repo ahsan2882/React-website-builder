@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react'
 import programAboutmoduleCss from './ProgramAbout.module.css'
-import img1 from './1.svg'
-import img2 from './2.svg'
-import img3 from './3.svg'
+// import img1 from './1.svg'
+// import img2 from './2.svg'
+// import img3 from './3.svg'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 export default function ProgramAbout({ showPopup, overSection }) {
@@ -26,7 +26,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='About5'
-                        initialValue={`<img src=${img1} alt="img"class="w-full" />`}
+                        initialValue={`<img src="https://svgshare.com/i/bt1.svg" alt="img"class="w-full" />`}
                         init={{
                            images_upload_handler: function (blobInfo, success, failure) {
                               success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -123,7 +123,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='About5'
-                        initialValue={`<img src=${img2} alt="img"class="w-full" />`}
+                        initialValue={`<img src="https://svgshare.com/i/buV.svg" alt="img"class="w-full" />`}
                         init={{
                            images_upload_handler: function (blobInfo, success, failure) {
                               success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -219,7 +219,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='About5'
-                        initialValue={`<img src=${img3} alt="img"class="w-full" />`}
+                        initialValue={`<img src="https://svgshare.com/i/bsp.svg" alt="img"class="w-full" />`}
                         init={{
                            images_upload_handler: function (blobInfo, success, failure) {
                               success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());

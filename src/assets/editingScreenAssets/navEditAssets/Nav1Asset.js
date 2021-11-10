@@ -1,11 +1,11 @@
 import React from 'react'
-import logo from './logo1.png'
+// import logo from './logo1.png'
 export default function Nav1Asset() {
   return (
     <>
       <header className="text-gray-600 body-font bg-red-100 h-36">
         <div className="container mx-auto flex p-8 flex-row md:flex-row items-center justify-between">
-          <img src={logo} className="h-16 w-16 ml-8" alt="logos" />
+          <img src="https://i.ibb.co/y68gwmt/logo-security-red-black.png" alt="logo-security-red-black" className="h-16 w-16 ml-8" />
           <span className=" text-3xl font-bold">SECURITY </span>
           
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">

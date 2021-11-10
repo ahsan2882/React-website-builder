@@ -1,20 +1,20 @@
 import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import Accrediation3Css from './Accrediation3.module.css'
-import accre1 from '../assets/template3images/accre1.png'
-import accre2 from '../assets/template3images/accre2.png'
-import accre4 from '../assets/template3images/accre4.png'
-import accre7 from '../assets/template3images/accre7.png'
+// import accre1 from '../assets/template3images/accre1.png'
+// import accre2 from '../assets/template3images/accre2.png'
+// import accre4 from '../assets/template3images/accre4.png'
+// import accre7 from '../assets/template3images/accre7.png'
 import { Editor } from '@tinymce/tinymce-react';
 
 export default function Accrediation3({ showPopup, overSection }) {
   const [currentBackground, setCurrentBackground] = useState("#c01120");
   const editorRef = useRef(null);
   const Accreditation3Array = [
-    accre1,
-    accre2,
-    accre4,
-    accre7
+    "https://i.ibb.co/h90LdSb/accre1-Copy.png",
+    "https://i.ibb.co/P1LSWCj/accre2-Copy.png",
+    "https://i.ibb.co/TW5X68d/accre4-Copy.png",
+    "https://i.ibb.co/8XHPP0K/accre7-Copy.png"
   ]
   const [acre3, setAccre3] = useState([...Accreditation3Array])
   const [accredKey, setAccredKey] = useState("")

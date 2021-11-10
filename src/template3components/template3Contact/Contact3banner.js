@@ -1,6 +1,6 @@
 import React from 'react'
 import ContactBannerCss from './Contact3banner.module.css'
-import Img1 from '../../assets/template3images/gPeonv.png'
+// import Img1 from '../../assets/template3images/gPeonv.png'
 export default function Contact3banner() {
     return (
         <section className={ContactBannerCss['header-img-serv']}>
@@ -8,7 +8,7 @@ export default function Contact3banner() {
             <h1 className={ContactBannerCss['head1']}>Contact Us</h1>
             <div className={ContactBannerCss.dash}></div>
         </div>
-        <img src={Img1} alt="contact-components"/>
+            <img src="https://i.ibb.co/QH3ksQx/gPeonv.png" alt="gPeonv"/>
     </section>
     )
 }

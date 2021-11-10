@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import About3Css from './About3.module.css'
 import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
-import news3 from '../assets/template3images/news3.png'
+// import news3 from '../assets/template3images/news3.png'
 export default function About3({ showPopup, overSection }) {
   const [currentBackground, setCurrentBackground] = useState("white");
   const [currentBackground1, setCurrentBackground1] = useState("#c01120");
@@ -64,7 +64,7 @@ export default function About3({ showPopup, overSection }) {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='About3'
-                initialValue={`<img src=${news3} alt="news3" class="w-full" />`}
+                initialValue={`<img src="https://i.ibb.co/QkSfTJw/news3.png" alt="news3" class="w-full" />`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());

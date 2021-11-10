@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import Header1Css from './Header1.module.css'
-import bgcover from '../assets/template1images/bghero.png'
+// import bgcover from '../assets/template1images/bghero.png'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 import Navbar1 from './Navbar1';
@@ -90,7 +90,7 @@ export const Header1 = ({ showPopup, overSection }) => {
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
               key='About5'
-              initialValue={` <img src=${bgcover} alt="Temp1Img5" class="${Header1Css.dil}" />`}
+              initialValue={` <img src="https://i.ibb.co/yNDDf8B/bghero.png" alt="bghero" class="${Header1Css.dil}" />`}
               init={{
                 forced_root_block: "",
                 menubar: false,

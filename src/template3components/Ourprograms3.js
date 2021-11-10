@@ -2,9 +2,9 @@ import React, { useRef, useState } from 'react'
 import Ourprograms3Css from './Ourprograms.module.css'
 import { GithubPicker } from 'react-color';
 
-import news1 from '../assets/template3images/news1.png'
-import news2 from '../assets/template3images/news2.png'
-import news3 from '../assets/template3images/news3.png'
+// import news1 from '../assets/template3images/news1.png'
+// import news2 from '../assets/template3images/news2.png'
+// import news3 from '../assets/template3images/news3.png'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Ourprograms3({ showPopup, overSection }) {
     const [showPopup1, setShowPopup1] = useState(false);
@@ -81,7 +81,7 @@ export default function Ourprograms3({ showPopup, overSection }) {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='ourprogram3'
-                                    initialValue={`<img src=${news1} alt="news1" class="w-full" />`}
+                                    initialValue={`<img src="https://i.ibb.co/C1JXjPn/news1.png" alt="news1" class="w-full" />`}
                                     init={
                                         {
                                             images_upload_handler: function (blobInfo, success, failure) {
@@ -165,7 +165,7 @@ export default function Ourprograms3({ showPopup, overSection }) {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='ourprogram6'
-                                    initialValue={`<img src=${news2} alt="news1" class="w-full" />`}
+                                    initialValue={`<img src="https://i.ibb.co/44k7Zqv/news2.png" alt="news2" class="w-full" />`}
                                     init={
                                         {
                                             images_upload_handler: function (blobInfo, success, failure) {
@@ -263,7 +263,7 @@ export default function Ourprograms3({ showPopup, overSection }) {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='About5'
-                                    initialValue={`<img src=${news3} alt="news1" class="w-full" />`}
+                                    initialValue={`<img src="https://i.ibb.co/QkSfTJw/news3.png" alt="news3" class="w-full" />`}
                                     init={
                                         {
                                             images_upload_handler: function (blobInfo, success, failure) {

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import SupportManagment3Css from '../SupportandManagment/Supportmanagment.module.css'
-import Img1 from '../../../assets/template1images/wavef1.png'
-import Img2 from '../../../assets/template1images/services66.jpg'
+// import Img1 from '../../../assets/template1images/wavef1.png'
+// import Img2 from '../../../assets/template1images/services66.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1 from '../../Navbar1';
 export default function SupportandManagment({ displayDevice, linksfunc }) {
@@ -85,7 +85,7 @@ export default function SupportandManagment({ displayDevice, linksfunc }) {
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='Static2'
-                            initialValue={`<img src=${Img2} alt="wavef1" class="w-96 h-72 object-cover"/>`}
+                            initialValue={`<img src="https://i.ibb.co/J2yDM82/services66.jpg" alt="services66" class="w-96 h-72 object-cover"/>`}
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -105,7 +105,7 @@ export default function SupportandManagment({ displayDevice, linksfunc }) {
                 </div>
             </section>
             <div className={SupportManagment3Css['wave-services']}>
-                <img src={Img1} alt="wave " />
+                <img src="https://i.ibb.co/NL83nFf/wavef1.png" alt="wavef1" />
             </div>
             <section className={`${SupportManagment3Css['sec-serv']} ${SupportManagment3Css['desc-services']}`}>
                 <div className={SupportManagment3Css.container}>

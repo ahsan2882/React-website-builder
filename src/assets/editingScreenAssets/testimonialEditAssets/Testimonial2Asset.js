@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
-import Image1 from './person.png'
+// import Image1 from './person.png'
 export default function Testimonial2Asset() {
     const editorRef = useRef(null);
     return (
@@ -33,7 +33,7 @@ export default function Testimonial2Asset() {
                 </div>
 
                 <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center ">
-                    <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src={Image1} />
+                    <img class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" />
                     <p class="leading-relaxed py-50">
                         <Editor
                             onInit={(evt, editor) => (editorRef.current = editor)}

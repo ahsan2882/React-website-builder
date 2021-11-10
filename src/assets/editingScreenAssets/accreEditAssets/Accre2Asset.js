@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import Accreditation2Css from "./Accre2Asset.module.css";
 import { Editor } from "@tinymce/tinymce-react";
-import accre1 from "../../template3images/accre1.png";
-import accre2 from "../../template3images/accre2.png";
-import accre3 from "../../template3images/accre3.png";
-import accre4 from "../../template3images/accre4.png";
-import accre5 from "../../template3images/accre5.png";
-import accre6 from "../../template3images/accre6.png";
-import accre7 from "../../template3images/accre7.png";
+// import accre1 from "../../template3images/accre1.png";
+// import accre2 from "../../template3images/accre2.png";
+// import accre3 from "../../template3images/accre3.png";
+// import accre4 from "../../template3images/accre4.png";
+// import accre5 from "../../template3images/accre5.png";
+// import accre6 from "../../template3images/accre6.png";
+// import accre7 from "../../template3images/accre7.png";
 
 export default function Accre2Asset() {
     const editorRef = useRef(null);
@@ -72,7 +72,7 @@ export default function Accre2Asset() {
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
                                         key="accre2image1"
-                                        initialValue={`<img src=${accre1} alt="accre1" />`}
+                                        initialValue={`<img src="https://i.ibb.co/h90LdSb/accre1-Copy.png" alt="accre1-Copy" />`}
                                         init={{
                                             images_upload_handler: function (blobInfo, success, failure) {
                                                 success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -88,22 +88,22 @@ export default function Accre2Asset() {
                                     />
                                 </div>
                                 <div className={Accreditation2Css["a-card"]}>
-                                    <img src={accre2} alt="accre2" />
+                                    <img src="https://i.ibb.co/P1LSWCj/accre2-Copy.png" alt="accre2-Copy" />
                                 </div>
                                 <div className={Accreditation2Css["a-card"]}>
-                                    <img src={accre3} alt="accre3" />
+                                    <img src="https://i.ibb.co/qDFKVh7/accre3-Copy.png" alt="accre3-Copy" />
                                 </div>
                                 <div className={Accreditation2Css["a-card"]}>
-                                    <img src={accre4} alt="accre4" />
+                                    <img src="https://i.ibb.co/TW5X68d/accre4-Copy.png" alt="accre4-Copy" />
                                 </div>
                                 <div className={Accreditation2Css["a-card"]}>
-                                    <img src={accre5} alt="accre5" />
+                                    <img src="https://i.ibb.co/fC9YRS2/accre5-Copy.png" alt="accre5-Copy" />
                                 </div>
                                 <div className={Accreditation2Css["a-card"]}>
-                                    <img src={accre6} alt="accre6" />
+                                    <img src="https://i.ibb.co/r4w2WG7/accre6-Copy.png" alt="accre6-Copy" />
                                 </div>
                                 <div className={Accreditation2Css["a-card"]}>
-                                    <img src={accre7} alt="accre7" />
+                                    <img src="https://i.ibb.co/8XHPP0K/accre7-Copy.png" alt="accre7-Copy" />
                                 </div>
                             </div>
                         </div>

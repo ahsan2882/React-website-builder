@@ -54,7 +54,7 @@
     position: absolute;
     width: 300px;
     height: 100%;
-    background-image: url(../assets/template1images/floating_image_12.png);
+    background-image: url("https://i.ibb.co/3hXyGV2/floating-image-12.png");
   right: 28%;
     background-repeat: no-repeat;
   }
@@ -67,7 +67,7 @@
   
   .section .section-details .right::before {
     content: "";
-    background: url(../assets/template1images/floating_image_09.png);
+    background: url("https://i.ibb.co/k9WftQd/floating-image-09.png");
     background-repeat: no-repeat;
     background-position: 95% 8.2714px;
     width: 685px;
