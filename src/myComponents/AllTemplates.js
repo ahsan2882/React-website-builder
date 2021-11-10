@@ -210,47 +210,47 @@ export const templateComponents = {
         {
             groupName: "services",
             pageName: "Static Security",
-            pageSections: [Navbar2, Staticsecuritybanner, StaticsecurityDescription, Footer2]
+            pageSections: [Staticsecuritybanner, StaticsecurityDescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Mobile Patrolling",
-            pageSections: [Navbar2, Mobilepatrollingbanner, Mobilemonetoringdescription, Footer2]
+            pageSections: [Mobilepatrollingbanner, Mobilemonetoringdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "CCTV Monitoring",
-            pageSections: [Navbar2, Cctvmonetoringbanner, Cctvmonetoringdescription, Footer2]
+            pageSections: [Cctvmonetoringbanner, Cctvmonetoringdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Lock & Unlock",
-            pageSections: [Navbar2, Lockandunlockbanner, Lockandunlockdescription, Footer2]
+            pageSections: [Lockandunlockbanner, Lockandunlockdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Vacant Unit Checks",
-            pageSections: [Navbar2, Vacantunitcheckbanner, Vacantunitdescription, Footer2]
+            pageSections: [Vacantunitcheckbanner, Vacantunitdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Technology Product",
-            pageSections: [Navbar2, Technologyproductbanner, Technologyproductdecription, Footer2]
+            pageSections: [Technologyproductbanner, Technologyproductdecription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Manned Guarding",
-            pageSections: [Navbar2, Mannedguardingbanner, Mannedguardingdescription, Footer2]
+            pageSections: [Mannedguardingbanner, Mannedguardingdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Support & Management",
-            pageSections: [Navbar2, SupportManagmentbanner, Supportmanagmentdescription, Footer2]
+            pageSections: [SupportManagmentbanner, Supportmanagmentdescription, Footer2]
         },
         {
             groupName: "services",
             pageName: "Event Security",
-            pageSections: [Navbar2, Eventsecuritybanner, Eventsecuritydescription, Footer2]
+            pageSections: [Eventsecuritybanner, Eventsecuritydescription, Footer2]
         },
         {
             groupName: "services",
@@ -260,12 +260,12 @@ export const templateComponents = {
         {
             groupName: "services",
             pageName: "24/7 Surveillance",
-            pageSections: [Navbar2, Servillancebanner, ServillanceDescription, Footer2]
+            pageSections: [Servillancebanner, ServillanceDescription, Footer2]
         },
         {
             groupName: "contact",
             pageName: "Contact",
-            pageSections: [Navbar2, Contact2, Form2, Feedback2, Footer2]
+            pageSections: [Contact2, Form2, Feedback2, Footer2]
         },
 
     ],

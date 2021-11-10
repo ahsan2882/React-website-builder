@@ -62,4 +62,10 @@
     grid-area: 3 / 3 / 4 / 4;
   }
    
-  
+  @media (max-width: 900px) {
+    .service-grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }

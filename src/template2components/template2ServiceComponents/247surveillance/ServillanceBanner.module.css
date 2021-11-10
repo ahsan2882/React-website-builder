@@ -23,7 +23,7 @@
   font-size: 2rem;
 }
 
-@media (max-width:500px) {
+@media (max-width: 900px) {
   .head1 {
     font-size: 2rem;
   }

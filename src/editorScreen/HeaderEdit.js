@@ -45,14 +45,22 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
 
     //     }
     // }, [saveClicked])
+    useEffect(() => {
+        if (saveClicked) {
+            setTimeout(() => {
+                setLinksfunc(false);
+                setSaveClicked(false);
+            }, 5000);
+        }
+    }, [saveClicked, setSaveClicked, setLinksfunc])
     const saveTemplate = () => {
-        setLinksfunc(true);
+
         setSaveClicked(true);
         localStorage.setItem(currentTemp, JSON.stringify(toSave))
         setTimeout(() => {
             setLinksfunc(false);
             setSaveClicked(false);
-        }, 2000);
+        }, 5000);
         // console.log(fileData)
     }
     const exportCode = () => {
@@ -95,7 +103,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
                 <div className="w-96 ml-4">
                     <div className="list">
                         <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px`, color: "white", fontWeight: "700" }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, fontWeight: "700", background: `rgb(60,172,254)` }}> Pages </h2>} </div>
-                        <div className={`${HeaderEditCss.pagebar}`} style={isClicked ? { left: `0`, display:"block" } : { left: `-100%`, display:"none" }}>
+                        <div className={`${HeaderEditCss.pagebar}`} style={isClicked ? { left: `0`, display: "block" } : { left: `-100%`, display: "none" }}>
                             <div className="flex flex-col mt-12 h-full w-full">
                                 {PageList.map((item, i) =>
                                     <div key={i} className="w-full h-4/5">

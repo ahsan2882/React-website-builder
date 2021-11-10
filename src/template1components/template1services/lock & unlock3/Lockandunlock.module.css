@@ -9,7 +9,7 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
   }
   .services-text.appear, .service-img.appear {
     transform: translateX(0);
@@ -58,21 +58,21 @@
   }
   
   .serviceimg-right img {
-    background-image: url("https://i.ibb.co/8zsQjgJ/services11.jpg");
+    background-image: url("https://i.ibb.co/r60q0YL/services11.jpg");
     background-size: cover;
     background-position: right;
-    height: auto;
+    /* height: auto; */
     width: 100%;
     margin-top: 133px;
      box-shadow: 0px 10px 30px 0px rgb(154 150 248 / 20%);
     overflow: hidden;
   }
-  .wave-services {
+  /* .wave-services {
     margin-top: -190px;
-  }
+  } */
   .wave-services img {
     width: 100%;
-    z-index: 2;
+    /* z-index: 2; */
   }
   .container {
     max-width: 1100;
@@ -122,10 +122,31 @@
   
   }
   .services-sec {
-    background-image: url("https://i.ibb.co/2hZrqyt/blobthebuilder.jpg");
+    background-image: url("https://i.ibb.co/S7BZmnL/blobthebuilder.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: auto;
-    height: 800px;
+    /* height: 800px; */
     background-position: center;
   }
+
+  @media (max-width: 900px) {
+    .grid-contact {
+      display: flex;
+    flex-direction: column;
+      justify-content: center;
+    align-items: center;
+    height: 100%;
+    }
+
+    .grid-r3 {
+      display: flex;
+      flex-direction: column;
+      padding:0px;
+    }
+    .services-text {
+      background: url("https://i.ibb.co/Vg37Gp9/headingblob.png");
+      background-repeat: no-repeat;
+      padding: 0 40px;
+    }
+}

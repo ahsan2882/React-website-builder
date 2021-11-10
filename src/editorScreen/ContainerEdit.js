@@ -10,12 +10,19 @@ import { templateComponents } from '../myComponents/AllTemplates';
 // import nav4edit from '../template4components/nav4edits'
 // import Modal from 'react-modal';
 // Modal.setAppElement(document.getElementById('editorScreen'));
-export default function ContainerEdit({ templateNum, setFileName, editTemplateMenu, editMenu, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
+export default function ContainerEdit({ templateNum, setFileName, setLinksfunc, editTemplateMenu, editMenu, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
     const [overSection, setOverSection] = useState(false);
     const [showPopUp, setShowPopUp] = useState(false)
     // const [linksfunc, setLinksfunc] = useState(false)
     const [sectionKey, setSectionKey] = useState(null);
+    // let htmlString;
+    // let cssString;
+    // let compressed;
+    const [htmlString, setHtmlString] = useState("");
+    const [cssString, setCssString] = useState("");
+    const [compressed, setCompressed] = useState("");
+
     const [curTemplate, setCurTemplate] = useState(null);
     const [fileName, setfilename] = useState(null);
     // const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -92,10 +99,17 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
     useEffect(() => {
 
         // if (saveClicked) {
-        setDisplayDevice(true)
-        let htmlString = getHTMLData()
-        let cssString = getCSSData()
-        let compressed = lz.encodeBase64(lz.compress(htmlString))
+        setDisplayDevice(true);
+        setLinksfunc(true);
+        
+        if (saveClicked && linksfunc) {
+            setHtmlString(getHTMLData())
+            setCssString(getCSSData())
+            setCompressed(lz.encodeBase64(lz.compress(htmlString)))
+        }
+        // if (htmlString === undefined) {
+        //     setSaveClicked(true)
+        // }
         setToSave({
             filename: fileName,
             templateID: curTemplate,
@@ -106,9 +120,10 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
             css: `${cssString}`
         })
         setFileName(fileName)
+        console.log(htmlString)
         // }
 
-    }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData, setDisplayDevice, fileName, setFileName])
+    }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData, setDisplayDevice, fileName, setFileName, setLinksfunc, linksfunc, htmlString, cssString, compressed])
 
     const getHTMLData = () => {
 
@@ -133,7 +148,7 @@ export default function ContainerEdit({ templateNum, setFileName, editTemplateMe
         let htmlString = newDoc.getElementsByClassName("filterHTML")[0].innerHTML
         htmlString = htmlString.replace(/&lt;/g, "<").replace(/&gt;/g, ">")
         // setLinksfunc(false);
-        // console.log(htmlString)
+        console.log(htmlString)
         // console.log(linksfunc)
         return htmlString;
     }

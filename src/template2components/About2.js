@@ -86,14 +86,13 @@ export const About2 = ({ displayDevice, showPopup, overSection }) => {
                 />
               </div>
               <div className={`${About2moduleCss['about-content']}`}>
-                <h1 className={`${About2moduleCss['about-title']}`}>
+                <h1 className={`${About2moduleCss['about-title']} text-black`}>
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About(2)1'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                    initialValue="Commited To
-                  Your Business"
+                    initialValue={`Commited To <span class="${About2moduleCss.SpanColor}">Your Business</span>`}
                     init={{
                       plugins: [
                         "link"

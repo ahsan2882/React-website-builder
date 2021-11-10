@@ -47,6 +47,7 @@ export default function EditScreen({ temp }) {
                     editTemplateMenu={editTemplateMenu}
                     setSaveClicked={setSaveClicked}
                     chatInclude={chatInclude}
+                    setLinksfunc={setLinksfunc}
                     linksfunc={linksfunc}
                     setDisplayDevice={setDisplayDevice}
                     displayDevice={displayDevice}
