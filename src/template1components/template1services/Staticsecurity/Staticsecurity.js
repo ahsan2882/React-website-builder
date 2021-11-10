@@ -3,10 +3,11 @@ import StaticSecurity3Css from '../Staticsecurity/Staticsecurity.module.css'
 // import Img1 from '../../../assets/template1images/wavef1.png'
 // import Img2 from '../../../assets/template1images/services11.jpg'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Staticsecurity() {
+import Navbar1 from '../../Navbar1';
+export default function Staticsecurity({ showPopup, overSection, displayDevice, linksfunc }) {
     const editorRef = useRef(null);
     return (
-        <>
+        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
             <section className={StaticSecurity3Css['services-sec']}>
 
                 <div className={`${StaticSecurity3Css['containers']} ${StaticSecurity3Css['grid-contact']}`}>

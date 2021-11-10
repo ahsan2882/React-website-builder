@@ -4,14 +4,14 @@ import Header1Css from './Header1.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 import Navbar1 from './Navbar1';
-export const Header1 = ({ showPopup, overSection }) => {
+export const Header1 = ({ showPopup, overSection, displayDevice, linksfunc }) => {
   const [currentBackground, setCurrentBackground] = useState("white");
 
   const editorRef = useRef(null);
 
   return (
     <>
-      <Navbar1 />
+      <Navbar1 displayDevice={displayDevice} linksfunc={ linksfunc}/>
 
 
       <section style={{ background: currentBackground }} className={`${Header1Css.section}`}>
