@@ -19,19 +19,14 @@
       padding: 0 10px;
     }
   
-    .sector_left-content h1 {
-      font-size: 4vh;
-      font-family: "Poppins", sans-serif;
-      font-weight: 700;
-      padding-top: 100px;
-    }
+
     .sector-cards-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
   }
-  
+
   @media screen and (min-width: 760px) and (max-width: 1300px) {
     .sector-container {
       flex-direction: column;
@@ -49,7 +44,7 @@
   }
   
   .sector_left-content h1 {
-    font-size: 40px;
+    font-size: 35px;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     padding-top: 100px;
