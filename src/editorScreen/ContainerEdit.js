@@ -100,7 +100,7 @@ export default function ContainerEdit({ templateNum, setFileName, setLinksfunc, 
 
         // if (saveClicked) {
         setDisplayDevice(true);
-        setLinksfunc(true);
+        
         
         if (saveClicked && linksfunc) {
             setHtmlString(getHTMLData())
