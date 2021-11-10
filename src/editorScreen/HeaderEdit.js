@@ -45,16 +45,16 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
 
     //     }
     // }, [saveClicked])
-    useEffect(() => {
-        if (saveClicked) {
-            setTimeout(() => {
-                setLinksfunc(false);
-                setSaveClicked(false);
-            }, 5000);
-        }
-    }, [saveClicked, setSaveClicked, setLinksfunc])
+    // useEffect(() => {
+    //     if (saveClicked) {
+    //         setTimeout(() => {
+    //             setLinksfunc(false);
+    //             setSaveClicked(false);
+    //         }, 5000);
+    //     }
+    // }, [saveClicked, setSaveClicked, setLinksfunc])
     const saveTemplate = () => {
-
+        setLinksfunc(true);
         setSaveClicked(true);
         localStorage.setItem(currentTemp, JSON.stringify(toSave))
         setTimeout(() => {
