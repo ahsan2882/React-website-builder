@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import Contactform1Css from '../template1contactcomponent/Contactform1.module.css'
+import Contactform1Css from './Contactform1.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Contactform1() {
     const editorRef = useRef(null);
@@ -33,7 +33,7 @@ export default function Contactform1() {
                         </h1>
                         <div className={Contactform1Css.subhead}>
                             <Editor
-                                onInit={(evt, editor) => editorRef.current = editor}
+                                onInit={(evt, editor) => editorRef.current = editor} s
                                 inline={true}
                                 key='Contact2'
                                 initialValue=" <p>Call us anytime, even when you are not sure you are in danger. Let us help you make sure you are safe one hundred percent.</p>"
