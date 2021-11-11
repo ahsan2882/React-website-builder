@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1moduleCss from './Navbar1.module.css'
-import tinymce from 'tinymce/tinymce';
+// import tinymce from 'tinymce/tinymce';
 export default function Navbar1({ displayDevice, linksfunc }) {
   const editorRef = useRef(null);
   return (
