@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import AboutPolicy3Css from '../template3about/AboutPolicy3.module.css'
-import Img1 from '../../assets/template3images/kala.jpg'
+// import Img1 from '../../assets/template3images/kala.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 export default function AboutPolicy3() {
     const [currentBackground, setCurrentBackground] = useState("white");
@@ -93,11 +93,12 @@ export default function AboutPolicy3() {
 
                         </div>
                         <div class={AboutPolicy3Css['policyimg']}>
+                            {/* <img src="https://i.ibb.co/kXznWJp/kala.jpg" alt="kala" border="0"> */}
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Service4'
-                                initialValue={` <img src=${Img1} alt="image" />`}
+                                initialValue={` <img src="https://i.ibb.co/kXznWJp/kala.jpg" alt="kala" />`}
                                 init={
                                     {
                                         forced_root_block: "",
