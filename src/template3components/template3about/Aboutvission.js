@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import About3vissionCss from '../template3about/About3vission.module.css'
-import Img1 from '../../assets/template3images/annie-spratt-QckxruozjRg-unsplash.jpg'
+// import Img1 from '../../assets/template3images/annie-spratt-QckxruozjRg-unsplash.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 export default function Aboutvission({ showPopup, overSection }) {
     const editorRef = useRef(null);
@@ -77,11 +77,12 @@ export default function Aboutvission({ showPopup, overSection }) {
 
                         </div>
                         <div class={About3vissionCss['vision-img']}>
+                            {/* <img src="https://i.ibb.co/3YWyJcw/annie-spratt-Qckxruozj-Rg-unsplash.jpg" alt="annie-spratt-Qckxruozj-Rg-unsplash" border="0"> */}
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Service4'
-                                initialValue={` <img src=${Img1} alt="news1"/> `}
+                                initialValue={` <img src="https://i.ibb.co/3YWyJcw/annie-spratt-Qckxruozj-Rg-unsplash.jpg" alt="annie-spratt-Qckxruozj-Rg-unsplash" /> `}
                                 init={
                                     {
                                         forced_root_block: "",
