@@ -107,7 +107,6 @@
   
   .row {
     display: flex;
-   
     justify-content: center;
     /* flex-flow: wrap; */
     margin: 10px;
@@ -115,7 +114,7 @@
   }
   
   .card {
-    width: 25%;
+    width: 30%;
     background: #ebebeb;
     border: 5px solid white;
     transition: 0.3s;
@@ -149,6 +148,8 @@
     transform: scale(1.05);
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
   }
+
+ 
   
   @media screen and (max-width: 1560px) {
     .card-header .card-main {

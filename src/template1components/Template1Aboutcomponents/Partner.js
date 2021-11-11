@@ -56,7 +56,7 @@ export default function Partner({ showPopup, overSection }) {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About5'
-                    initialValue={`<img src="https://i.ibb.co/VY1YxB8/client01.png" alt="client01"  class="w-72 h-36 object-cover" />`}
+                    initialValue={`<img src="https://i.ibb.co/VY1YxB8/client01.png" alt="client01"  class="w-60 h-34 object-cover" />`}
                     init={{
                         images_upload_handler: function (blobInfo, success, failure) {
                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -75,7 +75,7 @@ export default function Partner({ showPopup, overSection }) {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About5'
-                    initialValue={`<img  src="https://i.ibb.co/qk1FGDV/client02.png" alt="client02" class="w-72 h-36 object-cover" />`}
+                    initialValue={`<img  src="https://i.ibb.co/qk1FGDV/client02.png" alt="client02" class="w-60 h-34 object-cover" />`}
                     init={{
                         images_upload_handler: function (blobInfo, success, failure) {
                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -93,7 +93,7 @@ export default function Partner({ showPopup, overSection }) {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About5'
-                    initialValue={`<img  src="https://i.ibb.co/bBQPSv3/client03.png" alt="client03" class="w-72 h-36 object-cover" />`}
+                    initialValue={`<img  src="https://i.ibb.co/bBQPSv3/client03.png" alt="client03" class="w-60 h-34 object-cover" />`}
                     init={{
                         images_upload_handler: function (blobInfo, success, failure) {
                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -111,7 +111,7 @@ export default function Partner({ showPopup, overSection }) {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About5'
-                    initialValue={`<img src="https://i.ibb.co/6PWYVmV/client04.png" alt="client04" class="w-72 h-36 object-cover" />`}
+                    initialValue={`<img src="https://i.ibb.co/6PWYVmV/client04.png" alt="client04" class="w-60 h-34 object-cover" />`}
                     init={{
                         images_upload_handler: function (blobInfo, success, failure) {
                             success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());

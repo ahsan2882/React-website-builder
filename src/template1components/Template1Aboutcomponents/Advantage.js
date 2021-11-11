@@ -24,7 +24,7 @@ export default function Advantage({ showPopup, overSection }) {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Service1'
-            initialValue="Services"
+            initialValue="Our Advantages"
             init={{
               plugins: [
                 "link"
@@ -44,7 +44,7 @@ export default function Advantage({ showPopup, overSection }) {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Service2'
-            initialValue="Our services are best in town and premium"
+            initialValue="We are able to guarantee your safety 24/7 no matter who you are and whatever you do."
             init={{
               plugins: [
                 "link"

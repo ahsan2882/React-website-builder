@@ -1,9 +1,31 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1moduleCss from './Navbar1.module.css'
 // import tinymce from 'tinymce/tinymce';
 export default function Navbar1({ displayDevice, linksfunc }) {
   const editorRef = useRef(null);
+  const navServiceArray = [
+    "STATIC SECURITY",
+    "MOBILE PATROLLING",
+    "CCTV MONITORING",
+    "LOCK & UNLOCK",
+    "VACANT UNIT CHECKS",
+    "TECHNOLOGY PRODUCT",
+    "MANNED GUARDING",
+    "SUPPORT & MANAGEMENT",
+    "EVENT SECURITY"
+  ]
+  const [navServices, setNavServices] = useState(navServiceArray)
+  const removeService = (index) => {
+    let newArray = [...navServices];
+    newArray.splice(index, 1);
+    setNavServices([...newArray])
+  }
+  const addService = () => {
+    let newArray = [...navServices];
+    newArray.push(navServiceArray[0]);
+    setNavServices([...newArray])
+  }
   return (
     <>
 
@@ -54,17 +76,17 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                 <li><button className={`${Navbar1moduleCss.line}`} >{linksfunc ? <a href="about.html">ABOUT</a> : <>ABOUT</>}</button></li>
                 <li><button className={`${Navbar1moduleCss.line}`}>SERVICES</button>
                   <ul className={`${Navbar1moduleCss['sub-menu']}`}>
-                  <li>{linksfunc ? <a href="static-security.html">STATIC SECURITY</a> : <>STATIC SECURITY</>}</li>
-                                        <li>{linksfunc ? <a href="mobile-patrolling.html">MOBILE PATROLLING</a> : <>MOBILE PATROLLING</>}</li>
-                                        <li>{linksfunc ? <a href="cctv-monitoring.html">CCTV MONITORING</a> : <>CCTV MONITORING</>}</li>
-                                        <li>{linksfunc ? <a href="lock-unlock.html">LOCK & UNLOCK</a> : <>LOCK & UNLOCK</>}</li>
-                                        <li>{linksfunc ? <a href="vacant-unit-checks.html">VACANT UNIT CHECKS</a> : <>VACANT UNIT CHECKS</>}</li>
-                                        <li>{linksfunc ? <a href="technology-product.html">TECHNOLOGY PRODUCT</a> : <>TECHNOLOGY PRODUCT</>}</li>
-                                        <li>{linksfunc ? <a href="manned-guarding.html">MANNED GUARDING</a> : <>MANNED GUARDING</>}</li>
-                                        <li>{linksfunc ? <a href="support-management.html">SUPPORT & MANAGEMENT</a> : <>SUPPORT & MANAGEMENT</>}</li>
-                                        <li>{linksfunc ? <a href="event-security.html">EVENT SECURITY</a> : <>EVENT SECURITY</>}</li>
-                                        <li>{linksfunc ? <a href="guard-house.html">GUARD HOUSE</a> : <>GUARD HOUSE</>}</li>
-                                        <li>{linksfunc ? <a href="24-7-surveillance.html">24/7 SURVEILLANCE</a> : <>24/7 SURVEILLANCE</>}</li>
+                    {navServices.map((item, index) => <li className="flex justify-between items-center">{linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-")}>{item}</a> : <>{item}</>}<button onClick={() => removeService(index)}><i className="fas fa-trash-alt"></i></button></li>)}
+                    {/* <li>{linksfunc ? <a href="static-security.html">STATIC SECURITY</a> : <>STATIC SECURITY</>}</li>
+                    <li>{linksfunc ? <a href="mobile-patrolling.html">MOBILE PATROLLING</a> : <>MOBILE PATROLLING</>}</li>
+                    <li>{linksfunc ? <a href="cctv-monitoring.html">CCTV MONITORING</a> : <>CCTV MONITORING</>}</li>
+                    <li>{linksfunc ? <a href="lock-unlock.html">LOCK & UNLOCK</a> : <>LOCK & UNLOCK</>}</li>
+                    <li>{linksfunc ? <a href="vacant-unit-checks.html">VACANT UNIT CHECKS</a> : <>VACANT UNIT CHECKS</>}</li>
+                    <li>{linksfunc ? <a href="technology-product.html">TECHNOLOGY PRODUCT</a> : <>TECHNOLOGY PRODUCT</>}</li>
+                    <li>{linksfunc ? <a href="manned-guarding.html">MANNED GUARDING</a> : <>MANNED GUARDING</>}</li>
+                    <li>{linksfunc ? <a href="support-management.html">SUPPORT & MANAGEMENT</a> : <>SUPPORT & MANAGEMENT</>}</li>
+                    <li>{linksfunc ? <a href="event-security.html">EVENT SECURITY</a> : <>EVENT SECURITY</>}</li> */}
+
                   </ul>
                 </li>
 

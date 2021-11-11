@@ -108,28 +108,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                         </h3>
                                     </div>
                                     <div className={Pricing2Css['card-body']}>
-                                        <div className="price1">
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='Pricing(2)09'
-                                                tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                                                initialValue={`<span  class="${Pricing2Css['nb1']} text-5xl text-red-700 font-bold">$29</span> <span class="font-light text-red-500 text-4xl">/yr</span>`}
-                                                init={{
-                                                    plugins: [
-                                                        "link"
-                                                    ],
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect | lineheight',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Roboto=roboto, sans-serif, serif; Mohave=mohave, sans-serif, serif;Open Sans=open sans, sans-serif, serif;Lato=lato, sans-serif, serif; Red Hat Mono=red hat mono, sans-serif, serif; Montserrat=montserrat, sans-serif, serif; Roboto Condensed=roboto condensed, sans-serif, serif; Source Sans Pro= source sans pro, sans-serif, serif; Dongle=dongle, sans-serif, serif; Poppins=poppins, sans-serif, serif; Oswald=oswald, sans-serif, serif; Roboto Mono=roboto mono, sans-serif, serif; Raleway=raleway, sans-serif, serif; Ubuntu=ubuntu, sans-serif, serif; Merriweather=merriweather, sans-serif, serif",
-
-
-                                                }}
-                                            />
-                                        </div>
+                                        
                                         <ul className={Pricing2Css['price-ser']}>
                                             <li>
 
@@ -162,7 +141,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                                     inline={true}
                                                     key='Prizing(2)24'
                                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                    initialValue="10 CCTV Cameras"
+                                                    initialValue="02 Security Guard"
                                                     init={{
                                                         plugins: [
                                                             "link"
@@ -185,7 +164,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                                     inline={true}
                                                     key='Prizing(2)24'
                                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                    initialValue="10 CCTV Cameras"
+                                                    initialValue="No Physical Protections"
                                                     init={{
                                                         plugins: [
                                                             "link"
@@ -233,7 +212,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                                     inline={true}
                                                     key='Prizing(2)23'
                                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                    initialValue="10 CCTV Cameras"
+                                                    initialValue="01 Security Guard"
                                                     init={{
                                                         plugins: [
                                                             "link"
@@ -257,6 +236,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                                     key='Prizing(2)23'
                                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                                     initialValue="No Physical Protections"
+                                                   
                                                     init={{
                                                         plugins: [
                                                             "link"
@@ -344,7 +324,8 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                         </button>
                                     </div>
                                 </div>
-                                <div className={Pricing2Css['card mid']}>
+                               
+                                <div className={`${Pricing2Css['card']} ${Pricing2Css['mid']}`}>
                                     <div className={Pricing2Css['card-header']}>
                                         <h1 className={Pricing2Css['card-main']}>
 
@@ -371,7 +352,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                         </h1>
 
                                     </div>
-                                    <h3 style={{ color: `#c0272d`, paddingTop: `15%`, textTransform: `uppercase` }}>
+                                    <h3 style={{ color: `#c0272d`, paddingTop: `1%`, textTransform: `uppercase`,textAlign:'center' }}>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
                                             inline={true}
@@ -393,28 +374,6 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                         />
                                     </h3>
                                     <div className={Pricing2Css['card-body']}>
-                                        <div className="price1">
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='Price(2)44'
-                                                tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                                                initialValue={`<span  class="${Pricing2Css['nb1']} text-5xl text-red-700 font-bold">$29</span> <span class="font-light text-red-500 text-4xl">/yr</span>`}
-                                                init={{
-                                                    plugins: [
-                                                        "link"
-                                                    ],
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect | lineheight',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Roboto=roboto, sans-serif, serif; Mohave=mohave, sans-serif, serif;Open Sans=open sans, sans-serif, serif;Lato=lato, sans-serif, serif; Red Hat Mono=red hat mono, sans-serif, serif; Montserrat=montserrat, sans-serif, serif; Roboto Condensed=roboto condensed, sans-serif, serif; Source Sans Pro= source sans pro, sans-serif, serif; Dongle=dongle, sans-serif, serif; Poppins=poppins, sans-serif, serif; Oswald=oswald, sans-serif, serif; Roboto Mono=roboto mono, sans-serif, serif; Raleway=raleway, sans-serif, serif; Ubuntu=ubuntu, sans-serif, serif; Merriweather=merriweather, sans-serif, serif",
-
-
-                                                }}
-                                            />
-                                        </div>
                                         <ul className={Pricing2Css['price-ser']}>
                                             <li>
 
@@ -517,11 +476,6 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
 
                                                     }}
                                                 />
-
-
-
-
-
                                             </li>
                                             <li>
                                                 <Editor
@@ -544,8 +498,6 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
 
                                                     }}
                                                 />
-
-
                                             </li>
                                             <li>
                                                 <Editor
@@ -669,12 +621,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
 
                                                 }}
                                             />
-
-
-
-
                                         </h1>
-
                                         <h3 className={Pricing2Css.cardchild}>
                                             <Editor
                                                 onInit={(evt, editor) => editorRef.current = editor}
@@ -693,35 +640,11 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                                     fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                                                     font_formats: "Roboto=roboto, sans-serif, serif; Mohave=mohave, sans-serif, serif;Open Sans=open sans, sans-serif, serif;Lato=lato, sans-serif, serif; Red Hat Mono=red hat mono, sans-serif, serif; Montserrat=montserrat, sans-serif, serif; Roboto Condensed=roboto condensed, sans-serif, serif; Source Sans Pro= source sans pro, sans-serif, serif; Dongle=dongle, sans-serif, serif; Poppins=poppins, sans-serif, serif; Oswald=oswald, sans-serif, serif; Roboto Mono=roboto mono, sans-serif, serif; Raleway=raleway, sans-serif, serif; Ubuntu=ubuntu, sans-serif, serif; Merriweather=merriweather, sans-serif, serif",
 
-
                                                 }}
                                             />
                                         </h3>
                                     </div>
                                     <div className={Pricing2Css['card-body']}>
-                                        <div className="price1">
-                                            <Editor
-                                                onInit={(evt, editor) => editorRef.current = editor}
-                                                inline={true}
-                                                key='(pricing(2)33'
-                                                tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                                                initialValue={`<span  class="${Pricing2Css['nb1']} text-5xl text-red-700 font-bold">$29</span> <span class="font-light text-red-500 text-4xl">/yr</span>`}
-                                                init={{
-                                                    plugins: [
-                                                        "link"
-                                                    ],
-                                                    forced_root_block: "",
-                                                    menubar: false,
-                                                    toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                                        'alignright alignjustify | fontselect | lineheight',
-                                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                                    font_formats: "Roboto=roboto, sans-serif, serif; Mohave=mohave, sans-serif, serif;Open Sans=open sans, sans-serif, serif;Lato=lato, sans-serif, serif; Red Hat Mono=red hat mono, sans-serif, serif; Montserrat=montserrat, sans-serif, serif; Roboto Condensed=roboto condensed, sans-serif, serif; Source Sans Pro= source sans pro, sans-serif, serif; Dongle=dongle, sans-serif, serif; Poppins=poppins, sans-serif, serif; Oswald=oswald, sans-serif, serif; Roboto Mono=roboto mono, sans-serif, serif; Raleway=raleway, sans-serif, serif; Ubuntu=ubuntu, sans-serif, serif; Merriweather=merriweather, sans-serif, serif",
-
-
-                                                }}
-                                            />
-                                        </div>
-
                                         <ul className={Pricing2Css['price-ser']}>
                                             <li>
                                                 <Editor
@@ -729,7 +652,8 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                                     inline={true}
                                                     key='Prizing(2)14'
                                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                    initialValue="10 CCTV Cameras"
+                                                    initialValue="10 CCTV Cameras
+                                                    "
                                                     init={{
                                                         plugins: [
                                                             "link"
@@ -752,6 +676,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                                     key='Prizing(2)15'
                                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                                     initialValue="02 Security Guard"
+
                                                     init={{
                                                         plugins: [
                                                             "link"
@@ -803,7 +728,8 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                                     inline={true}
                                                     key='Prizing(2)17'
                                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                    initialValue="10 CCTV Cameras"
+                                                    initialValue="20 CCTV CAMERAS" 
+
                                                     init={{
                                                         plugins: [
                                                             "link"
@@ -852,7 +778,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                                     inline={true}
                                                     key='Prizing(2)19'
                                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                                    initialValue=">No Physical Protections"
+                                                    initialValue="No Physical Protections"
                                                     init={{
                                                         plugins: [
                                                             "link"

@@ -3,7 +3,7 @@
     width: 100%;
     height: 85px;
     background: #fff;
-    z-index: 200;
+    z-index: 1;
   }
   
   .template1Header  nav .navbar {

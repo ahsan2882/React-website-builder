@@ -22,7 +22,7 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-  margin: 120px auto;
+  margin: 50px auto 0;
 }
  
  
@@ -121,8 +121,9 @@ text-align: center;
 	
 }
 .pro-head{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: center;
+	font-weight: 800;
     padding: 20px;
   }
   .pro-para{
@@ -138,8 +139,10 @@ text-align: center;
     display: inline-block;
     margin-top: 20px;
     position: relative;
-   
+   background-color: #00d4ff;
     overflow: hidden;
+	display: inline-flex;
+	align-items: center;
     border-radius: 25px;
     z-index: 1;
   }

@@ -1,5 +1,9 @@
 .services-sec {
-   
+   background: url("https://i.ibb.co/Ky0n1bJ/blobthebuilder.jpg");
+
+   background-size: contain;
+   background-repeat: no-repeat;
+   height: 50vh;
     width: 100%;
   
   }
@@ -32,7 +36,7 @@
   }
   .main-heading {
 font-size: 2rem;
-margin: 2rem 3rem 0;
+margin: 2rem 3rem 3rem;
 font-weight: 700;
   }
   .para {
