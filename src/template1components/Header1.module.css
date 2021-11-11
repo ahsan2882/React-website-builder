@@ -23,6 +23,13 @@
     padding-bottom: 5em;
     margin-top: 2em;
   }
+  .sectionM {
+    right: 0;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 5em;
+    margin-top: 2em;
+  }
   
   
   .section .section-details {
@@ -39,6 +46,13 @@
     /* height: 800px; */
     padding-left: 100px;
     padding-top: 80px;
+  }
+  .section .section-details .leftM {
+    flex: 1;
+    /* height: 800px; */
+    padding-left: 20px;
+    padding-top: 30px;
+    width: 70%;
   }
   
   .section .section-details .right {
@@ -222,3 +236,28 @@
 /* =            Section 01 Closed          = */
 /* =                                         = */
 /* =========================================== */
+.headlineContentM{
+  font-size: 2rem;
+  font-weight: 500;
+  color:#00d4ff;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+.headlineContent1M{
+  font-size: 2rem;
+  font-weight: 500;
+  color:black;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+.rightM {
+  display: none;
+}
+@media(max-width:700px){
+  .headlineContent{
+    font-size: 2rem;
+  }
+  .headlineContent1{
+    font-size: 2rem;
+  }
+}
