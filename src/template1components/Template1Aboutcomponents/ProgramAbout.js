@@ -22,12 +22,12 @@ export default function ProgramAbout({ showPopup, overSection }) {
                <div className={`${programAboutmoduleCss['service-item-container']}`}>
                   <div className={`${programAboutmoduleCss['service-item']}  ${programAboutmoduleCss['fade-in']}`} style={{ background: currentBackground1 }} onClick={() => setShowPopup1(state => !state)}>
                      <div className={`${programAboutmoduleCss.bar}`}></div>
-                     <div className={`${programAboutmoduleCss.item}`}>
+                     {/* <div className={`${programAboutmoduleCss.item}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
                            key='About5'
-                           initialValue={`<img src="https://svgshare.com/i/bt1.svg"} alt="img"class="w-full" />`}
+                           initialValue={`<img src="https://svgshare.com/i/bt1.svg" alt="img" class="w-full" />`}
                            init={{
                               images_upload_handler: function (blobInfo, success, failure) {
                                  success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -42,7 +42,8 @@ export default function ProgramAbout({ showPopup, overSection }) {
                            }}
                         />
 
-                     </div>
+                     </div> */}
+                     <img src="https://svgshare.com/i/bt1.svg" alt="img" class="w-full" />
                      <h1 className={`${programAboutmoduleCss['pro-head']}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
@@ -115,12 +116,12 @@ export default function ProgramAbout({ showPopup, overSection }) {
                   </div>
                   <div style={{ background: currentBackground2 }} className={`${programAboutmoduleCss['service-item']}  ${programAboutmoduleCss['fade-in']}`} onClick={() => setShowPopup2(state => !state)}>
                      <div className={`${programAboutmoduleCss.bar}`}></div>
-                     <div className={`${programAboutmoduleCss.item}`}>
+                     {/* <div className={`${programAboutmoduleCss.item}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
                            key='About5'
-                           initialValue={`<img src="https://svgshare.com/i/buV.svg" alt="img"class="w-full" />`}
+                           initialValue={`<img src="https://svgshare.com/i/buV.svg" alt="img" class="w-full" />`}
                            init={{
                               images_upload_handler: function (blobInfo, success, failure) {
                                  success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -135,7 +136,8 @@ export default function ProgramAbout({ showPopup, overSection }) {
                            }}
                         />
 
-                     </div>
+                     </div> */}
+                     <img src="https://svgshare.com/i/buV.svg" alt="img" class="w-full" />
                      <h1 className={`${programAboutmoduleCss['pro-head']}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
@@ -213,7 +215,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
                   </div>
                   <div style={{ background: currentBackground3 }} className={`${programAboutmoduleCss['service-item']}  ${programAboutmoduleCss['fade-in']}`} onClick={() => setShowPopup3(state => !state)}>
                      <div className={`${programAboutmoduleCss.bar}`}></div>
-                     <div className={`${programAboutmoduleCss.item}`}>
+                     {/* <div className={`${programAboutmoduleCss.item}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
@@ -232,7 +234,8 @@ export default function ProgramAbout({ showPopup, overSection }) {
                               toolbar: 'image'
                            }}
                         />
-                     </div>
+                     </div> */}
+                     <img src="https://svgshare.com/i/bsp.svg" alt="img" class="w-full" />
                      <h1 className={`${programAboutmoduleCss['pro-head']}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
