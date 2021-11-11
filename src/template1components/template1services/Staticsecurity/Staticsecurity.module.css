@@ -84,6 +84,17 @@
 .txt-serv {
   display: flex;
 }
+.line1 {
+  font-size: 2.6rem;
+  color: #000;
+  font-weight: 700;
+}
+.line2 {
+  font-size: 2.6rem;
+
+  color: #00d4ff;
+  font-weight: 700;
+}
 .services-text2 p {
   padding-top: 20px;
   font-size: 16px;
