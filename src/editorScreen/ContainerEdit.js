@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import ContainerEditCss from './ContainerEdit.module.css'
 import lz from "lzutf8";
+// import tinymce from 'tinymce/tinymce';
 import { useDrop } from 'react-dnd'
 // import { Editor } from '@tinymce/tinymce-react';
 import { ItemTypes } from '../utils/items'
@@ -103,6 +104,7 @@ export default function ContainerEdit({ templateNum, setFileName, setLinksfunc, 
         
         
         if (saveClicked && linksfunc) {
+            // console.log(tinymce.get("Nav1Edit1").getContent())
             setHtmlString(getHTMLData())
             setCssString(getCSSData())
             setCompressed(lz.encodeBase64(lz.compress(htmlString)))

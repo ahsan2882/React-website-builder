@@ -22,7 +22,7 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-  margin: 120px auto;
+  margin: 120px auto 0;
 }
  
  
@@ -121,8 +121,9 @@ text-align: center;
 	
 }
 .pro-head{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: center;
+	font-weight: 800;
     padding: 20px;
   }
   .pro-para{

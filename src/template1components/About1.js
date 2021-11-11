@@ -108,11 +108,12 @@ export const About1 = ({ showPopup, overSection }) => {
             </div>
 
             <div className={`${About1Css['container11-image']}`}>
+              {/* <img src="https://i.ibb.co/GJ3Bh1Q/img-commited-to-business.png" alt="img-commited-to-business" border="0"> */}
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='About5'
-                initialValue={`<img src="https://i.ibb.co/QM1wmBp/img-commited-to-business.png" alt="img-commited-to-business" class="w-18/>`}
+                initialValue={`<img src="https://i.ibb.co/GJ3Bh1Q/img-commited-to-business.png" alt="img-commited-to-business" class="w-18/>`}
                 init={
                   {
                     images_upload_handler: function (blobInfo, success, failure) {

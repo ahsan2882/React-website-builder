@@ -1,5 +1,3 @@
-// import navbar2 from "../template2components/nav2Edits";
-
 const pages = {
     "template1pages": [
         {
@@ -20,12 +18,6 @@ const pages = {
         },
     ],
     "template2pages": 
-        // navbar2.map((item) => {
-        //     return {
-        //         "groupName": item.sectionName,
-        //         "subpages": item.subSections
-        //     }
-        // }),
         [
             {
                 "groupName": "Home",

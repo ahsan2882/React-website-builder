@@ -58,7 +58,7 @@ export const Prizing1 = ({ showPopup, overSection }) => {
 
         </div>
         <div className={`${Prizing1Css['container-1']}`}>
-          <div style={{ background: currentBackground1 }} className={`${Prizing1Css.box1} relative`} onClick={() => setShowPopup1(state => !state)}>
+          <div style={{ background: currentBackground1 }} className={`${Prizing1Css.box1} relative`} onMouseLeave={() => setShowPopup1(false)} onClick={() => setShowPopup1(state => !state)}>
             <header className={`${Prizing1Css['heading-price']}`}>
               <h2 style={{ fontWeight: `700` }} className={`${Prizing1Css.title1}`}>
                 <Editor
@@ -191,7 +191,7 @@ export const Prizing1 = ({ showPopup, overSection }) => {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Pricing9'
-                  initialValue="No Physical Protections"
+                 
                   init={{
                     plugins: [
                       "link"
@@ -211,6 +211,7 @@ export const Prizing1 = ({ showPopup, overSection }) => {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Pricing10'
+                  initialValue="No Security with dogs"
                   init={{
                     plugins: [
                       "link"
@@ -247,8 +248,8 @@ export const Prizing1 = ({ showPopup, overSection }) => {
               </li>
             </ul>
             <div className={`${Prizing1Css['btn-center']}`}>
-              <button className={`${Prizing1Css.btna}`}
-              >
+              <button className={`${Prizing1Css.btna}`}>
+              
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
@@ -267,20 +268,23 @@ export const Prizing1 = ({ showPopup, overSection }) => {
 
                   }}
                 />
-                <i className={`${Prizing1Css['fas fa-long-arrow-alt-right']}`}></i></button>
+                <i style={{marginLeft:`5px`}} className="fas fa-long-arrow-alt-right"></i>
+                </button>
             </div>
             <div style={(showPopup1) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
-              <GithubPicker
-                triangle="top-right"
-                onChangeComplete={(color) => {
-                  setCurrentBackground1(color.hex);
-                }}
-              />
-            </div>
+            <GithubPicker
+              triangle="top-right"
+              onChangeComplete={(color) => {
+                setCurrentBackground1(color.hex);
+              }}
+            />
+          </div>
           </div>
 
+          
 
-          <div style={{ background: currentBackground2 }} className={`${Prizing1Css.box2}`} onClick={() => setShowPopup2(state => !state)}>
+
+          <div style={{ background: currentBackground2 }} className={`${Prizing1Css.box2} relative`} onMouseLeave={() => setShowPopup2(false)} onClick={() => setShowPopup2(state => !state)}>
             <header className={`${Prizing1Css['heading-price']}`}>
               <h2 className={`${Prizing1Css.title2}`}>
                 <Editor
@@ -473,6 +477,7 @@ export const Prizing1 = ({ showPopup, overSection }) => {
 
             <div className={`${Prizing1Css['btn-center']}`}>
               <button className={`${Prizing1Css.btna2}`}>
+       
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
@@ -491,10 +496,10 @@ export const Prizing1 = ({ showPopup, overSection }) => {
 
                   }}
                 />
-                <i className={`${Prizing1Css['fas fa-long-arrow-alt-right']}`}></i></button>
+                       <i style={{marginLeft:`5px`}} className="fas fa-long-arrow-alt-right"></i>
+                </button>
             </div>
-          </div>
-          <div style={(showPopup2) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+            <div style={(showPopup2) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
             <GithubPicker
               triangle="top-right"
               onChangeComplete={(color) => {
@@ -502,7 +507,9 @@ export const Prizing1 = ({ showPopup, overSection }) => {
               }}
             />
           </div>
-          <div style={{ background: currentBackground3 }} className={`${Prizing1Css.box1}`} onClick={() => setShowPopup3(state => !state)}>
+          </div>
+          
+          <div style={{ background: currentBackground3 }} className={`${Prizing1Css.box1} relative`} onMouseLeave={() => setShowPopup3(false)} onClick={() => setShowPopup3(state => !state)}>
             <header className={`${Prizing1Css['heading-price']}`}>
               <h2 className={`${Prizing1Css.title3}`}>
                 <Editor
@@ -712,10 +719,11 @@ export const Prizing1 = ({ showPopup, overSection }) => {
 
                   }}
                 />
-                <i className={`${Prizing1Css['fas fa-long-arrow-alt-right']}`}></i></button>
+              <i style={{marginLeft:`5px`}} className="fas fa-long-arrow-alt-right"></i>
+
+                </button>
             </div>
-          </div>
-          <div style={(showPopup3) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+            <div style={(showPopup3) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
             <GithubPicker
               triangle="top-right"
               onChangeComplete={(color) => {
@@ -723,6 +731,8 @@ export const Prizing1 = ({ showPopup, overSection }) => {
               }}
             />
           </div>
+          </div>
+          
         </div>
       </div>
       <div style={(overSection && showPopup) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">

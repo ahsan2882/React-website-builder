@@ -68,7 +68,7 @@ export const News1 = ({ showPopup, overSection }) => {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='News3'
-                  initialValue={`  <img src="https://i.ibb.co/C1JXjPn/news1.png" alt="news1" class="w-full" />`}
+                  initialValue={`  <img src="https://i.ibb.co/tJdb2JZ/news1.png" alt="about" class="w-full" />`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -165,7 +165,7 @@ export const News1 = ({ showPopup, overSection }) => {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='News7'
-                  initialValue={`<img src="https://i.ibb.co/44k7Zqv/news2.png" alt="news2" class="w-full" />`}
+                  initialValue={`<img src="https://i.ibb.co/kqLdps8/news2.png" alt="about" class="w-full" />`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -260,7 +260,7 @@ export const News1 = ({ showPopup, overSection }) => {
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='News7'
-                  initialValue={`<img src="https://i.ibb.co/QkSfTJw/news3.png" alt="news3" class="w-full" />`}
+                  initialValue={`<img src="https://i.ibb.co/c8STtRy/news3.png" alt="news3" class="w-full" />`}
                   init={{
                     images_upload_handler: function (blobInfo, success, failure) {
                       success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
