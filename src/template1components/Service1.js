@@ -269,7 +269,7 @@ export const Service1 = ({ showPopup, overSection }) => {
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
               key='Service10'
-              initialValue="Sign Up"
+              initialValue={`Sign Up <i class="fas fa-long-arrow-alt-right"></i>`}
               init={{
                 plugins: [
                   "link"
