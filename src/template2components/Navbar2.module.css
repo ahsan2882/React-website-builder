@@ -98,8 +98,8 @@
 }
 
 .call-to-action:hover {
-  background: var(--clr-primary);
-  color: var(--clr-light);
+  background: #c0272d;
+  color:white;
 }
 
 .navbar1 .nav-links .menus .sub-menu {
@@ -112,7 +112,7 @@
     rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
   /* border-radius: 0 0 5px 5px; */
   display: none;
-  z-index: -0.5;
+  z-index: 9999999;
 }
 
 .navbar1 .nav-links .menus .sub-menu li {
@@ -129,8 +129,8 @@
   display: block;
 }
 .navbar1 .nav-links .menus .sub-menu li a:hover {
-  background-color: var(--clr-primary);
-  color: var(--clr-light);
+  background-color: #c0272d;
+  color: white;
 }
 
 .pnt {
