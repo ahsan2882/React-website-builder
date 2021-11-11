@@ -55,8 +55,8 @@ export default function Contactform1() {
 
                         <div className={`${Contactform1Css['grid-contact']} ${Contactform1Css['grid-33']} ${Contactform1Css['mar']}`}>
                             <div className={Contactform1Css['card-cont']}>
-                                <i className="fas fa-address-book fa-3x"></i>
-                                <h4>
+                                <i className="fas fa-address-book fa-2x"></i>
+                                <h4 style={{margin:`5px 0 0` , fontWeight:`800`, fontSize:`27px`}}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
@@ -96,8 +96,9 @@ export default function Contactform1() {
                                 />
 
                             </div>
-                            <div className={Contactform1Css['card-cont']}>
-                                <i className="fas fa-phone fa-3x"></i>
+                            <div  className={Contactform1Css['card-cont']}>
+                                <i className="fas fa-phone fa-2x"></i>
+                                <h4 style={{margin:`5px 0 0` , fontWeight:`800`, fontSize:`27px`}}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -116,6 +117,7 @@ export default function Contactform1() {
 
                                     }}
                                 />
+                                </h4>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -137,12 +139,14 @@ export default function Contactform1() {
 
                             </div>
                             <div className={Contactform1Css['card-cont']}>
-                                <i className="fas fa-envelope fa-3x"></i>
+
+                                <i  className="fas fa-envelope fa-2x"></i>
+                                <h4 style={{margin:`5px 0 0` , fontWeight:`800`, fontSize:`27px`}}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='Contact6'
-                                    initialValue="<h4>Email</h4>"
+                                    initialValue="Email"
                                     init={{
                                         plugins: [
                                             "link"
@@ -156,6 +160,7 @@ export default function Contactform1() {
 
                                     }}
                                 />
+                                </h4>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
