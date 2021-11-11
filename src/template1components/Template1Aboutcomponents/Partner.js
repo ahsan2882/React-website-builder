@@ -14,7 +14,7 @@ export default function Partner({ showPopup, overSection }) {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='Guard1'
-                        initialValue=" Our Partner"
+                        initialValue=" Our Partners"
                         init={{
                             plugins: [
                                 "link"
