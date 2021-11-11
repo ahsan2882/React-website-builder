@@ -7,52 +7,6 @@ export default function Navbar3({ displayDevice, linksfunc }) {
     const editorRef = useRef(null);
     return (
         <>
-            {/* <section className={`${Navbar3moduleCss.navbar3}`}>
-<div className={`${Navbar3moduleCss['row-nav']}`}>
-    <div className={`${Navbar3moduleCss.col1}`}>
-    <img src="https://i.ibb.co/y68gwmt/logo-security-red-black.png" alt="logo-security-red-black" border="0">
-<Editor
-                                onInit={(evt, editor) => editorRef.current = editor}
-                                inline={true}
-                                key='Service4'
-                                initialValue={` <img src="${logo}" alt="image" class="w-12 h-12 object-cover"/>`}
-                                init={
-                                    {
-                                        forced_root_block: "",
-                                        menubar: false,
-                                        images_upload_handler: function (blobInfo, success, failure) {
-                                            success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
-                                        },
-                                        images_upload_url: '/upload-images',
-                                        plugins: [
-                                            "image"
-                                        ],
-                                        toolbar: 'image'
-                                    }}
-                            />
-
-
-
-</div>
-
-<ul className={`${Navbar3moduleCss.list}`}>
-<li> Home </li>
-<li> About </li>
-<li> Services </li>
-<li> Sectors </li>
-<li> Contact us </li>
-<button>
-020 7946 0020
-</button>
-</ul>
-</div>
-
-
-
-
-
-</section> */}
-
             <header className="w-full h-20 font-bold">
                 <nav>
                     <ul className={`flex justify-between items-center ${Navbar3moduleCss.navbar2}`}>
@@ -91,7 +45,6 @@ export default function Navbar3({ displayDevice, linksfunc }) {
                                 </li>
                                 <li className={`${Navbar3moduleCss.menu} px-4 py-4`}>SECTORS
                                     <ul className={`${Navbar3moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        {/* {navbar2.sectorLinks.map((item, index) => <li>{linksfunc ? <a href={`${item.toLowerCase().replace(" &", "").replace(" ", "-")}.html`} className="no-underline">{item.toUpperCase()}</a> : <>{item.toUpperCase()}</>}</li>)} */}
                                         <li>CONSTRUCTION</li>
                                         <li>CORPORATE</li>
                                         <li>INDUSTRIAL</li>
@@ -102,7 +55,6 @@ export default function Navbar3({ displayDevice, linksfunc }) {
                                 </li>
                                 <li className={`${Navbar3moduleCss.menu} px-4 py-4`}>SERVICES
                                     <ul className={`${Navbar3moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        {/* {navbar2.serviceLinks.map((item, index) => <li>{linksfunc ? <a href={`${item.toLowerCase().replace(" &", "").replace(" ", "-")}.html`} className="no-underline">{item.toUpperCase()}</a> : <>{item.toUpperCase()}</>}</li>)} */}
                                         <li>STATIC SECURITY</li>
                                         <li>MOBILE PATROLLING</li>
                                         <li>CCTV MONITORING</li>
@@ -116,7 +68,6 @@ export default function Navbar3({ displayDevice, linksfunc }) {
                                         <li>24/7 SURVEILLANCE</li>
                                     </ul>
                                 </li>
-                                {/* {navbar2.map((item) => item.subSections.length > 1 ? <li className="px-4 py-4">{item.isLink && linksfunc ? <a>{item.sectionName.toUpperCase()}</a> : <>{item.sectionName.toUpperCase()}</>}</li> : <li className={`${Navbar3moduleCss.menu} px-4 py-4`}>{item.sectionName.toUpperCase()}<ul className={`${Navbar3moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>{item.subSections.map((items) => <li>{ it}</li>)}</ul></li>)} */}
                                 <li className="px-4 py-4">{linksfunc ? <a href="contact.html" className="no-underline">CONTACT</a> : <>CONTACT</>}</li>
                                 <li className="px-4 py-4">
                                     <lord-icon
