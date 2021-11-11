@@ -107,11 +107,11 @@ import Contact3form from '../template3components/template3Contact/Contact3form'
 import Contact3feedback from '../template3components/template3Contact/Contact3feedback'
 import Contact1banner from "../template1components/template1contact/Contact1banner";
 import Contactform1 from '../template1components/template1contact/Contactform1'
-import Pricing3 from "../template3components/Pricing3";
 import About3banner from '../template3components/template3about/About3banner'
 import Aboutvission from '../template3components/template3about/Aboutvission'
 import AboutService3 from '../template3components/template3about/AboutService3'
 import AboutPolicy3 from '../template3components/template3about/AboutPolicy3'
+import Pricing3About from "../template3components/template3about/Pricing3About";
 
 export const templateComponents = {
     template1Components: [
@@ -290,7 +290,7 @@ export const templateComponents = {
         {
             groupName: "about",
             pageName: "About",
-            pageSections: [Navbar3, About3banner, Aboutvission, AboutService3, Pricing3, Guard3, Accrediation3, AboutPolicy3, Footer3]
+            pageSections: [Navbar3, About3banner, Aboutvission, AboutService3, Pricing3About, Guard3, Accrediation3, AboutPolicy3, Footer3]
         },
         {
             groupName: "contact",
