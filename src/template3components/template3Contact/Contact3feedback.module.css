@@ -1,20 +1,3 @@
-html {
-    --clr-secondary-light: #292929;
-    --clr-secondary: #000000;
-  
-    --clr-gray: #dddddd;
-    --clr-light: #ffff;
-    --clr-font: #fff;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-  
-    --clr-primary: #ffff;
-    --clr-white-smoke: #000;
-    --clr-red-new: #c01120;
-    --clr-black-new: #000;
-  }
-
-
 .container-main {
     padding: 33px  120px !important;
 }
@@ -55,7 +38,7 @@ html {
     background-color: white;
   }
   .paragraph {
-    color: var(--clr-light);
+    color: white;
     font-weight: 500;
   }
   .button-sqr {
@@ -73,7 +56,7 @@ html {
     background: linear-gradient(
         to right,
         rgb(0, 0, 0) 50%,
-        var(--clr-red-new) 50%
+        #c01120 50%
       )
       left;
     background-size: 200%;
@@ -81,7 +64,7 @@ html {
   }
   .button-sqr:hover {
     background-position: right;
-    color: var(--clr-secondary);
+    color: black;
   }
   .heading2-main-title {
     display: flex;
@@ -92,7 +75,7 @@ html {
   }
   .heading2-main-title h3 {
     font-size: 1.5em;
-    border-bottom: 1px solid var(--clr-red-new);
+    border-bottom: 1px solid #c01120;
     color: #575757;
     padding: 17px 0;
   }
@@ -104,7 +87,7 @@ html {
     position: absolute;
     height: 4px;
     width: 30%;
-    background: var(--clr-red-new);
+    background: #c01120;
     left: 0;
     bottom: -2px;
   }
