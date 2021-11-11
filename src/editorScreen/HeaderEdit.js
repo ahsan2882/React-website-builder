@@ -37,6 +37,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
         }
         else if (templateNum === 0) {
             setNewPath('/preview/new-template')
+            setCurrentTemp("New-Template")
         }
 
     }, [templateNum])
