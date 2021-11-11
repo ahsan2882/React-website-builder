@@ -91,7 +91,7 @@ export const Testimonials1 = ({ showPopup, overSection }) => {
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
               key='Testimonal5'
-              initialValue={`<p class="${Testimonial1Css['testimonial-author']}"> Alicia McKanzey</p>`}
+              initialValue={`<p class="${Testimonial1Css['testimonial-author']}">- Alicia McKanzey</p>`}
               init={{
                 forced_root_block: "",
                 menubar: false,
