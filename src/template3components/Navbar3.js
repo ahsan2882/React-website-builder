@@ -53,7 +53,7 @@ export default function Navbar3({ displayDevice, linksfunc }) {
 
 </section> */}
 
-            <header className="absolute top-0 left-0 z-10 w-full h-20 font-bold">
+            <header className="w-full h-20 font-bold">
                 <nav>
                     <ul className={`flex justify-between items-center ${Navbar3moduleCss.navbar2}`}>
                         <li className={displayDevice ? "hidden" : "block"}>
