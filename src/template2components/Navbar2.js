@@ -1,10 +1,52 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Navbar2moduleCss from './Navbar2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
 export const Navbar2 = ({ displayDevice, linksfunc }) => {
     const editorRef = useRef();
-
+    const navSectorArray = [
+        "CONSTRUCTION",
+        "CORPORATE",
+        "INDUSTRIAL",
+        "RETAIL",
+        "LOGISTICS",
+        "PROPERTY MANAGEMENT"
+    ]
+    const navServiceArray = [
+        "STATIC SECURITY",
+        "MOBILE PATROLLING",
+        "CCTV MONITORING",
+        "LOCK & UNLOCK",
+        "VACANT UNIT CHECKS",
+        "TECHNOLOGY PRODUCT",
+        "MANNED GUARDING",
+        "SUPPORT & MANAGEMENT",
+        "EVENT SECURITY",
+        "GUARD HOUSE",
+        "24/7 SURVEILLANCE"
+    ]
+    const [navSector, setNavSector] = useState(navSectorArray)
+    const [navServices, setNavServices] = useState(navServiceArray)
+    const removeService = (index) => {
+        let newArray = [...navServices];
+        newArray.splice(index, 1);
+        setNavServices([...newArray])
+    }
+    const removeSector = (index) => {
+        let newArray = [...navSector];
+        newArray.splice(index, 1);
+        setNavSector([...newArray])
+    }
+    const addSector = () => {
+        let newArray = [...navSector];
+        newArray.push(navSectorArray[0]);
+        setNavSector([...newArray])
+    }
+    const addService = () => {
+        let newArray = [...navServices];
+        newArray.push(navServiceArray[0]);
+        setNavServices([...newArray])
+    }
     return (
         <>
             <header className="absolute top-0 left-0 z-10 w-full h-20 font-bold">
@@ -20,45 +62,19 @@ export const Navbar2 = ({ displayDevice, linksfunc }) => {
                         <li className={Navbar2moduleCss.hide}>
                             <ul className={displayDevice ? "flex items-center justify-around text-white" : "hidden"} style={{ width: "30rem" }}>
                                 <li className="px-4 py-4">{linksfunc ? <a href="index.html" className="no-underline">HOME</a> : <>HOME</>}</li>
-                                <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>{linksfunc ? <a href="about.html">ABOUT</a> : <>ABOUT</>}
-                                    <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        <li>{linksfunc ? <a href="about.html#our-vison">OUR VISION</a> : <>OUR VISION</>}</li>
-                                        <li>{linksfunc ? <a href="about.html#our-experience">OUR EXPERIENCE</a> : <>OUR EXPERIENCE</>}</li>
-                                        <li>{linksfunc ? <a href="about.html#our-policies">OUR POLICIES</a> : <>OUR POLICIES</>}</li>
-                                        <li>{linksfunc ? <a href="about.html#our-prices">OUR PRICES</a> : <>OUR PRICES</>}</li>
-                                        <li>{linksfunc ? <a href="about.html#our-accreditations">OUR ACCREDITATIONS</a> : <>OUR ACCREDITATIONS</>}</li>
-                                        <li>{linksfunc ? <a href="about.html#our-team">OUR TEAM</a> : <>OUR TEAM</>}</li>
-                                        <li>{linksfunc ? <a href="about.html#our-partners">OUR PARTNERS</a> : <>OUR PARTNERS</>}</li>
-                                    </ul>
-                                </li>
+                                <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>{linksfunc ? <a href="about.html">ABOUT</a> : <>ABOUT</>}</li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SECTORS
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        <li>{linksfunc ? <a href="construction.html">CONSTRUCTION</a> : <>CONSTRUCTION</>}</li>
-                                        <li>{linksfunc ? <a href="corporate.html">CORPORATE</a> : <>CORPORATE</>}</li>
-                                        <li>{linksfunc ? <a href="industrial.html">INDUSTRIAL</a> : <>INDUSTRIAL</>}</li>
-                                        <li>{linksfunc ? <a href="retail.html">RETAIL</a> : <>RETAIL</>}</li>
-                                        <li>{linksfunc ? <a href="logistics.html">LOGISTICS</a> : <>LOGISTICS</>}</li>
-                                        <li>{linksfunc ? <a href="property-management.html">PROPERTY MANAGEMENT</a> : <>PROPERTY MANAGEMENT</>}</li>
+                                        {navSector.map((items, indexs) => <li className="flex justify-between items-center">{linksfunc ? <a href={items.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{items}</a> : <>{items}</>}<button className="toBeRemoved" onClick={() => removeSector(indexs)}><i className="ml-4 fas fa-trash-alt"></i></button></li>)}
+                                        <li className={`flex mt-8 mx-4 mb-0 justify-between toBeRemoved`}><button onClick={() => addSector()}><i className="fas fa-plus"></i> ADD NEW SECTOR</button></li>
                                     </ul>
                                 </li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SERVICES
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        {/* {navbar2.serviceLinks.map((item, index) => <li>{linksfunc ? <a href={`${item.toLowerCase().replace(" &", "").replace(" ", "-")}.html`} className="no-underline">{item.toUpperCase()}</a> : <>{item.toUpperCase()}</>}</li>)} */}
-                                        <li>{linksfunc ? <a href="static-security.html">STATIC SECURITY</a> : <>STATIC SECURITY</>}</li>
-                                        <li>{linksfunc ? <a href="mobile-patrolling.html">MOBILE PATROLLING</a> : <>MOBILE PATROLLING</>}</li>
-                                        <li>{linksfunc ? <a href="cctv-monitoring.html">CCTV MONITORING</a> : <>CCTV MONITORING</>}</li>
-                                        <li>{linksfunc ? <a href="lock-unlock.html">LOCK & UNLOCK</a> : <>LOCK & UNLOCK</>}</li>
-                                        <li>{linksfunc ? <a href="vacant-unit-checks.html">VACANT UNIT CHECKS</a> : <>VACANT UNIT CHECKS</>}</li>
-                                        <li>{linksfunc ? <a href="technology-product.html">TECHNOLOGY PRODUCT</a> : <>TECHNOLOGY PRODUCT</>}</li>
-                                        <li>{linksfunc ? <a href="manned-guarding.html">MANNED GUARDING</a> : <>MANNED GUARDING</>}</li>
-                                        <li>{linksfunc ? <a href="support-management.html">SUPPORT & MANAGEMENT</a> : <>SUPPORT & MANAGEMENT</>}</li>
-                                        <li>{linksfunc ? <a href="event-security.html">EVENT SECURITY</a> : <>EVENT SECURITY</>}</li>
-                                        <li>{linksfunc ? <a href="guard-house.html">GUARD HOUSE</a> : <>GUARD HOUSE</>}</li>
-                                        <li>{linksfunc ? <a href="24-7-surveillance.html">24/7 SURVEILLANCE</a> : <>24/7 SURVEILLANCE</>}</li>
+                                        {navServices.map((item, index) => <li className="flex justify-between items-center">{linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{item}</a> : <>{item}</>}<button className="toBeRemoved" onClick={() => removeService(index)}><i className="ml-4 fas fa-trash-alt"></i></button></li>)}
+                                        <li className={`flex mt-8 mx-4 mb-0 justify-between toBeRemoved`}><button onClick={() => addService()}><i className="fas fa-plus"></i> ADD NEW SERVICE</button></li>
                                     </ul>
                                 </li>
-                                {/* {navbar2.map((item) => item.subSections.length > 1 ? <li className="px-4 py-4">{item.isLink && linksfunc ? <a>{item.sectionName.toUpperCase()}</a> : <>{item.sectionName.toUpperCase()}</>}</li> : <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>{item.sectionName.toUpperCase()}<ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>{item.subSections.map((items) => <li>{ it}</li>)}</ul></li>)} */}
-
                             </ul>
                         </li>
                         <li>
