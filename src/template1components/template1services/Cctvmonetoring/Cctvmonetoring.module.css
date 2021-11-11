@@ -15,6 +15,17 @@
     transform: translateX(0);
     opacity: 1;
   }
+  .line1 {
+    font-size: 2.6rem;
+    color: #000;
+    font-weight: 700;
+  }
+  .line2 {
+    font-size: 2.6rem;
+  
+    color: #00d4ff;
+    font-weight: 700;
+  }
   .services-text h1 {
     overflow: visible;
     font-size: 40px;
