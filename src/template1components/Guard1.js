@@ -64,9 +64,27 @@ export const Guard1 = ({ showPopup, overSection }) => {
         </div>
         <div style={{ background: currentBackground }} className={`${Guard1Css.wrapper2}`}>
           <div className={`${Guard1Css.blog2}`}>
-            <div style={{ background: currentBackground1 }} className={`${Guard1Css['single-blog']}`} onClick={() => setShowPopup1(state => !state)}>
+            <div className={`${Guard1Css['single-blog']}`}>
               <div className={`${Guard1Css['blog-img']}`}>
-                <img src="https://i.ibb.co/c8RG8Lh/ourteam.png" alt="ourteam" />
+              <Editor
+                  onInit={(evt, editor) => editorRef.current = editor}
+                  inline={true}
+                  key='News3'
+                  initialValue={`  <img src="https://i.ibb.co/c8RG8Lh/ourteam.png" alt="ourteam" class="w-60 h-full" />`}
+                  init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
+                    forced_root_block: "",
+                    menubar: false,
+                    plugins: [
+                      "image"
+                    ],
+                    toolbar: 'image'
+                  }}
+                />
+          
 
               </div>
 
@@ -124,8 +142,25 @@ export const Guard1 = ({ showPopup, overSection }) => {
             </div>
             <div style={{ background: currentBackground2 }} className={`${Guard1Css['single-blog']}`} onClick={() => setShowPopup2(state => !state)}>
               <div className={`${Guard1Css['blog-img']}`}>
-                <img src="https://i.ibb.co/TqJDmw8/ourteam2.png" alt="ourteam2" />
-
+     
+                <Editor
+                  onInit={(evt, editor) => editorRef.current = editor}
+                  inline={true}
+                  key='News3'
+                  initialValue={`  <img src="https://i.ibb.co/TqJDmw8/ourteam2.png" alt="ourteam2" class="w-60 h-full" />`}
+                  init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
+                    forced_root_block: "",
+                    menubar: false,
+                    plugins: [
+                      "image"
+                    ],
+                    toolbar: 'image'
+                  }}
+                />
               </div>
 
               <div className={`${Guard1Css['blog-content']}`}>
@@ -182,8 +217,25 @@ export const Guard1 = ({ showPopup, overSection }) => {
             </div>
             <div style={{ background: currentBackground3 }} className={`${Guard1Css['single-blog']}`} onClick={() => setShowPopup3(state => !state)}>
               <div className={`${Guard1Css['blog-img']}`}>
-                <img src="https://i.ibb.co/VpyLN72/ourteam3.png" alt="ourteam3" />
-
+                <img  />
+                <Editor
+                  onInit={(evt, editor) => editorRef.current = editor}
+                  inline={true}
+                  key='News3'
+                  initialValue={`  <img src="https://i.ibb.co/VpyLN72/ourteam3.png" alt="ourteam3" class="w-60 h-full" />`}
+                  init={{
+                    images_upload_handler: function (blobInfo, success, failure) {
+                      success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                    },
+                    images_upload_url: '/upload-images',
+                    forced_root_block: "",
+                    menubar: false,
+                    plugins: [
+                      "image"
+                    ],
+                    toolbar: 'image'
+                  }}
+                />
               </div>
 
               <div className={`${Guard1Css['blog-content']}`}>
