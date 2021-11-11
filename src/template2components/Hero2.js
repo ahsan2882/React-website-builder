@@ -14,7 +14,7 @@ export const Hero2 = ({ displayDevice, showPopup, overSection, linksfunc }) => {
             <section className="overflow-hidden">
                 {backgroundType === "color" ? <Hero2ColorComponent color={currentBackgroundColor} displayDevice={displayDevice} linksfunc={linksfunc} /> : null}
                 {backgroundType === "image" ? <Hero2ImageComponent displayDevice={displayDevice} linksfunc={linksfunc} /> : null}
-                <div className="toBeRemoved" style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "9999999" } : { display: "none" }}>
+                <div className="toBeRemoved" style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "3" } : { display: "none" }}>
                     <div className="flex flex-col justify-center items-center border-2 border-black w-64 rounded-lg bg-white">
                         <button className="py-4" onClick={() => setBackgroundType("color")}>Color</button>
                         {backgroundType === "color" ? <GithubPicker
@@ -40,7 +40,7 @@ const Hero2ColorComponent = ({ color, displayDevice, linksfunc }) => {
             <section style={{ background: color }} className={`${Hero2moduleCss.heroSection} relative`}>
                 <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
                 <img src="https://i.ibb.co/VwB7mhG/Path-7.png" alt="Pah 7" className="w-full h-full" />
-                <section className="absolute bottom-8 right-1/4 z-10">
+                <section className="absolute bottom-8 right-1/4" style={{zIndex:"2"}}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
