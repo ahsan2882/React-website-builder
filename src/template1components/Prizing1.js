@@ -58,7 +58,7 @@ export const Prizing1 = ({ showPopup, overSection }) => {
 
         </div>
         <div className={`${Prizing1Css['container-1']}`}>
-          <div style={{ background: currentBackground1 }} className={`${Prizing1Css.box1}`} onClick={() => setShowPopup1(state => !state)}>
+          <div style={{ background: currentBackground1 }} className={`${Prizing1Css.box1} relative`} onClick={() => setShowPopup1(state => !state)}>
             <header className={`${Prizing1Css['heading-price']}`}>
               <h2 style={{ fontWeight: `700` }} className={`${Prizing1Css.title1}`}>
                 <Editor
@@ -269,16 +269,14 @@ export const Prizing1 = ({ showPopup, overSection }) => {
                 />
                 <i className={`${Prizing1Css['fas fa-long-arrow-alt-right']}`}></i></button>
             </div>
-
-          </div>
-
-          <div style={(showPopup1) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
-            <GithubPicker
-              triangle="top-right"
-              onChangeComplete={(color) => {
-                setCurrentBackground1(color.hex);
-              }}
-            />
+            <div style={(showPopup1) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+              <GithubPicker
+                triangle="top-right"
+                onChangeComplete={(color) => {
+                  setCurrentBackground1(color.hex);
+                }}
+              />
+            </div>
           </div>
 
 
