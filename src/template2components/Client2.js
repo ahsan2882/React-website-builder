@@ -22,7 +22,7 @@ export const Client2 = ({ displayDevice, showPopup, overSection }) => {
               inline={true}
               key='About(2)48'
               tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-              initialValue={`<span class="${Client2moduleCss.SpanColor}"> Client  </span> Says`}
+              initialValue={`<span class="${Client2moduleCss.SpanColor}">OUR    </span> CLIENT SAYS`}
               init={{
                 plugins: [
                   "link"
