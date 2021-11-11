@@ -60,7 +60,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
         setTimeout(() => {
             setLinksfunc(false);
             setSaveClicked(false);
-        }, 5000);
+        }, 2700);
         // console.log(fileData)
     }
     const exportCode = () => {
