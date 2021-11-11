@@ -1,19 +1,3 @@
-html {
-    --clr-secondary-light: #292929;
-    --clr-secondary: #000000;
-  
-    --clr-gray: #dddddd;
-    --clr-light: #ffff;
-    --clr-font: #fff;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
- 
-    /* --clr-primary: #0f0e30; */
-    --clr-primary: #ffff;
-    --clr-white-smoke: #000;
-    --clr-red-new: #c01120;
-    --clr-black-new: #000;
-  }
 
   .container-main {
     padding: 30px 90px;     
@@ -26,8 +10,8 @@ html {
     padding: 16px 0;
   }
   .heading2-main-title h3 {
-    font-size: 1.5em;
-    border-bottom: 1px solid var(--clr-red-new);
+    font-size: 0.94em;
+    border-bottom: 1px solid #c01120;
     color: #575757;
     padding: 17px 0;
   }
@@ -39,23 +23,23 @@ html {
     position: absolute;
     height: 4px;
     width: 30%;
-    background: var(--clr-red-new);
+    background: #c01120;
     left: 0;
     bottom: -2px;
   }
   .heading2-main-title h1 {
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 4px;
   }
  
 .heading-main-v2 h1 {
-    font-size: 30px;
-    color: var(--clr-secondary);
+    font-size: 25px;
+    color: black;
   }
   .heading-main-v2 p {
-    color: var(--clr-font);
+    color: white;
     font-size: 10px;
   }
   .heading-main-v2 {
@@ -64,10 +48,10 @@ html {
     flex-direction: column;
   }
   .heading-main-v3 h1 {
-    font-size: 70px;
+    font-size: 60px;
   }
   .heading-main-v3 p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .heading-main-v3 {
     padding: 50px 0;
@@ -76,12 +60,12 @@ html {
   }
   
   .policy-content h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .policy-content p {
     padding-top: 40px;
     padding-right: 90px;
-    font-size: 20px;
+    font-size: 18px;
   }
   
   .policy_top {
@@ -94,7 +78,7 @@ html {
   }
   .pol-icon {
     border-radius: 40%;
-    background-color: var(--clr-red-new);
+    background-color: #c01120;
   }
   .policy_bottom {
     display: flex;
@@ -102,7 +86,7 @@ html {
     justify-content: space-evenly;
   }
   .pol-para {
-    font-size: 20px;
+    font-size: 18px;
     padding: 30px;
   }
   .policy_bottom {
@@ -126,6 +110,6 @@ html {
       .policy-content p {
         padding-top: 40px;
         padding-right: 20px;
-        font-size: 20px;
+        font-size: 18px;
       }
     }
