@@ -31,9 +31,9 @@ export default function Navbar1({ displayDevice, linksfunc }) {
 
       <header className={`${Navbar1moduleCss.template1Header}`}>
         <nav>
-          <div className={`${Navbar1moduleCss.navbar}`}>
+          <div className={displayDevice ? `${Navbar1moduleCss.navbar}` : `${Navbar1moduleCss.navbarM}`}>
 
-            <div className={`${Navbar1moduleCss.logo}`}>
+            <div className={displayDevice ? `${Navbar1moduleCss['sidebar-logo']}` : `${Navbar1moduleCss['sidebar-logoM']}`}>
               <button style={{ fontWeight: `600` }} >
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
@@ -54,11 +54,8 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                   }}
                 />
               </button></div>
-            <div className={`${Navbar1moduleCss['nav-links']}`}>
-              <div className={`${Navbar1moduleCss['sidebar-logo']}`}>
-                <i className={`${Navbar1moduleCss['fas fa-times']}`}></i>
-              </div>
-              <ul className={`${Navbar1moduleCss.menus}`}>
+            <div className={displayDevice ? `${Navbar1moduleCss['nav-links']}` : `${Navbar1moduleCss['nav-linksM']}`}>
+              <ul className={displayDevice ? `${Navbar1moduleCss.menus}` : `${Navbar1moduleCss.menusM}`}>
                 <li><button className={`${Navbar1moduleCss.line}`}>{linksfunc ? <a href="index.html">HOME</a> : <>
                   {/* <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
@@ -75,7 +72,7 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                 </>}</button></li>
                 <li><button className={`${Navbar1moduleCss.line}`} >{linksfunc ? <a href="about.html">ABOUT</a> : <>ABOUT</>}</button></li>
                 <li><button className={`${Navbar1moduleCss.line}`}>SERVICES</button>
-                  <ul className={`${Navbar1moduleCss['sub-menu']}`}>
+                  <ul className={displayDevice ? `${Navbar1moduleCss['sub-menu']}` : `${Navbar1moduleCss['sub-menuM']}`}>
                     {navServices.map((item, index) => <li className="flex justify-between items-center">{linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{item}</a> : <>{item}</>}<button className="toBeRemoved" onClick={() => removeService(index)}><i className="fas fa-trash-alt"></i></button></li>)}
                     <li className="flex justify-between items-center toBeRemoved"><button onClick={() => addService()}><i className="fas fa-plus"></i> ADD NEW SERVICE</button></li>
                     {/* <li>{linksfunc ? <a href="static-security.html">STATIC SECURITY</a> : <>STATIC SECURITY</>}</li>
