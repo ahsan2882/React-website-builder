@@ -14,9 +14,9 @@ export const Header1 = ({ showPopup, overSection, displayDevice, linksfunc }) =>
       <Navbar1 displayDevice={displayDevice} linksfunc={ linksfunc}/>
 
 
-      <section style={{ background: currentBackground }} className={`${Header1Css.section}`}>
+      <section style={{ background: currentBackground }} className={displayDevice ? `${Header1Css.section}` : `${Header1Css.sectionM}`}>
         <div className={`${Header1Css['section-details']}`}>
-          <div className={`${Header1Css.left}`}>
+          <div className={displayDevice ? `${Header1Css.left}` : `${Header1Css.leftM}`}>
             {/* <span className={`${Header1Css['headline_content']}`}><span>
               
               <b>Security</b> is not a product, it is a process.</span ></span> */}
@@ -24,7 +24,7 @@ export const Header1 = ({ showPopup, overSection, displayDevice, linksfunc }) =>
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
               key='Header1'
-              initialValue={`<span class="${Header1Css.headlineContent}"> Security </span><span class="${Header1Css.headlineContent1}">is not a product, it is a process.</span>`}
+              initialValue={displayDevice ? `<span class="${Header1Css.headlineContent}"> Security </span><span class="${Header1Css.headlineContent1}">is not a product, it is a process.</span>` : `<span class="${Header1Css.headlineContentM}"> Security </span><span class="${Header1Css.headlineContent1M}">is not a product, it is a process.</span>`}
               init={{
                 plugins: [
                   "link"
@@ -85,7 +85,7 @@ export const Header1 = ({ showPopup, overSection, displayDevice, linksfunc }) =>
               />
             </button>
           </div>
-          <div className={`${Header1Css.right}`}>
+          <div className={displayDevice ? `${Header1Css.right}` : `${Header1Css.rightM}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
