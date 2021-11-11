@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react'
 import Program1Css from './Program1.module.css'
-import img1 from '../assets/template1images/1.svg'
-import img2 from '../assets/template1images/2.svg'
-import img3 from '../assets/template1images/3.svg'
+// import img1 from '../assets/template1images/1.svg'
+// import img2 from '../assets/template1images/2.svg'
+// import img3 from '../assets/template1images/3.svg'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 
@@ -67,12 +67,12 @@ export const Program1 = ({ showPopup, overSection }) => {
                <div className={`${Program1Css['service-item-container']}`}>
                   <div className={`${Program1Css['service-item']}  ${Program1Css['fade-in']}`} style={{ background: currentBackground1 }} onClick={() => setShowPopup1(state => !state)}>
                      <div className={`${Program1Css.bar}`}></div>
-                     <div className={`${Program1Css.item}`}>
+                     {/* <div className={`${Program1Css.item}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
                            key='About5'
-                           initialValue={`<img src=${img1} alt="img"class="w-full" />`}
+                           initialValue={`<img src="https://svgshare.com/i/bt1.svg" alt="img" class="w-full" />`}
                            init={{
                               images_upload_handler: function (blobInfo, success, failure) {
                                  success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -87,7 +87,8 @@ export const Program1 = ({ showPopup, overSection }) => {
                            }}
                         />
 
-                     </div>
+                     </div> */}
+                     <img src="https://svgshare.com/i/bt1.svg" alt="img" class="w-full" />
                      <h1 className={`${Program1Css['pro-head']}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
@@ -161,7 +162,7 @@ export const Program1 = ({ showPopup, overSection }) => {
                   </div>
                   <div style={{ background: currentBackground2 }} className={`${Program1Css['service-item']}  ${Program1Css['fade-in']}`} onClick={() => setShowPopup2(state => !state)}>
                      <div className={`${Program1Css.bar}`}></div>
-                     <div className={`${Program1Css.item}`}>
+                     {/* <div className={`${Program1Css.item}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
@@ -181,7 +182,8 @@ export const Program1 = ({ showPopup, overSection }) => {
                            }}
                         />
 
-                     </div>
+                     </div> */}
+                     <img src="https://svgshare.com/i/buV.svg" alt="img" class="w-full" />
                      <h1 className={`${Program1Css['pro-head']}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
@@ -260,7 +262,7 @@ export const Program1 = ({ showPopup, overSection }) => {
                   </div>
                   <div style={{ background: currentBackground3 }} className={`${Program1Css['service-item']}  ${Program1Css['fade-in']}`} onClick={() => setShowPopup3(state => !state)}>
                      <div className={`${Program1Css.bar}`}></div>
-                     <div className={`${Program1Css.item}`}>
+                     {/* <div className={`${Program1Css.item}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
@@ -279,7 +281,8 @@ export const Program1 = ({ showPopup, overSection }) => {
                               toolbar: 'image'
                            }}
                         />
-                     </div>
+                     </div> */}
+                     <img src="https://svgshare.com/i/bsp.svg" alt="img" class="w-full" />
                      <h1 className={`${Program1Css['pro-head']}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
