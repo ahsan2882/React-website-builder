@@ -221,6 +221,7 @@ export const Footer1 = ({ displayDevice, showPopup, overSection }) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='footer(2)18'
+                    initialValue="San Diego: 619 270 8578"
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                     init={{
                       plugins: [
