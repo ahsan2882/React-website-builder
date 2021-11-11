@@ -210,7 +210,7 @@ export default function ContainerEdit({ templateNum, setFileName, setLinksfunc, 
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
-                <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto overflow-x-hidden`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
+                <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto `} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
                     {/* {editMenu ? <Modal
                         isOpen={modalIsOpen}
                         onAfterOpen={afterOpenModal}
