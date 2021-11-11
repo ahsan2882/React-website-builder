@@ -36,7 +36,7 @@ export default function Navigation4({ displayDevice,linksfunc }) {
                     <nav>
                         <ul className={displayDevice ? `${Nav4Css.navBar}` : `${Nav4Css.navBarM}`} style={(!displayDevice && activeHamburger) ? {left: "0"} : null}>
                             <li className={`${Nav4Css.navBarLink} hover:text-black`}>{ linksfunc ? <a href="index.html">HOME</a> : <>HOME</>}</li>
-                            <li className={`${Nav4Css.navBarLink} hover:text-black`}> { linksfunc ? <a href="about.html">ABOUT US</a> : <> ABOUT US</>}ABOUT US</li>
+                            <li className={`${Nav4Css.navBarLink} hover:text-black`}> { linksfunc ? <a href="about.html">ABOUT US</a> : <> ABOUT US</>}</li>
                             <li className={`${Nav4Css.navBarLink} hover:text-black ${Nav4Css.dropdownServiceListItem}`}>SERVICES
                                 <ul className={`${Nav4Css.dropdownServicesContent} list-none p-0 absolute`}>
                                     <li className={`${Nav4Css.servicesLinks} flex mt-8 mx-4 mb-0`}>
