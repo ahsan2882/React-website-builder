@@ -34,7 +34,12 @@
   justify-content: space-between;
   align-items: center;
 }
-  
+  .rowM{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
 
 
   .headline_content2 {
