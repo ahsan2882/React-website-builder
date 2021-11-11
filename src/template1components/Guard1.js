@@ -191,6 +191,7 @@ export const Guard1 = ({ showPopup, overSection }) => {
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
+                    initialValue="AMBROSE"
                     key='Guard7'
                     init={{
                       plugins: [
@@ -209,6 +210,7 @@ export const Guard1 = ({ showPopup, overSection }) => {
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
+                  initialValue="<p>Private Investigator </p>"
                   key='Guard7'
                   init={{
                     plugins: [
