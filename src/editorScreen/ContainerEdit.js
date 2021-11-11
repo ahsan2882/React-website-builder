@@ -95,6 +95,8 @@ export default function ContainerEdit({ templateNum, setFileName, setLinksfunc, 
         }
         else if (temp === 0) {
             setUpdateChildren([])
+            setfilename("index.html")
+            setCurTemplate("new template");
         }
     }, [temp, templatePage, setfilename])
     useEffect(() => {
