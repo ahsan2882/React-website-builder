@@ -6,7 +6,7 @@ import Program1Css from './Program1.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 
-export const Program1 = ({ showPopup, overSection }) => {
+export const Program1 = ({ displayDevice, showPopup, overSection }) => {
    const [showPopup1, setShowPopup1] = useState(false);
    const [showPopup2, setShowPopup2] = useState(false);
    const [showPopup3, setShowPopup3] = useState(false);
@@ -64,7 +64,7 @@ export const Program1 = ({ showPopup, overSection }) => {
                </div>
             </div>
             <section style={{ background: currentBackground }} className={`${Program1Css.services}`}>
-               <div className={`${Program1Css['service-item-container']}`}>
+               <div className={displayDevice ? `${Program1Css['service-item-container']}` : `${Program1Css['service-item-containerM']}`}>
                   <div className={`${Program1Css['service-item']}  ${Program1Css['fade-in']}`} style={{ background: currentBackground1 }} onClick={() => setShowPopup1(state => !state)}>
                      <div className={`${Program1Css.bar}`}></div>
                      {/* <div className={`${Program1Css.item}`}>
