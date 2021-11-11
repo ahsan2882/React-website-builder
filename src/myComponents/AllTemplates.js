@@ -105,6 +105,8 @@ import Eventsecurity3 from '../template1components/template1services/Event Secur
 import Contact3banner from '../template3components/template3Contact/Contact3banner'
 import Contact3form from '../template3components/template3Contact/Contact3form'
 import Contact3feedback from '../template3components/template3Contact/Contact3feedback'
+import Contact1banner from "../template1components/template1contact/Contact1banner";
+import Contactform1 from '../template1components/template1contact/Contactform1'
 
 export const templateComponents = {
     template1Components: [
@@ -162,6 +164,11 @@ export const templateComponents = {
             groupName: "services",
             pageName: "Event Security",
             pageSections: [Eventsecurity3, Footer1]
+        },
+        {
+            groupName: "contact",
+            pageName: "Contact",
+            pageSections: [Contact1banner, Contactform1, Footer1]
         }
     ],
     // [Header1, Service1, Testimonials1, Prizing1, Guard1, News1, Program1, About1, Footer1],
