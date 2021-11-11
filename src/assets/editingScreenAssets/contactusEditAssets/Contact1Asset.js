@@ -35,7 +35,7 @@ export default function Contact1Asset() {
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
                                 key="contact1asset2"
-                                initialValue={`<p class=" lg:w-2 /3 mx-auto leading-relaxed text-base text-gray-100">Security is not a product, it is a process..</p>`}
+                                initialValue={`<p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-100">Security is not a product, it is a process..</p>`}
                                 init={{
                                     plugins: [
                                         "link"
