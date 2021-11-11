@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import Prizing1Css from './Prizing1.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
-export const Prizing1 = ({ showPopup, overSection }) => {
+export const Prizing1 = ({ showPopup, overSection, displayDevice }) => {
   const [currentBackground, setCurrentBackground] = useState("white");
   const [showPopup1, setShowPopup1] = useState(false);
   const [showPopup2, setShowPopup2] = useState(false);
@@ -57,8 +57,8 @@ export const Prizing1 = ({ showPopup, overSection }) => {
 
 
         </div>
-        <div className={`${Prizing1Css['container-1']}`}>
-          <div style={{ background: currentBackground1 }} className={`${Prizing1Css.box1} relative`} onMouseLeave={() => setShowPopup1(false)} onClick={() => setShowPopup1(state => !state)}>
+        <div className={displayDevice ? `${Prizing1Css['container-1']}` : `${Prizing1Css['container-1M']}`}>
+          <div style={{ background: currentBackground1 }} className={displayDevice ? `${Prizing1Css.box1} relative` : `${Prizing1Css.box1M} relative`} onMouseLeave={() => setShowPopup1(false)} onClick={() => setShowPopup1(state => !state)}>
             <header className={`${Prizing1Css['heading-price']}`}>
               <h2 style={{ fontWeight: `700` }} className={`${Prizing1Css.title1}`}>
                 <Editor
@@ -284,7 +284,7 @@ export const Prizing1 = ({ showPopup, overSection }) => {
           
 
 
-          <div style={{ background: currentBackground2 }} className={`${Prizing1Css.box2} relative`} onMouseLeave={() => setShowPopup2(false)} onClick={() => setShowPopup2(state => !state)}>
+          <div style={{ background: currentBackground2 }} className={displayDevice ? `${Prizing1Css.box2} relative` : `${Prizing1Css.box2M} relative`} onMouseLeave={() => setShowPopup2(false)} onClick={() => setShowPopup2(state => !state)}>
             <header className={`${Prizing1Css['heading-price']}`}>
               <h2 className={`${Prizing1Css.title2}`}>
                 <Editor
@@ -509,7 +509,7 @@ export const Prizing1 = ({ showPopup, overSection }) => {
           </div>
           </div>
           
-          <div style={{ background: currentBackground3 }} className={`${Prizing1Css.box1} relative`} onMouseLeave={() => setShowPopup3(false)} onClick={() => setShowPopup3(state => !state)}>
+          <div style={{ background: currentBackground3 }} className={displayDevice ? `${Prizing1Css.box1} relative` : `${Prizing1Css.box1M} relative`} onMouseLeave={() => setShowPopup3(false)} onClick={() => setShowPopup3(state => !state)}>
             <header className={`${Prizing1Css['heading-price']}`}>
               <h2 className={`${Prizing1Css.title3}`}>
                 <Editor
