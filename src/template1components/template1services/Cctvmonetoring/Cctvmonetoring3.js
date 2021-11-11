@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import StaticSecurity3Css from '../Cctvmonetoring/Cctvmonetoring.module.css'
+import StaticSecurity3Css from './Cctvmonetoring.module.css'
 // import Img1 from '../../../assets/template1images/wavef1.png'
 // import Img2 from '../../../assets/template1images/news1.jpg'
 import { Editor } from '@tinymce/tinymce-react';
@@ -108,12 +108,11 @@ export default function Cctvmonetoring3({ showPopup, overSection, displayDevice,
                 <div className={StaticSecurity3Css.container}>
                     <div className={StaticSecurity3Css['services-text2']}>
                         <div className={StaticSecurity3Css['txt-serv']}>
-                            <h1>
-                                <Editor
+                        <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='Static3'
-                                    initialValue="CCTV "
+                                    initialValue={`<span class="${StaticSecurity3Css.line1}"> CCTV  </span><span class="${StaticSecurity3Css.line2}"> Monitoring</span>`}
                                     init={{
                                         plugins: [
                                             "link"
@@ -126,9 +125,7 @@ export default function Cctvmonetoring3({ showPopup, overSection, displayDevice,
                                         font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
                                     }}
                                 />
-
-                            </h1>
-                            <h1 style={{ "color": " #00d4ff", "padding-left": "10px;" }}>MONETORING</h1>
+                    
                         </div>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
