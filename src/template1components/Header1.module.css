@@ -47,10 +47,9 @@
   }
   .section .section-details .right::after {
     content: "";
-    background-position: left bottom;
     transform: scale(1);
     animation: pulse-black 2s infinite;
-    top: -10%;
+    top: 60%;
     position: absolute;
     width: 300px;
     height: 100%;
