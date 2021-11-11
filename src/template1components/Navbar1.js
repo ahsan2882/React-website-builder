@@ -36,9 +36,9 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                 <i className={`${Navbar1moduleCss['fas fa-times']}`}></i>
               </div>
               <ul className={`${Navbar1moduleCss.menus}`}>
-                <li><button className={`${Navbar1moduleCss.line}`}> Home</button></li>
+                <li><button className={`${Navbar1moduleCss.line}`}>{linksfunc ? <a href="index.html">HOME</a> : <>HOME</>}</button></li>
                 <li><button className={`${Navbar1moduleCss.line}`} >{linksfunc ? <a href="about.html">ABOUT</a> : <>ABOUT</>}</button></li>
-                <li><button className={`${Navbar1moduleCss.line}`}>Services</button>
+                <li><button className={`${Navbar1moduleCss.line}`}>SERVICES</button>
                   <ul className={`${Navbar1moduleCss['sub-menu']}`}>
                   <li>{linksfunc ? <a href="static-security.html">STATIC SECURITY</a> : <>STATIC SECURITY</>}</li>
                                         <li>{linksfunc ? <a href="mobile-patrolling.html">MOBILE PATROLLING</a> : <>MOBILE PATROLLING</>}</li>
@@ -54,7 +54,7 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                   </ul>
                 </li>
 
-                <li><button className={`${Navbar1moduleCss.line}`} >Contact us</button></li>
+                <li><button className={`${Navbar1moduleCss.line}`} >CONTACT US</button></li>
 
 
                 <li>
