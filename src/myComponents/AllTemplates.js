@@ -96,12 +96,12 @@ import Partner from "../template1components/Template1Aboutcomponents/Partner";
 import Staticsecurity from '../template1components/template1services/Staticsecurity/Staticsecurity'
 import Mobilepatrolling3 from "../template1components/template1services/Mobilepatrolling3/Mobilepatrolling3";
 import Cctvmonetoring3 from "../template1components/template1services/Cctvmonetoring/Cctvmonetoring3";
-import Lockandunlock from "../template1components/template1services/lock & unlock3/Lockandunlock";
-import Vacantunitcheck from "../template1components/template1services/Vacant unit check/Vacantunitcheck";
+import Lockandunlock from "../template1components/template1services/lock-&-unlock3/Lockandunlock";
+import Vacantunitcheck from "../template1components/template1services/Vacant-unit-check/Vacantunitcheck";
 import Technologyproduct3 from "../template1components/template1services/technologyproduct/Technologyproduct3";
-import Mannedguarding from '../template1components/template1services/Manned Guarding3/Mannedguarding'
+import Mannedguarding from '../template1components/template1services/Manned-Guarding3/Mannedguarding'
 import SupportandManagment from "../template1components/template1services/SupportandManagment/SupportandManagment";
-import Eventsecurity3 from '../template1components/template1services/Event Security/Eventsecurity3'
+import Eventsecurity3 from '../template1components/template1services/Event-Security/Eventsecurity3'
 import Contact3banner from '../template3components/template3Contact/Contact3banner'
 import Contact3form from '../template3components/template3Contact/Contact3form'
 import Contact3feedback from '../template3components/template3Contact/Contact3feedback'
