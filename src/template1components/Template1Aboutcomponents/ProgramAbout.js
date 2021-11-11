@@ -7,6 +7,12 @@ import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 export default function ProgramAbout({ showPopup, overSection }) {
    const [currentBackground, setCurrentBackground] = useState("white");
+   const [showPopup1, setShowPopup1] = useState(false);
+   const [showPopup2, setShowPopup2] = useState(false);
+   const [showPopup3, setShowPopup3] = useState(false);
+   const [currentBackground1, setCurrentBackground1] = useState("white");
+   const [currentBackground2, setCurrentBackground2] = useState("white");
+   const [currentBackground3, setCurrentBackground3] = useState("white");
    const editorRef = useRef(null);
 
    return (
@@ -14,7 +20,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
          <div style={{ background: currentBackground }}>
             <section style={{ background: currentBackground }} className={`${programAboutmoduleCss.services}`}>
                <div className={`${programAboutmoduleCss['service-item-container']}`}>
-                  <div className={`${programAboutmoduleCss['service-item']}  ${programAboutmoduleCss['fade-in']}`}>
+                  <div className={`${programAboutmoduleCss['service-item']}  ${programAboutmoduleCss['fade-in']}`} style={{ background: currentBackground1 }} onClick={() => setShowPopup1(state => !state)}>
                      <div className={`${programAboutmoduleCss.bar}`}></div>
                      <div className={`${programAboutmoduleCss.item}`}>
                         <Editor
@@ -42,7 +48,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
                            key='Program3'
-                           initialValue="Cultural Awareness in the Workplace"
+                           initialValue="Who We Are"
                            init={{
                               plugins: [
                                  "link"
@@ -63,8 +69,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='Program4'
-                        initialValue={`<p class="${programAboutmoduleCss['pro-para']}">Cultural Awareness is critical for any workforce that seeks to yield positive outcomes. 
-                     Watch this video to learn about cultural awareness in the workplace</p>`}
+                        initialValue={`<p class="${programAboutmoduleCss['pro-para']}">We are men of word, standing foursquare behind our clients.</p>`}
 
                         init={{
                            forced_root_block: "",
@@ -100,7 +105,15 @@ export default function ProgramAbout({ showPopup, overSection }) {
                         <i style={{ marginLeft: `5px` }} className="fas fa-long-arrow-alt-right"></i>
                      </button>
                   </div>
-                  <div className={`${programAboutmoduleCss['service-item']}  ${programAboutmoduleCss['fade-in']}`}>
+                  <div style={(showPopup1) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                     <GithubPicker
+                        triangle="top-right"
+                        onChangeComplete={(color) => {
+                           setCurrentBackground1(color.hex);
+                        }}
+                     />
+                  </div>
+                  <div style={{ background: currentBackground2 }} className={`${programAboutmoduleCss['service-item']}  ${programAboutmoduleCss['fade-in']}`} onClick={() => setShowPopup2(state => !state)}>
                      <div className={`${programAboutmoduleCss.bar}`}></div>
                      <div className={`${programAboutmoduleCss.item}`}>
                         <Editor
@@ -128,7 +141,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
                            key='Program5'
-                           initialValue="Military Virtual Awareness Training"
+                           initialValue="Our Mission"
                            init={{
                               plugins: [
                                  "link"
@@ -150,8 +163,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='Program6'
-                        initialValue={`<p class="${programAboutmoduleCss['pro-para']}">Watch this video to see one of the Department of Defense's approaches to building cultural awareness and
-                        reducing risk in culturally diverse environments.</p>`}
+                        initialValue={`<p class="${programAboutmoduleCss['pro-para']}">There is no mission we can fail. We provide with the highest security level..</p>`}
                         init={{
                            plugins: [
                               "link"
@@ -191,7 +203,15 @@ export default function ProgramAbout({ showPopup, overSection }) {
                         <i style={{ marginLeft: `5px` }} className="fas fa-long-arrow-alt-right"></i>
                      </button>
                   </div>
-                  <div className={`${programAboutmoduleCss['service-item']}  ${programAboutmoduleCss['fade-in']}`}>
+                  <div style={(showPopup2) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                     <GithubPicker
+                        triangle="top-right"
+                        onChangeComplete={(color) => {
+                           setCurrentBackground2(color.hex);
+                        }}
+                     />
+                  </div>
+                  <div style={{ background: currentBackground3 }} className={`${programAboutmoduleCss['service-item']}  ${programAboutmoduleCss['fade-in']}`} onClick={() => setShowPopup3(state => !state)}>
                      <div className={`${programAboutmoduleCss.bar}`}></div>
                      <div className={`${programAboutmoduleCss.item}`}>
                         <Editor
@@ -218,7 +238,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
                            key='Program7'
-                           initialValue="Insider Threat: Resilience "
+                           initialValue="Our Vision "
                            init={{
                               plugins: [
                                  "link"
@@ -240,8 +260,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='Program7'
-                        initialValue={`<p class="${programAboutmoduleCss['pro-para']}">Resilience allows individuals to bounce back from setbacks and stressful situations.
-                        Without this quality,some people may develop increased risks associated with an insider</p>`}
+                        initialValue={`<p class="${programAboutmoduleCss['pro-para']}">We stand against violence, but if necessary we use our force.</p>`}
                         init={{
                            plugins: [
                               "link"
@@ -280,6 +299,14 @@ export default function ProgramAbout({ showPopup, overSection }) {
                         />
                         <i style={{ marginLeft: `5px` }} className="fas fa-long-arrow-alt-right"></i>
                      </button>
+                  </div>
+                  <div style={(showPopup3) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
+                     <GithubPicker
+                        triangle="top-right"
+                        onChangeComplete={(color) => {
+                           setCurrentBackground3(color.hex);
+                        }}
+                     />
                   </div>
                </div>
             </section>
