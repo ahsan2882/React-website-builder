@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import StaticSecurity3Css from '../Manned Guarding3/Mannedguarding.module.css'
+import StaticSecurity3Css from './Mannedguarding.module.css'
 // import Img1 from '../../../assets/template1images/wavef1.png'
 // import Img2 from '../../../assets/template1images/services66.jpg'
 import { Editor } from '@tinymce/tinymce-react';
