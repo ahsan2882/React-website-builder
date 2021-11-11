@@ -187,9 +187,11 @@
   box-shadow: 0 0 0 4em #00d4ff inset, 0 5px 15px rgb(0 0 0 / 10%);
   transform: translateY(-1px);
 }
-
+.navBarM, .nav-linksM, .sidebar-logoM, .menusM, .sub-menuM{
+  display: none;
+}
 /* navbar media query */
-@media (max-width: 1500px) {
+@media (max-width: 700px) {
   .template1Header nav .navbar {
     max-width: 100%;
     padding: 0 25px;
