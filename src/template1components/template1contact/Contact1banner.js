@@ -1,5 +1,5 @@
 import React from 'react'
-import Contactbanner1Css from '../template1contactcomponent/Contact1banner.module.css'
+import Contactbanner1Css from './Contact1banner.module.css'
  import Navbar1 from '../Navbar1';
 export default function Contact1banner({ showPopup, overSection, displayDevice, linksfunc }) {
     return (
