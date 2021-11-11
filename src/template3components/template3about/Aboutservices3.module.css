@@ -1,3 +1,17 @@
+html {
+    --clr-secondary-light: #292929;
+    --clr-secondary: #000000;
+    --clr-gray: #dddddd;
+    --clr-light: #ffff;
+    --clr-font: #747474;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    --clr-primary: #0b131a;
+    --clr-white-smoke: #ebebeb;
+    --clr-red-new: #c01120;
+    --clr-light: #ffff;
+  }
+
 
 .container-main {
     padding: 30px 3px;
@@ -41,7 +55,7 @@
     position: absolute;
     height: 4px;
     width: 30%;
-    background: #c01120;
+    background: var(--clr-red-new);
     left: 0;
     bottom: -2px;
   }
