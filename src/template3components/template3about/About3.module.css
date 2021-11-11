@@ -14,15 +14,15 @@
     border-top: dashed 3px white;
   }
   .head1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     color:white;
   }
   .headM{
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
   @media (max-width: 500px) {
     .head1 {
-      font-size: 0.63rem;
+      font-size: 1rem;
       color:white;
     }
    
