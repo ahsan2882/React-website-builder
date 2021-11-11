@@ -19,6 +19,9 @@ export default function PreviewPage({ temp }) {
     else if (temp === 4) {
       setLocalStorageData(lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('Template-4'))['templateData'])))
     }
+    else if (temp === 0) {
+      setLocalStorageData(lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('New-Template'))['templateData'])))
+    }
   }, [temp])
   useEffect(() => {
     let main = Parser().parse(localStorageData)
