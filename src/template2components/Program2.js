@@ -20,7 +20,7 @@ export const Program2 = ({ showPopup, overSection }) => {
                 tinymceScriptSrc={
                   process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                 }
-                initialValue={`<span class="${Program2moduleCss.SpanColor}">Our  </span> Program`}
+                initialValue={`<span class="${Program2moduleCss.SpanColor}">OUR  </span> PROGRAMS`}
                 init={{
                   plugins: [
                     "link"
