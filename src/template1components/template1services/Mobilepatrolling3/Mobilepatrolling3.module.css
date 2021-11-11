@@ -21,6 +21,17 @@
     padding-bottom: 60px;
     padding-top: 50px;
   }
+  .line1 {
+    font-size: 2.6rem;
+    color: #000;
+    font-weight: 700;
+  }
+  .line2 {
+    font-size: 2.6rem;
+  
+    color: #00d4ff;
+    font-weight: 700;
+  }
   .services-text p {
     padding-bottom: 30px;
     font-size: 16px;
