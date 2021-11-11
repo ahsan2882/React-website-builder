@@ -4,7 +4,7 @@ import About1Css from './About1.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 
-export const About1 = ({ showPopup, overSection }) => {
+export const About1 = ({ showPopup, overSection, displayDevice }) => {
   const editorRef = useRef(null);
   const [currentBackground, setCurrentBackground] = useState("white");
 
@@ -57,7 +57,7 @@ export const About1 = ({ showPopup, overSection }) => {
         </div>
 
         <div style={{ background: currentBackground }} className={`${About1Css.container9}`}>
-          <div style={{ background: currentBackground }} className={` mt-36 ${About1Css.row}`}>
+          <div style={{ background: currentBackground }} className={displayDevice ? ` mt-36 ${About1Css.row}` : ` mt-36 ${About1Css.rowM}`}>
             <div style={{ background: currentBackground }} className="container9-content">
 
               <span className={`${About1Css['headline_content2']}`}><span><b>Commited To</b> Your Business</span></span>
