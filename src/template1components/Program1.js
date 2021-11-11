@@ -127,8 +127,8 @@ export const Program1 = ({ showPopup, overSection }) => {
                         }}
                      />
 
-                     <a style={{ marginBottom: `20px` }} className={`${Program1Css.btnb}`} href={2}>
-
+                     <button style={{ marginBottom: `20px` }} className={`${Program1Css.btnb}`}>
+                  
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
@@ -148,7 +148,8 @@ export const Program1 = ({ showPopup, overSection }) => {
 
                            }}
                         />
-                        <i className="fas fa-long-arrow-alt-right"></i></a>
+                           <i style={{marginLeft:`5px`}} className="fas fa-long-arrow-alt-right"></i>
+                        </button>
                   </div>
                   <div style={(showPopup1) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                      <GithubPicker
@@ -225,7 +226,8 @@ export const Program1 = ({ showPopup, overSection }) => {
                         }}
                      />
                      {/* </p> */}
-                     <a style={{ marginBottom: `20px` }} className={`${Program1Css.btnb}`} href={2}>
+                     <button style={{ marginBottom: `20px` }} className={`${Program1Css.btnb}`}>
+               
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
@@ -245,7 +247,8 @@ export const Program1 = ({ showPopup, overSection }) => {
 
                            }}
                         />
-                        <i className="fas fa-long-arrow-alt-right"></i></a>
+                              <i style={{marginLeft:`5px`}} className="fas fa-long-arrow-alt-right"></i>
+                        </button>
                   </div>
                   <div style={(showPopup2) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                      <GithubPicker
@@ -321,7 +324,8 @@ export const Program1 = ({ showPopup, overSection }) => {
                         }}
                      />
                      {/* </p> */}
-                     <a style={{ marginBottom: `20px` }} className={`${Program1Css.btnb}`} href={2}>
+                     <button style={{ marginBottom: `20px` }} className={`${Program1Css.btnb}`}>
+              
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
                            inline={true}
@@ -341,7 +345,8 @@ export const Program1 = ({ showPopup, overSection }) => {
 
                            }}
                         />
-                        <i className="fas fa-long-arrow-alt-right"></i></a>
+                               <i style={{marginLeft:`5px`}} className="fas fa-long-arrow-alt-right"></i>
+                        </button>
                   </div>
                   <div style={(showPopup3) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
                      <GithubPicker

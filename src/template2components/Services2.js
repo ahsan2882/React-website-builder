@@ -72,11 +72,19 @@ export const Services2 = ({ showPopup, overSection }) => {
                     <div className={`${Services2moduleCss.wrapperflex}`}>
                         <div className={`${Services2moduleCss['container-services']}`} data-aos="fade-right">
 
-
+                        <div class={Services2moduleCss['serv-ot-logo']}>
+                                        <div class={Services2moduleCss['serv-logo']}><lord-icon
+                                            src="https://cdn.lordicon.com/qjysiqyo.json"
+                                            trigger="hover"
+                                    colors="primary:#000,secondary:#c0272d"
+                                            style={{ "width": "70px", "height": "70px" }}>
+                                        </lord-icon></div>
+                                    </div>
 
                             <div className={`${Services2moduleCss['container-text']} relative`} onClick={() => setShowPopup0(state => !state)} style={{ background: currentBackground0 }}>
 
                                 <h1 className={`${Services2moduleCss.name}`}>
+                               
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
@@ -104,7 +112,7 @@ export const Services2 = ({ showPopup, overSection }) => {
                                     key='hero4ed2'
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue={`<p class="${Services2moduleCss.description}"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto natus facere quae provident aut 
-                        officiis iste similique optio animi nostrum.</p>`}
+                                     officiis iste similique optio animi nostrum.</p>`}
                                     init={{
                                         plugins: [
                                             "link"
@@ -155,8 +163,17 @@ export const Services2 = ({ showPopup, overSection }) => {
                         </div>
 
                         <div style={{ background: `transparent`, margin: `20px`, width: `355px` }} className={`${Services2moduleCss['container-services']}`} data-aos="fade-right">
-
+                            <div class={Services2moduleCss['serv-ot-logo']}>
+                                <div class={Services2moduleCss['serv-logo']}>
+                                    <lord-icon
+                                        src="https://cdn.lordicon.com/eszyyflr.json"
+                                        trigger="hover"
+                                        colors="primary:#000,secondary:#c0272d"
+                                        style={{ "width": "70px", "height": "70px" }}>
+                                    </lord-icon></div>
+                            </div>
                             <div style={{ background: currentBackground1, height: `auto`, textAlign: `center`, overflowX: 'hidden' }} onClick={() => setShowPopup1(state => !state)} className={`relative ${Services2moduleCss['container-text']} ${['container-text-2']}`}>
+
                                 <h1 style={{ color: `white`, paddingTop: `15%`, fontWeight: `bolder`, fontSize: `1.5rem` }}>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
@@ -185,7 +202,7 @@ export const Services2 = ({ showPopup, overSection }) => {
                                     key='services(2)4'
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue={`<p class="${Services2moduleCss.description2}"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto natus facere quae provident aut 
-                        officiis iste similique optio animi nostrum.</p>`}
+                                                   officiis iste similique optio animi nostrum.</p>`}
                                     init={{
                                         plugins: [
                                             "link"
@@ -234,7 +251,14 @@ export const Services2 = ({ showPopup, overSection }) => {
                             </div>
                         </div>
                         <div className={`${Services2moduleCss['container-services']}`} data-aos="fade-left">
-
+                        <div class={Services2moduleCss['serv-ot-logo']}>
+                                        <div class={Services2moduleCss['serv-logo']}><lord-icon
+                                            src="https://cdn.lordicon.com/tvafngxn.json"
+                                            trigger="hover"
+                                    colors="primary:#000,secondary:#c0272d"
+                                            style={{ "width": "70px", "height": "70px" }}>
+                                        </lord-icon></div>
+                                    </div>
                             <div className={`${Services2moduleCss['container-text']} relative`} style={{ background: currentBackground2 }} onClick={() => setShowPopup2(state => !state)}>
                                 <h1 className={`${Services2moduleCss.name}`}>
                                     <Editor
@@ -266,7 +290,7 @@ export const Services2 = ({ showPopup, overSection }) => {
                                     key='hero4ed2'
                                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
                                     initialValue={`<p class="${Services2moduleCss.description}"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto natus facere quae provident aut */}
-                        officiis iste similique optio animi nostrum.</p>`}
+                                               officiis iste similique optio animi nostrum.</p>`}
                                     init={{
                                         plugins: [
                                             "link"

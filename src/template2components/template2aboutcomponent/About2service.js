@@ -61,7 +61,7 @@ export default function About2service({ showPopup, overSection }) {
                                 <lord-icon
                                     src="https://cdn.lordicon.com/tyounuzx.json"
                                     trigger="loop-on-hover"
-                                    colors="primary:#ffffff,secondary:#c0272d"
+                                    colors="primary:#000,secondary:#c0272d"
                                     style={{ "width": "100px", "height": "100px" }}>
                                 </lord-icon>
                                 <Editor
@@ -110,7 +110,7 @@ export default function About2service({ showPopup, overSection }) {
                                 <lord-icon
                                     src="https://cdn.lordicon.com/nxaaasqe.json"
                                     trigger="loop-on-hover"
-                                    colors="primary:#ffffff,secondary:#c0272d"
+                                    colors="primary:#000,secondary:#c0272d"
                                     style={{ "width": "100px", "height": "100px" }}>
                                 </lord-icon>
                                 <Editor
@@ -159,7 +159,7 @@ export default function About2service({ showPopup, overSection }) {
                                 <lord-icon
                                     src="https://cdn.lordicon.com/tclnsjgx.json"
                                     trigger="loop-on-hover"
-                                    colors="primary:#ffffff,secondary:#c0272d"
+                                    colors="primary:#000,secondary:#c0272d"
                                     style={{ "width": "100px", "height": "100px" }}>
                                 </lord-icon>
                                 <Editor
@@ -211,7 +211,7 @@ export default function About2service({ showPopup, overSection }) {
                                 <lord-icon
                                     src="https://cdn.lordicon.com/usjxhgom.json"
                                     trigger="loop-on-hover"
-                                    colors="primary:#ffffff,secondary:#c0272d"
+                                    colors="primary:#000,secondary:#c0272d"
                                     style={{ "width": "100px", "height": "100px" }}>
                                 </lord-icon>
                                 <Editor
@@ -261,7 +261,7 @@ export default function About2service({ showPopup, overSection }) {
                                 <lord-icon
                                     src="https://cdn.lordicon.com/qhgmphtg.json"
                                     trigger="loop-on-hover"
-                                    colors="primary:#ffffff,secondary:#c0272d"
+                                    colors="primary:#000,secondary:#c0272d"
                                     style={{ "width": "100px", "height": "100px" }}>
                                 </lord-icon>
                                 <Editor
@@ -312,7 +312,7 @@ export default function About2service({ showPopup, overSection }) {
                                 <lord-icon
                                     src="https://cdn.lordicon.com/gqzfzudq.json"
                                     trigger="loop-on-hover"
-                                    colors="primary:#ffffff,secondary:#c0272d"
+                                    colors="primary:#000,secondary:#c0272d"
                                     style={{ "width": "100px", "height": "100px" }}>
                                 </lord-icon>
                                 <Editor

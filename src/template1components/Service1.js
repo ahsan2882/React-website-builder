@@ -14,7 +14,7 @@ export const Service1 = ({ showPopup, overSection }) => {
   const [currentBackground2, setCurrentBackground2] = useState("white");
   const [currentBackground3, setCurrentBackground3] = useState("white");
 
-  const [currentBackground, setCurrentBackground] = useState("white");
+  const [currentBackground, setCurrentBackground] = useState("transperent");
 
   const editorRef = useRef(null);
   return (
@@ -64,8 +64,16 @@ export const Service1 = ({ showPopup, overSection }) => {
       <div style={{ background: currentBackground }} className={`${Service1Css['wrapper-flex']}`}>
         <div style={{ background: currentBackground1 }} className={`${Service1Css['container-services']}  ${Service1Css['fade-in']}`} onClick={() => setShowPopup1(state => !state)}>
           <div className={`${Service1Css['banner-img']}`}></div>
-          <img src="https://i.ibb.co/9vkqXYh/serv-1.png" alt="serv-1" className={`${Service1Css['profile-img']}`}
-          />
+          <lord-icon
+            src="https://cdn.lordicon.com/yqbqexfk.json"
+            trigger="hover"
+            colors="primary:#00d4ff,secondary:#333434"
+            stroke="64"
+            // style="width: 170px; height: 220px"
+            style={{ width: " 170px", height: "220px" }}
+          >
+            <img src="https://i.ibb.co/zJs31mh/serv-1.png" alt="serv-1" className={`${Service1Css['profile-img']}`} />
+          </lord-icon>
           <h1 className={`${Service1Css.name}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -107,7 +115,7 @@ export const Service1 = ({ showPopup, overSection }) => {
           />
           {/* </p> */}
 
-          <a style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`} href={2}
+          <button style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`}
           >
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -127,7 +135,7 @@ export const Service1 = ({ showPopup, overSection }) => {
 
               }}
             />
-            <i className={`${Service1Css['fas fa-long-arrow-alt-right']}`}></i></a>
+            <i style={{ marginLeft: `5px` }} className="fas fa-long-arrow-alt-right"></i></button>
         </div>
         <div style={(showPopup1) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
           <GithubPicker
@@ -139,9 +147,17 @@ export const Service1 = ({ showPopup, overSection }) => {
         </div>
         <div style={{ background: currentBackground2 }} className={`${Service1Css['container-services']} ${Service1Css['fade-in']}`} onClick={() => setShowPopup2(state => !state)}>
           <div className={`${Service1Css['banner-img']}`}></div>
-
-          <img src="https://i.ibb.co/FKwNMbn/serv-2.png" alt="serv-2" className={`${Service1Css['profile-img']}`}
-          />
+          <lord-icon
+            src="https://cdn.lordicon.com/yqbqexfk.json"
+            trigger="hover"
+            colors="primary:#00d4ff,secondary:#333434"
+            stroke="64"
+            // style="width: 170px; height: 220px"
+            style={{ width: " 170px", height: "220px" }}
+          >
+            <img src="https://i.ibb.co/dG4RKvb/serv-2.png" alt="serv-2" className={`${Service1Css['profile-img']}`}
+            />
+          </lord-icon>
           <h1 className={`${Service1Css.name}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -185,8 +201,7 @@ export const Service1 = ({ showPopup, overSection }) => {
 
           {/*  </p> */}
 
-          <a style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`} href={2}
-          >
+          <button style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
@@ -205,7 +220,9 @@ export const Service1 = ({ showPopup, overSection }) => {
 
               }}
             />
-            <i className={`${Service1Css['fas fa-long-arrow-alt-right']}`}></i></a>
+            <i style={{ marginLeft: `5px` }} className="fas fa-long-arrow-alt-right"></i>
+
+          </button>
         </div>
         <div style={(showPopup2) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
           <GithubPicker
@@ -217,9 +234,17 @@ export const Service1 = ({ showPopup, overSection }) => {
         </div>
         <div style={{ background: currentBackground3 }} className={`${Service1Css['container-services']} ${Service1Css['fade-in']}`} onClick={() => setShowPopup3(state => !state)}>
           <div className={`${Service1Css['banner-img']}`}></div>
-
-          <img src="https://i.ibb.co/mGs9gt3/serv-3.png" alt="serv-3" className={`${Service1Css['profile-img']}`}
-          />
+          <lord-icon
+            src="https://cdn.lordicon.com/yqbqexfk.json"
+            trigger="hover"
+            colors="primary:#00d4ff,secondary:#333434"
+            stroke="64"
+            // style="width: 170px; height: 220px"
+            style={{ width: " 170px", height: "220px" }}
+          >
+            <img src="https://i.ibb.co/PDB2XJM/serv-3.png" alt="serv-3" className={`${Service1Css['profile-img']}`}
+            />
+          </lord-icon>
           <h1 className={`${Service1Css.name}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -263,13 +288,12 @@ export const Service1 = ({ showPopup, overSection }) => {
           />
           {/* </p> */}
 
-          <a style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`} href={2}
-          >
+          <button style={{ marginBottom: `20px` }} className={`${Service1Css.btnb}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
               key='Service10'
-              initialValue={`Sign Up <i class="fas fa-long-arrow-alt-right"></i>`}
+              initialValue="Sign Up"
               init={{
                 plugins: [
                   "link"
@@ -283,8 +307,8 @@ export const Service1 = ({ showPopup, overSection }) => {
 
               }}
             />
-            <i className={`${Service1Css['fas fa-long-arrow-alt-right']}`}></i
-            ></a>
+            <i style={{ marginLeft: `5px` }} className="fas fa-long-arrow-alt-right"></i>
+          </button>
         </div>
         <div style={(showPopup3) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
           <GithubPicker

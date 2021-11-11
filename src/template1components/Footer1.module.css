@@ -80,14 +80,16 @@
 }
 .copy {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 
   color: white;
   height: 80px;
   width: 100%;
 }
-
+.copy {
+  margin: 0 5rem 0;
+}
 .span {
   width: 50px;
   height: 3px;
@@ -112,7 +114,7 @@
   width: 100%;
   background-color:#00d4ff;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   height: auto;
 }
 .mainpara {

@@ -24,9 +24,10 @@ display: flex;
     padding:50px;
     border-radius: 10px;
     background-color: #ffffff;
-    background-image: url("https://i.ibb.co/S7BZmnL/blobthebuilder.png");
+    background-image: url("https://i.ibb.co/Ky0n1bJ/blobthebuilder.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 700px;
   }
   
@@ -39,8 +40,8 @@ display: flex;
   font-size: 16px;
   font-weight: 700;
   }
-    .testimonial-text {
-    background-image: url("https://i.ibb.co/7Ss5VQ9/qoute.png");
+    .testimonialtext {
+    background-image: url("https://i.ibb.co/Cbc3khT/qoute.png");
     background-repeat: no-repeat;
     background-position: left top;
     padding: 30px 5%;

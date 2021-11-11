@@ -103,17 +103,18 @@
   .serv-logo {
     width: 20%;
     height: 70px;
-    background: var(--clr-light);
+    background:white;
     position: relative;
     border-radius: 50%;
     box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
-    top: 7rem;
+    top: 9rem;
+    z-index:1;
   }
   .serv-ot-logo {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 116px;
+    height: 180px;
   }
   .name {
     padding-top: 15%;
@@ -124,7 +125,7 @@
  
 
   .description2 {
-    color: var(--clr-light);
+    color:white;
     font-size: 1rem;
     padding: 35px 10px;
     text-align: start;
@@ -303,6 +304,7 @@
     cursor: pointer;
     color: var(--clr-light);
   }
+  
   @media (max-width: 1550px) {
     .pokemon__img {
       max-height: 53.4vw;

@@ -24,7 +24,7 @@ export default function Advantage({ showPopup, overSection }) {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Service1'
-            initialValue="Our Advantages"
+            initialValue="Services"
             init={{
               plugins: [
                 "link"
@@ -44,7 +44,7 @@ export default function Advantage({ showPopup, overSection }) {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Service2'
-            initialValue="We are able to guarantee your safety 24/7 no matter who you are and whatever you do."
+            initialValue="Our services are best in town and premium"
             init={{
               plugins: [
                 "link"
@@ -63,8 +63,16 @@ export default function Advantage({ showPopup, overSection }) {
       <div style={{ background: currentBackground }} className={`${AdvantagemoduleCss['wrapper-flex']}`}>
         <div style={{ background: currentBackground1 }} className={`${AdvantagemoduleCss['container-services']}  ${AdvantagemoduleCss['fade-in']}`} onClick={() => setShowPopup1(state => !state)}>
           <div className={`${AdvantagemoduleCss['banner-img']}`}></div>
-          <img src="https://i.ibb.co/9vkqXYh/serv-1.png" alt="serv-1" className={`${AdvantagemoduleCss['profile-img']}`}
-          />
+          <lord-icon
+            src="https://cdn.lordicon.com/yqbqexfk.json"
+            trigger="hover"
+            colors="primary:#00d4ff,secondary:#333434"
+            stroke="64"
+            // style="width: 170px; height: 220px"
+            style={{ width: " 170px", height: "220px" }}
+          >
+            <img src="https://i.ibb.co/zJs31mh/serv-1.png" alt="serv-1" className={`${AdvantagemoduleCss['profile-img']}`} />
+          </lord-icon>
           <h1 className={`${AdvantagemoduleCss.name}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -106,7 +114,7 @@ export default function Advantage({ showPopup, overSection }) {
           />
           {/* </p> */}
 
-          <a style={{ marginBottom: `20px` }} className={`${AdvantagemoduleCss.btnb}`} href={2}
+          <button style={{ marginBottom: `20px` }} className={`${AdvantagemoduleCss.btnb}`}
           >
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -126,7 +134,7 @@ export default function Advantage({ showPopup, overSection }) {
 
               }}
             />
-            <i className={`${AdvantagemoduleCss['fas fa-long-arrow-alt-right']}`}></i></a>
+            <i style={{ marginLeft: `5px` }} className="fas fa-long-arrow-alt-right"></i></button>
         </div>
         <div style={(showPopup1) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
           <GithubPicker
@@ -138,9 +146,17 @@ export default function Advantage({ showPopup, overSection }) {
         </div>
         <div style={{ background: currentBackground2 }} className={`${AdvantagemoduleCss['container-services']} ${AdvantagemoduleCss['fade-in']}`} onClick={() => setShowPopup2(state => !state)}>
           <div className={`${AdvantagemoduleCss['banner-img']}`}></div>
-
-          <img src="https://i.ibb.co/FKwNMbn/serv-2.png" alt="serv-2" className={`${AdvantagemoduleCss['profile-img']}`}
-          />
+          <lord-icon
+            src="https://cdn.lordicon.com/yqbqexfk.json"
+            trigger="hover"
+            colors="primary:#00d4ff,secondary:#333434"
+            stroke="64"
+            // style="width: 170px; height: 220px"
+            style={{ width: " 170px", height: "220px" }}
+          >
+            <img src="https://i.ibb.co/dG4RKvb/serv-2.png" alt="serv-2" className={`${AdvantagemoduleCss['profile-img']}`}
+            />
+          </lord-icon>
           <h1 className={`${AdvantagemoduleCss.name}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -184,8 +200,7 @@ export default function Advantage({ showPopup, overSection }) {
 
           {/*  </p> */}
 
-          <a style={{ marginBottom: `20px` }} className={`${AdvantagemoduleCss.btnb}`} href={2}
-          >
+          <button style={{ marginBottom: `20px` }} className={`${AdvantagemoduleCss.btnb}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
@@ -204,7 +219,9 @@ export default function Advantage({ showPopup, overSection }) {
 
               }}
             />
-            <i className={`${AdvantagemoduleCss['fas fa-long-arrow-alt-right']}`}></i></a>
+            <i style={{ marginLeft: `5px` }} className="fas fa-long-arrow-alt-right"></i>
+
+          </button>
         </div>
         <div style={(showPopup2) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
           <GithubPicker
@@ -216,9 +233,17 @@ export default function Advantage({ showPopup, overSection }) {
         </div>
         <div style={{ background: currentBackground3 }} className={`${AdvantagemoduleCss['container-services']} ${AdvantagemoduleCss['fade-in']}`} onClick={() => setShowPopup3(state => !state)}>
           <div className={`${AdvantagemoduleCss['banner-img']}`}></div>
-
-          <img src="https://i.ibb.co/mGs9gt3/serv-3.png" alt="serv-3" className={`${AdvantagemoduleCss['profile-img']}`}
-          />
+          <lord-icon
+            src="https://cdn.lordicon.com/yqbqexfk.json"
+            trigger="hover"
+            colors="primary:#00d4ff,secondary:#333434"
+            stroke="64"
+            // style="width: 170px; height: 220px"
+            style={{ width: " 170px", height: "220px" }}
+          >
+            <img src="https://i.ibb.co/PDB2XJM/serv-3.png" alt="serv-3" className={`${AdvantagemoduleCss['profile-img']}`}
+            />
+          </lord-icon>
           <h1 className={`${AdvantagemoduleCss.name}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -262,8 +287,7 @@ export default function Advantage({ showPopup, overSection }) {
           />
           {/* </p> */}
 
-          <a style={{ marginBottom: `20px` }} className={`${AdvantagemoduleCss.btnb}`} href={2}
-          >
+          <button style={{ marginBottom: `20px` }} className={`${AdvantagemoduleCss.btnb}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
@@ -282,8 +306,8 @@ export default function Advantage({ showPopup, overSection }) {
 
               }}
             />
-            <i className={`${AdvantagemoduleCss['fas fa-long-arrow-alt-right']}`}></i
-            ></a>
+            <i style={{ marginLeft: `5px` }} className="fas fa-long-arrow-alt-right"></i>
+          </button>
         </div>
         <div style={(showPopup3) ? { position: "absolute", top: "9rem", right: "5rem", zIndex: "9999999" } : { display: "none" }} className="toBeRemoved">
           <GithubPicker

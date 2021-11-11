@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
-// import Test from '../assets/template1images/testiEdit.png'
+// import Test from '../assets/template1images/testiEdit.webp'
 import Testimonial1Css from './Testimonials1.module.css'
 import { GithubPicker } from 'react-color';
 
 export const Testimonials1 = ({ showPopup, overSection }) => {
-  const [currentBackground, setCurrentBackground] = useState("white");
+  const [currentBackground, setCurrentBackground] = useState("transperent");
   const editorRef = useRef(null);
   return (
     <>
@@ -70,10 +70,10 @@ export const Testimonials1 = ({ showPopup, overSection }) => {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Testimonal4'
-            initialValue="<p>When I saw how these guys prepare themselves to any operation, I
+            initialValue={`<p class="${Testimonial1Css.testimonialtext}">When I saw how these guys prepare themselves to any operation, I
             realized that it was it! I must hire them! I was scared. Now I am
             feeling safe because there is always the strongmen team with me and
-            my folks.</p>"
+            my folks.</p>`}
             init={{
               forced_root_block: "",
               menubar: false,
@@ -111,7 +111,7 @@ export const Testimonials1 = ({ showPopup, overSection }) => {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Testimal6'
-            initialValue={`<img  src="https://i.ibb.co/HTpZQ9p/testi-Edit.png" alt="testi-Edit" class="w-96 h-96 object-cover"/>`}
+            initialValue={`<img src="https://i.ibb.co/nmbkTHt/testi-Edit.webp" alt="testi-Edit" class="w-96 h-96 object-cover"/>`}
             init={{
               forced_root_block: "",
               menubar: false,

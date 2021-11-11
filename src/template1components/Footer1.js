@@ -4,7 +4,7 @@ import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 export const Footer1 = ({ displayDevice, showPopup, overSection }) => {
   const [currentBackground, setCurrentBackground] = useState("black");
-  const [currentBackground1, setCurrentBackground1] = useState("black");
+  const [currentBackground1, setCurrentBackground1] = useState("#00d4ff");
   const [showPopup1, setShowPopup1] = useState(false);
 
 
@@ -197,7 +197,7 @@ export const Footer1 = ({ displayDevice, showPopup, overSection }) => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='AccreIm1'
-                initialValue={displayDevice ? `<img class="${Footer1Css['footimg']}" src="https://i.ibb.co/L0HJLvC/img-footer-map.png"  alt="client 1" class="w-72 h-36 object-cover"/>` : `<img class="${Footer1Css['footImgM']}" src="https://i.ibb.co/L0HJLvC/img-footer-map.png"  alt="client 1" class="w-72 h-36 object-cover"/>`}
+                initialValue={displayDevice ? `<img class="${Footer1Css['footimg']}" src="https://i.ibb.co/L0HJLvC/img-footer-map.png"  alt="map" class="w-72 h-36 object-cover"/>` : `<img class="${Footer1Css['footImgM']}" src="https://i.ibb.co/L0HJLvC/img-footer-map.png"  alt="client 1" class="w-72 h-36 object-cover"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -221,8 +221,8 @@ export const Footer1 = ({ displayDevice, showPopup, overSection }) => {
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='footer(2)18'
-                    initialValue="San Diego: 619 270 8578"
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
+                    initialValue={`<p class="${Footer1Css.mainpara1}">San Diego: 619 270 8578  </p>`}
                     init={{
                       plugins: [
                         "link"
@@ -244,7 +244,7 @@ export const Footer1 = ({ displayDevice, showPopup, overSection }) => {
                     inline={true}
                     key='footer(2)20'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                    initialValue={`<p mainpara1> Ontario: 613 285 5534  </p>
+                    initialValue={`<p class="${Footer1Css.mainpara1}"> Ontario: 613 285 5534  </p>
                         `}
                     init={{
                       plugins: [
@@ -267,7 +267,7 @@ export const Footer1 = ({ displayDevice, showPopup, overSection }) => {
                     inline={true}
                     key='footer(2)22'
                     tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                    initialValue={`<p mainpara1>London: 020 7946 0020 </p>`}
+                    initialValue={`<p class="${Footer1Css.mainpara1}">London: 020 7946 0020 </p>`}
                     init={{
                       plugins: [
                         "link"
