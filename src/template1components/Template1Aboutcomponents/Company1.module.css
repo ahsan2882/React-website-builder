@@ -134,7 +134,7 @@
   content: " ";
   height: 0;
   position: absolute;
-  top: 22px;
+  top: 17px;
   width: 0;
   z-index: 1;
   right: 30px;
@@ -148,7 +148,7 @@
   content: " ";
   height: 0;
   position: absolute;
-  top: 22px;
+  top: 17px;
   width: 0;
   z-index: 1;
   left: 30px;
@@ -197,7 +197,7 @@
 
   /* Place the timelime to the left */
   .timeline::after {
-    left: 31px;
+    left: 28px;
   }
 
   /* Full-width containers */
@@ -212,7 +212,7 @@
     left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent black transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
