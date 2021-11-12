@@ -9,12 +9,15 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    margin-top: 1rem;
+    padding: 4rem 0;
 
 }
 
 .text-2 {
     text-align: center;
     background: black;
+    padding-top: 1rem;
 }
 
 .text-2 h1 {
