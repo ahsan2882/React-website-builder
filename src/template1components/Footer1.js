@@ -214,7 +214,7 @@ export const Footer1 = ({ displayDevice, showPopup, overSection }) => {
 
             </div>
             <div className={displayDevice ? Footer1Css['column-foot'] : Footer1Css['columnFootM']} style={{ backgroundColor: "transparent" }}>
-              <div className={Footer1Css.col}>
+              <div className={displayDevice ? Footer1Css.col : Footer1Css.colM}>
                 <div className="flex items-center">
                   <i style={{ color: `#00d4ff` }} className="fas fa-map-marker-alt i1 mr-2 mt-2"></i>
                   <Editor
@@ -353,12 +353,12 @@ export const Footer1 = ({ displayDevice, showPopup, overSection }) => {
                   }}
                 />
 
-                <p style={{ fontSize: `3rem`, display: `flex` }}>
+                <div style={{ fontSize: `2rem`, display: `flex`, marginBottom:"0.5rem"}}>
                   <i style={{ marginLeft: `0.75rem` }} className="fab fa-facebook i"></i>
                   <i style={{ marginLeft: `0.75rem` }} className="fab fa-twitter-square i "></i>
                   <i style={{ marginLeft: `0.75rem` }} className="fab fa-pinterest i "></i>
                   <i style={{ marginLeft: `0.75rem` }} className="fab fa-linkedin i"></i>
-                </p>
+                </div>
               </div>
             </div>
           </div>
