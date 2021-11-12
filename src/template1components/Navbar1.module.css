@@ -187,7 +187,7 @@
   box-shadow: 0 0 0 4em #00d4ff inset, 0 5px 15px rgb(0 0 0 / 10%);
   transform: translateY(-1px);
 }
-.navBarM, .nav-linksM, .sidebar-logoM, .menusM, .sub-menuM{
+.navbarM, .nav-linksM, .sidebar-logoM, .menusM, .sub-menuM{
   display: none;
 }
 /* navbar media query */
@@ -251,5 +251,8 @@
 
   .navbar .nav-links .menus .sub-menu li {
     line-height: 30px;
+  }
+  .navbar{
+    display: none;
   }
 }
