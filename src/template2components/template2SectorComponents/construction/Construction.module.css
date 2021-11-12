@@ -67,6 +67,10 @@
     padding: 30px 0;
     line-height: 40px;
   }
+  .sector_left-content ul li {
+    display: flex;
+    align-items: center;
+  }
   
   .sector-card {
     margin: 20px 40px;
