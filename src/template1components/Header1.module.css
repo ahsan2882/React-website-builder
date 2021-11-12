@@ -41,18 +41,18 @@
     width: 100%;
   }
   
-  .section .section-details .left {
+  .left {
     flex: 1;
     /* height: 800px; */
     padding-left: 100px;
     padding-top: 80px;
   }
-  .section .section-details .leftM {
+  .leftM {
     flex: 1;
     /* height: 800px; */
     padding-left: 20px;
     padding-top: 30px;
-    width: 70%;
+    width: 90%;
   }
   
   .section .section-details .right {
