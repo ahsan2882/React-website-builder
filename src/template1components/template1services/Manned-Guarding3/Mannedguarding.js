@@ -112,7 +112,7 @@ export default function Mannedguarding({ showPopup, overSection, displayDevice, 
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Static3'
-                                initialValue={`<span class="${MannedCss.line1}"> Static </span><span class="${MannedCss.line2}"> Security</span>`}
+                                initialValue={`<span class="${MannedCss.line1}"> Manned </span><span class="${MannedCss.line2}"> Guarding</span>`}
                                 init={{
                                     plugins: [
                                         "link"
