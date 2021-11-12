@@ -1,5 +1,5 @@
 .service-container {
-    padding: 139px 57px;
+    padding: 124px 122px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -9,7 +9,8 @@
     background-repeat: no-repeat;
 }
 .serv-head h1 {
-    font-size: 5em;
+    font-size: 3em;
+    font-weight: 800;
 }
 
   .service-grid {
@@ -61,7 +62,28 @@
   .sg6 {
     grid-area: 3 / 3 / 4 / 4;
   }
-   
+  .icon-content {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+  .container365 {
+    padding: 0 5em;
+    margin-bottom: 30px;
+  }
+
+  .iconized {
+    padding: 0 45px;
+}
+.icon-content h3 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+}
+.icon-content p {
+  padding: 10px 0;
+  font-size: 15px;
+}
   @media (max-width: 900px) {
     .service-grid {
       display: flex;
