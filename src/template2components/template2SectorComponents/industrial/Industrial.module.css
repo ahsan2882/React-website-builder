@@ -100,3 +100,7 @@
   .sector-cards-row {
     display: flex;
   }
+  .sector_left-content ul li {
+    display: flex;
+    align-items: center;
+  }
