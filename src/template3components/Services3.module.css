@@ -63,7 +63,7 @@
 }
 .serv-card {
   width: 350px;
-  height: 30em;
+
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -77,8 +77,9 @@
 
 .card-text h1 {
  
-  font-size: calc(3em * 0.625);
+  font-size: calc(2.5em * 0.625);
   padding: 15px 0;
+  font-weight: 700;
   text-align: center;
   color: whitesmoke;
   border-bottom: 1px solid white;
