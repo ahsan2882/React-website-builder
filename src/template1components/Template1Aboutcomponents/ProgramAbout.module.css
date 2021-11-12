@@ -33,6 +33,14 @@
 	align-items: center;
 	margin-bottom: 4rem;
 }
+.service-item-containerM {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 4rem;
+}
 .service-item{
 	display:flex;
 	flex-direction: column;
@@ -106,7 +114,7 @@ text-align: center;
 }
 @media(max-width:1050px){
 	.service-item-container{
-		flex-wrap: wrap;
+		flex-direction: column;
 		
 	}	
 	.services{
