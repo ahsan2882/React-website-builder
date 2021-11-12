@@ -28,7 +28,6 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
             <section className="py-32 px-0 w-full" style={{ background: currentBackground }}>
                 <div className={displayDevice ? `${Accre4Css.containerMain}` : `${Accre4Css.containerMain} p-0.5`}>
                     <div className="flex flex-col items-center py-10 px-0">
-                        {/* <TextH2 classStyle={`${Accre4Css.accreMainH2} text-2xl`} text="we are verified" /> */}
                         <h2 className="Accre4Css" style={{ fontWeight: `400` }}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
@@ -116,7 +115,7 @@ export default function Accreditation4({ showPopup, overSection, displayDevice }
                                 </div>
                             </div>
                         )}
-                        <button onClick={() => addAccred()} className="border-2 border-gray-400 text-gray-500 toBeRemoved w-40 h-40 flex justify-evenly flex-col text-center items-center">
+                        <button onClick={() => addAccred()} className="border-2 border-gray-400 text-gray-500 toBeRemoved w-52 h-52 flex justify-evenly flex-col text-center items-center">
                             <i className="fas fa-plus text-3xl"></i>
                             <h2>Add another Accreditation</h2>
                         </button>
