@@ -184,7 +184,7 @@ export default function Contactform1({displayDevice}) {
                         </div>
                     </div>
 
-                    <div className={displayDevice ? `${Contactform1Css['contact-form']} ${Contactform1Css['card-contact']}` : `${Contactform1Css['contact-formM']} ${Contactform1Css['card-contactM']}`}>
+                    <div className={displayDevice ? `${Contactform1Css['contact-form']} ${Contactform1Css['card-contact']}` : `${Contactform1Css['contact-formM']} ${Contactform1Css['card-contact']}`}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -204,7 +204,7 @@ export default function Contactform1({displayDevice}) {
                             }}
                         />
 
-                        <form action="">
+                        <form>
                             <div className={Contactform1Css['form-control']}>
                                 <input type="text" name="name" placeholder="  Name" required />
                             </div>
@@ -218,7 +218,12 @@ export default function Contactform1({displayDevice}) {
                                 <input type="email" name="email" placeholder="  Email" required />
                             </div>
                             <div className={Contactform1Css['form-control']}>
-                                <button className={Contactform1Css['btna']}>
+                                <button className={`${Contactform1Css['btna']}`}>
+                                    <lord-icon
+                                        src="https://cdn.lordicon.com/rhvddzym.json"
+                                        trigger="loop"
+                                        colors="primary:#00d4ff,secondary:#000000">
+                                    </lord-icon>
                                     <Editor
                                         onInit={(evt, editor) => editorRef.current = editor}
                                         inline={true}
@@ -238,12 +243,8 @@ export default function Contactform1({displayDevice}) {
                                         }}
                                     />
 
-                                    <lord-icon
-                                        src="https://cdn.lordicon.com/rhvddzym.json"
-                                        trigger="loop"
-                                        colors="primary:#00d4ff,secondary:#000000"
-                                    >
-                                    </lord-icon></button>
+                                    
+                                </button>
 
                             </div>
 
