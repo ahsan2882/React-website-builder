@@ -51,10 +51,11 @@
 
  .icon-min {
    background-color: white;
-   width: max-content;
+   width:max-content;
+   color: #c01120;
    position: absolute;
    top: 87%;
-   left: 45%;
+   left: 42%;
    border-radius: 50%;
  }
 
