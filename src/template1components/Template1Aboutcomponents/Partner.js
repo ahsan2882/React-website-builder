@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 import PartnermoduleCss from './Partner.module.css'
-export default function Partner({ showPopup, overSection }) {
+export default function Partner({ displayDevice, showPopup, overSection }) {
     const editorRef = useRef(null);
     const [currentBackground, setCurrentBackground] = useState("white");
 
@@ -51,7 +51,7 @@ export default function Partner({ showPopup, overSection }) {
                 </h2>
             </div>
 
-            <div style={{ background: currentBackground }} className={`${PartnermoduleCss['row-1']}`}>
+            <div style={{ background: currentBackground }} className={displayDevice ? `${PartnermoduleCss['row-1']}` : `${PartnermoduleCss['row-1M']}`}>
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
