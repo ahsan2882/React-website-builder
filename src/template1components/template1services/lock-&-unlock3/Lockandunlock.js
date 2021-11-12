@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import StaticSecurity3Css from './Lockandunlock.module.css'
+import LockCss from './Lockandunlock.module.css'
 // import Img1 from '../../../assets/template1images/wavef1.png'
 // import Img2 from '../../../assets/template1images/services44.jpg'
 import { Editor } from '@tinymce/tinymce-react';
@@ -8,17 +8,17 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
     const editorRef = useRef(null);
     return (
         <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
-            <section className={StaticSecurity3Css['services-sec']}>
+            <section className={displayDevice ? `${LockCss['services-sec']} overflow-hidden` : `${LockCss['services-secM']} overflow-hidden`}>
 
-                <div className={`${StaticSecurity3Css['containers']} ${StaticSecurity3Css['grid-contact']}`}>
-                    <div className={`${StaticSecurity3Css['slide-in']} ${StaticSecurity3Css['services-text']}`}>
+                <div className={displayDevice ? `${LockCss['containers']} ${LockCss['grid-contact']}` : `${LockCss['containers']} ${LockCss['grid-contactM']}`}>
+                    <div className={displayDevice ? `${LockCss['services-text']}` : `${LockCss['services-textM']}`}>
 
                         <h1>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Static1'
-                                initialValue=" Lock and Unlock"
+                                initialValue="Lock and Unlock"
                                 init={{
                                     plugins: [
                                         "link"
@@ -37,11 +37,11 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static1'
                             initialValue=" <p>
-        Impeccable reputation and reliability, which is confirmed by the customers' and partners' feedback
-        from 1996. The composition of the crews include guards of the 3 category, with permission to use
-        lethal weapons.We are the agency that assumes full responsibility for the quality of security services, protecting
-        the interests of our clients.We are the agency that assumes full responsibility for the quality of security services, protecting
-        the interests of our clients.</p>"
+                        Impeccable reputation and reliability, which is confirmed by the customers' and partners' feedback
+                        from 1996. The composition of the crews include guards of the 3 category, with permission to use
+                        lethal weapons.We are the agency that assumes full responsibility for the quality of security services, protecting
+                        the interests of our clients.We are the agency that assumes full responsibility for the quality of security services, protecting
+                        the interests of our clients.</p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -56,7 +56,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                         />
 
 
-                        <button style={{ "margin-bottom": "40px;" }} className={StaticSecurity3Css.btna}>
+                        <button style={{ "margin-bottom": "40px;" }} className={LockCss.btna}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
@@ -76,13 +76,12 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             />
                         </button>
                     </div>
-                    <div className={`${StaticSecurity3Css['slide-in']} ${StaticSecurity3Css['services-text']}`}>
-                        {/* <img src="https://i.ibb.co/hgvP2XY/services44.jpg" alt="services44" border="0"> */}
+                    <div className={displayDevice ? `${LockCss['services-image']}` : `${LockCss['services-imageM']}`}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='Static2'
-                            initialValue={`<img src="https://i.ibb.co/hgvP2XY/services44.jpg" alt="services44" class="w-96 h-72 object-cover"/>`}
+                            initialValue={`<img src="https://i.ibb.co/hgvP2XY/services44.jpg" alt="services44" class="object-cover"/>`}
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -101,39 +100,40 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
 
                 </div>
             </section>
-            <div className={StaticSecurity3Css['wave-services']}>
+            <div className={displayDevice ? LockCss['wave-services'] : LockCss['wave-servicesM']}>
                 <img src="https://i.ibb.co/NL83nFf/wavef1.png" alt="wavef1" />
             </div>
-            <section className={`${StaticSecurity3Css['sec-serv']} ${StaticSecurity3Css['desc-services']}`}>
-                <div className={StaticSecurity3Css.container}>
-                    <div className={StaticSecurity3Css['services-text2']}>
-                        <div className={StaticSecurity3Css['txt-serv']}>
-                        <Editor
-                                    onInit={(evt, editor) => editorRef.current = editor}
-                                    inline={true}
-                                    key='Static3'
-                                    initialValue={`<span class="${StaticSecurity3Css.line1}"> Lock and </span><span class="${StaticSecurity3Css.line2}"> Unlock</span>`}
-                                    init={{
-                                        plugins: [
-                                            "link"
-                                        ],
-                                        forced_root_block: "",
-                                        menubar: false,
-                                        toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
-                                            'alignright alignjustify | fontselect',
-                                        fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
-                                        font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
-                                    }}
-                                />
-                           
-                           
+            <section className={`${LockCss['sec-serv']} ${LockCss['desc-services']}`}>
+                <div className={LockCss.container}>
+                    <div className={LockCss['services-text2']}>
+                        <div className={LockCss['txt-serv']}>
+
+                            <Editor
+                                onInit={(evt, editor) => editorRef.current = editor}
+                                inline={true}
+                                key='Static3'
+                                initialValue={`<span class="${LockCss.line1}"> Static </span><span class="${LockCss.line2}"> Security</span>`}
+                                init={{
+                                    plugins: [
+                                        "link"
+                                    ],
+                                    forced_root_block: "",
+                                    menubar: false,
+                                    toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                        'alignright alignjustify | fontselect',
+                                    fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                    font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+                                }}
+                            />
+
+
                         </div>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='Static3'
                             initialValue="<p>Impeccable reputation and reliability, which is confirmed by the customers'  partners' feedback
-                                            from 1996. The composition of the crews.</p>"
+                            from 1996. The composition of the crews.</p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -153,13 +153,13 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
 
                     </div>
 
-                    <div className={`${StaticSecurity3Css['container-sv']} ${StaticSecurity3Css['grid-r3']} ${StaticSecurity3Css['grid-3']}`}>
+                    <div className={displayDevice ? `${LockCss['container-sv']} ${LockCss['grid-r3']}` : `${LockCss['container-svM']} ${LockCss['grid-r3M']}`}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='Static4'
                             initialValue="<p> Impeccable reputation and reliability, which is confirmed by the customers'  partners' feedback
-                                           from 1996. The composition of the crews The composition of the crews</p>"
+                            from 1996. The composition of the crews The composition of the crews</p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -180,7 +180,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static5'
                             initialValue="<p>Impeccable reputation and reliability, which is confirmed by the customers'  partners' feedback
-            from 1996. The composition of the crews The composition of the crews.</p>"
+                            from 1996. The composition of the crews The composition of the crews.</p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -199,8 +199,8 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static6'
                             initialValue="
-            <p>Impeccable reputation and reliability, which is confirmed by the customers'  partners' feedback
-            from 1996. The composition of the crews The composition of the crews</p>>"
+                            <p>Impeccable reputation and reliability, which is confirmed by the customers'  partners' feedback
+                            from 1996. The composition of the crews The composition of the crews</p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -219,7 +219,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static7'
                             initialValue="<p>Impeccable reputation and reliability, which is confirmed by the customers'  partners' feedback
-            from 1996. The composition of the crews The composition of the crews   </p>"
+                            from 1996. The composition of the crews The composition of the crews   </p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -239,7 +239,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static8'
                             initialValue="<p> Impeccable reputation and reliability, which is confirmed by the customers'  partners' feedback
-            from 1996. The composition of the crews The composition of the crews </p>"
+                            from 1996. The composition of the crews The composition of the crews </p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -257,7 +257,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static9'
                             initialValue="<p>Impeccable reputation and reliability, which is confirmed by the customers'  partners' feedback
-            from 1996. The composition of the crews The composition of the crews. </p>"
+                            from 1996. The composition of the crews The composition of the crews. </p>"
 
                             init={{
                                 plugins: [
@@ -277,7 +277,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static9'
                             initialValue="<p>Impeccable reputation and reliability, which is confirmed by the customers' partners' feedback
-            from 1996. The composition of the crews The composition of the crews.</p>"
+                            from 1996. The composition of the crews The composition of the crews.</p>"
 
                             init={{
                                 plugins: [
@@ -298,7 +298,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static9'
                             initialValue="<p>Impeccable reputation and reliability, which is confirmed by the customers' partners' feedback
-            from 1996. The composition of the crews The composition of the crews. </p>"
+                            from 1996. The composition of the crews The composition of the crews. </p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -316,7 +316,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static10'
                             initialValue="<p> Impeccable reputation and reliability, which is confirmed by the customers' partners' feedback
-            from 1996. The composition of the crews The composition of the crews.</p>"
+                            from 1996. The composition of the crews The composition of the crews.</p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -334,7 +334,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static10'
                             initialValue="<p>Impeccable reputation and reliability, which is confirmed by the customers' partners' feedback
-            from 1996. The composition of the crews The composition of the crews. </p>"
+                            from 1996. The composition of the crews The composition of the crews. </p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -352,7 +352,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static11'
                             initialValue=" <p>Impeccable reputation and reliability, which is confirmed by the customers' partners' feedback
-            from 1996. The composition of the crews The composition of the crews.</p>"
+                            from 1996. The composition of the crews The composition of the crews.</p>"
                             init={{
                                 plugins: [
                                     "link"
@@ -370,7 +370,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                             inline={true}
                             key='Static11'
                             initialValue="<p>Impeccable reputation and reliability, which is confirmed by the customers' partners' feedback
-            from 1996. The composition of the crews The composition of the crews.</p>"
+                            from 1996. The composition of the crews The composition of the crews.</p>"
                             init={{
                                 plugins: [
                                     "link"
