@@ -2,9 +2,9 @@ import React, { useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1moduleCss from './Navbar1.module.css'
 // import tinymce from 'tinymce/tinymce';
+
 export default function Navbar1({ displayDevice, linksfunc }) {
-  const editorRef = useRef(null);
-  const navServiceArray = [
+  const navService1Array = [
     "STATIC SECURITY",
     "MOBILE PATROLLING",
     "CCTV MONITORING",
@@ -15,16 +15,19 @@ export default function Navbar1({ displayDevice, linksfunc }) {
     "SUPPORT & MANAGEMENT",
     "EVENT SECURITY"
   ]
-  const [navServices, setNavServices] = useState(navServiceArray)
+  const editorRef = useRef(null);
+  const [navServices, setNavServices] = useState(navService1Array)
   const removeService = (index) => {
     let newArray = [...navServices];
     newArray.splice(index, 1);
     setNavServices([...newArray])
+    updateService1Array([...newArray])
   }
   const addService = () => {
     let newArray = [...navServices];
-    newArray.push(navServiceArray[0]);
+    newArray.push(navService1Array[0]);
     setNavServices([...newArray])
+    updateService1Array([...newArray])
   }
   return (
     <>
@@ -50,7 +53,6 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                       'alignright alignjustify | fontselect | lineheight',
                     fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
                     font_formats: "Roboto=roboto, sans-serif, serif; Mohave=mohave, sans-serif, serif;Open Sans=open sans, sans-serif, serif;Lato=lato, sans-serif, serif; Red Hat Mono=red hat mono, sans-serif, serif; Montserrat=montserrat, sans-serif, serif; Roboto Condensed=roboto condensed, sans-serif, serif; Source Sans Pro= source sans pro, sans-serif, serif; Dongle=dongle, sans-serif, serif; Poppins=poppins, sans-serif, serif; Oswald=oswald, sans-serif, serif; Roboto Mono=roboto mono, sans-serif, serif; Raleway=raleway, sans-serif, serif; Ubuntu=ubuntu, sans-serif, serif; Merriweather=merriweather, sans-serif, serif",
-
                   }}
                 />
               </button></div>
@@ -75,36 +77,22 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                   <ul className={displayDevice ? `${Navbar1moduleCss['sub-menu']}` : `${Navbar1moduleCss['sub-menuM']}`}>
                     {navServices.map((item, index) => <li className="flex justify-between items-center">{linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{item}</a> : <>{item}</>}<button className="toBeRemoved" onClick={() => removeService(index)}><i className="fas fa-trash-alt"></i></button></li>)}
                     <li className="flex justify-between items-center toBeRemoved"><button onClick={() => addService()}><i className="fas fa-plus"></i> ADD NEW SERVICE</button></li>
-                    {/* <li>{linksfunc ? <a href="static-security.html">STATIC SECURITY</a> : <>STATIC SECURITY</>}</li>
-                    <li>{linksfunc ? <a href="mobile-patrolling.html">MOBILE PATROLLING</a> : <>MOBILE PATROLLING</>}</li>
-                    <li>{linksfunc ? <a href="cctv-monitoring.html">CCTV MONITORING</a> : <>CCTV MONITORING</>}</li>
-                    <li>{linksfunc ? <a href="lock-unlock.html">LOCK & UNLOCK</a> : <>LOCK & UNLOCK</>}</li>
-                    <li>{linksfunc ? <a href="vacant-unit-checks.html">VACANT UNIT CHECKS</a> : <>VACANT UNIT CHECKS</>}</li>
-                    <li>{linksfunc ? <a href="technology-product.html">TECHNOLOGY PRODUCT</a> : <>TECHNOLOGY PRODUCT</>}</li>
-                    <li>{linksfunc ? <a href="manned-guarding.html">MANNED GUARDING</a> : <>MANNED GUARDING</>}</li>
-                    <li>{linksfunc ? <a href="support-management.html">SUPPORT & MANAGEMENT</a> : <>SUPPORT & MANAGEMENT</>}</li>
-                    <li>{linksfunc ? <a href="event-security.html">EVENT SECURITY</a> : <>EVENT SECURITY</>}</li> */}
-
                   </ul>
                 </li>
-
                 <li><button className={`${Navbar1moduleCss.line}`} >CONTACT US</button></li>
-
                 <li><lord-icon
                   src="https://cdn.lordicon.com/msoeawqm.json"
                   trigger="hover"
                   colors="primary:#121331,secondary:#00d4ff"
-                  style={{width: "40px", height:"40px"}}>
+                  style={{ width: "40px", height: "40px" }}>
                 </lord-icon></li>
                 <li>
                   <li><lord-icon
                     src="https://cdn.lordicon.com/slkvcfos.json"
                     trigger="hover"
                     colors="primary:#121331,secondary:#00d4ff"
-                    style={{width: "40px", height:"40px"}}>
+                    style={{ width: "40px", height: "40px" }}>
                   </lord-icon></li>
-
-
                   <button className={`${Navbar1moduleCss['contact-btn']}`}>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
@@ -121,7 +109,6 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                       }}
                     />
                   </button>
-
                 </li>
               </ul>
             </div>
@@ -130,4 +117,9 @@ export default function Navbar1({ displayDevice, linksfunc }) {
       </header>
     </>
   )
+}
+
+export const updateService1Array = ( array ) => {
+  console.log(array);
+  return array;
 }
