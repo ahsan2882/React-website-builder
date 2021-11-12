@@ -5,7 +5,7 @@ import programAboutmoduleCss from './ProgramAbout.module.css'
 // import img3 from './3.svg'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
-export default function ProgramAbout({ showPopup, overSection }) {
+export default function ProgramAbout({ displayDevice, showPopup, overSection }) {
    const [currentBackground, setCurrentBackground] = useState("white");
    const [showPopup1, setShowPopup1] = useState(false);
    const [showPopup2, setShowPopup2] = useState(false);
@@ -19,7 +19,7 @@ export default function ProgramAbout({ showPopup, overSection }) {
       <>
          <div style={{ background: currentBackground }}>
             <section style={{ background: currentBackground }} className={`${programAboutmoduleCss.services}`}>
-               <div className={`${programAboutmoduleCss['service-item-container']}`}>
+               <div className={displayDevice ? `${programAboutmoduleCss['service-item-container']}` : `${programAboutmoduleCss['service-item-containerM']}`}>
                   <div className={`${programAboutmoduleCss['service-item']}  ${programAboutmoduleCss['fade-in']}`} style={{ background: currentBackground1 }} onClick={() => setShowPopup1(state => !state)}>
                      <div className={`${programAboutmoduleCss.bar}`}></div>
                      {/* <div className={`${programAboutmoduleCss.item}`}>
