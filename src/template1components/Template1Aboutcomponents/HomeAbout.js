@@ -8,8 +8,8 @@ export default function HomeAbout({ showPopup, overSection, displayDevice, links
     return (
    <>
    <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
-    <section  className={`${HomeAboutmoduleCss['services-sec']}`}>
-    <div className={`${HomeAboutmoduleCss.contentserv}`}>
+        <section className={displayDevice ? `${HomeAboutmoduleCss['services-sec']}` : `${HomeAboutmoduleCss['services-secM']}`}>
+          <div className={displayDevice ? `${HomeAboutmoduleCss.contentserv}` : `${HomeAboutmoduleCss.contentservM}`}>
               <h1 className={`${HomeAboutmoduleCss.headings}`}>
               <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
