@@ -10,7 +10,7 @@ export default function Contact3form() {
                     <div className={Contact3formCss['contact-info']}>
                         <div className={Contact3formCss['c-info']}>
                             <div className={Contact3formCss['icon-head']}>
-                                <lord-icon src="https://cdn.lordicon.com/xtkehzkm.json" trigger="loop" colors={{ "primary": "#000000", "secondary": "#c01120" }}
+                                <lord-icon src="https://cdn.lordicon.com/xtkehzkm.json" trigger="loop" colors="primary:#FFFFFF,secondary:#FFFFFF"
                                     style={{ "width": "70px", "height": "70px" }}></lord-icon>
                                 <h1>
                                     <Editor
@@ -51,7 +51,7 @@ export default function Contact3form() {
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
                                 key="Contact3"
-                                initialValue={`<p>418-426 Lewisham High Street, SE13 6LJ</p>`}
+                                initialValue={`<p class="${Contact3formCss.paragraph}">418-426 Lewisham High Street, SE13 6LJ</p>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -135,7 +135,7 @@ export default function Contact3form() {
                         </div>
                         <div className={Contact3formCss['c-info']}>
                             <div className={Contact3formCss['icon-head']}>
-                                <lord-icon src="https://cdn.lordicon.com/ltxkhbfa.json" trigger="loop" colors={{ "primary": "#000000", "secondary": "#c01120" }}
+                                <lord-icon src="https://cdn.lordicon.com/ltxkhbfa.json" trigger="loop" colors="primary:#FFFFFF,secondary:#FFFFFF"
                                     style={{ "width": "70px", "height": "70px" }}>
                                 </lord-icon>
                                 <Editor
@@ -250,7 +250,7 @@ export default function Contact3form() {
                         </div>
                         <div className={Contact3formCss['c-info']}>
                             <div className={Contact3formCss['icon-head']}>
-                                <lord-icon src="https://cdn.lordicon.com/jshbewmb.json" trigger="loop" colors={{ "primary": "#000000", "secondary": "#c01120" }}
+                                <lord-icon src="https://cdn.lordicon.com/jshbewmb.json" trigger="loop" colors="primary:#FFFFFF,secondary:#FFFFFF"
                                     style={{ "width": "70px", "height": "70px" }}>
                                 </lord-icon>
                                 <Editor
