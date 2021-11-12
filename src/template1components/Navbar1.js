@@ -90,9 +90,19 @@ export default function Navbar1({ displayDevice, linksfunc }) {
 
                 <li><button className={`${Navbar1moduleCss.line}`} >CONTACT US</button></li>
 
-
+                <li><lord-icon
+                  src="https://cdn.lordicon.com/msoeawqm.json"
+                  trigger="hover"
+                  colors="primary:#121331,secondary:#00d4ff"
+                  style={{width: "40px", height:"40px"}}>
+                </lord-icon></li>
                 <li>
-
+                  <li><lord-icon
+                    src="https://cdn.lordicon.com/slkvcfos.json"
+                    trigger="hover"
+                    colors="primary:#121331,secondary:#00d4ff"
+                    style={{width: "40px", height:"40px"}}>
+                  </lord-icon></li>
 
 
                   <button className={`${Navbar1moduleCss['contact-btn']}`}>
