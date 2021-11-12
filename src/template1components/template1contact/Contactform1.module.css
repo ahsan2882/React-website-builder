@@ -1,28 +1,17 @@
-/* .container {
-    max-width: 1100;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 50px;
-  height: 100vh;
-
-} */
 
 .grid-contact {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
   justify-content: center;
   align-items: center;
   margin: 4.5rem 0 10rem;
+  gap: 20px;
   height: 100%;
-
 }
-
 .grid-contactM {
   display: flex;
   flex-direction: column;
 }
-
 .contact-text .headings {
   font-size: 50px;
   padding: 70px 0 100px;
@@ -45,47 +34,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .card-cont i {
   color: #00d4ff;
 }
 
-.contact-form {
-  height: 643px;
-  position: relative;
-  top: -1px;
-  width: 680px;
-  padding: 90px 40px 50px;
-  justify-self: flex-end;
-}
-.contact-formM {
-  position: relative;
-  top: -1px;
-  width: 100%;
-  padding: 77px 27px 43px;
-  justify-self: flex-end;
-}
-
-.contact-form h2 {
-  font-size: 50px;
-  padding: 40px 0;
-  font-weight: 700;
-}
-
-.contact-form .form-control {
-  margin: 30px 0;
-}
-.contact-formM h2 {
-  font-size: 50px;
-  padding: 40px 0;
-  font-weight: 700;
-}
-
-.contact-formM .form-control {
-  margin: 30px 0;
-}
 
 
 .btna {
@@ -99,6 +54,7 @@
   align-items: center;
   justify-content: space-around;
   margin: 20px;
+  flex-direction: row-reverse;
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -131,14 +87,14 @@
   margin: 20px;
   margin-bottom: 100px;
 }
-.card-contactM {
-  background-color: rgb(255, 255, 255);
-  color: #333;
-  border-radius: 15px;
-  box-shadow: 0px 10px 30px 0px rgb(154 150 248 / 20%);
+
+.contact-form {
+  position: relative;
+  top: -1px;
+  width: 680px;
+  padding: 90px 40px 50px;
+  justify-self: flex-end;
 }
-
-
 
 .contact-form .form-control {
   margin: 30px 0;
@@ -146,6 +102,11 @@
 
 .contact-form input:focus {
   outline: none;
+}
+.contact-form h2 {
+  font-size: 50px;
+  padding: 40px 0;
+  font-weight: 700;
 }
 
 .contact-form input[type="text"],
@@ -159,12 +120,26 @@
   font-size: 16px;
 }
 
+.contact-formM {
+  position: relative;
+  top: -1px;
+  width: 90%;
+  padding: 90px 40px 50px;
+  justify-self: flex-end;
+}
+
 .contact-formM .form-control {
   margin: 30px 0;
 }
 
 .contact-formM input:focus {
   outline: none;
+}
+
+.contact-formM h2 {
+  font-size: 50px;
+  padding: 40px 0;
+  font-weight: 700;
 }
 
 .contact-formM input[type="text"],
@@ -197,7 +172,6 @@
 
 .mapsec {
   width: 100%;
-  height: 600px;
 }
 
 .map {
@@ -205,19 +179,12 @@
 }
 
 @media (max-width: 600px) {
-  .grid-contact {
+  .grid-contact{
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
   }
-
-  .contact-form {
-    height: auto;
-    width: 100%;
-    padding: 77px 27px 43px;
-  }
-
-  .card-contact {
-    padding: 0;
-    margin: 0;
+  .contact-form{
+    width: 90%
   }
 }
