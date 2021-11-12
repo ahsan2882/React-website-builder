@@ -86,7 +86,7 @@ display: flex;
     }
     .testimonial-heading {
       font-size: 2rem;
-      width: 27rem;
+      width: auto;
     }
   
   }
