@@ -42,7 +42,7 @@
   }
 
 
-  .headline_content2 {
+  .headlinecontent2 {
     font-size: 2.5rem;
     font-weight: 500;
     max-width: 50vw;
@@ -52,7 +52,7 @@
     padding: 6px 42px;
   }
   
-  .headline_content2 b {
+  .headlinecontent2 b {
     color: #00d4ff;
     font-size: 2.5rem;
     font-weight: 500;
@@ -62,29 +62,10 @@
     padding: 6px 42px;
   }
   
-  @media (max-width: 1277px) {
-  
-    .author2 {
-      width: 100%;
-      text-align: center;
-  }
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .container11-image img {
-    width: 50vw;
- 
-}
-
-  }
-  @media (max-width: 600px) {
-  
- .row {
-   flex-direction: column;
- }
-
+  @media(max-width: 600px){
+    .row{
+      flex-direction: column;
+    }
   }
 
    .testimonial-text {
