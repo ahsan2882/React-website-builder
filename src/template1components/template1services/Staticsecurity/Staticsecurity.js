@@ -11,7 +11,7 @@ export default function Staticsecurity({ showPopup, overSection, displayDevice, 
             <section className={StaticSecurity3Css['services-sec']}>
 
                 <div className={`${StaticSecurity3Css['containers']} ${StaticSecurity3Css['grid-contact']}`}>
-                    <div className={`${StaticSecurity3Css['slide-in']} ${StaticSecurity3Css['services-text']}`}>
+                    <div className={`${StaticSecurity3Css['services-text']}`}>
 
                         <h1>
                             <Editor
@@ -76,7 +76,7 @@ export default function Staticsecurity({ showPopup, overSection, displayDevice, 
                         />
                      </button>
                     </div>
-                    <div className={`${StaticSecurity3Css['slide-in']} ${StaticSecurity3Css['services-text']}`}>
+                    <div className={`${StaticSecurity3Css['services-text']}`}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
