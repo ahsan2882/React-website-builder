@@ -112,7 +112,7 @@ export default function SupportandManagment({ showPopup, overSection, displayDev
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Static3'
-                                initialValue={`<span class="${SupportCss.line1}"> Static </span><span class="${SupportCss.line2}"> Security</span>`}
+                                initialValue={`<span class="${SupportCss.line1}"> Support And </span><span class="${SupportCss.line2}"> Management</span>`}
                                 init={{
                                     plugins: [
                                         "link"
