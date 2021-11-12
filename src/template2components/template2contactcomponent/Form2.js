@@ -11,9 +11,9 @@ export default function Form2({ showPopup, overSection }) {
         <div className={Form2Css['section-form']} style={{ background: currentBackground }}>
           <div className={Form2Css['box2']}>
             <div className={Form2Css['addresses']}>
-              <h1>{/*<lord-icon src="https://cdn.lordicon.com/burmxlrn.json" trigger="loop" colors={{ "primary": "#121331", "secondary": "#c0272d" }}
-                style={{ "width": "70px;", "height": "70px" }}>
-              </lord-icon> */}
+            <h1 className="flex items-center"><lord-icon src="https://cdn.lordicon.com/burmxlrn.json" trigger="loop" colors="primary:#121331,secondary:#c0272d"
+                style={{ "width": "80px", "height": "80px" }}>
+              </lord-icon><span className={Form2Css.hd}>{'>'}</span>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
@@ -90,10 +90,10 @@ export default function Form2({ showPopup, overSection }) {
               />
             </div>
             <div className={Form2Css['number-site']}>
-              <h1>
-                {/* <lord-icon src="https://cdn.lordicon.com/ltxkhbfa.json" trigger="loop"
-                  colors={{ "primary": "#121331", "secondary": "#c0272d" }} style={{ "width": "70px;", "height": "70px" }}>
-                </lord-icon> */}
+              <h1 className="flex items-center">
+                <lord-icon src="https://cdn.lordicon.com/ltxkhbfa.json" trigger="loop"
+                  colors="primary:#121331,secondary:#c0272d" style={{ "width": "80px", "height": "80px" }}>
+                </lord-icon><span className={Form2Css.hd}>{'>'}</span>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
@@ -189,7 +189,7 @@ export default function Form2({ showPopup, overSection }) {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='Form7'
-                initialValue="  <p>Manchester: 0161 511 3398</p>"
+                initialValue="<p>Manchester: 0161 511 3398</p>"
                 init={{
                   plugins: [
                     "link"
@@ -207,10 +207,11 @@ export default function Form2({ showPopup, overSection }) {
             </div>
 
             <div className={Form2Css['email-site']}>
-              <h1>
-                {/* <lord-icon src="https://cdn.lordicon.com/jshbewmb.json" trigger="loop"
-                  colors={{ "primary": "#121331", "secondary": "#c0272d" }} style={{ "width": "70px;", "height": "70px" }}>
-                </lord-icon> */}
+            
+               <h1 className="flex items-center">
+              <lord-icon src="https://cdn.lordicon.com/jshbewmb.json" trigger="loop"
+                  colors="primary:#121331,secondary:#c0272d" style={{ "width": "80px", "height": "80px" }}>
+                </lord-icon><span className={Form2Css.hd}>{'>'}</span>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
