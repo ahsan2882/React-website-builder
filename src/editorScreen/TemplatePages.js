@@ -1,3 +1,5 @@
+import { updateService1Array } from "../template1components/Navbar1";
+
 const pages = {
     "template1pages": [
         {
@@ -10,7 +12,8 @@ const pages = {
         },
         {
             "groupName": "Services",
-            "subpages" :["Static Security", "Mobile Patrolling", "CCTV Monitoring", "Lock & Unlock", "Vacant Unit Checks", "Technology Product", "Manned Guarding", "Support & Management", "Event Security"]
+            // "subpages" :["Static Security", "Mobile Patrolling", "CCTV Monitoring", "Lock & Unlock", "Vacant Unit Checks", "Technology Product", "Manned Guarding", "Support & Management", "Event Security"]
+            "subpages": [updateService1Array()]
         },
         {
             "groupName": "Contact",
