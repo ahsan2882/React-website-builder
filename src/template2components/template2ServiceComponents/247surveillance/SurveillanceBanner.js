@@ -13,7 +13,8 @@ export default function Servillancebanner({ displayDevice, linksfunc }) {
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='Servillance1'
-                        initialValue="24/7 Servillance"
+                        initialValue="
+                        24/7 Servillance"
                         init={{
                             plugins: [
                                 "link"
