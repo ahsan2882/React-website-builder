@@ -3,15 +3,15 @@ import ExpermoduleCss from './Experince1.module.css'
 // import Service from './services11.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
-export default function Experince1({ showPopup, overSection }) {
+export default function Experince1({displayDevice, showPopup, overSection }) {
     const editorRef = useRef(null);
     const [currentBackground, setCurrentBackground] = useState("transperent");
     return (
 <>
 
-<section style={{ background: currentBackground }}  className={`${ExpermoduleCss['services-sec']}`}>
-        <div style={{display:`flex`,justifyContent:`space-around`}} className={`${ExpermoduleCss['grid-contact']}`}>
-            <div className={`${ExpermoduleCss['services-text']}`}>
+        <section style={{ background: currentBackground }} className={displayDevice ? `${ExpermoduleCss['services-sec']}` : `${ExpermoduleCss['services-secM']}`}>
+          <div className={displayDevice ? `${ExpermoduleCss['grid-contact']}` : `${ExpermoduleCss['grid-contactM']}`}>
+            <div className={displayDevice ? `${ExpermoduleCss['services-text']}` : `${ExpermoduleCss['services-textM']}`}>
                 <div className="back">
                 <h1 className={`${ExpermoduleCss['main-heading']}`}>
                 <Editor
@@ -62,7 +62,7 @@ export default function Experince1({ showPopup, overSection }) {
 
         
             </div>
-            <div   className={`${ExpermoduleCss['service-img']}`}>
+            <div className={displayDevice ? `${ExpermoduleCss['service-img']}` : `${ExpermoduleCss['service-imgM']}`}>
               {/* src="https://i.ibb.co/8zsQjgJ/services11.jpg" alt="services11" */}
               <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
