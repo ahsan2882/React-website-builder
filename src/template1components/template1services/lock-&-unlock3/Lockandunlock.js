@@ -112,7 +112,7 @@ export default function Lockandunlock({ showPopup, overSection, displayDevice, l
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Static3'
-                                initialValue={`<span class="${LockCss.line1}"> Static </span><span class="${LockCss.line2}"> Security</span>`}
+                                initialValue={`<span class="${LockCss.line1}"> Lock and  </span><span class="${LockCss.line2}"> Unlock</span>`}
                                 init={{
                                     plugins: [
                                         "link"
