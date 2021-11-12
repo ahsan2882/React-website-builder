@@ -42,7 +42,7 @@ export default function VisionAbout() {
                                 inline={true}
                                 key='guard4ed10'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue="who we are"
+                                initialValue="Who we are"
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
