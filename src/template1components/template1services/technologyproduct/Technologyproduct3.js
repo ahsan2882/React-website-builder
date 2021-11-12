@@ -112,7 +112,7 @@ export default function Technologyproduct3({ showPopup, overSection, displayDevi
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Static3'
-                                initialValue={`<span class="${TechnoCss.line1}"> Static </span><span class="${TechnoCss.line2}"> Security</span>`}
+                                initialValue={`<span class="${TechnoCss.line1}"> Technology </span><span class="${TechnoCss.line2}"> Product</span>`}
                                 init={{
                                     plugins: [
                                         "link"
