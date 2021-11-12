@@ -8,10 +8,10 @@ export default function Staticsecurity({ showPopup, overSection, displayDevice, 
     const editorRef = useRef(null);
     return (
         <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
-            <section className={StaticSecurity3Css['services-sec']}>
+            <section className={displayDevice ? `${StaticSecurity3Css['services-sec']} overflow-hidden` : `${StaticSecurity3Css['services-secM']} overflow-hidden`}>
 
-                <div className={`${StaticSecurity3Css['containers']} ${StaticSecurity3Css['grid-contact']}`}>
-                    <div className={`${StaticSecurity3Css['services-text']}`}>
+                <div className={displayDevice ? `${StaticSecurity3Css['containers']} ${StaticSecurity3Css['grid-contact']}` : `${StaticSecurity3Css['containers']} ${StaticSecurity3Css['grid-contactM']}`}>
+                    <div className={displayDevice ? `${StaticSecurity3Css['services-text']}` : `${StaticSecurity3Css['services-textM']}`}>
 
                         <h1>
                             <Editor
@@ -76,12 +76,12 @@ export default function Staticsecurity({ showPopup, overSection, displayDevice, 
                         />
                      </button>
                     </div>
-                    <div className={`${StaticSecurity3Css['services-text']}`}>
+                    <div className={displayDevice ? `${StaticSecurity3Css['services-image']}` : `${StaticSecurity3Css['services-imageM']}`}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
                             key='Static2'
-                            initialValue={`<img src="https://i.ibb.co/r60q0YL/services11.jpg" alt="services11" class="w-96 h-72 object-cover"/>`}
+                            initialValue={`<img src="https://i.ibb.co/r60q0YL/services11.jpg" alt="services11" class="object-cover"/>`}
                             init={{
                                 forced_root_block: "",
                                 menubar: false,
@@ -100,7 +100,7 @@ export default function Staticsecurity({ showPopup, overSection, displayDevice, 
 
                 </div>
             </section>
-            <div className={StaticSecurity3Css['wave-services']}>
+            <div className={displayDevice ? StaticSecurity3Css['wave-services'] : StaticSecurity3Css['wave-servicesM']}>
                 <img src="https://i.ibb.co/NL83nFf/wavef1.png" alt="wavef1" />
             </div>
             <section className={`${StaticSecurity3Css['sec-serv']} ${StaticSecurity3Css['desc-services']}`}>
@@ -153,7 +153,7 @@ export default function Staticsecurity({ showPopup, overSection, displayDevice, 
 
                     </div>
 
-                    <div className={`${StaticSecurity3Css['container-sv']} ${StaticSecurity3Css['grid-r3']} ${StaticSecurity3Css['grid-3']}`}>
+                    <div className={displayDevice ? `${StaticSecurity3Css['container-sv']} ${StaticSecurity3Css['grid-r3']}` : `${StaticSecurity3Css['container-svM']} ${StaticSecurity3Css['grid-r3M']}`}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
@@ -200,7 +200,7 @@ export default function Staticsecurity({ showPopup, overSection, displayDevice, 
                             key='Static6'
                             initialValue="
                             <p>Impeccable reputation and reliability, which is confirmed by the customers'  partners' feedback
-                            from 1996. The composition of the crews The composition of the crews</p>>"
+                            from 1996. The composition of the crews The composition of the crews</p>"
                             init={{
                                 plugins: [
                                     "link"
