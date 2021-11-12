@@ -5,6 +5,7 @@ import { Editor } from '@tinymce/tinymce-react';
 export default function Mannedguardingdescription() {
     const editorRef = useRef(null);
     return (
+        <>
         <section class={MannedguardingdescriptionCss['service-content']}>
             <div class={MannedguardingdescriptionCss['service-container']}>
                 <div class={MannedguardingdescriptionCss['serv-head']}>
@@ -190,5 +191,43 @@ export default function Mannedguardingdescription() {
 
             </div>
         </section>
+        <section> 
+        <div className={`${MannedguardingdescriptionCss['icon-content']} ${MannedguardingdescriptionCss['container365']}`}>
+            <div className={MannedguardingdescriptionCss['iconized']}>
+
+                <lord-icon src="https://cdn.lordicon.com/ifclergl.json" trigger="loop-on-hover"
+                    colors="primary:#121331,secondary:#c0272d" style={{"width":"130px","height":"130px"}}>
+                </lord-icon>
+                <h3>Consistency</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div>
+            <div className={MannedguardingdescriptionCss['iconized']}>
+
+                <lord-icon src="https://cdn.lordicon.com/urhcgqxz.json" trigger="loop-on-hover"
+                    colors="primary:#121331,secondary:#c0272d" style={{"width":"130px","height":"130px"}}>
+                </lord-icon>
+                <h3>Improvement</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div>
+            <div className={MannedguardingdescriptionCss['iconized']}>
+
+                <lord-icon src="https://cdn.lordicon.com/dflgefov.json" trigger="loop-on-hover"
+                    colors="primary:#121331,secondary:#c0272d" style={{"width":"130px","height":"130px"}}>
+                </lord-icon>
+                <h3>Brances</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div>
+            <div className={MannedguardingdescriptionCss['iconized']}>
+
+                <lord-icon src="https://cdn.lordicon.com/yyecauzv.json" trigger="loop-on-hover"
+                    colors="primary:#121331,secondary:#c0272d" style={{"width":"130px","height":"130px"}}>
+                </lord-icon>
+                <h3>Privacy Policy</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div>
+        </div>
+    </section>
+        </>
+        
     )
 }
