@@ -5,6 +5,7 @@ import { Editor } from '@tinymce/tinymce-react';
 export default function Lockandunlockdescription() {
   const editorRef = useRef(null);
   return (
+    <>
     <section class={['service-content']}>
       <div class={LockandunlockCss['service-container']}>
         <div class={LockandunlockCss['serv-head']}>
@@ -178,5 +179,175 @@ export default function Lockandunlockdescription() {
 
       </div>
     </section>
+    <section>
+        <div className={`${LockandunlockCss['icon-content']} ${LockandunlockCss['container365']}`}>
+          <div className={LockandunlockCss['iconized']}>
+
+            <lord-icon src="https://cdn.lordicon.com/ifclergl.json" trigger="loop-on-hover"
+              colors="primary:#121331,secondary:#c0272d" style={{ "width": "130px", "height": "130px" }}>
+            </lord-icon>
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Event Security8'
+              initialValue="<h3>Consistency</h3>"
+              init={{
+                plugins: [
+                  "link"
+                ],
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Event Security9'
+              initialValue="<p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>"
+              init={{
+                plugins: [
+                  "link"
+                ],
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+
+          </div>
+          <div className={LockandunlockCss['iconized']}>
+
+            <lord-icon src="https://cdn.lordicon.com/urhcgqxz.json" trigger="loop-on-hover"
+              colors="primary:#121331,secondary:#c0272d" style={{ "width": "130px", "height": "130px" }}>
+            </lord-icon>
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Event Security10'
+              initialValue=" <h3>Improvement</h3>"
+              init={{
+                plugins: [
+                  "link"
+                ],
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Event Security11'
+              initialValue="<p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>"
+              init={{
+                plugins: [
+                  "link"
+                ],
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+
+          </div>
+          <div className={LockandunlockCss['iconized']}>
+
+            <lord-icon src="https://cdn.lordicon.com/dflgefov.json" trigger="loop-on-hover"
+              colors="primary:#121331,secondary:#c0272d" style={{ "width": "130px", "height": "130px" }}>
+            </lord-icon>
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Event Security11'
+              initialValue="<h3>Brances</h3>"
+              init={{
+                plugins: [
+                  "link"
+                ],
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Event Security11'
+              initialValue=" <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>"
+              init={{
+                plugins: [
+                  "link"
+                ],
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+
+          </div>
+          <div className={LockandunlockCss['iconized']}>
+
+            <lord-icon src="https://cdn.lordicon.com/yyecauzv.json" trigger="loop-on-hover"
+              colors="primary:#121331,secondary:#c0272d" style={{ "width": "130px", "height": "130px" }}>
+            </lord-icon>
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Event Security12'
+              initialValue=" <h3>Privacy Policy</h3>"
+              init={{
+                plugins: [
+                  "link"
+                ],
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+            <Editor
+              onInit={(evt, editor) => editorRef.current = editor}
+              inline={true}
+              key='Event Security13'
+              initialValue="<p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>"
+              init={{
+                plugins: [
+                  "link"
+                ],
+                forced_root_block: "",
+                menubar: false,
+                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                  'alignright alignjustify | fontselect',
+                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                font_formats: "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
+              }}
+            />
+         
+          </div>
+        </div>
+      </section>
+
+    </>
   )
 }
