@@ -38,7 +38,7 @@ export default function AboutServices({ showPopup, overSection }) {
                         inline={true}
                         key='abouted4'
                         tinymceScriptSrc="../assets/tinymce/tinymce.min.js"
-                        initialValue="Our services"
+                        initialValue="Our Services"
                         init={{
                             forced_root_block: "",
                             menubar: false,
