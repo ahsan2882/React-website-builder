@@ -25,17 +25,17 @@
   
   .feedImg {
     width: 253vw;
-    border-right: 7px solid var(--clr-primary);
-    border-bottom: 7px solid var(--clr-primary);
+    border-right: 7px solid  #c0272d ;
+    border-bottom: 7px solid #c0272d;
   }
   
   .feedback {
-    background-color: var(--clr-white-smoke);
+    background-color: #ebebeb;
   }
   
   
   .btnb {
-    background-color: var(--clr-secondary);
+    background-color: #000000;
     color: var(--clr-light);
     text-decoration: none;
     padding: 10px 20px;
@@ -55,7 +55,7 @@
     position: absolute;
     height: 100%;
     width: 55%;
-    background: var(--clr-primary);
+    background: #c0272d;
     top: 0;
     left: 0;
     border-radius: 5px;
@@ -70,7 +70,7 @@
     width: 55%;
     right: 0;
     top: 0;
-    background: var(--clr-primary);
+    background:#c0272d;
     border-radius: 5px;
     z-index: -1;
     transition: all 0.3s ease-out;
@@ -86,7 +86,7 @@
   
   .btnb:hover {
     cursor: pointer;
-    color: var(--clr-light);
+    color: var #ffff;
   }
   
   .form-post{
@@ -104,7 +104,7 @@
     margin: 60px 0;
   }
   .SpanColor {
-    color: var(--clr-primary);
+    color: #c0272d;
   }
   .spanDesc {
   
