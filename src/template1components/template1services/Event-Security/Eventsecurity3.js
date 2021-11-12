@@ -113,7 +113,7 @@ export default function Eventsecurity3({ showPopup, overSection, displayDevice, 
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Static3'
-                                initialValue={`<span class="${Eventsecurity3Css.line1}"> Static </span><span class="${Eventsecurity3Css.line2}"> Security</span>`}
+                                initialValue={`<span class="${Eventsecurity3Css.line1}">Event </span><span class="${Eventsecurity3Css.line2}"> Security</span>`}
                                 init={{
                                     plugins: [
                                         "link"
