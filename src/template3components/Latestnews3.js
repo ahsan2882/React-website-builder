@@ -110,7 +110,7 @@ export default function Latestnews3({ showPopup, overSection }) {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='latesnews4'
-                                    initialValue="<p>CCtv Full secuirty</p>"
+                                    initialValue="<p>If you are able to install a camera , there is still a few trick to pay extra attension</p>"
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -198,7 +198,7 @@ export default function Latestnews3({ showPopup, overSection }) {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='latesnews6'
-                                    initialValue="<p>How To Monitor Your Facility. </p>"
+                                    initialValue="<p>Hire a special man  who know how to deal with this . Or read this post and etc  </p>"
                                     init={{
                                         forced_root_block: "",
                                         menubar: false,
@@ -284,7 +284,7 @@ export default function Latestnews3({ showPopup, overSection }) {
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
                                     key='latesnews8'
-                                    initialValue="<p>Outdoor Security Process.</p>
+                                    initialValue="<p>Working with different client , we collected rich experience and want to share it with you</p>
                                         "
                                     init={{
                                         forced_root_block: "",
