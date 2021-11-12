@@ -72,7 +72,7 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
                 }}
               />
               <div className="flex items-center">
-                <i className="fas fa-map-marker-alt i1 mr-2"></i>
+                <i className="fas fa-map-marker-alt text-black mr-2"></i>
 
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
@@ -94,7 +94,7 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
                 />
               </div>
               <div className="flex items-center">
-                <i className="fas fa-phone-alt i1 mr-2"></i>
+                <i className="fas fa-phone-alt text-black mr-2"></i>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
@@ -115,7 +115,7 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
                 />
               </div>
               <div className="flex items-center">
-                <i className="fas fa-envelope i1 mr-2"></i>
+                <i className="fas fa-envelope text-black mr-2"></i>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
@@ -204,8 +204,8 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
             </div>
             <div className={displayDevice ? Footer2moduleCss['column-foot'] : Footer2moduleCss['columnFootM']} style={{ backgroundColor: "transparent" }}>
               <div className={Footer2moduleCss.col}>
-                <div className="flex items-center">
-                  <i className="fas fa-map-marker-alt i1 mr-2"></i>
+                <div className="flex items-center mt-2">
+                  <i className="fas fa-map-marker-alt i1 text-black mr-2"></i>
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -226,7 +226,7 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
                   />
                 </div>
                 <div className="flex items-center">
-                  <i className="fas fa-map-marker-alt i1 mr-2"></i>
+                  <i className="fas fa-map-marker-alt text-black mr-2"></i>
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
@@ -248,7 +248,7 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
                   />
                 </div>
                 <div className="flex items-center">
-                  <i className="fas fa-map-marker-alt i1 mr-2"></i>
+                  <i className="fas fa-map-marker-alt text-black mr-2"></i>
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
