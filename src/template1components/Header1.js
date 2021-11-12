@@ -16,7 +16,7 @@ export const Header1 = ({ showPopup, overSection, displayDevice, linksfunc }) =>
 
       <section style={{ background: currentBackground }} className={displayDevice ? `${Header1Css.section}` : `${Header1Css.sectionM}`}>
         <div className={`${Header1Css['section-details']}`}>
-          <div className={displayDevice ? `${Header1Css.left}` : `${Header1Css.leftM}`}>
+          <div className={displayDevice ? Header1Css.left : Header1Css.leftM}>
             {/* <span className={`${Header1Css['headline_content']}`}><span>
               
               <b>Security</b> is not a product, it is a process.</span ></span> */}
@@ -40,7 +40,7 @@ export const Header1 = ({ showPopup, overSection, displayDevice, linksfunc }) =>
             />
 
 
-            <div style={{ width: `30rem` }} className={`${Header1Css['headline-para']}`}>
+            <div style={displayDevice ? { width: `30rem` } : { width: `100%` }} className={`${Header1Css['headline-para']}`}>
               <p>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
