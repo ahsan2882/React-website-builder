@@ -100,8 +100,9 @@ export default function Ourprograms3({ showPopup, overSection }) {
 
 
                                 <div className={Ourprograms3Css['icon-min']}>
-                                    <lord-icon src="https://cdn.lordicon.com/mtdulhdc.json" trigger="loop" colors={{ "primary": "#000000", "secondary": "#c01120" }}
-                                        style={{ "width": "50px;", "height": "50px" }}>
+                                    <lord-icon src="https://cdn.lordicon.com/mtdulhdc.json" trigger="loop" 
+                                    colors="primary:#00000,secondary:#c01120"
+                                        style={{ width:`50px`,height:`50px` }}>
                                     </lord-icon>
 
                                 </div>
@@ -183,8 +184,9 @@ export default function Ourprograms3({ showPopup, overSection }) {
                                 />
 
                                 <div className={Ourprograms3Css['icon-min']}>
-                                    <lord-icon src="https://cdn.lordicon.com/vcoyflbj.json" trigger="loop" colors={{ "primary": "#000000", "secondary": "#c01120" }}
-                                        style={{ "width": "50px;", "height": "50px" }}>
+                                    <lord-icon src="https://cdn.lordicon.com/vcoyflbj.json" trigger="loop"
+                                     colors="primary:#00000,secondary:#c01120"
+                                        style={{ width:`50px`,height:`50px` }}>
                                     </lord-icon>
 
                                 </div>
@@ -281,8 +283,9 @@ export default function Ourprograms3({ showPopup, overSection }) {
                                 />
 
                                 <div className={Ourprograms3Css['icon-min']}>
-                                    <lord-icon src="https://cdn.lordicon.com/igpsgesd.json" trigger="loop" colors={{ "primary": "#000000", "secondary": "#c01120" }}
-                                        style={{ "width": "50px;", "height": "50px" }}>
+                                    <lord-icon src="https://cdn.lordicon.com/igpsgesd.json" trigger="loop"
+                                      colors="primary:#00000,secondary:#c01120"
+                                        style={{ width:`50px`,height:`50px` }}>
                                     </lord-icon>
 
                                 </div>
