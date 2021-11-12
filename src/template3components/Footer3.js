@@ -314,12 +314,12 @@ export default function Footer3({ showPopup, overSection }) {
                                         }}
                                     />
                                 </p>
-                                <p>
-                                    <i style={{ margin: `17px 5px` }} className="fab fa-facebook i "></i>
-                                    <i style={{ margin: `17px 5px` }} className="fab fa-twitter-square i "></i>
-                                    <i style={{ margin: `17px 5px` }} className="fab fa-pinterest i "></i>
-                                    <i style={{ margin: `17px 5px` }} className="fab fa-linkedin i"></i>
-                                </p>
+                                <div>
+                                    <i style={{ margin: `17px 5px`, fontSize: "2rem" }} className="fab fa-facebook i "></i>
+                                    <i style={{ margin: `17px 5px`, fontSize: "2rem" }} className="fab fa-twitter-square i "></i>
+                                    <i style={{ margin: `17px 5px`, fontSize: "2rem" }} className="fab fa-pinterest i "></i>
+                                    <i style={{ margin: `17px 5px`, fontSize: "2rem" }} className="fab fa-linkedin i"></i>
+                                </div>
                             </div>
                         </div>
 
