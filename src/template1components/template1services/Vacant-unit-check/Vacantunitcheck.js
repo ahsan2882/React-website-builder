@@ -112,7 +112,7 @@ export default function Vacantunitcheck({ showPopup, overSection, displayDevice,
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Static3'
-                                initialValue={`<span class="${VacantCss.line1}"> Static </span><span class="${VacantCss.line2}"> Security</span>`}
+                                initialValue={`<span class="${VacantCss.line1}"> Vacant Unit </span><span class="${VacantCss.line2}"> Check</span>`}
                                 init={{
                                     plugins: [
                                         "link"
