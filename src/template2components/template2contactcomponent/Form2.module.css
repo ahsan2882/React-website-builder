@@ -1,4 +1,4 @@
-html {
+/* html {
 
   --clr-primary: #c0272d;
   --clr-primary-dark: #bd170b;
@@ -7,7 +7,7 @@ html {
   --clr-light: #ffff;
   --clr-white-smoke: #ebebeb;
   --clr-secondary-light: #292929;
-}
+} */
 
 .h1 {
   padding-top: 370px;
@@ -16,24 +16,6 @@ html {
   font-size: 75px;
   color: white;
 }
-
-/* .input-container {
-  display: flex;
-  width: 100%;
-  margin-top: 0;
-  color: black;
-} */
-
-/* .input-field {
-  margin-top: 40px;
-  width: 100%;
-  padding: 30px;
-  color: black;
-  border: 0;
-  border-bottom: 2px solid var(--clr-secondary);
-  font-size: 18px;
-  margin-left: 30px;
-} */
 
 .btn {
   font-size: 18px;
@@ -54,13 +36,7 @@ html {
   transition: all 0.2s ease-out;
 }
 
-/* .MainHeading {
-  font-size: 40px;
-  font-weight: 900;
 
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-} */
 
 .contact-i {
   font-size: 30px;
@@ -72,7 +48,7 @@ html {
 .contact-head {
   text-align: center;
   font-size: 100px;
-  color: var(--clr-primary-dark);
+  color: #bd170b;
   /* border-bottom: black; */
 }
 
@@ -105,15 +81,9 @@ html {
   height: 330px;
 }
 
-/* .section-form {
-    padding: 0 30px;
-  } */
-/* .box2 {
-    padding-right: 50px;
-    padding-top: 50px;
-  } */
 .addresses h1 {
   font-size: 40px;
+  font-weight: 800;
 }
 
 .addresses p {
@@ -124,6 +94,7 @@ html {
 .number-site h1 {
   margin-top: 15px;
   font-size: 40px;
+  font-weight: 800;
 }
 
 .number-site p {
@@ -134,11 +105,13 @@ html {
 .email-site h1 {
   margin-top: 15px;
   font-size: 40px;
+  font-weight: 800;
 }
 
 .email-site p {
   margin: 10px 0;
   font-size: 16px;
+  font-weight: 800;
 }
 
 .hd {
@@ -182,7 +155,7 @@ html {
   padding: 30px;
   color: black;
   border: 0;
-  border-bottom: 2px solid var(--clr-secondary);
+  border-bottom: 2px solid  #000000;
   font-size: 18px;
   margin-left: 30px;
 }
@@ -192,7 +165,7 @@ html {
 }
 
 .btnb {
-  background-color: var(--clr-secondary);
+  background-color:#000000;
   color: var(--clr-light);
   text-decoration: none;
   padding: 10px 20px;
@@ -213,7 +186,7 @@ html {
   position: absolute;
   height: 100%;
   width: 55%;
-  background: var(--clr-primary);
+  background:#c0272d;
   top: 0;
   left: 0;
   border-radius: 5px;
@@ -228,7 +201,7 @@ html {
   width: 55%;
   right: 0;
   top: 0;
-  background: var(--clr-primary);
+  background: #c0272d;
   border-radius: 5px;
   z-index: -1;
   transition: all 0.3s ease-out;
@@ -244,13 +217,13 @@ html {
 
 .btnb:hover {
   cursor: pointer;
-  color: var(--clr-light);
+  color: #ffff;
 }
 
 textarea:focus,
 input:focus {
   outline: none;
-  border-bottom: 2px solid var(--clr-primary);
+  border-bottom: 2px solid #c0272d;
 }
 
 .MainHeading {
@@ -267,7 +240,7 @@ input:focus {
 }
 
 .SpanColor {
-  color: var(--clr-primary);
+  color:#c0272d;
 }
 
 .spanDesc {
