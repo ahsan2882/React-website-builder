@@ -105,7 +105,7 @@ export default function ContainerEdit({ templateNum, setFileName, setLinksfunc, 
         setDisplayDevice(true);
         
         
-        if (saveClicked && linksfunc) {
+        if (linksfunc) {
             // console.log(tinymce.get("Nav1Edit1").getContent())
             setHtmlString(getHTMLData())
             setCssString(getCSSData())
