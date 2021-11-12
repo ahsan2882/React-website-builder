@@ -40,14 +40,13 @@ export const Header1 = ({ showPopup, overSection, displayDevice, linksfunc }) =>
             />
 
 
-            <div style={displayDevice ? { width: `30rem` } : { width: `100%` }} className={`${Header1Css['headline-para']}`}>
-              <p>
+            <div className={displayDevice ? `${Header1Css['headline-para']}` : `${Header1Css['headline-para']} w-full`}>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
                   key='Header1'
-                  initialValue="To prevent tampering and unauthorized entry into  the premises by
-            our engineers developed a burglar alarm system in the house."
+                  initialValue="<p>To prevent tampering and unauthorized entry into  the premises by
+            our engineers developed a burglar alarm system in the house.</p>"
                   init={{
                     plugins: [
                       "link"
@@ -61,7 +60,6 @@ export const Header1 = ({ showPopup, overSection, displayDevice, linksfunc }) =>
 
                   }}
                 />
-              </p>
             </div>
 
             <button className={`${Header1Css.btna}`}>
