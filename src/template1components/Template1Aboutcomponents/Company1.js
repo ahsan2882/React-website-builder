@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import Company1moduleCss from './Company1.module.css'
-export default function Company1() {
+export default function Company1({displayDevice}) {
   const editorRef = useRef(null);
     return (
     <>
@@ -56,8 +56,8 @@ export default function Company1() {
 </h1>        
           </div>
       </div>
-      <div className={`${Company1moduleCss.timeline}`}>
-        <div className={`${Company1moduleCss['containerTimeline']} ${Company1moduleCss.left}`}>
+          <div className={displayDevice ? `${Company1moduleCss.timeline}` : `${Company1moduleCss.timelineM}`}>
+            <div className={displayDevice ? `${Company1moduleCss['containerTimeline']} ${Company1moduleCss.left}` : `${Company1moduleCss['containerTimelineM']} ${Company1moduleCss.rightM}`}>
           <div className={`${Company1moduleCss.contentTimeLine}`}>
             <h2>    
             <Editor
@@ -101,7 +101,7 @@ export default function Company1() {
                   }}
                 />   </div>
         </div>
-        <div className={`${Company1moduleCss.containerTimeline} ${Company1moduleCss.right}`}>
+            <div className={displayDevice ? `${Company1moduleCss['containerTimeline']} ${Company1moduleCss.right}` : `${Company1moduleCss['containerTimelineM']} ${Company1moduleCss.rightM}`}>
           <div className={`${Company1moduleCss.contentTimeLine}`}>
             <h2>
             <Editor
@@ -144,7 +144,7 @@ export default function Company1() {
                 />
           </div>
         </div>
-        <div className={`${Company1moduleCss.containerTimeline}  ${Company1moduleCss.left}`}>
+            <div className={displayDevice ? `${Company1moduleCss['containerTimeline']} ${Company1moduleCss.left}` : `${Company1moduleCss['containerTimelineM']} ${Company1moduleCss.rightM}`}>
           <div className={`${Company1moduleCss.contentTimeLine}`}>
             <h2>
             <Editor
@@ -187,7 +187,7 @@ export default function Company1() {
                 />
           </div>
         </div>
-        <div className={`${Company1moduleCss.containerTimeline}  ${Company1moduleCss.right}`}>
+            <div className={displayDevice ? `${Company1moduleCss['containerTimeline']} ${Company1moduleCss.right}` : `${Company1moduleCss['containerTimelineM']} ${Company1moduleCss.rightM}`}>
           <div className={`${Company1moduleCss.contentTimeLine}`}>
             <h2>
             <Editor
@@ -231,7 +231,7 @@ export default function Company1() {
                 />
           </div>
         </div>
-        <div className={`${Company1moduleCss.containerTimeline} ${Company1moduleCss.left}`}>
+            <div className={displayDevice ? `${Company1moduleCss['containerTimeline']} ${Company1moduleCss.left}` : `${Company1moduleCss['containerTimelineM']} ${Company1moduleCss.rightM}`}>
           <div className={`${Company1moduleCss.contentTimeLine}`}>
             <h2>
             <Editor
@@ -273,7 +273,7 @@ export default function Company1() {
                 />
           </div>
         </div>
-        <div className={`${Company1moduleCss.containerTimeline}  ${Company1moduleCss.right}`}>
+            <div className={displayDevice ? `${Company1moduleCss['containerTimeline']} ${Company1moduleCss.right}` : `${Company1moduleCss['containerTimelineM']} ${Company1moduleCss.rightM}`}>
           <div className={`${Company1moduleCss.contentTimeLine}`}>
             <h2>
             <Editor
