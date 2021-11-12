@@ -70,6 +70,7 @@
 @media(max-width: 600px) {
     .head-img2 {
         height: auto;
+        background-position: 50%;
     }
 
     .head-img2 h1 {
