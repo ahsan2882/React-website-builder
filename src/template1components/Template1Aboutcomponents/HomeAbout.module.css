@@ -9,12 +9,34 @@
     height: 70vh;
     background-position: center;
   }
+  .services-secM {
+    background-image: url("https://i.ibb.co/vXJvB5q/head2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-position: center;
+  }
   .contentserv {
     background-image: url("https://i.ibb.co/Vg37Gp9/headingblob.png");
     background-size: cover;
     background-position: 0%;
     opacity: 80%;
   display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+  }
+  .contentservM {
+    background-image: url("https://i.ibb.co/Vg37Gp9/headingblob.png");
+    background-size: contain;
+    background-position: 0%;
+    opacity: 80%;
+    background-repeat: no-repeat;
+    display: flex;
     height: 400px;
     align-items: center;
     justify-content: center;
