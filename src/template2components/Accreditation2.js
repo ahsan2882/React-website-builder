@@ -153,7 +153,7 @@ export const Accreditation2 = ({ showPopup, overSection }) => {
                     </div>
                   </div>
                   <div className="toBeRemoved" style={accredKey === String(index) ? { position: "absolute", top: "2%", right: "2%" } : { display: "none" }}>
-                    <button className="w-8 h-8 bg-BL-600" onClick={() => removeAccred(index)}><i className="fas fa-trash-alt"></i></button>
+                    <button className="w-8 h-8 bg-BL-600 text-white" onClick={() => removeAccred(index)}><i className="fas fa-trash-alt"></i></button>
                   </div>
                 </div>
               )}
