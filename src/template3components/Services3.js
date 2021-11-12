@@ -67,8 +67,8 @@ export default function Services3({ showPopup, overSection }) {
                         <div className={Services3Css['serv-cards-wrapper']}>
                             <div style={{ background: currentBackground1 }} className={Services3Css['serv-card']} onClick={() => setShowPopup1(state => !state)} >
                                 <lord-icon src="https://cdn.lordicon.com/rruosuro.json" trigger="loop-on-hover"
-                                    colors={{ "primary": "#ffffff", "secondary": "#ffffff" }}
-                                    style={{ "width": "200px;", "height": "200px" }}>
+                                    colors="primary:#ffffff,secondary:#ffffff"
+                                 style={{ "width": "140px", "height": "140px" }}>
                                 </lord-icon>
                                 <div className={Services3Css['card-text']}>
                                     <h1>
@@ -141,7 +141,8 @@ export default function Services3({ showPopup, overSection }) {
 
 
                                 <lord-icon src="https://cdn.lordicon.com/idxcmsio.json" trigger="loop-on-hover"
-                                    colors={{ "primary": "#ffffff", "secondary": "#ffffff" }} style={{ "width": "150px;", "height": "150px" }}>
+                                     colors="primary:#ffffff,secondary:#ffffff"
+                                     style={{ "width": "140px", "height": "140px" }}>
                                 </lord-icon>
                                 <div className={Services3Css['card-text']}>
 
@@ -210,7 +211,8 @@ export default function Services3({ showPopup, overSection }) {
                             </div>
                             <div style={{ background: currentBackground3 }} className={Services3Css['serv-card']} onClick={() => setShowPopup3(state => !state)}>
                                 <lord-icon src="https://cdn.lordicon.com/tvafngxn.json" trigger="loop-on-hover"
-                                    colors={{ "primary": "#ffffff", "secondary": "#ffffff" }} style={{ "width": "150px;", "height": "150px" }}>
+                                     colors="primary:#ffffff,secondary:#ffffff"
+                                     style={{ "width": "140px", "height": "140px" }}>
                                 </lord-icon>
                                 <div className={Services3Css['card-text']}>
                                     <h1>
