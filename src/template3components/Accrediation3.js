@@ -125,7 +125,7 @@ export default function Accrediation3({ showPopup, overSection }) {
                   </div>
                 </div>
               )}
-              <button onClick={() => addAccred()} className="border-2 border-gray-400 text-gray-500 toBeRemoved w-40 h-32 flex justify-evenly flex-col text-center items-center">
+              <button onClick={() => addAccred()} className="border-2 border-white text-white toBeRemoved w-40 h-32 flex justify-evenly flex-col text-center items-center">
                 <i className="fas fa-plus text-3xl"></i>
                 <h2>Add another Accreditation</h2>
               </button>
