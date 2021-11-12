@@ -6,8 +6,8 @@ export default function Contact1banner({ showPopup, overSection, displayDevice, 
     const editorRef = useRef(null);
     return (
         <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
-        <section className={Contactbanner1Css['head-img2']}>
-    <div className={Contactbanner1Css.contentserv}>
+        <section className={displayDevice ? Contactbanner1Css['head-img2'] : Contactbanner1Css['head-img2M']}>
+          <div className={displayDevice ? Contactbanner1Css.contentserv : Contactbanner1Css.contentservM}>
      
      <h1 className={Contactbanner1Css.headings}>
      <Editor
