@@ -49,3 +49,12 @@
     font-weight: 800;
     color: #333434;
   }
+  @media(max-width: 600px){
+    .contentserv{
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .services-sec {
+      height: auto;
+    }
+  }
