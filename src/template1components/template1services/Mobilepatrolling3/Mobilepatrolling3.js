@@ -113,7 +113,7 @@ export default function Mobilepatrolling3({ showPopup, overSection, displayDevic
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Static3'
-                                initialValue={`<span class="${Mobilepatrolling3Css.line1}"> Static </span><span class="${Mobilepatrolling3Css.line2}"> Security</span>`}
+                                initialValue={`<span class="${Mobilepatrolling3Css.line1}"> Mobile </span><span class="${Mobilepatrolling3Css.line2}"> Patrolling</span>`}
                                 init={{
                                     plugins: [
                                         "link"
