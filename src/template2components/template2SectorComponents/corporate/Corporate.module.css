@@ -18,7 +18,7 @@
     .sector_left-content {
       padding: 0 10px;
     }
-  
+   
     .sector_left-content h1 {
       font-size: 4vh;
       font-family: "Poppins", sans-serif;
@@ -99,4 +99,8 @@
   }
   .sector-cards-row {
     display: flex;
+  }
+  .sector_left-content ul li {
+    display: flex;
+    align-items: center;
   }
