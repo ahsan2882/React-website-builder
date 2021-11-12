@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
 import Contactform1Css from './Contactform1.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Contactform1() {
+export default function Contactform1({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
             <section className="contact2">
 
-                <div className={`${Contactform1Css['container']} ${Contactform1Css['grid-contact']}`}>
+                <div className={displayDevice ? `${Contactform1Css['grid-contact']}` : `${Contactform1Css['grid-contactM']}`}>
 
                     <div className={Contactform1Css['contact-text']}>
                         <h1 className={Contactform1Css.headings}>
@@ -53,7 +53,7 @@ export default function Contactform1() {
 
                         </div>
 
-                        <div className={`${Contactform1Css['grid-contact']} ${Contactform1Css['grid-33']} ${Contactform1Css['mar']}`}>
+                        <div className={displayDevice ? `${Contactform1Css['grid-contact']} ${Contactform1Css['grid-33']} ${Contactform1Css['mar']}` : `${Contactform1Css['grid-contactM']}`}>
                             <div className={Contactform1Css['card-cont']}>
                                 <i className="fas fa-address-book fa-2x"></i>
                                 <h4 style={{margin:`5px 0 0` , fontWeight:`800`, fontSize:`27px`}}>
@@ -184,7 +184,7 @@ export default function Contactform1() {
                         </div>
                     </div>
 
-                    <div className={`${Contactform1Css['contact-form']} ${Contactform1Css['card-contact']}`}>
+                    <div className={displayDevice ? `${Contactform1Css['contact-form']} ${Contactform1Css['card-contact']}` : `${Contactform1Css['contact-formM']} ${Contactform1Css['card-contactM']}`}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
                             inline={true}
