@@ -113,7 +113,7 @@ export default function Cctvmonetoring3({ showPopup, overSection, displayDevice,
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}
                                 key='Static3'
-                                initialValue={`<span class="${CctvMonitorCss.line1}"> Static </span><span class="${CctvMonitorCss.line2}"> Security</span>`}
+                                initialValue={`<span class="${CctvMonitorCss.line1}">CCTV</span><span class="${CctvMonitorCss.line2}"> Monitoring</span>`}
                                 init={{
                                     plugins: [
                                         "link"
