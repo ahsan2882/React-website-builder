@@ -219,7 +219,7 @@
   .grid-r3 {
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 20px 0;
   }
 
   .container {
@@ -234,5 +234,18 @@
     background: url("https://i.ibb.co/Vg37Gp9/headingblob.png");
     background-repeat: no-repeat;
     padding: 0 40px;
+    margin-top: 7rem;
   }
+
+  .services-sec {
+    height: auto;
+  }
+
+  .services-image {
+    margin-top: 2rem;
+  }
+
+   .wave-services img {
+     margin-top: -5.4rem;
+   }
 }
