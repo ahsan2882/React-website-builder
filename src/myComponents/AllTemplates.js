@@ -83,7 +83,6 @@ import VisionAbout from "../template4components/template4about/VisionAbout";
 import AboutServices from "../template4components/template4about/AboutServices";
 import PolicyAbout from "../template4components/template4about/PolicyAbout";
 import Partners4 from "../template4components/template4about/Partners4";
-// import AboutAccredi from "../template4components/template4about/AboutAccredi";
 import Form from "../template4components/template4contact/Form";
 import Feedback from '../template4components/template4contact/Feedback'
 import Navbar3 from "../template3components/Navbar3";
