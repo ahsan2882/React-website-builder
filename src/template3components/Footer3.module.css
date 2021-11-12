@@ -97,6 +97,7 @@
     position: relative;
     left: 2px;
     top: 20px;
+    z-index: 5;
   }
   .col {
     text-align: left;
