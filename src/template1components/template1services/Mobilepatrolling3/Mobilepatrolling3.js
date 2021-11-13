@@ -4,11 +4,11 @@ import Mobilepatrolling3Css from './Mobilepatrolling3.module.css'
 // import Img2 from '../../../assets/template1images/services22.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1 from '../../Navbar1';
-export default function Mobilepatrolling3({ showPopup, overSection, displayDevice, linksfunc }) {
+export default function Mobilepatrolling3({ showPopup, overSection, displayDevice, linksfunc, setNav1Services, nav1Service }) {
     const editorRef = useRef(null);
     return (
         <>
-            <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
+            <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} setNav1Services={setNav1Services} nav1Service={nav1Service}/>
             <section className={displayDevice ? `${Mobilepatrolling3Css['services-sec']} overflow-hidden` : `${Mobilepatrolling3Css['services-secM']} overflow-hidden`}>
 
                 <div className={displayDevice ? `${Mobilepatrolling3Css['containers']} ${Mobilepatrolling3Css['grid-contact']}` : `${Mobilepatrolling3Css['containers']} ${Mobilepatrolling3Css['grid-contactM']}`}>
