@@ -4,11 +4,12 @@ import GuardhouseBannerCss from './Guardhousebanner.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
-export default function Guardhousebanner({ displayDevice, linksfunc }) {
+export default function Guardhousebanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) {
     const editorRef = useRef(null);
     return (
         <section className={GuardhouseBannerCss['header-img-serv']}>
-            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
+            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
+                    nav2Sector={nav2Sector} setNav2Sector={setNav2Sector}/>
             <div className={GuardhouseBannerCss['head-img-text']}>
                 <h1 className={GuardhouseBannerCss.head1}>
                     <Editor
