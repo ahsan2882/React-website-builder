@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1moduleCss from './Navbar1.module.css'
 // import tinymce from 'tinymce/tinymce';
 
-export default function Navbar1({ displayDevice, linksfunc }) {
+export default function Navbar1({ displayDevice, linksfunc, setNav1Services, nav1Service }) {
   const navService1Array = [
     "STATIC SECURITY",
     "MOBILE PATROLLING",
@@ -16,18 +16,23 @@ export default function Navbar1({ displayDevice, linksfunc }) {
     "EVENT SECURITY"
   ]
   const editorRef = useRef(null);
-  const [navServices, setNavServices] = useState(navService1Array)
+  const [navService, setNavService] = useState([])
+  useEffect(() => {
+    console.log(nav1Service)
+    setNavService([...nav1Service])
+
+  }, [nav1Service])
   const removeService = (index) => {
-    let newArray = [...navServices];
+    let newArray = [...nav1Service];
     newArray.splice(index, 1);
-    setNavServices([...newArray])
-    updateService1Array([...newArray])
+    setNav1Services([...newArray])
   }
   const addService = () => {
-    let newArray = [...navServices];
-    newArray.push(navService1Array[0]);
-    setNavServices([...newArray])
-    updateService1Array([...newArray])
+    let rand = Math.floor(0 + Math.random() * 8);
+    console.log(rand)
+    let newArray = [...nav1Service];
+    newArray.push(navService1Array[rand]);
+    setNav1Services([...newArray])
   }
   return (
     <>
@@ -75,7 +80,7 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                 <li><button className={`${Navbar1moduleCss.line}`} >{linksfunc ? <a href="about.html">ABOUT</a> : <>ABOUT</>}</button></li>
                 <li><button className={`${Navbar1moduleCss.line}`}>SERVICES</button>
                   <ul className={displayDevice ? `${Navbar1moduleCss['sub-menu']}` : `${Navbar1moduleCss['sub-menuM']}`}>
-                    {navServices.map((item, index) => <li className="flex justify-between items-center">{linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{item}</a> : <>{item}</>}<button className="toBeRemoved" onClick={() => removeService(index)}><i className="fas fa-trash-alt"></i></button></li>)}
+                    {navService.map((item, index) => <li className="flex justify-between items-center">{linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{item}</a> : <>{item}</>}<button className="toBeRemoved" onClick={() => removeService(index)}><i className="fas fa-trash-alt"></i></button></li>)}
                     <li className="flex justify-between items-center toBeRemoved"><button onClick={() => addService()}><i className="fas fa-plus"></i> ADD NEW SERVICE</button></li>
                   </ul>
                 </li>
@@ -86,13 +91,14 @@ export default function Navbar1({ displayDevice, linksfunc }) {
                   colors="primary:#121331,secondary:#00d4ff"
                   style={{ width: "40px", height: "40px" }}>
                 </lord-icon></li>
+                <li><lord-icon
+                  src="https://cdn.lordicon.com/slkvcfos.json"
+                  trigger="hover"
+                  colors="primary:#121331,secondary:#00d4ff"
+                  style={{ width: "40px", height: "40px" }}>
+                </lord-icon></li>
                 <li>
-                  <li><lord-icon
-                    src="https://cdn.lordicon.com/slkvcfos.json"
-                    trigger="hover"
-                    colors="primary:#121331,secondary:#00d4ff"
-                    style={{ width: "40px", height: "40px" }}>
-                  </lord-icon></li>
+                  
                   <button className={`${Navbar1moduleCss['contact-btn']}`}>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
@@ -117,9 +123,4 @@ export default function Navbar1({ displayDevice, linksfunc }) {
       </header>
     </>
   )
-}
-
-export const updateService1Array = ( array ) => {
-  console.log(array);
-  return array;
 }
