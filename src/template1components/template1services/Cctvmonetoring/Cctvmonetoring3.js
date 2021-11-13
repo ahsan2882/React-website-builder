@@ -4,11 +4,11 @@ import CctvMonitorCss from './Cctvmonetoring.module.css'
 // import Img2 from '../../../assets/template1images/news1.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1 from '../../Navbar1';
-export default function Cctvmonetoring3({ showPopup, overSection, displayDevice, linksfunc }) {
+export default function Cctvmonetoring3({ showPopup, overSection, displayDevice, linksfunc , setNav1Services, nav1Service}) {
     const editorRef = useRef(null);
     return (
         <>
-            <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
+            <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} setNav1Services={setNav1Services} nav1Service={nav1Service}/>
             <section className={displayDevice ? `${CctvMonitorCss['services-sec']} overflow-hidden` : `${CctvMonitorCss['services-secM']} overflow-hidden`}>
 
                 <div className={displayDevice ? `${CctvMonitorCss['containers']} ${CctvMonitorCss['grid-contact']}` : `${CctvMonitorCss['containers']} ${CctvMonitorCss['grid-contactM']}`}>
