@@ -19,8 +19,8 @@ export default function EditScreen({ temp }) {
     const [displayDevice, setDisplayDevice] = useState(true);
     const [fileName, setFileName] = useState("");
     const [nav1Service, setNav1Services] = useState(["STATIC SECURITY", "MOBILE PATROLLING", "CCTV MONITORING", "LOCK & UNLOCK", "VACANT UNIT CHECKS", "TECHNOLOGY PRODUCT", "MANNED GUARDING", "SUPPORT & MANAGEMENT", "EVENT SECURITY"])
-    const [nav2Service, setNav2Services] = useState(["CONSTRUCTION", "CORPORATE", "INDUSTRIAL", "RETAIL", "LOGISTICS", "PROPERTY MANAGEMENT"])
-    const [nav2Sector, setNav2Sector] = useState(["STATIC SECURITY", "MOBILE PATROLLING", "CCTV MONITORING", "LOCK & UNLOCK", "VACANT UNIT CHECKS", "TECHNOLOGY PRODUCT", "MANNED GUARDING", "SUPPORT & MANAGEMENT", "EVENT SECURITY", "GUARD HOUSE", "24/7 SURVEILLANCE"])
+    const [nav2Service, setNav2Services] = useState(["STATIC SECURITY", "MOBILE PATROLLING", "CCTV MONITORING", "LOCK & UNLOCK", "VACANT UNIT CHECKS", "TECHNOLOGY PRODUCT", "MANNED GUARDING", "SUPPORT & MANAGEMENT", "EVENT SECURITY", "GUARD HOUSE", "24/7 SURVEILLANCE"])
+    const [nav2Sector, setNav2Sector] = useState(["CONSTRUCTION", "CORPORATE", "INDUSTRIAL", "RETAIL", "LOGISTICS", "PROPERTY MANAGEMENT"])
 
     return (
         <>
