@@ -4,7 +4,7 @@ import lz from "lzutf8";
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
-import { templateComponents } from '../myComponents/AllTemplates';
+import {templateComponents} from '../myComponents/AllTemplates';
 
 export default function ContainerEdit({ nav1Service, setNav1Services, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateNum, setFileName, setLinksfunc, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
     const [updateChildren, setUpdateChildren] = useState([])
@@ -14,7 +14,6 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
     const [htmlString, setHtmlString] = useState("");
     const [cssString, setCssString] = useState("");
     const [compressed, setCompressed] = useState("");
-
     const [curTemplate, setCurTemplate] = useState(null);
     const [fileName, setfilename] = useState(null);
     const [{ canDrop }, drop] = useDrop({
@@ -38,7 +37,6 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
     useEffect(() => {
         let filename = "";
         if (temp === 1) {
-            console.log(templatePage)
             setUpdateChildren(templateComponents.template1Components.filter((item) => item.pageName.toUpperCase() === String(templatePage.toUpperCase())).map((item) => item.pageSections.map((items) => items))[0])
             if (templatePage === "Home") {
                 setfilename("index.html")
@@ -136,7 +134,7 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
         console.log(htmlStrings)
         return htmlStrings;
     }
-    
+
     const getCSSData = () => {
         let cssStrings = ''
         let styleComponent = document.getElementsByTagName("style")
@@ -175,7 +173,7 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                 </div>
                 <div className={`${ContainerEditCss.editing} mx-auto overflow-y-auto overflow-x-hidden`} ref={drop} style={canDrop ? { "background": `rgba(0,0,0,0.5)` } : null}>
-                    
+
                     <div className="getInnerHTML">
                         <section className="filterHTML">
                             {updateChildren.map((ItemX, index) => {
