@@ -3,11 +3,11 @@ import Navbar1 from '../Navbar1'
 import { Editor } from '@tinymce/tinymce-react';
 import HomeAboutmoduleCss from './HomeAbout.module.css'
 // import Service from './head2.jpg'
-export default function HomeAbout({ showPopup, overSection, displayDevice, linksfunc }) {
+export default function HomeAbout({ showPopup, overSection, displayDevice, linksfunc, setNav1Services, nav1Service }) {
     const editorRef = useRef(null);
     return (
    <>
-   <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
+   <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} setNav1Services={setNav1Services} nav1Service={nav1Service}/>
         <section className={displayDevice ? `${HomeAboutmoduleCss['services-sec']}` : `${HomeAboutmoduleCss['services-secM']}`}>
           <div className={displayDevice ? `${HomeAboutmoduleCss.contentserv}` : `${HomeAboutmoduleCss.contentservM}`}>
               <h1 className={`${HomeAboutmoduleCss.headings}`}>
