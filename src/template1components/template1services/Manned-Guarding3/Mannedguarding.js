@@ -4,10 +4,10 @@ import MannedCss from './Mannedguarding.module.css'
 // import Img2 from '../../../assets/template1images/services66.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1 from '../../Navbar1';
-export default function Mannedguarding({ showPopup, overSection, displayDevice, linksfunc }) {
+export default function Mannedguarding({ showPopup, overSection, displayDevice, linksfunc, setNav1Services, nav1Service }) {
     const editorRef = useRef(null);
     return (
-        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
+        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} setNav1Services={setNav1Services} nav1Service={nav1Service}/>
             <section className={displayDevice ? `${MannedCss['services-sec']} overflow-hidden` : `${MannedCss['services-secM']} overflow-hidden`}>
 
                 <div className={displayDevice ? `${MannedCss['containers']} ${MannedCss['grid-contact']}` : `${MannedCss['containers']} ${MannedCss['grid-contactM']}`}>
