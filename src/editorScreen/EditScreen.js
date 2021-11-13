@@ -12,14 +12,15 @@ export default function EditScreen({ temp }) {
         templateData: null
     });
     const [templatePage, setTemplatePage] = useState("Home");
-    const [editMenu, setEditMenu] = useState(false)
-    const [editTemplateMenu, setEditTemplateMenu] = useState("")
     const [saveClicked, setSaveClicked] = useState(null);
     const [linksfunc, setLinksfunc] = useState(false)
     const [fileData, setFileData] = useState({});
     const [chatInclude, setChatInclude] = useState(false);
     const [displayDevice, setDisplayDevice] = useState(true);
     const [fileName, setFileName] = useState("");
+    const [nav1Service, setNav1Services] = useState(["STATIC SECURITY", "MOBILE PATROLLING", "CCTV MONITORING", "LOCK & UNLOCK", "VACANT UNIT CHECKS", "TECHNOLOGY PRODUCT", "MANNED GUARDING", "SUPPORT & MANAGEMENT", "EVENT SECURITY"])
+    const [nav2Service, setNav2Services] = useState(["CONSTRUCTION", "CORPORATE", "INDUSTRIAL", "RETAIL", "LOGISTICS", "PROPERTY MANAGEMENT"])
+    const [nav2Sector, setNav2Sector] = useState(["STATIC SECURITY", "MOBILE PATROLLING", "CCTV MONITORING", "LOCK & UNLOCK", "VACANT UNIT CHECKS", "TECHNOLOGY PRODUCT", "MANNED GUARDING", "SUPPORT & MANAGEMENT", "EVENT SECURITY", "GUARD HOUSE", "24/7 SURVEILLANCE"])
 
     return (
         <>
@@ -31,8 +32,9 @@ export default function EditScreen({ temp }) {
                     saveClicked={saveClicked}
                     toSave={toSave}
                     fileData={fileData}
-                    setEditTemplateMenu={setEditTemplateMenu}
-                    setEditMenu={setEditMenu}
+                    nav1Service={nav1Service}
+                    nav2Service={nav2Service}
+                    nav2Sector={nav2Sector}
                     setLinksfunc={setLinksfunc}
                     setDisplayDevice={setDisplayDevice}
                     fileName={fileName}
@@ -42,9 +44,13 @@ export default function EditScreen({ temp }) {
                     templateNum={temp}
                     overlayPresent={assetSelected}
                     saveClicked={saveClicked}
-                    editMenu={editMenu}
                     setToSave={setToSave}
-                    editTemplateMenu={editTemplateMenu}
+                    nav1Service={nav1Service}
+                    setNav1Services={setNav1Services}
+                    nav2Service={nav2Service}
+                    setNav2Services={setNav2Services}
+                    nav2Sector={nav2Sector}
+                    setNav2Sector={setNav2Sector}
                     setSaveClicked={setSaveClicked}
                     chatInclude={chatInclude}
                     setLinksfunc={setLinksfunc}
