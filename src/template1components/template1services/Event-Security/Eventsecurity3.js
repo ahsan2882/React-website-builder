@@ -4,11 +4,11 @@ import Eventsecurity3Css from './Eventsecurity.module.css'
 // import Img2 from '../../../assets/template1images/servicesbg.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1 from '../../Navbar1';
-export default function Eventsecurity3({ showPopup, overSection, displayDevice, linksfunc }) {
+export default function Eventsecurity3({ showPopup, overSection, displayDevice, linksfunc , setNav1Services, nav1Service}) {
     const editorRef = useRef(null);
     return (
         <>
-            <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
+            <Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} setNav1Services={setNav1Services} nav1Service={nav1Service}/>
             <section className={displayDevice ? `${Eventsecurity3Css['services-sec']} overflow-hidden` : `${Eventsecurity3Css['services-secM']} overflow-hidden`}>
 
                 <div className={displayDevice ? `${Eventsecurity3Css['containers']} ${Eventsecurity3Css['grid-contact']}` : `${Eventsecurity3Css['containers']} ${Eventsecurity3Css['grid-contactM']}`}>
