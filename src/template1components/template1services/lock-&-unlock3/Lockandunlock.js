@@ -4,10 +4,10 @@ import LockCss from './Lockandunlock.module.css'
 // import Img2 from '../../../assets/template1images/services44.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1 from '../../Navbar1';
-export default function Lockandunlock({ showPopup, overSection, displayDevice, linksfunc }) {
+export default function Lockandunlock({ showPopup, overSection, displayDevice, linksfunc, setNav1Services, nav1Service }) {
     const editorRef = useRef(null);
     return (
-        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
+        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} setNav1Services={setNav1Services} nav1Service={nav1Service}/>
             <section className={displayDevice ? `${LockCss['services-sec']} overflow-hidden` : `${LockCss['services-secM']} overflow-hidden`}>
 
                 <div className={displayDevice ? `${LockCss['containers']} ${LockCss['grid-contact']}` : `${LockCss['containers']} ${LockCss['grid-contactM']}`}>
