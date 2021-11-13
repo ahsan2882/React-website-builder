@@ -3,11 +3,12 @@ import CctvmonetoringCss from './Cctvmonetoringbanner.module.css'
 // import Img1 from '../../../assets/template2images/cctv-banner.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
-export default function Cctvmonetoringbanner({ displayDevice, linksfunc }) {
+export default function Cctvmonetoringbanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) {
     const editorRef = useRef(null);
     return (
         <section className={CctvmonetoringCss['header-img-serv']}>
-            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
+            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
+                    nav2Sector={nav2Sector} setNav2Sector={setNav2Sector}/>
             <div className={CctvmonetoringCss['head-img-text']}>
                 <h1 className={CctvmonetoringCss.head1}>
                     <Editor
