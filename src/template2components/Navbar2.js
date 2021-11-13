@@ -1,8 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Navbar2moduleCss from './Navbar2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
-export const Navbar2 = ({ displayDevice, linksfunc }) => {
+export const Navbar2 = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector  }) => {
     const editorRef = useRef();
     const navSectorArray = [
         "CONSTRUCTION",
@@ -25,28 +25,51 @@ export const Navbar2 = ({ displayDevice, linksfunc }) => {
         "GUARD HOUSE",
         "24/7 SURVEILLANCE"
     ]
-    const [navSector, setNavSector] = useState(navSectorArray)
-    const [navServices, setNavServices] = useState(navServiceArray)
+
+    const [navServices, setNavServices] = useState([])
+    const [navSector, setNavSector] = useState([])
+    useEffect(() => {
+        setNavServices([...nav2Service])
+    }, [nav2Service])
+    useEffect(() => {
+        setNavSector([...nav2Sector])
+    }, [nav2Sector])
     const removeService = (index) => {
-        let newArray = [...navServices];
+        let newArray = [...nav2Service];
         newArray.splice(index, 1);
-        setNavServices([...newArray])
-    }
-    const removeSector = (index) => {
-        let newArray = [...navSector];
-        newArray.splice(index, 1);
-        setNavSector([...newArray])
-    }
-    const addSector = () => {
-        let newArray = [...navSector];
-        newArray.push(navSectorArray[0]);
-        setNavSector([...newArray])
+        setNav2Services([...newArray])
     }
     const addService = () => {
-        let newArray = [...navServices];
-        newArray.push(navServiceArray[0]);
-        setNavServices([...newArray])
+        let rand = Math.floor(0 + Math.random() * 8);
+        let newArray = [...nav2Service];
+        newArray.push(navServiceArray[rand]);
+        setNav2Services([...newArray])
     }
+
+
+
+    
+    // const removeService = (index) => {
+    //     let newArray = [...navServices];
+    //     newArray.splice(index, 1);
+    //     setNavServices([...newArray])
+    // }
+    const removeSector = (index) => {
+        let newArray = [...nav2Sector];
+        newArray.splice(index, 1);
+        setNav2Sector([...newArray])
+    }
+    const addSector = () => {
+        let rand = Math.floor(0 + Math.random() * 4);
+        let newArray = [...nav2Sector];
+        newArray.push(navSectorArray[rand]);
+        setNav2Sector([...newArray])
+    }
+    // const addService = () => {
+    //     let newArray = [...navServices];
+    //     newArray.push(navServiceArray[0]);
+    //     setNavServices([...newArray])
+    // }
     return (
         <>
             <header className="absolute top-0 left-0 z-10 w-full h-20 font-bold">
