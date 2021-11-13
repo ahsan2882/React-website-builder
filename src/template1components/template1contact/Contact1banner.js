@@ -2,10 +2,10 @@ import React, { useRef} from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 import Contactbanner1Css from './Contact1banner.module.css'
  import Navbar1 from '../Navbar1';
-export default function Contact1banner({ showPopup, overSection, displayDevice, linksfunc }) {
+export default function Contact1banner({ showPopup, overSection, displayDevice, linksfunc, setNav1Services, nav1Service }) {
     const editorRef = useRef(null);
     return (
-        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
+        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} setNav1Services={setNav1Services} nav1Service={nav1Service}/>
         <section className={displayDevice ? Contactbanner1Css['head-img2'] : Contactbanner1Css['head-img2M']}>
           <div className={displayDevice ? Contactbanner1Css.contentserv : Contactbanner1Css.contentservM}>
      
