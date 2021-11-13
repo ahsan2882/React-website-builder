@@ -3,13 +3,14 @@ import CorporateheromoduleCss from './Corporatehero.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 // import img from './corporate-banner.jpg'
 import { Navbar2 } from '../../Navbar2';
-export const Corporatehero = ({ displayDevice, linksfunc }) => {
+export const Corporatehero = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) => {
     const editorRef = useRef(null);
 
     return (
         <>
             <section className={CorporateheromoduleCss['header-img-serv']}>
-                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
+                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
+                    nav2Sector={nav2Sector} setNav2Sector={setNav2Sector}/>
                 <div className={`${CorporateheromoduleCss['head-img-text']}`}>
                     <h1>
                         <Editor
