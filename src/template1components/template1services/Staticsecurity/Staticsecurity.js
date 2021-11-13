@@ -4,10 +4,10 @@ import StaticSecurity3Css from '../Staticsecurity/Staticsecurity.module.css'
 // import Img2 from '../../../assets/template1images/services11.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1 from '../../Navbar1';
-export default function Staticsecurity({ showPopup, overSection, displayDevice, linksfunc }) {
+export default function Staticsecurity({ showPopup, overSection, displayDevice, linksfunc , setNav1Services, nav1Service}) {
     const editorRef = useRef(null);
     return (
-        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
+        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} setNav1Services={setNav1Services} nav1Service={nav1Service}/>
             <section className={displayDevice ? `${StaticSecurity3Css['services-sec']} overflow-hidden` : `${StaticSecurity3Css['services-secM']} overflow-hidden`}>
 
                 <div className={displayDevice ? `${StaticSecurity3Css['containers']} ${StaticSecurity3Css['grid-contact']}` : `${StaticSecurity3Css['containers']} ${StaticSecurity3Css['grid-contactM']}`}>
