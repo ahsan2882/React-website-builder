@@ -18,7 +18,6 @@ export default function Navbar1({ displayDevice, linksfunc, setNav1Services, nav
   const editorRef = useRef(null);
   const [navService, setNavService] = useState([])
   useEffect(() => {
-    console.log(nav1Service)
     setNavService([...nav1Service])
 
   }, [nav1Service])
@@ -29,7 +28,6 @@ export default function Navbar1({ displayDevice, linksfunc, setNav1Services, nav
   }
   const addService = () => {
     let rand = Math.floor(0 + Math.random() * 8);
-    console.log(rand)
     let newArray = [...nav1Service];
     newArray.push(navService1Array[rand]);
     setNav1Services([...newArray])
