@@ -4,10 +4,10 @@ import SupportCss from './Supportmanagment.module.css'
 // import Img2 from '../../../assets/template1images/services66.jpg'
 import { Editor } from '@tinymce/tinymce-react';
 import Navbar1 from '../../Navbar1';
-export default function SupportandManagment({ showPopup, overSection, displayDevice, linksfunc }) {
+export default function SupportandManagment({ showPopup, overSection, displayDevice, linksfunc , setNav1Services, nav1Service}) {
     const editorRef = useRef(null);
     return (
-        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} />
+        <><Navbar1 displayDevice={displayDevice} linksfunc={linksfunc} setNav1Services={setNav1Services} nav1Service={nav1Service}/>
             <section className={displayDevice ? `${SupportCss['services-sec']} overflow-hidden` : `${SupportCss['services-secM']} overflow-hidden`}>
 
                 <div className={displayDevice ? `${SupportCss['containers']} ${SupportCss['grid-contact']}` : `${SupportCss['containers']} ${SupportCss['grid-contactM']}`}>
