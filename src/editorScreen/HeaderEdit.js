@@ -4,35 +4,109 @@ import { Link } from 'react-router-dom';
 import pages from './TemplatePages';
 import FileSaver from 'file-saver';
 
-export default function Header({ templateNum, fileName, setSaveClicked, setLinksfunc, toSave, setEditMenu, setEditTemplateMenu, saveClicked, fileData, setTemplatePage, setDisplayDevice }) {
+export default function Header({ templateNum, fileName, setSaveClicked, setLinksfunc, toSave, saveClicked, fileData, setTemplatePage, setDisplayDevice, nav1Service, nav2Service, nav2Sector }) {
     const [isClicked, setIsClicked] = useState(false);
     const onClicked = () => setIsClicked((condition) => !condition);
+    const [allpages, setallpages] = useState(pages)
     const [PageList, setPageList] = useState([]);
     const [subpages, setSubpages] = useState([]);
     const [showSidebar, setShowSidebar] = useState("");
     const [showDropdown, setShowDropdown] = useState(false);
     const [newPath, setNewPath] = useState([]);
     const [currentTemp, setCurrentTemp] = useState([]);
+    useEffect(() => {
+        setallpages({
+            "template1pages": [
+                {
+                    "groupName": "Home",
+                    "subpages": ["Home"]
+                },
+                {
+                    "groupName": "About",
+                    "subpages": ["About"]
+                },
+                {
+                    "groupName": "Services",
+                    "subpages": nav1Service
+                },
+                {
+                    "groupName": "Contact",
+                    "subpages": ["Contact"]
+                },
+            ],
+            "template2pages":
+                [
+                    {
+                        "groupName": "Home",
+                        "subpages": ["Home"]
+                    },
+                    {
+                        "groupName": "About",
+                        "subpages": ["About"]
+                    },
+                    {
+                        "groupName": "Sectors",
+                        "subpages": nav2Sector
+                    },
+                    {
+                        "groupName": "Services",
+                        "subpages": nav2Service
+                    },
+                    {
+                        "groupName": "Contact",
+                        "subpages": ["Contact"]
+                    },
+                ],
+            "template3pages": [
+                {
+                    "groupName": "Home",
+                    "subpages": ["Home"]
+                },
+                {
+                    "groupName": "About",
+                    "subpages": ["About"]
+                },
+                {
+                    "groupName": "Contact",
+                    "subpages": ["Contact"]
+                },
+            ],
+            "template4pages": [
+                {
+                    "groupName": "Home",
+                    "subpages": ["Home"]
+                },
+                {
+                    "groupName": "About",
+                    "subpages": ["About"]
+                },
+                {
+                    "groupName": "Contact",
+                    "subpages": ["Contact"]
+                },
 
+            ],
+        })
+    }, [nav1Service, nav2Sector, nav2Service])
     useEffect(() => {
         if (templateNum === 1) {
             setNewPath('/preview/template-1')
-            setPageList(pages.template1pages.map((item) => item.groupName))
+            setPageList(allpages.template1pages.map((item) => item.groupName))
             setCurrentTemp("Template-1")
         }
         else if (templateNum === 2) {
             setNewPath('/preview/template-2')
-            setPageList(pages.template2pages.map((item) => item.groupName))
+            setPageList(allpages.template2pages.map((item) => item.groupName))
             setCurrentTemp("Template-2")
         }
         else if (templateNum === 3) {
             setNewPath('/preview/template-3')
-            setPageList(pages.template3pages.map((item) => item.groupName))
+            setPageList(allpages.template3pages.map((item) => item.groupName))
             setCurrentTemp("Template-3")
         }
         else if (templateNum === 4) {
             setNewPath('/preview/template-4')
-            setPageList(pages.template4pages.map((item) => item.groupName))
+            setPageList(allpages.template4pages.map((item) => item.groupName))
             setCurrentTemp("Template-4")
         }
         else if (templateNum === 0) {
@@ -40,7 +114,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
             setCurrentTemp("New-Template")
         }
 
-    }, [templateNum])
+    }, [templateNum, allpages.template1pages, allpages.template2pages, allpages.template3pages, allpages.template4pages])
     // useEffect(() => {
     //     if (saveClicked) {
 
@@ -87,13 +161,13 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
         setShowDropdown(states => !states)
         setShowSidebar(e.target.innerHTML)
         if (currentTemp === "Template-1") {
-            setSubpages(pages.template1pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
+            setSubpages(allpages.template1pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
         } else if (currentTemp === "Template-2") {
-            setSubpages(pages.template2pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
+            setSubpages(allpages.template2pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
         } else if (currentTemp === "Template-3") {
-            setSubpages(pages.template3pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
+            setSubpages(allpages.template3pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
         } else if (currentTemp === "Template-4") {
-            setSubpages(pages.template4pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
+            setSubpages(allpages.template4pages.filter((item, i) => item.groupName === e.target.innerHTML).map((item) => item.subpages.map(items => items))[0])
         }
     }
 
@@ -114,12 +188,12 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
                                         </ul>
                                     </div>
                                 )}
-                                <div>
+                                {/* <div>
                                     <button className="m-6 bg-BL-600 text-white py-3 px-2 font-semibold rounded-md"
                                         onClick={() => {
                                             setEditMenu((state) => !state)
                                             // setEditTemplateMenu(currentTemp)
-                                        }}>Edit Menu</button></div>
+                                        }}>Edit Menu</button></div> */}
                             </div>
                         </div>
                     </div>
