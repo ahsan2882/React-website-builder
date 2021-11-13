@@ -4,7 +4,7 @@ import { Editor } from '@tinymce/tinymce-react';
 
 import Hero2moduleCss from './Hero2.module.css'
 import { Navbar2 } from './Navbar2';
-export const Hero2 = ({ displayDevice, showPopup, overSection, linksfunc }) => {
+export const Hero2 = ({ displayDevice, showPopup, overSection, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) => {
     const [currentBackgroundColor, setCurrentBackgroundColor] = useState("#c0272d");
     const [backgroundType, setBackgroundType] = useState("color");
 
@@ -12,8 +12,8 @@ export const Hero2 = ({ displayDevice, showPopup, overSection, linksfunc }) => {
         <>
             
             <section className="overflow-hidden">
-                {backgroundType === "color" ? <Hero2ColorComponent color={currentBackgroundColor} displayDevice={displayDevice} linksfunc={linksfunc} /> : null}
-                {backgroundType === "image" ? <Hero2ImageComponent displayDevice={displayDevice} linksfunc={linksfunc} /> : null}
+                {backgroundType === "color" ? <Hero2ColorComponent color={currentBackgroundColor} nav2Service={nav2Service} setNav2Services={setNav2Services} nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} displayDevice={displayDevice} linksfunc={linksfunc} /> : null}
+                {backgroundType === "image" ? <Hero2ImageComponent displayDevice={displayDevice} nav2Service={nav2Service} setNav2Services={setNav2Services} nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} linksfunc={linksfunc} /> : null}
                 <div className="toBeRemoved" style={(overSection && showPopup) ? { position: "absolute", top: "5rem", right: "5rem", zIndex: "3" } : { display: "none" }}>
                     <div className="flex flex-col justify-center items-center border-2 border-black w-64 rounded-lg bg-white">
                         <button className="py-4" onClick={() => setBackgroundType("color")}>Color</button>
@@ -33,12 +33,12 @@ export const Hero2 = ({ displayDevice, showPopup, overSection, linksfunc }) => {
     )
 }
 
-const Hero2ColorComponent = ({ color, displayDevice, linksfunc }) => {
+const Hero2ColorComponent = ({ color, displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector  }) => {
     const editorRef = useRef(null);
     return (
         <>
             <section style={{ background: color }} className={`${Hero2moduleCss.heroSection} relative`}>
-                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
+                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services} nav2Sector={nav2Sector} setNav2Sector={setNav2Sector}/>
                 <img src="https://i.ibb.co/VwB7mhG/Path-7.png" alt="Pah 7" className="w-full h-full" />
                 <section className="absolute bottom-8 right-1/4" style={{zIndex:"2"}}>
                     <Editor
@@ -106,12 +106,14 @@ const Hero2ColorComponent = ({ color, displayDevice, linksfunc }) => {
 }
 
 
-const Hero2ImageComponent = ({ displayDevice, linksfunc }) => {
+const Hero2ImageComponent = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector  }) => {
     const editorRef = useRef(null);
     return (
         <>
             <section className={`relative ${Hero2moduleCss.heroSection}`}>
-                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} />
+                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc}
+                    nav2Service={nav2Service} setNav2Services={setNav2Services}
+                    nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
                 <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
