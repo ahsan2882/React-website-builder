@@ -32,6 +32,11 @@ export default function Navbar1({ displayDevice, linksfunc, setNav1Services, nav
     newArray.push(navService1Array[rand]);
     setNav1Services([...newArray])
   }
+  const editService = (item, index) => {
+    let newArray = [...nav1Service];
+    newArray.splice(index, 1);
+    setNav1Services([...newArray])
+  }
   return (
     <>
 
@@ -78,7 +83,12 @@ export default function Navbar1({ displayDevice, linksfunc, setNav1Services, nav
                 <li><button className={`${Navbar1moduleCss.line}`} >{linksfunc ? <a href="about.html">ABOUT</a> : <>ABOUT</>}</button></li>
                 <li><button className={`${Navbar1moduleCss.line}`}>SERVICES</button>
                   <ul className={displayDevice ? `${Navbar1moduleCss['sub-menu']}` : `${Navbar1moduleCss['sub-menuM']}`}>
-                    {navService.map((item, index) => <li className="flex justify-between items-center">{linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{item}</a> : <>{item}</>}<button className="toBeRemoved" onClick={() => removeService(index)}><i className="fas fa-trash-alt"></i></button></li>)}
+                    {navService.map((item, index) => <li className="flex justify-between items-center">{linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{item}</a> : <>{item}</>}
+                      <div className="toBeRemoved flex items-center">
+                        <button className="toBeRemoved mr-3" onClick={() => editService(index)}><i className="fas fa-pen"></i></button>
+                        <button className="toBeRemoved" onClick={() => removeService(index)}><i className="fas fa-trash-alt"></i></button>
+                      </div>
+                    </li>)}
                     <li className="flex justify-between items-center toBeRemoved"><button onClick={() => addService()}><i className="fas fa-plus"></i> ADD NEW SERVICE</button></li>
                   </ul>
                 </li>
