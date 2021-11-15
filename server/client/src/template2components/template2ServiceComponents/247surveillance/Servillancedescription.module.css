@@ -70,66 +70,132 @@
 .sg6 {
   grid-area: 3 / 3 / 4 / 4;
 }
+
 .icon-content {
   display: flex;
   justify-content: space-between;
 
 }
-.lordicon{
+
+.lordicon {
   width: 130px;
   height: 130px;
 }
+
 .container365 {
   padding: 0 5em;
+  margin-bottom: 30px;
+}
+.container365M{
+  padding: 0;
   margin-bottom: 30px;
 }
 
 .iconized {
   padding: 0 45px;
 }
+
 .icon-content h3 {
-font-size: 25px;
-font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
 }
+
 .icon-content p {
-padding: 10px 0;
-font-size: 15px;
+  padding: 10px 0;
+  font-size: 15px;
 }
+
+
 @media (max-width: 900px) {
   .service-grid {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
   .icon-content {
     flex-direction: column;
     align-items: center;
- text-align: center;
+    text-align: center;
   }
+
   .container365 {
     padding: 0;
 
   }
+
   .serv-head h1 {
     font-size: 1.5em;
   }
-.serv-head {
+
+  .serv-head {
+    width: 100%;
+  }
+
+  .serv-head p {
+    margin: 2rem 0 0;
+  }
+
+  .service-container {
+    padding: 170px 50px;
+
+  }
+
+  .service-grid p {
+    margin: 3rem 0 0;
+  }
+
+  .sg2 img {
+    width: 80%;
+    margin: 3rem 0 0;
+
+  }
+
+}
+
+.service-containerM {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 170px 50px;
+}
+
+.serv-headM {
   width: 100%;
 }
-.serv-head p {
+
+.service-gridM {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-gridM p{
+  margin: 3rem 0 0;
+}
+
+
+.serv-headM h1 {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+.serv-headM p {
   margin: 2rem 0 0;
 }
-.service-container {
-  padding: 170px 50px;
- 
-}
-.service-grid p {
-  margin: 3rem 0 0;
-}
-.sg2 img {
-  width: 80%;
-  margin: 3rem 0 0;
-
+.icon-contentM {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
+.icon-contentM h3 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+.icon-contentM p {
+  padding: 10px 0;
+  font-size: 15px;
 }

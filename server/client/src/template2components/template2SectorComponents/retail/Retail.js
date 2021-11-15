@@ -19,9 +19,9 @@ export const Retail = ({ showPopup, overSection, displayDevice }) => {
     return (
         <>
 
-            <section style={{ backgroundColor: currentBackground }} class={`${RetailmoduleCss.sector}`}>
-                <div class={displayDevice ? `${RetailmoduleCss['sector-container']}` : `${RetailmoduleCss['sector-containerM']}`}>
-                    <div class={displayDevice ? `${RetailmoduleCss['sector_left-content']}` : `${RetailmoduleCss['sector_left-contentM']}`}>
+            <section style={{ backgroundColor: currentBackground }} className={`${RetailmoduleCss.sector}`}>
+                <div className={displayDevice ? `${RetailmoduleCss['sector-container']}` : `${RetailmoduleCss['sector-containerM']}`}>
+                    <div className={displayDevice ? `${RetailmoduleCss['sector_left-content']}` : `${RetailmoduleCss['sector_left-contentM']}`}>
                         <h1>
 
                             <Editor
@@ -213,9 +213,9 @@ export const Retail = ({ showPopup, overSection, displayDevice }) => {
                             </li>
                         </ul>
                     </div>
-                    <div class={`${RetailmoduleCss['sector_right-cards']}`}>
-                        <div class={displayDevice ? `${RetailmoduleCss['sector-cards-row']}` : `${RetailmoduleCss['sector-cards-rowM']}`}>
-                            <div style={{ background: currentBackground1 }} class={`${RetailmoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
+                    <div className={`${RetailmoduleCss['sector_right-cards']}`}>
+                        <div className={displayDevice ? `${RetailmoduleCss['sector-cards-row']}` : `${RetailmoduleCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground1 }} className={`${RetailmoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -234,7 +234,7 @@ export const Retail = ({ showPopup, overSection, displayDevice }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${RetailmoduleCss['sector-card-content']}`}>
+                                <div className={`${RetailmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -290,7 +290,7 @@ export const Retail = ({ showPopup, overSection, displayDevice }) => {
                                     }}
                                 />
                             </div>
-                            <div style={{ background: currentBackground2 }} class={`${RetailmoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
+                            <div style={{ background: currentBackground2 }} className={`${RetailmoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -309,7 +309,7 @@ export const Retail = ({ showPopup, overSection, displayDevice }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${RetailmoduleCss['sector-card-content']}`}>
+                                <div className={`${RetailmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -363,8 +363,8 @@ export const Retail = ({ showPopup, overSection, displayDevice }) => {
                                 />
                             </div>
                         </div>
-                        <div class={displayDevice ? `${RetailmoduleCss['sector-cards-row']}` : `${RetailmoduleCss['sector-cards-rowM']}`}>
-                            <div style={{ background: currentBackground3 }} class={`${RetailmoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
+                        <div className={displayDevice ? `${RetailmoduleCss['sector-cards-row']}` : `${RetailmoduleCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground3 }} className={`${RetailmoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -383,7 +383,7 @@ export const Retail = ({ showPopup, overSection, displayDevice }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${RetailmoduleCss['sector-card-content']}`}>
+                                <div className={`${RetailmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -435,7 +435,7 @@ export const Retail = ({ showPopup, overSection, displayDevice }) => {
                                     }}
                                 />
                             </div>
-                            <div style={{ background: currentBackground4 }} class={`${RetailmoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
+                            <div style={{ background: currentBackground4 }} className={`${RetailmoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -454,7 +454,7 @@ export const Retail = ({ showPopup, overSection, displayDevice }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${RetailmoduleCss['sector-card-content']}`}>
+                                <div className={`${RetailmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}

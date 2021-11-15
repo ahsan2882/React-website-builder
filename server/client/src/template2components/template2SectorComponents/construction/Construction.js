@@ -4,7 +4,7 @@ import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 
 import ConstructionmoduleCss from './Construction.module.css'
-export const Construction = ({ showPopup, overSection }) => {
+export const Construction = ({ showPopup, overSection, displayDevice }) => {
     const editorRef = useRef();
     const [showPopup1, setShowPopup1] = useState(false);
     const [showPopup2, setShowPopup2] = useState(false);
@@ -18,9 +18,9 @@ export const Construction = ({ showPopup, overSection }) => {
     return (
         <>
 
-            <section style={{ backgroundColor: currentBackground }} class={`${ConstructionmoduleCss.sector}`}>
-                <div class={`${ConstructionmoduleCss['sector-container']}`}>
-                    <div class={`${ConstructionmoduleCss['sector_left-content']}`}>
+            <section style={{ backgroundColor: currentBackground }} className={`${ConstructionmoduleCss.sector}`}>
+                <div className={displayDevice ? `${ConstructionmoduleCss['sector-container']}` : `${ConstructionmoduleCss['sector-containerM']}`}>
+                    <div className={displayDevice ? `${ConstructionmoduleCss['sector_left-content']}` : `${ConstructionmoduleCss['sector_left-contentM']}`}>
                         <h1>
 
                             <Editor
@@ -212,9 +212,9 @@ export const Construction = ({ showPopup, overSection }) => {
                             </li>
                         </ul>
                     </div>
-                    <div class={`${ConstructionmoduleCss['sector_right-cards']}`}>
-                        <div class={`${ConstructionmoduleCss['sector-cards-row']}`}>
-                            <div style={{ background: currentBackground1 }} class={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
+                    <div className={`${ConstructionmoduleCss['sector_right-cards']}`}>
+                        <div className={displayDevice ? `${ConstructionmoduleCss['sector-cards-row']}` : `${ConstructionmoduleCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground1 }} className={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -233,7 +233,7 @@ export const Construction = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${ConstructionmoduleCss['sector-card-content']}`}>
+                                <div className={`${ConstructionmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -289,7 +289,7 @@ export const Construction = ({ showPopup, overSection }) => {
                                     }}
                                 />
                             </div>
-                            <div style={{ background: currentBackground2 }} class={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
+                            <div style={{ background: currentBackground2 }} className={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -308,7 +308,7 @@ export const Construction = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${ConstructionmoduleCss['sector-card-content']}`}>
+                                <div className={`${ConstructionmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -363,8 +363,8 @@ export const Construction = ({ showPopup, overSection }) => {
                                 />
                             </div>
                         </div>
-                        <div class={`${ConstructionmoduleCss['sector-cards-row']}`}>
-                            <div style={{ background: currentBackground3 }} class={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
+                        <div className={displayDevice ? `${ConstructionmoduleCss['sector-cards-row']}` : `${ConstructionmoduleCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground3 }} className={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -383,7 +383,7 @@ export const Construction = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${ConstructionmoduleCss['sector-card-content']}`}>
+                                <div className={`${ConstructionmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -435,7 +435,7 @@ export const Construction = ({ showPopup, overSection }) => {
                                     }}
                                 />
                             </div>
-                            <div style={{ background: currentBackground4 }} class={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
+                            <div style={{ background: currentBackground4 }} className={`${ConstructionmoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -454,7 +454,7 @@ export const Construction = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${ConstructionmoduleCss['sector-card-content']}`}>
+                                <div className={`${ConstructionmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}

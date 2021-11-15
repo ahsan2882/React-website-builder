@@ -2,14 +2,14 @@ import React, { useRef } from 'react'
 // import Img1 from '../../../assets/template2images/support.jpg'
 import ServillancedescriptionCss from './Servillancedescription.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-export default function ServillanceDescription() {
+export default function ServillanceDescription({displayDevice}) {
   const editorRef = useRef(null);
 
   return (
     <>
-      <section className={['service-content']}>
-        <div className={ServillancedescriptionCss['service-container']}>
-          <div className={ServillancedescriptionCss['serv-head']}>
+      <section className={ServillancedescriptionCss['service-content']}>
+        <div className={displayDevice ? ServillancedescriptionCss['service-container'] : ServillancedescriptionCss['service-containerM']}>
+          <div className={displayDevice ? ServillancedescriptionCss['serv-head'] : ServillancedescriptionCss['serv-headM']}>
             <h1>
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
@@ -49,7 +49,7 @@ export default function ServillanceDescription() {
               />
             </h1>
           </div>
-          <div className={ServillancedescriptionCss['service-grid']}>
+          <div className={displayDevice ? ServillancedescriptionCss['service-grid'] : ServillancedescriptionCss['service-gridM']}>
             <div className={ServillancedescriptionCss.sg1}>
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
@@ -174,7 +174,7 @@ export default function ServillanceDescription() {
         </div>
       </section>
       <section>
-        <div className={`${ServillancedescriptionCss['icon-content']} ${ServillancedescriptionCss.container365}`}>
+        <div className={displayDevice ? `${ServillancedescriptionCss['icon-content']} ${ServillancedescriptionCss.container365}` : `${ServillancedescriptionCss['icon-contentM']} ${ServillancedescriptionCss.container365M}`}>
           <div className={ServillancedescriptionCss['iconized']}>
 
             <lord-icon src="https://cdn.lordicon.com/ifclergl.json" trigger="loop-on-hover"

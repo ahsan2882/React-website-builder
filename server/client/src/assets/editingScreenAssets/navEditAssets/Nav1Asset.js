@@ -6,7 +6,7 @@ export default function Nav1Asset() {
       <header className="text-gray-600 body-font bg-red-100 h-36">
         <div className="container mx-auto flex p-8 flex-row md:flex-row items-center justify-between">
           <img src="https://i.ibb.co/y68gwmt/logo-security-red-black.png" alt="logo-security-red-black" className="h-16 w-16 ml-8" />
-          <span className=" text-3xl font-bold">SECURITY </span>
+         
           
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
             <a href={2} className="mr-5 hover:text-red text-2xl uppercase hover:border-red-900 border-b-8">Home</a>
