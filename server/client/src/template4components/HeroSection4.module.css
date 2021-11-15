@@ -1,0 +1,149 @@
+.sectionHero {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 45.7em;
+    background-position: left center;
+    text-align: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.sectionHero h1 {
+    width: 100%;
+    font-size: 80px;
+    font-weight: 600;
+    color: rgb(0, 193, 207);
+}
+
+.sectionHero h2 {
+    color: #fff;
+    width: 100%;
+    font-size: 24px;
+}
+
+.sectionHero h3 {
+    color: #fff;
+    font-size: 18.72px;
+    line-height: 2.25rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.sectionHero h4 {
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+}
+
+.sectionHero h5 {
+    color: #fff;
+    width: 100%;
+    font-size: 13.28px;
+}
+
+.sectionHero h6 {
+    color: #fff;
+    width: 100%;
+    font-size: 10.72px;
+}
+
+.sectionHero p {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.75rem;
+    padding: 0.75rem 0;
+
+}
+
+
+
+.sectionHero>div>div:nth-child(3)>div>p>button {
+    color: white;
+    background-color: #00c1cf;
+    border-radius: 30px;
+    border: 1px solid #00c1cf;
+    font-size: 1.5rem;
+    padding: 10px 40px;
+}
+
+.allbtn {
+    padding: 15px 50px;
+    border-radius: 40px;
+    background-color: rgb(0, 193, 207);
+    margin-bottom: 10rem;
+    color:#fff;
+}
+.allbtn:hover
+{
+    padding: 15px 50px;
+    border-radius: 40px;
+    background-color:black;
+    margin-bottom: 10rem; 
+    color:#fff 
+}
+
+.sectionHero>div>div:nth-child(3)>div>p>button:hover {
+    background-color: black;
+    border-color: white;
+}
+
+
+.sectionHeroM {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 45.7rem;
+    background-position: top;
+    text-align: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.sectionHeroM h1 {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(0, 193, 207);
+}
+
+.backgroundImg {
+    width: 100vw;
+    overflow-x: hidden;
+    height: 45.7rem;
+}
+.backgroundImgM{
+     width: 100vw;
+     overflow-x: hidden;
+     height: 100vh;
+}
+
+@media (max-width: 600px) {
+    .sectionHero {
+        background-position: top;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .backgroundImg {
+        height: 100vh;
+    }
+
+    .sectionHero h1 {
+        margin-top: 15rem;
+        font-size: 3rem;
+    }
+
+    .sectionHero p {
+        font-size: 1.2rem;
+    }
+
+    .secHeroBtn {
+        margin-bottom: 2rem;
+    }
+
+    .sectionHero button {
+        font-size: 0.9rem;
+    }
+}

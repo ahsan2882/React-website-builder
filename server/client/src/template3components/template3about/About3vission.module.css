@@ -1,0 +1,85 @@
+
+
+  .heading2-main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 21px 0;
+  }
+  .heading2-main-title h3 {
+    font-size: 1em;
+    border-bottom: 1px solid #c01120;
+    color: #575757;
+    padding: 17px 0;
+  }
+  .sub-title2 {
+    position: relative;
+  }
+  .sub-title2::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 30%;
+    background: #c01120;
+    left: 0;
+    bottom: -2px;
+  }
+  .heading2-main-title h1 {
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+ 
+.heading-main-v2 h1 {
+    font-size: 10px;
+    color: #000000;
+  }
+  .heading-main-v2 p {
+    color: white;
+    font-size: 10px;
+  }
+  .heading-main-v2 {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vision-img img {
+    width: 1050px;
+    border: 5px solid white;
+  }
+  .vision-wrap {
+   display: flex;
+    justify-content: space-between;
+  }
+  .pragraph-vision p {
+    font-size: 25px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+  .container-main {
+    padding: 33px  167px !important;
+    
+}
+
+@media (max-width: 900px) {
+  .vision-wrap {
+    display: flex;
+    flex-wrap: wrap;
+     justify-content: space-between;
+   }
+   .container-main {
+    padding: 33px 20px !important;  
+  }
+  .pragraph-vision p {
+    font-size: 16px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+
+  }
+
+
+

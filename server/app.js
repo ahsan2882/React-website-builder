@@ -10,29 +10,39 @@ var generateFileRouter = require('./routes/generateFile')
 var imageUploader = require('./routes/uploadImages')
 var app = express();
 
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"))
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve('client', 'build', 'index.html'))
+  })
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(cors());
 app.use(logger('dev'));
-app.use(express.json({limit: '50mb'}));
+app.use(express.json({ limit: '50mb' }));
 
 app.use(express.urlencoded({ extended: false, limit: '50mb' }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static('uploads'));
 
-app.use('/', indexRouter);
+
+
+// app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/generate-file', generateFileRouter)
 app.use('/upload-images', imageUploader)
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -41,5 +51,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;
