@@ -98,7 +98,7 @@
 }
 
 .btnb {
-  background-color: var(--clr-secondary);
+  background-color:black;
   color: white;
   text-decoration: none;
   padding: 10px 20px;
@@ -150,8 +150,8 @@
 
 .btnb:hover {
   cursor: pointer;
-  color: var(--clr-light);
-  background-color: white;
+  color: white;
+  background-color: black;
 }
 
 .aboutSecM {
@@ -226,4 +226,15 @@
 }
 .MainHeadingM, .about-titleM{
   font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  font-family: "Poppins",
+  sans-serif;
+  text-align: center;
+}
+.about-titleM{
+  margin: 1.5rem 0 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }

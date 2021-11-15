@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 import Services2moduleCss from './Services2.module.css'
-export const Services2 = ({ showPopup, overSection }) => {
+export const Services2 = ({ displayDevice, showPopup, overSection }) => {
     const [currentBackground, setCurrentBackground] = useState("white");
     const [currentBackground0, setCurrentBackground0] = useState("#ebebeb");
     const [showPopup0, setShowPopup0] = useState(false);
@@ -17,7 +17,7 @@ export const Services2 = ({ showPopup, overSection }) => {
             <section style={{ background: currentBackground }} id="our-experience">
                 <section className={`${Services2moduleCss['section-serv']}`} style={{ background: currentBackground }}>
                     <section className={`${Services2moduleCss['head-main']}`}>
-                        <h1 className={`${Services2moduleCss.MainHeading}`}>
+                        <h1 className={displayDevice ? `${Services2moduleCss.MainHeading}` : `${Services2moduleCss.MainHeadingM}`}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}

@@ -3,7 +3,7 @@ import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 import Guard2moduleCss from './Guard2.module.css'
 
-export const Guard2 = ({ showPopup, overSection }) => {
+export const Guard2 = ({ displayDevice, showPopup, overSection }) => {
   const [currentBackground, setCurrentBackground] = useState("white");
   const [currentBackground0, setCurrentBackground0] = useState("#c0272d");
   const [showPopup0, setShowPopup0] = useState(false);
@@ -19,7 +19,7 @@ export const Guard2 = ({ showPopup, overSection }) => {
         <section style={{ background: currentBackground }}>
           <section className={`${Guard2moduleCss['our-guards']}`} id="our-team" style={{ background: currentBackground }}>
             <section className={`${Guard2moduleCss['head-main']}`}>
-              <h1 className={`${Guard2moduleCss.MainHeading}`}>
+              <h1 className={displayDevice ? `${Guard2moduleCss.MainHeading}` : `${Guard2moduleCss.MainHeadingM}`}>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}

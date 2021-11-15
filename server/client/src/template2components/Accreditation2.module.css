@@ -133,5 +133,11 @@
   }
 }
 .MainHeadingM{
-  font-size: 2rem;
+ font-size: 45px;
+ font-weight: 900;
+ text-transform: uppercase;
+
+ font-family: "Poppins",
+ sans-serif;
+ text-align: center;
 }

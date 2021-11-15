@@ -37,7 +37,7 @@ const Hero2ColorComponent = ({ color, displayDevice, linksfunc, nav2Service, set
     const editorRef = useRef(null);
     return (
         <>
-            <section style={{ background: color }} className={`${Hero2moduleCss.heroSection} relative`}>
+            <section style={{ background: color }} className={displayDevice ? `relative ${Hero2moduleCss.heroSection}` : `relative ${Hero2moduleCss.heroSectionM}`}>
                 <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services} nav2Sector={nav2Sector} setNav2Sector={setNav2Sector}/>
                 <img src="https://i.ibb.co/VwB7mhG/Path-7.png" alt="Pah 7" className="w-full h-full" />
                 <section className="absolute bottom-8 right-1/4" style={{zIndex:"2"}}>
@@ -45,7 +45,7 @@ const Hero2ColorComponent = ({ color, displayDevice, linksfunc, nav2Service, set
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
                         key='hero4ed2'
-                        initialValue={`<img src="https://i.ibb.co/9Wt8w45/guarg.png" alt="logo" class="${Hero2moduleCss.guardImg} object-cover"/>`}
+                        initialValue={displayDevice ? `<img src="https://i.ibb.co/9Wt8w45/guarg.png" alt="logo" class="${Hero2moduleCss.guardImg} object-cover"/>` : `<img src="https://i.ibb.co/9Wt8w45/guarg.png" alt="logo" class="${Hero2moduleCss.guardImgM} object-cover"/>`}
                         init={{
                             forced_root_block: "",
                             menubar: false,
@@ -80,7 +80,7 @@ const Hero2ColorComponent = ({ color, displayDevice, linksfunc, nav2Service, set
                         }}
                     />
                 </h1>
-                <h1 className={`absolute text-white font-bold my-0 ${Hero2moduleCss.mainHead}`} style={{ zIndex: "1", left: "14%", top: "35%" }}>
+                <h1 className={displayDevice ? `absolute text-white font-bold my-0 ${Hero2moduleCss.mainHead}` : `absolute text-white font-bold my-0 ${Hero2moduleCss.mainHeadM}`} style={{ zIndex: "1", left: "14%", top: "35%" }}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}
@@ -110,7 +110,7 @@ const Hero2ImageComponent = ({ displayDevice, linksfunc, nav2Service, setNav2Ser
     const editorRef = useRef(null);
     return (
         <>
-            <section className={`relative ${Hero2moduleCss.heroSection}`}>
+            <section className={displayDevice ? `relative ${Hero2moduleCss.heroSection}` : `relative ${Hero2moduleCss.heroSectionM}`}>
                 <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc}
                     nav2Service={nav2Service} setNav2Services={setNav2Services}
                     nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
@@ -152,7 +152,7 @@ const Hero2ImageComponent = ({ displayDevice, linksfunc, nav2Service, setNav2Ser
                         }}
                     />
                 </h1>
-                <h1 className={`absolute text-white font-bold my-0 ${Hero2moduleCss.mainHead}`} style={{ zIndex: "1", left: "14%", top: "35%" }}>
+                <h1 className={displayDevice ? `absolute text-white font-bold my-0 ${Hero2moduleCss.mainHead}` : `absolute text-white font-bold my-0 ${Hero2moduleCss.mainHeadM}`} style={{ zIndex: "1", left: "14%", top: "35%" }}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}
                         inline={true}

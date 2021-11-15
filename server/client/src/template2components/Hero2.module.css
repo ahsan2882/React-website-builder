@@ -23,7 +23,8 @@
   height:70vh;
 }
 .guardImgM{
-  width:  15rem
+  width:  15rem;
+  height: 20rem;
 }
 @media (max-width:600px) {
   .mainHead {
@@ -38,7 +39,7 @@
   }
 
 }
-@media (max-width:1200px){
+@media (max-width:600px){
   .guardImg {
     width: 15rem;
     height: 20rem;

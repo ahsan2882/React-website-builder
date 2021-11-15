@@ -11,7 +11,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
             <section style={{ background: currentBackground }}>
                 <section style={{ background: currentBackground }}>
                     <section className={Pricing2Css['head-main']} id="our-prices" style={{ background: currentBackground }} >
-                        <h1 className={`${Pricing2Css.MainHeading}`}>
+                        <h1 className={displayDevice ? `${Pricing2Css.MainHeading}` : `${Pricing2Css.MainHeadingM}`}>
                             <Editor
                                 onInit={(evt, editor) => editorRef.current = editor}
                                 inline={true}

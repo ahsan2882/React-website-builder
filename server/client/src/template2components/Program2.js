@@ -3,7 +3,7 @@ import { GithubPicker } from 'react-color';
 import Program2moduleCss from "./Program2.module.css";
 import { Editor } from "@tinymce/tinymce-react";
 
-export const Program2 = ({ showPopup, overSection }) => {
+export const Program2 = ({ displayDevice, showPopup, overSection }) => {
   const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef();
 
@@ -12,7 +12,7 @@ export const Program2 = ({ showPopup, overSection }) => {
       <section style={{ background: currentBackground }}>
         <section style={{ background: currentBackground }}>
           <section className={`${Program2moduleCss["head-main"]}`} style={{ background: currentBackground }}>
-            <h1 className={`${Program2moduleCss.MainHeading}`}>
+            <h1 className={displayDevice ? `${Program2moduleCss.MainHeading}` : `${Program2moduleCss.MainHeadingM}`}>
               <Editor
                 onInit={(evt, editor) => (editorRef.current = editor)}
                 inline={true}

@@ -46,6 +46,7 @@
   .hh1M{
     font-size: 18px;
     margin-top: 2px;
+    margin-left: 4rem;
     color: white;
   }
   .hh2 {
@@ -188,6 +189,6 @@
   }
 
   .bottom-footM {
-    padding: 15px 25px;
     height: auto;
+    width: 100%;
   }
