@@ -120,6 +120,11 @@
     transition: 0.3s;
     margin: 10px 12px;
   }
+  @media(max-width: 700px){
+    .card{
+      width: 100%;
+    }
+  }
   
   .mid {
     background: white;
@@ -181,7 +186,7 @@
     }
   
     .card {
-      width: 80%;
+      width: 100%;
     }
   }
   

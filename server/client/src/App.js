@@ -3,7 +3,6 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './App.css';
 import EditScreen from './editorScreen/EditScreen';
-import { LandingPage } from './landingPage/LandingPage';
 import PageSelectionScreen from './myComponents/PageSelectionScreen';
 import PreviewPage from './myComponents/PreviewPage'
 import {LoginPage} from './loginPage/LoginPage'

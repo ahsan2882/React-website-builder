@@ -122,16 +122,27 @@
     flex-direction: column;
     float: none;
     width: 98%;
-    padding: 30px;
-    height: 300px;
+    height: auto;
+    padding: 1rem 3rem;
     margin: 5px;
     justify-content: center;
-    padding: 5px 50px;
   }
   .footImgM{
     width:100%;
   }
   
+  .colM{
+    margin: 0;
+  }
+  .row-footM{
+    padding-top: 30px;
+  }
+  .row-footM:after {
+
+    content: "";
+    display: table;
+    clear: both;
+  }
   @media (max-width: 1169px) {
     .column-foot {
       display: flex;
@@ -144,13 +155,13 @@
       padding: 5px 50px;
     }
 
-    .foot-img {
+    .footimg {
       width: 50%;
     }
   }
 
   @media (max-width: 560px) {
-    .foot-img {
+    .footimg {
       width: 100%;
     }
     .col {
@@ -174,4 +185,9 @@
       padding: 1rem 3rem; 
   
     }
+  }
+
+  .bottom-footM {
+    padding: 15px 25px;
+    height: auto;
   }

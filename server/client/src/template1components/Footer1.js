@@ -2,11 +2,16 @@ import React, { useRef, useState } from 'react'
 import Footer1Css from './Footer1.module.css'
 import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
-export const Footer1 = ({ displayDevice, showPopup, overSection }) => {
+export const Footer1 = ({ displayDevice, linksfunc, showPopup, overSection }) => {
   const [currentBackground, setCurrentBackground] = useState("black");
   const [currentBackground1, setCurrentBackground1] = useState("#00d4ff");
   const [showPopup1, setShowPopup1] = useState(false);
+  const [value1, setLink1Value] = useState("")
+  const [editL1, seteditL1] = useState(false)
 
+  const editLink1 = () => {
+    seteditL1(true);
+  }
 
   const editorRef = useRef(null);
   return (
@@ -353,8 +358,9 @@ export const Footer1 = ({ displayDevice, showPopup, overSection }) => {
                   }}
                 />
 
-                <div style={{ fontSize: `2rem`, display: `flex`, marginBottom:"0.5rem"}}>
-                  <i style={{ marginLeft: `0.75rem` }} className="fab fa-facebook i"></i>
+                <div style={{ fontSize: `2rem`, display: `flex`, marginBottom: "0.5rem" }}>
+                  {/* <i style={{ marginLeft: `0.75rem` }} className="fab fa-facebook i"></i> */}
+                  {linksfunc ? <a href={value1} target="_blank" rel="noreferrer"><i style={{ marginLeft: `0.75rem` }} className="fab fa-facebook i"></i></a> : <div className="flex flex-col items-center"><button onClick={() => editLink1()}><i style={{ marginLeft: `0.75rem` }} className="fab fa-facebook i"></i></button><div className={editL1 ? "flex items-center w-4 text-xl" : "hidden"}><input className="text-black " type="text" placeholder="Enter link for icon" onChange={(e) => setLink1Value(e.target.value)} /><button className="px-3 bg-white text-black" onClick={() => seteditL1(false)}>SAVE</button></div></div>}
                   <i style={{ marginLeft: `0.75rem` }} className="fab fa-twitter-square i "></i>
                   <i style={{ marginLeft: `0.75rem` }} className="fab fa-pinterest i "></i>
                   <i style={{ marginLeft: `0.75rem` }} className="fab fa-linkedin i"></i>

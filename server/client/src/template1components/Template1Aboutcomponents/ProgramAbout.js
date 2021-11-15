@@ -235,7 +235,7 @@ export default function ProgramAbout({ displayDevice, showPopup, overSection }) 
                            }}
                         />
                      </div> */}
-                     <img src="https://drive.google.com/uc?id=14hF-fBBEozB0WPP9Hq87JBd2ITPJq5_j" alt="img" class="w-full" />
+                     <img src="https://drive.google.com/uc?id=1DBghzAEv6hvn8s6OpQnVdhsGgC4PVi8B" alt="img" class="w-full" />
                      <h1 className={`${programAboutmoduleCss['pro-head']}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}

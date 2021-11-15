@@ -16,7 +16,7 @@ export const Client2 = ({ displayDevice, showPopup, overSection }) => {
     <>
       <section style={{ background: currentBackground }}>
         <section className={`${Client2moduleCss['head-main']}`} style={{ background: currentBackground }}>
-          <h1 className={`${Client2moduleCss.MainHeading}`}>
+          <h1 className={displayDevice ? `${Client2moduleCss.MainHeading}` : `${Client2moduleCss.MainHeadingM}`}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}

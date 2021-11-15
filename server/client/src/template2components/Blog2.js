@@ -4,7 +4,7 @@ import { Editor } from '@tinymce/tinymce-react';
 
 import Blog2moduleCss from './Blog2.module.css'
 
-export const Blog2 = ({ showPopup, overSection }) => {
+export const Blog2 = ({ displayDevice, showPopup, overSection }) => {
   const [currentBackground, setCurrentBackground] = useState("white");
   const [currentBackground0, setCurrentBackground0] = useState("#c0272d");
   const [showPopup0, setShowPopup0] = useState(false);
@@ -19,7 +19,7 @@ export const Blog2 = ({ showPopup, overSection }) => {
       <section style={{ background: currentBackground }}>
         <section style={{ background: currentBackground }}>
           <section className={`${Blog2moduleCss['head-main']}`} style={{ background: currentBackground }}>
-            <h1 className={`${Blog2moduleCss.MainHeading}`}>
+            <h1 className={displayDevice ? `${Blog2moduleCss.MainHeading}` : `${Blog2moduleCss.MainHeadingM}`}>
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}

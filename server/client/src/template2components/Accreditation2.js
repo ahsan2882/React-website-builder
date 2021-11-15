@@ -5,7 +5,7 @@ import { Editor } from '@tinymce/tinymce-react';
 
 
 
-export const Accreditation2 = ({ showPopup, overSection }) => {
+export const Accreditation2 = ({ displayDevice, showPopup, overSection }) => {
   const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef();
   const Accreditation2Array = [
@@ -33,7 +33,7 @@ export const Accreditation2 = ({ showPopup, overSection }) => {
       <section style={{ background: currentBackground }}>
         <section style={{ background: currentBackground }}>
           <section className={`${Accreditation2moduleCss['head-main']}`} id="our-accreditations" style={{ background: currentBackground }}>
-            <h1 className={`${Accreditation2moduleCss.MainHeading}`}>
+            <h1 className={displayDevice ? `${Accreditation2moduleCss.MainHeading}` : `${Accreditation2moduleCss.MainHeadingM}`}>
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}

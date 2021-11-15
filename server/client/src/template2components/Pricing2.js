@@ -325,7 +325,7 @@ export const Pricing2 = ({ displayDevice, showPopup, overSection }) => {
                                     </div>
                                 </div>
                                
-                                <div className={`${Pricing2Css['card']} ${Pricing2Css['mid']}`}>
+                                <div className={displayDevice ? `${Pricing2Css['card']} ${Pricing2Css['mid']}` : `${Pricing2Css['cardM']} ${Pricing2Css['mid']}`}>
                                     <div className={Pricing2Css['card-header']}>
                                         <h1 className={Pricing2Css['card-main']}>
 

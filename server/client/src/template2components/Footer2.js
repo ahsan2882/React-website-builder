@@ -10,7 +10,7 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
     <>
       <footer className={`${Footer2moduleCss.footer2}`} style={{ background: currentBackground }}>
         <div className={Footer2moduleCss.footer} style={{ background: currentBackground }}>
-          <div className={displayDevice ? Footer2moduleCss['row-foot'] : Footer2moduleCss['rowFootM']} style={{ background: currentBackground }}>
+          <div className={displayDevice ? Footer2moduleCss['row-foot'] : Footer2moduleCss['row-footM']} style={{ background: currentBackground }}>
             <div className={displayDevice ? Footer2moduleCss['column-foot'] : Footer2moduleCss['columnFootM']} style={{ background: currentBackground }}>
               <div className={Footer2moduleCss.span}></div>
               <h2 className={displayDevice ? Footer2moduleCss.hh1 : Footer2moduleCss.hh1M}>
@@ -138,7 +138,7 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
             </div>
             <div className={displayDevice ? Footer2moduleCss['column-foot'] : Footer2moduleCss['columnFootM']} >
               <div className={Footer2moduleCss.span}></div>
-              <h2 className={Footer2moduleCss.hh1}>
+              <h2 className={displayDevice ? Footer2moduleCss.hh1 : Footer2moduleCss.hh1M}>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
@@ -186,7 +186,7 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='AccreIm1'
-                initialValue={displayDevice ? `<img class="${Footer2moduleCss['footimg']}" src="https://i.ibb.co/L0HJLvC/img-footer-map.png"  alt="client 1" class="w-72 h-36 object-cover"/>` : `<img class="${Footer2moduleCss['footImgM']}" src="https://i.ibb.co/L0HJLvC/img-footer-map.png"  alt="client 1" class="w-72 h-36 object-cover"/>`}
+                initialValue={displayDevice ? `<img class="${Footer2moduleCss.footimg}" src="https://i.ibb.co/L0HJLvC/img-footer-map.png"  alt="client 1" class="w-72 h-36 object-cover"/>` : `<img class="${Footer2moduleCss.footImgM}" src="https://i.ibb.co/L0HJLvC/img-footer-map.png"  alt="client 1" class="w-72 h-36 object-cover"/>`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
@@ -203,7 +203,7 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
 
             </div>
             <div className={displayDevice ? Footer2moduleCss['column-foot'] : Footer2moduleCss['columnFootM']} style={{ backgroundColor: "transparent" }}>
-              <div className={Footer2moduleCss.col}>
+              <div className={displayDevice? Footer2moduleCss.col : Footer2moduleCss.colM}>
                 <div className="flex items-center mt-2">
                   <i className="fas fa-map-marker-alt i1 text-black mr-2"></i>
                   <Editor
@@ -346,7 +346,7 @@ export const Footer2 = ({ displayDevice, showPopup, overSection }) => {
               </div>
             </div>
           </div>
-          <div className={Footer2moduleCss['bottom-foot']}>
+          <div className={displayDevice ? Footer2moduleCss['bottom-foot'] : Footer2moduleCss['bottom-footM']}>
             <div className={Footer2moduleCss.copy}>
 
               <Editor

@@ -13,7 +13,7 @@ export const About2 = ({ displayDevice, showPopup, overSection }) => {
         <section style={{ background: currentBackground }}>
           <section className={`${About2moduleCss['head-main']}`} style={{ background: currentBackground }}>
 
-            <h1 className={`${About2moduleCss.MainHeading}`}>
+            <h1 className={displayDevice ? `${About2moduleCss.MainHeading}` : `${About2moduleCss.MainHeadingM}`}>
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
@@ -86,7 +86,7 @@ export const About2 = ({ displayDevice, showPopup, overSection }) => {
                 />
               </div>
               <div className={`${About2moduleCss['about-content']}`}>
-                <h1 className={`${About2moduleCss['about-title']} text-black`}>
+                <h1 className={displayDevice ? `${About2moduleCss['about-title']} text-black` : `${About2moduleCss['about-titleM']} text-black`}>
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}

@@ -25,7 +25,7 @@
     position: fixed;
     top: 6rem;
     left: 0;
-    width: 20vw;
+    width: 12vw;
     height: 100vh;
     background-color: rgb(52, 52, 52); 
     z-index: 23;
@@ -64,7 +64,7 @@
 .assetList {
     position: fixed;
     top: 4rem;
-    left: 9.5vw;
+    left: 12vw;
     bottom: 0;
     width: 45vw;
     background-color: #fff;
