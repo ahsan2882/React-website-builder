@@ -8,10 +8,10 @@ export const LogisticBanner = ({ displayDevice, linksfunc, nav2Service, setNav2S
 
     return (
         <>
-            <section className={LogisticBannerCss['header-img-serv']}>
+            <section className={displayDevice ? LogisticBannerCss['header-img-serv'] : LogisticBannerCss['header-img-servM']}>
                 <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                     nav2Sector={nav2Sector} setNav2Sector={setNav2Sector}/>
-                <div className={`${LogisticBannerCss['head-img-text']}`}>
+                <div className={displayDevice ? `${LogisticBannerCss['head-img-text']}` : `${LogisticBannerCss['head-img-textM']}`}>
                     <h1>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

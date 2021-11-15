@@ -31,3 +31,14 @@
     
   }
 }
+.header-img-servM img{
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 35vh;
+}
+.head-img-textM h1{
+  font-size: 35px;
+  margin: 5rem 0 0;
+   z-index: -1;
+}

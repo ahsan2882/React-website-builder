@@ -8,10 +8,10 @@ export const Corporatehero = ({ displayDevice, linksfunc, nav2Service, setNav2Se
 
     return (
         <>
-            <section className={CorporateheromoduleCss['header-img-serv']}>
+            <section className={displayDevice ? CorporateheromoduleCss['header-img-serv'] : CorporateheromoduleCss['header-img-servM']}>
                 <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                     nav2Sector={nav2Sector} setNav2Sector={setNav2Sector}/>
-                <div className={`${CorporateheromoduleCss['head-img-text']}`}>
+                <div className={displayDevice ? `${CorporateheromoduleCss['head-img-text']}` : `${CorporateheromoduleCss['head-img-textM']}`}>
                     <h1>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

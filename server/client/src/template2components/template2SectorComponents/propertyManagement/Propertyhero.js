@@ -9,10 +9,10 @@ export const Propertyhero = ({ displayDevice, linksfunc, nav2Service, setNav2Ser
 
     return (
         <>
-            <section className={PropertyheromoduleCss['header-img-serv']}>
+            <section className={displayDevice ? PropertyheromoduleCss['header-img-serv'] : PropertyheromoduleCss['header-img-servM']}>
                 <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                     nav2Sector={nav2Sector} setNav2Sector={setNav2Sector}/>
-                <div className={`${PropertyheromoduleCss['head-img-text']}`}>
+                <div className={displayDevice ? `${PropertyheromoduleCss['head-img-text']}` : `${PropertyheromoduleCss['head-img-textM']}`}>
                     <h1>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

@@ -8,10 +8,10 @@ export const ConstHero = ({ displayDevice, linksfunc, nav2Service, setNav2Servic
 
     return (
         <>
-            <section className={ConstHeromoduleCss['header-img-serv']}>
+            <section className={displayDevice ? ConstHeromoduleCss['header-img-serv'] : ConstHeromoduleCss['header-img-servM']}>
                 <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                     nav2Sector={nav2Sector} setNav2Sector={setNav2Sector}/>
-                <div className={`${ConstHeromoduleCss['head-img-text']}`}>
+                <div className={displayDevice ? `${ConstHeromoduleCss['head-img-text']}` : `${ConstHeromoduleCss['head-img-textM']}`}>
                     <h1>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
