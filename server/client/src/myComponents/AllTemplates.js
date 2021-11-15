@@ -110,6 +110,9 @@ import Aboutvission from '../template3components/template3about/Aboutvission'
 import AboutService3 from '../template3components/template3about/AboutService3'
 import AboutPolicy3 from '../template3components/template3about/AboutPolicy3'
 import Pricing3About from "../template3components/template3about/Pricing3About";
+import Abouthero from "../template4components/template4about/Abouthero";
+import Contacthero from "../template4components/template4contact/Contacthero";
+
 const all = {
     About1, Footer1, Guard1, Header1, News1, Prizing1, Program1, Service1, Contact2, Form2, Feedback2, Testimonials1, Hero2, Services2, Pricing2, Blog2, Client2, Guard2, About2bannercomponent,
     About2Vision, About2service, About2policy, Program2, About2, Accreditation2, Footer2, AboutUs4, Accreditation4, Blog4, BottomFooter4, FooterContact4, Header4, HeroSection4, Navigation4, OurGuards4,
@@ -119,7 +122,7 @@ const all = {
     Mannedguardingdescription, SupportManagmentbanner, Supportmanagmentdescription, Eventsecuritybanner, Eventsecuritydescription,Guardhousebanner,Guardhousedescription,Servillancebanner,
     ServillanceDescription,HeroSection3,VisionAbout,AboutServices,PolicyAbout,Partners4,Form,Feedback,Navbar3,HomeAbout,Experince1,ProgramAbout,Company1,Advantage,Partner,Staticsecurity,
     Mobilepatrolling3, Cctvmonetoring3, Lockandunlock, Vacantunitcheck, Technologyproduct3, Mannedguarding, SupportandManagment, Eventsecurity3, Contact3banner, Contact3form, Contact3feedback,
-    Contact1banner, Contactform1, About3banner, Aboutvission, AboutService3, AboutPolicy3, Pricing3About, Cctvmonetoringbanner
+    Contact1banner, Contactform1, About3banner, Aboutvission, AboutService3, AboutPolicy3, Pricing3About, Cctvmonetoringbanner, Abouthero, Contacthero
 }
 export default all;
 export const newService1Comp = {

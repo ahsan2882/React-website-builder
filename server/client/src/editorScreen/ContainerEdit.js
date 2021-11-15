@@ -210,12 +210,12 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
             {
                 groupName: "about",
                 pageName: "About",
-                pageSections: [all.Header4, all.Navigation4, all.VisionAbout, all.AboutServices, all.PolicyAbout, all.OurGuards4, all.Partners4, all.Pricing4, all.Accreditation4, all.Subscribe4, all.FooterContact4, all.BottomFooter4]
+                pageSections: [all.Header4, all.Navigation4, all.Abouthero, all.VisionAbout, all.AboutServices, all.PolicyAbout, all.OurGuards4, all.Partners4, all.Pricing4, all.Accreditation4, all.Subscribe4, all.FooterContact4, all.BottomFooter4]
             },
             {
                 groupName: "contact",
                 pageName: "Contact",
-                pageSections: [all.Header4, all.Navigation4, all.AboutUs4, all.Form, all.Feedback, all.Subscribe4, all.FooterContact4, all.BottomFooter4]
+                pageSections: [all.Header4, all.Navigation4, all.Contacthero, all.AboutUs4, all.Form, all.Feedback, all.Subscribe4, all.FooterContact4, all.BottomFooter4]
             },
         ]
     })
