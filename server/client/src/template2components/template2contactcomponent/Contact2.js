@@ -6,10 +6,11 @@ export default function Contact2({ displayDevice, linksfunc, nav2Service, setNav
     const editorRef = useRef(null);
     return (
         <>
+            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
+                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
             <section className={Contact2Css['header-img-serv']}>
-                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
-                    nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-                <div className={Contact2Css['head-img-text']}>
+
+                <div className={displayDevice ? Contact2Css['head-img-text'] : Contact2Css['head-img-textM']}>
                     <h1>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

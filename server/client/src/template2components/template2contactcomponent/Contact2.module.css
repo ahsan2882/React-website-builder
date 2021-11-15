@@ -22,3 +22,13 @@
       top: 50%;
     }
   }
+
+.head-img-text{
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  z-index: 100;
+}
+.head-img-textM h1 {
+  font-size: 4vw;
+}
