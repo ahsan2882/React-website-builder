@@ -4,7 +4,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 
 import PropertymoduleCss from './Property.module.css'
-export const Property = ({ showPopup, overSection }) => {
+export const Property = ({ showPopup, overSection, displayDevice }) => {
     const [showPopup1, setShowPopup1] = useState(false);
     const [showPopup2, setShowPopup2] = useState(false);
     const [showPopup3, setShowPopup3] = useState(false);
@@ -19,9 +19,9 @@ export const Property = ({ showPopup, overSection }) => {
     return (
         <>
 
-            <section style={{ backgroundColor: currentBackground }} class={`${PropertymoduleCss.sector}`}>
-                <div class={`${PropertymoduleCss['sector-container']}`}>
-                    <div class={`${PropertymoduleCss['sector_left-content']}`}>
+            <section style={{ backgroundColor: currentBackground }} className={`${PropertymoduleCss.sector}`}>
+                <div className={displayDevice ? `${PropertymoduleCss['sector-container']}` : `${PropertymoduleCss['sector-containerM']}`}>
+                    <div className={displayDevice ? `${PropertymoduleCss['sector_left-content']}` : `${PropertymoduleCss['sector_left-contentM']}`}>
                         <h1>
 
                             <Editor
@@ -213,9 +213,9 @@ export const Property = ({ showPopup, overSection }) => {
                             </li>
                         </ul>
                     </div>
-                    <div class={`${PropertymoduleCss['sector_right-cards']}`}>
-                        <div class={`${PropertymoduleCss['sector-cards-row']}`}>
-                            <div style={{ background: currentBackground1 }} class={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
+                    <div className={`${PropertymoduleCss['sector_right-cards']}`}>
+                        <div className={displayDevice ? `${PropertymoduleCss['sector-cards-row']}` : `${PropertymoduleCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground1 }} className={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -234,7 +234,7 @@ export const Property = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${PropertymoduleCss['sector-card-content']}`}>
+                                <div className={`${PropertymoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -290,7 +290,7 @@ export const Property = ({ showPopup, overSection }) => {
                                     }}
                                 />
                             </div>
-                            <div style={{ background: currentBackground2 }} class={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
+                            <div style={{ background: currentBackground2 }} className={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -309,7 +309,7 @@ export const Property = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${PropertymoduleCss['sector-card-content']}`}>
+                                <div className={`${PropertymoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -364,8 +364,8 @@ export const Property = ({ showPopup, overSection }) => {
                                 />
                             </div>
                         </div>
-                        <div class={`${PropertymoduleCss['sector-cards-row']}`}>
-                            <div style={{ background: currentBackground3 }} class={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
+                        <div className={displayDevice ? `${PropertymoduleCss['sector-cards-row']}` : `${PropertymoduleCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground3 }} className={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -384,7 +384,7 @@ export const Property = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${PropertymoduleCss['sector-card-content']}`}>
+                                <div className={`${PropertymoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -436,7 +436,7 @@ export const Property = ({ showPopup, overSection }) => {
                                     }}
                                 />
                             </div>
-                            <div style={{ background: currentBackground4 }} class={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
+                            <div style={{ background: currentBackground4 }} className={`${PropertymoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -455,7 +455,7 @@ export const Property = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${PropertymoduleCss['sector-card-content']}`}>
+                                <div className={`${PropertymoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}

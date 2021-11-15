@@ -4,7 +4,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 
 import LogisticSectorCss from './LogisticSector.module.css'
-export const LogisticSector = ({ showPopup, overSection }) => {
+export const LogisticSector = ({ showPopup, overSection, displayDevice }) => {
     const [showPopup1, setShowPopup1] = useState(false);
     const [showPopup2, setShowPopup2] = useState(false);
     const [showPopup3, setShowPopup3] = useState(false);
@@ -18,9 +18,9 @@ export const LogisticSector = ({ showPopup, overSection }) => {
     return (
         <>
 
-            <section style={{ backgroundColor: currentBackground }} class={`${LogisticSectorCss.sector}`}>
-                <div class={`${LogisticSectorCss['sector-container']}`}>
-                    <div class={`${LogisticSectorCss['sector_left-content']}`}>
+            <section style={{ backgroundColor: currentBackground }} className={`${LogisticSectorCss.sector}`}>
+                <div className={displayDevice ? `${LogisticSectorCss['sector-container']}` : `${LogisticSectorCss['sector-containerM']}`}>
+                    <div className={displayDevice ? `${LogisticSectorCss['sector_left-content']}` : `${LogisticSectorCss['sector_left-contentM']}`}>
                         <h1>
 
                             <Editor
@@ -212,9 +212,9 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                             </li>
                         </ul>
                     </div>
-                    <div class={`${LogisticSectorCss['sector_right-cards']}`}>
-                        <div class={`${LogisticSectorCss['sector-cards-row']}`}>
-                            <div style={{ background: currentBackground1 }} class={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
+                    <div className={`${LogisticSectorCss['sector_right-cards']}`}>
+                        <div className={displayDevice ? `${LogisticSectorCss['sector-cards-row']}` : `${LogisticSectorCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground1 }} className={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -233,7 +233,7 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${LogisticSectorCss['sector-card-content']}`}>
+                                <div className={`${LogisticSectorCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -288,7 +288,7 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                                     />
                                 </div>
                             </div>
-                            <div style={{ background: currentBackground2 }} class={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
+                            <div style={{ background: currentBackground2 }} className={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -307,7 +307,7 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${LogisticSectorCss['sector-card-content']}`}>
+                                <div className={`${LogisticSectorCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -362,8 +362,8 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                             </div>
 
                         </div>
-                        <div class={`${LogisticSectorCss['sector-cards-row']}`}>
-                            <div style={{ background: currentBackground3 }} class={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
+                        <div className={displayDevice ? `${LogisticSectorCss['sector-cards-row']}` : `${LogisticSectorCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground3 }} className={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -382,7 +382,7 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${LogisticSectorCss['sector-card-content']}`}>
+                                <div className={`${LogisticSectorCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -433,7 +433,7 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                                     />
                                 </div>
                             </div>
-                            <div style={{ background: currentBackground4 }} class={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
+                            <div style={{ background: currentBackground4 }} className={`${LogisticSectorCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -452,7 +452,7 @@ export const LogisticSector = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${LogisticSectorCss['sector-card-content']}`}>
+                                <div className={`${LogisticSectorCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}

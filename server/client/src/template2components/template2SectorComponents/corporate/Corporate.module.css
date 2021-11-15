@@ -26,7 +26,11 @@
       justify-content: center;
     }
   }
-
+.head-img-textM{
+  position: absolute;
+  top: 12%;
+  left: 15%;
+}
   @media screen and (min-width: 760px) and (max-width: 1300px) {
     .sector-container {
       flex-direction: column;
@@ -71,6 +75,41 @@
     display: flex;
     align-items: center;
   }
+
+
+  .sector_left-contentM h1 {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    padding-top: 100px;
+  }
+
+  .sector_left-contentM h4 {
+    font-size: 20px;
+    color: #c0272d;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    padding: 30px 0;
+  }
+
+  .sector_left-contentM p {
+    font-size: 12px;
+
+
+  }
+
+  .sector_left-contentM ul {
+    list-style-type: none;
+    font-size: 15px;
+    padding: 30px 0;
+    line-height: 40px;
+  }
+
+  .sector_left-contentM ul li {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
   
   .sector-card {
     margin: 20px 40px;
@@ -99,6 +138,11 @@
   .sector-cards-row {
     display: flex;
   }
+  .sector-cards-rowM {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   @media (max-width:600px){
     .sector_left-content {
       padding: 0;
@@ -111,4 +155,14 @@
     font-size: 12px;
     }
     
+  }
+
+  .sector-containerM{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .sector_left-contentM{
+    padding: 0;
   }

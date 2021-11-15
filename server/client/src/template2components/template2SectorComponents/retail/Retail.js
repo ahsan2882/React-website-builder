@@ -4,7 +4,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import { GithubPicker } from 'react-color';
 
 import RetailmoduleCss from './Retail.module.css'
-export const Retail = ({ showPopup, overSection }) => {
+export const Retail = ({ showPopup, overSection, displayDevice }) => {
     const [showPopup1, setShowPopup1] = useState(false);
     const [showPopup2, setShowPopup2] = useState(false);
     const [showPopup3, setShowPopup3] = useState(false);
@@ -20,8 +20,8 @@ export const Retail = ({ showPopup, overSection }) => {
         <>
 
             <section style={{ backgroundColor: currentBackground }} class={`${RetailmoduleCss.sector}`}>
-                <div class={`${RetailmoduleCss['sector-container']}`}>
-                    <div class={`${RetailmoduleCss['sector_left-content']}`}>
+                <div class={displayDevice ? `${RetailmoduleCss['sector-container']}` : `${RetailmoduleCss['sector-containerM']}`}>
+                    <div class={displayDevice ? `${RetailmoduleCss['sector_left-content']}` : `${RetailmoduleCss['sector_left-contentM']}`}>
                         <h1>
 
                             <Editor
@@ -214,7 +214,7 @@ export const Retail = ({ showPopup, overSection }) => {
                         </ul>
                     </div>
                     <div class={`${RetailmoduleCss['sector_right-cards']}`}>
-                        <div class={`${RetailmoduleCss['sector-cards-row']}`}>
+                        <div class={displayDevice ? `${RetailmoduleCss['sector-cards-row']}` : `${RetailmoduleCss['sector-cards-rowM']}`}>
                             <div style={{ background: currentBackground1 }} class={`${RetailmoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
@@ -363,7 +363,7 @@ export const Retail = ({ showPopup, overSection }) => {
                                 />
                             </div>
                         </div>
-                        <div class={`${RetailmoduleCss['sector-cards-row']}`}>
+                        <div class={displayDevice ? `${RetailmoduleCss['sector-cards-row']}` : `${RetailmoduleCss['sector-cards-rowM']}`}>
                             <div style={{ background: currentBackground3 }} class={`${RetailmoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}

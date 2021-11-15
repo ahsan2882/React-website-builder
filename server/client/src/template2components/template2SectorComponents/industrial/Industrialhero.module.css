@@ -36,6 +36,13 @@
   }
 }
 
+.head-img-textM {
+  position: absolute;
+  top: 22%;
+  left: 15%;
+  z-index: 2;
+}
+
 .header-img-servM img {
   width: 100%;
   background-position: center;
@@ -44,7 +51,8 @@
 }
 
 .head-img-textM h1 {
-  font-size: 35px;
+  font-weight: 700;
+  font-size: 20px;
   margin: 5rem 0 0;
   z-index: -1;
 }

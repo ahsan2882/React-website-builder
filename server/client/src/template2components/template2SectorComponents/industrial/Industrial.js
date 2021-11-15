@@ -5,7 +5,7 @@ import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 
 import IndustrialnmoduleCss from './Industrial.module.css'
-export const Industrial = ({ showPopup, overSection }) => {
+export const Industrial = ({ showPopup, overSection, displayDevice }) => {
     const [showPopup1, setShowPopup1] = useState(false);
     const [showPopup2, setShowPopup2] = useState(false);
     const [showPopup3, setShowPopup3] = useState(false);
@@ -20,9 +20,9 @@ export const Industrial = ({ showPopup, overSection }) => {
     return (
         <>
 
-            <section style={{ backgroundColor: currentBackground }} class={`${IndustrialnmoduleCss.sector}`}>
-                <div class={`${IndustrialnmoduleCss['sector-container']}`}>
-                    <div class={`${IndustrialnmoduleCss['sector_left-content']}`}>
+            <section style={{ backgroundColor: currentBackground }} className={`${IndustrialnmoduleCss.sector}`}>
+                <div className={displayDevice ? `${IndustrialnmoduleCss['sector-container']}` : `${IndustrialnmoduleCss['sector-containerM']}`}>
+                    <div className={displayDevice ? `${IndustrialnmoduleCss['sector_left-content']}` : `${IndustrialnmoduleCss['sector_left-contentM']}`}>
                         <h1>
 
                             <Editor
@@ -214,9 +214,9 @@ export const Industrial = ({ showPopup, overSection }) => {
                             </li>
                         </ul>
                     </div>
-                    <div class={`${IndustrialnmoduleCss['sector_right-cards']}`}>
-                        <div class={`${IndustrialnmoduleCss['sector-cards-row']}`}>
-                            <div style={{ background: currentBackground1 }} class={`${IndustrialnmoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
+                    <div className={`${IndustrialnmoduleCss['sector_right-cards']}`}>
+                        <div className={displayDevice ? `${IndustrialnmoduleCss['sector-cards-row']}` : `${IndustrialnmoduleCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground1 }} className={`${IndustrialnmoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -235,7 +235,7 @@ export const Industrial = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${IndustrialnmoduleCss['sector-card-content']}`}>
+                                <div className={`${IndustrialnmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -290,7 +290,7 @@ export const Industrial = ({ showPopup, overSection }) => {
                                     />
                                 </div>
                             </div>
-                            <div style={{ background: currentBackground2 }} class={`${IndustrialnmoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
+                            <div style={{ background: currentBackground2 }} className={`${IndustrialnmoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -309,7 +309,7 @@ export const Industrial = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${IndustrialnmoduleCss['sector-card-content']}`}>
+                                <div className={`${IndustrialnmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -364,8 +364,8 @@ export const Industrial = ({ showPopup, overSection }) => {
                                 />
                             </div>
                         </div>
-                        <div class={`${IndustrialnmoduleCss['sector-cards-row']}`}>
-                            <div style={{ background: currentBackground3 }} class={`${IndustrialnmoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
+                        <div className={displayDevice ? `${IndustrialnmoduleCss['sector-cards-row']}` : `${IndustrialnmoduleCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground3 }} className={`${IndustrialnmoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -384,7 +384,7 @@ export const Industrial = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${IndustrialnmoduleCss['sector-card-content']}`}>
+                                <div className={`${IndustrialnmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -435,7 +435,7 @@ export const Industrial = ({ showPopup, overSection }) => {
                                     />
                                 </div>
                             </div>
-                            <div style={{ background: currentBackground4 }} class={`${IndustrialnmoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
+                            <div style={{ background: currentBackground4 }} className={`${IndustrialnmoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -454,7 +454,7 @@ export const Industrial = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${IndustrialnmoduleCss['sector-card-content']}`}>
+                                <div className={`${IndustrialnmoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}

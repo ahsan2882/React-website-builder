@@ -4,7 +4,7 @@ import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
 
 import CorporatemoduleCss from './Corporate.module.css'
-export const Corporate = ({ showPopup, overSection }) => {
+export const Corporate = ({ displayDevice, showPopup, overSection }) => {
     const editorRef = useRef();
     const [showPopup1, setShowPopup1] = useState(false);
     const [showPopup2, setShowPopup2] = useState(false);
@@ -18,9 +18,9 @@ export const Corporate = ({ showPopup, overSection }) => {
     return (
         <>
 
-            <section style={{ backgroundColor: currentBackground }} class={`${CorporatemoduleCss.sector}`}>
-                <div class={`${CorporatemoduleCss['sector-container']}`}>
-                    <div class={`${CorporatemoduleCss['sector_left-content']}`}>
+            <section style={{ backgroundColor: currentBackground }} className={`${CorporatemoduleCss.sector}`}>
+                <div className={displayDevice ? `${CorporatemoduleCss['sector-container']}` : `${CorporatemoduleCss['sector-containerM']}`}>
+                    <div className={displayDevice ? `${CorporatemoduleCss['sector_left-content']}` : `${CorporatemoduleCss['sector_left-contentM']}`}>
                         <h1>
 
                             <Editor
@@ -212,9 +212,9 @@ export const Corporate = ({ showPopup, overSection }) => {
                             </li>
                         </ul>
                     </div>
-                    <div class={`${CorporatemoduleCss['sector_right-cards']}`}>
-                        <div class={`${CorporatemoduleCss['sector-cards-row']}`}>
-                            <div style={{ background: currentBackground1 }} class={`${CorporatemoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
+                    <div className={`${CorporatemoduleCss['sector_right-cards']}`}>
+                        <div className={displayDevice ? `${CorporatemoduleCss['sector-cards-row']}` : `${CorporatemoduleCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground1 }} className={`${CorporatemoduleCss['sector-card']}`} onClick={() => setShowPopup1(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -233,7 +233,7 @@ export const Corporate = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${CorporatemoduleCss['sector-card-content']}`}>
+                                <div className={`${CorporatemoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -288,7 +288,7 @@ export const Corporate = ({ showPopup, overSection }) => {
                                     />
                                 </div>
                             </div>
-                            <div style={{ background: currentBackground2 }} class={`${CorporatemoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
+                            <div style={{ background: currentBackground2 }} className={`${CorporatemoduleCss['sector-card']}`} onClick={() => setShowPopup2(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -307,7 +307,7 @@ export const Corporate = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${CorporatemoduleCss['sector-card-content']}`}>
+                                <div className={`${CorporatemoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -362,8 +362,8 @@ export const Corporate = ({ showPopup, overSection }) => {
                                 />
                             </div>
                         </div>
-                        <div class={`${CorporatemoduleCss['sector-cards-row']}`}>
-                            <div style={{ background: currentBackground3 }} class={`${CorporatemoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
+                        <div className={displayDevice ? `${CorporatemoduleCss['sector-cards-row']}` : `${CorporatemoduleCss['sector-cards-rowM']}`}>
+                            <div style={{ background: currentBackground3 }} className={`${CorporatemoduleCss['sector-card']}`} onClick={() => setShowPopup3(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -382,7 +382,7 @@ export const Corporate = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${CorporatemoduleCss['sector-card-content']}`}>
+                                <div className={`${CorporatemoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}
@@ -433,7 +433,7 @@ export const Corporate = ({ showPopup, overSection }) => {
                                     />
                                 </div>
                             </div>
-                            <div style={{ background: currentBackground4 }} class={`${CorporatemoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
+                            <div style={{ background: currentBackground4 }} className={`${CorporatemoduleCss['sector-card']}`} onClick={() => setShowPopup4(state => !state)}>
                                 <Editor
                                     onInit={(evt, editor) => editorRef.current = editor}
                                     inline={true}
@@ -452,7 +452,7 @@ export const Corporate = ({ showPopup, overSection }) => {
                                         toolbar: 'image'
                                     }}
                                 />
-                                <div class={`${CorporatemoduleCss['sector-card-content']}`}>
+                                <div className={`${CorporatemoduleCss['sector-card-content']}`}>
                                     <h2>
                                         <Editor
                                             onInit={(evt, editor) => editorRef.current = editor}

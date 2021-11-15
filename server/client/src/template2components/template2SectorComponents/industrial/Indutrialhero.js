@@ -9,9 +9,10 @@ export const Industrialhero = ({ displayDevice, linksfunc, nav2Service, setNav2S
 
     return (
         <>
+            <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
+                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
             <section className={displayDevice ? IndustrialheromoduleCss['header-img-serv'] : IndustrialheromoduleCss['header-img-servM']}>
-                <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
-                    nav2Sector={nav2Sector} setNav2Sector={setNav2Sector}/>
+                
                 <div className={displayDevice ? `${IndustrialheromoduleCss['head-img-text']}` : `${IndustrialheromoduleCss['head-img-textM']}`}>
                     <h1>
                         <Editor
