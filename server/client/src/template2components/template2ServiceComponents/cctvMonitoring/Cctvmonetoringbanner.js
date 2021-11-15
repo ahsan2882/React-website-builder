@@ -9,9 +9,9 @@ export default function Cctvmonetoringbanner({ displayDevice, linksfunc, nav2Ser
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                 nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-            <section className={CctvmonetoringCss['header-img-serv']}>
+            <section className={displayDevice ? CctvmonetoringCss['header-img-serv'] : CctvmonetoringCss['header-img-servM']}>
 
-                <div className={CctvmonetoringCss['head-img-text']}>
+                <div className={displayDevice ? CctvmonetoringCss['head-img-text'] : CctvmonetoringCss['head-img-textM']}>
                     <h1 className={CctvmonetoringCss.head1}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

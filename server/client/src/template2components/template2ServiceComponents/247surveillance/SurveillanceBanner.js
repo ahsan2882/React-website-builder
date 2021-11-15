@@ -8,9 +8,9 @@ export default function Servillancebanner({ displayDevice, linksfunc, nav2Servic
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                 nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-        <section className={ServillancebannerCss['header-img-serv']}>
+            <section className={displayDevice ? ServillancebannerCss['header-img-serv'] : ServillancebannerCss['header-img-servM']}>
             
-            <div className={ServillancebannerCss['head-img-text']}>
+                <div className={displayDevice ? ServillancebannerCss['head-img-text'] : ServillancebannerCss['head-img-textM']}>
                 <h1 className={ServillancebannerCss.head1}>
                     <Editor
                         onInit={(evt, editor) => editorRef.current = editor}

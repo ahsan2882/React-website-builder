@@ -10,9 +10,9 @@ export default function Staticsecuritybanner({ displayDevice, linksfunc, nav2Ser
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                 nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-            <section className={StaticsecurityCss['header-img-serv']}>
+            <section className={displayDevice ? StaticsecurityCss['header-img-serv'] : StaticsecurityCss['header-img-servM']}>
 
-                <div class={StaticsecurityCss['head-img-text']}>
+                <div className={displayDevice ? StaticsecurityCss['head-img-text'] : StaticsecurityCss['head-img-textM']}>
                     <h1 className={StaticsecurityCss.head1}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

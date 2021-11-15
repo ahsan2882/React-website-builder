@@ -10,9 +10,9 @@ export default function SupportManagmentbanner({ displayDevice, linksfunc, nav2S
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                 nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-            <section className={SupportManagmentbannerCss['header-img-serv']}>
+            <section className={displayDevice ? SupportManagmentbannerCss['header-img-serv'] : SupportManagmentbannerCss['header-img-servM']}>
 
-                <div class={SupportManagmentbannerCss['head-img-text']}>
+                <div className={displayDevice ? SupportManagmentbannerCss['head-img-text'] : SupportManagmentbannerCss['head-img-textM']}>
                     <h1 className={SupportManagmentbannerCss.head1}><b>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

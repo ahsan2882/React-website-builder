@@ -8,27 +8,51 @@
   position: absolute;
   top: 22%;
   left: 15%;
-  z-index:2;
+  z-index: 2;
 }
+
 .dash {
   border-top: dashed 3px white;
 }
+
 .head-img-text h1 {
   font-size: 4vw;
   font-weight: 700;
   z-index: -1;
 }
-@media (max-width:600px){
+
+@media (max-width:600px) {
   .header-img-serv img {
     width: 100%;
     background-position: center;
     background-size: cover;
     height: 35vh;
   }
+
   .head-img-text h1 {
     font-size: 35px;
     margin: 5rem 0 0;
-  
-}
+
+  }
 }
 
+.head-img-textM {
+  position: absolute;
+  top: 22%;
+  left: 15%;
+  z-index: 2;
+}
+
+.head-img-textM h1 {
+  font-weight: 700;
+  z-index: -1;
+  font-size: 35px;
+  margin: 5rem 0 0;
+}
+
+.header-img-servM img {
+  width: 100%;
+  background-position: 50%;
+  background-size: cover;
+  height: 35vh;
+}

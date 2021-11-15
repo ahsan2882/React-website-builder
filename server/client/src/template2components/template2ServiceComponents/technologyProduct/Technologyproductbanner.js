@@ -10,9 +10,9 @@ export default function Technologyproductbanner({ displayDevice, linksfunc, nav2
     <>
       <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
         nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-      <section className={TechnologyproductbannerCss['header-img-serv']}>
+      <section className={displayDevice ? TechnologyproductbannerCss['header-img-serv'] : TechnologyproductbannerCss['header-img-servM']}>
 
-        <div class={TechnologyproductbannerCss['head-img-text']}>
+        <div className={displayDevice ? TechnologyproductbannerCss['head-img-text'] : TechnologyproductbannerCss['head-img-textM']}>
           <h1 className={TechnologyproductbannerCss.head1}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}

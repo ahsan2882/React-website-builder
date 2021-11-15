@@ -10,9 +10,9 @@ export default function Lockandunlockbanner({ displayDevice, linksfunc, nav2Serv
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                 nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-            <section className={LockandunlockbannerCss['header-img-serv']}>
+            <section className={displayDevice ? LockandunlockbannerCss['header-img-serv'] : LockandunlockbannerCss['header-img-servM']}>
 
-                <div className={LockandunlockbannerCss['head-img-text']}>
+                <div className={displayDevice ? LockandunlockbannerCss['head-img-text'] : LockandunlockbannerCss['head-img-textM']}>
                     <h1 className={LockandunlockbannerCss.head1}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

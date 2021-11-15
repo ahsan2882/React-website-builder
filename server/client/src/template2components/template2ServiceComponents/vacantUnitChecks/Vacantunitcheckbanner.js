@@ -9,9 +9,9 @@ export default function Vacantunitcheckbanner({ displayDevice, linksfunc, nav2Se
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                 nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-            <section className={VacantunitcheckbannerCss['header-img-serv']}>
+            <section className={displayDevice ? VacantunitcheckbannerCss['header-img-serv'] : VacantunitcheckbannerCss['header-img-servM']}>
 
-                <div className={VacantunitcheckbannerCss['head-img-text']}>
+                <div className={displayDevice ? VacantunitcheckbannerCss['head-img-text'] : VacantunitcheckbannerCss['head-img-textM']}>
                     <h1 className={VacantunitcheckbannerCss.head1}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

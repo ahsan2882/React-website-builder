@@ -10,9 +10,9 @@ export default function Eventsecuritybanner({ displayDevice, linksfunc, nav2Serv
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                 nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-            <section className={EventsecurityCss['header-img-serv']}>
+            <section className={displayDevice ? EventsecurityCss['header-img-serv'] : EventsecurityCss['header-img-servM']}>
 
-                <div className={EventsecurityCss['head-img-text']}>
+                <div className={displayDevice ? EventsecurityCss['head-img-text'] : EventsecurityCss['head-img-textM']}>
                     <h1 className={EventsecurityCss.head1}>\
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

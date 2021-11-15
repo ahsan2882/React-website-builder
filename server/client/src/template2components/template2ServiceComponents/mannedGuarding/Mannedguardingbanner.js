@@ -10,9 +10,9 @@ export default function Mannedguardingbanner({ displayDevice, linksfunc, nav2Ser
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                 nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-            <section className={MannedBannerCss['header-img-serv']}>
+            <section className={displayDevice ? MannedBannerCss['header-img-serv'] : MannedBannerCss['header-img-servM']}>
 
-                <div class={MannedBannerCss['head-img-text']}>
+                <div className={displayDevice ? MannedBannerCss['head-img-text'] : MannedBannerCss['head-img-textM']}>
                     <h1 className={MannedBannerCss.head1}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

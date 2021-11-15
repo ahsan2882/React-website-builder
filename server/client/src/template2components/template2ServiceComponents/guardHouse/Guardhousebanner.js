@@ -10,9 +10,9 @@ export default function Guardhousebanner({ displayDevice, linksfunc, nav2Service
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                 nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-            <section className={GuardhouseBannerCss['header-img-serv']}>
+            <section className={displayDevice ? GuardhouseBannerCss['header-img-serv'] : GuardhouseBannerCss['header-img-servM']}>
 
-                <div className={GuardhouseBannerCss['head-img-text']}>
+                <div className={displayDevice ? GuardhouseBannerCss['head-img-text'] : GuardhouseBannerCss['head-img-textM']}>
                     <h1 className={GuardhouseBannerCss.head1}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

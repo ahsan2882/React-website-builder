@@ -10,9 +10,9 @@ export default function Mobilepatrollingbanner({ displayDevice, linksfunc, nav2S
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
                 nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
-            <section className={MobilepatrollingCss['header-img-serv']}>
+            <section className={displayDevice ? MobilepatrollingCss['header-img-serv'] : MobilepatrollingCss['header-img-servM']}>
 
-                <div class={MobilepatrollingCss['head-img-text']}>
+                <div className={displayDevice ? MobilepatrollingCss['head-img-text'] : MobilepatrollingCss['head-img-textM']}>
                     <h1 className={MobilepatrollingCss.head1}>
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
