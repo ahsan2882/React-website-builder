@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "craco build && copy .\\build\\static\\css\\*.css .\\..\\staticCss && cd .\\..\\staticCss && ren *.css allCss.css",
     "test": "craco test",
     "eject": "react-scripts eject"
   },

@@ -1,5 +1,6 @@
 var express = require('express'),
     fs = require('fs');
+const path = require('path');
 var router = express.Router();
 // var css = require('../client/build/static/css/main.6a0d2e46.chunk.css')
 // server\client\build\static\css\main.6a0d2e46.chunk.css
@@ -14,8 +15,9 @@ router.post("/", async (req, res, next) => {
         file_name: `${req.body.file_name}`,
         file_content: req.body.file_content
     };
-    let cssS = fs.readFileSync('../client/build/static/css/main.6a0d2e46.chunk.css', {encoding:'text/css'})
-    let fileData = htmlTemplate + cssS + styleClose + response.file_content.html + htmlClosingTemplate;
+    let cssReq = fs.readFileSync(path.resolve(__dirname, '../staticCss', 'allCss.css'), "utf-8")
+    console.log(cssReq);
+    let fileData = htmlTemplate + cssReq + styleClose + response.file_content.html + htmlClosingTemplate;
      fs.writeFile(`./output/files/${response.file_name}`, fileData, err => logError(err))
     res.send(fileData);
 })
