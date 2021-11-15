@@ -8,9 +8,9 @@ export default function About2Vision({ displayDevice, showPopup, overSection }) 
   return (
     <>
       <section className={`${About2vissionCss['vision']} ${About2vissionCss['our-vision']}`} id="our-vision" style={{ background: currentBackground }}>
-        <div className={About2vissionCss['flex-about']}>
-          <div className={`${About2vissionCss['content-our-vision']} ${About2vissionCss['container-content']}`}>
-            <div className={About2vissionCss['vision-top-content']}>
+        <div className={displayDevice ? About2vissionCss['flex-about'] : About2vissionCss['flex-aboutM']}>
+          <div className={displayDevice ? `${About2vissionCss['content-our-vision']} ${About2vissionCss['container-content']}` : `${About2vissionCss['content-our-vision']} ${About2vissionCss['container-contentM']}`}>
+            <div className={displayDevice ? About2vissionCss['vision-top-content'] : About2vissionCss['vision-top-contentM']}>
               <h1>
                 <Editor
 
@@ -73,8 +73,8 @@ export default function About2Vision({ displayDevice, showPopup, overSection }) 
                 }}
               />
             </div>
-            <div className={About2vissionCss['vision-bottom-content']}>
-              <div className={About2vissionCss['flex-cont']}>
+            <div className={displayDevice ? About2vissionCss['vision-bottom-content'] : About2vissionCss['vision-bottom-contentM']}>
+              <div className={displayDevice ? About2vissionCss['flex-cont'] : About2vissionCss['flex-contM']}>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}
@@ -116,7 +116,7 @@ export default function About2Vision({ displayDevice, showPopup, overSection }) 
                 />
 
               </div>
-              <div className={About2vissionCss['flex-cont']}>
+              <div className={displayDevice ? About2vissionCss['flex-cont'] : About2vissionCss['flex-contM']}>
                 <Editor
                   onInit={(evt, editor) => editorRef.current = editor}
                   inline={true}

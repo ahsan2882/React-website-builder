@@ -79,16 +79,8 @@
     .container-guards-wrapper {
       padding: 20px;
     }
-  
-    .container-guards {
-      grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
-    }
   }
-  @media (max-width: 1500px) {
-    .container-guards {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
-    }
-}
+  
 .test-para {
     color: white;
     text-align: center;

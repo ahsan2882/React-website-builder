@@ -54,10 +54,33 @@
     font-size: 13px;
     font-weight: 500;
     font-family: "Open Sans", sans-serif;
-    color: var(--clr-secondary-light);
+    color: #292929;
     padding: 15px;
   }
-
+.flex-aboutM{
+  display: flex;
+  flex-direction: column;
+}
+.container-contentM{
+  padding: 0 20px;
+}
+.vision-top-contentM h1{
+font-size: 2rem;
+font-weight: 700;
+font-family: "Poppins",
+sans-serif;
+}
+.vision-top-contentM p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Open Sans",
+  sans-serif;
+  color: #292929;
+}
+.flex-contM {
+  display: flex;
+  flex-direction: column;
+}
   @media(max-width: 900px) {
     .flex-about {
       display: flex;
@@ -93,4 +116,11 @@
       color: #292929;
       padding: 4px;
     }
+  }
+  .vision-bottom-contentM p {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    color: #292929;
+    padding: 4px;
   }

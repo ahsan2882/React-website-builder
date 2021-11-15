@@ -3,7 +3,7 @@ import { GithubPicker } from 'react-color';
 import AboutpolicyCss from './About2policy.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
-export default function About2policy({ showPopup, overSection }) {
+export default function About2policy({ displayDevice, showPopup, overSection }) {
   const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef(null);
   return (
@@ -16,7 +16,7 @@ export default function About2policy({ showPopup, overSection }) {
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
             key='Service1'
-            initialValue={` <span className=${AboutpolicyCss.SpanColor}> OUR </span> Policy`}
+            initialValue={` <span class=${AboutpolicyCss.SpanColor}> OUR </span> POLICY`}
             init={{
               plugins: [
                 "link"
@@ -58,7 +58,7 @@ export default function About2policy({ showPopup, overSection }) {
       </section>
       <section className={AboutpolicyCss['policy']}>
         <div className={AboutpolicyCss['section-our-policies']}>
-          <div className={AboutpolicyCss['container-policies']}>
+          <div className={displayDevice ? AboutpolicyCss['container-policies'] : AboutpolicyCss['container-policiesM']}>
             <div className={AboutpolicyCss['parent']}>
               <div className={AboutpolicyCss['policy-top']}>
                 <Editor
@@ -80,8 +80,8 @@ export default function About2policy({ showPopup, overSection }) {
                   }}
                 />
               </div>
-              <div className={AboutpolicyCss['paradiv']}>
-                <div className={AboutpolicyCss['flexi-row']}>
+              <div className={displayDevice ? AboutpolicyCss['paradiv'] : AboutpolicyCss['paradivM']}>
+                <div className={displayDevice ? AboutpolicyCss['flexi-row'] : AboutpolicyCss['flexi-rowM']}>
                   <div className={`${AboutpolicyCss['divi']} ${AboutpolicyCss['contain-sub']}`}>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
@@ -124,7 +124,7 @@ export default function About2policy({ showPopup, overSection }) {
                     />
                   </div>
                 </div>
-                <div className={AboutpolicyCss['flexi-row']}>
+                <div className={displayDevice ? AboutpolicyCss['flexi-row'] : AboutpolicyCss['flexi-rowM']}>
                   <div className={`${AboutpolicyCss['divi']} ${AboutpolicyCss['contain-sub']}`}>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
@@ -168,7 +168,7 @@ export default function About2policy({ showPopup, overSection }) {
                     />
                   </div>
                 </div>
-                <div className={AboutpolicyCss['flexi-row']}>
+                <div className={displayDevice ? AboutpolicyCss['flexi-row'] : AboutpolicyCss['flexi-rowM']}>
                   <div className={`${AboutpolicyCss['divi']} ${AboutpolicyCss['contain-sub']}`}>
                     <Editor
                       onInit={(evt, editor) => editorRef.current = editor}
