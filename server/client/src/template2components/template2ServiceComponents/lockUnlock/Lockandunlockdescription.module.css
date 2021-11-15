@@ -3,20 +3,19 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.service-content {
+  }
+  
+  .service-content {
     background-image: url('https://i.ibb.co/6J6s7dW/side.png');
     background-repeat: no-repeat;
-}
-
-.serv-head h1 {
+  }
+  
+  .serv-head h1 {
     font-size: 3em;
     font-weight: 800;
-
-}
-
-.service-grid {
+  }
+  
+  .service-grid {
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -25,78 +24,113 @@
     grid-row-gap: 0px;
     border-bottom: 1px solid rgb(143, 143, 143);
     padding-bottom: 9px;
-}
-
-.service-grid p {
+  }
+  
+  .service-grid p {
     font-size: 15px;
-}
-
-.sg1 {
+  }
+  
+  .sg1 {
     grid-area: 1 / 1 / 2 / 2;
-}
-
-.sg2 {
+  }
+  
+  .sg2 {
     grid-area: 2 / 1 / 4 / 2;
     display: flex;
     justify-content: center;
-}
-
-.sg2 img {
+  }
+  
+  .sg2 img {
     width: 40vh;
     background-size: cover;
     object-fit: cover;
     border: 5px solid black;
-}
-
-.sg3 {
+  }
+  
+  .sg3 {
     grid-area: 1 / 2 / 3 / 3;
-}
-
-.sg4 {
+  }
+  
+  .sg4 {
     grid-area: 3 / 2 / 4 / 3;
-}
-
-.sg5 {
+  }
+  
+  .sg5 {
     grid-area: 1 / 3 / 3 / 4;
     background-image: url('https://i.ibb.co/gd3RdcQ/qoute.png');
     background-repeat: no-repeat;
-}
-
-.sg5 p {
+  }
+  
+  .sg5 p {
     font-size: 25px;
     font-family: "Poppins", serif;
     font-weight: 500;
-}
-
-.sg6 {
+  }
+  
+  .sg6 {
     grid-area: 3 / 3 / 4 / 4;
-}
-.icon-content {
+  }
+  .icon-content {
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
-}
-
+  
+  }
+  .lordicon{
+    width: 130px;
+    height: 130px;
+  }
   .container365 {
     padding: 0 5em;
     margin-bottom: 30px;
   }
-
+  
   .iconized {
     padding: 0 45px;
-}
-.icon-content h3 {
+  }
+  .icon-content h3 {
   font-size: 25px;
   font-family: "Poppins", sans-serif;
-}
-.icon-content p {
+  }
+  .icon-content p {
   padding: 10px 0;
   font-size: 15px;
-}
-@media (max-width: 900px) {
+  }
+  @media (max-width: 900px) {
     .service-grid {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-}
+    .icon-content {
+      flex-direction: column;
+      align-items: center;
+   text-align: center;
+    }
+    .container365 {
+      padding: 0;
+  
+    }
+    .serv-head h1 {
+      font-size: 1.5em;
+    }
+  .serv-head {
+    width: 100%;
+  }
+  .serv-head p {
+    margin: 2rem 0 0;
+  }
+  .service-container {
+    padding: 170px 50px;
+   
+  }
+  .service-grid p {
+    margin: 3rem 0 0;
+  }
+  .sg2 img {
+    width: 80%;
+    margin: 3rem 0 0;
+  
+  }
+  
+  }
+  

@@ -55,20 +55,7 @@
     color: var(--clr-secondary);
   }
   
-  /* .i1 {
-    color: black;
-    /* left:12pc; */
-    /* padding: 5px;
-    font-size: 20px;
-    text-align: center;
-  }
   
-  .i {
-    color: black;
-    padding: 10px;
-    font-size: 3rem;
-    text-align: center;
-  } */ 
   
   .pg {
     text-align: center;
@@ -166,11 +153,25 @@
     .foot-img {
       width: 100%;
     }
+    .col {
+ 
+      margin: 0;
+   
+    }
+    .row-foot {
+      padding-top: 30px;
+    }
   }
 
   @media (max-width: 834px) {
     .bottom-foot {
       padding: 15px 25px;
       height: auto;
+    }
+ 
+    .column-foot {
+      height: auto;
+      padding: 1rem 3rem; 
+  
     }
   }

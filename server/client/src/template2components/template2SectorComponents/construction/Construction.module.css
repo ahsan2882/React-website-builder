@@ -99,3 +99,16 @@
   .sector-cards-row {
     display: flex;
   }
+  @media (max-width:600px){
+    .sector_left-content {
+      padding: 0;
+    }
+    .sector_left-content h1 {
+      font-size: 20px;
+  
+    }
+    .sector_left-content ul li {
+    font-size: 12px;
+    }
+    
+  }

@@ -18,3 +18,16 @@
     font-weight: 700;
     z-index: -1;
   }
+  @media (max-width:600px){
+    .header-img-serv img {
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      height: 35vh;
+    }
+    .head-img-text h1 {
+      font-size: 35px;
+      margin: 5rem 0 0;
+    
+  }
+}

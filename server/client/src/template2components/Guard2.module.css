@@ -48,8 +48,8 @@
       grid-template-rows: 400px 400px; */
   
     justify-content: center;
-    margin-top: 10%;
-    margin-bottom: 134px;
+ 
+    margin-bottom: 60px;
   }
   .h1 {
     color: white;
@@ -131,7 +131,7 @@
   
   .spanDesc p {
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin:0 3rem 10px;
     color: #292929;
   }
   

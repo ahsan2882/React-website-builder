@@ -1,11 +1,14 @@
 .heroSection {
   width: 100%;
   height: 90vh;
+
 }
+
 
 .guardImg {
   width: 35rem;
-  height: 40rem;
+  height: 35rem;
+
 }
 
 .mainHead {
@@ -17,13 +20,17 @@
     font-size: 3rem;
   }
 
-  .guardImg {
-    width: 15rem;
-    height: 20rem;
-  }
+
 
   .heroSection {
     width: 100%;
     height: 70vh;
+  }
+
+}
+@media (max-width:1200px){
+  .guardImg {
+    width: 15rem;
+    height: 20rem;
   }
 }

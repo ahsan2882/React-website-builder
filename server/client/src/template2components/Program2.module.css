@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 163px 0;
+    margin: 70px 0;
     padding: 0 100px;
   }
   .ecard-top {
@@ -82,7 +82,7 @@
   }
   
   .head-main {
-    margin: 60px 0;
+    margin: 30px 0;
   }
   
   .SpanColor {
@@ -96,7 +96,7 @@
   
   .spanDesc p {
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin:0 3rem 10px;
     color: #292929;
   }
   

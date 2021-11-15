@@ -55,7 +55,7 @@ export default function Technologyproductbanner({displayDevice, linksfunc , nav2
                 }}
             />
         </section>
-        <section>
+        {/* <section>
         <div className={`${TechnologyproductbannerCss['icon-content']} ${TechnologyproductbannerCss['container365']}`}>
           <div className={TechnologyproductbannerCss['iconized']}>
 
@@ -223,7 +223,7 @@ export default function Technologyproductbanner({displayDevice, linksfunc , nav2
           </div>
         </div>
       </section>
-      
+       */}
         </>
     )
 }

@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   /* margin: 9rem 0; */
-  margin: 180px 0;
+  margin: 160px 0;
 }
 
 .about-post {
@@ -63,10 +63,6 @@
   /* background-color: darkgray; */
 }
 
-.head-main {
-  margin: 60px 0;
-}
-
 .SpanColor {
   color: #c0272d;
 }
@@ -78,7 +74,7 @@
 
 .spanDesc p {
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin:0 3rem 10px;
   color: #292929;
 }
 

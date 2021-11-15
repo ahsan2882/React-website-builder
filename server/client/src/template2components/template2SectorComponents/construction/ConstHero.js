@@ -38,7 +38,7 @@ export const ConstHero = ({ displayDevice, linksfunc, nav2Service, setNav2Servic
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                    initialValue={`<img src="https://i.ibb.co/hfnXV9H/construction-banner.jpg" alt="construction-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/hfnXV9H/construction-banner.jpg" alt="construction-banner" class="w-screen h-96 object-cover"/>`}
                     init={
                         {
                             forced_root_block: "",

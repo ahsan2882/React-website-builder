@@ -281,3 +281,22 @@ input:focus {
     text-align: center;
   }
 }
+
+@media (max-width: 700px) {
+  .section-form {
+    flex-direction: column !important;
+  }
+
+  .box1 {
+    width: 100%;
+  }
+
+  .form-post {
+    text-align: center;
+  }
+
+  .box2 {
+    padding-right: 0px;
+    padding-top: 50px;
+  }
+}

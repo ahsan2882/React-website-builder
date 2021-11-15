@@ -39,7 +39,7 @@ export const Propertyhero = ({ displayDevice, linksfunc, nav2Service, setNav2Ser
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                    initialValue={`<img src="https://i.ibb.co/5MsP8xJ/property.jpg" alt="property" />`}
+                    initialValue={`<img src="https://i.ibb.co/5MsP8xJ/property.jpg" alt="property" class="w-screen h-96 object-cover" />`}
                     init={
                         {
                             forced_root_block: "",

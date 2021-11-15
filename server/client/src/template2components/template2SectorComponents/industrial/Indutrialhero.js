@@ -39,7 +39,7 @@ export const Industrialhero = ({ displayDevice, linksfunc, nav2Service, setNav2S
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                    initialValue={`<img src="https://i.ibb.co/wpGLZHN/industrial-banner.jpg" alt="industrial-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/wpGLZHN/industrial-banner.jpg" alt="industrial-banner" class="w-screen h-96 object-cover" />`}
                     init={
                         {
                             forced_root_block: "",

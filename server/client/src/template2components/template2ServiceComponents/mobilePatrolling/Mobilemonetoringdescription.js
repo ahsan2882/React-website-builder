@@ -191,7 +191,7 @@ export default function Mobilemonetoringdescription() {
           <div className={MobilemonetoringdescriptionCss['iconized']}>
 
             <lord-icon src="https://cdn.lordicon.com/ifclergl.json" trigger="loop-on-hover"
-              colors="primary:#121331,secondary:#c0272d" style={{ "width": "130px", "height": "130px" }}>
+              colors="primary:#121331,secondary:#c0272d" style={{ "width": "70px", "height": "70px" }}>
             </lord-icon>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -232,7 +232,7 @@ export default function Mobilemonetoringdescription() {
           <div className={MobilemonetoringdescriptionCss['iconized']}>
 
             <lord-icon src="https://cdn.lordicon.com/urhcgqxz.json" trigger="loop-on-hover"
-              colors="primary:#121331,secondary:#c0272d" style={{ "width": "130px", "height": "130px" }}>
+              colors="primary:#121331,secondary:#c0272d" style={{ "width": "70px", "height": "70px" }}>
             </lord-icon>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -273,7 +273,7 @@ export default function Mobilemonetoringdescription() {
           <div className={MobilemonetoringdescriptionCss['iconized']}>
 
             <lord-icon src="https://cdn.lordicon.com/dflgefov.json" trigger="loop-on-hover"
-              colors="primary:#121331,secondary:#c0272d" style={{ "width": "130px", "height": "130px" }}>
+              colors="primary:#121331,secondary:#c0272d" style={{ "width": "70px", "height": "70px" }}>
             </lord-icon>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
@@ -314,7 +314,7 @@ export default function Mobilemonetoringdescription() {
           <div className={MobilemonetoringdescriptionCss['iconized']}>
 
             <lord-icon src="https://cdn.lordicon.com/yyecauzv.json" trigger="loop-on-hover"
-              colors="primary:#121331,secondary:#c0272d" style={{ "width": "130px", "height": "130px" }}>
+              colors="primary:#121331,secondary:#c0272d" style={{ "width": "70px", "height": "70px" }}>
             </lord-icon>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}

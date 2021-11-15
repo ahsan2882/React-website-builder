@@ -38,7 +38,7 @@ export const Corporatehero = ({ displayDevice, linksfunc, nav2Service, setNav2Se
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                    initialValue={`<img src="https://i.ibb.co/9cbXRT5/corporate-banner.jpg" alt="corporate-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/9cbXRT5/corporate-banner.jpg" alt="corporate-banner" class="w-screen h-96 object-cover" />`}
                     init={
                         {
                             forced_root_block: "",

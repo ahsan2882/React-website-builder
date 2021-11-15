@@ -148,3 +148,17 @@
     border-top: 3px dashed firebrick;
     margin-top: 9px;
   }
+  @media(max-width: 900px) {
+    .flexi-row {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 10px;
+    }
+
+    .container-policies {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }

@@ -7,7 +7,7 @@
 }
 
 .head-main {
-  margin: 60px 0;
+  margin: 60px 0 0;
 }
 
 .SpanColor {
@@ -21,7 +21,7 @@
 
 .spanDesc p {
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin:0 3rem 10px;
   color: #292929;
 }
 
@@ -190,5 +190,9 @@
 
   .text--sub {
     margin-bottom: 0;
+  }
+  .accrediation {
+
+    padding: 0;
   }
 }

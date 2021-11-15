@@ -39,7 +39,7 @@ export const Retailhero = ({ displayDevice, linksfunc, nav2Service, setNav2Servi
                     onInit={(evt, editor) => editorRef.current = editor}
                     inline={true}
                     key='About2'
-                    initialValue={`<img src="https://i.ibb.co/3Nq1M6B/retail-banner.jpg" alt="retail-banner" />`}
+                    initialValue={`<img src="https://i.ibb.co/3Nq1M6B/retail-banner.jpg" alt="retail-banner" class="w-screen h-96 object-cover" />`}
                     init={
                         {
                             forced_root_block: "",

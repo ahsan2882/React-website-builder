@@ -57,3 +57,40 @@
     color: var(--clr-secondary-light);
     padding: 15px;
   }
+
+  @media(max-width: 900px) {
+    .flex-about {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flex-cont {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container-content {
+      padding: 0 20px;
+    }
+
+    .vision-top-content h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .vision-top-content p {
+      font-size: 0.9rem;
+      font-weight: 500;
+      font-family: "Open Sans", sans-serif;
+      color: #292929;
+    }
+
+    .vision-bottom-content p {
+      font-size: 13px;
+      font-weight: 500;
+      font-family: "Open Sans", sans-serif;
+      color: #292929;
+      padding: 4px;
+    }
+  }

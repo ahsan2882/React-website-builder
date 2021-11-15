@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 163px;
+    margin-top: 30px;
   }
   
   .test-footer {
@@ -76,22 +76,7 @@
     background-size: cover;
    
   }
-  
-  /* @media screen and (max-width: 1000px) {
-    .test-card {
-      width: 40%;
-    }
-  }
-  
-  @media screen and (max-width: 620px) {
-    .container-test {
-      width: 100%;
-    }
-  
-    .test-card {
-      width: 80%;
-    }
-  } */
+
   
   .testpara {
     color: white;
@@ -135,7 +120,7 @@
   
   .spanDesc p {
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin:0 3rem 10px;
     color: #292929;
   }
   
