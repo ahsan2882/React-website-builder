@@ -43,7 +43,7 @@ export default function ProgramAbout({ displayDevice, showPopup, overSection }) 
                         />
 
                      </div> */}
-                     <img src="https://svgshare.com/i/bt1.svg" alt="img" class="w-full" />
+                     <img src="https://drive.google.com/uc?id=1ZJ4FmeCK5SMnIdX41_XoV7Q_20oLK9EW" alt="img" class="w-full" />
                      <h1 className={`${programAboutmoduleCss['pro-head']}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
@@ -137,7 +137,7 @@ export default function ProgramAbout({ displayDevice, showPopup, overSection }) 
                         />
 
                      </div> */}
-                     <img src="https://svgshare.com/i/buV.svg" alt="img" class="w-full" />
+                     <img src="https://drive.google.com/uc?id=14hF-fBBEozB0WPP9Hq87JBd2ITPJq5_j" alt="img" class="w-full" />
                      <h1 className={`${programAboutmoduleCss['pro-head']}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
@@ -235,7 +235,7 @@ export default function ProgramAbout({ displayDevice, showPopup, overSection }) 
                            }}
                         />
                      </div> */}
-                     <img src="https://svgshare.com/i/bsp.svg" alt="img" class="w-full" />
+                     <img src="https://drive.google.com/uc?id=14hF-fBBEozB0WPP9Hq87JBd2ITPJq5_j" alt="img" class="w-full" />
                      <h1 className={`${programAboutmoduleCss['pro-head']}`}>
                         <Editor
                            onInit={(evt, editor) => editorRef.current = editor}
