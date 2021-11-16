@@ -230,18 +230,27 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
             canDrop: !!monitor.canDrop()
         })
     })
-    let readMores = document.getElementsByClassName("readMoreText");
+    // let readMores = document.getElementsByClassName("readMoreText");
+    // let inde = 0;
+    // while (inde < readMores.length) {
+    //     readMores[inde].classList.add("hidden")
+    //     inde++
+    // }
+    let allParas = document.getElementsByTagName("p");
     let inde = 0;
-    while (inde < readMores.length) {
-        readMores[inde].classList.add("hidden")
-        inde++
+    while (inde < allParas.length) {
+        if (allParas[inde] !== undefined) {
+            console.log(allParas[inde])
+        }
+        inde++;
     }
     const temp = templateNum;
     useEffect(() => {
+        
         let filename = "";
         let array = [];
         if (temp === 1) {
-            console.log(templateComponents.template1Components)
+            // console.log(templateComponents.template1Components)
             array = [...templateComponents.template1Components.filter((item) => item.pageName.toUpperCase() === String(templatePage.toUpperCase())).map((item) => item.pageSections.map((items) => items))[0]]
             setUpdateChildren(array)
             if (templatePage === "Home") {
@@ -254,7 +263,7 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
             setCurTemplate("Template 1");
         }
         else if (temp === 2) {
-            console.log(templateComponents.template2Components)
+            // console.log(templateComponents.template2Components)
             array = [...templateComponents.template2Components.filter((item) => item.pageName.toUpperCase() === String(templatePage.toUpperCase())).map((item) => item.pageSections.map((items) => items))[0]]
             setUpdateChildren(array)
             if (templatePage === "Home") {
