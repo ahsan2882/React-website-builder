@@ -155,7 +155,7 @@
   padding: 30px;
   color: black;
   border: 0;
-  border-bottom: 2px solid  #000000;
+  border-bottom: 2px solid #000000;
   font-size: 18px;
   margin-left: 30px;
 }
@@ -165,7 +165,7 @@
 }
 
 .btnb {
-  background-color:#000000;
+  background-color: #000000;
   color: var(--clr-light);
   text-decoration: none;
   padding: 10px 20px;
@@ -186,7 +186,7 @@
   position: absolute;
   height: 100%;
   width: 55%;
-  background:#c0272d;
+  background: #c0272d;
   top: 0;
   left: 0;
   border-radius: 5px;
@@ -240,7 +240,7 @@ input:focus {
 }
 
 .SpanColor {
-  color:#c0272d;
+  color: #c0272d;
 }
 
 .spanDesc {
@@ -277,9 +277,26 @@ input:focus {
   .box1 {
     width: 100%;
   }
-  .form-post{
+.input-container{
+  flex-direction: column;
+}
+  .form-post {
     text-align: center;
   }
+}
+.input-containerM{
+  display: flex;
+  width: 100%;
+  margin-top: 0;
+  color: black;
+  flex-direction: column;
+}
+.box1M {
+  width: 100%;
+}
+
+.form-postM {
+  text-align: center;
 }
 
 @media (max-width: 700px) {
@@ -299,4 +316,16 @@ input:focus {
     padding-right: 0px;
     padding-top: 50px;
   }
+}
+.box2M{
+   padding-right: 0px;
+   padding-top: 50px;
+}
+.section-formM {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column !important;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }

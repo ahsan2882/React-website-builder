@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 
-export default function Faq3Asset() {
+export default function Faq3Asset(displayDevice) {
     const editorRef = useRef(null);
     return (
         <>
             <div className="dark bg-indigo-900 py-20 px-4">
-                <div className="mx-auto max-w-6xl flex flex-col md:flex-row ">
-                    <h2 className="mr-8 w-full md:w-1/3  text-3xl font-extrabold leading-9 text-white">
+                <div className={displayDevice ? "mx-auto max-w-6xl flex flex-col md:flex-row " : "mx-auto max-w-6xl flex flex-col"}>
+                    <h2 className={displayDevice ? "mr-8 w-full md:w-1/3  text-3xl font-extrabold leading-9 text-white" : "mr-8 w-full   text-3xl font-extrabold leading-9 text-white"}>
                         <Editor
                             onInit={(evt, editor) => (editorRef.current = editor)}
                             inline={true}
@@ -31,7 +31,7 @@ export default function Faq3Asset() {
                             }}
                         />
                     </h2>
-                    <dl className="w-full md:w-2/3">
+                    <dl className={displayDevice ? "w-full md:w-2/3": "w-full"}>
                         <dt className="mb-4">
                             <h3 className="text-xl font-semibold text-white">
                                 <Editor

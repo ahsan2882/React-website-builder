@@ -22,6 +22,9 @@
   .feed-content p {
     font-size: 15px;
   }
+  .feed-contentM p {
+    font-size: 15px;
+  }
   
   .feedImg {
     width: 253vw;
@@ -144,6 +147,11 @@
     
     
   }
+  .feed-containM{
+    padding: 100px 30px;
+    display: flex;
+    flex-direction: column;
+  }
   @media (max-width: 700px) {
     .feed-contain {
       flex-direction: column !important;
@@ -155,4 +163,10 @@
       flex-direction: column;
       align-items: flex-start;
     }
+  }
+  .feed-contentM{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }

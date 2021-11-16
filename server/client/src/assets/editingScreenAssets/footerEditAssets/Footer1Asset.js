@@ -2,16 +2,33 @@ import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 // import logo from '../footerEditAssets/logo.png'
 
-export default function Footer1Asset() {
+export default function Footer1Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
             <footer className="text-gray-400 bg-blue-500 body-font">
-                <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-                    <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-                        <button className="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                <div className={displayDevice? `container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col` : `container px-5 py-24 mx-auto flex flex-wrap flex-col`}>
+                    <div className={displayDevice ?"w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left" : "w-64 flex-shrink-0  mx-auto text-center"}>
+                        <button className={displayDevice? "flex title-font font-medium items-center md:justify-start justify-center text-white" : "flex title-font font-medium items-center  justify-center text-white"}>
 
-                            <img src="https://i.ibb.co/Xyt25vh/thefnflogo.png" alt="client 1" />
+                        <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='AccreIm1'
+                        initialValue={`<img src="https://i.ibb.co/Xyt25vh/thefnflogo.png" alt="client 1" class="w-52 h-16 object-cover"/>`}
+                        init={{
+                            images_upload_handler: function (blobInfo, success, failure) {
+                                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                            },
+                            images_upload_url: '/upload-images',
+                            forced_root_block: "",
+                            menubar: false,
+                            plugins: [
+                                "image"
+                            ],
+                            toolbar: 'image'
+                        }}
+                    />
 
 
                         </button>
@@ -39,8 +56,8 @@ export default function Footer1Asset() {
                             />
                         </p>
                     </div>
-                    <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <div className={displayDevice? "flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center" : "flex-grow flex flex-wrap  -mb-10  mt-10  text-center"}>
+                        <div className={displayDevice ? "lg:w-1/4 md:w-1/2 w-full px-4" : " w-full px-4"}>
                             <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
@@ -143,7 +160,7 @@ export default function Footer1Asset() {
 
                             </nav>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <div className={displayDevice? "lg:w-1/4 md:w-1/2 w-full px-4" : " w-full px-4"}>
                             <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
@@ -247,7 +264,7 @@ export default function Footer1Asset() {
 
                             </nav>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <div className={displayDevice? "lg:w-1/4 md:w-1/2 w-full px-4" : "w-full px-4"}>
                             {/* <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3"></h2> */}
                             <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">
                                 <Editor
@@ -353,7 +370,7 @@ export default function Footer1Asset() {
                                 </li>
                             </nav>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <div className={displayDevice? "lg:w-1/4 md:w-1/2 w-full px-4" : " w-full px-4"}>
                             {/* OUR PROGRAMS */}
                             <h2 className="title-font font-medium text-green-200 tracking-widest text-sm mb-3">
                                 <Editor
@@ -462,8 +479,8 @@ export default function Footer1Asset() {
                     </div>
                 </div>
                 <div className="bg-blue-900 bg-opacity-75">
-                    <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                        <p className="text-gray-400 text-sm text-center sm:text-left">
+                    <div className={displayDevice ? "container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row" : "container mx-auto py-4 px-5 flex flex-wrap flex-col"}>
+                        <p className={displayDevice ? "text-gray-400 text-sm text-center sm:text-left" : "text-gray-400 text-sm text-center"}>
                             {/* © 2021 Security Guard — */}
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
@@ -487,7 +504,7 @@ export default function Footer1Asset() {
                                 }}
                             />
                         </p>
-                        <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                        <span className={displayDevice ? "inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start" : "inline-flex   mt-2 justify-center "}>
                             <button className="text-gray-400">
                                 <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
                                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>

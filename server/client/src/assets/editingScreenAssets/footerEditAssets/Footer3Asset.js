@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
-export default function Footer3Asset() {
+export default function Footer3Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
-            <footer class="bg-pink-900  pt-4 pb-8 xl:pt-8">
-                <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 text-gray-400 dark:text-gray-300">
+            <footer class={displayDevice ? "bg-pink-900  pt-4 pb-8 xl:pt-8" : "bg-pink-900  pt-4 pb-8"}>
+                <div class={displayDevice ? "max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 text-gray-400 dark:text-gray-300" : "max-w-screen-lg  mx-auto px-4  text-gray-400 dark:text-gray-300"}>
                     <ul class="text-lg font-light pb-8 flex flex-wrap justify-center">
-                        <li class="w-1/2 md:w-1/3 lg:w-1/3">
+                        <li class={displayDevice ? "w-1/2 md:w-1/3 lg:w-1/3" : "w-1/2"}>
                             <div class="text-center">
 
                                 <ul>
@@ -70,7 +70,7 @@ export default function Footer3Asset() {
                                 </ul>
                             </div>
                         </li>
-                        <li class="w-1/2 md:w-1/3 lg:w-1/3">
+                        <li class={displayDevice ? "w-1/2 md:w-1/3 lg:w-1/3" : "w-1/2"}>
                             <div class="text-center">
 
                                 <ul>
@@ -129,7 +129,7 @@ export default function Footer3Asset() {
                                 </ul>
                             </div>
                         </li>
-                        <li class="w-1/2 md:w-1/3 lg:w-1/3">
+                        <li class={displayDevice ? "w-1/2 md:w-1/3 lg:w-1/3" : "w-1/2"}>
                             <div class="text-center">
 
                                 <ul>
@@ -223,7 +223,7 @@ export default function Footer3Asset() {
                             </svg>
                         </button>
                     </div>
-                    <div class="text-center text-gray-900 hover:text-gray-500  pt-10 sm:pt-12 font-light flex items-center justify-center">
+                    <div class={displayDevice ? "text-center text-gray-900 hover:text-gray-500  pt-10 sm:pt-12 font-light flex items-center justify-center" : "text-center text-gray-900 hover:text-gray-500  pt-10  font-light flex items-center justify-center"}>
                         <Editor
                             onInit={(evt, editor) => (editorRef.current = editor)}
                             inline={true}

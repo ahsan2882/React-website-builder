@@ -176,7 +176,8 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
 
             <div className={`flex justify-between items-center py-6 ${HeaderEditCss['max-w-7xl']} ${HeaderEditCss.maxHeadH} mx-auto px-16 bg-black fixed z-50 w-full top-0`}>
                 <div className="w-96 ml-4">
-                    <div className="list">
+                    <div className="flex justify-around items-center">
+                        <div><Link to="/select-template" rel='noopener noreferrer' className="bg-BL-600 w-12 h-12 flex justify-center items-center rounded-md"><i className="fas fa-home text-white text-xl"></i></Link></div>
                         <div style={{ width: `110px`, cursor: `pointer` }} onClick={onClicked}> {isClicked ? <h2 style={{ background: `red`, padding: `12px 30px`, borderRadius: `5px`, color: "white", fontWeight: "700" }}> Close </h2> : <h2 style={{ padding: `12px 30px`, borderRadius: `5px`, color: `white`, fontWeight: "700", background: `rgb(60,172,254)` }}> Pages </h2>} </div>
                         <div className={`${HeaderEditCss.pagebar}`} style={isClicked ? { left: `0`, display: "block" } : { left: `-100%`, display: "none" }}>
                             <div className="flex flex-col mt-12 h-full w-full">

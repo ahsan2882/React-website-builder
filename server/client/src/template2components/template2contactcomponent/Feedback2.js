@@ -2,14 +2,14 @@ import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import FeedbackCss from './Feedback.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Feedback2({ showPopup, overSection }) {
+export default function Feedback2({ showPopup, overSection, displayDevice }) {
   const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef(null);
   return (
     <>
       <section className={FeedbackCss.feedback} style={{ background: currentBackground }}>
 
-        <div className={FeedbackCss['feed-contain']}>
+        <div className={displayDevice ? FeedbackCss['feed-contain'] : FeedbackCss['feed-containM']}>
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}
             inline={true}
@@ -28,7 +28,7 @@ export default function Feedback2({ showPopup, overSection }) {
               toolbar: 'image'
             }}
           />
-          <div className={FeedbackCss['feed-content']}>
+          <div className={displayDevice ? FeedbackCss['feed-content'] : FeedbackCss['feed-contentM']}>
             <div className={FeedbackCss.MainHeading}>
               <Editor
 

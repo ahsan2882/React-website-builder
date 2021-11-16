@@ -1,7 +1,7 @@
 import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
 
-export default function Contact1Asset() {
+export default function Contact1Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
@@ -9,7 +9,7 @@ export default function Contact1Asset() {
                 <div className="container px-5 py-24 mx-auto bg-blue-900 mt-9">
                     <div className="flex flex-col text-center w-full mb-12">
                         {/* <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-100">Contact Us</h1> */}
-                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-100">
+                        <h1 className={displayDevice? "sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-100": " text-2xl font-medium title-font mb-4 text-gray-100"}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -29,8 +29,8 @@ export default function Contact1Asset() {
                                 }}
                             />
                         </h1>
-                        {/* <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-100">Security is not a product, it is a process..</p> */}
-                        <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-100">
+                 
+                       
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -49,9 +49,9 @@ export default function Contact1Asset() {
 
                                 }}
                             />
-                        </p>
+                      
                     </div>
-                    <div className="lg:w-1/2 md:w-2/3 mx-auto">
+                    <div className={displayDevice? "lg:w-1/2 md:w-2/3 mx-auto": " mx-auto"}>
                         <div className="flex flex-wrap -m-2">
                             <div className="p-2 w-1/2">
                                 <div className="relative">
@@ -72,7 +72,31 @@ export default function Contact1Asset() {
                                 </div>
                             </div>
                             <div className="p-2 w-full">
-                                <button className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">SUBMIT</button>
+                                <button className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+                                <Editor
+                                            onInit={(evt, editor) => (editorRef.current = editor)}
+                                            inline={true}
+                                            key="Contact1asset3"
+                                            initialValue="SUBMIT"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | link | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect | lineheight',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Roboto=roboto, sans-serif, serif; Mohave=mohave, sans-serif, serif;Open Sans=open sans, sans-serif, serif;Lato=lato, sans-serif, serif; Red Hat Mono=red hat mono, sans-serif, serif; Montserrat=montserrat, sans-serif, serif; Roboto Condensed=roboto condensed, sans-serif, serif; Source Sans Pro= source sans pro, sans-serif, serif; Dongle=dongle, sans-serif, serif; Poppins=poppins, sans-serif, serif; Oswald=oswald, sans-serif, serif; Roboto Mono=roboto mono, sans-serif, serif; Raleway=raleway, sans-serif, serif; Ubuntu=ubuntu, sans-serif, serif; Merriweather=merriweather, sans-serif, serif",
+
+                                            }}
+                                        />
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    </button>
                             </div>
                             <div className="p-2 w-full pt-8 mt-8 border-t border-gray-100 text-center">
                                 {/* <button className="text-blue-100">critrixconsultancy@gmail.com</button> */}
@@ -96,8 +120,7 @@ export default function Contact1Asset() {
                                         }}
                                     />
                                 </button>
-                                {/* <p className="leading-normal my-5 text-white">4010 Feeney Way Saint Cloud, MN 56301</p> */}
-                                {/* <p className="leading-normal my-5 text-white"> */}
+           
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
                                     inline={true}

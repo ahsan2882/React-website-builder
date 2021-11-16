@@ -1,14 +1,14 @@
 import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
 
-export default function Faq1Asset() {
+export default function Faq1Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
             <section className="text-grey-700  ">
                 <div className="container px-6 py-24  mx-auto bg-teal-500 bg-black mt-9 ">
                     <div className="text-center mb-20">
-                        <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-50 mb-4">
+                        <h1 className={displayDevice? "sm:text-3xl text-2xl font-medium text-center title-font text-gray-50 mb-4" : " text-2xl font-medium text-center title-font text-gray-50 mb-4"}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -31,7 +31,7 @@ export default function Faq1Asset() {
                                 }}
                             />
                         </h1>
-                        <p className="text-base text-gray-50 leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+                        <p className={displayDevice ? "text-base text-gray-50 leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto" : "text-base text-gray-50 leading-relaxed mx-auto"}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -56,8 +56,8 @@ export default function Faq1Asset() {
                             />
                         </p>
                     </div>
-                    <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-                        <div className="w-full lg:w-1/2 px-4 py-2">
+                    <div className={displayDevice? "flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2" : "flex flex-wrap   -mx-2"}>
+                        <div className={displayDevice ? "w-full lg:w-1/2 px-4 py-2" : "w-full  px-4 py-2"}>
                             <details className="mb-4">
                                 <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
                                     <Editor
@@ -212,7 +212,7 @@ export default function Faq1Asset() {
                                 </span>
                             </details>
                         </div>
-                        <div className="w-full lg:w-1/2 px-4 py-2">
+                        <div className={displayDevice ? "w-full lg:w-1/2 px-4 py-2" : "w-full  px-4 py-2"}>
                             <details className="mb-4">
                                 <summary className="font-semibold  bg-gray-200 rounded-md py-2 px-4">
                                     <Editor

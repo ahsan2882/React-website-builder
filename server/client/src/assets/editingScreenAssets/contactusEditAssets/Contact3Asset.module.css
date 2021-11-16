@@ -41,7 +41,7 @@
   }
   .form-wrap {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
   }
   .c-info p {
     font-size: 15px;
@@ -153,4 +153,3 @@
   .container-main {
     padding: 33px 167px !important;
   }
-  

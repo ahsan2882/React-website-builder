@@ -2,14 +2,14 @@ import React, { useRef, useState } from 'react'
 import { GithubPicker } from 'react-color';
 import Form2Css from './Form2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
-export default function Form2({ showPopup, overSection }) {
+export default function Form2({ showPopup, overSection, displayDevice }) {
   const [currentBackground, setCurrentBackground] = useState("white");
   const editorRef = useRef(null);
   return (
     <>
       <section>
-        <div className={Form2Css['section-form']} style={{ background: currentBackground }}>
-          <div className={Form2Css['box2']}>
+        <div className={displayDevice ? Form2Css['section-form'] : Form2Css['section-formM']} style={{ background: currentBackground }}>
+          <div className={displayDevice ? Form2Css['box2'] : Form2Css['box2M']}>
             <div className={Form2Css['addresses']}>
             <h1 className="flex items-center"><lord-icon src="https://cdn.lordicon.com/burmxlrn.json" trigger="loop" colors="primary:#121331,secondary:#c0272d"
                 style={{ "width": "80px", "height": "80px" }}>
@@ -251,7 +251,7 @@ export default function Form2({ showPopup, overSection }) {
               />
             </div>
           </div>
-          <div className={Form2Css['box1']}>
+          <div className={displayDevice ? Form2Css['box1'] : Form2Css['box1M']}>
             <section className={Form2Css['head-main']}>
               <div className={Form2Css['MainHeading']}>
                 <Editor
@@ -303,21 +303,19 @@ export default function Form2({ showPopup, overSection }) {
             </section>
 
             <form action="Contact.html">
-              <div className={Form2Css['input-container']}>
+              <div className={displayDevice ? Form2Css['input-container'] : Form2Css['input-containerM']}>
                 <input className={Form2Css['input-field']} type="text" placeholder="Full Name*" name="Name" required />
                 <input className={Form2Css['input-field']} type="text" placeholder="Company Name*" name="Company Name" required />
               </div>
-              <div className={Form2Css['input-container']}>
-              </div>
-              <div className={Form2Css['input-container']}>
+              <div className={displayDevice ? Form2Css['input-container'] : Form2Css['input-containerM']}>
                 <input className={Form2Css['input-field']} type="email" placeholder="Email*" name="email" required />
                 <input className={Form2Css['input-field']} type="text" placeholder="Number" name="number" />
               </div>
-              <div className={Form2Css['input-container']}>
+              <div className={displayDevice ? Form2Css['input-container'] : Form2Css['input-containerM']}>
                 <textarea className={Form2Css['input-field']} type="text" placeholder="Your Message for Enquiry*" name="message"></textarea>
 
               </div>
-              <div className={Form2Css['form-post']}>
+              <div className={displayDevice ? Form2Css['form-post'] : Form2Css['form-postM']}>
                 <button className={Form2Css.btnb} href="#">
                   <Editor
                     onInit={(evt, editor) => editorRef.current = editor}

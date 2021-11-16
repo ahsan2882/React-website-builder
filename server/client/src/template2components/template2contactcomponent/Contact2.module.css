@@ -23,12 +23,12 @@
     }
   }
 
-.head-img-text{
+.head-img-textM{
   position: absolute;
   top: 50%;
   left: 15%;
   z-index: 100;
 }
 .head-img-textM h1 {
-  font-size: 4vw;
+  font-size: 35px;
 }

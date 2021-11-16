@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import Testimonial1AssetCss from './Testimonial1Asset.module.css'
 // import Image1 from './person.png'
 
-export default function Testimonial1Asset() {
+export default function Testimonial1Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
@@ -32,9 +32,28 @@ export default function Testimonial1Asset() {
                         }}
                     />
                     <div className="flex flex-wrap -m-4">
-                        <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                        <div className={displayDevice? "lg:w-1/3 lg:mb-0 mb-6 p-4" : " mb-6 p-4"}>
                             <div className={`h-full text-center ${Testimonial1AssetCss.clientRemark}`}>
-                                <img className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10" src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" />
+                               
+                                <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='AccreIm1'
+                        initialValue={` <img class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10" src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" />`}
+                        init={{
+                            images_upload_handler: function (blobInfo, success, failure) {
+                                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                            },
+                            images_upload_url: '/upload-images',
+                            forced_root_block: "",
+                            menubar: false,
+                            plugins: [
+                                "image"
+                            ],
+                            toolbar: 'image'
+                        }}
+                    />
+                                
                                 {/* <p className="leading-relaxed"> When I saw how these guys prepare themselves to any operation, I realized that it was it! I must hire them! I was scared. Now I am feeling safe because there is always the strongmen team with me and my folks.</p> */}
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
@@ -83,9 +102,28 @@ export default function Testimonial1Asset() {
 
                             </div>
                         </div>
-                        <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                        <div className={displayDevice? "lg:w-1/3 lg:mb-0 mb-6 p-4" : " mb-6 p-4"}>
                             <div className={`h-full text-center ${Testimonial1AssetCss.clientRemark}`}>
-                                <img className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10" src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" />
+                                
+                            <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='AccreIm1'
+                        initialValue={`<img class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10" src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" />`}
+                        init={{
+                            images_upload_handler: function (blobInfo, success, failure) {
+                                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                            },
+                            images_upload_url: '/upload-images',
+                            forced_root_block: "",
+                            menubar: false,
+                            plugins: [
+                                "image"
+                            ],
+                            toolbar: 'image'
+                        }}
+                    />
+                               
                                 {/* <p className="leading-relaxed"> When I saw how these guys prepare themselves to any operation, I realized that it was it! I must hire them! I was scared. Now I am feeling safe because there is always the strongmen team with me and my folks.</p> */}
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
@@ -134,9 +172,27 @@ export default function Testimonial1Asset() {
 
                             </div>
                         </div>
-                        <div className="lg:w-1/3 lg:mb-0 p-4">
+                        <div className={displayDevice? "lg:w-1/3 lg:mb-0 mb-6 p-4" : " mb-6 p-4"}>
                             <div className={`h-full text-center ${Testimonial1AssetCss.clientRemark}`}>
-                                <img className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10" src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" />
+                            <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='AccreIm1'
+                        initialValue={`<img class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10" src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" />`}
+                        init={{
+                            images_upload_handler: function (blobInfo, success, failure) {
+                                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                            },
+                            images_upload_url: '/upload-images',
+                            forced_root_block: "",
+                            menubar: false,
+                            plugins: [
+                                "image"
+                            ],
+                            toolbar: 'image'
+                        }}
+                    />
+                              
                                 {/* <p className="leading-relaxed"> When I saw how these guys prepare themselves to any operation, I realized that it was it! I must hire them! I was scared. Now I am feeling safe because there is always the strongmen team with me and my folks.</p> */}
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import Contact3AssetCss from './Contact3Asset.module.css'
-export default function Contact3Asset() {
+export default function Contact3Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>

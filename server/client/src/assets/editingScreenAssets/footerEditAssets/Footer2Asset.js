@@ -2,17 +2,34 @@ import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
 // import logo from '../footerEditAssets/logo.png'
 
-export default function Footer2Asset() {
+export default function Footer2Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
             <footer className="text-gray-400 bg-gray-900 body-font">
                 <div className="container px-5 py-24 mx-auto">
-                    <div className="flex flex-wrap md:text-left text-center order-first">
-                        <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-                            <button className="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                    <div className={displayDevice? "flex flex-wrap md:text-left text-center order-first" : "flex flex-wrap text-center order-first"}>
+                        <div className={displayDevice? "w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left" : "w-64 flex-shrink-0  mx-auto text-center"}>
+                            <button className={displayDevice? "flex title-font font-medium items-center md:justify-start justify-center text-white" : "flex title-font font-medium items-center  justify-center text-white"}>
 
-                                <img src="https://i.ibb.co/Xyt25vh/thefnflogo.png" alt="client 1" />
+                            <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='AccreIm1'
+                        initialValue={`<img src="https://i.ibb.co/Xyt25vh/thefnflogo.png" alt="client 1" class="w-52 h-16 object-cover"/>`}
+                        init={{
+                            images_upload_handler: function (blobInfo, success, failure) {
+                                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                            },
+                            images_upload_url: '/upload-images',
+                            forced_root_block: "",
+                            menubar: false,
+                            plugins: [
+                                "image"
+                            ],
+                            toolbar: 'image'
+                        }}
+                    />
 
 
                             </button>
@@ -41,7 +58,7 @@ export default function Footer2Asset() {
                                 />
                             </p>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <div className={displayDevice? "lg:w-1/4 md:w-1/2 w-full px-4" : " w-full px-4"}>
                             {/* SERVICES */}
                             <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
                                 <Editor
@@ -148,7 +165,7 @@ export default function Footer2Asset() {
 
                             </nav>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <div className={displayDevice?"lg:w-1/4 md:w-1/2 w-full px-4": " w-full px-4"}>
                             <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
                                 {/* INFORMATION */}
                                 <Editor
@@ -255,7 +272,7 @@ export default function Footer2Asset() {
 
                             </nav>
                         </div>
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <div className={displayDevice ? "lg:w-1/4 md:w-1/2 w-full px-4" : " w-full px-4"}>
                             <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
                                 {/* SUBSCRIBE */}
                                 <Editor
@@ -280,8 +297,8 @@ export default function Footer2Asset() {
                                     }}
                                 />
                             </h2>
-                            <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
-                                <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                            <div className={displayDevice ? "flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start" : "flex    flex-wrap justify-center items-end "}>
+                                <div className={displayDevice ? "relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2" : "relative w-40 mr-2"}>
                                     <label for="footer-field" className="leading-7 text-sm text-gray-400">
                                         {/* Placeholder */}
                                         <Editor
@@ -308,9 +325,35 @@ export default function Footer2Asset() {
                                     </label>
                                     <input type="text" id="footer-field" name="footer-field" className="w-full bg-gray-800 rounded border bg-opacity-40 border-gray-700 focus:bg-transparent focus:ring-2 focus:ring-blue-900 focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                 </div>
-                                <button className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">Button</button>
+                                <button className={displayDevice ? "lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded" : " flex-shrink-0 inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded"}>
+                                    
+                                <Editor
+                                            onInit={(evt, editor) => (editorRef.current = editor)}
+                                            inline={true}
+                                            key="footer2asset10"
+                                            tinymceScriptSrc={
+                                                process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
+                                            }
+                                            initialValue="Button"
+                                            init={{
+                                                plugins: [
+                                                    "link"
+                                                ],
+                                                forced_root_block: "",
+                                                menubar: false,
+                                                toolbar: 'bold italic underline | fontsizeselect | backcolor forecolor | alignleft aligncenter ' +
+                                                    'alignright alignjustify | fontselect | lineheight',
+                                                fontsize_formats: "8px 9px 10px 11px 12px 14px 16px 18px 20px 24px 30px 36px 48px 60px 72px 96px",
+                                                font_formats: "Roboto=roboto, sans-serif, serif; Mohave=mohave, sans-serif, serif;Open Sans=open sans, sans-serif, serif;Lato=lato, sans-serif, serif; Red Hat Mono=red hat mono, sans-serif, serif; Montserrat=montserrat, sans-serif, serif; Roboto Condensed=roboto condensed, sans-serif, serif; Source Sans Pro= source sans pro, sans-serif, serif; Dongle=dongle, sans-serif, serif; Poppins=poppins, sans-serif, serif; Oswald=oswald, sans-serif, serif; Roboto Mono=roboto mono, sans-serif, serif; Raleway=raleway, sans-serif, serif; Ubuntu=ubuntu, sans-serif, serif; Merriweather=merriweather, sans-serif, serif",
+
+                                            }}
+                                        />   
+                                    
+                                    
+                                    
+                                    </button>
                             </div>
-                            <p className="text-gray-500 text-sm mt-2 md:text-left text-center">
+                            <p className={displayDevice? "text-gray-500 text-sm mt-2 md:text-left text-center" : "text-gray-500 text-sm mt-2 text-center"}>
                                 {/* Bitters chicharrones fanny pack */}
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
@@ -333,7 +376,7 @@ export default function Footer2Asset() {
 
                                     }}
                                 />
-                                <br className="lg:block hidden" />
+                                <br className={displayDevice ? "lg:block hidden" : " hidden"} />
                                 {/* waistcoat green juice */}
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
@@ -361,13 +404,13 @@ export default function Footer2Asset() {
                     </div>
                 </div>
                 <div className="bg-gray-800 bg-opacity-75">
-                    <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
-                        <button className="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                    <div className={displayDevice? "container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col" : "container px-5 py-6 mx-auto flex items-center  flex-col"}>
+                        <button className={displayDevice? "flex title-font font-medium items-center md:justify-start justify-center text-white" : "flex title-font font-medium items-center  justify-center text-white"}>
 
 
                         </button>
                         {/* © 2021 Security Guard */}
-                        <p className="text-sm text-gray-400 sm:ml-6 sm:mt-0 mt-4">
+                        <p className={displayDevice? "text-sm text-gray-400 sm:ml-6 sm:mt-0 mt-4" : "text-sm text-gray-400  mt-4"}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -390,7 +433,7 @@ export default function Footer2Asset() {
                                 }}
                             />
                         </p>
-                        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                        <span className={displayDevice ? "inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start" : "inline-flex   mt-4 justify-center "}>
                             <button className="text-gray-400">
                                 <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
                                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>

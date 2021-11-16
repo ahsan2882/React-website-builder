@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
-export default function Footer4Asset() {
+export default function Footer4Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
@@ -145,11 +145,11 @@ export default function Footer4Asset() {
                         </button>
                     </div>
                     <div className="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
-                        <form className="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center">
-                            <div className=" relative ">
+                        <div className={displayDevice ? "flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center" : "flex flex-col w-3/4  max-w-sm  space-y-3  justify-center"}>
+                            <div className="relative ">
                                 <input type="text" id="&quot;form-subscribe-Subscribe" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email" />
                             </div>
-                            <button className="flex-shrink-0 px-4 py-2 text-base font-semibold text-white bg-ind-600 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="submit">
+                            <button className="flex-shrink-0 px-4 py-2 text-base font-semibold text-white bg-ind-600 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200">
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
                                     inline={true}
@@ -172,9 +172,9 @@ export default function Footer4Asset() {
                                     }}
                                 />
                             </button>
-                        </form>
+                        </div>
                     </div>
-                    <div className="text-center text-gray-100 dark:text-gray-200 pt-10 sm:pt-12 font-light flex items-center justify-center">
+                    <div className={displayDevice ? "text-center text-gray-100 dark:text-gray-200 pt-10 sm:pt-12 font-light flex items-center justify-center" : "text-center text-gray-100 dark:text-gray-200 pt-10  font-light flex items-center justify-center"}>
                         <Editor
                             onInit={(evt, editor) => (editorRef.current = editor)}
                             inline={true}

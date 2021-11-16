@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 // import Image1 from './person.png'
-export default function Testimonial2Asset() {
+export default function Testimonial2Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
-            <section class="text-gray-50 bg-UB-400 ">
-                <div class="container p-3 ">
-                    <h1 class="text-3xl font-medium title-font text-gray-50 mb-12 text-center ">
+            <section className="text-gray-50 bg-UB-400 ">
+                <div className="container p-3 ">
+                    <h1 className="text-3xl font-medium title-font text-gray-50 mb-12 text-center ">
                         <Editor
                             onInit={(evt, editor) => (editorRef.current = editor)}
                             inline={true}
@@ -32,9 +32,31 @@ export default function Testimonial2Asset() {
                     </h1>
                 </div>
 
-                <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center ">
-                    <img class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" />
-                    <p class="leading-relaxed py-50">
+                <div className={displayDevice? "xl:w-1/2 lg:w-3/4 w-full mx-auto text-center" : " w-full mx-auto text-center"}>
+                <Editor
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        inline={true}
+                        key='AccreIm1'
+                        initialValue={` <img class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block  bg-gray-100" src="https://i.ibb.co/NFSFjvt/testimonials-1.png" alt="testimonials-1" />
+
+                        `}
+                        init={{
+                            images_upload_handler: function (blobInfo, success, failure) {
+                                success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+                            },
+                            images_upload_url: '/upload-images',
+                            forced_root_block: "",
+                            menubar: false,
+                            plugins: [
+                                "image"
+                            ],
+                            toolbar: 'image'
+                        }}
+                    />
+
+
+
+                    <p className="leading-relaxed py-50">
                         <Editor
                             onInit={(evt, editor) => (editorRef.current = editor)}
                             inline={true}
@@ -59,7 +81,7 @@ export default function Testimonial2Asset() {
                         />
                     </p>
 
-                    <h2 class="text-gray-50 font-medium title-font tracking-wider text-sm mt-5">
+                    <h2 className="text-gray-50 font-medium title-font tracking-wider text-sm mt-5">
                         <Editor
                             onInit={(evt, editor) => (editorRef.current = editor)}
                             inline={true}
@@ -82,7 +104,7 @@ export default function Testimonial2Asset() {
                             }}
                         />
                     </h2>
-                    <p class="text-gray-50">
+                    <p className="text-gray-50">
                         <Editor
                             onInit={(evt, editor) => (editorRef.current = editor)}
                             inline={true}

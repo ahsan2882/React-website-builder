@@ -5,7 +5,7 @@ import { useDrop } from 'react-dnd'
 import { ItemTypes } from '../utils/items'
 import { assetObject } from './assetCode'
 import all from '../myComponents/AllTemplates';
-import fs from 'fs'
+// import fs from 'fs'
 // import {templateComponents} from '../myComponents/AllTemplates';
 
 export default function ContainerEdit({ nav1Service, setNav1Services, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateNum, setFileName, setLinksfunc, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
@@ -348,17 +348,30 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
     }
     const moveUp = (indexC) => {
         let newArray = [...updateChildren];
-        let currentCom = newArray[indexC];
-        newArray[indexC] = newArray[indexC - 1];
-        newArray[indexC - 1] = currentCom;
-        setUpdateChildren([...newArray])
+        if (indexC === 0) {
+            setUpdateChildren([...newArray])
+        }
+        else {
+            let currentCom = newArray[indexC];
+            newArray[indexC] = newArray[indexC - 1];
+            newArray[indexC - 1] = currentCom;
+            setUpdateChildren([...newArray])
+        }
+        
     }
     const moveDown = (indexC) => {
         let newArray = [...updateChildren];
-        let currentCom = newArray[indexC];
-        newArray[indexC] = newArray[indexC + 1];
-        newArray[indexC + 1] = currentCom;
-        setUpdateChildren([...newArray])
+        if (indexC === (updateChildren.length - 1)) {
+            setUpdateChildren([...newArray])
+        }
+        else {
+            let currentCom = newArray[indexC];
+            newArray[indexC] = newArray[indexC + 1];
+            newArray[indexC + 1] = currentCom;
+            setUpdateChildren([...newArray])
+        }
+        
+        
     }
     const removeComponent = (indexC) => {
         let newArray = [...updateChildren];

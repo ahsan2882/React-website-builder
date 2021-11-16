@@ -1,14 +1,13 @@
 import React, { useRef } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 
-export default function Faq4Asset() {
+export default function Faq4Asset(displayDevice) {
     const editorRef = useRef(null);
     return (
         <>
             <div className="pt-16">
                 <div className="container mx-auto pt-16 bg-blue-500 dark-indigo-700">
-                    <div className="text-center pb-3 md:pb-10 xl:pb-20">
-                        <p className="text--900 text-white text-base lg:text-lg uppercase leading-tight mb-4">
+                    <div className={displayDevice ? "text-center pb-3 md:pb-10 xl:pb-20" : "text-center pb-3"}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -16,7 +15,7 @@ export default function Faq4Asset() {
                                 tinymceScriptSrc={
                                     process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                                 }
-                                initialValue="start with the basics"
+                                initialValue={displayDevice ? `<p class="text--900 text-white text-base lg:text-lg uppercase leading-tight mb-4"> start with the basic </p>` : `<p class="text--900 text-white text-base  uppercase leading-tight mb-4"> start with the basic </p>` }
                                 init={{
                                     plugins: [
                                         "link"
@@ -30,8 +29,8 @@ export default function Faq4Asset() {
 
                                 }}
                             />
-                        </p>
-                        <h1 className="px-2 xl:px-0 xl:text-5xl md:text-3xl text-2xl font-extrabold text-white">
+                    
+                        <h1 className={displayDevice ? "px-2 xl:px-0 xl:text-5xl md:text-3xl text-2xl font-extrabold text-white" : "px-2  text-2xl font-extrabold text-white"}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -100,7 +99,7 @@ export default function Faq4Asset() {
                                         </div>
                                     </button>
                                 </div>
-                                <p className="pt-2 md:pt-3 lg:pt-5 text-gray-100 bg-blue-500 text-sm md:text-base xl:text-lg rounded-b-lg">
+ 
                                     <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
@@ -108,7 +107,7 @@ export default function Faq4Asset() {
                                         tinymceScriptSrc={
                                             process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                                         }
-                                        initialValue="Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised."
+                                        initialValue={`<p class="pt-2 md:pt-3 lg:pt-5 text-gray-100 bg-blue-500 text-sm md:text-base xl:text-lg rounded-b-lg"> Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised. </p>`}
                                         init={{
                                             plugins: [
                                                 "link"
@@ -122,11 +121,11 @@ export default function Faq4Asset() {
 
                                         }}
                                     />
-                                </p>
+                              
                             </li>
                             <li className="py-6 border-gray-900 border-solid border-b">
                                 <div className="flex justify-between items-center">
-                                    <h2 className="text-white text-base md:text-xl xl:text-2xl w-10/12 font-semibold">
+                                    <h2 className={displayDevice ? "text-white text-base md:text-xl xl:text-2xl w-10/12 font-semibold" : "text-white text-base   w-10/12 font-semibold"}>
                                         <Editor
                                             onInit={(evt, editor) => (editorRef.current = editor)}
                                             inline={true}
@@ -167,7 +166,7 @@ export default function Faq4Asset() {
                                         </div>
                                     </button>
                                 </div>
-                                <p className="hidden pt-2 md:pt-3 lg:pt-5 text-gray-100 bg-blue-500 text-sm md:text-base xl:text-lg rounded-b-lg">
+                             
                                     <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
@@ -175,7 +174,7 @@ export default function Faq4Asset() {
                                         tinymceScriptSrc={
                                             process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                                         }
-                                        initialValue="Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised."
+                                        initialValue={` <p class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-100 bg-blue-500 text-sm md:text-base xl:text-lg rounded-b-lg"> Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised.</p> `}
                                         init={{
                                             plugins: [
                                                 "link"
@@ -189,7 +188,7 @@ export default function Faq4Asset() {
 
                                         }}
                                     />
-                                </p>
+                             
                             </li>
                             <li className="py-6 border-gray-900 border-solid border-b">
                                 <div className="flex justify-between items-center">
@@ -234,7 +233,7 @@ export default function Faq4Asset() {
                                         </div>
                                     </button>
                                 </div>
-                                <p className="pt-2 md:pt-3 lg:pt-5 text-gray-100 bg-blue-500 text-sm md:text-base xl:text-lg rounded-b-lg">
+                    
                                     <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
@@ -242,7 +241,7 @@ export default function Faq4Asset() {
                                         tinymceScriptSrc={
                                             process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                                         }
-                                        initialValue="Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised."
+                                        initialValue={`<p class="pt-2 md:pt-3 lg:pt-5 text-gray-100 bg-blue-500 text-sm md:text-base xl:text-lg rounded-b-lg">Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised.</p>`}
                                         init={{
                                             plugins: [
                                                 "link"
@@ -256,7 +255,7 @@ export default function Faq4Asset() {
 
                                         }}
                                     />
-                                </p>
+                            
                             </li>
                             <li className="py-6 border-gray-900 border-solid border-b">
                                 <div className="flex justify-between items-center">
@@ -301,7 +300,7 @@ export default function Faq4Asset() {
                                         </div>
                                     </button>
                                 </div>
-                                <p className="hidden pt-2 md:pt-3 lg:pt-5 text-gray-100 bg-blue-500 text-sm md:text-base xl:text-lg rounded-b-lg">
+                          
                                     <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
@@ -309,7 +308,7 @@ export default function Faq4Asset() {
                                         tinymceScriptSrc={
                                             process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                                         }
-                                        initialValue="Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised."
+                                        initialValue={` <p class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-100 bg-blue-500 text-sm md:text-base xl:text-lg rounded-b-lg"> Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised.</p> `}
                                         init={{
                                             plugins: [
                                                 "link"
@@ -323,11 +322,11 @@ export default function Faq4Asset() {
 
                                         }}
                                     />
-                                </p>
+                            
                             </li>
                             <li className="py-6 ">
                                 <div className="flex justify-between items-center">
-                                    <h2 className="text-white text-base md:text-xl xl:text-2xl w-10/12 font-semibold">
+                                    <h2 className={displayDevice ? "text-white text-base md:text-xl xl:text-2xl w-10/12 font-semibold" : "text-white text-base   w-10/12 font-semibold"}>
                                         <Editor
                                             onInit={(evt, editor) => (editorRef.current = editor)}
                                             inline={true}
@@ -368,7 +367,7 @@ export default function Faq4Asset() {
                                         </div>
                                     </button>
                                 </div>
-                                <p className="hidden pt-2 md:pt-3 lg:pt-5 text-gray-100 bg-blue-500 text-sm md:text-base xl:text-lg rounded-b-lg">
+                          
                                     <Editor
                                         onInit={(evt, editor) => (editorRef.current = editor)}
                                         inline={true}
@@ -376,7 +375,7 @@ export default function Faq4Asset() {
                                         tinymceScriptSrc={
                                             process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                                         }
-                                        initialValue="Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised."
+                                        initialValue={` <p class="hidden pt-2 md:pt-3 lg:pt-5 text-gray-100 bg-blue-500 text-sm md:text-base xl:text-lg rounded-b-lg"> Find the latest events updates or create events, concerts, conferences, workshops, exhibitions, and cultural events in all cities of the US. The aim of Eventistan is to promote healthy and entertaining event. Greatest appreciation to you and your team for the outstanding job you did for us. The website is just what we wanted, and we were thrilled with the speed your team exercised.</p> `}
                                         init={{
                                             plugins: [
                                                 "link"
@@ -390,7 +389,7 @@ export default function Faq4Asset() {
 
                                         }}
                                     />
-                                </p>
+                            
                             </li>
                         </ul>
                     </div>

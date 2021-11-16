@@ -2,9 +2,28 @@ import React, { useRef, useState } from 'react'
 import Footer3Css from './Footer3.module.css'
 import { GithubPicker } from 'react-color';
 import { Editor } from '@tinymce/tinymce-react';
-export default function Footer3({ showPopup, overSection }) {
+export default function Footer3({displayDevice, linksfunc, showPopup, overSection }) {
     const [currentBackground, setCurrentBackground] = useState("black");
-
+    const [value1, setLink1Value] = useState("")
+    const [value2, setLink2Value] = useState("")
+    const [value3, setLink3Value] = useState("")
+    const [value4, setLink4Value] = useState("")
+    const [editL1, seteditL1] = useState(false)
+    const [editL2, seteditL2] = useState(false)
+    const [editL3, seteditL3] = useState(false)
+    const [editL4, seteditL4] = useState(false)
+    const editLink1 = () => {
+        seteditL1(true);
+    }
+    const editLink2 = () => {
+        seteditL2(true);
+    }
+    const editLink3 = () => {
+        seteditL3(true);
+    }
+    const editLink4 = () => {
+        seteditL4(true);
+    }
     const editorRef = useRef(null);
     return (
 
@@ -315,10 +334,21 @@ export default function Footer3({ showPopup, overSection }) {
                                     />
                                 </p>
                                 <div>
-                                    <i style={{ margin: `17px 5px`, fontSize: "2rem" }} className="fab fa-facebook i "></i>
-                                    <i style={{ margin: `17px 5px`, fontSize: "2rem" }} className="fab fa-twitter-square i "></i>
-                                    <i style={{ margin: `17px 5px`, fontSize: "2rem" }} className="fab fa-pinterest i "></i>
-                                    <i style={{ margin: `17px 5px`, fontSize: "2rem" }} className="fab fa-linkedin i"></i>
+                                    <div style={{ fontSize: `3rem`, display: `flex` }}>
+                                        {/* <i style={{ marginLeft: `0.75rem` }} className="fab fa-facebook i"></i> */}
+                                        {linksfunc ? <a href={value1} target="_blank" rel="noreferrer"><i style={{ marginLeft: `0.75rem` }} className="fab fa-facebook i"></i></a> : <div><button onClick={() => editLink1()}><i style={{ marginLeft: `0.75rem` }} className="fab fa-facebook i"></i></button></div>}
+                                        {linksfunc ? <a href={value2} target="_blank" rel="noreferrer"><i style={{ marginLeft: `0.75rem` }} className="fab fa-pinterest i"></i></a> : <div><button onClick={() => editLink2()}><i style={{ marginLeft: `0.75rem` }} className="fab fa-pinterest i"></i></button></div>}
+                                        {linksfunc ? <a href={value3} target="_blank" rel="noreferrer"><i style={{ marginLeft: `0.75rem` }} className="fab fa-linkedin i"></i></a> : <div><button onClick={() => editLink3()}><i style={{ marginLeft: `0.75rem` }} className="fab fa-linkedin i"></i></button></div>}
+                                        {linksfunc ? <a href={value4} target="_blank" rel="noreferrer"><i style={{ marginLeft: `0.75rem` }} className="fab fa-twitter i"></i></a> : <div><button onClick={() => editLink4()}><i style={{ marginLeft: `0.75rem` }} className="fab fa-twitter i"></i></button></div>}
+
+
+
+
+                                    </div>
+                                    <div className={editL1 ? "flex items-center w-28 text-xl toBeRemoved" : "hidden"}><input className="text-black" type="text" placeholder="Enter link for icon" onChange={(e) => setLink1Value(e.target.value)} /><button className="px-3 bg-white text-black" onClick={() => seteditL1(false)}>SAVE</button></div>
+                                    <div className={editL2 ? "flex items-center w-28 text-xl toBeRemoved" : "hidden"}><input className="text-black" type="text" placeholder="Enter link for icon" onChange={(e) => setLink2Value(e.target.value)} /><button className="px-3 bg-white text-black" onClick={() => seteditL2(false)}>SAVE</button></div>
+                                    <div className={editL3 ? "flex items-center w-28 text-xl toBeRemoved" : "hidden"}><input className="text-black" type="text" placeholder="Enter link for icon" onChange={(e) => setLink3Value(e.target.value)} /><button className="px-3 bg-white text-black" onClick={() => seteditL3(false)}>SAVE</button></div>
+                                    <div className={editL4 ? "flex items-center w-28 text-xl toBeRemoved" : "hidden"}><input className="text-black" type="text" placeholder="Enter link for icon" onChange={(e) => setLink4Value(e.target.value)} /><button className="px-3 bg-white text-black" onClick={() => seteditL4(false)}>SAVE</button></div>
                                 </div>
                             </div>
                         </div>

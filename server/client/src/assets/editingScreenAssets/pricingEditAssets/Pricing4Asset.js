@@ -1,14 +1,14 @@
 import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
 
-export default function Pricing4Asset() {
+export default function Pricing4Asset(displayDevice) {
     const editorRef = useRef(null);
     return (
         <>
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-20">
-                        <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
+                        <h1 className={displayDevice ? "sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900" : " text-3xl font-medium title-font mb-2 text-gray-900"}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -31,7 +31,7 @@ export default function Pricing4Asset() {
                                 }}
                             />
                         </h1>
-                        <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
+                     
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -39,7 +39,7 @@ export default function Pricing4Asset() {
                                 tinymceScriptSrc={
                                     process.env.PUBLIC_URL + "/tinymce/tinymce.min.js"
                                 }
-                                initialValue="Our prices can let you secure your business or life with no large expenses."
+                                initialValue={` <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500"> Our prices can let you secure your business or life with no large expenses.</p> `}
                                 init={{
                                     plugins: [
                                         "link"
@@ -53,10 +53,10 @@ export default function Pricing4Asset() {
 
                                 }}
                             />
-                        </p>
+                
 
                     </div>
-                    <div className="lg:w-2/3 w-full mx-auto overflow-auto">
+                    <div className={displayDevice ? "lg:w-2/3 w-full mx-auto overflow-auto" : " w-full mx-auto overflow-auto"}>
                         <table className="table-auto w-full text-left whitespace-no-wrap">
                             <thead>
                                 <tr>
@@ -575,7 +575,7 @@ export default function Pricing4Asset() {
                             </tbody>
                         </table>
                     </div>
-                    <div className="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+                    <div className={displayDevice ? "flex pl-4 mt-4 lg:w-2/3 w-full mx-auto" : "flex pl-4 mt-4  w-full mx-auto"}>
 
                         <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                             <Editor
