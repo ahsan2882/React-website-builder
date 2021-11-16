@@ -88,7 +88,7 @@ export const Header1 = ({ showPopup, overSection, displayDevice, linksfunc, setN
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
               key='About5'
-              initialValue={` <img src="https://i.ibb.co/yNDDf8B/bghero.png" alt="bghero" class="${Header1Css.dil}" />`}
+              initialValue={displayDevice ? ` <img src="https://i.ibb.co/yNDDf8B/bghero.png" alt="bghero" class="${Header1Css.dil}" />` : ` <img src="https://i.ibb.co/yNDDf8B/bghero.png" alt="bghero" class="${Header1Css.dilM}" />`}
               init={{
                 forced_root_block: "",
                 menubar: false,
