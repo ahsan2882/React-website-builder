@@ -1,7 +1,7 @@
 import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
 
-export default function Service1Asset() {
+export default function Service1Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
@@ -9,7 +9,7 @@ export default function Service1Asset() {
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-20">
 
-                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
+                        <h1 className={displayDevice ? "sm:text-3xl text-2xl font-medium title-font mb-4 text-white" : "text-2xl font-medium title-font mb-4 text-white"}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -32,7 +32,7 @@ export default function Service1Asset() {
                                 }}
                             />
                         </h1>
-                        <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+                        <p className={displayDevice ?"lg:w-2/3 mx-auto leading-relaxed text-base" : " mx-auto leading-relaxed text-base"}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -57,7 +57,7 @@ export default function Service1Asset() {
                         </p>
                     </div>
                     <div className="flex flex-wrap">
-                        <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                        <div className={displayDevice ?"xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800": " px-8 py-6 border-l-2 border-gray-800"}>
                             <h2 className="text-lg sm:text-xl text-white font-medium title-font mb-2">
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
@@ -131,7 +131,7 @@ export default function Service1Asset() {
                                 </svg>
                             </button>
                         </div>
-                        <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                        <div className={displayDevice ?"xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800": "px-8 py-6 border-l-2 border-gray-800"}>
                             <h2 className="text-lg sm:text-xl text-white font-medium title-font mb-2">
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
@@ -205,7 +205,7 @@ export default function Service1Asset() {
                                 </svg>
                             </button>
                         </div>
-                        <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                        <div className={displayDevice ? "px-8 py-6 border-l-2 border-gray-800": "px-8 py-6 border-l-2 border-gray-800"}>
                             <h2 className="text-lg sm:text-xl text-white font-medium title-font mb-2">
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}
@@ -279,7 +279,7 @@ export default function Service1Asset() {
                                 </svg>
                             </button>
                         </div>
-                        <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                        <div className={displayDevice ? "xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-800" : "px-8 py-6 border-l-2 border-gray-800"}>
                             <h2 className="text-lg sm:text-xl text-white font-medium title-font mb-2">
                                 <Editor
                                     onInit={(evt, editor) => (editorRef.current = editor)}

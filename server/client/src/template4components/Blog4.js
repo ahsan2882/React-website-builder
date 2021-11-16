@@ -103,7 +103,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 inline={true}
                                 key='blog4ed4'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="readMoreDots" id="blog4ParaDots1">...</span><span id="blog4ParaText1" class="readMoreText">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>`}
+                                initialValue={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>`}
                                 init={{
                                     plugins: [
                                         "link"
@@ -117,14 +117,6 @@ export default function Blog4({ showPopup, overSection }) {
 
                                 }}
                             />
-                            <button id="blog4readbtn1" className="text-white inline" onClick={() => {
-                                let dots = document.getElementById("blog4ParaDots1")
-                                dots.style.display = "none"
-                                let read = document.getElementById("blog4ParaText1")
-                                read.style.display = "initial"
-                                let btn = document.getElementById("blog4readbtn1")
-                                btn.style.display = "none"
-                            }}>Read More</button>
                             <div className={`${Blog4Css.btnPost} flex justify-center items-center py-5 px-4 mt-4`}>
                                 {/* <ButtonText className={`${Blog4Css.postBtn} py-3 px-6 border-0 w-full hover:text-black hover:bg-white`} text="Read More" /> */}
 
@@ -196,7 +188,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 inline={true}
                                 key='blog4ed7'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="readMoreDots" id="blog4ParaDots2">...</span><span id="blog4ParaText2" class="readMoreText">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>`}
+                                initialValue={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,
@@ -286,7 +278,7 @@ export default function Blog4({ showPopup, overSection }) {
                                 inline={true}
                                 key='blog4ed10'
                                 tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
-                                initialValue={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="readMoreDots" id="blog4ParaDots3">...</span><span id="blog4ParaText3" class="readMoreText">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>`}
+                                initialValue={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>`}
                                 init={{
                                     forced_root_block: "",
                                     menubar: false,

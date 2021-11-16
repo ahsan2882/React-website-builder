@@ -1,7 +1,7 @@
 import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
 
-export default function Service4Asset() {
+export default function Service4Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
@@ -31,7 +31,7 @@ export default function Service4Asset() {
                                 }}
                             />
                         </h2>
-                        <h1 className="sm:text-3xl text-2xl font-medium title-font text-white">
+                        <h1 className={displayDevice ? "sm:text-3xl text-2xl font-medium title-font text-white" : " text-2xl font-medium title-font text-white"}>
                             <Editor
                                 onInit={(evt, editor) => (editorRef.current = editor)}
                                 inline={true}
@@ -56,7 +56,7 @@ export default function Service4Asset() {
                         </h1>
                     </div>
                     <div className="flex flex-wrap -m-4">
-                        <div className="p-4 md:w-1/3">
+                        <div className={displayDevice ? "p-4 md:w-1/3":"p-4 "}>
                             <div className="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col">
                                 <div className="flex items-center mb-3">
 
@@ -137,7 +137,7 @@ export default function Service4Asset() {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-4 md:w-1/3">
+                        <div className={displayDevice ? "p-4 md:w-1/3":"p-4"}>
                             <div className="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col">
                                 <div className="flex items-center mb-3">
 
@@ -218,7 +218,7 @@ export default function Service4Asset() {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-4 md:w-1/3">
+                        <div className={displayDevice ? "p-4 md:w-1/3":"p-4"}>
                             <div className="flex rounded-lg h-full bg-gray-800 bg-opacity-60 p-8 flex-col">
                                 <div className="flex items-center mb-3">
 

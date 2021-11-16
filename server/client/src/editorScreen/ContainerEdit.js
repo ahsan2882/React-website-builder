@@ -236,17 +236,20 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
     //     readMores[inde].classList.add("hidden")
     //     inde++
     // }
-    let allParas = document.getElementsByTagName("p");
-    let inde = 0;
-    while (inde < allParas.length) {
-        if (allParas[inde] !== undefined) {
-            console.log(allParas[inde])
-        }
-        inde++;
-    }
+    
     const temp = templateNum;
     useEffect(() => {
-        
+        let allParas = document.getElementsByTagName("p");
+        let inde = 0;
+        while (inde < allParas.length) {
+            if (allParas[inde] !== undefined) {
+                // console.log(allParas[inde].innerHTML)
+                if (allParas[inde].innerHTML.length > 100) {
+                    console.log(allParas[inde].innerHTML)
+                }
+            }
+            inde++;
+        }
         let filename = "";
         let array = [];
         if (temp === 1) {

@@ -11,15 +11,13 @@ export default function Nav3Asset() {
 
           </a> */}
           <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-evenly">
-            <a href={2} class="mr-5 hover:text-white  p-3 bg-red-800 rounded-md text-white font-semibold tracking-wide">Home</a>
-            <a href={2} class="mr-5 hover:text-white hover:bg-red-800 p-3 rounded-md transition text-red-800 font-semibold">Abou us</a>
-            <a href={2} class="mr-5 hover:text-white hover:bg-red-800 p-3 rounded-md transition font-semibold text-red-800">Contact us</a>
-            <a href={2} class="mr-5 hover:text-white hover:bg-red-800 p-3 rounded-md transition font-semibold text-red-800">visit</a>
+            <a href={2} class="mr-5 hover:text-white  p-3 bg-red-800 rounded-md text-white font-semibold tracking-wide">HOME</a>
+            <a href={2} class="mr-5 hover:text-white hover:bg-red-800 p-3 rounded-md transition text-red-800 font-semibold">ABOUT US</a>
+            <a href={2} class="mr-5 hover:text-white hover:bg-red-800 p-3 rounded-md transition font-semibold text-red-800">SERVICES</a>
+            <a href={2} class="mr-5 hover:text-white hover:bg-red-800 p-3 rounded-md transition font-semibold text-red-800">CONTACT US</a>
+
           </nav>
-          <a href={2}>
-            <input class=" bg-red-100 p-2 rounded-md" type="search" /> <i class="fas fa-search text-red-800"></i>
-            Search
-          </a>
+
         </div>
       </header>
     </>

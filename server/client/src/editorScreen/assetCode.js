@@ -38,12 +38,6 @@ import Pricing3Asset from '../assets/editingScreenAssets/pricingEditAssets/Prici
 import Pricing4Asset from '../assets/editingScreenAssets/pricingEditAssets/Pricing4Asset';
 import Pricing5Asset from '../assets/editingScreenAssets/pricingEditAssets/Pricing5Asset';
 
-import Slider1Asset from '../assets/editingScreenAssets/sliderEditAssets/Slider1Asset';
-import Slider2Asset from '../assets/editingScreenAssets/sliderEditAssets/Slider2Asset';
-import Slider3Asset from '../assets/editingScreenAssets/sliderEditAssets/Slider3Asset';
-import Slider4Asset from '../assets/editingScreenAssets/sliderEditAssets/Slider4Asset';
-import Slider5Asset from '../assets/editingScreenAssets/sliderEditAssets/Slider5Asset';
-
 import Social1Asset from '../assets/editingScreenAssets/socialEditAssets/Social1Asset';
 import Social2Asset from '../assets/editingScreenAssets/socialEditAssets/Social2Asset';
 import Social3Asset from '../assets/editingScreenAssets/socialEditAssets/Social3Asset';
@@ -91,11 +85,6 @@ export const assetObject = {
     'social1': Social1Asset,
     'social2': Social2Asset,
     'social3': Social3Asset,
-    'slider1': Slider1Asset,
-    'slider2': Slider2Asset,
-    'slider3': Slider3Asset,
-    'slider4': Slider4Asset,
-    'slider5': Slider5Asset,
     'pricing1': Pricing1Asset,
     'pricing2': Pricing2Asset,
     'pricing3': Pricing3Asset,
