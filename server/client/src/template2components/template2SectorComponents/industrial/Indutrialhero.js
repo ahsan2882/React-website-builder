@@ -4,13 +4,14 @@ import IndustrialheromoduleCss from './Industrialhero.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
-export const Industrialhero = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) => {
+export const Industrialhero = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateComponents, setTempComp }) => {
     const editorRef = useRef(null);
 
     return (
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
-                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
+                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} setTempComp={setTempComp}
+                    templateComponents={templateComponents}/>
             <section className={displayDevice ? IndustrialheromoduleCss['header-img-serv'] : IndustrialheromoduleCss['header-img-servM']}>
                 
                 <div className={displayDevice ? `${IndustrialheromoduleCss['head-img-text']}` : `${IndustrialheromoduleCss['head-img-textM']}`}>

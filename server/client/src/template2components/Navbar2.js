@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import Navbar2moduleCss from './Navbar2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
+import { newService2Comp, newSector2Comp } from '../myComponents/AllTemplates';
 
 export const Navbar2 = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateComponents, setTempComp  }) => {
     const editorRef = useRef();
@@ -23,12 +24,12 @@ export const Navbar2 = ({ displayDevice, linksfunc, nav2Service, setNav2Services
     }
     const addService = () => {
         let newArray = [...nav2Service];
-        newArray.push("NEW PAGE");
+        newArray.push("NEW SERVICE");
         setNav2Services([...newArray])
         let obj = {
             groupName: "services",
-            pageName: "NEW PAGE",
-            pageSections: [newService1Comp.Staticsecurity, newService1Comp.Footer1]
+            pageName: "NEW SERVICE",
+            pageSections: [newService2Comp.Staticsecuritybanner, newService2Comp.StaticsecurityDescription, newService2Comp.Footer2]
         }
         let mainobj = templateComponents;
         mainobj.template2Components.push(obj)
@@ -49,16 +50,51 @@ export const Navbar2 = ({ displayDevice, linksfunc, nav2Service, setNav2Services
         setNav2Sector([...newArray])
     }
     const addSector = () => {
-        let rand = Math.floor(0 + Math.random() * 4);
         let newArray = [...nav2Sector];
-        newArray.push(navSectorArray[rand]);
+        newArray.push("NEW SECTOR");
         setNav2Sector([...newArray])
+        let obj = {
+            groupName: "sectors",
+            pageName: "NEW SECTOR",
+            pageSections: [newSector2Comp.ConstHero, newSector2Comp.Construction, newSector2Comp.Footer2]
+        }
+        let mainobj = templateComponents;
+        mainobj.template2Components.push(obj)
+        setTempComp(mainobj)
     }
     // const addService = () => {
     //     let newArray = [...navServices];
     //     newArray.push(navServiceArray[0]);
     //     setNavServices([...newArray])
     // }
+    const linkactivate = (item) => {
+        return (
+            <>
+                {linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")} > {item}</a> : <>{item}</>}
+            </>
+        )
+    }
+    const changeServNav = (index, value, oldValue) => {
+        let newArray = [...nav2Service];
+        newArray.splice(index, 1, value);
+        setNav2Services([...newArray])
+        let mainobj = templateComponents;
+        // mainobj.template2Components.filter((item) => item.pageName.toUpperCase() === oldValue.toUpperCase())[0].pageName = value;
+        mainobj.template2Components.filter((item) => item.groupName === "services").filter((item) => item.pageName.toUpperCase() === oldValue.toUpperCase())[0].pageName = value;
+        console.log(mainobj.template2Components)
+        setTempComp(mainobj)
+        setEditMenuServ({ index: -5, setValue: false })
+    }
+    const changeSectNav = (index, value, oldValue) => {
+        let newArray = [...nav2Sector];
+        newArray.splice(index, 1, value);
+        setNav2Sector([...newArray])
+        let mainobj = templateComponents;
+        mainobj.template2Components.filter((item) => item.groupName === "sectors").filter((item) => item.pageName.toUpperCase() === oldValue.toUpperCase())[0].pageName = value;
+        console.log(mainobj.template2Components)
+        setTempComp(mainobj)
+        setEditMenuSect({ index: -5, setValue: false })
+    }
     return (
         <>
             <header className="absolute top-0 left-0 z-10 w-full h-20 font-bold">
@@ -77,13 +113,41 @@ export const Navbar2 = ({ displayDevice, linksfunc, nav2Service, setNav2Services
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>{linksfunc ? <a href="about.html">ABOUT</a> : <>ABOUT</>}</li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SECTORS
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        {navSector.map((items, indexs) => <li className="flex justify-between items-center">{linksfunc ? <a href={items.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{items}</a> : <>{items}</>}<button className="toBeRemoved" onClick={() => removeSector(indexs)}><i className="ml-4 fas fa-trash-alt"></i></button></li>)}
+                                        {/* {navSector.map((items, indexs) => <li className="flex justify-between items-center">{linksfunc ? <a href={items.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{items}</a> : <>{items}</>}<button className="toBeRemoved" onClick={() => removeSector(indexs)}><i className="ml-4 fas fa-trash-alt"></i></button></li>)}
+                                        <li className={`flex mt-8 mx-4 mb-0 justify-between toBeRemoved`}><button onClick={() => addSector()}><i className="fas fa-plus"></i> ADD NEW SECTOR</button></li> */}
+                                        {navSector.map((item, index) => <li className="flex justify-between items-center">{(editMenuSect.index === index && editMenuSect.setValue)
+                                            ? <>
+                                                <input type="text" placeholder="Enter new name for page" onChange={(e) => setmenuValueSect(e.target.value)} />
+                                                <button className="px-4 py-1 bg-BL-600 text-white" onClick={() => (menuValueSect !== "") ? changeSectNav(index, menuValueSect, item) : changeSectNav(index, item, item)}>SAVE</button>
+                                            </>
+                                            : linkactivate(item)}
+
+                                            <div className={(editMenuSect.index === index && editMenuSect.setValue) ? "hidden toBeRemoved" : "toBeRemoved flex items-center"}>
+                                                <button className="toBeRemoved mr-3" onClick={() => setEditMenuSect({ index: index, setValue: true })}><i className="fas fa-pen"></i></button>
+                                                <button className="toBeRemoved" onClick={() => removeSector(index)}><i className="fas fa-trash-alt"></i></button>
+                                            </div>
+
+                                        </li>)}
                                         <li className={`flex mt-8 mx-4 mb-0 justify-between toBeRemoved`}><button onClick={() => addSector()}><i className="fas fa-plus"></i> ADD NEW SECTOR</button></li>
                                     </ul>
                                 </li>
                                 <li className={`${Navbar2moduleCss.menu} px-4 py-4`}>SERVICES
                                     <ul className={`${Navbar2moduleCss.subMenu} hidden text-black bg-white absolute top-16 font-normal`}>
-                                        {navServices.map((item, index) => <li className="flex justify-between items-center">{linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{item}</a> : <>{item}</>}<button className="toBeRemoved" onClick={() => removeService(index)}><i className="ml-4 fas fa-trash-alt"></i></button></li>)}
+                                        {/* {navServices.map((item, index) => <li className="flex justify-between items-center">{linksfunc ? <a href={item.toLowerCase().replace(" &", "").replace(" ", "-").concat(".html")}>{item}</a> : <>{item}</>}<button className="toBeRemoved" onClick={() => removeService(index)}><i className="ml-4 fas fa-trash-alt"></i></button></li>)}
+                                        <li className={`flex mt-8 mx-4 mb-0 justify-between toBeRemoved`}><button onClick={() => addService()}><i className="fas fa-plus"></i> ADD NEW SERVICE</button></li> */}
+                                        {navServices.map((item, index) => <li className="flex justify-between items-center">{(editMenuServ.index === index && editMenuServ.setValue)
+                                            ? <>
+                                                <input type="text" placeholder="Enter new name for page" onChange={(e) => setmenuValueServ(e.target.value)} />
+                                                <button className="px-4 py-1 bg-BL-600 text-white" onClick={() => menuValueServ !== "" ? changeServNav(index, menuValueServ, item) : changeServNav(index, item, item)}>SAVE</button>
+                                            </>
+                                            : linkactivate(item)}
+
+                                            <div className={(editMenuServ.index === index && editMenuServ.setValue) ? "hidden toBeRemoved" : "toBeRemoved flex items-center"}>
+                                                <button className="toBeRemoved mr-3" onClick={() => setEditMenuServ({ index: index, setValue: true })}><i className="fas fa-pen"></i></button>
+                                                <button className="toBeRemoved" onClick={() => removeService(index)}><i className="fas fa-trash-alt"></i></button>
+                                            </div>
+
+                                        </li>)}
                                         <li className={`flex mt-8 mx-4 mb-0 justify-between toBeRemoved`}><button onClick={() => addService()}><i className="fas fa-plus"></i> ADD NEW SERVICE</button></li>
                                     </ul>
                                 </li>

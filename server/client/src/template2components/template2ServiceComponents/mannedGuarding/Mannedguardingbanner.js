@@ -4,12 +4,13 @@ import MannedBannerCss from './Mannedguardingbanner.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
-export default function Mannedguardingbanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) {
+export default function Mannedguardingbanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateComponents, setTempComp }) {
     const editorRef = useRef(null);
     return (
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
-                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
+                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} setTempComp={setTempComp}
+                    templateComponents={templateComponents}/>
             <section className={displayDevice ? MannedBannerCss['header-img-serv'] : MannedBannerCss['header-img-servM']}>
 
                 <div className={displayDevice ? MannedBannerCss['head-img-text'] : MannedBannerCss['head-img-textM']}>

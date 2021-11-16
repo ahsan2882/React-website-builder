@@ -4,13 +4,14 @@ import { Editor } from '@tinymce/tinymce-react';
 // import img from './retail-banner.jpg'
 import { Navbar2 } from '../../Navbar2';
 
-export const Retailhero = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) => {
+export const Retailhero = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateComponents, setTempComp }) => {
     const editorRef = useRef(null);
 
     return (
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
-                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
+                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} setTempComp={setTempComp}
+                    templateComponents={templateComponents}/>
             <section className={displayDevice ? RetailheromoduleCss['header-img-serv'] : RetailheromoduleCss['header-img-servM']}>
                 
                 <div className={displayDevice ? `${RetailheromoduleCss['head-img-text']}` : `${RetailheromoduleCss['head-img-textM']}`}>

@@ -254,7 +254,9 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
             setCurTemplate("Template 1");
         }
         else if (temp === 2) {
-            setUpdateChildren(templateComponents.template2Components.filter((item) => item.pageName.toUpperCase() === String(templatePage.toUpperCase())).map((item) => item.pageSections.map((items) => items))[0])
+            console.log(templateComponents.template2Components)
+            array = [...templateComponents.template2Components.filter((item) => item.pageName.toUpperCase() === String(templatePage.toUpperCase())).map((item) => item.pageSections.map((items) => items))[0]]
+            setUpdateChildren(array)
             if (templatePage === "Home") {
                 setfilename("index.html")
             }

@@ -4,12 +4,13 @@ import { Editor } from '@tinymce/tinymce-react';
 import TechnologyproductbannerCss from './Technologyproductbanner.module.css'
 import { Navbar2 } from '../../Navbar2';
 // import Img1 from '../../../assets/template2images/technoproduct.jpg'
-export default function Technologyproductbanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) {
+export default function Technologyproductbanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateComponents, setTempComp }) {
   const editorRef = useRef(null);
   return (
     <>
       <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
-        nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
+        nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} setTempComp={setTempComp}
+                    templateComponents={templateComponents}/>
       <section className={displayDevice ? TechnologyproductbannerCss['header-img-serv'] : TechnologyproductbannerCss['header-img-servM']}>
 
         <div className={displayDevice ? TechnologyproductbannerCss['head-img-text'] : TechnologyproductbannerCss['head-img-textM']}>

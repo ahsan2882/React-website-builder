@@ -129,6 +129,12 @@ export const newService1Comp = {
     Staticsecurity, Footer1
 };
 
+export const newService2Comp = {
+    Staticsecuritybanner, StaticsecurityDescription, Footer2
+}
+export const newSector2Comp = {
+    ConstHero, Construction, Footer2
+}
 
 
 // export const templateComponents = {

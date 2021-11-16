@@ -6,7 +6,8 @@
     "server": "node ./bin/www",
     "client":"cd client && npm start",
     "start": "node app.js",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "server-update":"git add . && git commit -am \"client code updated\" && git push heroku main"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

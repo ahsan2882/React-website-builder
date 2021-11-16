@@ -4,12 +4,13 @@ import MobilepatrollingCss from './Mobilepatrollingbanner.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
 
-export default function Mobilepatrollingbanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) {
+export default function Mobilepatrollingbanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateComponents, setTempComp }) {
     const editorRef = useRef(null);
     return (
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
-                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
+                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} setTempComp={setTempComp}
+                    templateComponents={templateComponents}/>
             <section className={displayDevice ? MobilepatrollingCss['header-img-serv'] : MobilepatrollingCss['header-img-servM']}>
 
                 <div className={displayDevice ? MobilepatrollingCss['head-img-text'] : MobilepatrollingCss['head-img-textM']}>

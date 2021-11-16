@@ -4,43 +4,312 @@
 /* =                                         = */
 /* =========================================== */
 
-  /* =========================================== */
+/* =========================================== */
 /* =                                         = */
 /* =           Header Section Closed          = */
 /* =                                         = */
 /* =========================================== */
-  /* -- hero cover --- */
-  /* =========================================== */
+/* -- hero cover --- */
+/* =========================================== */
 /* =                                         = */
 /* =            Section 01 Start          = */
 /* =                                         = */
 /* =========================================== */
+.section {
+  right: 0;
+  width: 100%;
+  height: 800px;
+  padding-top: 2em;
+  padding-bottom: 5em;
+  margin-top: 2em;
+}
+
+.sectionM {
+  right: 0;
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 5em;
+  margin-top: 2em;
+}
+
+
+.section .section-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 100%;
+  width: 100%;
+}
+
+.sectionM .section-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  max-width: 100%;
+  width: 100%;
+}
+
+.left {
+  flex: 1;
+  padding-left: 100px;
+  padding-top: 80px;
+}
+
+.leftM {
+  flex: 1;
+  padding-left: 20px;
+  padding-top: 30px;
+  width: 90%;
+}
+
+.right {
+  flex: 1;
+}
+
+.right::after {
+  content: "";
+  transform: scale(1);
+  animation: pulse-black 2s infinite;
+  top: 60%;
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  background-image: url("https://i.ibb.co/3hXyGV2/floating-image-12.png");
+  right: 28%;
+  background-repeat: no-repeat;
+}
+
+.rightM::after {
+  content: "";
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-animation: pulse-black 2s infinite;
+  animation: pulse-black 2s infinite;
+  background-size: contain;
+  top: 37%;
+  position: absolute;
+  width: 263px;
+  height: 25%;
+  background-image: url(https://i.ibb.co/3hXyGV2/floating-image-12.png);
+  right: 36%;
+  background-repeat: no-repeat;
+}
+
+.dilM {
+  width: 45rem;
+  height: 20rem;
+}
+
+.right::before {
+  content: "";
+  background: url("https://i.ibb.co/k9WftQd/floating-image-09.png");
+  background-repeat: no-repeat;
+  background-position: 95% 8.2714px;
+  width: 685px;
+  height: 100%;
+  position: absolute;
+  transform: scale(1);
+  animation: pulse-black 2s infinite;
+  top: 20%;
+  right: 0;
+}
+
+.rightM::before {
+  content: "";
+  background: url(https://i.ibb.co/k9WftQd/floating-image-09.png);
+  background-repeat: no-repeat;
+  background-position: 95% 8.2714px;
+  background-size: contain;
+  width: 412px;
+  height: 40%;
+  position: absolute;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-animation: pulse-black 2s infinite;
+  animation: pulse-black 2s infinite;
+  top: 3%;
+  right: -46px;
+}
+
+.dil {
+  width: 45rem;
+  height: 35rem;
+}
+
+.headlineContent1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+
+.headlineContent {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #00d4ff;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+
+.button-group {
+  margin: 16px 8px;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  background-color: #00d4ff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.button-group .button {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+}
+
+.button-group:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  transform: translateY(-1px);
+}
+
+.headline-para>p {
+  font-size: 1.2rem;
+
+  font-weight: 400;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+@keyframes pulse-black {
+  0% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: #00d4ff;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+
+.btna {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  z-index: 1;
+}
+
+.btna:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  background-color: #00d4ff;
+  content: "";
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.btna:hover:before {
+  left: 0;
+}
+
+/* =========================================== */
+/* =                                         = */
+/* =            Section 01 Closed          = */
+/* =                                         = */
+/* =========================================== */
+.headlineContentM {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #00d4ff;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+
+.headlineContent1M {
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+
+/* .rightM {
+  display: none;
+} */
+@media screen and (max-width:700px) {
+  .headlineContent {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #00d4ff;
+    margin-bottom: 50px;
+    line-height: 1.5;
+  }
+
+  .headlineContent1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 50px;
+    line-height: 1.5;
+  }
+
+  .dil {
+    width: 45rem;
+    height: 20rem;
+  }
+
+  .right::after {
+    background-size: contain;
+    top: 30%;
+    width: 263px;
+    height: 25%;
+    right: 47%;
+  }
+
+  .right::before {
+    background-size: contain;
+    width: 412px;
+    height: 40%;
+    top: 3%;
+    right: -46px;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .section {
-    right: 0;
-    width: 100%;
-    height: 800px;
-    padding-top: 2em;
-    padding-bottom: 5em;
+    height: auto;
     margin-top: 2em;
   }
-  .sectionM {
-    right: 0;
-    width: 100%;
-    padding-top: 2em;
-    padding-bottom: 5em;
-    margin-top: 2em;
-  }
-  
-  
-  .section .section-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
-    max-width: 100%;
-    width: 100%;
-  }
-  .sectionM .section-details {
+
+  .section-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,244 +317,12 @@
     max-width: 100%;
     width: 100%;
   }
-  
+
   .left {
-    flex: 1;
-    padding-left: 100px;
-    padding-top: 80px;
-  }
-  .leftM {
     flex: 1;
     padding-left: 20px;
     padding-top: 30px;
+    margin-top: 50px;
     width: 90%;
-  }
-  
-.right {
-    flex: 1;
-  }
-  .right::after {
-    content: "";
-    transform: scale(1);
-    animation: pulse-black 2s infinite;
-    top: 60%;
-    position: absolute;
-    width: 300px;
-    height: 100%;
-    background-image: url("https://i.ibb.co/3hXyGV2/floating-image-12.png");
-  right: 28%;
-    background-repeat: no-repeat;
-  }
-  .rightM::after {
-    content: "";
-    transform: scale(1);
-    animation: pulse-black 2s infinite;
-    top: 60%;
-    position: absolute;
-    width: 300px;
-    height: 100%;
-    background-image: url("https://i.ibb.co/3hXyGV2/floating-image-12.png");
-    right: 28%;
-    background-repeat: no-repeat;
-  }
-  .section .section-details .right > img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    z-index: 2;
-  }
-  .dilM{
-    width: 45rem;
-    height: 20rem;
-  }
-  .section .section-details .right::before {
-    content: "";
-    background: url("https://i.ibb.co/k9WftQd/floating-image-09.png");
-    background-repeat: no-repeat;
-    background-position: 95% 8.2714px;
-    width: 685px;
-    height: 100%;
-    position: absolute;
-    transform: scale(1);
-    animation: pulse-black 2s infinite;
-    top: 20%;
-    right: 0;
-  }
-  .rightM::before {
-    content: "";
-    background: url("https://i.ibb.co/k9WftQd/floating-image-09.png");
-    background-repeat: no-repeat;
-    background-position: 95% 8.2714px;
-    width: 685px;
-    height: 100%;
-    position: absolute;
-    transform: scale(1);
-    animation: pulse-black 2s infinite;
-    top: 20%;
-    right: 0;
-  }
-  .dil {
-    width: 45rem;
-    height: 35rem;
-  }
-  .headlineContent1  {
-    font-size: 3.5rem;
-    font-weight: 500;
-    color:black;
-    margin-bottom: 50px;
-    line-height: 1.5;
-  }
-  .headlineContent  {
-    font-size: 3.5rem;
-    font-weight: 500;
-    color:#00d4ff;
-    margin-bottom: 50px;
-    line-height: 1.5;
-  }
-  
-  .button-group {
-    margin: 16px 8px;
-    outline: none;
-    padding: 8px 16px;
-    border-radius: 25px;
-    background-color: #00d4ff;
-    border: 2px solid transparent;
-    cursor: pointer;
-    text-transform: uppercase;
-  }
-  
-  .button-group .button {
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: white;
-  }
-  
-  .button-group:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-    transform: translateY(-1px);
-  }
-  
-  .headline-para > p {
-    font-size: 1.2rem;
-   
-    font-weight: 400;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
-  }
-  
-  @keyframes pulse-black {
-    0% {
-      transform: scale(0.95);
-    }
-  
-    70% {
-      transform: scale(1);
-    }
-  
-    100% {
-      transform: scale(0.95);
-    }
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 30px;
-    cursor: pointer;
-    background-color: #00d4ff;
-    color: white;
-    border: none;
-    border-radius: 2px;
-  }
-  
-  @media (max-width: 600px) {
-    .section {
-      height: auto;
-      margin-top: 10em;
-    }
-  
- .section-details {
-      justify-content: flex-start;
-      flex-direction: column;
-    }
-  
-    .section .section-details .left {
-      padding-left: 0;
-      width: 89%;
-    }
-  
-    .headlineContent b {
-      font-size: 3rem;
-    }
-    .headlineContent span {
-      font-size: 3rem;
-    }
-    .headlineContent {
-      font-size: 4rem;
-    }
-    .headline-para > p {
-      font-size: 1rem;
-      width: 30rem;
-    }
-  }
-  .btna {
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-transform: capitalize;
-    display: inline-block;
-    margin-top: 20px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 25px;
-    z-index: 1;
-  }
-  .btna:before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -100%;
-    top: 0;
-    background-color: #00d4ff;
-    content: "";
-    transition: 0.3s;
-    z-index: -1;
-  }
-  .btna:hover:before {
-    left: 0;
-  }
-  /* =========================================== */
-/* =                                         = */
-/* =            Section 01 Closed          = */
-/* =                                         = */
-/* =========================================== */
-.headlineContentM{
-  font-size: 2rem;
-  font-weight: 500;
-  color:#00d4ff;
-  margin-bottom: 50px;
-  line-height: 1.5;
-}
-.headlineContent1M{
-  font-size: 2rem;
-  font-weight: 500;
-  color:black;
-  margin-bottom: 50px;
-  line-height: 1.5;
-}
-/* .rightM {
-  display: none;
-} */
-@media(max-width:700px){
-  .headlineContent{
-    font-size: 2rem;
-  }
-  .headlineContent1{
-    font-size: 2rem;
-  }
-  .dil{
-    height: 20rem;
   }
 }

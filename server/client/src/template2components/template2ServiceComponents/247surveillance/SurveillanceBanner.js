@@ -2,12 +2,13 @@ import React, { useRef } from 'react'
 import ServillancebannerCss from './ServillanceBanner.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 import { Navbar2 } from '../../Navbar2';
-export default function Servillancebanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) {
+export default function Servillancebanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateComponents, setTempComp }) {
     const editorRef = useRef(null);
     return (
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
-                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
+                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} setTempComp={setTempComp}
+                    templateComponents={templateComponents}/>
             <section className={displayDevice ? ServillancebannerCss['header-img-serv'] : ServillancebannerCss['header-img-servM']}>
             
                 <div className={displayDevice ? ServillancebannerCss['head-img-text'] : ServillancebannerCss['head-img-textM']}>

@@ -18,11 +18,11 @@ export default function Navbar1({ displayDevice, linksfunc, setNav1Services, nav
   }
   const addService = () => {
     let newArray = [...nav1Service];
-    newArray.push("NEW PAGE");
+    newArray.push("NEW SERVICE");
     setNav1Services([...newArray])
     let obj = {
       groupName: "services",
-      pageName: "NEW PAGE",
+      pageName: "NEW SERVICE",
       pageSections: [newService1Comp.Staticsecurity, newService1Comp.Footer1]
     }
     let mainobj = templateComponents;
@@ -42,7 +42,7 @@ export default function Navbar1({ displayDevice, linksfunc, setNav1Services, nav
     newArray.splice(index, 1, value);
     setNav1Services([...newArray])
     let mainobj = templateComponents;
-    mainobj.template1Components.filter((item) => item.pageName.toUpperCase() === oldValue.toUpperCase())[0].pageName = value;
+    mainobj.template1Components.filter((item) => item.groupName === "services").filter((item) => item.pageName.toUpperCase() === oldValue.toUpperCase())[0].pageName = value;
     console.log(mainobj.template1Components)
     setTempComp(mainobj)
     setEditMenu({ index: -5, setValue: false })

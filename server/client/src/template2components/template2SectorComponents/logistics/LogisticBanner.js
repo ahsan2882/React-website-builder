@@ -3,13 +3,14 @@ import LogisticBannerCss from './LogisticBanner.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 // import img from './logistics-banner.jpg'
 import { Navbar2 } from '../../Navbar2';
-export const LogisticBanner = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) => {
+export const LogisticBanner = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateComponents, setTempComp }) => {
     const editorRef = useRef(null);
 
     return (
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
-                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
+                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} setTempComp={setTempComp}
+                    templateComponents={templateComponents}/>
             <section className={displayDevice ? LogisticBannerCss['header-img-serv'] : LogisticBannerCss['header-img-servM']}>
                 
                 <div className={displayDevice ? `${LogisticBannerCss['head-img-text']}` : `${LogisticBannerCss['head-img-textM']}`}>

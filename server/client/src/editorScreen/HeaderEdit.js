@@ -135,7 +135,7 @@ export default function Header({ templateNum, fileName, setSaveClicked, setLinks
         setTimeout(() => {
             setLinksfunc(false);
             setSaveClicked(false);
-        }, 2700);
+        }, 1500);
         // console.log(fileData)
     }
     const exportCode = () => {

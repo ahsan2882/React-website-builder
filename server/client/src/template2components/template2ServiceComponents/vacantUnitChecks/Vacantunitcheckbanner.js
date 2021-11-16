@@ -3,12 +3,13 @@ import { Editor } from '@tinymce/tinymce-react';
 import VacantunitcheckbannerCss from './Vacantunitcheckbanner.module.css'
 import { Navbar2 } from '../../Navbar2';
 // import Img1 from '../../../assets/template2images/unit-banner.jpg'
-export default function Vacantunitcheckbanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector }) {
+export default function Vacantunitcheckbanner({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateComponents, setTempComp }) {
     const editorRef = useRef(null);
     return (
         <>
             <Navbar2 displayDevice={displayDevice} linksfunc={linksfunc} nav2Service={nav2Service} setNav2Services={setNav2Services}
-                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} />
+                nav2Sector={nav2Sector} setNav2Sector={setNav2Sector} setTempComp={setTempComp}
+                    templateComponents={templateComponents}/>
             <section className={displayDevice ? VacantunitcheckbannerCss['header-img-serv'] : VacantunitcheckbannerCss['header-img-servM']}>
 
                 <div className={displayDevice ? VacantunitcheckbannerCss['head-img-text'] : VacantunitcheckbannerCss['head-img-textM']}>
