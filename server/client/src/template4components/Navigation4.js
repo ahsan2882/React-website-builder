@@ -1,5 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef, useState } from 'react';
+import Header4 from './Header4';
 import Nav4Css from './Navigation4.module.css'
 
 export default function Navigation4({ displayDevice, linksfunc }) {
@@ -53,6 +54,7 @@ export default function Navigation4({ displayDevice, linksfunc }) {
     return (
 
         <>
+            <Header4 displayDevice={displayDevice} />
             <div className="w-full" style={{ backgroundColor: 'rgba(0, 193, 207, 0.75)' }}>
                 <div className={`flex justify-between items-center py-6 px-6 ${Nav4Css.container1}`}>
                     <Editor

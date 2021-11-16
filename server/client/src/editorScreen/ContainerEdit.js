@@ -205,17 +205,17 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
             {
                 groupName: "home",
                 pageName: "Home",
-                pageSections: [all.Header4, all.Navigation4, all.HeroSection4, all.AboutUs4, all.Pricing4, all.Services4, all.OurGuards4, all.Blog4, all.Accreditation4, all.Subscribe4, all.FooterContact4, all.BottomFooter4]
+                pageSections: [all.Navigation4, all.HeroSection4, all.AboutUs4, all.Pricing4, all.Services4, all.OurGuards4, all.Blog4, all.Accreditation4, all.Subscribe4, all.FooterContact4, all.BottomFooter4]
             },
             {
                 groupName: "about",
                 pageName: "About",
-                pageSections: [all.Header4, all.Navigation4, all.Abouthero, all.VisionAbout, all.AboutServices, all.PolicyAbout, all.OurGuards4, all.Partners4, all.Pricing4, all.Accreditation4, all.Subscribe4, all.FooterContact4, all.BottomFooter4]
+                pageSections: [all.Navigation4, all.Abouthero, all.VisionAbout, all.AboutServices, all.PolicyAbout, all.OurGuards4, all.Partners4, all.Pricing4, all.Accreditation4, all.Subscribe4, all.FooterContact4, all.BottomFooter4]
             },
             {
                 groupName: "contact",
                 pageName: "Contact",
-                pageSections: [all.Header4, all.Navigation4, all.Contacthero, all.AboutUs4, all.Form, all.Feedback, all.Subscribe4, all.FooterContact4, all.BottomFooter4]
+                pageSections: [all.Navigation4, all.Contacthero, all.AboutUs4, all.Form, all.Feedback, all.Subscribe4, all.FooterContact4, all.BottomFooter4]
             },
         ]
     })
@@ -409,8 +409,10 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
                                     <>
                                         <section key={index}
                                             onMouseEnter={() => {
-                                                setOverSection(true);
-                                                setSectionKey(index)
+                                                if ( ( (temp === 1 || temp === 3 || temp === 0 || temp === 4) && index !== 0) || (temp === 2) ) {
+                                                    setOverSection(true);
+                                                    setSectionKey(index)
+                                                }
                                             }}
                                             onMouseLeave={() => {
                                                 setOverSection(false);

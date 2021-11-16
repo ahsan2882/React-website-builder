@@ -75,7 +75,7 @@ export default function Nav1Asset({ linksfunc, displayDevice }) {
                 onInit={(evt, editor) => editorRef.current = editor}
                 inline={true}
                 key='News3'
-                initialValue={`<img src="https://i.ibb.co/y68gwmt/logo-security-red-black.png" alt="logo-security-red-black" class="h-16 w-16 ml-8" />`}
+                initialValue={`<img src="https://i.ibb.co/y68gwmt/logo-security-red-black.png" alt="logo-security-red-black" class="h-16 w-16" />`}
                 init={{
                   images_upload_handler: function (blobInfo, success, failure) {
                     success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
