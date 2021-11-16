@@ -2,30 +2,12 @@ import React, { useRef, useState, useEffect } from 'react'
 import Navbar2moduleCss from './Navbar2.module.css'
 import { Editor } from '@tinymce/tinymce-react';
 
-export const Navbar2 = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector  }) => {
+export const Navbar2 = ({ displayDevice, linksfunc, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateComponents, setTempComp  }) => {
     const editorRef = useRef();
-    const navSectorArray = [
-        "CONSTRUCTION",
-        "CORPORATE",
-        "INDUSTRIAL",
-        "RETAIL",
-        "LOGISTICS",
-        "PROPERTY MANAGEMENT"
-    ]
-    const navServiceArray = [
-        "STATIC SECURITY",
-        "MOBILE PATROLLING",
-        "CCTV MONITORING",
-        "LOCK & UNLOCK",
-        "VACANT UNIT CHECKS",
-        "TECHNOLOGY PRODUCT",
-        "MANNED GUARDING",
-        "SUPPORT & MANAGEMENT",
-        "EVENT SECURITY",
-        "GUARD HOUSE",
-        "24/7 SURVEILLANCE"
-    ]
-
+    const [menuValueSect, setmenuValueSect] = useState("")
+    const [editMenuSect, setEditMenuSect] = useState({ index: -5, setValue: true });
+    const [menuValueServ, setmenuValueServ] = useState("")
+    const [editMenuServ, setEditMenuServ] = useState({ index: -5, setValue: true });
     const [navServices, setNavServices] = useState([])
     const [navSector, setNavSector] = useState([])
     useEffect(() => {
@@ -40,10 +22,17 @@ export const Navbar2 = ({ displayDevice, linksfunc, nav2Service, setNav2Services
         setNav2Services([...newArray])
     }
     const addService = () => {
-        let rand = Math.floor(0 + Math.random() * 8);
         let newArray = [...nav2Service];
-        newArray.push(navServiceArray[rand]);
+        newArray.push("NEW PAGE");
         setNav2Services([...newArray])
+        let obj = {
+            groupName: "services",
+            pageName: "NEW PAGE",
+            pageSections: [newService1Comp.Staticsecurity, newService1Comp.Footer1]
+        }
+        let mainobj = templateComponents;
+        mainobj.template2Components.push(obj)
+        setTempComp(mainobj)
     }
 
 
