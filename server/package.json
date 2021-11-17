@@ -6,6 +6,7 @@
     "server": "node ./bin/www",
     "client":"cd client && npm start",
     "start": "node app.js",
+    "start-ser":"npm-run-all -p client server",
     "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "server-update":"cd client && npm run build-client && cd .. && git add . && git commit -am \"client code updated\" && git push heroku main"
   },
