@@ -1,15 +1,14 @@
 import { Editor } from '@tinymce/tinymce-react'
 import React, { useRef } from 'react'
-
 import Hero2Css from './Hero2Asset.module.css'
-export default function Hero2Asset() {
+export default function Hero2Asset({ displayDevice }) {
   const editorRef = useRef(null);
   return (
     <>
-      <section className="flex justify-evenly items-center">
-        <div className="w-1/2 ml-20">
+      <section className={displayDevice ? `flex justify-evenly items-center ${Hero2Css.hero}` : `flex justify-evenly items-center ${Hero2Css.heroM}`}>
+        <div className={`w-full ml-20 ${Hero2Css.headtext}`}>
           {/* <h1>Security Guards for your Everyday needs</h1> */}
-          <h1 className="text-4xl w-11/12 font-bold text-blue-700">
+          <h1 className={displayDevice ? `text-4xl w-11/12 font-bold text-blue-700 ${Hero2Css.headtext} ` : `text-4xl w-11/12 font-bold text-blue-700 ${Hero2Css.headtext1} `}>
             <Editor
               onInit={(evt, editor) => editorRef.current = editor}
               inline={true}
@@ -52,7 +51,7 @@ export default function Hero2Asset() {
             }}
           />
         </div>
-        <div className="w-1/2">
+        <div className="w-full">
           {/* <img src="https://i.ibb.co/0ZMZXfV/guard4.png" alt="guard4" style={{ width: "48rem", height: "50rem" }} class="object-cover" /> */}
           <Editor
             onInit={(evt, editor) => editorRef.current = editor}

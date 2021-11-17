@@ -1,4 +1,42 @@
-.bgImg{
+.bgImg {
     width: 100%;
     height: 80vh;
+}
+
+.btnD{
+    width: 33.33%;
+}
+@media (max-width: 700px) {
+    .headtext {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0 1rem;
+        left: auto;
+    }
+    .headtext h1 {
+        font-size: 2rem;
+    }
+    
+    .headtext p {
+        font-size: 1rem;
+    }
+    .btnD{
+        width: 75%;
+    }
+}
+.headtext1{
+    width: 100%;
+    font-size: 1rem;
+    padding: 0 1rem;
+    top: 50%;
+}
+.headtext1 h1 {
+    font-size: 2rem;
+}
+
+.headtext1 p {
+    font-size: 1rem;
+}
+.btnD1{
+    width: 75%;
 }

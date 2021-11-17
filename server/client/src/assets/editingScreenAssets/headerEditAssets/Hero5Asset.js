@@ -2,7 +2,7 @@ import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
 import Hero5Css from './Hero5Asset.module.css'
 
-export default function Hero5Asset() {
+export default function Hero5Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
@@ -26,7 +26,7 @@ export default function Hero5Asset() {
                         toolbar: 'image'
                     }}
                 />
-                <div className="absolute top-1/3 left-12 text-white w-full">
+                <div className={displayDevice ? `absolute text-white ${Hero5Css.headtext}` : `absolute text-white ${Hero5Css.headtextM}`}>
                     <h1 className="text-6xl font-bold mb-12 w-1/2">
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}

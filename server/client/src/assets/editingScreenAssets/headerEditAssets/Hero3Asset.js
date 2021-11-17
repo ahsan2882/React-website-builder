@@ -1,7 +1,7 @@
 import { Editor } from '@tinymce/tinymce-react';
 import React, { useRef } from 'react'
 import Hero3Css from './Hero3.module.css'
-export default function Hero3Asset() {
+export default function Hero3Asset({displayDevice}) {
     const editorRef = useRef(null);
     return (
         <>
@@ -27,7 +27,7 @@ export default function Hero3Asset() {
                         toolbar: 'image'
                     }}
                 />
-                <div className="absolute top-80 left-36 flex flex-col justify-center items-center w-4/5">
+                <div className={displayDevice ? `absolute top-80 flex flex-col justify-center w-4/5 left-36 items-center  ${Hero3Css.headtext}`: `absolute top-80 flex flex-col justify-center items-center ${Hero3Css.headtext1}`}>
                     <h1 className="text-5xl font-bold text-BL-500">
                         <Editor
                             onInit={(evt, editor) => editorRef.current = editor}
@@ -66,7 +66,7 @@ export default function Hero3Asset() {
 
                         }}
                     />
-                    <div className="flex justify-evenly items-center w-1/3 mt-8">
+                    <div className={displayDevice ? `${Hero3Css.btnD} flex justify-evenly items-center mt-8` : `${Hero3Css.btnD1} flex justify-evenly items-center mt-8`}>
                         <button className="text-white bg-BL-500 rounded-3xl px-7 py-2 text-lg">Contact Us</button>
                         <button className="text-black bg-white rounded-3xl px-7 py-2 text-lg">Get Quotes</button>
                     </div>

@@ -2,3 +2,33 @@
     width: 100%;
     height: 90vh;
 }
+.headtext{
+    top: 50%;
+    left:5rem;
+  
+}
+@media (max-width: 700px) {
+    
+    .headtext
+    {
+        top: 33.33%;
+        left:3rem;
+    }
+    .headtext p{
+
+        top:33.33%;
+        left:3rem;
+        width:100%
+    }
+}
+.headtextM{
+
+    top:33.33%;
+    left:3rem;
+}
+.headtextM p{
+
+    top:33.33%;
+    left:3rem;
+    width:100%
+}

@@ -32,9 +32,9 @@
     color: rgb(24, 148, 179);
     left: -29rem;
 }
-@media (max-width: 500px){
-    .bgClr {
-        display: none;
+@media (max-width: 700px){
+    .bgClr{
+        background: none;
     }
     .mainHead1{
         top: 50%;
@@ -44,7 +44,7 @@
     .mainHead2 {
         top: 30rem;
         color: rgb(24, 148, 179);
-        left: -29rem;
+        left: -14rem;
     }
     .bgImg{
         width: 100%;
