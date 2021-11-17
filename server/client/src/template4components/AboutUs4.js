@@ -6,13 +6,7 @@ import { Editor } from '@tinymce/tinymce-react';
 export default function AboutUs4({ showPopup, overSection, displayDevice }) {
     const [currentBackground, setCurrentBackground] = useState("black");
     const editorRef = useRef(null);
-    let allParas = document.getElementsByTagName("p");
-    let inde = 0;
-    while (inde < allParas.length) {
-        if (allParas[inde] !== undefined && allParas[inde].innerHTML.length > 80) {
-            console.log(allParas[inde].innerHTML)
-        }
-    }
+    
     return (
         <>
             <div className={displayDevice ? `${About4Css.container02}` : `${About4Css.container02M}`} style={{ background: currentBackground }}>
