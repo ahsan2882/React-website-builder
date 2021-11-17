@@ -236,7 +236,7 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
     //     readMores[inde].classList.add("hidden")
     //     inde++
     // }
-    
+
     const temp = templateNum;
     useEffect(() => {
         let allParas = document.getElementsByTagName("p");
@@ -356,8 +356,8 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
     }
 
     const getCSSData = () => {
-        
-        let cssStrings ="h"
+
+        let cssStrings = "h"
         return cssStrings;
     }
     const moveUp = (indexC) => {
@@ -371,7 +371,7 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
             newArray[indexC - 1] = currentCom;
             setUpdateChildren([...newArray])
         }
-        
+
     }
     const moveDown = (indexC) => {
         let newArray = [...updateChildren];
@@ -384,17 +384,32 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
             newArray[indexC + 1] = currentCom;
             setUpdateChildren([...newArray])
         }
-        
-        
+
+
     }
     const removeComponent = (indexC) => {
         let newArray = [...updateChildren];
         newArray.splice(indexC, 1);
         setUpdateChildren([...newArray])
     }
+    const findParas = () => {
+        let allParas = document.getElementsByTagName("p");
+        let inde = 0;
+        // console.log(allParas)
+        while (inde < allParas.length) {
+            // console.log(allParas[inde])
+            if (allParas[inde] !== undefined && allParas[inde].innerHTML.length > 80) {
+                // console.log(allParas[inde].innerHTML)
+                let str1 = allParas[inde].innerHTML.substring(0, 80);
+                let str2 = allParas[inde].innerHTML.substring(80)
+                console.log((str1 + '...' + str2))
+            }
+            inde++
+        }
+    }
     return (
         <>
-            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} id='editorScreen' style={displayDevice ? { maxWidth: "80vw" } : { maxWidth: "500px" }}>
+            <section onMouseEnter={() => findParas()} className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} id='editorScreen' style={displayDevice ? { maxWidth: "80vw" } : { maxWidth: "500px" }}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
@@ -409,7 +424,7 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
                                     <>
                                         <section key={index}
                                             onMouseEnter={() => {
-                                                if ( ( (temp === 1 || temp === 3 || temp === 0 || temp === 4) && index !== 0) || (temp === 2) ) {
+                                                if (((temp === 1 || temp === 3 || temp === 0 || temp === 4) && index !== 0) || (temp === 2)) {
                                                     setOverSection(true);
                                                     setSectionKey(index)
                                                 }
