@@ -22,10 +22,18 @@ export default function PreviewPage({ temp }) {
     else if (temp === 0) {
       setLocalStorageData(lz.decompress(lz.decodeBase64(JSON.parse(localStorage.getItem('New-Template'))['templateData'])))
     }
+    setTimeout(() => {
+      let allParas = document.getElementsByTagName("p");
+      let inde = 0;
+      while (inde < allParas.length) {
+        if (allParas[inde].innerHTML.length > 200) {
+          console.log(allParas[inde].innerHTML)
+        }
+      }
+    }, 10000)
   }, [temp])
   useEffect(() => {
     let main = Parser().parse(localStorageData)
-    
     setPreviewTemp(main)
   }, [localStorageData])
   return (

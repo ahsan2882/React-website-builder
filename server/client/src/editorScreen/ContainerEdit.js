@@ -9,13 +9,15 @@ import all from '../myComponents/AllTemplates';
 // import {templateComponents} from '../myComponents/AllTemplates';
 
 export default function ContainerEdit({ nav1Service, setNav1Services, nav2Service, setNav2Services, nav2Sector, setNav2Sector, templateNum, setFileName, setLinksfunc, overlayPresent, linksfunc, saveClicked, setToSave, setSaveClicked, setDisplayDevice, displayDevice, setFileData, templatePage, chatInclude }) {
-    const [updateChildren, setUpdateChildren] = useState([])
+    const [updateChildren, setUpdateChildren] = useState([]);
     const [overSection, setOverSection] = useState(false);
-    const [showPopUp, setShowPopUp] = useState(false)
+    const [showPopUp, setShowPopUp] = useState(false);
+    // const [readmore, setreadmore] = useState(false);
     const [sectionKey, setSectionKey] = useState(null);
     const [htmlString, setHtmlString] = useState("");
     const [cssString, setCssString] = useState("");
     const [compressed, setCompressed] = useState("");
+    // const [originalPara, setOriginalPara] = useState([]);
     const [curTemplate, setCurTemplate] = useState(null);
     const [fileName, setfilename] = useState(null);
     const [templateComponents, setTempComp] = useState({
@@ -236,20 +238,9 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
     //     readMores[inde].classList.add("hidden")
     //     inde++
     // }
-
+    
     const temp = templateNum;
     useEffect(() => {
-        let allParas = document.getElementsByTagName("p");
-        let inde = 0;
-        while (inde < allParas.length) {
-            if (allParas[inde] !== undefined) {
-                // console.log(allParas[inde].innerHTML)
-                if (allParas[inde].innerHTML.length > 100) {
-                    console.log(allParas[inde].innerHTML)
-                }
-            }
-            inde++;
-        }
         let filename = "";
         let array = [];
         if (temp === 1) {
@@ -308,8 +299,27 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
     }, [temp, templatePage, setfilename, templateComponents.template1Components, templateComponents.template2Components, templateComponents.template3Components, templateComponents.template4Components])
     useEffect(() => {
         setDisplayDevice(true);
-
-
+        // setreadmore(true);
+        // let allParas = document.getElementsByTagName("p");
+        // let inde = 0;
+        // let newArr = [];
+        // while (inde < allParas.length) {
+        //     if (allParas[inde].innerHTML.length > 200) {
+                
+        //         newArr.push(allParas[inde].innerHTML);
+        //         setOriginalPara([...newArr]);
+        //         // allParas[inde].innerHTML = "<span class='readMoreTextBefore'>" + str1 + "</span><span class='readMoreDots'>...</span><span class='readMoreTextAfter'>" + str2 + "</span>"
+        //         if (readmore) {
+        //             let str1 = allParas[inde].innerHTML.substring(0, 150);
+        //             let str2 = allParas[inde].innerHTML.substring(150);
+        //             allParas[inde].innerHTML = "<span class='readMoreTextBefore'>" + str1 + "</span><span class='readMoreDots cursor-pointer'>... Read More </span><span class='readMoreTextAfter'>" + str2 + "</span>";
+        //         } else {
+        //             allParas[inde].innerHTML = originalPara;
+        //         }
+        //         console.log(allParas[inde].innerHTML);
+        //     }
+        //     inde++;
+        // }
         if (linksfunc) {
             setHtmlString(getHTMLData())
             setCssString(getCSSData())
@@ -325,12 +335,11 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
             css: `${cssString}`
         })
         setFileName(fileName)
-        console.log(htmlString)
-
+        // setreadmore(false);
     }, [curTemplate, setToSave, saveClicked, setSaveClicked, setFileData, setDisplayDevice, fileName, setFileName, setLinksfunc, linksfunc, htmlString, cssString, compressed])
 
     const getHTMLData = () => {
-
+        
         let newDocString = document.getElementsByClassName("getInnerHTML")[0].innerHTML;
         let newDoc = new DOMParser().parseFromString(newDocString, 'text/html');
         let removed = newDoc.getElementsByClassName("toBeRemoved")
@@ -392,24 +401,9 @@ export default function ContainerEdit({ nav1Service, setNav1Services, nav2Servic
         newArray.splice(indexC, 1);
         setUpdateChildren([...newArray])
     }
-    const findParas = () => {
-        let allParas = document.getElementsByTagName("p");
-        let inde = 0;
-        // console.log(allParas)
-        while (inde < allParas.length) {
-            // console.log(allParas[inde])
-            if (allParas[inde] !== undefined && allParas[inde].innerHTML.length > 80) {
-                // console.log(allParas[inde].innerHTML)
-                let str1 = allParas[inde].innerHTML.substring(0, 80);
-                let str2 = allParas[inde].innerHTML.substring(80)
-                console.log((str1 + '...' + str2))
-            }
-            inde++
-        }
-    }
     return (
         <>
-            <section onMouseEnter={() => findParas()} className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} id='editorScreen' style={displayDevice ? { maxWidth: "80vw" } : { maxWidth: "500px" }}>
+            <section className={`mt-24 ${ContainerEditCss.editWrap} mx-auto`} id='editorScreen' style={displayDevice ? { maxWidth: "80vw" } : { maxWidth: "500px" }}>
                 <div className={`flex py-2 pl-2 border-b border-gray-200`}>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>
                     <div className={`${ContainerEditCss.dot} mx-1`}></div>

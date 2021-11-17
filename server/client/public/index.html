@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
 
-    <title>Security Site Builder</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-    <script src="https://kit.fontawesome.com/6fcb08b902.js" crossorigin="anonymous"></script>
-    
-    <script src="https://cdn.tiny.cloud/1/x6xkpnthcpa4s506ncpimheefaua9qjtmsb20bpygafbkbzr/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <title>Security Site Builder</title>
+</head>
 
-  </body>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+  <script src="https://kit.fontawesome.com/6fcb08b902.js" crossorigin="anonymous"></script>
+  <!-- <script>
+    let allParas = document.getElementsByTagName("p");
+    let inde = 0;
+    console.log(allParas);
+    while (inde < allParas.length) {
+      // console.log(allParas[inde]);
+      if (allParas[inde].innerHTML.length > 200) {
+        let str1 = allParas[inde].innerHTML.substring(0, 150);
+        let str2 = allParas[inde].innerHTML.substring(150);
+        // console.log((str1 + '...' + str2));
+        allParas[inde].innerHTML = "<span class='readMoreTextBefore'>" + str1 + "</span><span class='readMoreDots'>...</span><span class='readMoreTextAfter'>" + str2 + "</span>";
+        console.log(allParas[inde].innerHTML);
+      }
+      inde++;
+    }
+  </script> -->
+  <script src="https://cdn.tiny.cloud/1/x6xkpnthcpa4s506ncpimheefaua9qjtmsb20bpygafbkbzr/tinymce/5/tinymce.min.js"
+    referrerpolicy="origin"></script>
+
+</body>
+
 </html>
