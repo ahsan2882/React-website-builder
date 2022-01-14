@@ -30,7 +30,7 @@ export const LoginPage = () => {
           <input type="password" placeholder="Password" name="Email" autoComplete="off" required value={password}
             onChange={(e) => setPassword(e.target.value)} />
           {/* <Link to='/select-template' className={LoginPageCss.button}> Login   </Link> */}
-          {auth ? <Link to='/select-template'><button type="submit" className={LoginPageCss.button}>Login</button></Link> : <button type="submit" className={LoginPageCss.button}>Login</button>}
+          {auth ? <Link to='/'><button type="submit" className={LoginPageCss.button}>Login</button></Link> : <button type="submit" className={LoginPageCss.button}>Login</button>}
           <div className="flex justify-center text-white  hover:text-gray-900  ">
            <Link to ='/signup'> <button type="submit">Create Account?</button></Link>
           </div>

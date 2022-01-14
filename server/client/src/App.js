@@ -5,7 +5,6 @@ import './App.css';
 import EditScreen from './editorScreen/EditScreen';
 import PageSelectionScreen from './myComponents/PageSelectionScreen';
 import PreviewPage from './myComponents/PreviewPage'
-import {LoginPage} from './loginPage/LoginPage'
 import { Sugar } from 'react-preloaders2';
 import Signup from './loginPage/Signup';
 
@@ -17,9 +16,6 @@ export default function App() {
 
       <Router>
         <Switch>
-          {/* <Route exact path="/">
-            <LandingPage/>
-          </Route> */}
           <Route exact path="/">
             <PageSelectionScreen />
           </Route>
