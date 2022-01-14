@@ -20,10 +20,7 @@ export default function App() {
           {/* <Route exact path="/">
             <LandingPage/>
           </Route> */}
-          <Route exact path='/'>
-            <LoginPage />
-          </Route>
-          <Route exact path="/select-template">
+          <Route exact path="/">
             <PageSelectionScreen />
           </Route>
           <Route exact path='/edit/template-1'>
